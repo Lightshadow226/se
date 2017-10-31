@@ -1,0 +1,917 @@
+/*
+	CSS DOCUMENT
+	PROPERTY OF DULCET GAMES INC.
+
+	#ff4956 - ROSE
+    #682666 - MAUVE
+    #F7B334 - JAUNE
+
+	July 8, 2017
+*/
+
+/**********GENERAL**********/
+
+*
+{
+	font-family: 'Roboto', sans-serif;
+	color: auto;
+    margin: 0 auto;
+    font-weight: 300;
+	/* border: 1px solid black; */
+}
+
+/* *:hover
+{
+	cursor: -webkit-grab;
+	background-color: blue;
+}  */
+
+body
+{
+	 background-image: url("../images/se-background.jpg");
+	 background-repeat: repeat;
+}
+
+img
+{
+	-webkit-user-select: none;
+}
+
+div
+{
+	/*border: 1px solid black;*/
+}
+
+.add_border/*REMOVE*/
+{
+	border: 0px solid black;
+}
+
+.add_padding
+{
+    padding: 20px;
+}
+
+.add_shading
+{
+    box-shadow: 0 0 5px #83827d;
+}
+
+.add_shading_left_right
+{
+	box-shadow: 0 0 5px 0px #83827d;
+}
+
+.main_content
+{
+	width: 68%;
+}
+
+.card
+{
+    background-color: white;
+    box-shadow: 0 0 5px #83827d;
+    margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.special_card
+{
+	background-color: white;
+    box-shadow: 0 0 5px #83827d;
+    /*margin: 5px;*/
+}
+
+.special_card:hover
+{
+	box-shadow: 0 0 10px #ff4956;
+}
+
+.flex_card
+{
+    background-color: white;
+    box-shadow: 0 0 5px #83827d;
+    margin: 5px 0px 5px 0px;
+    display: flex;
+}
+
+.flex_card:hover
+{
+    box-shadow: 0 0 10px #83827d;
+}
+
+.card_nomargin
+{
+    background-color: white;
+    box-shadow: 0 0 5px #83827d;
+}
+
+.center
+{
+    text-align: center;
+}
+
+.center_div
+{
+    margin: 0 auto;
+
+	/*
+	Center Verically
+		http://stackoverflow.com/questions/396145/how-to-vertically-center-a-div-for-all-browsers
+		https://css-tricks.com/centering-css-complete-guide/
+	*/
+
+	/*
+	Center Horizontally
+		WHAT THE FUCKING FUCK THERE'S A SHORTCUT TO CENTER SOMETHING WHAT THE SHIT
+		http://stackoverflow.com/questions/114543/how-to-horizontally-center-a-div-in-another-div
+	*/
+	
+	/* Firefox */
+    display:-moz-box;
+    -moz-box-pack:center;
+    -moz-box-align:center;
+
+    /* Safari and Chrome */
+    display:-webkit-box;
+    -webkit-box-pack:center;
+    -webkit-box-align:center;
+}
+
+h1
+{
+	font-family: 'Great Vibes', cursive;
+	font-size: 4em;
+	color: #682566;
+	/* margin-bottom: 20px; */
+	font-weight: 100;
+    text-align: center;
+}
+
+h2 
+{
+	color:#682666;
+	text-align: left;
+	/*margin: 10px;*/
+}
+
+h3
+{
+	font-family: 'Great Vibes', cursive;
+	color: black;
+	font-size: 3em;
+	margin: 5px;
+    font-weight: 500;
+}
+
+h4
+{
+    font-family: 'Roboto', sans-serif;
+	font-size: 2.3em;
+	letter-spacing:0.1em;
+	font-weight: 100;
+	/* padding:0px 0 10px 0; */
+}
+
+h5/*SAME AS H4, BUT DIFFERENT FONT-SIZE*/
+{
+    font-family: 'Roboto', sans-serif;
+	font-size: 1.3em;
+	letter-spacing:0.1em;
+	font-weight: 100;
+	text-align: center;
+}
+
+h6 /*SAME AS H1, BUT WITHOUT MARGIN-BOTTOM*/
+{
+	font-family: 'Great Vibes', cursive;
+	font-size: 4em;
+	color: #682566;
+	font-weight: 100;
+    text-align: center;
+	margin: 0px;
+}
+
+i
+{
+	color:#ff4956;
+	font-style: italic;
+}
+
+b
+{
+	font-weight:500;
+    color:#682666;
+}
+
+strong/*pas utilisé*/
+{
+	font-weight: 500;
+	color:#682666;
+}
+
+p
+{
+    
+}
+
+a
+{
+	color:#682666;
+	font-weight:500;
+	text-decoration:none;
+}
+
+
+
+
+.button
+{
+	margin: auto;/*centers the button in it's parent div*/
+	align-content: center;
+	text-align: center;
+	padding: 10px;
+    text-decoration: none;/*enlever le underline -> ne va plus être nécessaire quand on va rendre le bouton un actual Button*/
+	border-radius: 3px;
+	text-align: center;
+	min-width: 50px;
+    max-width: 300px;
+	-webkit-user-select: none;
+    display: inline-block;
+	flex: 1;
+    font-weight: 300;
+}
+
+.pink_button
+{
+	background-color: #EE4C5E;
+	font-size: 1.28em;
+	align-content: center;
+	color: white;
+	letter-spacing:0.05em;
+	width: 100%;
+}
+
+.yellow_button
+{
+	background-color: #F7B334;
+	font-size: 1.28em;
+	align-content: center;
+	color: white;
+	letter-spacing:0.05em;
+	width: 100%;
+	flex: 1;
+	margin-left: 10px; 
+	margin-right: 10px;
+}
+
+.button:hover
+{
+	cursor: pointer;
+    background-color: #682566;
+}
+
+
+
+/**********HEADER**********/
+
+#nav_menu_container
+{
+    background-color:#EE4C5E;
+    width: 68%;
+    box-shadow: 0 0 5px #83827d;
+}
+
+#user_info/*pour le header, la barre mauve qui donne le status de l'utilisateur*/
+{
+	background-color:#682566;
+	width: 100%;
+	color:#ffffff;
+	text-align:center;
+    padding: 5px 0 5px 0;
+	font-size:0.7em;
+	letter-spacing:0.15em;
+	position: fixed;
+	z-index: 4;
+}
+
+#pink_menu/*navigation menu*/
+{
+	display: flex;
+	
+	font-size:0.8em;
+	color: white;
+	letter-spacing:0.15em;
+}
+
+.menu_item/*les items dans le menu*/
+{
+	padding:10px 0 10px 0;
+	text-align: center;
+	width: 100%;
+	user-select: none;
+	cursor: pointer;
+	color: white;
+}
+
+.menu_item:hover
+{
+	background-color:#F7B334;
+}
+
+.logo/*Main navigation logo*/
+{
+	position: relative;
+	top: 22px;
+	left: 14%;
+	border:none;
+	z-index:3;
+}
+
+.pink_logo_bar/*buffer rose au-dessus du navigation menu (en-dessous du logo et au-dessus des menu items)*/
+{
+	background-color:#EE4C5E;
+    height: 25px;
+}
+
+/**********FOOTER**********/
+
+footer
+{
+    background-color:#DBDAD7;
+	color:#682566;
+	padding: 10px 0 10px 0;
+    text-align: center;
+	font-size: 0.8em;
+	letter-spacing: 0.2em;
+    width: 68%;
+    box-shadow: 0 0 5px #83827d;
+}
+
+
+/**********INDEX.HTML**********/
+
+#banner
+{
+	margin:0 auto;
+	border: 1px #83827d;
+}
+
+#img_banner
+{
+	width: 100%;
+}
+
+#img_comming_soon
+{
+	width: 100%;
+}
+
+#coming_soon
+{
+	background-color:#682666;
+	color: white;
+	text-align: center;
+	font-size: 0.96em;
+	letter-spacing: 0.1em;
+}
+
+.special_header
+{
+    background-color:#F7B334;
+    padding-top: 5px;
+}
+
+/*******************le character thingy dans Index.html*******************/
+
+/*https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_overlay_fade*/
+
+.MTC_container
+{
+  position: relative;
+  width: 50%;
+}
+
+.MTC_image
+{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.MTC_overlay
+{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #682566;
+}
+
+.MTC_container:hover .MTC_overlay
+{
+  opacity: 0.85;
+}
+
+.MTC_text
+{
+  color: white;
+  font-size: 1.3em;/*20px*/
+  position: absolute;
+  font-weight: bold;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  user-select: none;
+  text-transform: uppercase;
+}
+
+.MTC_text_description
+{
+  color: white;
+  font-size: 0.8em;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  user-select: none;
+}
+
+
+/**************************SOCIAL MEDIA BUTTONS IN INDEX.HTML********************************/
+/*
+.fa
+{
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover
+{
+    opacity: 0.7;
+}
+
+.fa-facebook
+{
+  background: #ff4956;
+  color: white;
+}
+
+.fa-twitter
+{
+  background: #ff4956;
+  color: white;
+}
+
+.fa-youtube {
+  background: #ff4956;
+  color: white;
+}
+
+.fa-tumblr {
+  background: #ff4956;
+  color: white;
+}*/
+
+
+/**********FAQ.HTML**********/
+
+/*Accordion*/
+
+button.accordion
+{
+	background-color: white;
+	color: #EE4C5E;
+	
+	/* letter-spacing: 0.1em; */
+	text-align: left;
+	font-size: 1.5em;
+	font-weight: 300;
+
+    cursor: pointer;
+	
+    width: 100%;
+    padding: 10px;
+	border: 2px solid #EE4C5E;
+	margin-top: -2px;
+	
+    outline: none;
+	transition: 0.1s ease-out;
+	
+	position: relative;/*on a besoin de ça pour l z-index*/
+	z-index: 1;
+}
+
+button.accordion:hover
+{
+	background-color: white;
+	color: #682666;
+	/* margin-top: 2px; */
+	/* margin-bottom: 4px; */
+
+	border: 2px solid #682666;/*or #EE4C5E???*/
+	font-weight: 400;
+	transition: 0.1s ease-out;
+	
+	position: relative;/*on a besoin de ça pour l z-index*/
+	z-index: 100;
+}
+
+/*Accordion (Active)*/
+
+button.accordion.active
+{
+	background-color: white;
+	color: #682666;
+
+	margin-top: 2px;
+	border: 2px solid #682666;
+}
+
+button.accordion.active:hover
+{
+	background-color: white;
+	color: #682666;
+
+	margin-top: 2px;
+	margin-bottom: 0px;
+	border: 2px solid #682666;
+	font-weight: 400;
+}
+
+/*les flèches du dropdown*/
+
+button.accordion:after
+{
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    float: left;
+    padding: 5px 10px 5px 5px;
+}
+
+button.accordion.active:after
+{
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+    color: #682666;
+}
+
+div.inside_accordion
+{
+    background-color: white;
+	
+	width: 100%;
+	display: none; 
+    max-height: 0;
+	list-style: none; 
+	
+	overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+
+div.inside_accordion b
+{
+    font-size: 1.3em;
+}
+
+ul
+{
+	background-color: #efefef;
+	/* color: red; */
+    width: calc(100% - 4px);
+	
+	border: 2px solid #682666;
+	border-top: 0px;
+	
+	padding: 0px;
+	margin-bottom: 5px;
+}
+
+li
+{
+	text-align: justify;
+	list-style-type: square;
+	width: 90%;
+}
+
+section
+{
+	background-color: #efefef;
+    width: calc(100% - 2em - 4px);
+	padding: 1em;
+	
+	border: 2px solid #682666;
+	margin-bottom: 1em;
+}
+
+.faq_text
+{
+	text-align: justify;
+}
+
+/**********FEATURES.HTML**********/
+
+.features_illustration
+{
+	/*width: 30%;*/
+	flex: 3;
+    margin: 20px;
+    height: 250px;
+}
+
+.description
+{
+	flex:7;
+	padding:20px 0 10px 0;
+	font-style: thin;
+    text-align: center;
+	margin: 20px;
+}
+
+.imgh
+{
+	height: 100%;
+	width: auto;
+}
+
+/**********CHARACTERS.HTML**********/
+
+#horizontal_scroll
+{
+	padding-left: 0px;
+	margin-left: 0px;
+	width: 100%;
+	display: flex;
+	height: auto;
+}
+
+.character_line
+{
+	padding-left: 0px;
+	padding-right: 0px;
+	box-shadow: none;
+}
+
+.scroll_img_container
+{
+	flex: auto;
+	width: 100%;
+	margin: 3px;
+}
+
+.scroll_img
+{
+	height: auto;
+	max-height: 100%;
+	max-width: 100%;
+}
+
+.scroll_img:hover
+{
+	cursor: pointer;
+}
+
+.chevron/*for all chevrons that are 150px high*/
+{
+	/*max-height: 150px;/*150*/
+	flex: 1;
+	/*padding-top: 33px;/*75**/
+	height: auto;
+	max-width: 100%;
+	-webkit-user-select: none;
+}
+
+.chevron:hover
+{
+	cursor: pointer;
+}
+
+/**********STAFF.HTML**********/
+
+.flex_card_noshadow
+{
+	display: flex;
+}
+
+.child_flex_card
+{
+    box-shadow: 0 0 5px #83827d;
+    margin: 5px 5px 5px 5px;
+    flex: 1;
+	text-align: center;
+}
+
+.staff_name
+{
+	background-color: #682566;
+	color: white;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: 100;
+	font-size: 1.5em;
+	padding: 5px;
+}
+
+.staff_title
+{
+	text-align: center;
+	margin-top: 10px;
+	color: #ff4956;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+.fixed_height
+{
+	height: 110px;
+}
+
+.normal_button/**/
+{
+	background-color: #ff4956;
+	color: white;
+	width: 80%;
+	font-size: 1.1em;
+}
+
+/**********RELATIONSHIPS.HTML**********/
+
+.line
+{
+	position: relative;
+	/* background-color: white; */
+    box-shadow: 0 0 5px #83827d;
+    margin-top: 5px;
+	margin-bottom: 5px;
+	padding: 20px;
+	display: flex;
+	/* max-height: 350px; */
+}
+
+.line_left_content
+{
+	height: inherit;
+	width: auto;
+	/* background-image: "images/game_images/achievements/achievement1.jpg"; */
+	max-height: 350px;
+}
+
+.line_middle_content
+{
+	height: inherit;
+	flex: auto;
+	position: relative; /*Nécessaire pour que le bouton soit bien placé*/
+	flex: 100;
+	padding: 20px;
+	max-height: 350px;
+}
+
+.line_right_content
+{
+	flex: auto;
+	max-height: 350px;
+}
+
+.school_files_button
+{
+	position: absolute; 
+	bottom: 0;
+	width: auto;
+	height: auto;
+	/* min-height: 20px; */
+
+	background-color: #EE4C5E;
+	font-size: 1em;
+	align-content: center;
+	color: white;
+}
+
+.play_episode_button
+{
+	position: absolute; 
+	/* width: auto;
+	height: auto; */
+	/* min-height: 20px; */
+
+	background-color: #EE4C5E;
+	font-size: 1em;
+	align-content: center;
+	color: white;
+}
+
+.x-left-y-bottom
+{
+	bottom: 0px;
+}
+
+.character_img
+{
+	max-height: 350px;
+	width: auto;
+}
+
+.inf_meter
+{
+	max-height: 310px;/*le 40 px de moins vient du percentage_number*/
+	width: auto;
+}
+
+.percentage_number/*va mesurer 40px*/
+{
+	font-family: 'Great Vibes', cursive;
+	font-size: 2em;
+	color: #682566;
+	font-weight: normal;
+    text-align: center;
+}
+
+.three_buttons/*WTF IS THIS "Three Buttons"...*/
+{
+	background-color: #F7B334;
+	font-size: 1.28em;
+	align-content: center;
+	color: white;
+	letter-spacing:0.05em;
+	width: 50%;
+}
+
+/**********ILLUSTRATIONS & ACHIEVEMENTS.HTML**********/
+
+.line_illustrations
+{
+	position: relative;
+    box-shadow: 0 0 5px #83827d;
+    margin-top: 5px;
+	margin-bottom: 5px;
+	/* padding: 20px; */
+	display: auto;
+	background-color: #EFEEEA;
+}
+
+.line_achievement
+{
+	position: relative;
+	/* background-color: white; */
+	box-shadow: 0 0 5px #83827d;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	display: flex;
+	/* max-height: 350px; */
+}
+
+.achievement_img
+{
+	height: 100%;
+	width: auto;
+	overflow: auto; 
+}
+
+#illustrations_container
+{
+	display: flex;
+}
+
+.illustration_div
+{
+	flex: 1;
+	margin: 4px;
+}
+
+.illustration
+{
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	padding: auto;
+}
+
+.line_illustration_middle_content
+{
+	height: inherit;
+	flex: auto;
+	position: relative; /*Nécessaire pour que le bouton soit bien placé*/
+	flex: 100;
+	padding: 20px;
+	max-height: 350px;
+}
+
+.wing
+{
+	flex: 2;
+}
+
+.middle_wing
+{
+	flex: 0;
+}
