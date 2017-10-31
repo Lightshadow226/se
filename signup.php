@@ -22,30 +22,50 @@ include_once 'partials/parseSignup.php';
 
 </head>
 
-<body>
+<body class = "y-center">
 
-	<header id="header">
+	<?/*php include_once 'partials/headers.php'*/?>
 
-	</header>
-
-	<?php include_once 'partials/headers.php' ?>
+	<a href="index.php"><img class="logo add_border" src="images/general/se-logo.png"></a>
 
 	<div class = "main_content">
+
         <div class="card_nomargin add_padding">
-            <h1>Registration</h1>
-            	<?php if(isset($result)) echo $result; ?>
-		<?php if(!empty($form_errors)) echo show_errors($form_errors); ?>
+		
+			<h1>Registration</h1>
+
+			</br>
+			
+			<?php if(isset($result)) echo $result; ?>
+			
+			<?php if(!empty($form_errors)) echo show_errors($form_errors); ?>
             
-            	<form method="post" action="" class="center">
-				Email:
-				<p><input type="text" value="" name="email"></p>
-        			Username:
-        			<p><input type="text" value="" name="username"></p>
-        			Password:
-        			<p><input type="password" value="" name="password"></p>
-        			<input type="hidden" value="<?php echo _token(); ?>" name="token">
-        			<br><p><input type="submit" name="signupBtn" value="REGISTER"></p><br>
-		</form>
+			<form method="post" action="" class="center">
+
+				<p>
+					Email:
+					<input type="text" placeholder = "Email" name="email">
+				</p>
+
+				</br>
+				
+				<p>
+					Username:
+					<input type="text" placeholder = "Username" name="username">
+				</p>
+				
+				</br>
+
+				<p>
+					Password:
+					<input type="password" placeholder = "Password" name="password">
+				</p>
+				
+				<input type="hidden" value="<?php echo _token(); ?>" name="token">
+				
+				<br><p><input class = "button pink_button" type="submit" name="signupBtn" value="REGISTER"></p><br>
+				
+			</form>
 		
 		<br><p style="text-align:center;"><a href="index.php">Back</a> </p>
 

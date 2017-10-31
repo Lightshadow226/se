@@ -915,3 +915,12 @@ section
 {
 	flex: 0;
 }
+
+
+/*REMOVE EVENTUALLY -> it's also in se-game.css*/
+.y-center
+{
+    /* top: 50%; */
+
+    transform: translateY(30%); 
+}

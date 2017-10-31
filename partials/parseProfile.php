@@ -2,7 +2,6 @@
 include_once 'resources/utilities.php';
 include_once 'resources/database.php';
 
-
 if((isset($_SESSION['id']) || isset($_GET['user_identity'])) && !isset($_POST['updateProfileBtn']))
 {
     if(isset($_GET['user_identity']))
@@ -11,7 +10,8 @@ if((isset($_SESSION['id']) || isset($_GET['user_identity'])) && !isset($_POST['u
         $decode_id = base64_decode($url_encoded_id);
         $user_id_array = explode("encodeuserid", $decode_id);
         $id = $user_id_array[1];
-    }else
+	}
+	else
     {
         $id = $_SESSION['id'];
     }
@@ -29,7 +29,8 @@ if((isset($_SESSION['id']) || isset($_GET['user_identity'])) && !isset($_POST['u
     
     $encode_id = base64_encode("encodeuserid{$id}");
     
-}elseif(isset($_POST['updateProfileBtn'], $_POST['token']))
+}
+else if(isset($_POST['updateProfileBtn'], $_POST['token']))
 {
     if(validate_token($_POST['token']))
     {
@@ -44,7 +45,6 @@ if((isset($_SESSION['id']) || isset($_GET['user_identity'])) && !isset($_POST['u
 	    $form_errors = array_merge($form_errors, check_min_lenght($fields_to_check_length));
 	
 	    $form_errors = array_merge($form_errors, check_email($_POST));
-	
 	
 	    $email = $_POST['email'];
 	    $username = $_POST['username'];
@@ -62,18 +62,18 @@ if((isset($_SESSION['id']) || isset($_GET['user_identity'])) && !isset($_POST['u
 	            {
 	                $result = "Profile Updated Successfully!";
 	
-	            }else
+				}
+				else
 	            {
 	                $result = "You have not made any changes";
 	            }
-	
-	
-	        }catch (PDOException $ex)
+			}
+			catch (PDOException $ex)
 	        {
 	            $result = flashMessage("An error occured:" .$ex->getMessage());
 	        }
-	        
-	    }else
+		}
+		else
 	    {
 	        if(count($form_errors) == 1)
 	        {
@@ -89,5 +89,4 @@ if((isset($_SESSION['id']) || isset($_GET['user_identity'])) && !isset($_POST['u
      {
      	$result = "<p>This request originates from an unknown source. This is a possible attack. Please contact the Sweet Elite Staff if you think this is a mistake.</p>";
      }
-
 }

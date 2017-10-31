@@ -4,10 +4,8 @@ include_once 'resources/database.php';
 include_once 'resources/utilities.php';
 include_once 'resources/send-email.php';
 
-//process the form if the reset password button is clicked
-if(isset($_POST['passwordResetBtn']))
+if(isset($_POST['passwordResetBtn']))//Password Reset
 {
-
     $form_errors = array();
     
     $required_fields = array('new_password', 'confirm_password');
@@ -18,22 +16,20 @@ if(isset($_POST['passwordResetBtn']))
     
     $form_errors = array_merge($form_errors, check_min_lenght($fields_to_check_length));
 
-
     if(empty($form_errors))
     {
-
         $id = $_POST['user_id'];
         $password1 = $_POST['new_password'];
         $password2 = $_POST['confirm_password'];
 
         if($password1 != $password2)
         {
-            $result = "<p style='padding:20px; border: 1px solid gray; color: red;'> New password and confirm password does not match</p>";
-        }else
+            $result = "<p style='padding:20px; border: 1px solid gray; color: red;'>New password and confirm password does not match</p>";
+		}
+		else
         {
             try
             {
-
                 $sqlQuery = "SELECT id FROM userinfo WHERE id =:id";
                 
                 $statement = $db->prepare($sqlQuery);
@@ -57,7 +53,8 @@ if(isset($_POST['passwordResetBtn']))
                     $result = "<p style='padding:20px; border: 1px solid gray; color: red;'> The email address provided
                                 does not exist in our database, please try again</p>";
                 }
-            }catch (PDOException $ex)
+			}
+			catch(PDOException $ex)
             {
                 $result = "<p style='padding:20px; border: 1px solid gray; color: red;'> An error occurred: ".$ex->getMessage()."</p>";
             }
@@ -68,14 +65,16 @@ if(isset($_POST['passwordResetBtn']))
         if(count($form_errors) == 1)
         {
             $result = "<p style='color: red;'> There was 1 error in the form<br>";
-        }else
+		}
+		else
         {
             $result = "<p style='color: red;'> There were " .count($form_errors). " errors in the form <br>";
         }
     }
 
 
-}else if(isset($_POST['passwordRecoveryBtn']))
+}
+else if(isset($_POST['passwordRecoveryBtn']))//Password Recovery
 {
 	$form_errors = array();
 	
@@ -104,6 +103,7 @@ if(isset($_POST['passwordResetBtn']))
 				$user_id = $rs['id'];
 				$encode_id = base64_encode("encodeuserid{$user_id}");
 				
+				// HTML code for the email to be sent to the new student
 				$mail_body = '<html>
 				<body>
 				
@@ -142,37 +142,34 @@ if(isset($_POST['passwordResetBtn']))
 				{
 					$result="Email sending failed: $mail->ErrorInfo";
 					
-				}else
+				}
+				else
 				{
 					$result="Password reset link sent succesfully! Check your inbox.";
 				}
-				
-				
-			}else
+			}
+			else
 			{
 				$result = "Oops! The email you entered does not exist in our database, please try again!";
 			}
-			
-			
 		}
 		catch (PDOException $ex)
 		{
 			$result = "<p style='padding:20px; border: 1px solid gray; color: red;'> An error occurred: ".$ex->getMessage()."</p>";
 		}
 		
-	}else
+	}
+	else
 	{
 		if(count($form_errors) == 1)
-        	{
-            		$result = "<p style='color: red;'> There was 1 error in the form<br>";
-	        }else
-	        {
-	            $result = "<p style='color: red;'> There were " .count($form_errors). " errors in the form <br>";
-	        }
+		{
+				$result = "<p style='color: red;'> There was 1 error in the form<br>";
+		}
+		else
+		{
+			$result = "<p style='color: red;'> There were " .count($form_errors). " errors in the form <br>";
+		}
 	}
-	
 }
-
-
 
 ?>

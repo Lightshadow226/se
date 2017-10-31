@@ -28,12 +28,10 @@ if(isset($_POST['signupBtn'],$_POST['token']))
 		//Email validation, merge the return data into form_errors array
 		$form_errors = array_merge($form_errors, check_email($_POST));
 	
-	
 		//Collecting the form data and storing them into variables
 			$email = $_POST['email'];
 			$username = $_POST['username'];
 			$password = $_POST['password'];
-			
 			
 		//Check if the username or email already exists in the database
 		if(checkDuplicateUsername($username, $db))
@@ -73,46 +71,47 @@ if(isset($_POST['signupBtn'],$_POST['token']))
 					$encode_id = base64_encode("encodeuserid{$user_id}");
 					
 					//Preparing the body of the email
-					$mail_body ='<html>
+					$mail_body =
+						'<html>
 
-							<body>
-							
-							<div style="text-align:center; background-color:#ff4956;" class="logo_div">
-								<img src="http://sweetelitegame.com/images/se-logo.png">
-							</div>
-							
-							
-							<div class="main_content">
-							
-							<h2 style="text-align:center; color:#682666;">Welcome to Arlington Academy!</h2>
-							
-							<p>Dear '.$username.',<br> 
-							
-							<br>Congratulations! On behalf of Arlington Academy, I am pleased to announce your acceptance for the class of 20XX!</p>
-							
-							<p>You can be proud to be joining a select group of people, ready to change the world by offering up their talents to the pursuit of excellence.</p>
-							
-							<p>What is your next step? <b>Confirm your student account by clicking on the link below:</b></p>
-							
-							<p style="text-align:center;"><a href="http://sweetelitegame.com/testfiles/octobernine/files/activate.php?id='.$encode_id.'"> Confirm your Account!</a></p>
-							
-							<p>Once you have confirmed your account, you will be ready to start your adventure! I have assigned a senior student to help you on your first day at Arlington. They will teach you everything you need to know to start playing.</p>
-							
-							<p>If you need any help, please do not hesitate to contact the staff!</p>
-							
-							<p>Sincerly,</p>
-							
-							<p><img src="http://sweetelitegame.com/pubdomain/ladya-signature.png" height="100"></p>
-							<p><b>LADY AMELIA ARLINGTON </b>| President & Dean of Arlington Academy</p>
-							
-							</div>
-							
-							<footer style="background-color:#dbdad7;color:#682566;padding:5px 0 5px 0;text-align:center;">
-								<p>&copy;2016-2017 Dulcet Games Inc.</p>
-							</footer>
-							
-							</body>
-							</html>';
+						<body>
+						
+						<div style="text-align:center; background-color:#ff4956;" class="logo_div">
+							<img src="http://sweetelitegame.com/images/se-logo.png">
+						</div>
+						
+						
+						<div class="main_content">
+						
+						<h2 style="text-align:center; color:#682666;">Welcome to Arlington Academy!</h2>
+						
+						<p>Dear '.$username.',<br> 
+						
+						<br>Congratulations! On behalf of Arlington Academy, I am pleased to announce your acceptance for the class of 20XX!</p>
+						
+						<p>You can be proud to be joining a select group of people, ready to change the world by offering up their talents to the pursuit of excellence.</p>
+						
+						<p>What is your next step? <b>Confirm your student account by clicking on the link below:</b></p>
+						
+						<p style="text-align:center;"><a href="http://sweetelitegame.com/testfiles/octobernine/files/activate.php?id='.$encode_id.'"> Confirm your Account!</a></p>
+						
+						<p>Once you have confirmed your account, you will be ready to start your adventure! I have assigned a senior student to help you on your first day at Arlington. They will teach you everything you need to know to start playing.</p>
+						
+						<p>If you need any help, please do not hesitate to contact the staff!</p>
+						
+						<p>Sincerly,</p>
+						
+						<p><img src="http://sweetelitegame.com/pubdomain/ladya-signature.png" height="100"></p>
+						<p><b>LADY AMELIA ARLINGTON </b>| President & Dean of Arlington Academy</p>
+						
+						</div>
+						
+						<footer style="background-color:#dbdad7;color:#682566;padding:5px 0 5px 0;text-align:center;">
+							<p>&copy;2016-2017 Dulcet Games Inc.</p>
+						</footer>
+						
+						</body>
+						</html>';
 
 					//Sending the email
 					$mail->addAddress($email, $username);
@@ -129,7 +128,6 @@ if(isset($_POST['signupBtn'],$_POST['token']))
 					$result = "Registration Succesful! Please check your email to activate your account.";
 					}
 				}	
-		
 			}
 			catch(PDOException $ex) 
 			{
@@ -164,5 +162,4 @@ else if(isset($_GET['id']))
 		if you have not confirmed your email before</p>";
 	}
 }
-
 ?>

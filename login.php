@@ -23,40 +23,53 @@ include_once 'partials/parseLogin.php';
 
 </head>
 
-<body>
+<body class = "y-center">
 
-	<header id="header">
+    <?/*php include_once 'partials/headers.php' */?>
 
-	</header>
+	<a href="index.php"><img class="logo add_border" src="images/general/se-logo.png"></a>
 
-    <?php include_once 'partials/headers.php' ?>
-
-	<div class = "main_content">
+	<div class = "main_content"><!-- style = "width: fit-content;" -->
         <div class="card_nomargin add_padding">
-            <h1>Log In</h1>
+			<h1>Log In</h1>
+			
+			</br>
+			
             <?php if(isset($result)) echo $result; ?>
             <?php if(!empty($form_errors)) echo show_errors($form_errors); ?>   
             
 		<form method="post" action="" class="center">
-			<p>Username:</p>
-			<p><input type="text" value="" name="username"></p>
-			Password:
-			<p><input type="password" value="" name="password"></p>
-	               	<p>Remember Me?<input type="checkbox" value="yes" name="remember"></p>
+			<p>
+				Username:
+				<input type="text" placeholder = "Username" name="username">
+			</p>
+			
+			</br>
+		
+			<p>
+				Password:
+				<input type="password" placeholder = "Password" name="password">
+			</p>
+		
+			</br>
+			
+			<p>Remember Me? <input type="checkbox" value="yes" name="remember"></p>
+
+
 			<input type="hidden" value="<?php echo _token(); ?>" name="token">
 	                
-	                <br><input type="submit" name="loginBtn" value="Log In"></td></tr><br>	 
+			<br><input class = "button pink_button" type="submit" name="loginBtn" value="Log In"></td></tr><br>	 
 	                
-	                <br><p style="text-transform:uppercase;font-weight:500;font-size:0.7em; letter-spacing:0.2em;"><a href="signup.php">CREATE AN ACCOUNT</a>&nbsp;&diams;&nbsp;<a href="password_reset.php">Forgot your password?</a></p><br>
+			<br><p style="text-transform:uppercase;font-weight:500;font-size:0.7em; letter-spacing:0.2em;"><a href="signup.php">CREATE AN ACCOUNT</a>&nbsp;&diams;&nbsp;<a href="password_reset.php">Forgot your password?</a></p><br>
+
 		</form>
+		
 		<p style="text-align:center;"><a href="index.php">Back</a></p>
-        </div>
+		
+		</div>
 	</div>
 
-
-
     <?php include_once 'partials/footers.php' ?>
-
 
 </body>
 
