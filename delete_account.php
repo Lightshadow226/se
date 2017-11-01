@@ -13,7 +13,8 @@ if((isset($_SESSION['id']) || isset($_GET['user_identity'])) && !isset($_POST['d
         $decode_id = base64_decode($url_encoded_id);
         $user_id_array = explode("encodeuserid", $decode_id);
         $id = $user_id_array[1];
-    }else
+	}
+	else
     {
         $id = $_SESSION['id'];
     }
@@ -32,82 +33,76 @@ if((isset($_SESSION['id']) || isset($_GET['user_identity'])) && !isset($_POST['d
     $encode_id = base64_encode("encodeuserid{$id}");
 
 }
-elseif(isset($_POST['deleteBtn']))
+else if(isset($_POST['deleteBtn']))
 {
+	$form_errors = array();
+		
+	$required_fields = array('current_password');
+		
+	$form_errors = array_merge($form_errors, check_empty_fields($required_fields));
+		
+	if(empty($form_errors))
+	{
+		$id = $_POST['hidden_id'];
+		$current_password = $_POST['current_password'];
 
-		$form_errors = array();
-		
-		$required_fields = array('current_password');
-		
-		$form_errors = array_merge($form_errors, check_empty_fields($required_fields));
-		
-		
-		if(empty($form_errors))
+		try
 		{
-			$id = $_POST['hidden_id'];
-			$current_password = $_POST['current_password'];
+			$sqlQuery = "SELECT password FROM userinfo WHERE id = :id";
+			$statement = $db->prepare($sqlQuery);
+			$statement->execute(array(':id' => $id));
 
-
-				try
+			if ($row = $statement->fetch())
+			{
+				$password_from_db = $row['password'];
+				
+				if(password_verify($current_password,$password_from_db))
 				{
-					$sqlQuery = "SELECT password FROM userinfo WHERE id = :id";
-					$statement = $db->prepare($sqlQuery);
+
+					$sqlUpdate = "DELETE FROM userinfo WHERE id = :id";
+					$statement = $db->prepare($sqlUpdate);
 					$statement->execute(array(':id' => $id));
 
-					if ($row = $statement->fetch())
+					if($statement->rowCount() === 1)
 					{
-						$password_from_db = $row['password'];
+						$result = "You have succesfully deleted your account.";
+						signout();
 						
-						if(password_verify($current_password,$password_from_db))
-						{
-
-							$sqlUpdate = "DELETE FROM userinfo WHERE id = :id";
-							$statement = $db->prepare($sqlUpdate);
-							$statement->execute(array(':id' => $id));
-
-							if($statement->rowCount() === 1)
-							{
-								$result = "You have succesfully deleted your account.";
-								signout();
-								
-							}
-							else
-							{
-								$result = "No Changes Have been Made.";
-							}
-
-						}
-						else
-						{
-							$result = "Your entered password is not correct. Please try again.";
-						}
 					}
 					else
 					{
-						$result = "fetch did not execute.";
+						$result = "No Changes Have been Made.";
 					}
+
 				}
-				catch (PDOException $ex)
+				else
 				{
-					$result = flashMessage("An error occured:" .$ex->getMessage());
+					$result = "Your entered password is not correct. Please try again.";
 				}
+			}
+			else
+			{
+				$result = "fetch did not execute.";
+			}
+		}
+		catch (PDOException $ex)
+		{
+			$result = flashMessage("An error occured:" .$ex->getMessage());
+		}
+	}
+	else
+	{
+		if(count($form_errors) == 1)
+		{
+			$result = flashMessage("There was one error:");
+			$id = $_SESSION['id'];
 		}
 		else
 		{
-			if(count($form_errors) == 1)
-	        	{
-	           		 $result = flashMessage("There was one error:");
-	           		 $id = $_SESSION['id'];
-	           		 
-	       		}
-	        	else
-	        	{
-	           		 $result = flashMessage("There were " .count($form_errors). " errors:");
-	           		 $id = $_SESSION['id'];
-	        	}
+			$result = flashMessage("There were " .count($form_errors). " errors:");
+			$id = $_SESSION['id'];
 		}
-		
-		
+	}
 }
 
 ?>
@@ -165,9 +160,7 @@ elseif(isset($_POST['deleteBtn']))
         </div>
 	</div>
 
-
 	<?php include_once 'partials/footers.php' ?>
-
 
 </body>
 
