@@ -125,7 +125,7 @@ elseif(isset($_POST['updateEmailBtn']))
 	<?php include_once 'partials/headers.php' ?>
 
 	<div class = "main_content">
-	<div class="card_nomargin add_padding">
+	<div class="card-nomargin add_padding">
 	
 	<h1>Edit your Email</h1>
             <?php if(isset($result)) echo $result; ?>

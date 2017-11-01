@@ -17,21 +17,19 @@
 
 <body>
 
-	<header id = "header">
-
-    </header>
+    <?php include_once 'partials/headers.php'?>
 
     <div class = "main_content">
-        <div class="card_nomargin add_padding">
+        <div class="card-nomargin add_padding">
             <h1>Features</h1>
 
             <!--DUAL ARTSTYLE-->
-            <div class="add_border flex_card">
-                <div class="add_border features_illustration">
-                    <img class="add_border imgh" src="images/general/features/dualart.png">
+            <div class="card flex-container hightlight-grey">
+                <div class="features_illustration">
+                    <img class="imgh" src="images/general/features/dualart.png">
                 </div>
                 
-                <div class="add_border description">        
+                <div class="description">        
                     <h4 class="center">DUAL ARTSTYLE</h4>
 
                     <p>Our CGs are made by our two main artists, each of them adding in their own charm.</p>
@@ -41,9 +39,9 @@
             </div>
 
             <!--SAME-SEX DATING OPTIONS-->
-            <div class="add_border flex_card">
+            <div class="card flex-container hightlight-grey">
                 
-                <div class="add_border description">        
+                <div class="description">        
                     <h4>SAME-SEX DATING OPTIONS</h4>
 
                     <p>Because in our current day and age, we think introducing an LGBT branch to the storyline of an Otome is long overdue.</p><br>
@@ -51,13 +49,13 @@
                 </div>
 
                 
-                <div class="add_border features_illustration">
-                    <img class="add_border imgh" src="images/general/features/samesex.png">
+                <div class="features_illustration">
+                    <img class="imgh" src="images/general/features/samesex.png">
                 </div>
             </div>
 
             <!--DIVERSE CHARACTERS-->
-            <div class="flex_card">
+            <div class="card flex-container hightlight-grey">
                 <div class="features_illustration">
                     <img class="imgh" src="images/general/features/diversity.png">
                 </div>
@@ -71,7 +69,7 @@
             </div>
 
             <!--FRIENDSHIP AND ROMANCE OPTIONS-->
-            <div class="flex_card">
+            <div class="card flex-container hightlight-grey">
                 <div class="description">        
                     <h4>FRIENDSHIP AND ROMANCE OPTIONS</h4>
 
@@ -86,7 +84,7 @@
             </div>
             
             <!--CHOOSE A DEPARTMENT-->
-            <div class="flex_card">
+            <div class="card flex-container hightlight-grey">
                 <div class="features_illustration">
                     <img class="imgh" src="images/general/features/depts.png">
                     </div>
@@ -103,13 +101,9 @@
         </div>
     </div>
 
-
-
     <footer>
     Sweet Elite © 2016 - 2017. All rights reserved.
     </footer>
 
 </body>
-
-<script src = "js/header.js"></script>
 </html>

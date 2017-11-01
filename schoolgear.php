@@ -18,12 +18,10 @@
 
 <body>
 
-	<header id="header">
-
-	</header>
+	<?php include_once 'partials/headers.php'?>
 
     <div class="main_content">
-		<div class="card_nomargin add_padding">
+		<div class="card-nomargin add_padding">
 			<h1>School Gear</h1>
 
 			<p>These are department badges that you can insert on your Tumblr blog. Pick your department and show your school pride!</p><br>
@@ -163,7 +161,4 @@
 	</footer>
 
 </body>
-
-<script src = "js/header.js"></script>
-
 </html>

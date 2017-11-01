@@ -123,7 +123,7 @@ elseif(isset($_POST['updateUsernameBtn']))
 	<?php include_once 'partials/headers.php' ?>
 
 	<div class = "main_content">
-	<div class="card_nomargin add_padding">
+	<div class="card-nomargin add_padding">
 	
 	<h1>Edit your Username</h1>
             <?php if(isset($result)) echo $result; ?>

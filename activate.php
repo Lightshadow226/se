@@ -29,7 +29,7 @@ include_once 'partials/parseSignup.php';
 	<?php include_once 'partials/headers.php' ?>
 
 	<div class = "main_content">
-        <div class="card_nomargin add_padding">
+        <div class="card-nomargin add_padding">
             <h1>Email Confirmation</h1>
             	<?php if(isset($result)) echo $result; ?>
 		    <p style="text-align:center;"><a href="index.php">Back</a> </p>

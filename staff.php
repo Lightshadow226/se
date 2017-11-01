@@ -17,92 +17,97 @@
 
 <body>
 
-<header id="header">
+<?php include_once 'partials/headers.php'?>
 
-</header>
+<div class = "main_content">
 
-<div class = "main_content add_border">
+	<div class = "card-nomargin add_padding contact_us">
 
-	<div class = "card_nomargin add_padding contact_us">
+		<h1 class = "center">The Staff</h1>
 
-		<h1 class = "center add_border">The Staff</h1>
+		<div class = "flex-container hightlight-grey_noshadow">
 
-		<div class = "flex_card_noshadow">
-
-			<div class = "child_flex_card">
+			<div class = "card-all-margin flex-panel hightlight-grey">
 				<img src="images/general/staffchibis/serena.png" style="width:100%;">
 				<div class="staff_name">Serena</div>
 				<p class="staff_title">Project Manager</p>
 				<p class = "fixed_height center add_padding">In charge of web development, recruitment, marketing, writing the story, and running Sweet Elite's social media accounts.</br>A nerd in a business suit.</p>
-					<div style="margin:10px">
-					<a href="https://se-serena.tumblr.com/ask" class="button normal_button">Contact</a>
-					</div>
+				
+				<div class="card-content">
+					<a href="https://se-serena.tumblr.com/ask" class="button pink_button">Contact</a>
+				</div>
 			</div>
 
-			<div class = "child_flex_card">
+			<div class = "card-all-margin flex-panel hightlight-grey">
 				<img src="images/general/staffchibis/cecile.png" style="width:100%">
 				<div class="staff_name">Cecile</div>
 				<p class="staff_title">Artist</p>
 				<p class = "fixed_height center add_padding">Makes in-game sprites and illustrations. Works faster than the speed of light. Needs memes to stay alive.</p>
-					<div style="margin:10px">
-					<a href="http://israphael-x.tumblr.com/ask" class="button normal_button">Contact</a>
-					</div>
+				
+				<div class="card-content">
+					<a href="http://israphael-x.tumblr.com/ask" class="button pink_button">Contact</a>
+				</div>
 			</div>
 
-			<div class = "child_flex_card">
+			<div class = "card-all-margin flex-panel hightlight-grey">
 				<img src="images/general/staffchibis/mae.png" style="width:100%">
 				<div class="staff_name">Mae</div>
 				<p class="staff_title">Writer</p>
 				<p class = "fixed_height center add_padding">Co-writes the story with Serena. Comes up with some pretty juicy plot elements. She's also drop dead gorgeous.</p>
-					<div style="margin:10px">
-					<a href="http://m-a-e-v-i-x.tumblr.com/ask" class="button normal_button">Contact</a>
-					</div>
+				
+				<div class="card-content">
+					<a href="http://m-a-e-v-i-x.tumblr.com/ask" class="button pink_button">Contact</a>
+				</div>
 			</div>
 
-			<div class = "child_flex_card">
+			<div class = "card-all-margin flex-panel hightlight-grey">
 				<img src="images/general/staffchibis/an.png" style="width:100%">
 				<div class="staff_name">An</div>
 				<p class="staff_title">Artist</p>
 				<p class = "fixed_height center add_padding">AKA the sass machine. She makes Sweet Elite’s background art and illustrations. You know nothing about her except that she is crazy talented. You know already too much.</p>
-					<div style="margin:10px">
-					<a href="http://morethan24hours.tumblr.com/ask" class="button normal_button">Contact</a>
-					</div>
+					
+				<div class="card-content">
+					<a href="http://morethan24hours.tumblr.com/ask" class="button pink_button">Contact</a>
+				</div>
 			</div>
 		</div>
 
-		<div class = "flex_card_noshadow">
+		<div class = "flex-container hightlight-grey_noshadow">
 		
-			<div class = "child_flex_card">
+			<div class = "card-all-margin flex-panel hightlight-grey">
 				<img src="images/general/staffchibis/andrea.png" style="width:100%">
 				<div class="staff_name">Andrea</div>
 				<p class="staff_title">Chibi Artist</p>
 				<p class = "fixed_height center add_padding">The cutie with the chibis. She’s a nerd, but a great one. She made the chibis on this page.</p>
-					<div style="margin:10px">
-					<a href="http://leiacchii.tumblr.com/ask" class="button normal_button">Contact</a>
-					</div>
+				
+				<div class="card-content">
+					<a href="http://leiacchii.tumblr.com/ask" class="button pink_button">Contact</a>
+				</div>
 			</div>
 
-			<div class = "child_flex_card">
+			<div class = "card-all-margin flex-panel hightlight-grey">
 				<img src="images/general/staffchibis/bianca.png" style="width:100%">
 				<div class="staff_name">Bianca</div>
 				<p class="staff_title">Beta Reader</p>
 				<p class = "fixed_height center add_padding">Knows exactly what you want and how you want it. Catches the many dumb mistakes Serena makes when she’s writing. An absolute sweetheart.</p>
-					<div style="margin:10px">
-					<a href="http://sabi138.tumblr.com/ask" class="button normal_button">Contact</a>
-					</div>
+				
+				<div class="card-content">
+					<a href="http://sabi138.tumblr.com/ask" class="button pink_button">Contact</a>
+				</div>
 			</div>
 
-			<div class = "child_flex_card">
+			<div class = "card-all-margin flex-panel hightlight-grey">
 				<img src="images/general/staffchibis/elys.png" style="width:100%">
 				<div class="staff_name">Shea</div>
 				<p class="staff_title">Beta Reader</p>
 				<p class = "fixed_height center add_padding">Also corrects many of Serena’s dumb mistakes. The brainstorming genius of the team. Makes good puns. 10/10.</p>
-					<div style="margin:10px">
-					<a href="http://shea-gardienne.tumblr.com/ask" class="button normal_button">Contact</a>
-					</div>
+				
+				<div class="card-content">
+					<a href="http://shea-gardienne.tumblr.com/ask" class="button pink_button">Contact</a>
+				</div>
 			</div>
 
-			<div class = "child_flex_card" style="box-shadow: none;">
+			<div class = "card-all-margin flex-panel hightlight-grey" style="box-shadow: none;">
 				
 			</div>
 
@@ -125,6 +130,6 @@
 
 </body>
 
-<script src = "js/header.js"></script>
+<?php include_once 'partials/headers.php'?>
 
 </html>

@@ -287,7 +287,7 @@ function refresh_container(i)
         
         char_container1.src = character_portraits_path + characters[getindexmm(getindexmm(index))] + ".png";
         
-        char_container1.className = "special_card scroll_img";
+        char_container1.className = "card-nomargin highlight-red scroll_img";
 
         char_container1.onclick =   function c()
                                     {
@@ -312,7 +312,7 @@ function refresh_container(i)
 
         char_container2.src = character_portraits_path + characters[getindexmm(index)] + ".png";
         
-        char_container2.className = "special_card scroll_img";
+        char_container2.className = "card-nomargin highlight-red scroll_img";
 
         char_container2.onclick =   function c()
                                     {
@@ -333,7 +333,7 @@ function refresh_container(i)
 
         char_container3.src = character_portraits_path + characters[index] + ".png";
 
-        char_container3.className = "special_card scroll_img";
+        char_container3.className = "card-nomargin highlight-red scroll_img";
 
         char_container3.onclick =   function c()
                                     {
@@ -356,7 +356,7 @@ function refresh_container(i)
 
         char_container4.src = character_portraits_path + characters[getindexpp(index)] + ".png";
 
-        char_container4.className = "special_card scroll_img";
+        char_container4.className = "card-nomargin highlight-red scroll_img";
 
         char_container4.onclick =   function c()
                                     {
@@ -379,7 +379,7 @@ function refresh_container(i)
 
         char_container5.src = character_portraits_path + characters[getindexpp(getindexpp(index))] + ".png";
 
-        char_container5.className = "special_card scroll_img";
+        char_container5.className = "card-nomargin highlight-red scroll_img";
 
         char_container5.onclick =   function c()
                                     {

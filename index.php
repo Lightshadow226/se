@@ -24,7 +24,7 @@
 	<?php include_once 'partials/headers.php' ?>
 
 	<div class = "main_content">
-        <div class="card_nomargin add_padding">
+        <div class="card-nomargin add_padding">
             <h1>Homepage</h1>
          
          	<?php if(!isset($_SESSION['username'])): ?>
@@ -35,55 +35,55 @@
 
 		</div>
 		
-		<div id="banner" class="add_border">
-			<img id="img_banner" class="add_border" src="images/general/banner.png">
+		<div id="banner">
+			<img id="img_banner" src="images/general/banner.png">
 		</div>
 
 		<!-- COMING SOON -->
-		<div id="coming_soon" class="center add_shading add_border">
+		<div id="coming_soon" class="center add_shading">
 			<img id="img_comming_soon" src="images/general/comingsoon.png">
 			<p class="add_padding">Sweet Elite is a dating sims inspired by the popular Japanese Otome. Flirt with students and uncover Arlington Academy's dark secrets. Choose your own story!<br></p>
 		</div>
 
 		<!-- ABOUT GAME -->
 		<div class = "card">
-			<div class="special_header center add_border">
+			<div class="card-header">
 				<h3>About the Game</h3>
 			</div>
 
-			<div class="center add_border add_padding">
+			<div class="card-content">
 				<p><i>In a school filled with rich, beautiful and insanely talented students, nothing could go wrong….could it? Arlington Academy has its secrets. Secrets it doesn’t want to expose. Will you be able to find out about the truth? Or will the pressure be too much for you to handle? It’s up to you!</i></p><br>
 				<p><b>Sweet Elite</b> is an upcoming Otome game following the adventures of the students of Arlington Academy, a prestigious high school only accessible to the best teenagers in their respective academic fields.</p><br>
 				<p>The player’s character, the <b>Scholar</b>, is a scholarship student and makes a series of major choices, affecting both their destiny and those of the people around them.</p><br>
 				
-				<a href="features.html" class="button pink_button add_border">Learn More</a>
+				<a href="features.html" class="button pink_button">Learn More</a>
 			</div>
 		</div>
 
 		<!-- MEET THE CHARACTERS -->
 		<div class="card">
-			<div class="special_header center add_border">
+			<div class="card-header">
 				<h3>Meet the Characters</h3>
 			</div>
 
-			<div id="chara_1" class="center add_border">
+			<div id="chara_1" class="center">
 			</div>
 
-			<div id="chara_2" class="center add_border">
+			<div id="chara_2" class="center">
 			</div>
 
-			<div class="center add_padding add_border">
-				<a href="characters.html" class="button pink_button add_border">Character Profiles</a>
+			<div class="card-content">
+				<a href="characters.html" class="button pink_button">Character Profiles</a>
 			</div>
 		</div>
 
 		<!-- FOLLOW US -->
 		<div class="card">
-			<div class="special_header center add_border">
+			<div class="card-header">
 				<h3>Follow Us</h3>
 			</div>
 
-			<div class="center add_padding add_border">
+			<div class="card-content">
 
 				<style>
 					.fa

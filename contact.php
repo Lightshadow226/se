@@ -17,15 +17,13 @@
 
 <body>
 
-<header id="header">
+<?php include_once 'partials/headers.php'?>
 
-</header>
+<div class = "main_content">
 
-<div class = "main_content add_border">
+	<div class = "card-nomargin add_padding contact_us">
 
-	<div class = "card_nomargin add_padding contact_us">
-
-		<h1 class = "center add_border">Contact Us</h1>
+		<h1 class = "center">Contact Us</h1>
 
 		<p>NOTE: For all business inquiries, please contact us at <a href="mailto:sweetelitestaff@gmail.com?Subject=Business%20Inquiry" target="_top">sweetelitegame@gmail.com</a></p><br>
 
@@ -44,7 +42,4 @@
 </footer>
 
 </body>
-
-<script src = "js/header.js"></script>
-
 </html>

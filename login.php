@@ -23,14 +23,14 @@ include_once 'partials/parseLogin.php';
 
 </head>
 
-<body class = "y-center">
+<body class = "verical-center">
 
     <?/*php include_once 'partials/headers.php' */?>
 
-	<a href="index.php"><img class="logo add_border" src="images/general/se-logo.png"></a>
+	<a href="index.php"><img id="logo" class="" src="images/general/se-logo.png"></a>
 
 	<div class = "main_content"><!-- style = "width: fit-content;" -->
-        <div class="card_nomargin add_padding">
+        <div class="card-nomargin add_padding">
 			<h1>Log In</h1>
 			
 			</br>

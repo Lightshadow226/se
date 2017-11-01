@@ -103,6 +103,8 @@ else if(isset($_POST['passwordRecoveryBtn']))//Password Recovery
 				$user_id = $rs['id'];
 				$encode_id = base64_encode("encodeuserid{$user_id}");
 				
+				/*THE CLASS "logo_div"  DOESN'T EXIST*/
+
 				// HTML code for the email to be sent to the new student
 				$mail_body = '<html>
 				<body>

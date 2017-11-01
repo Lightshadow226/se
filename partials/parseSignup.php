@@ -70,6 +70,8 @@ if(isset($_POST['signupBtn'],$_POST['token']))
 					$user_id = $db->lastInsertId();
 					$encode_id = base64_encode("encodeuserid{$user_id}");
 					
+					/*THE CLASS "logo_div"  DOESN'T EXIST*/
+					
 					//Preparing the body of the email
 					$mail_body =
 						'<html>

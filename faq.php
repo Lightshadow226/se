@@ -18,12 +18,10 @@
 
 <body>
 
-    <header id="header">
-
-    </header>
+    <?php include_once 'partials/headers.php'?>
 
     <div class="main_content">
-        <div class="card_nomargin add_padding">
+        <div class="card-nomargin add_padding">
             <h1>Frequently Asked Questions</h1>
 
             <button class="accordion">GENERAL QUESTIONS ABOUT THE GAME AND THE PROJECT</button>
@@ -455,7 +453,4 @@
         }
     }
 </script>
-
-<script src = "js/header.js"></script>
-
 </html>

@@ -42,7 +42,7 @@ if(isset($_GET['id']))
     <?php include_once 'partials/headers.php' ?>
 
 	<div class = "main_content">
-        <div class="card_nomargin add_padding">
+        <div class="card-nomargin add_padding">
             <h1>Password Reset</h1>
 		<?php if(isset($result)) echo $result; ?>
 		<?php if(!empty($form_errors)) echo show_errors($form_errors); ?>

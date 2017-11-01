@@ -140,7 +140,7 @@ elseif(isset($_POST['deleteBtn']))
 	<?php include_once 'resources/utilities.php' ?>
 
 	<div class = "main_content">
-        <div class="card_nomargin add_padding">
+        <div class="card-nomargin add_padding">
             <h1>Delete Your Account</h1>
 
             <?php if(isset($result)) echo $result; ?>

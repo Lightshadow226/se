@@ -14,22 +14,20 @@
 
 <body>
 
-    <header id="header">
-
-    </header>
+    <?php include_once 'partials/headers.php' ?>
 
     <div class="main_content">
 
-        <div class="add_border add_padding card_nomargin">
+        <div class="add_padding card-nomargin">
 
             <h1>Meet the Characters</h1>
 
             <span class="character_line" style="display: flex;">
-                <div class="card chara_pic">
+                <div class="chara_pic">
                     <img id="chara_pic" src="images/characters/tadashi.png" height="400px">
                 </div>
 
-                <div class="card chara_desc add_padding" style = "flex:1;">
+                <div class="chara_desc add_padding" style = "flex:1;">
 
                     <div id="chara_desc" class="chara_desc_subitem">
                         
@@ -51,7 +49,7 @@
                 <polygon points="94.35,0 58.65,35.7 175.95,153 58.65,270.3 94.35,306 247.35,153"/>
             </g>
             
-            <div class="card character_line">
+            <div class="character_line">
                 <div id = "horizontal_scroll">
                     
                 </div>
@@ -64,8 +62,6 @@
 	</footer>
 
 </body>
-
-<script src="js/header.js"></script>
 
 <script src="js/charactersScroll.js"></script>
 

@@ -18,12 +18,10 @@
 
 <body>
 
-	<header id="header">
-
-	</header>
+    <?php include_once 'partials/headers.php'?>
 
     <div class="main_content">
-        <div class="add_border add_padding card_nomargin">
+        <div class="add_padding card-nomargin">
             <h1>Join the Team</h1>
 
             <p>Sweet Elite is a game supported by volunteer artists, programmers and writers. However, because our team is pretty small, we could use some help to release the game as soon as possible.</p><br>
@@ -70,8 +68,4 @@
     </footer>
 
 </body>
-
-<script src = "js/header.js"></script>
-
 </html>
-

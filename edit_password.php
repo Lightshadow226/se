@@ -146,7 +146,7 @@ elseif(isset($_POST['changePasswordBtn']))
 	<?php include_once 'resources/utilities.php' ?>
 
 	<div class = "main_content">
-        <div class="card_nomargin add_padding">
+        <div class="card-nomargin add_padding">
             <h1>Password Management</h1>
 
             <?php if(isset($result)) echo $result; ?>

@@ -24,7 +24,7 @@
 
     <div class="main_content">
 
-        <div class="add_border add_padding card_nomargin">
+        <div class="add_padding card-nomargin">
 
             <h1 id="illu_achiev_id">Illustrations</h1>
 
