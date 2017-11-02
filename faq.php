@@ -27,7 +27,7 @@
             <button class="accordion">GENERAL QUESTIONS ABOUT THE GAME AND THE PROJECT</button>
             
             <div class="inside_accordion">
-                <ul>
+                <ul class = "ul-style">
                     <li>
                         <b>When is the game coming out? I'm super excited about the release!</b>
                         <p>Game development is a very unpredictable process. Things usually don’t go exactly as planned. However, due to the part-time nature of Sweet Elite, we’re estimating the full release of the game in about 1 to 2 years.</p><br>
@@ -164,7 +164,7 @@
             <button class="accordion">QUESTIONS ABOUT THE GAME’S STORY</button>
             
             <div class="inside_accordion">
-                <ul>
+                <ul  class = "ul-style">
                     <li>
                         <b>In Arlington Academy, will there be a mandatory uniform?</b></br>
                         <p>While during school hours, all students will be required to wear the official school uniform. After school hours, wearing the uniform will be optional to students who just want to chill on campus…and go on dates!</p><br>
@@ -204,7 +204,7 @@
             <button class="accordion">QUESTIONS ABOUT THE DATABLE CHARACTERS</button>
             
             <div class="inside_accordion">
-                <ul>
+                <ul  class = "ul-style">
                     <li>
                         <b>Will we be able to date any of the main 10 character, regardless of their gender?</b></br>
                         <p>Yes. Your scholar will be able to date all main 10 characters, which includes 5 guys and 5 girls. This is regardless of any of their genders. </p><br>
@@ -231,7 +231,7 @@
             <button class="accordion">QUESTIONS ABOUT SCHOLAR/THE PLAYER CHARACTER</button>
             
             <div class="inside_accordion">
-                <ul>
+                <ul  class = "ul-style">
                     
                     <li>
                         <b>What is a “Scholar”?</b></br>
@@ -324,7 +324,7 @@
             <button class="accordion">QUESTIONS ABOUT THE INFINITY METER</button>
               
             <div class="inside_accordion">
-                <ul>
+                <ul  class = "ul-style">
                     <li>
                         <b>What is an “Infinity Meter”?</b></br>
                         <p>The Infinity Meter is Sweet Elite’s version of the “love meter” that shows your affinity with a certain character that is present in the majority of Otome games. Unlike other meters though, the Infinity Meter is designed to showcase both your friendships and romances with each character!</p><br>
@@ -354,7 +354,7 @@
             <button class="accordion">QUESTIONS ABOUT THE DEPARTMENT AND THE BADGES</button>
             
             <div class="inside_accordion">
-                <ul>
+                <ul  class = "ul-style">
                     <li>
                         <b>What are departments? What are department badges?</b></br>
                         <p>As a student at Arlington Academy, your Scholar can choose between seven specializations offered to study in. Once they choose, they will be given a badge corresponding to their chosen department.</p><br>
@@ -385,7 +385,7 @@
             <button class="accordion">QUESTIONS ABOUT THE UNIFORM/DRESS CODE</button>
             
             <div class="inside_accordion">
-                <ul>
+                <ul  class = "ul-style">
                     <li>
                         <b>Will you make a non-binary option for the uniform? What about non-binary date outfits?</b></br>
                         <p>See <a href="http://sweetelite-staff.tumblr.com/post/146581957998/about-the-uniforms-non-binary-clothing-options">this post</a> for the long answer. Short answer is yes, there will be non-binary outfits.</p><br>
@@ -395,7 +395,7 @@
             <button class="accordion">QUESTIONS ABOUT THE OFFICIAL STUDENT ID CARDS</button>
             
             <div class="inside_accordion">
-                <ul>
+                <ul  class = "ul-style">
                     <!-- </li>                                                                                               -->
                       <li>
                         <b>What are the student ID’s?</b></br>

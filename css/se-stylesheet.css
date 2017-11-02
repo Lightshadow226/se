@@ -62,7 +62,7 @@
 		margin: 0 auto;
 
 		/*
-		Center Verically
+		Center Vertically
 			http://stackoverflow.com/questions/396145/how-to-vertically-center-a-div-for-all-browsers
 			https://css-tricks.com/centering-css-complete-guide/
 		*/
@@ -165,24 +165,40 @@
 	}
 /**********HEADER**********/
 
-	#nav_menu_container
-	{
-		background-color:#EE4C5E;
-		width: 68%;
-		box-shadow: 0 0 5px #83827d;
-	}
-
 	#user_info/*pour le header, la barre mauve qui donne le status de l'utilisateur*/
 	{
-		background-color:#682566;
 		width: 100%;
-		color:#ffffff;
+		position: fixed;
 		text-align:center;
 		padding: 5px 0 5px 0;
+		
+		background-color:#682566;
+		color:#ffffff;
+		
 		font-size:0.7em;
 		letter-spacing:0.15em;
-		position: fixed;
 		z-index: 4;
+	}
+
+	#nav_menu_container
+	{
+		width: 68%;
+		/* box-shadow: 0 0 5px #83827d; */
+	}
+
+	#logo/*Main navigation logo*/
+	{
+		position: relative;
+		top: 22px;
+		/* left: 14%; */
+		border:none;
+		z-index:3;
+	}
+
+	#pink_logo_bar/*buffer rose au-dessus du navigation menu (en-dessous du logo et au-dessus des menu items)*/
+	{
+		background-color:#EE4C5E;
+		height: 25px;
 	}
 
 	#pink_menu/*navigation menu*/
@@ -192,9 +208,10 @@
 		color: white;
 		letter-spacing:0.15em;
 	}
-
+	
 	.menu_item/*les items dans le menu*/
 	{
+		background-color:#EE4C5E;
 		padding:10px 0 10px 0;
 		text-align: center;
 		width: 100%;
@@ -206,21 +223,6 @@
 	.menu_item:hover
 	{
 		background-color:#F7B334;
-	}
-
-	#logo/*Main navigation logo*/
-	{
-		position: relative;
-		top: 22px;
-		left: 14%;
-		border:none;
-		z-index:3;
-	}
-
-	.pink_logo_bar/*buffer rose au-dessus du navigation menu (en-dessous du logo et au-dessus des menu items)*/
-	{
-		background-color:#EE4C5E;
-		height: 25px;
 	}
 
 /**********FOOTER**********/
@@ -466,17 +468,14 @@
 		font-size: 1.3em;
 	}
 
-	ul
+	.ul-style
 	{
 		background-color: #efefef;
-		/* color: red; */
 		width: calc(100% - 4px);
-		
 		border: 2px solid #682666;
 		border-top: 0px;
-		
-		padding: 0px;
 		margin-bottom: 5px;
+		padding: 0px;
 	}
 
 	li
@@ -777,17 +776,23 @@
 		flex: 0;
 	}
 
-	/*REMOVE EVENTUALLY -> it's also in se-game.css under "y-center"*/
-	.verical-center
-	{
-		transform: translateY(30%); 
-	}
-
 /***************STRUCTURE***************/
 
 	.main_content
 	{
 		width: 68%;
+	}
+
+	.center-screen
+	{
+		position: absolute;
+		
+		top: 50%;
+		left: 50%;
+
+		transform: translate3d(-50%, -60%, 0);/*-60% because of the header that takes space*/
+
+		width: 35%;
 	}
 
 	.fullscreen
@@ -873,6 +878,23 @@
 	{
 		flex:1;
 	}
+	
+	.flex-panel2/*must have a flex-container parent*/
+	{
+		flex:2;
+	}
+
+	.login-signup-labels
+	{
+		text-align: right;
+		padding: 5px;
+	}
+
+	.login-signup-textfields
+	{
+		text-align: left;
+		padding: 5px;
+	}
 
 /***************BUTTONS***************/
 
@@ -890,6 +912,8 @@
 		display: inline-block;
 		flex: 1;
 		font-weight: 300;
+
+		border: none;
 	}
 
 	.pink_button
@@ -899,6 +923,12 @@
 		color: white;
 		letter-spacing: 0.05em;
 		/* width: 100%; */
+	}
+
+	.pink-button-subtle
+	{
+		background-color: #EE4C5E;
+		color: white;
 	}
 
 	.yellow_button

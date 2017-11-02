@@ -13,13 +13,14 @@
 	<?php if((isset($_SESSION['username']) || isCookieValid($db))): ?><!-- If the username is specified (the user is logged on) -->
 
 		<div id="user_info" class="">
-			Welcome Back <?php if(isset($_SESSION['username'])) echo $_SESSION['username']; ?>! <a href="logout.php" style="font-size:8px; color:white";>LOGOUT?</a> </p>
+			Welcome Back <?php if(isset($_SESSION['username'])) echo $_SESSION['username']; ?>! <a href="logout.php" style="font-size:8px; color:white;">LOGOUT</a> </p>
 		</div>
-				
-		<a href="index.php"><img id="logo" class="" src="images/general/se-logo.png"></a>
 
 		<div id="nav_menu_container">
-			<div class="pink_logo_bar">
+			
+			<a href="index.php"><img id="logo" src="images/general/se-logo.png"></a>
+
+			<div id="pink_logo_bar">
 				<!--This div has no other purpose than to take space while not complicating lives with margins and padding-->
 			</div>
 
@@ -35,13 +36,14 @@
 	<?php else: ?><!-- If the  user is NOT logged on -->
 	
 		<div id="user_info" class="">
-			HELLO FUTURE SCHOLAR!
+			HELLO FUTURE SCHOLAR! <a href="login.php" style="font-size:8px; color:white;">LOGIN</a> | <a href="Signup.php" style="font-size:8px; color:white;">SIGNUP</a>
 		</div>
-
-		<a href="index.php"><img id="logo" class="" src="images/general/se-logo.png"></a>
-
+		
 		<div id="nav_menu_container">
-			<div class="pink_logo_bar">
+
+			<a href="index.php"><img id="logo" src="images/general/se-logo.png"></a>
+
+			<div id="pink_logo_bar">
 				<!--This div has no other purpose than to take space while not complicating lives with margins and padding-->
 			</div>
 
