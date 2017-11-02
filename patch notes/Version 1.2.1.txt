@@ -1,0 +1,20 @@
+Version 1.2
+
+***New***
+
+- la page Illustrations & Achievements est presque terminée
+- Intégré la base de données Affinity
+- La page Relationship et le gameengine utilisent l'affinity de la DB
+
+***À faire:***
+
+- la chapitre 1 est terminé jusqu'à la slide 129, donc il va falloir valider le reste + rajouter les émotions
+- il va falloir continuer avec les birthday, préférences, etc.
+- il reste à rajouter les ghost slides pour la slide 44 (221-224)
+- valider que toutes les valeurs sont affectées à la bonne slide (array du chapter 0 & 1)
+- we still need to add characters over time in "classmates" and "others"
+- toutes les manipulations PHP/JS
+- les variables de Relationship.js doivent être intgrées dans variables.js
+
+***Bugs connus***
+

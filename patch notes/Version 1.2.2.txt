@@ -1,0 +1,31 @@
+﻿Version 1.2.2
+
+***New***
+
+- changé le header.js -> on utilise maintenant le code PHP headers.php
+- deleted the corresponding header.js files
+- .logo est rendu #logo
+- changé becaucoup de structure, et fait une nomenclature papier (toutes les nouvelles classes sont au bas de se-stylesheet.css)
+- Une des conséquences du changement de structure: les boutons sont centrés dans staff.html ("card-content" est un div qui centre les boutons dans les cards)
+- Dans le CSS, les balises suivantes sont terminées: HEADER, FOOTER
+- Tout ce qui est sous "STRUCTURE" est parfait et (pratiquement) final.
+
+***TODO:***
+
+- la chapitre 1 est terminé jusqu'à la slide 129, donc il va falloir valider le reste + rajouter les émotions
+- il va falloir continuer avec les birthday, préférences, etc.
+- il reste à ajouter les ghost slides pour la slide 44 (221-224)
+- valider que toutes les valeurs sont affectées à la bonne slide (array du chapter 0 & 1)
+- we still need to add characters over time in "classmates" and "others"
+- toutes les manipulations PHP/JS
+- les variables de Relationship.js doivent être intgrées dans variables.js
+- terminer la page Illustrations & Achievements
+- downloader les fonts "great vibes" & "roboto" de Google API
+- Il va falloir réviser le CSS dans "se-stylesheet" pour les balises: GENERAL, INDEX.PHP, FAQ.PHP, FEATURES.HTML. -> Il faut que les page-specific attributes ne soient jamais utilisés dans une autre page
+- Organiser les fichiers PHP
+
+***Bugs connus***
+
+***Liens pour GIT***
+https://stackoverflow.com/questions/26228848/how-do-i-exit-my-git-commit-message-im-not-in-the-vim-i-used-the-commit-m
+https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/
