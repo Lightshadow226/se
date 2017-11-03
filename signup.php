@@ -73,7 +73,7 @@ include_once 'partials/parseSignup.php';
 				
 				<br>
 				
-				<p style="text-transform:uppercase;font-weight:500;font-size:0.7em;color:#682666;letter-spacing:0.2em;">Already have an account? <a href="login.php">Login</a></p>
+				<p style="text-transform:uppercase;font-weight:500;font-size:0.7em;color:#ff4956;letter-spacing:0.2em;">Already have an account? <a href="login.php">Login</a></p>
 
 			</form>
 		

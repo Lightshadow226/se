@@ -65,8 +65,8 @@ include_once 'partials/parseLogin.php';
 
 			<br>
 			
-			<p style="text-transform:uppercase;font-weight:500;font-size:0.7em;color:#682666;sletter-spacing:0.2em;"><a href="signup.php">CREATE AN ACCOUNT</a> | <a href="password_reset.php">Forgot your password?</a></p>
-			<!-- &nbsp;&diams;&nbsp; -->
+			<p style="text-transform:uppercase;font-weight:500;font-size:0.7em;color:#682666;sletter-spacing:0.2em;"><a href="signup.php">CREATE AN ACCOUNT</a> &nbsp;&diams;&nbsp; <a href="password_reset.php">Forgot your password?</a></p>
+			
 			<br>
 
 		</form>

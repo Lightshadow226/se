@@ -663,7 +663,6 @@ function refreshInterface()//REFRESHES the interface
                                 "Department of Fashion"];
 
             var form_container = document.createElement('div');
-
                 form_container.className = "form_container";
 
             var formHeader = document.createElement('h6');
@@ -686,16 +685,32 @@ function refreshInterface()//REFRESHES the interface
                     line.id = "line_" + index;
                     line.className = "form_line";
             
-                var text = document.createElement('p');
-                    text.innerHTML = form_names[index];
-                    text.className = "form_text";
+                var text_container = document.createElement('div');
+                    text_container.className = "form_text_container";
+
+                    var div1 = document.createElement('div');
+                        div1.className = "padding_div";
+
+                    var div2 = document.createElement('div');
+                        div2.className = "padding_div";
+                        div2.innerHTML = form_names[index];
+
+                    var div3 = document.createElement('div');
+                        div3.className = "padding_div";
             
-                var badge = document.createElement('img');
-                    badge.src = "images/game_images/badges/" + ++index + ".png";
-                    badge.className = "form_badge";
+                var img_container = document.createElement('div');
+                    img_container.className = "form_img_container";
+                
+                var img = document.createElement('img');
+                    img.src = "images/game_images/badges/" + ++index + ".png";
+                    img.className = "form_img";
             
-                line.appendChild(badge);
-                line.appendChild(text);
+                line.appendChild(img_container);
+                    img_container.appendChild(img);
+                line.appendChild(text_container);
+                    text_container.appendChild(div1);
+                    text_container.appendChild(div2);
+                    text_container.appendChild(div3);
             
                 line.addEventListener( "click",
                                         function (e)

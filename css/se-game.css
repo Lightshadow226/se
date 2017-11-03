@@ -40,7 +40,7 @@
 #progress_bar_container
 {
     height: 20px;
-    margin-top: 20px;
+    margin-top: 30px;
     margin-bottom: 10px;
     /* border: 2px solid #EFEEEA; */
     /* height: auto; */
@@ -236,23 +236,50 @@
     opacity: 0.95;
 }
 
-.form
+.form_container
 {
-    position: relative;
-    /*background-color: white;*/
-    /*background-color: rgb(236, 220, 210);*/
-    padding: 20px;
-    opacity: 0.95;
+    display: flex;
+    flex-direction: column;
 }
 
 .form_line
 {
-    flex: 1;/*the flex is vertical, all lines will have the same height*/
-    
+    flex: 1;/*toutes les lignes vont avoir la même hauteur*/
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    align-content: left;
+}
+
+.form_img_container
+{
+    width: 7%; 
+    height: 100%;
+}
+
+.form_img
+{
+    height: 100%;
+    float: left;
+}
+
+.form_text_container
+{
+    height: 100%;
+    flex: 1;
     
     display: flex;
+    flex-direction: column;
+}
+
+.padding_div
+{
+    flex: 1;
+    width: 100%;
     user-select: none;
+    padding-left: 5px;
+    /* font-size: 1.2em; */
 }
 
 .form_line_selected
@@ -274,39 +301,8 @@
 .form_line:hover
 {
     cursor: pointer;
-   
-    background-color: #ff4956;
-}
-
-.form_text
-{
-    flex: 1; /*any flex will do, because the img doesn't have a flex*/
-    
-    width: calc(100%-10px);
-    /* line-height: 100%; */
-    /* height: 100%; */
-    
-    padding-left: 10px;
-    
-    /* display: table-cell; */
-    vertical-align: middle;
-    text-align: left;
-    
-    font-size: 1.3em;
-    
-    user-select: none;
-}
-
-.form_text:hover
-{
     color: white;
-}
-
-.form_badge
-{
-    /* display: table-cell; */
-    height: 50px;
-    width: auto;
+    background-color: #ff4956;
 }
 
 /*BUTTONS*/
