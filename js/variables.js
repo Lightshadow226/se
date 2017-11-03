@@ -18,7 +18,7 @@ var currentChapter = 0;
 var storyLocation = 0;//la location dans le jeu, qui va être passée en parametre dans le array du chapitre
 
 //Chapter locations
-var chapter0Location = 23;
+var chapter0Location = 24;
 var chapter1Location = 130;
 
 //Constant Colors

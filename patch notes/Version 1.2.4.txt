@@ -1,11 +1,9 @@
-﻿Version 1.2.3
+﻿Version 1.2.4
 
 ***New***
 
-- Further upgraded se-stylesheet.css
-- changé les <ul> pour une classe custom
-- changé login.php, signup.php, password_reset.php, headers.php
-- le header est plus consistent
+- Further upgraded se-stylesheet.css and se-game.css
+- Tried to make the form work, but although it doesn't overflow when downsized, the images stay too large
 
 ***TODO:***
 
