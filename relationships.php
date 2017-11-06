@@ -56,6 +56,7 @@
 
 <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src = "js/variables.js"></script>
+<script src = "js/library.js"></script>
 <script src = "js/relationships.js"></script>
 
 </html>

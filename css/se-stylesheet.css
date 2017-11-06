@@ -180,9 +180,9 @@
 		z-index: 4;
 	}
 
-	#nav_menu_container
+	#nav_menu_container/*header as a whole*/
 	{
-		width: 68%;
+		width: 90%;
 		/* box-shadow: 0 0 5px #83827d; */
 	}
 
@@ -235,7 +235,7 @@
 		text-align: center;
 		font-size: 0.8em;
 		letter-spacing: 0.2em;
-		width: 68%;
+		width: 90%;
 		box-shadow: 0 0 5px #83827d;
 	}
 
@@ -243,13 +243,68 @@
 
 	#banner
 	{
-		margin:0 auto;
+		position: relative;
+		margin: 0 auto;
 		border: 1px #83827d;
 	}
 
 	#img_banner
 	{
 		width: 100%;
+	}
+
+	#button_container
+	{
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		
+		top: 50%;
+		left: 50%;
+
+		transform: translate3d(-50%, -50%, 0);/*-60% because of the header that takes space*/
+	}
+	
+	#signup_button
+	{
+		text-transform: uppercase;
+		background-color: #682666;
+		font-size: 3vw;
+		color: white;
+		/* letter-spacing: 0.05em; */
+		margin-bottom: 0.5vw;
+		padding: 10px;
+		text-decoration: none;/*enlever le underline -> ne va plus être nécessaire quand on va rendre le bouton un actual Button*/
+		border-radius: 5px;
+		font-weight: 200;
+	}
+
+	#signup_button:hover
+	{
+		background-color: #EE4C5E;
+	}
+
+	#login_button
+	{
+		background-color: #F7B334;
+		font-size: 2vw;
+		color: white;
+		letter-spacing: 0.05em;
+		margin-top: 0.5vw;
+		padding: 10px;
+		text-decoration: none;/*enlever le underline -> ne va plus être nécessaire quand on va rendre le bouton un actual Button*/
+		border-radius: 5px;
+		font-weight: 200;
+	}
+
+	#login_button:hover
+	{
+		background-color: #EE4C5E;
+	}
+
+	#dashboard
+	{
+
 	}
 
 	#img_comming_soon
@@ -264,6 +319,95 @@
 		text-align: center;
 		font-size: 0.96em;
 		letter-spacing: 0.1em;
+	}
+
+	.department-line
+	{
+		flex: 1;
+		padding: 0px;
+		margin: 0px;
+		text-align: left;
+		align-content: left;
+		flex-direction: row;
+	}
+
+	.badge
+	{
+		flex: 2;
+		/* width: 10%; */
+	}
+
+	.img-badge
+	{
+		width: 100%;
+	}
+
+	.department-name-container
+	{
+		height: 100%;
+		flex: 8;
+		
+		display: flex;
+		flex-direction: column;
+	}
+
+	.department-name
+	{
+		flex: 1;
+		width: 100%; /*la solution à align left*/
+		padding-left: 1vw;
+	}
+
+	#button_container_v2
+	{
+		position: relative;
+		display: flex;
+
+		padding-bottom: 10px;
+		
+		left: 50%;
+
+		transform: translateX(-50%);/*-60% because of the header that takes space*/
+	}
+
+	#signup_button_v2
+	{
+		background-color: #682666;
+		font-size: 2vw;
+		color: white;
+		margin-right: 0.5vw;
+		padding: 10px;
+		text-decoration: none;/*enlever le underline -> ne va plus être nécessaire quand on va rendre le bouton un actual Button*/
+		border-radius: 5px;
+		font-weight: 200;
+	}
+
+	#signup_button_v2:hover
+	{
+		background-color: #EE4C5E;
+	}
+
+	#login_button_v2
+	{
+		background-color: #F7B334;
+		font-size: 2vw;
+		color: white;
+		letter-spacing: 0.05em;
+		margin-left: 0.5vw;
+		padding: 10px;
+		text-decoration: none;/*enlever le underline -> ne va plus être nécessaire quand on va rendre le bouton un actual Button*/
+		border-radius: 5px;
+		font-weight: 200;
+	}
+
+	#login_button_v2:hover
+	{
+		background-color: #EE4C5E;
+	}
+
+	#merchandise
+	{
+		display: flex;
 	}
 
 	/*******************le character thingy dans Index.html*******************/
@@ -780,7 +924,7 @@
 
 	.main_content
 	{
-		width: 68%;
+		width: 90%;
 	}
 
 	.center-screen
@@ -894,6 +1038,16 @@
 	{
 		text-align: left;
 		padding: 5px;
+	}
+
+	.table-container
+	{
+		display: table;
+	}
+
+	.table-cell
+	{
+		display: table-cell;
 	}
 
 /***************BUTTONS***************/

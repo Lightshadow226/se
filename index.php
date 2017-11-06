@@ -24,58 +24,198 @@
 	<?php include_once 'partials/headers.php' ?>
 
 	<div class = "main_content">
-        <div class="card-nomargin add_padding">
-            <h1>Homepage</h1>
-         
-         	<?php if(!isset($_SESSION['username'])): ?>
-			<P>You are currently not signed in. <a href="login.php">Login</a> to your account. Not yet a member? <a href="signup.php">Signup</a>.</p>
-		<?php else: ?>
-			<p>You are logged in as <?php if(isset($_SESSION['username'])) echo $_SESSION['username']; ?> <a href="logout.php">Logout</a> </p>
+		
+
+		<?php if(!isset($_SESSION['username'])): ?><!-- logged off -->
+			<!-- <P>You are currently not signed in. <a href="login.php">Login</a> to your account. Not yet a member? <a href="signup.php">Signup</a>.</p> -->
+
+			<div id="banner">
+				<img id="img_banner" src="images/banners/banner_logged_off.png">
+				<div id = "button_container">
+					<a href = "signup.php" id = "signup_button" class = "	">Sign Up</a>
+					<a href = "login.php" id = "login_button" class = "button">Login</a>
+				</div>
+			</div>
+
+			<div class = "card-nomargin flex-container">
+				<div class = "flex-panel">
+					<div class = "badge">
+						<img class = "img-badge" src = "images/game_images/badges/arlington_logo.png"></img>
+					</div>
+				</div>
+				
+				<!-- les 7 badges -->
+				<div class = "flex-panel flex-container" style="flex-direction: column;">
+					<div class = "department-line flex-container">
+						<div class = "badge">
+							<img class = "img-badge" src = "images/game_images/badges/1.png"></img>
+						</div>
+
+						<div class = "department-name-container">
+							<div class = "flex-panel"></div>
+							<div class = "department-name" style = "float:left;">Department of Business, Commerce, and Politics</div>
+							<div class = "flex-panel"></div>
+						</div>
+					</div>
+
+					<div class = "department-line flex-container">
+						<div class = "badge">
+							<img class = "img-badge" src = "images/game_images/badges/2.png"></img>
+						</div>
+
+						<div class = "department-name-container">
+							<div class = "flex-panel"></div>
+							<div class = "department-name">Department of Perfoming Arts</div>
+							<div class = "flex-panel"></div>
+						</div>
+					</div>
+
+					<div class = "department-line flex-container">
+						<div class = "badge">
+							<img class = "img-badge" src = "images/game_images/badges/3.png"></img>
+						</div>
+
+						<div class = "department-name-container">
+							<div class = "flex-panel"></div>
+							<div class = "department-name">Department of Pure and Applied Sciences</div>
+							<div class = "flex-panel"></div>
+						</div>
+					</div>
+
+					<div class = "department-line flex-container">
+						<div class = "badge">
+							<img class = "img-badge" src = "images/game_images/badges/4.png"></img>
+						</div>
+
+						<div class = "department-name-container">
+							<div class = "flex-panel"></div>
+							<div class = "department-name">Department of Health Sciences</div>
+							<div class = "flex-panel"></div>
+						</div>
+					</div>
+
+					<div class = "department-line flex-container">
+						<div class = "badge">
+							<img class = "img-badge" src = "images/game_images/badges/5.png"></img>
+						</div>
+
+						<div class = "department-name-container">
+							<div class = "flex-panel"></div>
+							<div class = "department-name">Department of Athletics</div>
+							<div class = "flex-panel"></div>
+						</div>
+					</div>
+
+					<div class = "department-line flex-container">
+						<div class = "badge">
+							<img class = "img-badge" src = "images/game_images/badges/6.png"></img>
+						</div>
+
+						<div class = "department-name-container">
+							<div class = "flex-panel"></div>
+							<div class = "department-name">Department of Fine Arts</div>
+							<div class = "flex-panel"></div>
+						</div>
+					</div>
+
+					<div class = "department-line flex-container">
+						<div class = "badge">
+							<img class = "img-badge" src = "images/game_images/badges/7.png"></img>
+						</div>
+
+						<div class = "department-name-container">
+							<div class = "flex-panel"></div>
+							<div class = "department-name">Department of Fashion</div>
+							<div class = "flex-panel"></div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class = "flex-panel">
+					<img class = "img-badge" src = "images/banners/welcome_to_arlignton.png"></img>
+				</div>
+			</div>
+
+			<!-- MEET THE CHARACTERS -->
+			<div class="card">
+				<div class="card-header">
+					<h3>Meet the Characters</h3>
+				</div>
+
+				<div id="chara_1" class="center">
+				</div>
+
+				<div id="chara_2" class="center">
+				</div>
+			</div>
+			
+			<div class = "card-nomargin flex-container">
+				<div class = "flex-panel">
+					<img class = "img-badge" style="height:100%;" src = "images/banners/customize_your_character.png"></img>
+				</div>
+				<div class = "flex-panel2">
+
+				</div>
+			</div>
+
+			<div class = "card">
+				<div class = "card-header">
+					<h3>Start Playing</h3>
+				</div>
+				
+				<div class = "card-content">
+					<p>Sweet Elite's Demo is now available!</p>
+					<p>Sign up now and get access to 3 free chapters to celebrate the demo's release!</p>
+				</div>
+
+				<div style = "position: relative;">
+					<div id = "button_container_v2">
+						<div class = "flex-panel"></div>
+						<a href = "signup.php" id = "signup_button_v2">Sign Up</a>
+						<a href = "login.php" id = "login_button_v2">Login</a>
+						<div class = "flex-panel"></div>
+					</div>
+				</div>
+			</div>
+
+		<?php else: ?><!-- logged in -->
+
+			<div class="card-nomargin add_padding">
+				<!-- <h1>Homepage</h1> -->
+				<p>Welcome Back, <?php if(isset($_SESSION['username'])) echo $_SESSION['username']; ?>!</p> <!-- <a href="logout.php">Logout</a> </p> -->
+			</div>
+
+
+			<div id="dashboard">
+
+			</div>
+
 		<?php endif ?>
 
-		</div>
-		
-		<div id="banner">
-			<img id="img_banner" src="images/general/banner.png">
-		</div>
-
-		<!-- COMING SOON -->
-		<div id="coming_soon" class="center add_shading">
-			<img id="img_comming_soon" src="images/general/comingsoon.png">
-			<p class="add_padding">Sweet Elite is a dating sims inspired by the popular Japanese Otome. Flirt with students and uncover Arlington Academy's dark secrets. Choose your own story!<br></p>
-		</div>
-
-		<!-- ABOUT GAME -->
 		<div class = "card">
-			<div class="card-header">
-				<h3>About the Game</h3>
+			<div class = "card-header">
+				<h3>Merchandise</h3>
 			</div>
-
-			<div class="card-content">
-				<p><i>In a school filled with rich, beautiful and insanely talented students, nothing could go wrong….could it? Arlington Academy has its secrets. Secrets it doesn’t want to expose. Will you be able to find out about the truth? Or will the pressure be too much for you to handle? It’s up to you!</i></p><br>
-				<p><b>Sweet Elite</b> is an upcoming Otome game following the adventures of the students of Arlington Academy, a prestigious high school only accessible to the best teenagers in their respective academic fields.</p><br>
-				<p>The player’s character, the <b>Scholar</b>, is a scholarship student and makes a series of major choices, affecting both their destiny and those of the people around them.</p><br>
 				
-				<a href="features.html" class="button pink_button">Learn More</a>
+			<div id="merchandise">
+				<div class = "flex-panel">
+					<img class = "img-badge" style="height:100%;" src = "images/banners/customize_your_character.png"></img>
+				</div>
+				
+				<div class = "flex-panel">
+					<img class = "img-badge" style="height:100%;" src = "images/banners/customize_your_character.png"></img>
+				</div>
+				
+				<div class = "flex-panel">
+					<img class = "img-badge" style="height:100%;" src = "images/banners/customize_your_character.png"></img>
+				</div>
+				
+				<div class = "flex-panel">
+					<img class = "img-badge" style="height:100%;" src = "images/banners/customize_your_character.png"></img>
+				</div>
+				</div>
 			</div>
-		</div>
-
-		<!-- MEET THE CHARACTERS -->
-		<div class="card">
-			<div class="card-header">
-				<h3>Meet the Characters</h3>
-			</div>
-
-			<div id="chara_1" class="center">
-			</div>
-
-			<div id="chara_2" class="center">
-			</div>
-
-			<div class="card-content">
-				<a href="characters.html" class="button pink_button">Character Profiles</a>
-			</div>
-		</div>
 
 		<!-- FOLLOW US -->
 		<div class="card">
@@ -137,14 +277,20 @@
 			</div>
 		</div>
 
-
+		<div id = "DB_handle">
+			
+		</div>
 
 	</div>
-
 
 <?php include_once 'partials/footers.php' ?>
 
 </body>
+
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="js/charactersMeet.js"></script>
+<!-- <script src = "js/variables.js"></script> -->
+<script src = "js/library.js"></script>
 
 </html>
 
