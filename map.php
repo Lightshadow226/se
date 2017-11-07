@@ -7,7 +7,7 @@
 	<meta charset="UTF-8">
 	<meta name="description" content="Sweet Elite is a dating sims inspired by the popular Japanese Otome.Flirt with students and uncover Arlington Academy's dark secrets.Choose your own story!">
 	
-	<title>Sweet Elite: Flirt and Uncover the Secrets of Arlington Academy!<</title>
+	<title>Sweet Elite: Flirt and Uncover the Secrets of Arlington Academy!</title>
 
 	<link href="css/se-stylesheet.css" rel="stylesheet" type="text/css">
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
@@ -39,7 +39,7 @@
             <div id="coming_soon" class="center">
 			    <div>
                     <p>The city map is not quite ready yet...but it will be on the full version of the game! The staff is still working hard to release the new and improved Sweet Elite. We promise to let you know when it is ready!</p>
-                    <br><h4 class="center";>FOLLOW US:</h4><br>
+                    <br><h4 class="center";>FOLLOW US FOR MORE UPDATES:</h4><br>
                 </div>
 		    </div>
 
