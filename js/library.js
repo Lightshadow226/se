@@ -3,7 +3,6 @@
 */
 
 //this function will return the right image for the infinity meter depending on the inputted affinity
-
 function browseAffinity(affinity)
 {
     const base_path = "images/game_images/infinity_meter/states/";

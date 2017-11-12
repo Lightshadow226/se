@@ -6,7 +6,7 @@ Create the Character Scroll for the Characterpage
 
 var lines_container = document.getElementById("lines_container");
 
-var button_container = document.getElementById("button_container");
+var button_container = document.getElementById("button_container_horizontal");
 
     button_container.style.display = "flex";
     button_container.style.marginBottom= "20px";

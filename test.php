@@ -1,5 +1,3 @@
-<!-- <?php include_once 'resources/session.php' ?> -->
-
 <!doctype html>
 <html>
 <head>
@@ -10,7 +8,6 @@
 	<title>Sweet Elite: Flirt and Uncover the Secrets of Arlington Academy!<</title>
 
 	<link href="css/se-stylesheet.css" rel="stylesheet" type="text/css">
-	<link href="css/se-game.css" rel="stylesheet" type="text/css">
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 	<link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet" type='text/css'>
 
@@ -20,33 +17,7 @@
 
 </head>
 
+
 <body>
 
-    <?php include_once 'partials/headers.php' ?>
-
-    <div class="main_content">
-
-        <div class="add_padding card-nomargin">
-
-            <h1 id="illu_achiev_id">Illustrations</h1>
-
-            <div id="button_container_horizontal"> <!-- les boutons jaunes -->
-                
-            </div>
-
-            <div id="lines_container">
-                
-            </div>
-            
-        </div>
-    </div>
-
-    <footer>
-	    Sweet Elite © 2016 - 2017. All rights reserved.
-	</footer>
-
-</body>
-
-<script src="js/illustrations_achievements.js"></script>
-
-</html>
+<?php include_once 'partials/headers.php' ?>

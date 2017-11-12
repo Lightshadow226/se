@@ -24,7 +24,6 @@
 	<?php include_once 'partials/headers.php' ?>
 
 	<div class = "main_content">
-		
 
 		<?php if(!isset($_SESSION['username'])): ?><!-- logged off -->
 			<!-- <P>You are currently not signed in. <a href="login.php">Login</a> to your account. Not yet a member? <a href="signup.php">Signup</a>.</p> -->
@@ -37,105 +36,105 @@
 				</div>
 			</div>
 
-			<div class = "card-nomargin flex-container">
-				<div class = "flex-panel">
-					<div class = "badge">
-						<img class = "img-badge" src = "images/game_images/badges/arlington_logo.png"></img>
-					</div>
-				</div>
-				
-				<!-- les 7 badges -->
-				<div class = "flex-panel flex-container" style="flex-direction: column;">
-					<div class = "department-line flex-container">
-						<div class = "badge">
-							<img class = "img-badge" src = "images/game_images/badges/1.png"></img>
-						</div>
+			<!-- BADGES -->
+			<div class = "card-nomargin">
 
-						<div class = "department-name-container">
-							<div class = "flex-panel"></div>
-							<div class = "department-name" style = "float:left;">Department of Business, Commerce, and Politics</div>
-							<div class = "flex-panel"></div>
-						</div>
-					</div>
+				<div class = "card-fusionned card-content">
+					<h1>Welcome to Arlington Academy</h1>
+					<h5>Flirt and Uncover the Secrets of Arlington Academy</h5>
+					
+					</br>
+					
+					<p>Follow the adventures of the students of Arlington Academy, a prestigious high school only accessible to the best teenagers in their respective academic fields</p>
+					
+					</br>
 
-					<div class = "department-line flex-container">
-						<div class = "badge">
-							<img class = "img-badge" src = "images/game_images/badges/2.png"></img>
-						</div>
-
-						<div class = "department-name-container">
-							<div class = "flex-panel"></div>
-							<div class = "department-name">Department of Perfoming Arts</div>
-							<div class = "flex-panel"></div>
-						</div>
-					</div>
-
-					<div class = "department-line flex-container">
-						<div class = "badge">
-							<img class = "img-badge" src = "images/game_images/badges/3.png"></img>
-						</div>
-
-						<div class = "department-name-container">
-							<div class = "flex-panel"></div>
-							<div class = "department-name">Department of Pure and Applied Sciences</div>
-							<div class = "flex-panel"></div>
-						</div>
-					</div>
-
-					<div class = "department-line flex-container">
-						<div class = "badge">
-							<img class = "img-badge" src = "images/game_images/badges/4.png"></img>
-						</div>
-
-						<div class = "department-name-container">
-							<div class = "flex-panel"></div>
-							<div class = "department-name">Department of Health Sciences</div>
-							<div class = "flex-panel"></div>
-						</div>
-					</div>
-
-					<div class = "department-line flex-container">
-						<div class = "badge">
-							<img class = "img-badge" src = "images/game_images/badges/5.png"></img>
-						</div>
-
-						<div class = "department-name-container">
-							<div class = "flex-panel"></div>
-							<div class = "department-name">Department of Athletics</div>
-							<div class = "flex-panel"></div>
-						</div>
-					</div>
-
-					<div class = "department-line flex-container">
-						<div class = "badge">
-							<img class = "img-badge" src = "images/game_images/badges/6.png"></img>
-						</div>
-
-						<div class = "department-name-container">
-							<div class = "flex-panel"></div>
-							<div class = "department-name">Department of Fine Arts</div>
-							<div class = "flex-panel"></div>
-						</div>
-					</div>
-
-					<div class = "department-line flex-container">
-						<div class = "badge">
-							<img class = "img-badge" src = "images/game_images/badges/7.png"></img>
-						</div>
-
-						<div class = "department-name-container">
-							<div class = "flex-panel"></div>
-							<div class = "department-name">Department of Fashion</div>
-							<div class = "flex-panel"></div>
-						</div>
-					</div>
+					<p>Choose your department, make friends, build your romance with your favorite character and work together to solve the Academy's dark secrets...</p>
+					
+					</br>
+					
+					<p><i>Will you be able to find out the truth? Or will the pressure be too much to handle... it's up to you!</i></p>
 
 				</div>
 
+				<div class = "card-fusionned flex-container">
+					<img style = "" src = "images/separator.jpg"></img>	
+				</div>
+
+				<div class = "card-fusionned flex-container">
+
+					<div class = "flex-panel">
+						<div class = "badge">
+							<img class = "img-badge" src = "images/game_images/badges/arlington_logo.png"></img>
+						</div>
+					</div>
+					
+					<!-- les 4 premiers badges -->
+					<div class = "flex-panel flex-container" style="flex-direction: column;">
+
+						<div class = "department-line flex-container">
+							<div class = "badge">
+								<img class = "img-badge" src = "images/game_images/badges/text/1.png"></img>
+							</div>
+						</div>
+
+						<div class = "department-line flex-container">
+							<div class = "badge">
+								<img class = "img-badge" src = "images/game_images/badges/text/2.png"></img>
+							</div>
+						</div>
+
+						<div class = "department-line flex-container">
+							<div class = "badge">
+								<img class = "img-badge" src = "images/game_images/badges/text/3.png"></img>
+							</div>
+						</div>
+
+						<div class = "department-line flex-container">
+							<div class = "badge">
+								<img class = "img-badge" src = "images/game_images/badges/text/4.png"></img>
+							</div>
+						</div>
+
+					</div>
+
+					<!-- les 3 + 1 derniers badges -->
+					<div class = "flex-panel flex-container" style="flex-direction: column;">
+
+						<div class = "department-line flex-container">
+							<div class = "badge">
+								<img class = "img-badge" src = "images/game_images/badges/text/5.png"></img>
+							</div>
+						</div>
+
+						<div class = "department-line flex-container">
+							<div class = "badge">
+								<img class = "img-badge" src = "images/game_images/badges/text/6.png"></img>
+							</div>
+						</div>
+
+						<div class = "department-line flex-container">
+							<div class = "badge">
+								<img class = "img-badge" src = "images/game_images/badges/text/7.png"></img>
+							</div>
+						</div>
+
+						<div class = "department-line flex-container">
+							<div class = "badge">
+								<img class = "img-badge" src = "images/game_images/badges/text/8.png"></img>
+							</div>
+						</div>
+
+					</div>
+					
+				</div>
+<!-- 
 				<div class = "flex-panel">
 					<img class = "img-badge" src = "images/banners/welcome_to_arlignton.png"></img>
-				</div>
+				</div> -->
 			</div>
+
+			
 
 			<!-- MEET THE CHARACTERS -->
 			<div class="card">
@@ -159,6 +158,7 @@
 				</div>
 			</div>
 
+			<!-- START PLAYING -->
 			<div class = "card">
 				<div class = "card-header">
 					<h3>Start Playing</h3>

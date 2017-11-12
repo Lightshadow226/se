@@ -363,7 +363,7 @@
 		padding-left: 1vw;
 	}
 
-	#button_container_v2
+	#button_container_v2/*relative instead of absolute*/
 	{
 		position: relative;
 		display: flex;
@@ -373,6 +373,13 @@
 		left: 50%;
 
 		transform: translateX(-50%);/*-60% because of the header that takes space*/
+	}
+
+	#button_container_horizontal/*for illustrations, Achievements & Relationship pages*/
+	{
+		display: flex;
+		
+		margin-bottom: 20px;
 	}
 
 	#signup_button_v2
@@ -998,6 +1005,11 @@
 	{
 		text-align: center;
 		padding: 20px;
+	}
+
+	.card-fusionned
+	{
+		
 	}
 
 /***************HIGHLIGHTS***************/

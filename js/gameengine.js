@@ -702,7 +702,7 @@ function refreshInterface()//REFRESHES the interface
                     img_container.className = "form_img_container";
                 
                 var img = document.createElement('img');
-                    img.src = "images/game_images/badges/" + ++index + ".png";
+                    img.src = "images/game_images/badges/raw" + ++index + ".png";
                     img.className = "form_img";
             
                 line.appendChild(img_container);
