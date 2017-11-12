@@ -25,7 +25,7 @@
 
 	<div class = "main_content">
 
-        <?php if(!isset($_SESSION['username'])): ?>
+        <?php if(isset($_SESSION['username'])): ?>
             <div id="coming_soon" class="center add_shading">
 			    <img id="img_comming_soon" src="images/general/comingsoon.png">
 		    </div>
