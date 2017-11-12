@@ -155,9 +155,11 @@ function create_interface()
 
         others_button.addEventListener("click", function(e){refresh_lines(qty_classmates, qty_classmates + qty_others);})
 
+    button_container.appendChild(createFlexPanel());
     button_container.appendChild(main_10_button);
     button_container.appendChild(classmates_button);
     button_container.appendChild(others_button);
+    button_container.appendChild(createFlexPanel());
 
     refresh_lines(0, qty_main_10);//on affiche les 10 originaux initialement
 }

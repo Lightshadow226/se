@@ -119,7 +119,6 @@ function browseAffinity(affinity)
     return base_path + new_path;
 }
 
-
 function getPersonnage(char)
 {
     var char_pointer;
@@ -186,7 +185,6 @@ function getPersonnage(char)
     return char_pointer;
 }
 
-
 function getPersonnageFromName(name)
 {
     if(name == "alistair")
@@ -233,6 +231,27 @@ function getPersonnageFromName(name)
 
 function loadAllImages()
 {
+    var loader = document.createElement('div')
+        loader.style.display = "none";
+
+    var parent = document.getElementById('footer');
+
+        parent.appendChild(loader);
+    
     //Il va falloir loader toutes les images une après l'autre
 }
 
+function createFlexPanel()
+{
+    var flexPanel = document.createElement('div');
+        flexPanel.className = "flex-panel";
+
+    return flexPanel;
+}
+
+function createCurrentChapterPreview()
+{
+    var preview = document.createElement('div');
+
+    return preview;
+}

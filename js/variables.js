@@ -11,7 +11,6 @@ All rights reserved.
 July 23, 2017
 */
 
-pullVariablesFromDB();
 
 //General Variables
 var currentChapter = 0;
@@ -386,6 +385,8 @@ function pullVariablesFromDB()
 {
     $(function()//once the page is loaded
     {
+        //we're going to load the data from the database, and put it in the div with the ID = "#DB_handle" -> thus why we use $('#DB_handle')
+
         $('#DB_handle').load('dbtransfers/get_variables.php', function()//pull variables from the DB
         {
             //*********************************************
@@ -393,7 +394,7 @@ function pullVariablesFromDB()
             //*********************************************
 
             user.username = document.getElementById("db_handle_username").innerHTML;
-            
+
             user.energy = document.getElementById("db_handle_energy").innerHTML;
             
             user.money = document.getElementById("db_handle_money").innerHTML;
@@ -455,6 +456,8 @@ function pushVariablesToDB()
 {
     
 }
+
+pullVariablesFromDB();
 
 /**
      * https://openclassrooms.com/courses/simplifiez-vos-developpements-javascript-avec-jquery/premiers-pas-avec-ajax
