@@ -11,10 +11,8 @@ All rights reserved.
 July 23, 2017
 */
 
-
 //General Variables
 var currentChapter = 0;
-var storyLocation = 0;//la location dans le jeu, qui va être passée en parametre dans le array du chapitre
 
 //Chapter locations
 var chapter0Location = 24;
@@ -29,19 +27,10 @@ const se_pink = "#ef4c5e";
 //variable temporaire (ne pas inclure dans la base de données)
 var choice = "null";//Un choix pour les liens. Ex.: pour link = -3, "choice" va contenir le nom du département choisi
                     //cette variable va contenir tous les choix particuliers, c'est une variable temporaire qui sert à passer de l'information en paramètres
-
-var user = 
-{
-    username: "None",
-    energy: 0,
-    money: 0,
-    storyLocation: 10,
-    last_chapter_played: 0
-};
-
+                    
 var CharaX_username = "Serena";
 var CharaY_username = "Cecile";
-
+                    
 const backgrounds_path = "images/game_images/backgrounds/";
 
 var locations = 
@@ -61,6 +50,16 @@ var locations =
         dormHall: backgrounds_path + "dormhall.jpg",
             dorm: backgrounds_path + "dorm.jpg",
             dormBathroom: backgrounds_path + "dormbathroom.jpg",
+};
+
+var user = 
+{
+    username: "None",
+    energy: 0,
+    money: 0,
+    storyLocation: 0,//VARIABLE COMMUNE À TOUS LES CHAPITRES, LA SEULE CHOSE QUI PEU BLOQUER serait de mettre un IF(last_chapter_played == this)
+    last_chapter_played: 0,
+    physicalLocation: backgrounds_path + locations.blackScreen
 };
 
 //on va devoir écrire un code pour GET ces variables de la base de données. ces variables vont être propres à chaque utilisateur.
@@ -383,81 +382,108 @@ var personnages =
 
 function pullVariablesFromDB()
 {
-    $(function()//once the page is loaded
+    //we're going to load the data from the database, and put it in the div with the ID = "#DB_handle" -> thus why we use $('#DB_handle')
+
+    $('#DB_handle').load('dbtransfers/get_variables.php', function()//pull variables from the DB
     {
-        //we're going to load the data from the database, and put it in the div with the ID = "#DB_handle" -> thus why we use $('#DB_handle')
+        //*********************************************
+        //USERINFO table
+        //*********************************************
 
-        $('#DB_handle').load('dbtransfers/get_variables.php', function()//pull variables from the DB
+        user.username = document.getElementById("db_handle_username").innerHTML;
+        // alert(user.username);
+        
+        user.energy = document.getElementById("db_handle_energy").innerHTML;
+        
+        user.money = document.getElementById("db_handle_money").innerHTML;
+        
+        //*****nb_replay is unused*****
+
+        //*********************************************
+        //STORY table
+        //*********************************************
+
+        user.storyLocation = document.getElementById("db_handle_story_location").innerHTML;
+        
+        user.storyLocation = user.storyLocation;
+
+        user.last_chapter_played = document.getElementById("db_handle_last_chapter_played").innerHTML;
+
+        //*********************************************
+        //AFFINITY table
+        //*********************************************
+
+        karolina.affinity = document.getElementById("db_handle_a1").innerHTML;
+
+        ellie.affinity = document.getElementById("db_handle_a2").innerHTML;
+        
+        neha.affinity = document.getElementById("db_handle_a3").innerHTML;
+        
+        raquel.affinity = document.getElementById("db_handle_a4").innerHTML;
+        
+        claire.affinity = document.getElementById("db_handle_a5").innerHTML;
+        
+        alistair.affinity = document.getElementById("db_handle_a6").innerHTML;
+        
+        tadashi.affinity = document.getElementById("db_handle_a7").innerHTML;
+        
+        tegan.affinity = document.getElementById("db_handle_a8").innerHTML;
+        
+        tyler.affinity = document.getElementById("db_handle_a9").innerHTML;
+        
+        axel.affinity = document.getElementById("db_handle_a10").innerHTML;
+        
+        lady_arlington.affinity = document.getElementById("db_handle_a11").innerHTML;
+        
+        // coach_davis.affinity = document.getElementById("db_handle_a12").innerHTML;
+        
+        // serena.affinity = document.getElementById("db_handle_a13").innerHTML;
+        
+        // cecile.affinity = document.getElementById("db_handle_a14").innerHTML;
+        
+        // teacher_chapter_2.affinity = document.getElementById("db_handle_a15").innerHTML;
+        
+        if(relationship_enabled)//if we're on the page RELATIONSHIP
         {
-            //*********************************************
-            //USERINFO table
-            //*********************************************
-
-            user.username = document.getElementById("db_handle_username").innerHTML;
-
-            user.energy = document.getElementById("db_handle_energy").innerHTML;
-            
-            user.money = document.getElementById("db_handle_money").innerHTML;
-            
-            //*****nb_replay is unused*****
-
-            //*********************************************
-            //STORY table
-            //*********************************************
-
-            user.storyLocation = document.getElementById("db_handle_story_location").innerHTML;
-            
-            user.last_chapter_played = document.getElementById("db_handle_last_chapter_played").innerHTML;
-
-            //*********************************************
-            //AFFINITY table
-            //*********************************************
-
-            karolina.affinity = document.getElementById("db_handle_a1").innerHTML;
-
-            ellie.affinity = document.getElementById("db_handle_a2").innerHTML;
-            
-            neha.affinity = document.getElementById("db_handle_a3").innerHTML;
-            
-            raquel.affinity = document.getElementById("db_handle_a4").innerHTML;
-            
-            claire.affinity = document.getElementById("db_handle_a5").innerHTML;
-            
-            alistair.affinity = document.getElementById("db_handle_a6").innerHTML;
-            
-            tadashi.affinity = document.getElementById("db_handle_a7").innerHTML;
-            
-            tegan.affinity = document.getElementById("db_handle_a8").innerHTML;
-            
-            tyler.affinity = document.getElementById("db_handle_a9").innerHTML;
-            
-            axel.affinity = document.getElementById("db_handle_a10").innerHTML;
-            
-            lady_arlington.affinity = document.getElementById("db_handle_a11").innerHTML;
-            
-            // coach_davis.affinity = document.getElementById("db_handle_a12").innerHTML;
-            
-            // serena.affinity = document.getElementById("db_handle_a13").innerHTML;
-            
-            // cecile.affinity = document.getElementById("db_handle_a14").innerHTML;
-            
-            // teacher_chapter_2.affinity = document.getElementById("db_handle_a15").innerHTML;
-            
-            if(relationship_enabled)//if we're on the page RELATIONSHIP
-            {
-                create_interface();
-            }
-        });
-
+            create_interface();
+        }
     });
 }
 
 function pushVariablesToDB()
 {
+    var db_handler = document.getElementById("DB_handle");
+
+        db_handler.innerHTML = "";//empty the db handler first, to create all the elements only once
+        
+    var db_handle_story_location = document.createElement('input');
+        db_handle_story_location.type = "text";
+        db_handle_story_location.id = "db_handle_story_location";
+        db_handle_story_location.value = user.storyLocation;
+
+    var db_handle_last_chapter_played = document.createElement('input');
+        db_handle_last_chapter_played.type = "text";
+        db_handle_last_chapter_played.id = "db_handle_last_chapter_played";
+        db_handle_last_chapter_played.value = 10;
+
+    db_handler.appendChild(db_handle_story_location);
+    db_handler.appendChild(db_handle_last_chapter_played);
     
+    // alert($('#db_handle_story_location').val());
+    // alert($('#db_handle_last_chapter_played').val());
+    // alert(document.getElementById("db_handle_story_location").innerHTML);
+
+    var storylocation = $('#db_handle_story_location').val();
+    var lastchapterplayed = $('#db_handle_last_chapter_played').val();
+    
+    $.post('dbtransfers/push_variables.php', {
+        'storylocation': storylocation,
+        'lastchapterplayed': lastchapterplayed
+    });
 }
 
-pullVariablesFromDB();
+// pullVariablesFromDB();
+// pushVariablesToDB();
 
 /**
      * https://openclassrooms.com/courses/simplifiez-vos-developpements-javascript-avec-jquery/premiers-pas-avec-ajax

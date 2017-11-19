@@ -27,7 +27,7 @@ var Container = document.getElementById("Container");
     const choiceB_text = 14;
     const choiceC_text = 15;
 
-function initializeInterface()//CREATES the entire interface
+$(function initializeInterface()//CREATES the entire interface once the document is $(document).READY()
 {
     Container.innerHTML = "";
 
@@ -60,7 +60,7 @@ function initializeInterface()//CREATES the entire interface
     refreshInterface();//Start the first instance of the game
     refreshTestContainer();//Refresh the test container for the first time
     refreshScholar();
-}
+})
 
 function refreshInterface()//REFRESHES the interface
 {
@@ -69,9 +69,9 @@ function refreshInterface()//REFRESHES the interface
     refreshTestContainer();
     refreshObjectiveContainer();
 
-    if(storyLocation >= story[main_text].length)//si le chapitre ("story") est terminé
+    if(user.storyLocation >= story[main_text].length)//si le chapitre ("story") est terminé
     {
-        storyLocation = 0;//TODO: get the variable from the DATABASE with PHP
+        user.storyLocation = 0;//TODO: get the variable from the DATABASE with PHP
         // alert("The story is over! Come back another time!");
         
         refreshInterface();
@@ -79,7 +79,7 @@ function refreshInterface()//REFRESHES the interface
     else//sinon, on continue l'histoire
     {
         //CREATE all elements for the background (with overlays and shit)
-
+        
             // -----TODO: don't create them on every slide -----
             
             var background = document.createElement("div");//Creates the background
@@ -98,14 +98,14 @@ function refreshInterface()//REFRESHES the interface
             var background_img = document.createElement('img');
 
                 background_img.className = "background_img";
-                background_img.src = story[5][storyLocation];//l'image de background du jeu
+                background_img.src = story[5][user.storyLocation];//l'image de background du jeu
                 
             gameContainer.appendChild(background);//Appends the background
-                if(story[special_option][storyLocation] != -3)//we can't append the overlay if we need to click on something
+                if(story[special_option][user.storyLocation] != -3)//we can't append the overlay if we need to click on something
                 {
                     background.appendChild(overlay);
                 }
-                if(story[special_option][storyLocation] == -4)//we're only going to append this overlay if we have the affinity selector ON
+                if(story[special_option][user.storyLocation] == -4)//we're only going to append this overlay if we have the affinity selector ON
                 {
                     background.appendChild(overlay_affinity_choice);
                 }
@@ -124,9 +124,9 @@ function refreshInterface()//REFRESHES the interface
             var left_content = document.createElement('div');//character 2
                 left_content.className = "left_content";
 
-                if(story[4][storyLocation] != "null")//if there is a character 1 in this slide
+                if(story[4][user.storyLocation] != "null")//if there is a character 1 in this slide
                 {
-                    left_content.style.backgroundImage = 'url(' + story[4][storyLocation] + ')';
+                    left_content.style.backgroundImage = 'url(' + story[4][user.storyLocation] + ')';
                 }
                         
             var middle_content = document.createElement('div');//bubble container
@@ -142,9 +142,9 @@ function refreshInterface()//REFRESHES the interface
 
                     //s'il y a un personnage à gauche, il doit avoir un petit triangle qui pointe vers la gauche (pour fair comme un vrai phylactère)
 
-                    if(story[1][storyLocation] != "null")//if there is something in bubble 1
+                    if(story[1][user.storyLocation] != "null")//if there is something in bubble 1
                     {
-                        bubble1.innerHTML = story[1][storyLocation];//we display it in bubble 1
+                        bubble1.innerHTML = story[1][user.storyLocation];//we display it in bubble 1
                         bubble1.style.padding = "20px"; // on met le padding ici plutôt que dans le CSS parce qu'on veut que le bubble disparaisse quand elle n'est pas utilisée
                     }
                     else
@@ -157,9 +157,9 @@ function refreshInterface()//REFRESHES the interface
                     bubble2.className = "bubble";
                     bubble2.style.backgroundColor = se_bubble_bc;
 
-                    if(story[3][storyLocation] != "null")//if there is something in bubble 2
+                    if(story[3][user.storyLocation] != "null")//if there is something in bubble 2
                     {
-                        bubble2.innerHTML = story[3][storyLocation];//we display it in bubble 2
+                        bubble2.innerHTML = story[3][user.storyLocation];//we display it in bubble 2
                         bubble2.style.padding = "20px"; // on met le padding ici plutôt que dans le CSS parce qu'on veut que le bubble disparaisse quand elle n'est pas utilisée
                     }
                     else
@@ -170,9 +170,9 @@ function refreshInterface()//REFRESHES the interface
             var right_content = document.createElement('div');//Contains Character 1
                 right_content.className = "right_content";
                     
-                if(story[2][storyLocation] != "null")//if there is a character 1 in this slide
+                if(story[2][user.storyLocation] != "null")//if there is a character 1 in this slide
                 {
-                    right_content.style.backgroundImage = 'url(' + story[2][storyLocation] + ')';
+                    right_content.style.backgroundImage = 'url(' + story[2][user.storyLocation] + ')';
                 }
             
             //Text Container: la bande de texte en bas du canvas, où on raconte l'histoire. (on peut cliquer dessus pour faire avancer l'histoire)
@@ -180,7 +180,7 @@ function refreshInterface()//REFRESHES the interface
             var textContainer = document.createElement('div');
                 
                 textContainer.id = "textContainer";
-                textContainer.innerHTML = story[main_text][storyLocation]//L'histoire à ce point-ci
+                textContainer.innerHTML = story[main_text][user.storyLocation]//L'histoire à ce point-ci
                 
                 //style
                     textContainer.className = "text_container";
@@ -252,11 +252,11 @@ function refreshInterface()//REFRESHES the interface
         //APPEND all the things to the overlay
 
             //Left infinity meter
-            if(story[4][storyLocation] != "null")//if there is a character 1 in this slide, we append the infinity meter to the left
+            if(story[4][user.storyLocation] != "null")//if there is a character 1 in this slide, we append the infinity meter to the left
             {
-                var relevant_char = getPersonnage(story[4][storyLocation]);
+                var relevant_char = getPersonnage(story[4][user.storyLocation]);
 
-                relevant_char.affinity += story[16][storyLocation];
+                relevant_char.affinity += story[16][user.storyLocation];
 
                 if(relevant_char.affinity < 0)
                 {
@@ -283,7 +283,7 @@ function refreshInterface()//REFRESHES the interface
             //     overlay.appendChild(text_gap);
             // }
 
-            if(story[special_option][storyLocation] != -2)//we don't want to append the bubble is there is no need for it
+            if(story[special_option][user.storyLocation] != -2)//we don't want to append the bubble is there is no need for it
             {
                 middle_content.appendChild(bubble1);
                 middle_content.appendChild(bubble2);
@@ -292,11 +292,11 @@ function refreshInterface()//REFRESHES the interface
             overlay.appendChild(right_content);
 
             //Right infinity meter
-            if(story[2][storyLocation] != "null")//if there is a character 1 in this slide, we append the infinity meter to the right
+            if(story[2][user.storyLocation] != "null")//if there is a character 1 in this slide, we append the infinity meter to the right
             {
-                var relevant_char = getPersonnage(story[2][storyLocation]);
+                var relevant_char = getPersonnage(story[2][user.storyLocation]);
 
-                relevant_char.affinity += Number(story[16][storyLocation]);//on doit s'assurer que la valeur est un nombre, parce que sinon, parfois, ça fait juste carrément rajouter un zéro
+                relevant_char.affinity += Number(story[16][user.storyLocation]);//on doit s'assurer que la valeur est un nombre, parce que sinon, parfois, ça fait juste carrément rajouter un zéro
 
                 if(relevant_char.affinity < 0)
                 {
@@ -310,16 +310,16 @@ function refreshInterface()//REFRESHES the interface
             }
 
             //Text Container (at the bottom)
-            if(story[main_text][storyLocation] != "null")//only append if there is there is text to display
+            if(story[main_text][user.storyLocation] != "null")//only append if there is there is text to display
             {
                 background.appendChild(textContainer);
             }
 
         // ----- Special Option: Specific state of this slide -----
 
-        if(story[special_option][storyLocation] == -2)// -2 === unlimited navigation is enabled
+        if(story[special_option][user.storyLocation] == -2)// -2 === unlimited navigation is enabled
         {
-            physicalLocation = story[5][storyLocation];
+            user.physicalLocation = story[5][user.storyLocation];
 
             // refreshObjectiveContainer();
 
@@ -334,7 +334,7 @@ function refreshInterface()//REFRESHES the interface
                     //events
                     button1.onmouseover = function(){highlight(button1, se_highlight_bc)};
                     button1.onmouseout = function(){dehighlight(button1, se_pink)};
-                    button1.onclick = function(){browseLink(story[special_option][storyLocation], button1)};
+                    button1.onclick = function(){browseLink(story[special_option][user.storyLocation], button1)};
 
             //BUTTON 2
                 var button2 = document.createElement('div');
@@ -348,7 +348,7 @@ function refreshInterface()//REFRESHES the interface
                     //events
                     button2.onmouseover = function(){highlight(button2, se_highlight_bc)};
                     button2.onmouseout = function(){dehighlight(button2, se_pink)};
-                    button2.onclick = function(){browseLink(story[special_option][storyLocation], button2)};
+                    button2.onclick = function(){browseLink(story[special_option][user.storyLocation], button2)};
 
             //BUTTON 3
                 var button3 = document.createElement('div');
@@ -362,7 +362,7 @@ function refreshInterface()//REFRESHES the interface
                     //events
                     button3.onmouseover = function(){highlight(button3, se_highlight_bc)};
                     button3.onmouseout = function(){dehighlight(button3, se_pink)};
-                    button3.onclick = function(){browseLink(story[special_option][storyLocation], button3)};
+                    button3.onclick = function(){browseLink(story[special_option][user.storyLocation], button3)};
 
             //BUTTON 4
                 var button4 = document.createElement('div');
@@ -376,7 +376,7 @@ function refreshInterface()//REFRESHES the interface
                     //events
                     button4.onmouseover = function(){highlight(button4, se_highlight_bc)};
                     button4.onmouseout = function(){dehighlight(button4, se_pink)};
-                    button4.onclick = function(){browseLink(story[special_option][storyLocation], button4)};
+                    button4.onclick = function(){browseLink(story[special_option][user.storyLocation], button4)};
 
 
             var tooltip1 = document.createElement('span');//span, div, who cares
@@ -392,7 +392,7 @@ function refreshInterface()//REFRESHES the interface
                 tooltip4.className = "tooltiptext";
                         
             // -----physical location tests-----
-            if(physicalLocation == locations.entrance)//if we are in the SCHOOL ENTRANCE
+            if(user.physicalLocation == locations.entrance)//if we are in the SCHOOL ENTRANCE
             {
                 //Four possibilities
                 //1: Main Hallway
@@ -431,7 +431,7 @@ function refreshInterface()//REFRESHES the interface
                 middle_content.appendChild(button4);
                     button4.appendChild(tooltip4);
             }
-            else if(physicalLocation == locations.hall1)//If we are in the MAIN HALLWAY
+            else if(user.physicalLocation == locations.hall1)//If we are in the MAIN HALLWAY
             {
                 //Four possibilities
                 //1: Classroom 1
@@ -473,7 +473,7 @@ function refreshInterface()//REFRESHES the interface
                 middle_content.appendChild(button4);
                     button4.appendChild(tooltip4);
             }            
-            else if(physicalLocation == locations.class1)//If we are in the CLASSROOM 1
+            else if(user.physicalLocation == locations.class1)//If we are in the CLASSROOM 1
             {
                 //One possibility
                 //1: Main Hallway
@@ -485,7 +485,7 @@ function refreshInterface()//REFRESHES the interface
                 middle_content.appendChild(button1);
                     button1.appendChild(tooltip1);
             }
-            else if(physicalLocation == locations.class2)//If we are in the CLASSROOM 2
+            else if(user.physicalLocation == locations.class2)//If we are in the CLASSROOM 2
             {
                 //One possibility
                 //1: Main Hallway
@@ -497,7 +497,7 @@ function refreshInterface()//REFRESHES the interface
                 middle_content.appendChild(button1);
                     button1.appendChild(tooltip1);
             }
-            else if(physicalLocation == locations.hall2)//If we are in the SECOND HALLWAY
+            else if(user.physicalLocation == locations.hall2)//If we are in the SECOND HALLWAY
             {
                 //Two possibilities
                 //1: Cafeteria
@@ -518,7 +518,7 @@ function refreshInterface()//REFRESHES the interface
                 left_content.appendChild(button2);
                     button2.appendChild(tooltip2);
             }
-            else if(physicalLocation == locations.cafeteria)//If we are in the CAFETERIA
+            else if(user.physicalLocation == locations.cafeteria)//If we are in the CAFETERIA
             {
                 //Two possibilities
                 //1: Cafeteria Lounge
@@ -539,7 +539,7 @@ function refreshInterface()//REFRESHES the interface
                 middle_content.appendChild(button2);
                     button2.appendChild(tooltip2);
             }
-            else if(physicalLocation == locations.cafeteriaLounge)//If we are in the CAFETERIA LOUNGE
+            else if(user.physicalLocation == locations.cafeteriaLounge)//If we are in the CAFETERIA LOUNGE
             {
                 //Two possibilities
                 //1: Cafeteria
@@ -561,7 +561,7 @@ function refreshInterface()//REFRESHES the interface
                     button2.appendChild(tooltip2);
 
             }
-            else if(physicalLocation == locations.cafeteriaOutside)//If we are in the Outside Cafeteria
+            else if(user.physicalLocation == locations.cafeteriaOutside)//If we are in the Outside Cafeteria
             {
                 //One possibility
                 //1: Cafeteria Lounge
@@ -573,7 +573,7 @@ function refreshInterface()//REFRESHES the interface
                 middle_content.appendChild(button1);
                     button1.appendChild(tooltip1);
             }
-            else if(physicalLocation == locations.garden)//If we are in the GARDEN
+            else if(user.physicalLocation == locations.garden)//If we are in the GARDEN
             {
                 //One possibility
                 //1: School Entrance
@@ -585,7 +585,7 @@ function refreshInterface()//REFRESHES the interface
                 middle_content.appendChild(button1);
                     button1.appendChild(tooltip1);
             }
-            else if(physicalLocation == locations.gym)//If we are in the GYM
+            else if(user.physicalLocation == locations.gym)//If we are in the GYM
             {
                 //One possibility
                 //1: School Entrance
@@ -597,7 +597,7 @@ function refreshInterface()//REFRESHES the interface
                 middle_content.appendChild(button1);
                     button1.appendChild(tooltip1);
             }
-            else if(physicalLocation == locations.dormHall)//If we are in the DORM HALLWAY
+            else if(user.physicalLocation == locations.dormHall)//If we are in the DORM HALLWAY
             {
                 //Three possibilities
                 //1: School Entrance
@@ -627,7 +627,7 @@ function refreshInterface()//REFRESHES the interface
                     button2.appendChild(tooltip2);
                     button3.appendChild(tooltip3);
             }
-            else if(physicalLocation == locations.dorm)//If we are in OUR DORM
+            else if(user.physicalLocation == locations.dorm)//If we are in OUR DORM
             {
                 //One possibility
                 //1: Dorm Hallway
@@ -639,7 +639,7 @@ function refreshInterface()//REFRESHES the interface
                 middle_content.appendChild(button1);
                     button1.appendChild(tooltip1);
             }
-            else if(physicalLocation == locations.dormBathroom)//If we are in the DORM BATHROOM
+            else if(user.physicalLocation == locations.dormBathroom)//If we are in the DORM BATHROOM
             {
                 //One possibility
                 //1: Dorm Hallway
@@ -652,7 +652,7 @@ function refreshInterface()//REFRESHES the interface
                     button1.appendChild(tooltip1);
             }
         }
-        else if(story[special_option][storyLocation] == -3)// -3 === Form to choose the department
+        else if(story[special_option][user.storyLocation] == -3)// -3 === Form to choose the department
         {
             var form_names = [  "Department of Business, Commerce, and Politics",
                                 "Department of Perfoming Arts",
@@ -702,7 +702,7 @@ function refreshInterface()//REFRESHES the interface
                     img_container.className = "form_img_container";
                 
                 var img = document.createElement('img');
-                    img.src = "images/game_images/badges/raw" + ++index + ".png";
+                    img.src = "images/game_images/badges/raw/" + ++index + ".png";
                     img.className = "form_img";
             
                 line.appendChild(img_container);
@@ -735,7 +735,7 @@ function refreshInterface()//REFRESHES the interface
                 createFormLine(index, form_container);
             }
         }
-        else if(story[special_option][storyLocation] == -4)// -4 === Choice of romance or friendship
+        else if(story[special_option][user.storyLocation] == -4)// -4 === Choice of romance or friendship
         {
             //Friendship button
                 var friendship_button = document.createElement('div'); 
@@ -759,7 +759,7 @@ function refreshInterface()//REFRESHES the interface
                 friendship_button.addEventListener( "click",
                                                     function (e)
                                                     {
-                                                        browseLink(story[special_option][storyLocation], friendship_button);
+                                                        browseLink(story[special_option][user.storyLocation], friendship_button);
                                                         refreshInterface();
                                                     },
                                                     true);
@@ -788,17 +788,17 @@ function refreshInterface()//REFRESHES the interface
                                                     function (e)
                                                     {
                                                         // alert("romance");
-                                                        browseLink(story[special_option][storyLocation], romance_button);
+                                                        browseLink(story[special_option][user.storyLocation], romance_button);
                                                         refreshInterface();
                                                     },
                                                     true);
         }
-        else if(story[special_option][storyLocation] == -5)// -5 === multiple choices (la variable links = -5 veut dire qu'on va afficher plusieurs liens -> MAX 4)
+        else if(story[special_option][user.storyLocation] == -5)// -5 === multiple choices (la variable links = -5 veut dire qu'on va afficher plusieurs liens -> MAX 4)
         {
             var choiceA = document.createElement('div');
             
                 choiceA.id = "choiceA";
-                choiceA.innerHTML = story[choiceA_text][storyLocation]//Le choix A
+                choiceA.innerHTML = story[choiceA_text][user.storyLocation]//Le choix A
             
                 //style
                 choiceA.className = "text_container";
@@ -811,7 +811,7 @@ function refreshInterface()//REFRESHES the interface
                 choiceA.addEventListener( "click",
                                         function (e)
                                         {
-                                            browseLink(story[special_option][storyLocation], choiceA);
+                                            browseLink(story[special_option][user.storyLocation], choiceA);
 
                                             //storyLocation++;//goto link story[special_option] -> "-1" prochaine slide, autrement, c'est un link vers la slide numéro "x"
                                             refreshInterface();
@@ -822,7 +822,7 @@ function refreshInterface()//REFRESHES the interface
             var choiceB = document.createElement('div');
             
                 choiceB.id = "choiceB";
-                choiceB.innerHTML = story[choiceB_text][storyLocation]//Le choix B
+                choiceB.innerHTML = story[choiceB_text][user.storyLocation]//Le choix B
             
                 //style
                 choiceB.className = "text_container";
@@ -835,7 +835,7 @@ function refreshInterface()//REFRESHES the interface
                 choiceB.addEventListener( "click",
                                         function (e)
                                         {
-                                            browseLink(story[special_option][storyLocation], choiceB);
+                                            browseLink(story[special_option][user.storyLocation], choiceB);
 
                                             //storyLocation++;//goto link story[special_option] -> "-1" prochaine slide, autrement, c'est un link vers la slide numéro "x"
                                             refreshInterface();
@@ -846,7 +846,7 @@ function refreshInterface()//REFRESHES the interface
             var choiceC = document.createElement('div');
             
                 choiceC.id = "choiceC";
-                choiceC.innerHTML = story[choiceC_text][storyLocation]//Le choix C
+                choiceC.innerHTML = story[choiceC_text][user.storyLocation]//Le choix C
             
                 //style
                 choiceC.className = "text_container";
@@ -859,7 +859,7 @@ function refreshInterface()//REFRESHES the interface
                 choiceC.addEventListener( "click",
                                         function (e)
                                         {
-                                            browseLink(story[special_option][storyLocation], choiceC);
+                                            browseLink(story[special_option][user.storyLocation], choiceC);
 
                                             //storyLocation++;//goto link story[special_option] -> "-1" prochaine slide, autrement, c'est un link vers la slide numéro "x"
                                             refreshInterface();
@@ -868,7 +868,7 @@ function refreshInterface()//REFRESHES the interface
                                         true);
 
             
-            if(story[choiceC_text][storyLocation] != "null")
+            if(story[choiceC_text][user.storyLocation] != "null")
             {
                 background.appendChild(choiceC);
             }
@@ -878,13 +878,13 @@ function refreshInterface()//REFRESHES the interface
             background.appendChild(choiceA);
                 choiceA.style.transform = "translateY(-" + (choiceB.clientHeight + choiceC.clientHeight) + "px)";//choice A needs to be above both choice B anc C
         }
-        else if(story[special_option][storyLocation] == -6)
+        else if(story[special_option][user.storyLocation] == -6)
         {
-            browseLink(story[special_option][storyLocation], textContainer);
+            browseLink(story[special_option][user.storyLocation], textContainer);
 
             refreshInterface();
         }
-        else if(story[special_option][storyLocation] == -7)
+        else if(story[special_option][user.storyLocation] == -7)
         {
             // alert("asdf");
 
@@ -970,13 +970,15 @@ function refreshInterface()//REFRESHES the interface
             textContainer.addEventListener( "click",
             function (e)
             {
-                browseLink(story[special_option][storyLocation], textContainer);
+                browseLink(story[special_option][user.storyLocation], textContainer);
 
                 refreshInterface();
                 // refreshTestContainer();//no need for this, it was only for debugging purposes
             },
             true);
     }
+
+    pushVariablesToDB();
 }
 
 // -----START DEBUGGING TOOLS-----
@@ -1079,7 +1081,7 @@ function refreshProgressBar()
         progressBarContainer.appendChild(logo);
         progressBarContainer.appendChild(progressBar);
     
-    var progress = storyLocation/story[0].length*100;
+    var progress = user.storyLocation/story[0].length*100;
     
     // progressBar.innerHTML = "";
     progressBar.innerHTML = Math.round(progress) + "% <br>";
@@ -1093,7 +1095,7 @@ function findLatestObjective(obj_cont)//returns the last time there was a new ob
 {
     var POI = -1;
 
-    for(var i = 0; i < storyLocation; i++)
+    for(var i = 0; i < user.storyLocation; i++)
     {
         if(story[6][i] == -2)
         {
@@ -1132,25 +1134,25 @@ function refreshObjectiveContainer()
 
     obj_cont.innerHTML = "";
     
-    if(story[6][storyLocation] == -2)
+    if(story[6][user.storyLocation] == -2)
     {
-        if(story[13][storyLocation] != "null")//if there is a new objective in choice A
+        if(story[13][user.storyLocation] != "null")//if there is a new objective in choice A
         {
-            obj_cont.innerHTML = story[13][storyLocation];
+            obj_cont.innerHTML = story[13][user.storyLocation];
         }
         else
         {
             findLatestObjective(obj_cont);//if there's nothing in choice A, then there is no new objective
         }
     
-        if(story[14][storyLocation] != "null")//if there is a new objective in choice B
+        if(story[14][user.storyLocation] != "null")//if there is a new objective in choice B
         {
-            obj_cont.innerHTML += "<br>" + story[14][storyLocation];
+            obj_cont.innerHTML += "<br>" + story[14][user.storyLocation];
         }
     
-        if(story[15][storyLocation] != "null")//if there is a new objective in choice C
+        if(story[15][user.storyLocation] != "null")//if there is a new objective in choice C
         {
-            obj_cont.innerHTML += "<br>" + story[15][storyLocation];
+            obj_cont.innerHTML += "<br>" + story[15][user.storyLocation];
         }
     }
     else
@@ -1257,13 +1259,15 @@ function dehighlight(element, baseColor)//we should call this function lowlight 
 //This function is to affect what happens when we click on the text container depending on the link
 function browseLink(link, element)//link is the link of the story (story[special_option][storyLocation]), element is the ID of the button on which the user clicked (which should be the location where the button is going)
 {
-    story[17][storyLocation] = true;
+    story[17][user.storyLocation] = true;
 
-    var physicalLocation = story[5][storyLocation];
+    user.physicalLocation = story[5][user.storyLocation];
+
+    // alert(user.physicalLocation);
 
     if(link == -1)//si on va à la prochaine slide
     {
-        storyLocation++;
+        user.storyLocation++;
     }
     else if(link == -2)//activate navigation
     {
@@ -1271,9 +1275,9 @@ function browseLink(link, element)//link is the link of the story (story[special
 
         if(element.id == "textContainer")//si on a cliqué sur le text container
         {
-            if(story[7][storyLocation] == 0)//si l'objectif est null, on peut poursuivre l'histoire
+            if(story[7][user.storyLocation] == 0)//si l'objectif est null, on peut poursuivre l'histoire
             {
-                storyLocation++;//we continue the story once we are done
+                user.storyLocation++;//we continue the story once we are done
             }
             else//sinon, ça veut dire que l'objectif est d'aller dans un endroit particulier de l'école, donc on ne peut pas cliquer sur le text container pour y arriver
             {
@@ -1282,100 +1286,100 @@ function browseLink(link, element)//link is the link of the story (story[special
         }
         else if(element.id == locations.entrance)//si on est dans le entrance
         {
-            if(story[7][storyLocation] == 1)//objectif = aller dans entrance
+            if(story[7][user.storyLocation] == 1)//objectif = aller dans entrance
             {
-                storyLocation++;//we continue the story once we are done
+                user.storyLocation++;//we continue the story once we are done
             }
         }
         else if(element.id == locations.hall1)//si on est dans le hall 1
         {
-            if(story[7][storyLocation] == 2)//objectif = aller dans hall 1
+            if(story[7][user.storyLocation] == 2)//objectif = aller dans hall 1
             {
                 // alert("Objective completed! You are in hall 1!");
                 // story[5][storyLocation] = element.id;
-                storyLocation++;//we continue the story once we are done
+                user.storyLocation++;//we continue the story once we are done
             }
         }
         else if(element.id == locations.class1)//si on est dans la classe 1
         {
-            if(story[7][storyLocation] == 3)//objectif = aller dans classroom 1
+            if(story[7][user.storyLocation] == 3)//objectif = aller dans classroom 1
             {
                 // alert("Objective completed! You are in classroom 1!");
                 
                 // story[5][storyLocation] = element.id;
-                storyLocation++;//we continue the story once we are done
+                user.storyLocation++;//we continue the story once we are done
 
                 //Mettre un message pour dire bravo "Objective complete!"
             }
         }
         else if(element.id == locations.class2)//si on est dans le entrance
         {
-            if(story[7][storyLocation] == 4)//objectif = aller dans entrance
+            if(story[7][user.storyLocation] == 4)//objectif = aller dans entrance
             {
-                storyLocation++;//we continue the story once we are done
+                user.storyLocation++;//we continue the story once we are done
             }
         }
         else if(element.id == locations.hall2)//si on est dans le entrance
         {
-            if(story[7][storyLocation] == 5)//objectif = aller dans entrance
+            if(story[7][user.storyLocation] == 5)//objectif = aller dans entrance
             {
-                storyLocation++;//we continue the story once we are done
+                user.storyLocation++;//we continue the story once we are done
             }
         }
         else if(element.id == locations.cafeteria)//si on est dans le entrance
         {
-            if(story[7][storyLocation] == 6)//objectif = aller dans entrance
+            if(story[7][user.storyLocation] == 6)//objectif = aller dans entrance
             {
-                storyLocation++;//we continue the story once we are done
+                user.storyLocation++;//we continue the story once we are done
             }
         }
         else if(element.id == locations.cafeteriaLounge)//si on est dans le entrance
         {
-            if(story[7][storyLocation] == 7)//objectif = aller dans entrance
+            if(story[7][user.storyLocation] == 7)//objectif = aller dans entrance
             {
-                storyLocation++;//we continue the story once we are done
+                user.storyLocation++;//we continue the story once we are done
             }
         }
         else if(element.id == locations.cafeteriaOutside)//si on est dans le entrance
         {
-            if(story[7][storyLocation] == 8)//objectif = aller dans entrance
+            if(story[7][user.storyLocation] == 8)//objectif = aller dans entrance
             {
-                storyLocation++;//we continue the story once we are done
+                user.storyLocation++;//we continue the story once we are done
             }
         }
         else if(element.id == locations.garden)//si on est dans le entrance
         {
-            if(story[7][storyLocation] == 9)//objectif = aller dans entrance
+            if(story[7][user.storyLocation] == 9)//objectif = aller dans entrance
             {
-                storyLocation++;//we continue the story once we are done
+                user.storyLocation++;//we continue the story once we are done
             }
         }
         else if(element.id == locations.gym)//si on est dans le entrance
         {
-            if(story[7][storyLocation] == 10)//objectif = aller dans entrance
+            if(story[7][user.storyLocation] == 10)//objectif = aller dans entrance
             {
-                storyLocation++;//we continue the story once we are done
+                user.storyLocation++;//we continue the story once we are done
             }
         }
         else if(element.id == locations.dormHall)//si on est dans le entrance
         {
-            if(story[7][storyLocation] == 11)//objectif = aller dans entrance
+            if(story[7][user.storyLocation] == 11)//objectif = aller dans entrance
             {
-                storyLocation++;//we continue the story once we are done
+                user.storyLocation++;//we continue the story once we are done
             }
         }
         else if(element.id == locations.dorm)//si on est dans le entrance
         {
-            if(story[7][storyLocation] == 12)//objectif = aller dans entrance
+            if(story[7][user.storyLocation] == 12)//objectif = aller dans entrance
             {
-                storyLocation++;//we continue the story once we are done
+                user.storyLocation++;//we continue the story once we are done
             }
         }
         else if(element.id == locations.dormBathroom)//si on est dans le entrance
         {
-            if(story[7][storyLocation] == 13)//objectif = aller dans entrance
+            if(story[7][user.storyLocation] == 13)//objectif = aller dans entrance
             {
-                storyLocation++;//we continue the story once we are done
+                user.storyLocation++;//we continue the story once we are done
             }
         }
         else
@@ -1385,7 +1389,7 @@ function browseLink(link, element)//link is the link of the story (story[special
         
         if(element.id != "textContainer")
         {
-            if(changelocation){story[5][storyLocation] = element.id;}
+            if(changelocation){story[5][user.storyLocation] = element.id;}
         }
         
         refreshInterface();
@@ -1400,7 +1404,7 @@ function browseLink(link, element)//link is the link of the story (story[special
         {
             // alert('Your form was successfully sumbitted!');
             // alert(choice);
-            storyLocation++;//we continue the story once we are done
+            user.storyLocation++;//we continue the story once we are done
         }
     }
     else if(link == -4)//friendship/romance buttons are enabled
@@ -1408,12 +1412,12 @@ function browseLink(link, element)//link is the link of the story (story[special
         if(element.id == "friendship_button")
         {
             // alert("friendship -> " + story[8][storyLocation]);
-            storyLocation = story[8][storyLocation];//on fait que la location devienne le numéro du link
+            user.storyLocation = story[8][user.storyLocation];//on fait que la location devienne le numéro du link
         }
         else if(element.id == "romance_button")
         {
             // alert("romance -> " + story[9][storyLocation]);
-            storyLocation = story[9][storyLocation];//on fait que la location devienne le numéro du link
+            user.storyLocation = story[9][user.storyLocation];//on fait que la location devienne le numéro du link
         }
         else
         {
@@ -1426,21 +1430,21 @@ function browseLink(link, element)//link is the link of the story (story[special
         
         if(element.id == "choiceA")
         {
-            storyLocation = story[choiceA_link][storyLocation];//on fait que la location devienne le numéro du link
+            user.storyLocation = story[choiceA_link][user.storyLocation];//on fait que la location devienne le numéro du link
         }
         else if(element.id == "choiceB")
         {
-            storyLocation = story[choiceB_link][storyLocation];//on fait que la location devienne le numéro du link
+            user.storyLocation = story[choiceB_link][user.storyLocation];//on fait que la location devienne le numéro du link
         }
         else if(element.id == "choiceC")
         {
-            storyLocation = story[choiceC_link][storyLocation];//on fait que la location devienne le numéro du link
+            user.storyLocation = story[choiceC_link][user.storyLocation];//on fait que la location devienne le numéro du link
         }
     }
     else if(link == -6)//Looks at links in the past to dermine where to go next
     {
-        var pointofinterest = story[18][storyLocation];
-        var landingpoint = story[19][storyLocation];
+        var pointofinterest = story[18][user.storyLocation];
+        var landingpoint = story[19][user.storyLocation];
 
         //alert(pointofinterest);
         //alert(landingpoint);
@@ -1450,17 +1454,17 @@ function browseLink(link, element)//link is the link of the story (story[special
             // alert("you have visited " + pointofinterest);
             // alert("therefore, you are going to " + landingpoint);
             //alert("storylocation was " + storyLocation);
-            storyLocation = landingpoint;
+            user.storyLocation = landingpoint;
             //alert("storylocation is now " + storyLocation);
         }
         else//if not, we go to the next slide
         {
-            storyLocation++
+            user.storyLocation++
         }
     }
     else//otherwise, it's just a direct link to somewhere else in the story
     {
-        storyLocation = story[special_option][storyLocation];//on fait que la location devienne le numéro du link
+        user.storyLocation = story[special_option][user.storyLocation];//on fait que la location devienne le numéro du link
     }
 }
 
@@ -1483,46 +1487,8 @@ function refreshScholar()
         scholar_container.appendChild(scholar_img);
 }
 
-function drawImage(imageObj)
-{
-    // var canvas = document.getElementById("customize_character_container");
-    // var context = canvas.getContext("2d");
-
-    // // context.fillStyle = "#FF0000";
-    // // context.fillRect(0,0,150,75);
-
-    // var imgX = document.createElement('img');
-    //     imgX.className = "customize_character_img";
-    //     imgX.src = "images/game_images/sprites/scholar/male/body m.png";
-
-    // context.drawImage(imgX, 0, 0);
-
-
-    // var destX = 0; //update these to set the image position
-    // var destY = 0;
-
-    // context.drawImage(imageObj, destX, destY);
-
-    // var imageData = context.getImageData(0, 0, canvas.width, canvas.height);
-    // var data = imageData.data;
-
-    // for (var i = 0, n = data.length; i < n; i += 4)
-    // {
-    //     if(data[i] == 0 && data[i+1] == 0 && data[i+2] ==0)//if black, ie. red, green, and blue are all 0
-    //     { 
-    //         //switch to white
-    //         data[i] = 255; //red
-    //         data[i+1] = 255; //green
-    //         data[i+2] = 255; //blue
-    //     }
-    //     // i+3 is alpha (the fourth element)
-    // }
-
-    // // overwrite original image
-    // context.putImageData(imageData, 0, 0);
-}
-
-initializeInterface();
+pullVariablesFromDB();
+// initializeInterface();
 
 /*
 

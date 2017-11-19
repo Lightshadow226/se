@@ -125,7 +125,7 @@ var fulldescription =
     "A graphic designer in the Fine Arts department and highly skilled in anything involving visuals, thanks to his photographic memory, Tyler loves to be the center of attention! He is an artist from head to toe: charming, sensitive, creative…and highly critical of himself. It’s hard to constantly feel like your work isn’t good enough, especially when rejection is everywhere you look. Despite being very different, Tyler and Tegan make an incredible team, and being their friend comes with a lot of advantages!"
 ];
 
-function create_interface()
+$(function create_interface()
 {
     const qty_main_10 = 10;//de 0 à 9 
     const qty_classmates = 0;//de 9 à 9 (parce qu'il n'y en a pas encore)
@@ -159,7 +159,7 @@ function create_interface()
     button_container.appendChild(createFlexPanel());
 
     refresh_lines(0, qty_main_10);//on affiche les 10 originaux initialement
-}
+});
 
 function refresh_lines(beg, end)
 {

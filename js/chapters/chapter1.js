@@ -11,8 +11,6 @@ September 02, 2017
 */
 var story = new Array();
 
-storyLocation = chapter1Location;
-
 const c = 17;
 /* "c" values:
     0 -> story text (ce qui apparait dans le text container)

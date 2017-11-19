@@ -87,61 +87,52 @@ while($rs = $statement->fetch())//"rs" = "row statements"
 
 <html>
 
-<style>
+    <!-- ***** -->
 
-.db_handles
-{
-    display: none;
-}
+    <div id="db_handle_username"><?php echo $username; ?></div>
 
-</style>
+    <div id="db_handle_energy"><?php echo $energy; ?></div>
+
+    <div id="db_handle_money"><?php echo $money; ?></div>
+
+    <div id="db_handle_nbreplays"><?php echo $nbreplays; ?></div>
 
     <!-- ***** -->
 
-    <div id="db_handle_username" class="db_handles"><?php echo $username; ?></div>
+    <div id="db_handle_story_location"><?php echo $story_location; ?></div>
 
-    <div id="db_handle_energy" class="db_handles"><?php echo $energy; ?></div>
-
-    <div id="db_handle_money" class="db_handles"><?php echo $money; ?></div>
-
-    <div id="db_handle_nbreplays" class="db_handles"><?php echo $nbreplays; ?></div>
+    <div id="db_handle_last_chapter_played"><?php echo $last_chapter; ?></div>
 
     <!-- ***** -->
 
-    <div id="db_handle_story_location" class="db_handles"><?php echo $story_location; ?></div>
+    <div id="db_handle_a1"><?php echo $a1; ?></div>
 
-    <div id="db_handle_last_chapter_played" class="db_handles"><?php echo $last_chapter; ?></div>
+    <div id="db_handle_a2"><?php echo $a2; ?></div>
 
-    <!-- ***** -->
+    <div id="db_handle_a3"><?php echo $a3; ?></div>
 
-    <div id="db_handle_a1" class="db_handles"><?php echo $a1; ?></div>
+    <div id="db_handle_a4"><?php echo $a4; ?></div>
 
-    <div id="db_handle_a2" class="db_handles"><?php echo $a2; ?></div>
+    <div id="db_handle_a5"><?php echo $a5; ?></div>
 
-    <div id="db_handle_a3" class="db_handles"><?php echo $a3; ?></div>
+    <div id="db_handle_a6"><?php echo $a6; ?></div>
 
-    <div id="db_handle_a4" class="db_handles"><?php echo $a4; ?></div>
+    <div id="db_handle_a7"><?php echo $a7; ?></div>
 
-    <div id="db_handle_a5" class="db_handles"><?php echo $a5; ?></div>
+    <div id="db_handle_a8"><?php echo $a8; ?></div>
 
-    <div id="db_handle_a6" class="db_handles"><?php echo $a6; ?></div>
+    <div id="db_handle_a9"><?php echo $a9; ?></div>
 
-    <div id="db_handle_a7" class="db_handles"><?php echo $a7; ?></div>
+    <div id="db_handle_a10"><?php echo $a10; ?></div>
 
-    <div id="db_handle_a8" class="db_handles"><?php echo $a8; ?></div>
+    <div id="db_handle_a11"><?php echo $a11; ?></div>
 
-    <div id="db_handle_a9" class="db_handles"><?php echo $a9; ?></div>
+    <div id="db_handle_a12"><?php echo $a12; ?></div>
 
-    <div id="db_handle_a10" class="db_handles"><?php echo $a10; ?></div>
+    <div id="db_handle_a13"><?php echo $a13; ?></div>
 
-    <div id="db_handle_a11" class="db_handles"><?php echo $a11; ?></div>
+    <div id="db_handle_a14"><?php echo $a14; ?></div>
 
-    <div id="db_handle_a12" class="db_handles"><?php echo $a12; ?></div>
-
-    <div id="db_handle_a13" class="db_handles"><?php echo $a13; ?></div>
-
-    <div id="db_handle_a14" class="db_handles"><?php echo $a14; ?></div>
-
-    <div id="db_handle_a15" class="db_handles"><?php echo $a15; ?></div>
+    <div id="db_handle_a15"><?php echo $a15; ?></div>
 
 </html>

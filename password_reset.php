@@ -49,7 +49,7 @@ include_once 'partials/parsePasswordReset.php';
 				<div class = "flex-container">
 					<div class = "flex-panel"></div>
 					<p class = "flex-panel login-signup-labels">Email:</p>
-					<input class = "flex-panel2 login-signup-textfields" type="text" placeholder = "Email" name="email"></input>
+					<input id = "passwordreset-email" class = "flex-panel2 login-signup-textfields" type="text" placeholder = "Email" name="email"></input>
 					<div class = "flex-panel"></div>
 				</div>	
 			
@@ -66,5 +66,8 @@ include_once 'partials/parsePasswordReset.php';
     <?php/* include_once 'partials/footers.php'*/ ?>
 
 </body>
+
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>$('#passwordreset-email').focus();</script>
 
 </html>

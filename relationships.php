@@ -25,7 +25,7 @@
 
         <div class="add_padding card-nomargin">
 
-            <h1>Meet the Characters</h1>
+            <h1>Relationships</h1>
 
             <div id="button_container_horizontal">
                 

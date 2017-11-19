@@ -2,7 +2,6 @@
 
 function check_empty_fields($required_fields_array)
 {
-
 	//Initializing an array to store any error message from the form
 	$form_errors = array();
 	
@@ -25,7 +24,6 @@ return the array containing all the errors
 
 function check_min_lenght($fields_to_check_lenght)
 {
-
 	//Initializing an array to store any error message from the form
 	$form_errors = array();
 	

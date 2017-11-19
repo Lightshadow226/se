@@ -42,7 +42,7 @@ include_once 'partials/parseLogin.php';
 			<div class = "flex-container">
 				<div class = "flex-panel"></div>
 				<p class = "flex-panel login-signup-labels">Username:</p>
-				<input class = "flex-panel2 login-signup-textfields" type="text" placeholder = "Username" name="username"></input>
+				<input id = "login-username" class = "flex-panel2 login-signup-textfields" type="text" placeholder = "Username" name="username"></input>
 				<div class = "flex-panel"></div>
 			</div>
 			
@@ -80,6 +80,8 @@ include_once 'partials/parseLogin.php';
 
 </body>
 
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>$('#login-username').focus();</script>
 
 </html>
 

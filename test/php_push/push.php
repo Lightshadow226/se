@@ -1,8 +1,11 @@
 <?php
 
-include_once '../resources/session.php';
-include_once '../resources/database.php';
-include_once '../resources/utilities.php';
+include_once '../../resources/session.php';
+include_once '../../resources/database.php';
+include_once '../../resources/utilities.php';
+
+    // $storylocation = $_POST['nom'];//storylocation
+    // $lastchapterplayed = $_POST['message'];//lastchapterplayed
 
     $storylocation = $_POST['storylocation'];//storylocation
     $lastchapterplayed = $_POST['lastchapterplayed'];//lastchapterplayed
@@ -27,4 +30,16 @@ include_once '../resources/utilities.php';
     {
         echo $ex;
     }
+
+    /*
+    <script>
+    alert("asdf");
+    function myFunction()
+    {
+        alert('<?php echo $status; ?>');
+    }
+    
+    myFunction();
+    </script>
+    
 ?>
