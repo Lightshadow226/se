@@ -8,7 +8,7 @@
 - updated DB_handle pour que tous ce qu'il contient soit invisible
 - modifié le width de la page (était 90%, maintenant 80%)
 - changé storylocation pour user.storylocation et physicalLocation pour user.physicalLocation
-- implémenté le push de la base de données(fonctionne bien)
+- implémenté le push de la base de données(fonctionne bien indépendamment des utilisateurs)
 - classé les fichiers de tests push & pull dans un dossier "test"
 
 ***TODO:***
@@ -28,6 +28,7 @@
 - Fix le "relationship_enabled"
 - AJOUTER "user.physicalLocation" dans le get et le push de DB_handle
 - s'assurer qu'il n'y ait plus de variables utilisés sans la base de données
+- AJOUTER blackscreen.jpg
 
 ***Bugs connus***
 

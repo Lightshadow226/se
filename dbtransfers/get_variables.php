@@ -1,12 +1,13 @@
 <?php
 
+include_once '../resources/session.php';
 include_once "../resources/database.php";
 
 //*********************************************
 //parse USERINFO table
 //*********************************************
 
-$id = 1;
+$id = $_SESSION['id'];
 
 $sqlQuery = "SELECT * FROM userinfo WHERE id = :id";
 $statement = $db->prepare($sqlQuery);
@@ -27,8 +28,6 @@ while($rs = $statement->fetch())//"rs" = "row statements"
 //parse STORY table
 //*********************************************
 
-$id = 1;
-
 $sqlQuery = "SELECT * FROM story WHERE id = :id";
 $statement = $db->prepare($sqlQuery);
 $statement->execute(array(':id' => $id));
@@ -43,8 +42,6 @@ while($rs = $statement->fetch())//"rs" = "row statements"
 //*********************************************
 //parse AFFINITY table
 //*********************************************
-
-$id = 1;
 
 $sqlQuery = "SELECT * FROM affinity WHERE id = :id";
 $statement = $db->prepare($sqlQuery);
