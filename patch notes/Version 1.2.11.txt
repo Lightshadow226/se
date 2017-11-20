@@ -1,0 +1,40 @@
+﻿New Version Notes
+
+***New***
+
+-Added Profile folder with sprite generation: contains image files + scholar_sprite.php (file that generates the sprite depending on what the user's info is in the database)
+-profile_idcard.php will contain the generation of the student id card
+
+***TODO:***
+
+- la chapitre 1 est terminé jusqu'à la slide 129, donc il va falloir valider le reste + rajouter les émotions
+- il va falloir continuer avec les birthday, préférences, etc.
+- il reste à ajouter les ghost slides pour la slide 44 (221-224)
+- valider que toutes les valeurs sont affectées à la bonne slide (array du chapter 0 & 1)
+- we still need to add characters over time in "classmates" and "othe   rs"
+- toutes les manipulations PHP/JS
+- les variables de Relationship.js doivent être intgrées dans variables.js
+- terminer la page Illustrations & Achievements
+- downloader les fonts "great vibes" & "roboto" de Google API
+- Il va falloir réviser le CSS dans "se-stylesheet" pour les balises: GENERAL, INDEX.PHP, FAQ.PHP, FEATURES.HTML. -> Il faut que les page-specific attributes ne soient jamais utilisés dans une autre page
+- Organiser les fichiers PHP
+- Améliorer les erreurs pour login.php, signup.php, resetpassword.php
+- Fix le "relationship_enabled"
+- AJOUTER "user.physicalLocation" dans le get et le push de DB_handle
+- s'assurer qu'il n'y ait plus de variables utilisés sans la base de données
+- AJOUTER blackscreen.jpg
+
+***Bugs connus***
+
+- images that don't size perfectly (chapter 0 form -> link[6]=-3)
+- Sprites that don't resize properly in the game
+
+***Database à implémenter***
+
+1) quelle slide que tu es rendu (1 variables par épisode = 50 variables au total)
+2) is visited? (200 + variables par chapitre) - FIRST PLAYTHROUGH
+3) is visited? (200 + variables par chapitre) - BONUS -> for the progress bar
+
+***Liens pour GIT***
+https://stackoverflow.com/questions/26228848/how-do-i-exit-my-git-commit-message-im-not-in-the-vim-i-used-the-commit-m
+https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/
