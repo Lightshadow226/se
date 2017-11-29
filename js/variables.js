@@ -424,6 +424,8 @@ function pullVariablesFromDB()
         claire.affinity = document.getElementById("db_handle_a5").innerHTML;
         
         alistair.affinity = document.getElementById("db_handle_a6").innerHTML;
+
+        // alert("alistair's affinity: " + alistair.affinity);
         
         tadashi.affinity = document.getElementById("db_handle_a7").innerHTML;
         
@@ -445,7 +447,7 @@ function pullVariablesFromDB()
         
         if(relationship_enabled)//if we're on the page RELATIONSHIP
         {
-            create_interface();
+            // create_interface();
         }
     });
 }

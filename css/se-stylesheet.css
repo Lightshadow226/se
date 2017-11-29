@@ -1113,8 +1113,20 @@
 		margin-right: 10px;
 	}
 
+	.yellow_button_activated
+	{
+		background-color: #EE4C5E;
+	}
+
 	.button:hover
 	{
 		cursor: pointer;
 		background-color: #682566;
+	}
+
+/***************DATABASE***************/
+	
+	#DB_handle
+	{
+		display: none;
 	}

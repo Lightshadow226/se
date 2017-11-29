@@ -52,7 +52,8 @@ if(isset($_POST['signupBtn'],$_POST['token']))
 				$sqlInsert = "INSERT INTO userinfo (username, email, password, joindate) VALUES (:username, :email, :password, now())";
 				$sqlInsert2 = "INSERT INTO story (storylocation, lastchapterplayed) VALUES ('0', '0')";
 				$sqlInsert3 = "INSERT INTO affinity (karolina, ellie, neha, raquel, claire, alistair, tadashi, tegan, tyler, axel, ladyarlington, coachdavis, serena, cecile, teacherchapter2) VALUES ('0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0')"; //
-		
+				// $sqlInsert3 = "INSERT INTO scholar_info"
+
 				//Using PDO to sanitize the data
 				$statement = $db->prepare($sqlInsert);
 				$statement2 = $db->prepare($sqlInsert2);
