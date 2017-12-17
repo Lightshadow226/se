@@ -931,6 +931,23 @@
 	{
 		flex: 0;
 	}
+	
+/**********PROFILE.PHP**********/
+
+	.scholar-id-card
+	{
+		/* left: 50%;
+		transform: translatex(-50%);  */
+		text-align: center;
+		align-content: center;
+	}
+
+	#button-container
+	{
+		display: flex;
+		margin: 20px;
+		/* flex-direction: vertical; */
+	}
 
 /***************STRUCTURE***************/
 

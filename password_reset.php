@@ -59,7 +59,7 @@ include_once 'partials/parsePasswordReset.php';
 
 			</form>
 
-	<br><p style="text-align:center;"><a href="index.php">Back</a> </p>
+		<br><p style="text-align:center;"><a href="index.php">Back</a> </p>
         </div>
 	</div>
 

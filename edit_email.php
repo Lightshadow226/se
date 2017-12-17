@@ -1,8 +1,7 @@
 <?php
-include_once 'partials/headers.php';
+include_once 'resources/session.php';
 include_once 'resources/utilities.php';
 include_once 'resources/database.php';
-
 
 if((isset($_SESSION['id']) || isset($_GET['user_identity'])) && !isset($_POST['updateEmailBtn']))
 {
@@ -96,9 +95,6 @@ elseif(isset($_POST['updateEmailBtn']))
 
 ?>
 
-
-
-<!DOCTYPE html>
 <html>
 <head>
 
@@ -117,41 +113,58 @@ elseif(isset($_POST['updateEmailBtn']))
 
 </head>
 
-<body>
+<body class="center-screen">
 
-<header id="header">
-</header>
 
-	<?php include_once 'partials/headers.php' ?>
-
-	<div class = "main_content">
-	<div class="card-nomargin add_padding">
+	<a href="index.php"><img id="logo" class="" src="images/general/se-logo.png"></a>
 	
-	<h1>Edit your Email</h1>
-            <?php if(isset($result)) echo $result; ?>
-            <?php if(!empty($form_errors)) echo show_errors($form_errors); ?>
+	<div class = "">
+
+		<div class="card-nomargin add_padding">
+			<h1>Edit your Email</h1>
+			
+			<?php if(isset($result)) echo $result; ?>
+			<?php if(!empty($form_errors)) echo show_errors($form_errors); ?>
 
 
 			<?php if(!isset($_SESSION['username'])):?>
+				
 				<p>Sorry! Only registered members are allowed to see this page. <a href="login.php">Log in</a> or <a href="signup.php">Sign up</a> to view your profile!</p>
-			<?php else: ?>
-				<p>Enter your new email here.</p>
-				<form method="post" action="" class="center">
-					Email:
-					<p><input type="text" name="email" value=""></p>
-					<input type="hidden" value="<?php echo _token(); ?>" name="token">
-					<input type="hidden" name="hidden_id" value="<?php if(isset($id)) echo $id; ?>">
-					<p><input type="submit" name="updateEmailBtn" value="UPDATE"></p>
-				</form>
-			<?php endif ?>
 
+			<?php else: ?>
+				
+				<form method="post" action="" class="center">
+				
+					<p>Enter your new email here.</p>
+					
+					</br>
+
+					<div class = "flex-container">
+						<div class = "flex-panel"></div>
+						<p class = "flex-panel login-signup-labels">Email:</p>
+						<input id="edit-email" class = "flex-panel2 login-signup-textfields" type="text" placeholder = "Email" name="email" value=""></input>
+						
+						<input type="hidden" value="<?php echo _token(); ?>" name="token">
+						<input type="hidden" name="hidden_id" value="<?php if(isset($id)) echo $id; ?>">
+
+						<div class = "flex-panel"></div>
+					</div>	
+					
+					</br>
+
+					<input class="button pink-button-subtle" type="submit" name="updateEmailBtn" value="UPDATE"></input>
+				
+				</form>
+
+				<br><p style="text-align:center;"><a href="profile.php">Back</a> </p>
+
+			<?php endif ?>
         </div>
 	</div>
 
-
-	<?php include_once 'partials/footers.php' ?>
-
-
 </body>
+
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>$('#edit-email').focus();</script>
 
 </html>
