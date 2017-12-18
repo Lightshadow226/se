@@ -1,4 +1,3 @@
-
 <html>
 <head>
 
@@ -44,13 +43,13 @@
 						<h4 style="text-align:center; width:100%;">YOUR INFORMATION</h4>
 
 						<!-- Les 4 paramètres à afficher (email, username, password, date joined) -->
-						<p style="width:100%;"><b>Email:</b> <?php if(isset($email)) echo $email; ?> | <a href="edit_email.php?user_identity=<?php if(isset($encode_id)) echo $encode_id; ?>">Edit</a></p>
+						<p style="width:100%;"><b>Email:</b> <?php if(isset($email)) echo $email; ?> | <a href="profile/edit_email.php?user_identity=<?php if(isset($encode_id)) echo $encode_id; ?>">Edit</a></p>
 						</br>
 
-						<p style="width:100%;"><b>Username:</b> <?php if(isset($username)) echo $username; ?> | <a href="edit_username.php?user_identity=<?php if(isset($encode_id)) echo $encode_id; ?>">Edit</a></p>
+						<p style="width:100%;"><b>Username:</b> <?php if(isset($username)) echo $username; ?> | <a href="profile/edit_username.php?user_identity=<?php if(isset($encode_id)) echo $encode_id; ?>">Edit</a></p>
 						</br>
 						
-						<p style="width:100%;"><b>Password:</b> ********** | <a href="edit_password.php?user_identity=<?php if(isset($encode_id)) echo $encode_id; ?>">Edit</a></p>
+						<p style="width:100%;"><b>Password:</b> ********** | <a href="profile/edit_password.php?user_identity=<?php if(isset($encode_id)) echo $encode_id; ?>">Edit</a></p>
 						</br>
 						
 						<p style="width:100%;"><b>Date Joined:</b> <?php if(isset($date_joined)) echo $date_joined; ?></p>
@@ -63,11 +62,11 @@
 								<div class="button pink_button"><a style="color:white;" href="">Reset Progress</a></div>
 								</br>
 								</br>
-								<div class="button pink_button"><a style="color:white;" href="delete_account.php?user_identity=<?php if(isset($encode_id)) echo $encode_id; ?>">DELETE ACCOUNT</a></div>
+								<div class="button pink_button"><a style="color:white;" href="profile/delete_account.php?user_identity=<?php if(isset($encode_id)) echo $encode_id; ?>">DELETE ACCOUNT</a></div>
 							</div>
 
 							<div id="scholar-id-card" class="flex-panel2">
-								<img class="center_div" style="width: 100%;" src="profile/images/studentid.png"><!-- style="width:100%;" -->
+								<img class="center_div" style="width: 100%;" src="profile/profile_idcard.php"><!-- style="width:100%;" -->
 							</div>
 						</div>
 					</div>

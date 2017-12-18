@@ -1,10 +1,9 @@
 <?php
-include_once 'partials/headers.php';
-include_once 'resources/utilities.php';
-include_once 'resources/database.php';
+include_once '../resources/session.php';
+include_once '../resources/utilities.php';
+include_once '../resources/database.php';
 
-
-if((isset($_SESSION['id']) || isset($_GET['user_identity'])) && !isset($_POST['updateUsernameBtn']))
+if((isset($_SESSION['id']) || isset($_GET['user_identity'])) && !isset($_POST['updateEmailBtn']))
 {
     if(isset($_GET['user_identity']))
     {
@@ -19,19 +18,21 @@ if((isset($_SESSION['id']) || isset($_GET['user_identity'])) && !isset($_POST['u
     
     
 }
-elseif(isset($_POST['updateUsernameBtn']))
+elseif(isset($_POST['updateEmailBtn']))
 {
 	    $form_errors = array();
 	
-	    $required_fields = array('username');
+	    $required_fields = array('email');
 	
 	    $form_errors = array_merge($form_errors, check_empty_fields($required_fields));
 	
-	    $fields_to_check_length = array('username' => 4);
+	    $fields_to_check_length = array('email' => 6);
 	
 	    $form_errors = array_merge($form_errors, check_min_lenght($fields_to_check_length));
+	    
+	    $form_errors = array_merge($form_errors, check_email($_POST));
 	
-	    $username = $_POST['username'];
+	    $email = $_POST['email'];
 	    $id = $_POST['hidden_id'];
 	    
 	    $sqlQuery = "SELECT * FROM userinfo WHERE id = :id";
@@ -40,26 +41,26 @@ elseif(isset($_POST['updateUsernameBtn']))
 	    
 	    while($rs = $statement->fetch())
 	    {
-		    $username_from_db = $rs['username'];
+		    $email_from_db = $rs['email'];
             }
             
 
-	    if($username_from_db == $username)
+	    if($email_from_db == $email)
 	    {
 		$result = "You have not made any changes.";
 	    }
-	    elseif(checkDuplicateUsername($username, $db))
+	    elseif(checkDuplicateEmail($email, $db))
 	    {
-		$result = flashMessage("This username is already taken!");
+		$result = flashMessage("This email is already taken!");
 	    }
 	    elseif(empty($form_errors))
 	    {
 			
 				try
 				{
-					$sqlUpdate = "UPDATE userinfo SET username = :username WHERE id = :id";
+					$sqlUpdate = "UPDATE userinfo SET email = :email WHERE id = :id";
 					$statement = $db->prepare($sqlUpdate);
-					$statement->execute(array(':username' => $username, ':id' => $id));
+					$statement->execute(array(':email' => $email, ':id' => $id));
 	
 		
 			           	 if($statement->rowCount() == 1)
@@ -94,9 +95,6 @@ elseif(isset($_POST['updateUsernameBtn']))
 
 ?>
 
-
-
-<!DOCTYPE html>
 <html>
 <head>
 
@@ -105,7 +103,7 @@ elseif(isset($_POST['updateUsernameBtn']))
 	
 	<title>Sweet Elite: Flirt and Uncover the Secrets of Arlington Academy!<</title>
 
-	<link href="css/se-stylesheet.css" rel="stylesheet" type="text/css">
+	<link href="../css/se-stylesheet.css" rel="stylesheet" type="text/css">
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 	<link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet" type='text/css'>
 
@@ -115,41 +113,58 @@ elseif(isset($_POST['updateUsernameBtn']))
 
 </head>
 
-<body>
+<body class="center-screen">
 
-<header id="header">
-</header>
 
-	<?php include_once 'partials/headers.php' ?>
-
-	<div class = "main_content">
-	<div class="card-nomargin add_padding">
+	<a href="index.php"><img id="logo" class="" src="images/general/se-logo.png"></a>
 	
-	<h1>Edit your Username</h1>
-            <?php if(isset($result)) echo $result; ?>
-            <?php if(!empty($form_errors)) echo show_errors($form_errors); ?>
+	<div class = "">
+
+		<div class="card-nomargin add_padding">
+			<h1>Edit your Email</h1>
+			
+			<?php if(isset($result)) echo $result; ?>
+			<?php if(!empty($form_errors)) echo show_errors($form_errors); ?>
 
 
 			<?php if(!isset($_SESSION['username'])):?>
+				
 				<p>Sorry! Only registered members are allowed to see this page. <a href="login.php">Log in</a> or <a href="signup.php">Sign up</a> to view your profile!</p>
-			<?php else: ?>
-				<p>Enter your new username here.</p>
-				<form method="post" action="" class="center">
-					Username:
-					<p><input type="text" name="username" value="<?php if(isset($username)) echo $username; ?>"></p>
-					<input type="hidden" value="<?php echo _token(); ?>" name="token">
-					<input type="hidden" name="hidden_id" value="<?php if(isset($id)) echo $id; ?>">
-					<p><input type="submit" name="updateUsernameBtn" value="UPDATE"></p>
-				</form>
-			<?php endif ?>
 
+			<?php else: ?>
+				
+				<form method="post" action="" class="center">
+				
+					<p>Enter your new email here.</p>
+					
+					</br>
+
+					<div class = "flex-container">
+						<div class = "flex-panel"></div>
+						<p class = "flex-panel login-signup-labels">Email:</p>
+						<input id="edit-email" class = "flex-panel2 login-signup-textfields" type="text" placeholder = "Email" name="email" value=""></input>
+						
+						<input type="hidden" value="<?php echo _token(); ?>" name="token">
+						<input type="hidden" name="hidden_id" value="<?php if(isset($id)) echo $id; ?>">
+
+						<div class = "flex-panel"></div>
+					</div>	
+					
+					</br>
+
+					<input class="button pink-button-subtle" type="submit" name="updateEmailBtn" value="UPDATE"></input>
+				
+				</form>
+
+				<br><p style="text-align:center;"><a href="../profile.php">Back</a> </p>
+
+			<?php endif ?>
         </div>
 	</div>
 
-
-	<?php include_once 'partials/footers.php' ?>
-
-
 </body>
+
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>$('#edit-email').focus();</script>
 
 </html>

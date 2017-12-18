@@ -5,4 +5,5 @@ Version 1.2.13
 - Added a changelog
 - changed the design of the profile.php page (header and footer didn't work properly, because old classes were used and the header was called twice)
 - changed the design of edit_email.php
-- 
+- Cleaned up the files; Menage (June)
+- Work on profile_idcard.php; generation of student id + writing info on the image (June)
