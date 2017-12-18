@@ -10,6 +10,8 @@ Version 1.2.13
 - enlevé le overlay de Karolina dans le game engine
 - Fixed le "relationship_enabled"
 - Arrangé le blur des boutons dans game.php (le blur était causé par un "transform: translate" dans le CSS -> apparemment, faire un translate sur du texte résulte en un bug de blur sur Google Chrome.) *(Source: https://stackoverflow.com/questions/27385126/chrome-font-appears-blurry)*
+- Cleaned up the files; Menage (June)
+- Work on profile_idcard.php; generation of student id + writing info on the image (June)
 
 Version 1.2.12
 

@@ -93,3 +93,7 @@ NODE.JS: `https://nodejs.org/en/`
     border: 1px solid black;        
 }
 </style>
+
+#GIT original configuration:
+Target: += `--cd-to-home`
+Start in : `%HOMEDRIVE%%HOMEPATH%`
