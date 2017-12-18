@@ -1,8 +1,8 @@
 <?php 
-
-include_once 'resources/database.php';
-include_once 'resources/utilities.php';
-include_once 'resources/session.php';
+include_once '../resources/session.php';
+include_once '../resources/database.php';
+include_once '../resources/utilities.php';
+include_once '../resources/session.php';
 
 
 if((isset($_SESSION['id']) || isset($_GET['user_identity'])) && !isset($_POST['deleteBtn']))
@@ -115,7 +115,7 @@ else if(isset($_POST['deleteBtn']))
 	
 	<title>Sweet Elite: Flirt and Uncover the Secrets of Arlington Academy!<</title>
 
-	<link href="css/se-stylesheet.css" rel="stylesheet" type="text/css">
+	<link href="../css/se-stylesheet.css" rel="stylesheet" type="text/css">
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 	<link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet" type='text/css'>
 
@@ -131,8 +131,8 @@ else if(isset($_POST['deleteBtn']))
 
     </header>
 
-	<?php include_once 'partials/headers.php' ?>
-	<?php include_once 'resources/utilities.php' ?>
+	<?php include_once '../partials/headers.php' ?>
+	<?php include_once '../resources/utilities.php' ?>
 
 	<div class = "main_content">
         <div class="card-nomargin add_padding">
@@ -160,7 +160,7 @@ else if(isset($_POST['deleteBtn']))
         </div>
 	</div>
 
-	<?php include_once 'partials/footers.php' ?>
+	<?php include_once '../partials/footers.php' ?>
 
 </body>
 

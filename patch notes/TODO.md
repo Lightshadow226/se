@@ -35,6 +35,7 @@ Faire fonctionner le bouton "resume playing"
 - Organiser les fichiers PHP
 - AJOUTER blackscreen.jpg
 - z-index du scholar est trop petit (la barre de texte est au-dessus)
+- Download fonts in proper file format for it to be able to work with profile_idcard.php and then I'll be able to complete the student ID card generation (JUNE)
 
 `TODO: LOW Importance`
 
