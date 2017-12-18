@@ -133,8 +133,6 @@
 				</div> -->
 			</div>
 
-			
-
 			<!-- MEET THE CHARACTERS -->
 			<div class="card">
 				<div class="card-header">

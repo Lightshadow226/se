@@ -8,9 +8,8 @@ Created on August 19, 2017
 
 */
 
-var lines_container = document.getElementById("Container");
-
-lines_container.style.backgroundColor = "white";
+var currentEpisode_lines_container = document.getElementById("currentEpisode");
+var finishedChapters_lines_container = document.getElementById("finishedChapters");
 
 const character_portraits_path = "images/general/chapter_images/";
 
@@ -51,79 +50,121 @@ var chapter_description =
     "Description",
 ];
 
-function create_interface()
+$(function create_interface()
 {
-    refresh_lines(0, 5);//on affiche tous les chapitres
-}
+    refresh_lines(0, 2);//on affiche tous les chapitres
+})
 
 function refresh_lines(beg, end)
 {
-    lines_container.innerHTML = "";
+    // currentEpisode_lines_container.innerHTML = "";
+    // finishedChapters_lines_container.innerHTML = "";
 
-    for(var i = beg; i < end; i++)
+    // lines_container.innerHTML += '<div class="add_padding card-nomargin" style = "margin-bottom: 20px;"><h3 style="color:#682666; text-align:center;">Current Episode</h3></div>'; //<hr style="border-color:black; border-style: inset; border-width: 1.3px; margin-bottom: 10px; ">
+    create_line(user.last_chapter_played, true);
+
+    // lines_container.innerHTML += '<div class="add_padding card-nomargin" style = "margin-bottom: 20px;"><h3 style="color:#682666; text-align:center;">Finished Chapters</h3><div>';
+
+    for(var i = beg; i <= end; i++)
     {
-        create_line(i);
+        create_line(i, false);
     }
+
+    refreshProgressBar();
 }
 
-function create_line(index)
+function create_line(index, isCurrentChapter)
 {
     var line = document.createElement('div');
 
         line.className = "line";
-        
+    
     var line_left_content = document.createElement('div');
-
+    
         line_left_content.className = "line_left_content";
-
-    var char_img = document.createElement('img');
-
-        char_img.src = character_portraits_path + chapter_images[index] + ".png";
-        char_img.className = "character_img";
-
+    
+        var char_img = document.createElement('img');
+        
+            char_img.src = character_portraits_path + chapter_images[index] + ".png";
+            char_img.className = "character_img";
+    
     var line_middle_content = document.createElement('div');
-
+    
         line_middle_content.className = "line_middle_content";
-
+    
         var chara_desc = document.createElement('div');
-
-            var desc_header = '<h4 class="center" style="text-transform: uppercase; color: #EE4C5E; font-weight: 300;">' + chapters[index] + '</h4>';
-            
-            var desc_description = '<p class="chara_list chara_long_desc"><b>Teaser: </b>' + chapter_description[index] + '</p>';
-
-        chara_desc.innerHTML = desc_header + desc_description;
+        
+        var desc_header = '<h4 class="center" style="text-transform: uppercase; color: #EE4C5E; font-weight: 300;">' + chapters[index] + '</h4>';
+        
+        var desc_description = '<p class="chara_list chara_long_desc""><b>Teaser: </b>' + chapter_description[index] + '</p>';
+        
+            chara_desc.innerHTML = desc_header + desc_description;
 
     var play_episode_button = document.createElement('div');
-
+    
         play_episode_button.id = index;
-        play_episode_button.className = "button play_episode_button x-right-y-bottom-v2";
-        play_episode_button.innerHTML = "Play the episode!";
+        play_episode_button.className = "button play_episode_button";
+        
+    var objectiveContainer = document.createElement('div');
+    
+    if(isCurrentChapter)//if we're doing the unique "current chapter" div
+    {
+        objectiveContainer.id = "objectiveContainer";
+        play_episode_button.id = user.last_chapter_played;
+        line.className += " line-big";
+        char_img.style.maxHeight = "350px";
+        play_episode_button.innerHTML = "Continue Playing";
+        //play_episode_button.className += " play_episode_button-big";
+        chara_desc.innerHTML += "</br> <b>Progress: </b>"
+
 
         play_episode_button.addEventListener( "click",
-                                        function (e)
-                                        {
-                                            window.open(get_button_ID(play_episode_button.id), "_self");
-                                        },
-                                        true);
+                            function (e)
+                            {
+                                window.open(get_button_ID(play_episode_button.id), "_self");
+                            },
+                            true);
 
-    var line_right_content = document.createElement('div');
+        currentEpisode_lines_container.appendChild(line);
+    }
+    else
+    {
+        line.className += " line-small";
+        line_left_content.className += " line-small";
+        char_img.className += " line-small";
+        play_episode_button.innerHTML = "Play the episode!";
+        //play_episode_button.className += " play_episode_button-small";
+        
+        if(index == 1)
+        {
+            line.style.margin = "0px;";
+        }
+        
+        play_episode_button.addEventListener( "click",
+        function (e)
+        {
+            window.open(get_button_ID(play_episode_button.id), "_self");
+        },
+        true);
 
-        line_right_content.className = "line_right_content";
+        finishedChapters_lines_container.appendChild(line);
+    }
 
-    lines_container.appendChild(line);
-        line.appendChild(line_left_content);
-            line_left_content.appendChild(char_img);
-        line.appendChild(line_middle_content);
-            line_middle_content.appendChild(chara_desc);
-            line_middle_content.appendChild(play_episode_button);
-        line.appendChild(line_right_content);
+    line.appendChild(line_left_content);
+        line_left_content.appendChild(char_img);
+    line.appendChild(line_middle_content);
+        line_middle_content.appendChild(chara_desc);
+        line_middle_content.appendChild(objectiveContainer);
+        line_middle_content.appendChild(play_episode_button);
 }
-
-create_interface();
-
+        
 function get_button_ID(index)
 {
-    if(index == 0)
+    if(index == -1)
+    {
+        get_button_ID(user.last_chapter_played);
+    }
+    else if(index == 0)
     {
         return "chapter0.php";
     }
@@ -133,3 +174,4 @@ function get_button_ID(index)
     }
 }
 // initializeInterface();
+pullVariablesFromDB();

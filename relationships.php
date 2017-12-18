@@ -22,26 +22,21 @@
     <?php include_once 'partials/headers.php' ?>
 
     <div class = "main_content">
-
-        <div class="add_padding card-nomargin">
+        
+        <div class="add_padding card-nomargin" style = "margin-bottom: 20px;">
 
             <h1>Relationships</h1>
 
             <div id="button_container_horizontal">
-                
+    
             </div>
 
-            <div id="character_lines_container">
-                
-            </div>
-            
-            <div class="card character_line">
-                <div id = "horizontal_scroll">
-                    
-                </div>
-            </div>
         </div>
-
+            
+        <div id="character_lines_container">
+            
+        </div>
+            
         <div id = "DB_handle">
 			
 		</div>

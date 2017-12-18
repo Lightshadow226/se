@@ -23,8 +23,24 @@
 
 	<div class = "main_content">
 
-		<div id = "Container" class="client">
+		<!-- <div class="add_padding card-nomargin" style = "margin-bottom: 20px;"> -->
+			<h3 style="color:#682666; text-align:center;">Current Episode</h3>
+		<!-- </div> -->
 
+		<div id = "currentEpisode">
+
+		</div>
+
+		<!-- <div class="add_padding card-nomargin" style = "margin-bottom: 20px;"> -->
+			<h3 style="color:#682666; text-align:center;">Finished Chapters</h3>
+		<!-- <div> -->
+
+		<div id = "finishedChapters">
+
+		</div>
+
+		<div id = "DB_handle">
+			
 		</div>
 
 	</div>
@@ -35,6 +51,10 @@
 
 </body>
 
+	<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src = "js/variables.js"></script><!--this is to get all the variables that are needed from the database--><!--Eventually, this will become a PHP file, as we need to extract many values from the database-->
+	<script src = "js/library.js"></script><!--this is to get all the functions that are needed-->
+	
 	<script src = "js/gameboot.js"></script>
 
 </html>

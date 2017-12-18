@@ -254,3 +254,52 @@ function createCurrentChapterPreview()
 
     return preview;
 }
+
+function chapterSize(chapter)
+{
+    if(chapter == 0)
+    {
+        return 88;
+    }
+    else if (chapter == 1)
+    {
+        return 221;
+    }
+    else if (chapter == 2)
+    {
+        return 300;
+    }
+}
+
+function refreshProgressBar()
+{
+    var obj_cont = document.getElementById('objectiveContainer');
+
+    var logo = document.createElement('img');
+
+        logo.id= "progress_bar_logo";
+        logo.src = "images/favicon_outline.png";
+        logo.style.width = "80px";
+        logo.style.height = "80px";
+        logo.style.marginTop = "-32px";
+        logo.style.marginLeft = "-15px";
+
+    var progressBarContainer = document.createElement('div');
+        progressBarContainer.id = "progress_bar_container";
+
+        var progressBar = document.createElement('div');
+            progressBar.id = "progress_bar";
+            progressBar.style.color = "white";
+
+    obj_cont.appendChild(progressBarContainer);
+        progressBarContainer.appendChild(logo);
+        progressBarContainer.appendChild(progressBar);
+    
+    var progress = user.storyLocation/chapterSize(user.last_chapter_played)*100;
+    
+    // progressBar.innerHTML = "";
+    progressBar.innerHTML = Math.round(progress) + "% <br>";
+    // progressBar.innerHTML = /*"Chapter progress: " +*/ Math.round(progress * 10) / 10 + "% <br>";//pour avoir 1 décimale
+
+    progressBar.style.width = progress + "%";
+}

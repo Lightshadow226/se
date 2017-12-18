@@ -72,7 +72,7 @@
 			WHAT THE FUCKING FUCK THERE'S A SHORTCUT TO CENTER SOMETHING WHAT THE SHIT
 			http://stackoverflow.com/questions/114543/how-to-horizontally-center-a-div-in-another-div
 		*/
-		
+
 		/* Firefox */
 		display:-moz-box;
 		-moz-box-pack:center;
@@ -95,7 +95,7 @@
 		text-align: center;
 	}
 
-	h2 
+	h2
 	{
 		color:#682666;
 		text-align: left;
@@ -171,10 +171,10 @@
 		position: fixed;
 		text-align:center;
 		padding: 5px 0 5px 0;
-		
+
 		background-color:#682566;
 		color:#ffffff;
-		
+
 		font-size:0.7em;
 		letter-spacing:0.15em;
 		z-index: 4;
@@ -208,7 +208,7 @@
 		color: white;
 		letter-spacing:0.15em;
 	}
-	
+
 	.menu_item/*les items dans le menu*/
 	{
 		background-color:#EE4C5E;
@@ -258,13 +258,13 @@
 		position: absolute;
 		display: flex;
 		flex-direction: column;
-		
+
 		top: 50%;
 		left: 50%;
 
 		transform: translate3d(-50%, -50%, 0);/*-60% because of the header that takes space*/
 	}
-	
+
 	#signup_button
 	{
 		text-transform: uppercase;
@@ -351,7 +351,7 @@
 	{
 		height: 100%;
 		flex: 8;
-		
+
 		display: flex;
 		flex-direction: column;
 	}
@@ -369,7 +369,7 @@
 		display: flex;
 
 		padding-bottom: 10px;
-		
+
 		left: 50%;
 
 		transform: translateX(-50%);/*-60% because of the header that takes space*/
@@ -378,7 +378,7 @@
 	#button_container_horizontal/*for illustrations, Achievements & Relationship pages*/
 	{
 		display: flex;
-		
+
 		margin-bottom: 20px;
 	}
 
@@ -533,22 +533,22 @@
 	{
 		background-color: white;
 		color: #EE4C5E;
-		
+
 		/* letter-spacing: 0.1em; */
 		text-align: left;
 		font-size: 1.5em;
 		font-weight: 300;
 
 		cursor: pointer;
-		
+
 		width: 100%;
 		padding: 10px;
 		border: 2px solid #EE4C5E;
 		margin-top: -2px;
-		
+
 		outline: none;
 		transition: 0.1s ease-out;
-		
+
 		position: relative;/*on a besoin de ça pour l z-index*/
 		z-index: 1;
 	}
@@ -563,7 +563,7 @@
 		border: 2px solid #682666;/*or #EE4C5E???*/
 		font-weight: 400;
 		transition: 0.1s ease-out;
-		
+
 		position: relative;/*on a besoin de ça pour l z-index*/
 		z-index: 100;
 	}
@@ -609,12 +609,12 @@
 	div.inside_accordion
 	{
 		background-color: white;
-		
+
 		width: 100%;
-		display: none; 
+		display: none;
 		max-height: 0;
-		list-style: none; 
-		
+		list-style: none;
+
 		overflow: hidden;
 		transition: max-height 0.5s ease-out;
 	}
@@ -646,7 +646,7 @@
 		background-color: #efefef;
 		width: calc(100% - 2em - 4px);
 		padding: 1em;
-		
+
 		border: 2px solid #682666;
 		margin-bottom: 1em;
 	}
@@ -767,12 +767,23 @@
 	{
 		position: relative;
 		display: flex;
-		/* background-color: white; */
+		background-color: white;
 		box-shadow: 0 0 5px #83827d;
 		margin-top: 5px;
 		margin-bottom: 5px;
-		padding: 20px;
-		/* max-height: 350px; */
+		padding: 0px;
+		max-height: 350px;
+	}
+
+	.line-big
+	{
+		margin-top: 0px;
+		margin-bottom: 20px;
+	}
+
+	.line-small
+	{
+		max-height: 200px;
 	}
 
 	.line_left_content
@@ -785,24 +796,24 @@
 
 	.line_middle_content
 	{
-		height: inherit;
 		flex: auto;
 		position: relative; /*Nécessaire pour que le bouton soit bien placé*/
 		flex: 100;
 		padding: 20px;
-		max-height: 350px;
+		height: inherit;
+		/* max-height: 350px; */
 	}
 
 	.line_right_content
 	{
-		flex: auto;
+		/* flex: auto; */
 		max-height: 350px;
 	}
 
 	.school_files_button
 	{
-		position: absolute; 
-		bottom: 0;
+		position: absolute;
+		bottom: 10px;
 		width: auto;
 		height: auto;
 		/* min-height: 20px; */
@@ -815,25 +826,36 @@
 
 	.play_episode_button
 	{
-		position: absolute; 
-		/* width: auto;
-		height: auto; */
-		/* min-height: 20px; */
-
+		position: absolute;
 		background-color: #EE4C5E;
+		
+		bottom: 10px;
+		right: 10px;
+		/* right: 0px; */
 		font-size: 1em;
 		align-content: center;
 		color: white;
+		-webkit-font-smoothing: antialiased;
+		-webkit-filter: blur(0.000001px);
 	}
 
-	.x-left-y-bottom
+	/* cette section a été remplacée par le "bottom: 10px;" et "right: 10px;" directement dans la classe du bouton, et le bouton a été append au middle_content
+	.play_episode_button-small
 	{
-		bottom: 0px;
+		left: 90%;
+		transform: translate3d(calc(-100% - 10px), calc(-100% - 15px), 0px);
 	}
+
+	.play_episode_button-big
+	{
+		left: 90%;
+		transform: translate3d(calc(-100% - 10px), calc(-100% - 30px), 0px);
+	}
+	*/
 
 	.character_img
 	{
-		max-height: 350px;
+		/* max-height: 350px; */
 		width: auto;
 	}
 
@@ -890,7 +912,7 @@
 	{
 		height: 100%;
 		width: auto;
-		overflow: auto; 
+		overflow: auto;
 	}
 
 	#illustrations_container
@@ -931,7 +953,7 @@
 	{
 		flex: 0;
 	}
-	
+
 /**********PROFILE.PHP**********/
 
 	.scholar-id-card
@@ -959,7 +981,7 @@
 	.center-screen
 	{
 		position: absolute;
-		
+
 		top: 50%;
 		left: 50%;
 
@@ -1026,7 +1048,7 @@
 
 	.card-fusionned
 	{
-		
+
 	}
 
 /***************HIGHLIGHTS***************/
@@ -1056,7 +1078,7 @@
 	{
 		flex:1;
 	}
-	
+
 	.flex-panel2/*must have a flex-container parent*/
 	{
 		flex:2;
@@ -1126,7 +1148,7 @@
 		color: white;
 		letter-spacing:0.05em;
 		width: 100%;
-		margin-left: 10px; 
+		margin-left: 10px;
 		margin-right: 10px;
 	}
 
@@ -1142,7 +1164,7 @@
 	}
 
 /***************DATABASE***************/
-	
+
 	#DB_handle
 	{
 		display: none;

@@ -3,8 +3,6 @@
 include_once 'partials/parsePasswordReset.php';
 ?>
 
-
-<!DOCTYPE html>
 <html>
 <head>
 

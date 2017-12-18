@@ -56,10 +56,13 @@ $(function initializeInterface()//CREATES the entire interface once the document
             testContainer.appendChild(testContainer1);
             testContainer.appendChild(testContainer2);
 
+    user.last_chapter_played = current_Chapter;
+    pushVariablesToDB();//make sure the database reflects the fact that the current chapter is the one currently being played
+
     //initializeVariables();//we initialize the variables only one in the game
     refreshInterface();//Start the first instance of the game
     refreshTestContainer();//Refresh the test container for the first time
-    refreshScholar();
+    //refreshScholar();
 })
 
 function refreshInterface()//REFRESHES the interface
@@ -97,7 +100,9 @@ function refreshInterface()//REFRESHES the interface
 
             var background_img = document.createElement('img');
 
+                background_img.id = "background_img";
                 background_img.className = "background_img";
+                loadAllImages(background_img);
                 background_img.src = story[5][user.storyLocation];//l'image de background du jeu
                 
             gameContainer.appendChild(background);//Appends the background
@@ -978,6 +983,7 @@ function refreshInterface()//REFRESHES the interface
             true);
     }
 
+    user.last_chapter_played = current_Chapter;
     pushVariablesToDB();
 }
 
@@ -1057,38 +1063,6 @@ function refreshInterface()//REFRESHES the interface
         container2.innerHTML = text;
     }
 // -----END DEBUGGING TOOLS-----
-
-function refreshProgressBar()
-{
-    var obj_cont = document.getElementById('objectiveContainer');
-
-    var logo = document.createElement('img');
-
-        logo.id= "progress_bar_logo";
-        logo.src = "images/favicon_outline.png";
-        logo.style.width = "80px";
-        logo.style.height = "80px";
-        logo.style.marginTop = "-32px";
-        logo.style.marginLeft = "-15px";
-
-    var progressBarContainer = document.createElement('div');
-        progressBarContainer.id = "progress_bar_container";
-
-        var progressBar = document.createElement('div');
-            progressBar.id = "progress_bar";
-
-    obj_cont.appendChild(progressBarContainer);
-        progressBarContainer.appendChild(logo);
-        progressBarContainer.appendChild(progressBar);
-    
-    var progress = user.storyLocation/story[0].length*100;
-    
-    // progressBar.innerHTML = "";
-    progressBar.innerHTML = Math.round(progress) + "% <br>";
-    // progressBar.innerHTML = /*"Chapter progress: " +*/ Math.round(progress * 10) / 10 + "% <br>";//pour avoir 1 décimale
-
-    progressBar.style.width = progress + "%";
-}
 
 /* à améliorer en fonction de l'histoire parcourue (seulement s'il est possible de faire 1-2-3-4-5-12-6-7-30-15-16-17) */
 function findLatestObjective(obj_cont)//returns the last time there was a new objective
@@ -1485,6 +1459,26 @@ function refreshScholar()
 
     document.getElementById("body").appendChild(scholar_container);
         scholar_container.appendChild(scholar_img);
+}
+
+function loadAllImages(loader)
+{
+    // loader.style.visibility = "hidden";
+    
+    loader.src = locations.blackScreen;
+    loader.src = locations.cafeteria;
+    loader.src = locations.cafeteriaLounge;
+    loader.src = locations.cafeteriaOutside;
+    loader.src = locations.class1;
+    loader.src = locations.class2;
+    loader.src = locations.dorm;
+    loader.src = locations.dormBathroom;
+    loader.src = locations.dormHall;
+    loader.src = locations.entrance;
+    loader.src = locations.garden;
+    loader.src = locations.gym;
+    loader.src = locations.hall1;
+    loader.src = locations.hall2;
 }
 
 pullVariablesFromDB();

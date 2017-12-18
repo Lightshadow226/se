@@ -183,7 +183,7 @@ function create_line(index)
 {
     var line = document.createElement('div');
 
-        line.className = "line";
+        line.className = "line line-big";
         
     var line_left_content = document.createElement('div');
 
@@ -193,6 +193,7 @@ function create_line(index)
 
             char_img.src = character_portraits_path + characters[index] + ".png";
             char_img.className = "character_img";
+            char_img.style.maxHeight = "350px";
 
     var line_middle_content = document.createElement('div');
 

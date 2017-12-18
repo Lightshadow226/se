@@ -11,6 +11,8 @@ August 19, 2017
 */
 var story = new Array();
 
+const current_Chapter = 0;
+
 const c = 17;
 /* "c" values:
     0 -> story text (ce qui apparait dans le text container)

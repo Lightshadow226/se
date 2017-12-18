@@ -11,9 +11,6 @@ All rights reserved.
 July 23, 2017
 */
 
-//General Variables
-var currentChapter = 0;
-
 //Chapter locations
 var chapter0Location = 24;
 var chapter1Location = 130;
@@ -26,11 +23,11 @@ const se_pink = "#ef4c5e";
 
 //variable temporaire (ne pas inclure dans la base de données)
 var choice = "null";//Un choix pour les liens. Ex.: pour link = -3, "choice" va contenir le nom du département choisi
-                    //cette variable va contenir tous les choix particuliers, c'est une variable temporaire qui sert à passer de l'information en paramètres
+                    //cette variable va contenir tous les choix particuliers, c'est une variable globale temporaire qui sert à passer de l'information en paramètres
                     
 var CharaX_username = "Serena";
 var CharaY_username = "Cecile";
-                    
+
 const backgrounds_path = "images/game_images/backgrounds/";
 
 var locations = 
@@ -408,6 +405,7 @@ function pullVariablesFromDB()
         user.storyLocation = user.storyLocation;
 
         user.last_chapter_played = document.getElementById("db_handle_last_chapter_played").innerHTML;
+        // alert(user.last_chapter_played);
 
         //*********************************************
         //AFFINITY table
@@ -445,10 +443,10 @@ function pullVariablesFromDB()
         
         // teacher_chapter_2.affinity = document.getElementById("db_handle_a15").innerHTML;
         
-        if(relationship_enabled)//if we're on the page RELATIONSHIP
+        /*if(relationship_enabled)//if we're on the page RELATIONSHIP
         {
             // create_interface();
-        }
+        }*/
     });
 }
 
@@ -466,7 +464,7 @@ function pushVariablesToDB()
     var db_handle_last_chapter_played = document.createElement('input');
         db_handle_last_chapter_played.type = "text";
         db_handle_last_chapter_played.id = "db_handle_last_chapter_played";
-        db_handle_last_chapter_played.value = 10;
+        db_handle_last_chapter_played.value = user.last_chapter_played;
 
     db_handler.appendChild(db_handle_story_location);
     db_handler.appendChild(db_handle_last_chapter_played);

@@ -15,8 +15,6 @@ if((isset($_SESSION['id']) || isset($_GET['user_identity'])) && !isset($_POST['u
     {
         $id = $_SESSION['id'];
     }
-    
-    
 }
 elseif(isset($_POST['updateEmailBtn']))
 {
@@ -55,28 +53,24 @@ elseif(isset($_POST['updateEmailBtn']))
 	    }
 	    elseif(empty($form_errors))
 	    {
-			
-				try
-				{
-					$sqlUpdate = "UPDATE userinfo SET email = :email WHERE id = :id";
-					$statement = $db->prepare($sqlUpdate);
-					$statement->execute(array(':email' => $email, ':id' => $id));
+			try
+			{
+				$sqlUpdate = "UPDATE userinfo SET email = :email WHERE id = :id";
+				$statement = $db->prepare($sqlUpdate);
+				$statement->execute(array(':email' => $email, ':id' => $id));
+
 	
-		
-			           	 if($statement->rowCount() == 1)
-			           	 {
-			               	 	$result = "Profile Updated Successfully!";
-			           	 }else
-			           	 {
-			                	$result = "You have not made any changes";
-			           	 }
-		
-		
-		       		}catch (PDOException $ex)
-		        	{
-		           		 $result = flashMessage("An error occured:" .$ex->getMessage());
-		        	}
-	       	     
+						if($statement->rowCount() == 1)
+						{
+							$result = "Profile Updated Successfully!";
+						}else
+						{
+							$result = "You have not made any changes";
+						}
+				}catch (PDOException $ex)
+				{
+						$result = flashMessage("An error occured:" .$ex->getMessage());
+				}
 	     }
 	     else
 	     {
@@ -91,8 +85,6 @@ elseif(isset($_POST['updateEmailBtn']))
 	     }
 	  
 }	  
-
-
 ?>
 
 <html>
@@ -115,7 +107,6 @@ elseif(isset($_POST['updateEmailBtn']))
 
 <body class="center-screen">
 
-
 	<a href="index.php"><img id="logo" class="" src="images/general/se-logo.png"></a>
 	
 	<div class = "">
@@ -125,7 +116,6 @@ elseif(isset($_POST['updateEmailBtn']))
 			
 			<?php if(isset($result)) echo $result; ?>
 			<?php if(!empty($form_errors)) echo show_errors($form_errors); ?>
-
 
 			<?php if(!isset($_SESSION['username'])):?>
 				
