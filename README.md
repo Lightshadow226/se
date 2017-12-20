@@ -16,5 +16,12 @@ With every commit, you shall make a patch note with the version number as a name
 
 3. Update the new changes with your changes
 
+Format for TODOs (use TAB to insert the blank space):
+
+- *Category*        [Page]              TODO
+
+Ex.:
+- *CODE*            [game.php]          identifier le chapitre le plus récent
+
 .md extension (MarkDown)
 `https://en.wikipedia.org/wiki/Markdown`

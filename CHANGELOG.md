@@ -10,8 +10,13 @@ Version 1.2.13
 - enlevé le overlay de Karolina dans le game engine
 - Fixed le "relationship_enabled"
 - Arrangé le blur des boutons dans game.php (le blur était causé par un "transform: translate" dans le CSS -> apparemment, faire un translate sur du texte résulte en un bug de blur sur Google Chrome.) *(Source: https://stackoverflow.com/questions/27385126/chrome-font-appears-blurry)*
+- Arrangé la page relationship.php -> design (le background blanc)
+- Fait  fonctionner le bouton "resume playing"
 - Cleaned up the files; Menage (June)
 - Work on profile_idcard.php; generation of student id + writing info on the image (June)
+- identifier le chapitre le plus récent
+- le mettre en emphase dans la page "game load" -> faire un nouveau design pour le chapitre en emphase (différentes couleurs/size/font/images)
+- `Changed the TODO list, and going forward, we will cut and paste the TODOs in here once we're done with them`
 
 Version 1.2.12
 

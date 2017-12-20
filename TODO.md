@@ -2,91 +2,60 @@
 
 `TODO: Today`
 
-Arranger la page relationship.php -> design (le background blanc)
-Faire fonctionner le bouton "resume playing"
 
 
 `TODO: in Order`
-
-1. identifier le chapitre le plus récent
-2. le mettre en emphase dans la page "game load" -> faire un nouveau design pour le chapitre en emphase (différentes couleurs/size/font/images)
-3. s'assurer que toutes les variables s'enregistrent dans la DB d'une shot (une fonction qui est appelée à chaque fois qu'on clicke quelque part sur la page -> chaque fois qu'on a à l'enregistrer)
-4. account for movements -> movement meter/action points -> faire un système pour tout
-5. terminer chapitre 2 (le ppt et le code)
+- *DATABASE*            [variables.js]                                          enregistrer toutes les variables dans la DB d'une shot (à chaque fois qu'on click quelque part sur la page)
+- *DATABASE*            [variables.js, gameengine.js]                           account for movements -> movement meter/action points -> faire un système pour tout
+- *DATABASE*            [variables.js, getvariables.php, pushvariables.php]     AJOUTER "user.physicalLocation" dans le get et le push de DB_handle
+- *PPT*                 [Chapter2Slides Part2.ppt]                              slidesterminer chapitre 2 (le ppt et le code)]
 
 `TODO: HIGH Importance`
-
-- la chapitre 1 est terminé jusqu'à la slide 129, donc il va falloir valider le reste + rajouter les émotions
-- il va falloir continuer avec les birthday, préférences, etc.
-- il reste à ajouter les ghost slides pour la slide 44 (221-224)
-- terminer toutes les manipulations PHP/JS
-- terminer la page Illustrations & Achievements
-- AJOUTER "user.physicalLocation" dans le get et le push de DB_handle
-- s'assurer qu'il n'y ait plus de variables utilisés sans la base de données
-- character randomizer on index.php
-- mettre le chapitre courant
+- *CHAPTER INPUT*       [chapter1.js]                                           la chapitre 1 est terminé jusqu'à la slide 129, donc il va falloir valider le reste + rajouter les émotions
+- *CHAPTER INPUT*       [chapter1.js]                                           il reste à ajouter les ghost slides pour la slide 44 (221-224)
+- *CHAPTER INPUT*       [variables.js, getvariables.php, pushvariables.php]     terminer toutes les manipulations PHP/JS
+- *CODE - NEW FORM*     [gameengine.js]                                         il va falloir continuer avec les birthday, préférences, etc.
+- *CODE - PAGE*         [illustrations_achievements.php]                        terminer la page Illustrations & Achievements
+- *CODE - PLUGIN*       [randomizer.php]                                        character randomizer on index.php
+- *CODE - DESIGN*       [game.php]                                              mettre le chapitre courant
+- *DEBUG*               [variables.js, getvariables.php, pushvariables.php]     s'assurer qu'il n'y ait plus de variables utilisés sans la base de données
 
 `TODO: MEDIUM Importance`
-
-- transférer les variables de Relationships.js à variables.js
-- les variables de Relationship.js doivent être intgrées dans variables.js
-- valider que toutes les valeurs sont affectées à la bonne slide (array du chapter 0 & 1)
-- Il va falloir réviser le CSS dans "se-stylesheet" pour les balises: GENERAL, INDEX.PHP, FAQ.PHP, FEATURES.HTML. -> Il faut que les page-specific attributes ne soient jamais utilisés dans une autre page
-- Organiser les fichiers PHP
-- AJOUTER blackscreen.jpg
-- z-index du scholar est trop petit (la barre de texte est au-dessus)
-- Download fonts in proper file format for it to be able to work with profile_idcard.php and then I'll be able to complete the student ID card generation (JUNE)
+- *CODE - RESTRUCT*     [relationships.js, variables.js]                        transférer les variables de Relationships.js à variables.js
+- *CODE - RESTRUCT*     [.php]                                                  Organiser les fichiers PHP
+- *FILES - ADD*         [.jpg]                                                  AJOUTER blackscreen.jpg
+- *FILES - ADD*         [profile_idcard.php, profile.php]                       Download fonts in proper file format to complete the student ID card generation (JUNE)
+- *DEBUG*               [chapter0.js, chapter1.js]                              valider que toutes les valeurs sont affectées à la bonne slide (array du chapter 0 & 1)
+- *DEBUG*               [se-stylesheet.css]                                     réviser le CSS dans "se-stylesheet" pour les balises: GENERAL, INDEX.PHP, FAQ.PHP, FEATURES.HTML.
+- *DEBUG*               [se-stylesheet.css]                                     Il faut que les page-specific attributes ne soient jamais utilisés dans une autre page
+- *DEBUG*               [???]                                                   z-index du scholar est trop petit (la barre de texte est au-dessus)
 
 `TODO: LOW Importance`
-
-- Améliorer les erreurs pour login.php, signup.php, resetpassword.php
-- downloader les fonts "great vibes" & "roboto" de Google API
-- optimiser les fonctions qui reviennent plus qu'une fois, et les mettre dans utilities.php (comme dans editemail.php et edit_username.php)
-- dessiner des nouveaux boutons pour friendship/romance
+- *DEBUG*               [login.php, signup.php, resetpassword.php]              Améliorer les messages d'erreurs pour login.php, signup.php, resetpassword.php
+- *DEBUG*               [edit-email.php, edit-username.php]                     optimiser les fonctions qui reviennent plus qu'une fois, et les mettre dans utilities.php
+- *FILES - ADD*         [fonts]                                                 downloader les fonts "great vibes" & "roboto" de Google API
+- *FILES - ADD*         [new images]                                            dessiner des nouveaux boutons pour friendship/romance
 
 `TODO: UNCATEGORIZED`
-
 - 
 
 `TODO: ONGOING`
-
-- we still need to add characters over time in "classmates" and "others"
-- think of possible achievements
-
+- *CHARACTERS - INPUT*  [relationships.js, variables.js]                        we still need to add characters over time in "classmates" and "others"
+- *CHARACTERS - INPUT*  [variables.js]                                          think of possible achievements
 
 `KNOWN BUGS`
+- *BUGS*                [???]                                                   images that don't size perfectly (chapter 0 form -> link[6]=-3)
+- *BUGS*                [gameengine.js, chapterXX.js]                           Sprites that don't resize properly in the game
 
-- images that don't size perfectly (chapter 0 form -> link[6]=-3)
-- Sprites that don't resize properly in the game
-
-
-***Database à implémenter***
-
-1. quelle slide que tu es rendu (1 variables par épisode = 50 variables au total)
-2. is visited? (200 + variables par chapitre) - FIRST PLAYTHROUGHf
-3. is visited? (200 + variables par chapitre) - BONUS -> for the progress bar
+`Database à implémenter`
+- *CREATE DATABASE*     [SQL]                                                   quelle slide que tu es rendu (1 variables par épisode = 50 variables au total)
+- *CREATE DATABASE*     [SQL]                                                   is visited? (200 + variables par chapitre) - FIRST PLAYTHROUGH
+- *CREATE DATABASE*     [SQL]                                                   is visited? (200 + variables par chapitre) - BONUS -> for the progress bar
 
 
-`Done`
+#Tools
 
-- Fix le "relationship_enabled"
-- put the Version notes in the new Changelog.txt file
-- la classe .line overflow en hauteur (ça fonctionne dans game.php, mais pas dans relationships.php)
-
-
-***Useful links for GIT***
-
-`https://stackoverflow.com/questions/26228848/how-do-i-exit-my-git-commit-message-im-not-in-the-vim-i-used-the-commit-m`
-`https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/`
-
-
-***Useful install links***
-WAMP: `https://sourceforge.net/projects/wampserver/files/latest/download`
-GIT: `https://git-scm.com/download/win`
-CLOC: `https://github.com/AlDanial/cloc`
-JQUERY: 
-NODE.JS: `https://nodejs.org/en/`
-
+`Developper Tools - Fast borders`
 <style>
 *
 {
@@ -94,6 +63,21 @@ NODE.JS: `https://nodejs.org/en/`
 }
 </style>
 
-#GIT original configuration:
-Target: += `--cd-to-home`
-Start in : `%HOMEDRIVE%%HOMEPATH%`
+`Useful links for GIT`
+*Stuck in the git commit window:* https://stackoverflow.com/questions/26228848/how-do-i-exit-my-git-commit-message-im-not-in-the-vim-i-used-the-commit-m
+*Initializing GIT:* https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/
+
+`GIT original configuration:`
+Target: += *--cd-to-home*
+Start in : *%HOMEDRIVE%%HOMEPATH%*
+
+`SQL tools`
+*Exporting and importing SQL databases between computers:* https://www.youtube.com/watch?v=ptaRO_824MU
+*Changing Root Password:* https://stackoverflow.com/questions/12224431/create-a-root-password-for-phpmyadmin
+
+`Useful install links`
+*WAMP:* https://sourceforge.net/projects/wampserver/files/latest/download
+*GIT:* https://git-scm.com/download/win
+*CLOC:* https://github.com/AlDanial/cloc
+*JQUERY:* 
+*NODE.JS:* https://nodejs.org/en/
