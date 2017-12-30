@@ -1,5 +1,14 @@
 #CHANGELOG
 
+Version 1.3.0 - WORKING IMAGE GENERATOR
+
+- *New page*            [dorm.php]                  Commencé le dorm page
+- *CODE - RESTRUCT*     [many, many pages]          all the footers now use the 'partials/footers.php' file
+- *CODE*                [randomizer.php]            fixed the character randomizer
+- *CODE - PLUGIN*       [index.php]                 character randomizer on index.php (Solution found at: https://stackoverflow.com/questions/900207/return-a-php-page-as-an-image)
+
+- Notes: the randomizer works perfectly, but we should make sure it fits all screens (width is set at 300px)
+
 Version 1.2.13
 
 - Added a changelog

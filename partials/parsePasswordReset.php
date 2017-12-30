@@ -135,6 +135,7 @@ else if(isset($_POST['passwordRecoveryBtn']))//Password Recovery
 				</footer>
 				
 				</html>';
+				//TODO: WTF is this? why is there a footer with custom CSS?
 				
 				$mail->addAddress($email, $username);
 				$mail->Subject = "Password Recovery Link";

@@ -9,6 +9,7 @@
 - *DATABASE*            [variables.js, gameengine.js]                           account for movements -> movement meter/action points -> faire un système pour tout
 - *DATABASE*            [variables.js, getvariables.php, pushvariables.php]     AJOUTER "user.physicalLocation" dans le get et le push de DB_handle
 - *PPT*                 [Chapter2Slides Part2.ppt]                              slidesterminer chapitre 2 (le ppt et le code)]
+- *CODE - DESIGN*       [dorm.php]                                              mettre des higlights sur le wardrobe, le laptop, le sac, et les livres
 
 `TODO: HIGH Importance`
 - *CHAPTER INPUT*       [chapter1.js]                                           la chapitre 1 est terminé jusqu'à la slide 129, donc il va falloir valider le reste + rajouter les émotions
@@ -16,7 +17,6 @@
 - *CHAPTER INPUT*       [variables.js, getvariables.php, pushvariables.php]     terminer toutes les manipulations PHP/JS
 - *CODE - NEW FORM*     [gameengine.js]                                         il va falloir continuer avec les birthday, préférences, etc.
 - *CODE - PAGE*         [illustrations_achievements.php]                        terminer la page Illustrations & Achievements
-- *CODE - PLUGIN*       [randomizer.php]                                        character randomizer on index.php
 - *CODE - DESIGN*       [game.php]                                              mettre le chapitre courant
 - *DEBUG*               [variables.js, getvariables.php, pushvariables.php]     s'assurer qu'il n'y ait plus de variables utilisés sans la base de données
 

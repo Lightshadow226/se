@@ -127,7 +127,7 @@
 					</div>
 					
 				</div>
-<!-- 
+				<!-- 
 				<div class = "flex-panel">
 					<img class = "img-badge" src = "images/banners/welcome_to_arlignton.png"></img>
 				</div> -->
@@ -146,13 +146,34 @@
 				</div>
 			</div>
 			
-			<div class = "card-nomargin flex-container">
+			<!-- CHARACTER RANDOMIZER -->
+			<div class="card-nomargin flex-container"><!-- style="height=780px;" -->
 				<div class = "flex-panel">
 					<img class = "img-badge" style="height:100%;" src = "images/banners/customize_your_character.png"></img>
+				
 				</div>
-				<div class = "flex-panel2">
 
+				<div class = "flex-panel2 flex-container">
+					
+					<div class="flex-panel"></div>
+
+					<div id="left_wing" class="flex-panel center_div"></div>
+
+					<div id="random_character_panel" class = "flex-panel">
+						<!-- <img src="randomizer.php" width="346" height="auto"> -->
+
+						<!--ORIGINAL STYLE:
+						style="-webkit-user-select: none;background-position: 0px 0px, 10px 10px;background-size: 20px 20px;background-image:linear-gradient(45deg, #eee 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%),linear-gradient(45deg, #eee 25%, white 25%, white 75%, #eee 75%, #eee 100%);cursor: zoom-in;" -->
+						<!--solution found at: https://stackoverflow.com/questions/900207/return-a-php-page-as-an-image -->
+						<!-- ?php include_once 'randomizer.php' ?> -->
+					</div>
+
+					<div id="right_wing" class="flex-panel center_div"></div>
+					
+					<div class="flex-panel"></div>
+				
 				</div>
+				
 			</div>
 
 			<!-- START PLAYING -->
@@ -189,7 +210,8 @@
 			</div>
 
 		<?php endif ?>
-
+		
+		<!-- MERCHANDISE -->
 		<div class = "card">
 			<div class = "card-header">
 				<h3>Merchandise</h3>
@@ -278,16 +300,95 @@
 			
 		</div>
 
+		<div id = "IMG_handle">
+			
+		</div>
 	</div>
 
 <?php include_once 'partials/footers.php' ?>
 
 </body>
 
-<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src = "js/jquery_3.2.1.js"></script>
 <script src="js/charactersMeet.js"></script>
 <!-- <script src = "js/variables.js"></script> -->
 <script src = "js/library.js"></script>
+
+<script>
+	// var img = new Image().src = "randomizer.php";
+
+	//$('#random_character_panel').html('<img src="' + ?php include_once 'randomizer.php' ?> + '"/>');
+
+	var container = document.getElementById('random_character_panel');
+	
+	function initialize()
+	{
+		var left_wing = document.createElement('img');
+
+        //left_wing.style.height = "auto";
+        left_wing.src = "images/general/characters_page/chevrons/pink/leftchevron.png";
+        left_wing.className = "chevron";
+        left_wing.onmouseenter =    function f()
+                                    {
+                                        left_wing.src = "images/general/characters_page/chevrons/purple/leftchevron.png";
+                                    }
+        left_wing.onmouseleave =    function f()
+                                    {
+                                        left_wing.src = "images/general/characters_page/chevrons/pink/leftchevron.png";
+                                    }
+        left_wing.onclick =         function f()
+                                    {
+                                        randomImg();
+									}
+									
+		document.getElementById('left_wing').appendChild(left_wing);
+
+		var right_wing = document.createElement('img');
+        
+		right_wing.src = "images/general/characters_page/chevrons/pink/rightchevron.png";
+		right_wing.className = "chevron";
+		right_wing.onmouseenter = function f()
+		{
+			right_wing.src = "images/general/characters_page/chevrons/purple/rightchevron.png";
+		}
+		
+		right_wing.onmouseleave = function f()
+		{
+			right_wing.src = "images/general/characters_page/chevrons/pink/rightchevron.png";
+		}
+		right_wing.onclick = function f()
+		{
+			randomImg();
+		}
+
+		document.getElementById('right_wing').appendChild(right_wing);
+
+		randomImg();
+	}
+
+	function clearImg()
+	{
+		container.innerHTML = "";
+	}
+
+	function randomImg()
+	{
+		clearImg();
+
+		// $('#IMG_handle').load('randomizer.php');//amazingly slow
+		$.get('randomizer.php');//amazingly faster
+
+		var img = document.createElement('img');
+
+			img.src = 'randomizer.php';
+			img.width = "300";//initially 346
+
+		container.appendChild(img);
+	}
+
+	initialize();
+
+</script>
 
 </html>
 

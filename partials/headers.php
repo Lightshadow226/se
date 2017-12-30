@@ -25,7 +25,7 @@
 			</div>
 
 			<div id="pink_menu" class="">
-				<a class="menu_item" href="#">My Dorm</a>
+				<a class="menu_item" href="dorm.php">My Dorm</a>
 				<a class="menu_item" href="map.php">City Map</a>
 				<a class="menu_item" href="game.php">My Game</a>
 				<a class="menu_item" href="relationships.php">Relationships</a>

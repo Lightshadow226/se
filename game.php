@@ -45,9 +45,7 @@
 
 	</div>
 
-	<footer>
-	    Sweet Elite © 2016 - 2017. All rights reserved.
-	</footer>
+	<?php include_once 'partials/footers.php' ?>
 
 </body>
 
