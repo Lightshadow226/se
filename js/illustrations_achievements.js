@@ -52,16 +52,16 @@ var illustrations_list =
 
 var achievements_list = 
 [
-    "Lorem Ipsum",
-    "Lorem Dodo",
-    "Bigger Dodo",
-    "ASDF Ipsum",
-    "Lorem ddsads Ipsum",//5
-    "Lorem ffff Ipsum",
-    "Posdfipujn",
-    "sdfffwe",
-    "sadfsr",
-    "4353rfdvth67",//10
+    "Alignment: True Neutral - Locked",
+    "Alignment: True Neutral - Unlocked",
+    "Bookworm - Locked",
+    "Bookworm - Unocked",
+    "Newbie Attitude - Locked",//5
+    "Newbie Attitude - Unlocked",
+    "Party Animal - Locked",
+    "Party Animal - Unlocked",
+    "Testing",
+    "Testing #2",//10
 ];
 
 var line_class_name = "";
@@ -187,7 +187,7 @@ function create_achievement_line(index)
     var achievement_img = document.createElement('img');
 
         // achievement_img.src = character_portraits_path + characters[index] + ".png";
-        achievement_img.src = achievement_path + "achievement" + index + ".jpg";
+        achievement_img.src = achievement_path + "achievement" + index + ".png";
         achievement_img.className = "achievement_img";
 
     var line_middle_content = document.createElement('div');

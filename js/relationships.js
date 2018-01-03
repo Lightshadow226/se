@@ -2,6 +2,8 @@
 
 Create the Character Scroll for the Characterpage
 
+*****NE PAS METTRE LES ARRAYS DANS VARIABLES.JS*****
+
 */
 
 var relationship_enabled = true;
@@ -26,6 +28,8 @@ const character_portraits_path = "images/general/characters/characters_portraits
     9: Tyler
     */
 
+/*****NE PAS METTRE LES ARRAYS DANS VARIABLES.JS*****/
+
     //est utilisé pour le nom qui est affiché en gros, et pour repérer le path des images
     var characters = 
     [
@@ -38,7 +42,10 @@ const character_portraits_path = "images/general/characters/characters_portraits
         "raquel",
         "tadashi",
         "tegan",
-        "tyler"
+        "tyler",
+        "serena",
+        "ca",
+        "ladya"
     ];
 
     var first_name = 
@@ -52,7 +59,10 @@ const character_portraits_path = "images/general/characters/characters_portraits
         "Raquel",
         "Tadashi",
         "Tegan",
-        "Tyler"
+        "Tyler",
+        "Serena",
+        "C & A",
+        "Lady Arlington"
     ];
 
     var fullname = 
@@ -66,7 +76,10 @@ const character_portraits_path = "images/general/characters/characters_portraits
         "Raquel Pereira Camargo",
         "Tadashi Nakano",
         "Tegan Novakov",
-        "Tyler Williams"
+        "Tyler Williams",
+        "Serena",
+        "C and A",
+        "Lady Amelia Arlington"
     ];
 
     var birthday = 
@@ -80,7 +93,10 @@ const character_portraits_path = "images/general/characters/characters_portraits
         "December 3rd",
         "September 17th",
         "April 25th",
-        "August 21st"
+        "August 21st",
+        "June 30th",
+        "???",
+        "July 1st"
     ];
 
     var likes = 
@@ -94,7 +110,10 @@ const character_portraits_path = "images/general/characters/characters_portraits
         "Soccer, winning and fast Food",
         "Leading people, finance and relaxing",
         "Video games, computers and taking Naps",
-        "Drawing, being the center of attention, going to the crafts store"
+        "Drawing, being the center of attention, going to the crafts store",
+        "Video Game Development, Writing, Interacting with her Fans",
+        "Pretty art, funny memes",
+        "Students who follow rules, Classical Music, Money"
     ];
 
     var dislikes = 
@@ -108,7 +127,10 @@ const character_portraits_path = "images/general/characters/characters_portraits
         "Homework, classical music, party Poopers",
         "Axel, inefficiency, dishonesty",
         "Aggressiveness, loud parties, when his computer lags",
-        "Structure, school, close-mindedness"
+        "Structure, school, close-mindedness",
+        "When fans do not read the FAQ before contacting her",
+        "When you pick the wrong dialog choice",
+        "Having her authority challenged, Tardiness"
     ];
 
     var fulldescription = 
@@ -122,14 +144,17 @@ const character_portraits_path = "images/general/characters/characters_portraits
         "Raquel is passionate, borderline obsessed about soccer! A promising athlete in the athletics department, she’s energetic, ambitious and has no time for any crap. Despite being the most direct and honest student in Arlington, she can’t help but have a secret too…a secret she tries really hard to hide from her family. Raquel is always in it for the win, and that’s because she simply cannot afford to lose.",
         "Tadashi is the current Student Body President of Arlington Academy. Having the highest GPA of the school, an estimated IQ of 160, being a star student and a jack of all trades, Tadashi doesn’t have time for any crap…and that means it will be very hard for your Scholar to get to know him. You’ll have to be sharp, organized and future-oriented…because the future is exactly what troubles this guy.",
         "A European foreign student, Tegan specializes in Computer Science. He loves to program and spends the majority of his time in front of the computer. He also loves robotics and any kind of engineering. He has the second highest GPA of the school, beaten only by Tadashi. But despite his adorkableness and his intelligence, Tegan faces a lot of pressure from people…people who won’t believe in him and his dreams. His roommate and best friend is Tyler and he has a twin sister: Karolina.",
-        "A graphic designer in the Fine Arts department and highly skilled in anything involving visuals, thanks to his photographic memory, Tyler loves to be the center of attention! He is an artist from head to toe: charming, sensitive, creative…and highly critical of himself. It’s hard to constantly feel like your work isn’t good enough, especially when rejection is everywhere you look. Despite being very different, Tyler and Tegan make an incredible team, and being their friend comes with a lot of advantages!"
+        "A graphic designer in the Fine Arts department and highly skilled in anything involving visuals, thanks to his photographic memory, Tyler loves to be the center of attention! He is an artist from head to toe: charming, sensitive, creative…and highly critical of himself. It’s hard to constantly feel like your work isn’t good enough, especially when rejection is everywhere you look. Despite being very different, Tyler and Tegan make an incredible team, and being their friend comes with a lot of advantages!",
+        "Serena is the senior student that helped you understand how things work at Arlington Academy on your first day of school. She is weirdly knowledgeable in many things regarding the school’s rules, to the point where you wonder whether or not she is really a student...Serena and her friends are always there to assist you if you need any help!",
+        "Friends of Serena and senior students you have met on your first day at Arlington. They are friendly, but somewhat strange, and do not abide by the rules...yet again, aren’t all seniors like that? Nobody knows why A wears a radioactive suit and it is best not to ask any questions.",
+        "Lady Arlington is the President and Dean of Arlington Academy. She is very strict, powerful and rich. If you are a good student, you have nothing to fear."
     ];
 
 $(function create_interface()
 {
     const qty_main_10 = 10;//de 0 à 9 
-    const qty_classmates = 0;//de 9 à 9 (parce qu'il n'y en a pas encore)
-    const qty_others = 0;//de 9 à 9 (parce qu'il n'y en a pas encore)
+    const qty_classmates = 2;//de 9 à 9 (parce qu'il n'y en a pas encore)
+    const qty_others = 1;//de 9 à 9 (parce qu'il n'y en a pas encore)
 
     var main_10_button = document.createElement('div');//de 0 à 9
 
@@ -150,7 +175,7 @@ $(function create_interface()
         others_button.className = "button yellow_button";
         others_button.innerHTML = "Others";
 
-        others_button.addEventListener("click", function(e){refresh_lines(qty_classmates, qty_classmates + qty_others); activate(others_button, main_10_button, classmates_button);})
+        others_button.addEventListener("click", function(e){refresh_lines(qty_main_10 + qty_classmates, qty_main_10 + qty_classmates + qty_others); activate(others_button, main_10_button, classmates_button);})
 
     button_container.appendChild(createFlexPanel());
     button_container.appendChild(main_10_button);
@@ -201,7 +226,7 @@ function create_line(index)
 
         var chara_desc = document.createElement('div');
 
-            var desc_header = '<h4 class="center" style="text-transform: uppercase; color: #EE4C5E">' + characters[index] + '</h4>';
+            var desc_header = '<h4 class="center" style="text-transform: uppercase; color: #EE4C5E">' + first_name[index] + '</h4>';
             //var desc_fullname = '<p class="chara_list"><b>Full name: </b>' + fullname[index] + '</p>';
             var desc_birthday = '<p class="chara_list"><b>Birthday: </b>' + birthday[index] + '</p>';
             var desc_likes = '<p class="chara_list"><b>Likes: </b>' + likes[index] + '</p>';
@@ -221,13 +246,13 @@ function create_line(index)
 
         var inf_meter = document.createElement('img');
 
-            var percentage = getPersonnageFromName(characters[index]).affinity;
-            inf_meter.src = browseAffinity(percentage); //"images/game_images/infinity_meter/states/se-infinity-40-43.png";
+            //var percentage = getPersonnageFromName(characters[index]).affinity;
+            //inf_meter.src = browseAffinity(percentage); //"images/game_images/infinity_meter/states/se-infinity-40-43.png";
             inf_meter.className = "inf_meter";
 
         var percentage_number = document.createElement('div');
 
-            percentage_number.innerHTML = percentage + "%";
+            //percentage_number.innerHTML = percentage + "%";
             percentage_number.className = "percentage_number";
 
     lines_container.appendChild(line);
