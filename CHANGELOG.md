@@ -1,8 +1,12 @@
 #CHANGELOG
 
-Version 1.3.1
-- Added the "Others" and "Classmates" section of the relationships.php, incomplete due to lack of infinity meter that are commented (June)
-- Added the name and icons of the achievements on illustrations_achievements.php (June)
+Version 1.3.2 (June)
+- Added 'locked' image for illustrations that are still locked
+- Fixed Chapter thumbnails for game.php
+
+Version 1.3.1 (June)
+- Added the "Others" and "Classmates" section of the relationships.php, incomplete due to lack of infinity meter that are commented
+- Added the name and icons of the achievements on illustrations_achievements.php
 
 Version 1.3.0 - WORKING IMAGE GENERATOR
 
