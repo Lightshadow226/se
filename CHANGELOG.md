@@ -1,5 +1,9 @@
 #CHANGELOG
 
+Version 1.3.3 (UNSTABLE)
+
+- Started the Doll maker (this is the things that works best) -> les variables se passent en paramètre quand on ne vuet pas créer une image, mais l'image ne fonctionne pas quand on l'appelle.
+
 Version 1.3.2 (June)
 - Added 'locked' image for illustrations that are still locked
 - Fixed Chapter thumbnails for game.php
@@ -28,7 +32,7 @@ Version 1.2.13
 - Fixed le "relationship_enabled"
 - Arrangé le blur des boutons dans game.php (le blur était causé par un "transform: translate" dans le CSS -> apparemment, faire un translate sur du texte résulte en un bug de blur sur Google Chrome.) *(Source: https://stackoverflow.com/questions/27385126/chrome-font-appears-blurry)*
 - Arrangé la page relationship.php -> design (le background blanc)
-- Fait  fonctionner le bouton "resume playing"
+- Fait  fonctionner le bouton "resume playing" 
 - Cleaned up the files; Menage (June)
 - Work on profile_idcard.php; generation of student id + writing info on the image (June)
 - identifier le chapitre le plus récent

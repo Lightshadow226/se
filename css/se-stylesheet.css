@@ -17,9 +17,9 @@
 		color: auto;
 		margin: 0 auto;
 		font-weight: 300;
-		/* border: 1px solid black; */
+		border: 1px solid black;
 	}
-
+	
 	/* *:hover
 	{
 		cursor: -webkit-grab;
@@ -994,6 +994,7 @@
 		background-color: #eeeeee;/*abcdef is a cool color*/
 
 		position: absolute;
+		max-height: 1000px;
 		top: 50%;
 		left: 50%;
 
@@ -1013,6 +1014,11 @@
 	.img
 	{
 		width: 100%;
+	}
+
+	.selector_choices
+	{
+		margin: 10px 0px;/*top & left*/
 	}
 
 /***************STRUCTURE***************/
@@ -1116,6 +1122,13 @@
 	.flex-container/*contains flex panels*/
 	{
 		display: flex;
+		/* flex-direction: row; */
+	}
+
+	.flex-container-vertical/*contains flex panels*/
+	{
+		display: flex;
+		flex-direction: row;
 	}
 
 	.flex-panel/*must have a flex-container parent*/
@@ -1168,6 +1181,9 @@
 		font-weight: 300;
 
 		border: none;
+
+		-webkit-font-smoothing: antialiased;
+		-webkit-filter: blur(0.000001px);
 	}
 
 	.pink_button
@@ -1210,6 +1226,11 @@
 /***************DATABASE***************/
 
 	#DB_handle
+	{
+		display: none;
+	}
+
+	#Character_handle
 	{
 		display: none;
 	}

@@ -409,94 +409,101 @@
 }
 
 
-
-
 /*POSITION*/
 
-.x-center-y-top
-{
-    top: 50px;
+    .x-center-y-top
+    {
+        top: 50px;
 
-    left: 50%;
+        left: 50%;
 
-    transform: translateX(-50%);
-}
+        transform: translateX(-50%);
+    }
 
-.x-center-y-center
-{
-    top: 50%;
+    .x-center-y-center
+    {
+        top: 50%;
 
-    left: 50%;
+        left: 50%;
 
-    transform: translate3d(-50%, -50%, 0);
-}
+        transform: translate3d(-50%, -50%, 0);
+    }
 
-.x-center-y-bottom
-{
-    bottom: 50px;
-    
-    left: 50%;
-    
-    transform: translateX(-50%);
-}
+    .x-center-y-bottom
+    {
+        bottom: 50px;
+        
+        left: 50%;
+        
+        transform: translateX(-50%);
+    }
 
-.x-left-y-center
-{
-    top: 50%;
+    .x-left-y-center
+    {
+        top: 50%;
 
-    left: 50px;
+        left: 50px;
 
-    transform: translateY(-50%);
-}
+        transform: translateY(-50%);
+    }
 
-.x-left-y-bottom
-{
-	bottom: 0px;
-}
+    .x-left-y-bottom
+    {
+        bottom: 0px;
+    }
 
-.x-right-y-center
-{
-    top: 50%;
+    .x-right-y-center
+    {
+        top: 50%;
 
-    right: 50px;
+        right: 50px;
 
-    transform: translateY(-50%);
-}
+        transform: translateY(-50%);
+    }
 
-.x-right-y-bottom
-{
-    top: 100%; 
-    /* bottom: 50px; */
+    .x-right-y-bottom
+    {
+        top: 100%; 
+        /* bottom: 50px; */
 
-    right: 50px;
+        right: 50px;
 
-    transform: translateY(-100%);
-}
+        transform: translateY(-100%);
+    }
 
-.y-center-p/* 1/3 width */
-{
-    top: 50%;
+    .x-right-y-bottom-real
+    {
+        top: 100%; 
 
-    left: 33%;
+        right: 0px;
 
-    transform: translate3d(-50%, -50%, 0);
-}
+        transform: translateY(-100%);
+    }
 
-.y-center-q/* 2/3 width */
-{
-    top: 50%;
+    .y-center-p/* 1/3 width */
+    {
+        top: 50%;
 
-    left: 66%;
+        left: 33%;
 
-    transform: translate3d(-50%, -50%, 0);
-}
+        transform: translate3d(-50%, -50%, 0);
+    }
 
-.y-center
-{
-    /* top: 50%; */
+    .y-center-q/* 2/3 width */
+    {
+        top: 50%;
 
-    transform: translateY(30%); 
-}
+        left: 66%;
+
+        transform: translate3d(-50%, -50%, 0);
+    }
+
+    .y-center
+    {
+        /* top: 50%; */
+
+        transform: translateY(30%); 
+    }
 
 /* Boutons pour les positions des boutons */
 /* Nomenclature:
@@ -508,80 +515,80 @@
 
 /* HALLWAY 1 */
 
-.hallway1_class1
-{
-    top: 50%;
+    .hallway1_class1
+    {
+        top: 50%;
 
-    left: 10%;
+        left: 10%;
 
-    transform: translateY(-50%);
-}
+        transform: translateY(-50%);
+    }
 
-.hallway1_class2
-{
-    top: 50%;
+    .hallway1_class2
+    {
+        top: 50%;
 
-    right: 5%;/*on ne peut pas le mettre plus à droite, parce que sinon le tooltip va sortir du frame du jeu*/
+        right: 5%;/*on ne peut pas le mettre plus à droite, parce que sinon le tooltip va sortir du frame du jeu*/
 
-    transform: translateY(-50%);
-}
+        transform: translateY(-50%);
+    }
 
 /* ENTRANCE */
 
-.entrance_hallway1
-{
-    top: 54%;
+    .entrance_hallway1
+    {
+        top: 54%;
 
-    left: 59%;
+        left: 59%;
 
-    transform: translate3d(-50%, -50%, 0);
-}
+        transform: translate3d(-50%, -50%, 0);
+    }
 
-.entrance_gym
-{
-    top: 50%;
+    .entrance_gym
+    {
+        top: 50%;
 
-    left: 35%;
+        left: 35%;
 
-    transform: translate3d(-50%, -50%, 0);
-}
+        transform: translate3d(-50%, -50%, 0);
+    }
 
-.entrance_garden
-{
-    top: 50%;
+    .entrance_garden
+    {
+        top: 50%;
 
-    right: 21%;
+        right: 21%;
 
-    transform: translate3d(-50%, -50%, 0);
-}
+        transform: translate3d(-50%, -50%, 0);
+    }
 
 /* DORM HALLWAY */
 
-.dormhallway_dormbathroom
-{
-    top: 50%;
+    .dormhallway_dormbathroom
+    {
+        top: 50%;
 
-    left: 63%;
+        left: 63%;
 
-    transform: translate3d(-50%, -50%, 0);   
-}
+        transform: translate3d(-50%, -50%, 0);   
+    }
 
-.dormhallway_mydorm
-{
-    top: 56%;
+    .dormhallway_mydorm
+    {
+        top: 56%;
 
-    left: 23%;
+        left: 23%;
 
-    transform: translate3d(-50%, -50%, 0);   
-}
+        transform: translate3d(-50%, -50%, 0);   
+    }
 
 /* CAFETERIA LOUNGE */
 
-.cafeterialounge_outsidecafetaria
-{
-    top: 50%;
+    .cafeterialounge_outsidecafetaria
+    {
+        top: 50%;
 
-    left: 64%;
+        left: 64%;
 
-    transform: translate3d(-50%, -50%, 0);   
-}
+        transform: translate3d(-50%, -50%, 0);   
+    }

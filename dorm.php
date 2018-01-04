@@ -8,6 +8,7 @@
 	<title>Sweet Elite: Flirt and Uncover the Secrets of Arlington Academy!<</title>
 
 	<link href="css/se-stylesheet.css" rel="stylesheet" type="text/css">
+	<link href="css/se-game.css" rel="stylesheet" type="text/css">
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 	<link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet" type='text/css'>
 
@@ -43,10 +44,21 @@
 			<button type="button" class="button pink-button-subtle" style="z-index:1;" onclick="window.open('illustrations_achievements.php', '_self');"> Laptop (Illustrations & achievements)</button>
 			<button type="button" class="button pink-button-subtle" style="z-index:1;" onclick="wardrobe();">Wardrobe (change clothes/appearance)</button>
 		</div>
-
+		
 		<div id = "DB_handle">
-			
+				
 		</div>
+
+	</div>
+
+	<div id = "Character_handle">
+
+		<!-- <input id = "Character_handle_sex" value = "1"></input>
+		<input id = "Character_handle_skincolor" value = "1"></input>
+		<input id = "Character_handle_haircolor"></input>
+		<input id = "Character_handle_hairstyle"></input>
+		<input id = "Character_handle_eyecolor"></input>
+		<input id = "Character_handle_clothes"></input> -->
 
 	</div>
 	
