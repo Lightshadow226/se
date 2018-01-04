@@ -2,7 +2,7 @@
 
 Version 1.3.3 (UNSTABLE)
 
-- Started the Doll maker (this is the things that works best) -> les variables se passent en paramètre quand on ne vuet pas créer une image, mais l'image ne fonctionne pas quand on l'appelle.
+- Started the Doll maker (this is the things that works best) -> les variables se passent en paramètre quand on ne veut pas créer une image, mais l'image ne fonctionne pas quand on l'appelle.
 
 Version 1.3.2 (June)
 - Added 'locked' image for illustrations that are still locked
