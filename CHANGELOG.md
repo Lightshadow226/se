@@ -1,8 +1,17 @@
 #CHANGELOG
 
+Version 1.3.4 (STABLE)
+
+- *TYPO*            [ALL FILES]                     changé "Sweet Elite: Flirt and Uncover the Secrets of Arlington Academy!<" pour enlever le typo
+- *DOLL MAKER*      [dorm.php]                      finished the Doll Maker
+- *DM - NOTE*       [characterGenerator.php]        this file is unused, but is kept just in case we want to try to make it work
+- *DM - NOTE*       [randomizer.php, imageGenerator.php, profileidcard.php, scholar_sprite.php]        optimization
+- *DM - NOTE*       [dorm.js]                       le wardrobe est sélectionné par défaut, par AJAX $(function(){});
+- *BUG*             [profile_idcard]                the colors are weird
+
 Version 1.3.3 (UNSTABLE)
 
-- Started the Doll maker (this is the things that works best) -> les variables se passent en paramètre quand on ne veut pas créer une image, mais l'image ne fonctionne pas quand on l'appelle.
+- *DOLL MAKER*      [dorm.php, characterGenerator.php] Started the Doll maker (this is the things that works best) -> les variables se passent en paramètre quand on ne veut pas créer une image, mais l'image ne fonctionne pas quand on l'appelle.
 
 Version 1.3.2 (June)
 - Added 'locked' image for illustrations that are still locked

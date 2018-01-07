@@ -1,6 +1,6 @@
 ﻿#TODO NOTES
 
-`TODO: Today`
+`TODO: Next`
 
 - *DATABASE*            [variables.js]                                          enregistrer toutes les variables dans la DB d'une shot (à chaque fois qu'on click quelque part sur la page)
 - *DATABASE*            [variables.js, getvariables.php, pushvariables.php]     AJOUTER "user.physicalLocation" dans le get et le push de DB_handle
@@ -20,6 +20,7 @@
 - *CODE - DESIGN*       [game.php]                                              mettre le chapitre courant
 - *DEBUG*               [variables.js, getvariables.php, pushvariables.php]     s'assurer qu'il n'y ait plus de variables utilisés sans la base de données
 - *DATABASE*            [relationships.php]                                     Add infinity meter for all characters (in the database + DB_Handle)
+- *IMPROVEMENTS* [imageGenerator.php] there are still improvements to be made in this file
 
 `TODO: MEDIUM Importance`
 - *CODE - RESTRUCT*     [relationships.js, variables.js]                        transférer les variables de Relationships.js à variables.js

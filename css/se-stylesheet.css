@@ -17,7 +17,7 @@
 		color: auto;
 		margin: 0 auto;
 		font-weight: 300;
-		border: 1px solid black;
+		/* border: 1px solid black; */
 	}
 	
 	/* *:hover
@@ -1019,6 +1019,49 @@
 	.selector_choices
 	{
 		margin: 10px 0px;/*top & left*/
+	}
+
+	.choices
+	{
+		text-align: center;
+		border-radius: 3px;
+		border: 2px dotted #ff4956;
+		vertical-align: middle;
+
+		user-select: none;
+		-webkit-user-select: none;
+		cursor: pointer;
+		padding: 10px;
+		margin: 10px;
+		flex: 1;
+	}
+
+	.choices:hover
+	{
+		background-color: #F7B334;
+	}
+
+	.choices-button
+	{
+		margin: 10px;/*centers the button in its parent div*/
+		padding: 10px;
+		align-content: center;
+		border-radius: 3px;
+		text-decoration: none;/*enlever le underline -> ne va plus être nécessaire quand on va rendre le bouton un actual Button*/
+		text-align: center;
+		-webkit-user-select: none;
+		flex: 1;
+		font-weight: 300;
+
+		border: none;
+
+		-webkit-font-smoothing: antialiased;
+		-webkit-filter: blur(0.000001px);
+	}
+
+	.choices-button:hover
+	{
+		background-color: #682566;
 	}
 
 /***************STRUCTURE***************/
