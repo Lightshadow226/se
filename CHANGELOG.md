@@ -8,6 +8,13 @@ Version 1.3.6
 - *DEBUG*               [gameengine.js]             added back the debugging feature of the game
 - *RELATIONSHIPS*       [relationships.js, library.js]          added back the infinity meter in the relationships page (added the characters as variables, and in the library.js function)
 
+Version 1.3.5 (June)
+- Added more content in the "Start Playing" div in index.php
+- Added relevant additions in se-stylesheet.css
+- Changed the banner on index.php logged off (now includes male and female scholar because it's pretty)
+- Fixed layer colorization mistake in profile_idcard.php
+- Added all of the trimmed scholar images for the randomizer in index.php
+
 Version 1.3.4 (STABLE)
 
 - *TYPO*            [ALL FILES]                     changé "Sweet Elite: Flirt and Uncover the Secrets of Arlington Academy!<" pour enlever le typo
