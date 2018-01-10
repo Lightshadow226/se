@@ -183,8 +183,29 @@
 				</div>
 				
 				<div class = "card-content">
-					<p>Sweet Elite's Demo is now available!</p>
-					<p>Sign up now and get access to 3 free chapters to celebrate the demo's release!</p>
+					<h4>Sweet Elite's Demo is Now Available!</h4>
+					<p><b>Sign up now and get access to 3 FREE chapters to celebrate the demo's release!</b></p>
+					<br>
+
+					<div class = "flex-container">
+						<div class = "flex-panel3">
+							<img class = "img-badge" src = "images/general/chapter_images/chapter0.png"></img>
+							<h5>INTRODUCTION</h5>
+							<p><b>Teaser:</b> You just arrived at Arlington Academy, but everything is so new and big! You're going to need help from a few senior students who will lay down the basics on you.</p>
+						</div>
+
+						<div class = "flex-panel3">
+							<img class = "img-badge" src = "images/general/chapter_images/chapter1.png"></img>
+							<h5>CHAPTER 1</h5>
+							<p><b>Teaser:</b> Classes start tomorrow, so today is the time to try to make some new friends...but why is everybody so stressed today? What could be on their minds?</p>
+						</div>
+
+						<div class = "flex-panel3">
+							<img class = "img-badge" src = "images/general/chapter_images/chapter2.png"></img>
+							<h5>CHAPTER 2</h5>
+							<p><b>Teaser:</b> It seems the whole school is to be revolving around a certain teenage celebrity and an exclusive homecoming party. But things aren't exactly as great as they look on the surface...</p>
+						</div>
+					</div>
 				</div>
 
 				<div style = "position: relative;">

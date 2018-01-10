@@ -367,7 +367,7 @@
 	{
 		position: relative;
 		display: flex;
-
+		margin: 10px;
 		padding-bottom: 10px;
 
 		left: 50%;
@@ -1182,6 +1182,12 @@
 	.flex-panel2/*must have a flex-container parent*/
 	{
 		flex:2;
+	}
+
+	.flex-panel3/*must have a flex-container parent*/
+	{
+		flex:3;
+		margin: 5px;
 	}
 
 	.login-signup-labels
