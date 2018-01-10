@@ -977,22 +977,23 @@
 		position: relative;
 		/* margin: 0 !important;    */
 	}
-
+	
 	#dorm_overlay
 	{
 		position: absolute;
 		top: 0;
-
+		
 		width: 100%;
 		height: 100%;
 		
 		z-index: 1;
 	}
-
+	
 	#overlay_form/*the form that will pop up to customize the character*/
 	{
 		background-color: #eeeeee;/*abcdef is a cool color*/
-
+		padding: 10px;
+		
 		position: absolute;
 		max-height: 1000px;
 		top: 50%;

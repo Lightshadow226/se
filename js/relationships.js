@@ -30,7 +30,7 @@ const character_portraits_path = "images/general/characters/characters_portraits
 
 /*****NE PAS METTRE LES ARRAYS DANS VARIABLES.JS*****/
 
-    //est utilisé pour le nom qui est affiché en gros, et pour repérer le path des images
+    //est utilisé pour repérer le path des images
     var characters = 
     [
         "alistair",
@@ -43,11 +43,14 @@ const character_portraits_path = "images/general/characters/characters_portraits
         "tadashi",
         "tegan",
         "tyler",
-        "serena",
+        "Serena",
         "ca",
-        "ladya"
+        "ladya",
+        //"Coach Davis",
+        //"Teacher 2",
     ];
 
+    //first name is displayed
     var first_name = 
     [
         "Alistair",
@@ -62,9 +65,11 @@ const character_portraits_path = "images/general/characters/characters_portraits
         "Tyler",
         "Serena",
         "C & A",
-        "Lady Arlington"
+        "Lady Arlington",
+        "Coach Davis",
     ];
 
+    //full name is unused
     var fullname = 
     [
         "Alistair Drew",
@@ -78,8 +83,9 @@ const character_portraits_path = "images/general/characters/characters_portraits
         "Tegan Novakov",
         "Tyler Williams",
         "Serena",
-        "C and A",
-        "Lady Amelia Arlington"
+        "C & A",
+        "Lady Amelia Arlington",
+        "Coach Murdoc Davis",
     ];
 
     var birthday = 
@@ -96,7 +102,8 @@ const character_portraits_path = "images/general/characters/characters_portraits
         "August 21st",
         "June 30th",
         "???",
-        "July 1st"
+        "July 1st",
+        "",//davis
     ];
 
     var likes = 
@@ -154,7 +161,7 @@ $(function create_interface()
 {
     const qty_main_10 = 10;//de 0 à 9 
     const qty_classmates = 2;//de 9 à 9 (parce qu'il n'y en a pas encore)
-    const qty_others = 1;//de 9 à 9 (parce qu'il n'y en a pas encore)
+    const qty_others = 2;//de 9 à 9 (parce qu'il n'y en a pas encore)
 
     var main_10_button = document.createElement('div');//de 0 à 9
 
@@ -246,13 +253,13 @@ function create_line(index)
 
         var inf_meter = document.createElement('img');
 
-            //var percentage = getPersonnageFromName(characters[index]).affinity;
-            //inf_meter.src = browseAffinity(percentage); //"images/game_images/infinity_meter/states/se-infinity-40-43.png";
+            var percentage = getPersonnageFromName(characters[index]).affinity;
+            inf_meter.src = browseAffinity(percentage); //"images/game_images/infinity_meter/states/se-infinity-40-43.png";
             inf_meter.className = "inf_meter";
 
         var percentage_number = document.createElement('div');
 
-            //percentage_number.innerHTML = percentage + "%";
+            percentage_number.innerHTML = percentage + "%";
             percentage_number.className = "percentage_number";
 
     lines_container.appendChild(line);

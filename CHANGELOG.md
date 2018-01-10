@@ -1,5 +1,13 @@
 #CHANGELOG
 
+Version 1.3.6
+- *DATABASE*            [variables.js]              enregistré toutes les variables dans la DB d'une shot (à chaque fois qu'on clique quelque part sur la page)
+- *CHAPTER INPUT*       [variables.js, getvariables.php, pushvariables.php]     terminé toutes les manipulations PHP/JS (push and pull)
+- *DATABASE*            [variables.js]              Fixed the affinity = "" (a string worth nothing or 0) -> when adding -5, would give "0-5"
+- *DOLL MAKER*          [dorm.js]                   added the skin color as a customization option
+- *DEBUG*               [gameengine.js]             added back the debugging feature of the game
+- *RELATIONSHIPS*       [relationships.js, library.js]          added back the infinity meter in the relationships page (added the characters as variables, and in the library.js function)
+
 Version 1.3.4 (STABLE)
 
 - *TYPO*            [ALL FILES]                     changé "Sweet Elite: Flirt and Uncover the Secrets of Arlington Academy!<" pour enlever le typo

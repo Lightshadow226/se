@@ -261,9 +261,9 @@ function refreshInterface()//REFRESHES the interface
             {
                 var relevant_char = getPersonnage(story[4][user.storyLocation]);
 
-                relevant_char.affinity += story[16][user.storyLocation];
+                relevant_char.affinity += Number(story[16][user.storyLocation]);//on doit s'assurer que la valeur est un nombre, parce que sinon, parfois, ça fait juste carrément rajouter un zéro
 
-                if(relevant_char.affinity < 0)
+                if(Number(relevant_char.affinity) < 0)
                 {
                     relevant_char.affinity = 0;
                 }
@@ -300,14 +300,21 @@ function refreshInterface()//REFRESHES the interface
             if(story[2][user.storyLocation] != "null")//if there is a character 1 in this slide, we append the infinity meter to the right
             {
                 var relevant_char = getPersonnage(story[2][user.storyLocation]);
+                
+                // alert(getPersonnage(story[2][user.storyLocation]).name + ": " + relevant_char.affinity);
+                // alert(getPersonnage(story[2][user.storyLocation]).name + "'s affinity += " + parseInt(story[16][user.storyLocation]));
 
-                relevant_char.affinity += Number(story[16][user.storyLocation]);//on doit s'assurer que la valeur est un nombre, parce que sinon, parfois, ça fait juste carrément rajouter un zéro
+                //TODO: on doit seulement ajouter le affinity si on n'a jamais visité la page
 
+                var new_number = Number(story[16][user.storyLocation]) + Number(relevant_char.affinity);
+                
+                relevant_char.affinity = new_number;//on doit s'assurer que la valeur est un nombre, parce que sinon, parfois, ça fait juste carrément rajouter un zéro
+                
                 if(relevant_char.affinity < 0)
                 {
                     relevant_char.affinity = 0;
                 }
-
+                
                 affinity_meter1.src = browseAffinity(relevant_char.affinity);//character 1 (right)
 
                 overlay.appendChild(affinity_meter_content1);
@@ -319,6 +326,8 @@ function refreshInterface()//REFRESHES the interface
             {
                 background.appendChild(textContainer);
             }
+
+            pushVariablesToDB();
 
         // ----- Special Option: Specific state of this slide -----
 
@@ -995,49 +1004,51 @@ function refreshInterface()//REFRESHES the interface
         var text = "";
         
         container1.innerHTML = "";
-        /*
+        
         //Previous location(
-        text += "<b>Previous location (" + (storyLocation - 1) + ")</b><br>";
-        //alert(story[main_text][storyLocation-1]);
-        text += "Story Text: " + story[main_text][storyLocation-1] + "<br>";
-        text += "Visited: " + story[17][storyLocation - 1] + "<br>";
-        // text += "Bubble 1: " + story[1][storyLocation-1] + "<br>";
-        // text += "Character 1: " + story[2][storyLocation-1] + "<br>";
-        // text += "Bubble 2: " + story[3][storyLocation-1] + "<br>";
-        // text += "Character 2: " + story[4][storyLocation-1] + "<br>";
-        text += "Location: " + story[5][storyLocation-1] + "<br>";
-        text += "Link: " + story[special_option][storyLocation-1] + "<br>";11
+        text += "<b>Previous location (" + (user.storyLocation - 1) + ")</b><br>";
+        //alert(story[main_text][user.storyLocation-1]);
+        text += "Story Text: " + story[main_text][user.storyLocation - 1] + "<br>";
+        text += "Visited: " + story[17][user.storyLocation - 1] + "<br>";
+        text += "Affinity Increase: " + story[16][user.storyLocation - 1] + "<br>";
+        // text += "Bubble 1: " + story[1][user.storyLocation - 1] + "<br>";
+        // text += "Character 1: " + story[2][user.storyLocation - 1] + "<br>";
+        // text += "Bubble 2: " + story[3][user.storyLocation - 1] + "<br>";
+        // text += "Character 2: " + story[4][user.storyLocation - 1] + "<br>";
+        text += "Location: " + story[5][user.storyLocation - 1] + "<br>";
+        text += "Link: " + story[special_option][user.storyLocation - 1] + "<br>";11
         text += "<br>";
-        */
-        /*
+        
+        
         //Current Location
-        text += "<b>Current location (" + storyLocation + ")</b><br>";
-        text += "Story Text: " + story[main_text][storyLocation] + "<br>";
-        text += "Visited: " + story[17][storyLocation] + "<br>";
-        //alert(story[main_text][storyLocation] + "<br>");
-        // text += "Bubble 1: " + story[1][storyLocation] + "<br>";
-        // text += "Character 1: " + story[2][storyLocation] + "<br>";
-        // text += "Bubble 2: " + story[3][storyLocation] + "<br>";
-        // text += "Character 2: " + story[4][storyLocation] + "<br>";
-        text += "Location: " + story[5][storyLocation] + "<br>";
-        text += "Link: " + story[special_option][storyLocation] + "<br>";
-        text += "Choice A: " + story[choiceA_text][storyLocation] + "<br>";
-        text += "Choice B: " + story[choiceB_text][storyLocation] + "<br>";
-        text += "Choice C: " + story[choiceC_text][storyLocation] + "<br>";
+        text += "<b>Current location (" + user.storyLocation + ")</b><br>";
+        text += "Story Text: " + story[main_text][user.storyLocation] + "<br>";
+        text += "Visited: " + story[17][user.storyLocation] + "<br>";
+        text += "Affinity Increase: " + story[16][user.storyLocation] + "<br>";
+        //alert(story[main_text][user.storyLocation] + "<br>");
+        // text += "Bubble 1: " + story[1][user.storyLocation] + "<br>";
+        // text += "Character 1: " + story[2][user.storyLocation] + "<br>";
+        // text += "Bubble 2: " + story[3][user.storyLocation] + "<br>";
+        // text += "Character 2: " + story[4][user.storyLocation] + "<br>";
+        text += "Location: " + story[5][user.storyLocation] + "<br>";
+        text += "Link: " + story[special_option][user.storyLocation] + "<br>";
+        text += "Choice A: " + story[choiceA_text][user.storyLocation] + "<br>";
+        text += "Choice B: " + story[choiceB_text][user.storyLocation] + "<br>";
+        text += "Choice C: " + story[choiceC_text][user.storyLocation] + "<br>";
         text += "<br>";
-        */
-        /*
+        
+        
         //Next Location
-        text += "<b>Next location (" + (storyLocation + 1) + ")</b><br>";
-        text += "Story Text: " + story[main_text][storyLocation+1] + "<br>";
-        // text +=  "Bubble 1: " + story[1][storyLocation+1] + "<br>";
-        // text +=  "Character 1: " + story[2][storyLocation+1] + "<br>";
-        // text +=  "Bubble 2: " + story[3][storyLocation+1] + "<br>";
-        // text +=  "Character 2: " + story[4][storyLocation+1] + "<br>";
-        text +=  "Location: " + story[5][storyLocation+1] + "<br>";
-        text +=  "Link: " + story[special_option][storyLocation+1] + "<br>";
+        text += "<b>Next location (" + (user.storyLocation + 1) + ")</b><br>";
+        text += "Story Text: " + story[main_text][user.storyLocation + 1] + "<br>";
+        text += "Affinity Increase: " + story[16][user.storyLocation + 1] + "<br>";
+        // text +=  "Bubble 1: " + story[1][user.storyLocation + 1] + "<br>";
+        // text +=  "Character 1: " + story[2][user.storyLocation + 1] + "<br>";
+        // text +=  "Bubble 2: " + story[3][user.storyLocation + 1] + "<br>";
+        // text +=  "Character 2: " + story[4][user.storyLocation + 1] + "<br>";
+        text +=  "Location: " + story[5][user.storyLocation+1] + "<br>";
+        text +=  "Link: " + story[special_option][user.storyLocation + 1] + "<br>";
         text += "<br>";
-        */
 
         container1.innerHTML = text;
 

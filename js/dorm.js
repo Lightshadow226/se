@@ -12,14 +12,16 @@ var container = document.getElementById('dorm');
 //var sex_img = ["../profile/customization/female.png", "../profile/customization/male.png"];
 
 //THE CATEGORY TYPES
-var screens = ["Sex", "Eyes", "Hair Color", "Hair Style", "Shoes"];
+var screens = ["Sex", "Eyes", "Hair Color", "Hair Style", "Shoes", "Skin Color"];
 var currentScreen = screens[0];//"Sex"
 
 //THE IMAGES THAT APPEAR FOR EVERY ITEM (or text in this case)
 var sex_img = ["Female", "Male"];
 var eyes_img = ["Blue", "Green", "Grey", "Brown"];
+var skin_color = ["White", "Tan", "Asian", "Brown", "Black"];
 var hair_color = ["Blonde", "Brown", "Black", "Red"];
-var hair_style = ["Short", "Very Short", "Long Straight", "Long Curly"];
+//var hair_style = ["Short", "Very Short", "Long Straight", "Long Curly"];//TODO: les noms sont différents selon si c'est un homme ou non
+var hair_style = ["Hair 1", "Hair 2", "Hair 3", "Hair 4"];
 var shoes_img = ["Shoes"];
 
 //DATABASE PUSH FORMAT
@@ -86,8 +88,10 @@ function refreshImg()
     // var skincolor = $('#Character_handle_skincolor').val();
 
     $.get('profile/scholar_sprite.php');//amazingly faster
+    document.getElementById('img_character').src = 'profile/scholar_sprite.php';
 
-    document.getElementById('img_character').src = 'profile/scholar_sprite.php'; 
+    /*$.get('profile/scholar_sprite.php');//amazingly faster
+    document.getElementById('img_character').src = 'profile/scholar_sprite.php'; */
 
     // $(function()
     // {
@@ -158,54 +162,42 @@ $(function wardrobe()
             selector_line.className = "flex-container"
 
             var category1 = document.createElement('div')
-
                 category1.innerHTML = "Sex";
                 category1.className = "choices choices-button pink-button-subtle";
 
             var category2 = document.createElement('div')
-
                 category2.innerHTML = "Eyes";
                 category2.className = "choices choices-button pink-button-subtle";
 
             var category3 = document.createElement('div')
-
                 category3.innerHTML = "Hair Color";
                 category3.className = "choices choices-button pink-button-subtle";
 
             var category4 = document.createElement('div')
-
                 category4.innerHTML = "Hair Style";
                 category4.className = "choices choices-button pink-button-subtle";
 
             var category5 = document.createElement('div')
-
                 category5.innerHTML = "Shoes";
                 category5.className = "choices choices-button pink-button-subtle";
 
-        var selector_choices_line1 = document.createElement('div');//the selector to the left, where we choose the clothes, etc.
+            var category6 = document.createElement('div')
+                category6.innerHTML = "Skin Color";
+                category6.className = "choices choices-button pink-button-subtle";
 
+        var selector_choices_line1 = document.createElement('div');//the selector to the left, where we choose the clothes, etc.
             selector_choices_line1.className = "flex-container selector_choices";
 
             var choiceA = document.createElement('div')
-
-                choiceA.innerHTML = "CHOICE A";
-                // choiceA.className = "button pink_button";
                 choiceA.className = "choices";
 
             var choiceB = document.createElement('div')
-
-                choiceB.innerHTML = "CHOICE B";
-                // choiceB.className = "button pink_button";
                 choiceB.className = "choices";
 
             var choiceC = document.createElement('div')
-
-                choiceC.innerHTML = "CHOICE C";
                 choiceC.className = "choices";
 
             var choiceD = document.createElement('div')
-
-                choiceD.innerHTML = "CHOICE D";
                 choiceD.className = "choices";
 
         var selector_choices_line2 = document.createElement('div');//the selector to the left, where we choose the clothes, etc.
@@ -213,54 +205,40 @@ $(function wardrobe()
             selector_choices_line2.className = "flex-container selector_choices";
 
             var choiceE = document.createElement('div')
-
-                choiceE.innerHTML = "CHOICE E";
                 choiceE.className = "choices";
 
             var choiceF = document.createElement('div')
-
-                choiceF.innerHTML = "CHOICE F";
                 choiceF.className = "choices";
 
             var choiceG = document.createElement('div')
-
-                choiceG.innerHTML = "CHOICE G";
                 choiceG.className = "choices";
 
             var choiceH = document.createElement('div')
-
-                choiceH.innerHTML = "CHOICE H";
                 choiceH.className = "choices";
-                //choiceH.id = "CHOICEH";//TODO: REMOVE THIS LINE
 
         var button_container = document.createElement('div');
-
             button_container.style.position = "absolute";
             button_container.className = "x-right-y-bottom-real";
 
             var button_reset = document.createElement('div');
-            
                 button_reset.className = "button pink_button";//style="margin:20px;"
                 button_reset.style.margin = "10px";
                 button_reset.innerHTML = "Reset";
             
             var button_save = document.createElement('div');
-            
                 button_save.className = "button pink_button";
                 button_save.style.margin = "10px";
                 button_save.innerHTML = "Save";
             
         var right_container = document.createElement('div');//the character image container
-
             right_container.id = "right_container";
             right_container.className = "flex-panel";
             right_container.style.height = "100%";//initially 346
 
         var img_character = document.createElement('img');
-
             img_character.id = "img_character";
-            // img_character.src = 'characterGenerator.php';
             img_character.style.height = "100%";//initially 346
+            img_character.src = "scholar_sprite.php";
 
     overlay_form.appendChild(left_container);
         left_container.appendChild(title);
@@ -270,6 +248,7 @@ $(function wardrobe()
             selector_line.appendChild(category3);
             selector_line.appendChild(category4);
             selector_line.appendChild(category5);
+            selector_line.appendChild(category6);
 
         left_container.appendChild(selector_choices_line1);
             selector_choices_line1.appendChild(choiceA);
@@ -277,11 +256,11 @@ $(function wardrobe()
             selector_choices_line1.appendChild(choiceC);
             selector_choices_line1.appendChild(choiceD);
         
-        // left_container.appendChild(selector_choices_line2);
-        //     selector_choices_line2.appendChild(choiceE);
-        //     selector_choices_line2.appendChild(choiceF);
-        //     selector_choices_line2.appendChild(choiceG);
-        //     selector_choices_line2.appendChild(choiceH);
+        left_container.appendChild(selector_choices_line2);
+            selector_choices_line2.appendChild(choiceE);
+            selector_choices_line2.appendChild(choiceF);
+            selector_choices_line2.appendChild(choiceG);
+            selector_choices_line2.appendChild(choiceH);
 
         left_container.appendChild(button_container);
             button_container.appendChild(button_reset);
@@ -328,6 +307,13 @@ $(function wardrobe()
         function(e)
         {
             refreshItems(category5.innerHTML);
+        });
+
+        //clicking on "Skin Color"
+        category6.addEventListener("click", 
+        function(e)
+        {
+            refreshItems(category6.innerHTML);
         });
     
     //4. clicking on one of the shirt should automatically update the image on the right/left of the field
@@ -391,7 +377,7 @@ $(function wardrobe()
 
     //5 FUNCTIONS
     
-    function refreshItems(newScreen)
+    function refreshItems(newScreen)//refreshes the labels of the choices
     {
         if(newScreen == screens[0])//"SEX"
         {
@@ -403,6 +389,15 @@ $(function wardrobe()
             choiceF.innerHTML = "";
             choiceG.innerHTML = "";
             choiceH.innerHTML = "";
+
+            choiceA.style.visibility = "visible";
+            choiceB.style.visibility = "visible";
+            choiceC.style.visibility = "hidden";
+            choiceD.style.visibility = "hidden";
+            choiceE.style.visibility = "hidden";
+            choiceF.style.visibility = "hidden";
+            choiceG.style.visibility = "hidden";
+            choiceH.style.visibility = "hidden";
         }
         else if(newScreen == screens[1])//"EYES"
         {
@@ -414,6 +409,15 @@ $(function wardrobe()
             choiceF.innerHTML = "";
             choiceG.innerHTML = "";
             choiceH.innerHTML = "";
+
+            choiceA.style.visibility = "visible";
+            choiceB.style.visibility = "visible";
+            choiceC.style.visibility = "visible";
+            choiceD.style.visibility = "visible";
+            choiceE.style.visibility = "hidden";
+            choiceF.style.visibility = "hidden";
+            choiceG.style.visibility = "hidden";
+            choiceH.style.visibility = "hidden";
         }
         else if(newScreen == screens[2])//"HAIR COLOR"
         {
@@ -425,6 +429,15 @@ $(function wardrobe()
             choiceF.innerHTML = "";
             choiceG.innerHTML = "";
             choiceH.innerHTML = "";
+
+            choiceA.style.visibility = "visible";
+            choiceB.style.visibility = "visible";
+            choiceC.style.visibility = "visible";
+            choiceD.style.visibility = "visible";
+            choiceE.style.visibility = "hidden";
+            choiceF.style.visibility = "hidden";
+            choiceG.style.visibility = "hidden";
+            choiceH.style.visibility = "hidden";
         }
         else if(newScreen == screens[3])//"HAIR STYLE"
         {
@@ -436,6 +449,15 @@ $(function wardrobe()
             choiceF.innerHTML = "";
             choiceG.innerHTML = "";
             choiceH.innerHTML = "";
+            
+            choiceA.style.visibility = "visible";
+            choiceB.style.visibility = "visible";
+            choiceC.style.visibility = "visible";
+            choiceD.style.visibility = "visible";
+            choiceE.style.visibility = "hidden";
+            choiceF.style.visibility = "hidden";
+            choiceG.style.visibility = "hidden";
+            choiceH.style.visibility = "hidden";
         }
         else if(newScreen == screens[4])//"SHOES"
         {
@@ -447,15 +469,42 @@ $(function wardrobe()
             choiceF.innerHTML = "";
             choiceG.innerHTML = "";
             choiceH.innerHTML = "";
+
+            choiceA.style.visibility = "visible";
+            choiceB.style.visibility = "hidden";
+            choiceC.style.visibility = "hidden";
+            choiceD.style.visibility = "hidden";
+            choiceE.style.visibility = "hidden";
+            choiceF.style.visibility = "hidden";
+            choiceG.style.visibility = "hidden";
+            choiceH.style.visibility = "hidden";
+        }
+        else if(newScreen == screens[5])//"SKIN COLOR"
+        {
+            choiceA.innerHTML = skin_color[0];
+            choiceB.innerHTML = skin_color[1];
+            choiceC.innerHTML = skin_color[2];
+            choiceD.innerHTML = skin_color[3];
+            choiceE.innerHTML = skin_color[4];
+            choiceF.innerHTML = "";
+            choiceG.innerHTML = "";
+            choiceH.innerHTML = "";
+
+            choiceA.style.visibility = "visible";
+            choiceB.style.visibility = "visible";
+            choiceC.style.visibility = "visible";
+            choiceD.style.visibility = "visible";
+            choiceE.style.visibility = "visible";
+            choiceF.style.visibility = "hidden";
+            choiceG.style.visibility = "hidden";
+            choiceH.style.visibility = "hidden";
         }
 
         currentScreen = newScreen;
     }
 
-    function itemClick(newItem, position)
+    function itemClick(newItem, position)//determines what screen we're on, and what we clicked4
     {
-        // alert(newItem);
-        
         if(currentScreen == screens[0])//"SEX"
         {
             pushToDB('sex', position);
@@ -476,12 +525,14 @@ $(function wardrobe()
         {
             pushToDB('shoes', position);
         }
+        else if(currentScreen == screens[5])//"SHOES"
+        {
+            pushToDB('skin_color', position);
+        }
     }
 
-    function pushToDB(SQLname, value)
+    function pushToDB(SQLname, value)//saves to the database
     {
-        // alert("push: " + SQLname + " - " + value);
-        
         if(SQLname == 'sex')
         {
             $.post('profile/savePresets.php',
@@ -515,6 +566,13 @@ $(function wardrobe()
             $.post('profile/savePresets.php',
             {
                 'shoes': value,
+            });
+        }
+        else if(SQLname == 'skin_color')
+        {
+            $.post('profile/savePresets.php',
+            {
+                'skin_color': value,
             });
         }
 

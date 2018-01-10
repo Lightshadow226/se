@@ -2,11 +2,10 @@
 
 `TODO: Next`
 
-- *DATABASE*            [variables.js]                                          enregistrer toutes les variables dans la DB d'une shot (à chaque fois qu'on click quelque part sur la page)
+
 - *DATABASE*            [variables.js, getvariables.php, pushvariables.php]     AJOUTER "user.physicalLocation" dans le get et le push de DB_handle
 - *CHAPTER INPUT*       [chapter1.js]                                           la chapitre 1 est terminé jusqu'à la slide 129, donc il va falloir valider le reste + rajouter les émotions
 - *CHAPTER INPUT*       [chapter1.js]                                           il reste à ajouter les ghost slides pour la slide 44 (221-224)
-- *CHAPTER INPUT*       [variables.js, getvariables.php, pushvariables.php]     terminer toutes les manipulations PHP/JS
 
 
 `TODO: in Order`

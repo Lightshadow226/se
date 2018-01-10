@@ -87,4 +87,20 @@ include_once '../resources/utilities.php';
     {
         echo $ex;
     }
+
+    //SKIN COLOR
+    try
+    {
+        $shoes = $_POST['skin_color'];
+
+        $sqlQuery1 = "UPDATE scholarinfo SET scholar_skincolor = '$shoes' WHERE id = '$id'";
+        $statement = $db->prepare($sqlQuery1);
+        $statement->execute();
+
+        $status = "SQL Sent!";
+    }
+    catch (PDOException $ex)
+    {
+        echo $ex;
+    }
 ?>

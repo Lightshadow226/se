@@ -226,6 +226,26 @@ function getPersonnageFromName(name)
     {
         return tyler;
     }
+    else if(name == "ladya")
+    {
+        return lady_arlington;
+    }
+    else if(name == "Coach Davis")
+    {
+        return coach_davis;
+    }
+    else if(name == "Serena")
+    {
+        return serena;
+    }
+    else if(name == "ca")
+    {
+        return cecile;
+    }
+    else if(name == "Teacher 2")
+    {
+        return teacher_chapter_2;
+    }
 }
 
 function loadAllImages()

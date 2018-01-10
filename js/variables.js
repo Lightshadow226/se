@@ -79,20 +79,6 @@ var user =
 
 //All Characters
 
-    var lady_arlington = 
-    {
-        isDatable: false,//const
-        affinity: 20,
-        isCrush: false,
-        name: "Lady Arlington",//const
-        fullName: "Lady Arlington",//const
-        path: "undefinedddddd",//const, no caps
-        birthday: "unknown",//const
-        likes: "unknown",//const
-        dislikes: "unknown",//const
-        description: "unknown",//const
-    }
-
     var alistair = 
     {
         isDatable: true,//const
@@ -105,7 +91,7 @@ var user =
         likes: "Sports, protein shakes and his family",//const
         dislikes: "Arrogance, laziness, coldness",//const
         description: "The most promising athlete of the school, he’s on a scholarship just like your Scholar! Alistair specializes in martial arts in general, but his favorite sport is boxing, in which he dreams of making a career out of it and competing in the Olympic Games one day. Unlike most of his classmates, Alistair comes from a middle-class family that struggles with money, and he’s determined to change that. Despite the difference in social classes, he and Tadashi have been best friends for a long time.",//const
-    }
+    };
 
     var axel = 
     {
@@ -119,7 +105,7 @@ var user =
         likes: "Rock music, skipping classes and his guitar",//const
         dislikes: "Tadashi, country music, hypocrisy",//const
         description: "The rock star of the Academy. Literally. Axel is an internationally known teenage superstar and is usually seen touring for his new album. Cocky, sarcastic, and oh-so-charming, Axel only comes to Arlington because the law requires him to get his high school diploma and he makes sure everybody is aware of his nonchalance…But this musician constantly covers up who he is. In fact, is Axel even his real name?",//const
-    }
+    };
 
     var claire = 
     {
@@ -133,7 +119,7 @@ var user =
         likes: "Helping People, reading scientific papers and pretty notebooks",//const
         dislikes: "rudeness, being made fun of, suffering",//const
         description: "Claire is an aspiring neurosurgeon that volunteers part-time at the local hospital. Deeply caring and protective of the people she loves, she’s the student everybody loves and respects, despite her spending most of her time studying and doing medical research alone. Claire will do anything to make her classmates happy, and she’ll do so with a smile. After all, the last thing she wants it to lose yet another person she cares about.",//const
-    }
+    };
 
     var ellie = 
     {
@@ -147,7 +133,7 @@ var user =
         likes: "Mechanics, talking to people and dyeing her hair",//const
         dislikes: "Bullying, not being taken seriously, everything boring",//const
         description: "Inventor, mechanic and engineer to be, Ellie, nicknamed as “Tinker” by students is the famous president of Arlington’s robotics club! Despite being in a male-dominated field, Ellie is not afraid to shine. She loves meeting new people and has a cute, cheerful exterior that charms her potential clients. But as time passes, Ellie realizes that there are several obstacles that might put not only her career at risk…but her identity as well.",//const
-    }
+    };
 
     var karolina = 
     {
@@ -161,7 +147,7 @@ var user =
         likes: "Shopping, clothes, modelling and getting what she wants",//const
         dislikes: "Being bothered, ugly clothes, being told what to do",//const
         description: "Considered by many to be the prettiest girl in school, Karolina specializes in modelling. She’s gorgeous and fully aware of her charm. In fact, she makes sure that everybody knows that she’s the hottest, coolest, most amazing girl in this whole establishment, okay?! She is ruthless and will do anything to get what she wants. However, despite her overachieving ways and her promising future, Karolina finds herself struggling with her image…so much that it starts affecting her mental state and health. Her best friend and “second in command” is Neha.",//const
-    }
+    };
     
     var neha = 
     {
@@ -175,7 +161,7 @@ var user =
         likes: "Colourful fabrics, innovative designs, The colour gold",//const
         dislikes: "Fashion disasters, being forced to be social, science class",//const
         description: "An aspiring fashion designer, Neha loves making her own clothes and other’s clothes. She spends countless hours designing seasonal collections and actually sells them to the students of Arlington (at a very high price!) Her success in the school is huge and she’s almost always sold out…but she’s using that success to hide her secret…a secret she believes will destroy her. She uses Karolina as her main model and is Axel’s official stylist for his concerts and photoshoots. Rather reserved and cold, Neha can, however, be surprisingly nice…whenever Karolina isn’t around.",//const
-    }
+    };
 
     var raquel = 
     {
@@ -189,7 +175,7 @@ var user =
         likes: "Soccer, winning and fast Food",//const
         dislikes: "Homework, classical music, party Poopers",//const
         description: "Raquel is passionate, borderline obsessed about soccer! A promising athlete in the athletics department, she’s energetic, ambitious and has no time for any crap. Despite being the most direct and honest student in Arlington, she can’t help but have a secret too…a secret she tries really hard to hide from her family. Raquel is always in it for the win, and that’s because she simply cannot afford to lose.",//const
-    }
+    };
 
     var tadashi = 
     {
@@ -203,7 +189,7 @@ var user =
         likes: "Leading people, finance and relaxing",//const
         dislikes: "Axel, inefficiency, dishonesty",//const
         description: "Tadashi is the current Student Body President of Arlington Academy. Having the highest GPA of the school, an estimated IQ of 160, being a star student and a jack of all trades, Tadashi doesn’t have time for any crap…and that means it will be very hard for your Scholar to get to know him. You’ll have to be sharp, organized and future-oriented…because the future is exactly what troubles this guy.",//const
-    }
+    };
     
     var tegan = 
     {
@@ -217,7 +203,7 @@ var user =
         likes: "Video games, computers and taking Naps",//const
         dislikes: "Aggressiveness, loud parties, when his computer lags",//const
         description: "A European foreign student, Tegan specializes in Computer Science. He loves to program and spends the majority of his time in front of the computer. He also loves robotics and any kind of engineering. He has the second highest GPA of the school, beaten only by Tadashi. But despite his adorkableness and his intelligence, Tegan faces a lot of pressure from people…people who won’t believe in him and his dreams. His roommate and best friend is Tyler and he has a twin sister: Karolina.",//const
-    }
+    };
 
     var tyler = 
     {
@@ -231,7 +217,77 @@ var user =
         likes: "Drawing, being the center of attention, going to the crafts store",//const
         dislikes: "Structure, school, close-mindedness",//const
         description: "A graphic designer in the Fine Arts department and highly skilled in anything involving visuals, thanks to his photographic memory, Tyler loves to be the center of attention! He is an artist from head to toe: charming, sensitive, creative…and highly critical of himself. It’s hard to constantly feel like your work isn’t good enough, especially when rejection is everywhere you look. Despite being very different, Tyler and Tegan make an incredible team, and being their friend comes with a lot of advantages!",//const
-    }
+    };
+
+    var lady_arlington = 
+    {
+        isDatable: false,//const
+        affinity: 20,
+        isCrush: false,
+        name: "Lady Arlington",//const
+        fullName: "Lady Arlington",//const
+        path: "undefinedddddd",//const, no caps
+        birthday: "unknown",//const
+        likes: "unknown",//const
+        dislikes: "unknown",//const
+        description: "unknown",//const
+    };
+
+    var coach_davis = 
+    {
+        isDatable: false,//const
+        affinity: 0,
+        isCrush: false,
+        name: "Coach Davis",//const
+        fullName: "Coach Davis",//const
+        path: "",//const, no caps
+        birthday: "",//const
+        likes: "",//const
+        dislikes: "",//const
+        description: "",//const
+    };
+    
+    var serena = 
+    {
+        isDatable: false,//const
+        affinity: 0,
+        isCrush: false,
+        name: "Serena",//const
+        fullName: "Serena",//const
+        path: "",//const, no caps
+        birthday: "",//const
+        likes: "",//const
+        dislikes: "",//const
+        description: "",//const
+    };
+
+    var cecile = 
+    {
+        isDatable: false,//const
+        affinity: 0,
+        isCrush: false,
+        name: "Cecile",//const
+        fullName: "Cecile",//const
+        path: "",//const, no caps
+        birthday: "",//const
+        likes: "",//const
+        dislikes: "",//const
+        description: "",//const
+    };
+
+    var teacher_chapter_2 = 
+    {
+        isDatable: false,//const
+        affinity: 0,
+        isCrush: false,
+        name: "Teacher 2",//const
+        fullName: "Teacher 2",//const
+        path: "",//const, no caps
+        birthday: "",//const
+        likes: "",//const
+        dislikes: "",//const
+        description: "",//const
+    };
 
     /* Template *
     
@@ -383,102 +439,75 @@ function pullVariablesFromDB()
 
     $('#DB_handle').load('dbtransfers/get_variables.php', function()//pull variables from the DB
     {
-        //*********************************************
-        //USERINFO table
-        //*********************************************
-
+        /********************
+        USERINFO table
+        *********************/
         user.username = document.getElementById("db_handle_username").innerHTML;
-        // alert(user.username);
-        
         user.energy = document.getElementById("db_handle_energy").innerHTML;
-        
         user.money = document.getElementById("db_handle_money").innerHTML;
-        
-        //*****nb_replay is unused*****
 
-        //*********************************************
-        //STORY table
-        //*********************************************
+        /********************
+        STORY table
+        *********************/
+        user.storyLocation = document.getElementById("db_handle_story_location").innerHTML;//we should use an input and .value
+        user.last_chapter_played = document.getElementById("db_handle_last_chapter_played").innerHTML;//we should use an input and .value
 
-        user.storyLocation = document.getElementById("db_handle_story_location").innerHTML;
-        
-        user.storyLocation = user.storyLocation;
-
-        user.last_chapter_played = document.getElementById("db_handle_last_chapter_played").innerHTML;
-        // alert(user.last_chapter_played);
-
-        //*********************************************
-        //AFFINITY table
-        //*********************************************
-
-        karolina.affinity = document.getElementById("db_handle_a1").innerHTML;
-
-        ellie.affinity = document.getElementById("db_handle_a2").innerHTML;
-        
-        neha.affinity = document.getElementById("db_handle_a3").innerHTML;
-        
-        raquel.affinity = document.getElementById("db_handle_a4").innerHTML;
-        
-        claire.affinity = document.getElementById("db_handle_a5").innerHTML;
-        
-        alistair.affinity = document.getElementById("db_handle_a6").innerHTML;
-
-        // alert("alistair's affinity: " + alistair.affinity);
-        
-        tadashi.affinity = document.getElementById("db_handle_a7").innerHTML;
-        
-        tegan.affinity = document.getElementById("db_handle_a8").innerHTML;
-        
-        tyler.affinity = document.getElementById("db_handle_a9").innerHTML;
-        
-        axel.affinity = document.getElementById("db_handle_a10").innerHTML;
-        
-        lady_arlington.affinity = document.getElementById("db_handle_a11").innerHTML;
-        
-        // coach_davis.affinity = document.getElementById("db_handle_a12").innerHTML;
-        
-        // serena.affinity = document.getElementById("db_handle_a13").innerHTML;
-        
-        // cecile.affinity = document.getElementById("db_handle_a14").innerHTML;
-        
-        // teacher_chapter_2.affinity = document.getElementById("db_handle_a15").innerHTML;
-        
-        /*if(relationship_enabled)//if we're on the page RELATIONSHIP
-        {
-            // create_interface();
-        }*/
+        /********************
+        AFFINITY table
+        *********************/
+        karolina.affinity = document.getElementById("db_handle_a1").value;
+        ellie.affinity = document.getElementById("db_handle_a2").value;
+        neha.affinity = document.getElementById("db_handle_a3").value;
+        raquel.affinity = document.getElementById("db_handle_a4").value;
+        claire.affinity = document.getElementById("db_handle_a5").value;
+        alistair.affinity = document.getElementById("db_handle_a6").value;
+        tadashi.affinity = document.getElementById("db_handle_a7").value;
+        tegan.affinity = document.getElementById("db_handle_a8").value;
+        tyler.affinity = document.getElementById("db_handle_a9").value;
+        axel.affinity = document.getElementById("db_handle_a10").value;
+        lady_arlington.affinity = document.getElementById("db_handle_a11").value;
+        coach_davis.affinity = document.getElementById("db_handle_a12").value;
+        serena.affinity = document.getElementById("db_handle_a13").value;
+        cecile.affinity = document.getElementById("db_handle_a14").value;
+        teacher_chapter_2.affinity = document.getElementById("db_handle_a15").value;
     });
 }
 
 function pushVariablesToDB()
 {
-    var db_handler = document.getElementById("DB_handle");
+    $.post('dbtransfers/push_variables.php',
+    {
+        //*********************************************
+        //USERINFO table
+        //*********************************************
+        'username': user.username,
+        'energy': user.energy,
+        'money': user.money,
 
-        db_handler.innerHTML = "";//empty the db handler first, to create all the elements only once
-        
-    var db_handle_story_location = document.createElement('input');
-        db_handle_story_location.type = "text";
-        db_handle_story_location.id = "db_handle_story_location";
-        db_handle_story_location.value = user.storyLocation;
+        //*********************************************
+        //STORY table
+        //*********************************************
+        'storylocation': user.storyLocation,
+        'lastchapterplayed': user.last_chapter_played,
 
-    var db_handle_last_chapter_played = document.createElement('input');
-        db_handle_last_chapter_played.type = "text";
-        db_handle_last_chapter_played.id = "db_handle_last_chapter_played";
-        db_handle_last_chapter_played.value = user.last_chapter_played;
-
-    db_handler.appendChild(db_handle_story_location);
-    db_handler.appendChild(db_handle_last_chapter_played);
-    
-    // alert($('#db_handle_story_location').val());
-    // alert($('#db_handle_last_chapter_played').val());
-    // alert(document.getElementById("db_handle_story_location").innerHTML);
-
-    var storylocation = $('#db_handle_story_location').val();
-    var lastchapterplayed = $('#db_handle_last_chapter_played').val();
-    
-    $.post('dbtransfers/push_variables.php', {
-        'storylocation': storylocation,
-        'lastchapterplayed': lastchapterplayed
+        //*********************************************
+        //AFFINITY table
+        //*********************************************
+        'karolina_affinity': karolina.affinity,
+        'ellie_affinity': ellie.affinity,
+        'neha_affinity': neha.affinity,
+        'raquel_affinity': raquel.affinity,
+        'claire_affinity': claire.affinity,
+        'alistair_affinity': alistair.affinity,
+        'tadashi_affinity': tadashi.affinity,
+        'tegan_affinity': tegan.affinity,
+        'tyler_affinity': tyler.affinity,
+        'axel_affinity': axel.affinity,
+        'lady_arlington_affinity': lady_arlington.affinity,
+        'coach_davis_affinity': coach_davis.affinity,
+        'serena_affinity': serena.affinity,
+        'cecile_affinity': cecile.affinity,
+        'teacher_chapter_2_affinity': teacher_chapter_2.affinity,
     });
 }
 
