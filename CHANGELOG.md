@@ -1,5 +1,11 @@
 #CHANGELOG
 
+Version 1.3.7
+
+- added the rounded corners everywhere
+- added the quiz for the website that is currently online (almost done, small details to add)
+- added the old website folder
+
 Version 1.3.6
 - *DATABASE*            [variables.js]              enregistré toutes les variables dans la DB d'une shot (à chaque fois qu'on clique quelque part sur la page)
 - *CHAPTER INPUT*       [variables.js, getvariables.php, pushvariables.php]     terminé toutes les manipulations PHP/JS (push and pull)

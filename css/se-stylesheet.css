@@ -5,6 +5,11 @@
 	#ff4956 - ROSE
     #682666 - MAUVE
     #F7B334 - JAUNE
+    #EFEEEA - GREY rgb(239, 238, 234) - GREY
+
+	#e42371 - Fun Pink (progress bar)
+	
+	color shades: http://www.0to255.com/682666
 
 	July 8, 2017
 */
@@ -199,6 +204,8 @@
 	{
 		background-color:#EE4C5E;
 		height: 25px;
+		border-top-right-radius: 10px;
+		border-top-left-radius: 10px;
 	}
 
 	#pink_menu/*navigation menu*/
@@ -237,6 +244,8 @@
 		letter-spacing: 0.2em;
 		width: 80%;
 		box-shadow: 0 0 5px #83827d;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
 	}
 
 /**********INDEX.PHP**********/
@@ -251,6 +260,8 @@
 	#img_banner
 	{
 		width: 100%;
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius:  10px;
 	}
 
 	#button_container
@@ -773,6 +784,7 @@
 		margin-bottom: 5px;
 		padding: 0px;
 		max-height: 350px;
+		border-radius: 10px;
 	}
 
 	.line-big
@@ -857,6 +869,8 @@
 	{
 		/* max-height: 350px; */
 		width: auto;
+		border-top-left-radius: 10px;
+		border-bottom-left-radius: 10px;
 	}
 
 	.inf_meter
@@ -1112,6 +1126,7 @@
 		background-color: white;
 		box-shadow: 0 0 5px #83827d;/*5px blur*/
 		margin: 5px 0px 5px 0px;/*top - right - bottom - left*/
+		border-radius: 10px;
 	}
 
 	.card-all-margin
@@ -1121,10 +1136,19 @@
 		margin: 5px;
 	}
 
+	.card-firstdiv/*no margin*/
+	{
+		background-color: white;
+		box-shadow: 0 0 5px #83827d;
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
+	}
+
 	.card-nomargin/*no margin*/
 	{
 		background-color: white;
 		box-shadow: 0 0 5px #83827d;
+		border-radius: 10px;
 	}
 
 	.card-header
@@ -1132,6 +1156,8 @@
 		background-color:#F7B334;
 		text-align: center;
 		padding: 5px;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
 	}
 
 	.card-content

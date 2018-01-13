@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Sweet Elite : School Gear for you!</title>
+<link href="se-stylesheet.css" rel="stylesheet" type="text/css">
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+
+<!---START TOP PURPLE BAR WITH USER INFO --->
+<div class="user_information">
+<font class="hello_user">Hello there, future scholar!</font></div>
+<!---END TOP PURPLE BAR WITH USER INFO--->
+
+<div class="white_links_logo">
+
+<!---START LOGO --->
+<div class="se_logo"><a href="http://www.sweetelitegame.com/" target="_parent"><img src="images/se-logo.png"></a></div>
+<!---END LOGO --->
+
+<div class="white_float_window">
+
+<!---START PINK NAV BAR DESKTOP --->
+<div class="pink_nav_bar_desktop">
+&nbsp;
+ </div>
+ 
+ <!---END PINK NAV BAR DESKTOP--->
+
+
+<div class="page_content">
+<h1>School Gear</h1>
+<p><a href="http://sweetelite-staff.tumblr.com/ask" target="_blank">If you are having any issues installing these badges you can contact Courtney for help through the staff tumblr blog ask page.</a> All tags can be found through the find function on your browser.</p>
+<h2>ALL badges plus Arlington Academy logo rotation on page refresh</h2>
+<p>Go to: blog > edit theme > Edit html > Copy and paste this code right AFTER the &lt;body&gt; tag.</p> 
+
+<textarea cols="50" rows="3">&lt;script&gt; 
+
+            var Acuity = window.Acuity || {};
+
+        
+
+            Acuity.showFlickrPhotos = {block:IfShowFlickrPhotos}true{/block:IfShowFlickrPhotos}{block:IfNotShowFlickrPhotos}false{/block:IfNotShowFlickrPhotos};
+
+            Acuity.showDribbbleShots = {block:IfShowDribbbleShots}true{/block:IfShowDribbbleShots}{block:IfNotShowDribbbleShots}false{/block:IfNotShowDribbbleShots};
+
+        
+
+            {block:IfFlickrID}Acuity.flickrID = '{text:Flickr ID}';{/block:IfFlickrID}
+
+            {block:IfDribbbleUsername}Acuity.dribbbleUsername = '{text:Dribbble Username}';{/block:IfDribbbleUsername}
+
+        &lt;/script&gt;
+</textarea>
+<p>THEN copy and paste the code below at the bottom of your blog code right BEFORE the &lt;/body&gt; tag, also called the closing body tag.</p>
+<textarea cols="50" rows="3">
+  <script language="JavaScript">
+
+function random_imglink(){
+
+var myimages=new Array()
+
+//specify random images below. You can have as many as you wish
+
+myimages[1]="http://www.sweetelitegame.com/pubdomain/blog-badge-AA.png",
+
+myimages[2]="http://www.sweetelitegame.com/pubdomain/blog-badge-athletic.png",
+
+myimages[3]="http://www.sweetelitegame.com/pubdomain/blog-badge-business.png",
+
+myimages[4]="http://www.sweetelitegame.com/pubdomain/blog-badge-fashion.png",
+
+myimages[5]="http://www.sweetelitegame.com/pubdomain/blog-badge-finearts.png",
+
+myimages[6]="http://www.sweetelitegame.com/pubdomain/blog-badge-biology.png",
+
+myimages[7]="http://www.sweetelitegame.com/pubdomain/blog-badge-performingarts.png",
+
+myimages[8]="http://www.sweetelitegame.com/pubdomain/blog-badge-sciences.png"
+
+var ry=Math.floor(Math.random()*myimages.length)
+
+if (ry==0)
+
+ry=1
+
+document.write('<img src="'+myimages[ry]+'" border=0 id="randomImage">')
+
+}
+
+random_imglink()
+
+//-->
+
+</script>
+</textarea>
+
+<h2>Single badges</h2>
+Go to: blog > edit theme > Edit html > Copy and paste this code BEFORE the &lt;/body&gt; tag.
+<span style="text-align:center;">
+<h2>Department of ATHLETICS</h2>
+<p>
+<img src="http://www.sweetelitegame.com/pubdomain/blog-badge-athletic.png" height="150px"><br>
+<textarea cols="50" rows="3"><div style="float:left; position:fixed; left:0; bottom:0;"><a href="http://sweetelite-staff.tumblr.com" target="_blank"><img src="http://www.sweetelitegame.com/pubdomain/blog-badge-athletic.png"></a></div></textarea>
+</p>
+<h2>Department of BUSINESS, COMMERCE & POLITICS</h2>
+<p>
+<img src="http://www.sweetelitegame.com/pubdomain/blog-badge-business.png" height="150px"><br>
+<textarea cols="50" rows="3"><div style="float:left; position:fixed; left:0; bottom:0;"><a href="http://sweetelite-staff.tumblr.com" target="_blank"><img src="http://www.sweetelitegame.com/pubdomain/blog-badge-business.png"></a></div></textarea>
+</p>
+<h2>Department of FASHION</h2>
+<p>
+<img src="http://www.sweetelitegame.com/pubdomain/blog-badge-fashion-r1.png" height="150px"><br>
+<textarea cols="50" rows="3"><div style="float:left; position:fixed; left:0; bottom:0;"><a href="http://sweetelite-staff.tumblr.com" target="_blank"><img src="http://www.sweetelitegame.com/pubdomain/blog-badge-fashion-r1.png"></a></div></textarea>
+</p>
+<h2>Department of FINE ARTS</h2>
+<p>
+<img src="http://www.sweetelitegame.com/pubdomain/blog-badge-finearts.png" height="150px"><br>
+<textarea cols="50" rows="3"><div style="float:left; position:fixed; left:0; bottom:0;"><a href="http://sweetelite-staff.tumblr.com" target="_blank"><img src="http://www.sweetelitegame.com/pubdomain/blog-badge-finearts.png"></a></div></textarea>
+</p>
+<h2>Department of HEALTH SCIENCES & BIOLOGY</h2>
+<p>
+<img src="http://www.sweetelitegame.com/pubdomain/blog-badge-biology.png" height="150px"><br>
+<textarea cols="50" rows="3"><div style="float:left; position:fixed; left:0; bottom:0;"><a href="http://sweetelite-staff.tumblr.com" target="_blank"><img src="http://www.sweetelitegame.com/pubdomain/blog-badge-biology.png"></a></div></textarea>
+</p>
+<h2>Department of PERFORMING ARTS</h2>
+<p>
+<img src="http://www.sweetelitegame.com/pubdomain/blog-badge-performingarts.png" height="150px"><br>
+<textarea cols="50" rows="3"><div style="float:left; position:fixed; left:0; bottom:0;"><a href="http://sweetelite-staff.tumblr.com" target="_blank"><img src="http://www.sweetelitegame.com/pubdomain/blog-badge-performingarts.png"></a></div></textarea>
+</p>
+<h2>Department of PURE AND APPLIED SCIENCES</h2>
+<p>
+<img src="http://www.sweetelitegame.com/pubdomain/blog-badge-sciences.png" height="150px"><br>
+<textarea cols="50" rows="3"><div style="float:left; position:fixed; left:0; bottom:0;"><a href="http://sweetelite-staff.tumblr.com" target="_blank"><img src="http://www.sweetelitegame.com/pubdomain/blog-badge-sciences.png"></a></div></textarea>
+</span>
+</div>
+
+<!---START LEGAL--->
+<div class="legal_information"> Sweet Elite © 2016. All rights reserved.</div>
+<!---END LEGAL--->
+</div>
+
+</div>
+
+</body>
+</html>

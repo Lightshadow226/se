@@ -149,8 +149,7 @@
 			<!-- CHARACTER RANDOMIZER -->
 			<div class="card-nomargin flex-container"><!-- style="height=780px;" -->
 				<div class = "flex-panel">
-					<img class = "img-badge" style="height:100%;" src = "images/banners/customize_your_character.png"></img>
-				
+					<img class = "img-badge" style="height:100%; border-top-left-radius: 10px; border-bottom-left-radius: 10px;" src = "images/banners/customize_your_character.png"></img>
 				</div>
 
 				<div class = "flex-panel2 flex-container">
@@ -220,7 +219,7 @@
 
 		<?php else: ?><!-- logged in -->
 
-			<div class="card-nomargin add_padding">
+			<div class="card-firstdiv add_padding">
 				<!-- <h1>Homepage</h1> -->
 				<p>Welcome Back, <?php if(isset($_SESSION['username'])) echo $_SESSION['username']; ?>!</p> <!-- <a href="logout.php">Logout</a> </p> -->
 			</div>
@@ -240,7 +239,7 @@
 				
 			<div id="merchandise">
 				<div class = "flex-panel">
-					<img class = "img-badge" style="height:100%;" src = "images/banners/customize_your_character.png"></img>
+					<img class = "img-badge" style="height:100%; border-bottom-left-radius: 10px;" src = "images/banners/customize_your_character.png"></img>
 				</div>
 				
 				<div class = "flex-panel">
@@ -252,7 +251,7 @@
 				</div>
 				
 				<div class = "flex-panel">
-					<img class = "img-badge" style="height:100%;" src = "images/banners/customize_your_character.png"></img>
+					<img class = "img-badge" style="height:100%; border-bottom-right-radius: 10px;" src = "images/banners/customize_your_character.png"></img>
 				</div>
 				</div>
 			</div>

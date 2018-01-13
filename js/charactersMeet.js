@@ -60,19 +60,19 @@ var description =
     "Soccer Team Captain"
 ];
 
-appendImage(chara_1, 0);
-appendImage(chara_1, 1);
-appendImage(chara_1, 2);
-appendImage(chara_1, 3);
-appendImage(chara_1, 4);
+appendImage(chara_1, 0, false, false);
+appendImage(chara_1, 1, false, false);
+appendImage(chara_1, 2, false, false);
+appendImage(chara_1, 3, false, false);
+appendImage(chara_1, 4, false, false);
 
-appendImage(chara_2, 5);
-appendImage(chara_2, 6);
-appendImage(chara_2, 7);
-appendImage(chara_2, 8);
-appendImage(chara_2, 9);
+appendImage(chara_2, 5, true, false);
+appendImage(chara_2, 6, false, false);
+appendImage(chara_2, 7, false, false);
+appendImage(chara_2, 8, false, false);
+appendImage(chara_2, 9, false, true);
 
-function appendImage(parent, c_index)
+function appendImage(parent, c_index, borderRadiusBottomLeft, borderRadiusBottomRight)
 {
     var container = document.createElement('div');//This container contains the image
 
@@ -88,15 +88,18 @@ function appendImage(parent, c_index)
         image.src = "images/general/characters/chara_icons/"+ characters[c_index] + ".png";
         image.style.flex = "1";
         image.style.display = "block";
-        //image.style.margin = "10px";
-        
         image.style.width="100%";
-        //image.style.maxWidth = "400px";
-        //image.style.height="auto";
-        //image.style.maxHeight = "200px";
-                
-        /*image.style.height = "100%";
-        image.style.width = "auto";*/
+
+        if(borderRadiusBottomLeft)//TODO: il faut que les overlays soient également ronds dans les coins
+        {
+            image.style.borderRadiusBottomLeft = "10px";
+            image.style.webkitBorderBottomLeftRadius = "10px";
+        }
+        
+        if (borderRadiusBottomRight)//TODO: il faut que les overlays soient également ronds dans les coins
+        {
+            image.style.webkitBorderBottomRightRadius = "10px";
+        }
         
     var overlay = document.createElement('div');
 

@@ -8,7 +8,6 @@
     #EFEEEA - GREY rgb(239, 238, 234) - GREY
 
     #e42371 - Fun Pink (progress bar)
-    #
 
     July 23, 2017
 */
@@ -20,394 +19,394 @@
 
 /*STRUCTURE*/
 
-#objectiveContainer
-{
-    color: black;
-    /* border: 2px solid #ff4956; */
-    /* border-radius: 20px; */
-    background-color: white;
-    padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    font-weight: 400;
-    /* padding-bottom: 50px; */
-}
+    #objectiveContainer
+    {
+        color: black;
+        /* border: 2px solid #ff4956; */
+        /* border-radius: 20px; */
+        background-color: white;
+        padding: 10px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-weight: 400;
+        /* padding-bottom: 50px; */
+    }
 
-#progress_bar_logo
-{
-    position: absolute;
-    margin-top: -23px;
-}
+    #progress_bar_logo
+    {
+        position: absolute;
+        margin-top: -23px;
+    }
 
-#progress_bar_container
-{
-    height: 20px;
-    margin-top: 30px;
-    margin-bottom: 10px;
-    /* border: 2px solid #EFEEEA; */
-    /* height: auto; */
-    /* padding: 5px; */
-    position: static;
-}
+    #progress_bar_container
+    {
+        height: 20px;
+        margin-top: 30px;
+        margin-bottom: 10px;
+        /* border: 2px solid #EFEEEA; */
+        /* height: auto; */
+        /* padding: 5px; */
+        position: static;
+    }
 
-#progress_bar
-{
-    color: #e42371;
-    /* border: 2px solid white; */
-    background-color: #e42371;
-    /* background-color: darkbluen; */
+    #progress_bar
+    {
+        color: #e42371;
+        /* border: 2px solid white; */
+        background-color: #e42371;
+        /* background-color: darkbluen; */
+        
+        /* height: 15px; */
+        margin-bottom: 10px;
+        padding: 5px;
+        min-width: 2em;
+        text-align: right;
+        font-weight: 400;
+
+        /* position: relative; */
+        left: 0px;
+        float: left;
+        border-radius: 15px;
+    }
+
+    #char_container
+    {
+        display: flex;
+        background-color: #EFEEEA;
+        /* background-color: white; */
+        padding: 10px;
+        width: calc(100% - 20px);/*20px pour le padding*/
+    }
+
+    #char_info_container
+    {
+        border: 2px solid #682666;
+        padding: 5px;
+        width: calc(100% - 14px);/*14px pour le padding*/
+        height: auto;
+        background-color: white;
+        /* position: absolute; */
+    }
+
+    .char_info_container_invisible
+    {
+        visibility: hidden;
+    }
+
+    .game_char_portraits
+    {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 50%;
+        /* border: 2px solid #682666; */
+    }
+
+    .game_char_portraits:hover
+    {
+        cursor: pointer;
+        /*rajouter de la couleur sur l'image*/
+    }
+
+    #customize_character_container
+    {
+        position: absolute;
+        border: 2px solid #682666;
+        height: calc(100% - 4px);
+        width: calc(100% - 4px);
+        /* bottom: 0px;
+        left: 0px; */
+        opacity: 0.8;
+        -webkit-user-select: none;
+        cursor: pointer;
+        z-index: 10;/*the images are z = 1, so this will be on top*/
+    }
+
+    .customize_character_img
+    {
+        position: absolute;
+        
+        height: 100%;
+        /* bottom: 0px;
+        left: 0px; */
+        opacity: 0.8;
+        -webkit-user-select: none;
+        cursor: pointer;
+        z-index: 9;/*the images are z = 1, so this will be on top*/
+        /* -webkit-filter: hue-rotate(120deg); */
+    }
+
+    #game_frame
+    {
+        background-size: 100%;/*acts as width: 100%;*/
+        background-repeat: no-repeat;
+        /* vertical-align: bottom; */
+        
+        height: 100%;
+        
+        display: flex;
+        position: relative;
+        margin: 0 !important;   
+    }
+
+    .bubble
+    {
+        margin-top: 100px;
+        border-radius: 10px;
+        opacity: 0.85;
+        /*padding: 20px; on met le padding dans le file JS plutôt que dans le CSS parce qu'on veut que le bubble disparaisse quand elle n'est pas utilisée*/
+    }
+
+    #game_overlay
+    {
+        display: flex;
+        position: absolute;
+        /*left: 0;
+        top: 0;*/
+        height: 100%;
+        width: 100%;
+        
+        /*transform: translateX(-1000px);*/
+        /*margin: 0 !important;*/
+        z-index: 1;
+    }
+
+    .game_overlay:hover
+    {
+        /* background-color: blue;   */
+    }
+
+    .background_img
+    {
+        position: relative;
+        width: 100%;
+        height: inherit;
+        /*max-height: 800px;*/
+    }
+
+    .left_content
+    {
+        flex: 40;
+        background-size: cover;
+        height: 100%;
+        width: auto;
+    }
     
-    /* height: 15px; */
-    margin-bottom: 10px;
-    padding: 5px;
-    min-width: 2em;
-    text-align: right;
-    font-weight: 400;
+    .middle_content
+    {
+        flex: 20;
+    } 
 
-    /* position: relative; */
-    left: 0px;
-    float: left;
-    border-radius: 15px;
-}
+    .right_content
+    {
+        flex: 40;
+        background-size: cover;
+        height: 100%;
+        width: auto;
+    }
 
-#char_container
-{
-    display: flex;
-    background-color: #EFEEEA;
-    /* background-color: white; */
-    padding: 10px;
-    width: calc(100% - 20px);/*20px pour le padding*/
-}
-
-#char_info_container
-{
-    border: 2px solid #682666;
-    padding: 5px;
-    width: calc(100% - 14px);/*14px pour le padding*/
-    height: auto;
-    background-color: white;
-    /* position: absolute; */
-}
-
-.char_info_container_invisible
-{
-    visibility: hidden;
-}
-
-.game_char_portraits
-{
-    width: 100px;
-    height: 100px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 50%;
-    /* border: 2px solid #682666; */
-}
-
-.game_char_portraits:hover
-{
-    cursor: pointer;
-    /*rajouter de la couleur sur l'image*/
-}
-
-#customize_character_container
-{
-    position: absolute;
-    border: 2px solid #682666;
-    height: calc(100% - 4px);
-    width: calc(100% - 4px);
-    /* bottom: 0px;
-    left: 0px; */
-    opacity: 0.8;
-    -webkit-user-select: none;
-    cursor: pointer;
-    z-index: 10;/*the images are z = 1, so this will be on top*/
-}
-
-.customize_character_img
-{
-    position: absolute;
-    
-    height: 100%;
-    /* bottom: 0px;
-    left: 0px; */
-    opacity: 0.8;
-    -webkit-user-select: none;
-    cursor: pointer;
-    z-index: 9;/*the images are z = 1, so this will be on top*/
-    /* -webkit-filter: hue-rotate(120deg); */
-}
-
-#game_frame
-{
-    background-size: 100%;/*acts as width: 100%;*/
-    background-repeat: no-repeat;
-    /* vertical-align: bottom; */
-    
-    height: 100%;
-    
-    display: flex;
-    position: relative;
-    margin: 0 !important;   
-}
-
-.bubble
-{
-    margin-top: 100px;
-    border-radius: 10px;
-    opacity: 0.85;
-    /*padding: 20px; on met le padding dans le file JS plutôt que dans le CSS parce qu'on veut que le bubble disparaisse quand elle n'est pas utilisée*/
-}
-
-#game_overlay
-{
-    display: flex;
-    position: absolute;
-    /*left: 0;
-    top: 0;*/
-    height: 100%;
-    width: 100%;
-    
-    /*transform: translateX(-1000px);*/
-    /*margin: 0 !important;*/
-    z-index: 1;
-}
-
-.game_overlay:hover
-{
-      /* background-color: blue;   */
-}
-
-.background_img
-{
-    position: relative;
-    width: 100%;
-    height: inherit;
-    /*max-height: 800px;*/
-}
-
-.left_content
-{
-    flex: 40;
-    background-size: cover;
-    height: 100%;
-    width: auto;
-}
- 
-.middle_content
-{
-    flex: 20;
-} 
-
-.right_content
-{
-    flex: 40;
-    background-size: cover;
-    height: 100%;
-    width: auto;
-}
-
-.text_container
-{
-    width: calc(100% - 20px);/*le 20px vient du padding de (10px * 2)*/
-    padding: 10px;
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    opacity: 0.8;
-    -webkit-user-select: none;
-    cursor: pointer;
-    z-index: 10;/*the images are z = 1, so this will be on top*/
-}
+    .text_container
+    {
+        width: calc(100% - 20px);/*le 20px vient du padding de (10px * 2)*/
+        padding: 10px;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        opacity: 0.8;
+        -webkit-user-select: none;
+        cursor: pointer;
+        z-index: 10;/*the images are z = 1, so this will be on top*/
+    }
 
 
-#imgLoader
-{
-    /* visibility: hidden; */ /*it's there, but not visible (it occupies the space)*/
-    display: none;/*not there (it doesn't occupy any space)*/
-}
+    #imgLoader
+    {
+        /* visibility: hidden; */ /*it's there, but not visible (it occupies the space)*/
+        display: none;/*not there (it doesn't occupy any space)*/
+    }
 
+/*CHOOSE YOUR DEPARMENT FORM*/
 
-.form_container
-{
-    position: absolute;
-    display: flex;
-    flex-direction: column;
+    .form_container
+    {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
 
-    top: 2.5%;
-    left: 50%;
-    transform: translateX(-50%);
+        top: 2.5%;
+        left: 50%;
+        transform: translateX(-50%);
 
-    width: 75%;
-    height: 85%;
+        width: 75%;
+        height: 85%;
 
-    margin: 0 auto;
-    background-color: rgb(239, 238, 234);
-    opacity: 0.95;
-}
+        margin: 0 auto;
+        background-color: rgb(239, 238, 234);
+        opacity: 0.95;
+    }
 
-.form_container
-{
-    display: flex;
-    flex-direction: column;
-}
+    .form_container
+    {
+        display: flex;
+        flex-direction: column;
+    }
 
-.form_line
-{
-    flex: 1;/*toutes les lignes vont avoir la même hauteur*/
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    text-align: left;
-    align-content: left;
-}
+    .form_line
+    {
+        flex: 1;/*toutes les lignes vont avoir la même hauteur*/
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+        align-content: left;
+    }
 
-.form_img_container
-{
-    width: 7%; 
-    height: 100%;
-}
+    .form_img_container
+    {
+        width: 7%; 
+        height: 100%;
+    }
 
-.form_img
-{
-    height: 100%;
-    float: left;
-}
+    .form_img
+    {
+        height: 100%;
+        float: left;
+    }
 
-.form_text_container
-{
-    height: 100%;
-    flex: 1;
-    
-    display: flex;
-    flex-direction: column;
-}
+    .form_text_container
+    {
+        height: 100%;
+        flex: 1;
+        
+        display: flex;
+        flex-direction: column;
+    }
 
-.padding_div
-{
-    flex: 1;
-    width: 100%;
-    user-select: none;
-    padding-left: 5px;
-    /* font-size: 1.2em; */
-}
+    .padding_div
+    {
+        flex: 1;
+        width: 100%;
+        user-select: none;
+        padding-left: 5px;
+        /* font-size: 1.2em; */
+    }
 
-.form_line_selected
-{
-    cursor: pointer;
-    
-    background-color: #682666;
-    color: white;
-}
+    .form_line_selected
+    {
+        cursor: pointer;
+        
+        background-color: #682666;
+        color: white;
+    }
 
-.form_line_unselected
-{
-    cursor: pointer;
-    
-    background-color: rgb(239, 238, 234);
-    color: black;
-}
+    .form_line_unselected
+    {
+        cursor: pointer;
+        
+        background-color: rgb(239, 238, 234);
+        color: black;
+    }
 
-.form_line:hover
-{
-    cursor: pointer;
-    color: white;
-    background-color: #ff4956;
-}
+    .form_line:hover
+    {
+        cursor: pointer;
+        color: white;
+        background-color: #ff4956;
+    }
 
 /*BUTTONS*/
 
-.directional_button /*les boutons pour se déplacer dans l'histoire*/
-{
-    position: absolute;
-    cursor: pointer;
-    -webkit-user-select: none;
-    padding: 7px;
-    width: 20px;
-    height: 20px;
-    /*max-width: 100px;*/
-    opacity: 0.90;
-    border-radius: 50%;
-    /* color: white; */
-    font-weight: 400;
-}
+    .directional_button /*les boutons pour se déplacer dans l'histoire*/
+    {
+        position: absolute;
+        cursor: pointer;
+        -webkit-user-select: none;
+        padding: 7px;
+        width: 20px;
+        height: 20px;
+        /*max-width: 100px;*/
+        opacity: 0.90;
+        border-radius: 50%;
+        /* color: white; */
+        font-weight: 400;
+    }
 
-.directional_button .tooltiptext
-{
-    visibility: hidden;
-    width: 120px;
-    background-color: rgb(239, 238, 234);
-    color: black;
-    opacity: 0.85;
-    text-align: center;
-    padding: 5px;
-    border-radius: 6px;
- 
-    /* Position the tooltip text*/
-    position: absolute;
-    z-index: 10;
-    bottom: 120%;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 10;
-}
+    .directional_button .tooltiptext
+    {
+        visibility: hidden;
+        width: 120px;
+        background-color: rgb(239, 238, 234);
+        color: black;
+        opacity: 0.85;
+        text-align: center;
+        padding: 5px;
+        border-radius: 6px;
+    
+        /* Position the tooltip text*/
+        position: absolute;
+        z-index: 10;
+        bottom: 120%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+    }
 
-.directional_button:hover .tooltiptext
-{
-    visibility: visible;
-    z-index: 10;
-}
+    .directional_button:hover .tooltiptext
+    {
+        visibility: visible;
+        z-index: 10;
+    }
 
 /*TOOLTIPS*/
 
-.friendship_romance_buttons
-{
-    position: absolute;
-    height: 25%;
-    width: auto;
-    display: block;
-    z-index: 1;
-}
+    .friendship_romance_buttons
+    {
+        position: absolute;
+        height: 25%;
+        width: auto;
+        display: block;
+        z-index: 1;
+    }
 
-.friendship_romance_buttons_img
-{
-    position: relative;
-    height: 100%;
-    width: auto;
-    display: block;
-}
+    .friendship_romance_buttons_img
+    {
+        position: relative;
+        height: 100%;
+        width: auto;
+        display: block;
+    }
 
-.friendship_romance_buttons_overlay
-{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: #ff4956;
-    z-index: 100;
-}
+    .friendship_romance_buttons_overlay
+    {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: #ff4956;
+        z-index: 100;
+    }
 
-.friendship_romance_buttons:hover .friendship_romance_buttons_overlay
-{
-    opacity: 0.65;
-    cursor: pointer;
-}
+    .friendship_romance_buttons:hover .friendship_romance_buttons_overlay
+    {
+        opacity: 0.65;
+        cursor: pointer;
+    }
 
-#scholar_sprite
-{
-    /* top: 100%;  */
-    bottom: 0%;
-    
-    /* right: 500px; */
-    
-    transform: translateX(-15%);
-}
-
+    #scholar_sprite
+    {
+        /* top: 100%;  */
+        bottom: 0%;
+        
+        /* right: 500px; */
+        
+        transform: translateX(-15%);
+    }
 
 /*POSITION*/
 
