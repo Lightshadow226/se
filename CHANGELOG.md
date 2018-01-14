@@ -1,5 +1,8 @@
 #CHANGELOG
 
+Version 1.3.10 (QUIZ)
+- *PERSONALIY QUIZ*     [quiz.html]         le  quiz peut accepter n'importe quelle quantité de questions, et les questions sont maintenant dans un fichier JS séparé
+
 Version 1.3.9 (JUNE - Static pages + small aesthetic fixes + m_shoes fix)
 - Created the following static pages: about.php, contact.php, parents.php
 - Added additional images to come with the new static pages update
@@ -7,7 +10,7 @@ Version 1.3.9 (JUNE - Static pages + small aesthetic fixes + m_shoes fix)
 - Small edits to se-stylesheet.css that came with the static pages 
 
 Version 1.3.8 (QUIZ)
-- *PERSONALIY QUIZ*     [quiz.html]         le personality quiz estentièrement complété et fonctionne comme désiré
+- *PERSONALIY QUIZ*     [quiz.html]         le personality quiz est entièrement complété et fonctionne comme désiré
 - *DESIGN*              [index.php]         enlevé la marchandise
 
 Version 1.3.7
