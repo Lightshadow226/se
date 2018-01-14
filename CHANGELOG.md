@@ -1,6 +1,6 @@
 #CHANGELOG
 
-Version 1.3.8
+Version 1.3.8 (QUIZ)
 - *PERSONALIY QUIZ*     [quiz.html]         le personality quiz estentièrement complété et fonctionne comme désiré
 - *DESIGN*              [index.php]         enlevé la marchandise
 

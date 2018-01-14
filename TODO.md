@@ -81,6 +81,7 @@ Start in : *%HOMEDRIVE%%HOMEPATH%*
 `Useful install links`
 *WAMP:* https://sourceforge.net/projects/wampserver/files/latest/download
 *GIT:* https://git-scm.com/download/win
+*GIT BRANCHES:* http://dont-be-afraid-to-commit.readthedocs.io/en/latest/git/commandlinegit.html
 *CLOC:* https://github.com/AlDanial/cloc
 *JQUERY:* 
 *NODE.JS:* https://nodejs.org/en/
