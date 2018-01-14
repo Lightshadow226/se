@@ -1,5 +1,5 @@
 <footer>
-	Sweet Elite © 2016 - 2017. All rights reserved.
+	Sweet Elite © 2016 - 2018. All rights reserved.
 </footer>
 
 <!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->

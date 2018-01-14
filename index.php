@@ -57,7 +57,7 @@
 				</div>
 
 				<div class = "card-fusionned flex-container">
-					<img style = "" src = "images/separator.jpg"></img>	
+					<img style = "width: 50%;" src = "images/separator.jpg"></img>	
 				</div>
 
 				<div class = "card-fusionned flex-container">
@@ -232,7 +232,7 @@
 		<?php endif ?>
 		
 		<!-- MERCHANDISE -->
-		<div class = "card">
+		<!-- <div class = "card">
 			<div class = "card-header">
 				<h3>Merchandise</h3>
 			</div>
@@ -253,8 +253,8 @@
 				<div class = "flex-panel">
 					<img class = "img-badge" style="height:100%; border-bottom-right-radius: 10px;" src = "images/banners/customize_your_character.png"></img>
 				</div>
-				</div>
 			</div>
+		</div> -->
 
 		<!-- FOLLOW US -->
 		<div class="card">
