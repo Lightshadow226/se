@@ -239,6 +239,13 @@
 		box-shadow: 0 0 5px #83827d;
 	}
 
+	.footer_link
+	{
+		color:#682566;
+		font-size: 0.5em;
+
+	}
+
 /**********INDEX.PHP**********/
 
 	#banner
@@ -679,6 +686,9 @@
 	{
 		height: 100%;
 		width: auto;
+		border-radius: 50%;
+		box-shadow: 0 0 7px 0px #682566;
+		/*border: 2px solid #EE4C5E;*/
 	}
 
 /**********CHARACTERS.PHP**********/
@@ -1107,7 +1117,7 @@
 
 /***************CARDS***************/
 
-	.card /*with margin*/
+	.card /*with margin -> used for all the other cards in the page*/
 	{
 		background-color: white;
 		box-shadow: 0 0 5px #83827d;/*5px blur*/
@@ -1121,7 +1131,7 @@
 		margin: 5px;
 	}
 
-	.card-nomargin/*no margin*/
+	.card-nomargin/*no margin -> used for the first card in the page*/
 	{
 		background-color: white;
 		box-shadow: 0 0 5px #83827d;

@@ -43,12 +43,16 @@
 					<h5>Flirt and Uncover the Secrets of Arlington Academy</h5>
 					
 					</br>
+
+					<p><i>In a school filled with rich, beautiful and insanely talented students, nothing could go wrong….could it? Arlington Academy has its secrets. Secrets it doesn’t want to expose.</i></p>
+
+					</br>
 					
-					<p>Follow the adventures of the students of Arlington Academy, a prestigious high school only accessible to the best teenagers in their respective academic fields</p>
+					<p>Follow the adventures of the students of Arlington Academy, a prestigious high school only accessible to the best teenagers in their respective academic fields.</p>
 					
 					</br>
 
-					<p>Choose your department, make friends, build your romance with your favorite character and work together to solve the Academy's dark secrets...</p>
+					<p>Choose your department, make friends, build a romance with your favorite character and work together to solve the Academy's dark secrets...</p>
 					
 					</br>
 					

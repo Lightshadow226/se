@@ -50,9 +50,9 @@
 			<div id="pink_menu" class="">
 				<a class="menu_item" href="index.php">Home</a> 
 				<a class="menu_item" href="#">Shop</a>
-				<a class="menu_item" href="#">About</a>
+				<a class="menu_item" href="about.php">About</a>
 				<a class="menu_item" href="#">Terms</a>
-				<a class="menu_item" href="#">Contact</a>
+				<a class="menu_item" href="contact.php">Contact</a>
 			</div>
 		</div>
 
