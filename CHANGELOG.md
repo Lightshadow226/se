@@ -1,5 +1,12 @@
 #CHANGELOG
 
+Version 1.3.9 (JUNE - Static pages + small aesthetic fixes + m_shoes fix)
+- Created the following static pages: about.php, contact.php, parents.php
+- Added additional images to come with the new static pages update
+- Small aesthetic fixes to index.php, footer.php and header.php
+- Small edits to se-stylesheet.css that came with the static pages 
+
+
 Version 1.3.6
 - *DATABASE*            [variables.js]              enregistré toutes les variables dans la DB d'une shot (à chaque fois qu'on clique quelque part sur la page)
 - *CHAPTER INPUT*       [variables.js, getvariables.php, pushvariables.php]     terminé toutes les manipulations PHP/JS (push and pull)
