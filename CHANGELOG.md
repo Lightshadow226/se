@@ -1,5 +1,11 @@
 #CHANGELOG
 
+Version 1.3.9 (JUNE - Static pages + small aesthetic fixes + m_shoes fix)
+- Created the following static pages: about.php, contact.php, parents.php
+- Added additional images to come with the new static pages update
+- Small aesthetic fixes to index.php, footer.php and header.php
+- Small edits to se-stylesheet.css that came with the static pages 
+
 Version 1.3.8 (QUIZ)
 - *PERSONALIY QUIZ*     [quiz.html]         le personality quiz estentièrement complété et fonctionne comme désiré
 - *DESIGN*              [index.php]         enlevé la marchandise
