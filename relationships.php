@@ -23,7 +23,7 @@
 
     <div class = "main_content">
         
-        <div class="add_padding card-nomargin" style = "margin-bottom: 20px;">
+        <div class="add_padding card-firstdiv" style = "margin-bottom: 20px;">
 
             <h1>Relationships</h1>
 

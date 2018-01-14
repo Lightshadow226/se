@@ -6,6 +6,15 @@ Version 1.3.9 (JUNE - Static pages + small aesthetic fixes + m_shoes fix)
 - Small aesthetic fixes to index.php, footer.php and header.php
 - Small edits to se-stylesheet.css that came with the static pages 
 
+Version 1.3.8
+- *PERSONALIY QUIZ*     [quiz.html]         le personality quiz estentièrement complété et fonctionne comme désiré
+- *DESIGN*              [index.php]         enlevé la marchandise
+
+Version 1.3.7
+
+- *DESIGN*              [CSS]               added the rounded corners everywhere
+- *PERSONALIY QUIZ*     [quiz.html]         added the quiz for the website that is currently online (almost done, small details to add)
+- *OLD WEBSITE*         [old HTML]          added the old website folder
 
 Version 1.3.6
 - *DATABASE*            [variables.js]              enregistré toutes les variables dans la DB d'une shot (à chaque fois qu'on clique quelque part sur la page)
