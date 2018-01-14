@@ -47,10 +47,10 @@
                     </div>
                     
                     <div class="description">        
-                        <h4 class="center">DUAL ARTSTYLE</h4>
+                        <h4 style="text-align: left;">DUAL ARTSTYLE</h4>
 
-                        <p>Our CGs are made by our two main artists, each of them adding in their own charm.</p>
-                        <p>We know you like variety.</p>
+                        <p style="text-align: left;">Our CGs are made by our two main artists, each of them adding in their own charm.</p>
+                        <p style="text-align: left;">We know you like variety.</p>
                     </div>
 
                 </div>
@@ -58,10 +58,10 @@
                 <div class="flex-container">
                 
                     <div class="description">        
-                        <h4>SAME-SEX DATING OPTIONS</h4>
+                        <h4 style="text-align: right;">SAME-SEX DATING OPTIONS</h4>
 
-                        <p>Because in our current day and age, we think introducing an LGBT branch to the storyline of an Otome is long overdue.</p><br>
-                        <p>Sweet Elite has 5 datable girls and 5 datable guys.</p>
+                        <p style="text-align: right;">Because in our current day and age, we think introducing an LGBT branch to the storyline of an Otome is long overdue.</p>
+                        <p style="text-align: right;">Sweet Elite has 5 datable girls and 5 datable guys.</p>
                     </div>
 
                     
@@ -76,19 +76,19 @@
                     </div>
 
                     <div class="description">        
-                        <h4>FRIENDSHIP AND ROMANCE OPTIONS</h4>
+                        <h4 style="text-align: left;">FRIENDSHIP AND ROMANCE OPTIONS</h4>
 
-                        <p>Sometimes, you just don't like a person that way. Choose between friendship or romance dialogue options and watch the story adapt to your choices and build relationships accordingly! The possibilities are infinite with the Infinity Meter!</p><br>
-                        <p>The best part? Our character won't complain about being "stuck in the friendzone!"</p>
+                        <p style="text-align: left;">Sometimes, you just don't like a person that way. Choose between friendship or romance dialogue options and watch the story adapt to your choices and build relationships accordingly! The possibilities are infinite with the Infinity Meter!</p><br>
+                        <p style="text-align: left;">The best part? Our character won't complain about being "stuck in the friendzone!"</p>
                     </div>
                 </div>
 
                 <div class="flex-container">
 
                     <div class="description">        
-                        <h4>CHOOSE A DEPARTMENT</h4>
+                        <h4 style="text-align: right;">CHOOSE A DEPARTMENT</h4>
 
-                        <p>Everybody has a talent, now it's time to choose yours! Choose a department for your character as they become a Scholar at Arlington Academy!</p><br>
+                        <p style="text-align: right;">Everybody has a talent, now it's time to choose yours! Choose a department for your character as they become a Scholar at Arlington Academy!</p><br>
 
                     </div>
 

@@ -679,8 +679,8 @@
 	.features_illustration
 	{
 		/*width: 30%;*/
-		flex: 3;
-		margin: 20px;
+		flex: 2;
+		/* margin: 20px; */
 		height: 250px;
 	}
 

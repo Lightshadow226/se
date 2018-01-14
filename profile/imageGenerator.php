@@ -195,7 +195,7 @@ function getGenericVariables($sex, $studentid)
 	//simplifier en mettant path + "body.png"
 	//path va s'initialiser avec le sexe
 
-	if($studentid)
+	if($studentid)//si on fait le student ID
 	{
 		$path = "studentid/";
 
@@ -209,7 +209,7 @@ function getGenericVariables($sex, $studentid)
 			$generic = array( "studentid/male/m_body.png", "studentid/male/m_face.png", "studentid/male/m_eyes.png", "studentid/male/m_lips.png", "studentid/male/m_uniform.png", "studentid/male/m_shoes.png");
 		}
 	}
-	else
+	else//si on génère une image standard (sprite)
 	{
 		$path = "images/";
 

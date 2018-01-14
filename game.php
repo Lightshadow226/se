@@ -32,7 +32,7 @@
 		</div>
 
 		<!-- <div class="add_padding card-nomargin" style = "margin-bottom: 20px;"> -->
-			<h3 style="color:#682666; text-align:center;">Finished Chapters</h3>
+			<h3 style="color:#682666; text-align:center;">All Chapters</h3>
 		<!-- <div> -->
 
 		<div id = "finishedChapters">

@@ -1,5 +1,9 @@
 #CHANGELOG
 
+Version 1.3.11 (Minor Design Upgrades)
+- *DORM*                [dorm.php]          fixed the goddamn m_shoes.png issue
+- *DESIGN*              [about.php]         minor design changes
+
 Version 1.3.10 (QUIZ)
 - *PERSONALIY QUIZ*     [quiz.html]         le  quiz peut accepter n'importe quelle quantité de questions, et les questions sont maintenant dans un fichier JS séparé
 
