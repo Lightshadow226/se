@@ -1,5 +1,12 @@
 #CHANGELOG
 
+Version 1.3.12 (JUNE - New Images & visuals)
+- *NEW CHEVRONS*        [index.php]         Prettier and cooler chevrons for the scholar randomizer
+- *NEW VISUAL*          [index.php]         dashboard.png
+- *NEW VISUAL*          [index.php]         Vertical_divider.png
+- *NEW SPRITE IMAGES*   [profile.php]       New sprites with cute decorations for the profile page
+- *ILLUSTRATION*        [illus_generator.php]       Started the illustration generator
+
 Version 1.3.11 (Minor Design Upgrades)
 - *DORM*                [dorm.php]          fixed the goddamn m_shoes.png issue
 - *DESIGN*              [about.php]         minor design changes
