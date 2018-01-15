@@ -70,8 +70,8 @@ elseif($department == "6")
 $skin_rgb = getSkinColor($skincolor);
 $hair_rgb = getHairColor($haircolor);
 $eye_rgb = getEyeColor($eyecolor);
-$hair_number = getHairStyle($sex, $hairstyle, true);
-$genericVariables = getGenericVariables($sex, true);
+$hair_number = getHairStyle($sex, $hairstyle, "studentid");
+$genericVariables = getGenericVariables($sex, "studentid");
 // GET PANTS
 // GET SHOES
 // etc. (must be simplified to the lowest level

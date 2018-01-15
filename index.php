@@ -151,9 +151,9 @@
 			</div>
 			
 			<!-- CHARACTER RANDOMIZER -->
-			<div class="card-nomargin flex-container"><!-- style="height=780px;" -->
-				<div class = "flex-panel">
-					<img class = "img-badge" style="height:100%; border-top-left-radius: 10px; border-bottom-left-radius: 10px;" src = "images/banners/customize_your_character.png"></img>
+			<div class="card-nomargin flex-container" style="height:411.375px;"><!-- style="height=780px;" -->
+				<div>
+					<img class = "img-badge" style="height:100%; width:auto; border-top-left-radius: 10px; border-bottom-left-radius: 10px;" src = "images/banners/customize_your_character.png"></img>
 				</div>
 
 				<div class = "flex-panel2 flex-container">
@@ -225,9 +225,59 @@
 
 			<div class="card-firstdiv add_padding">
 				<!-- <h1>Homepage</h1> -->
-				<p>Welcome Back, <?php if(isset($_SESSION['username'])) echo $_SESSION['username']; ?>!</p> <!-- <a href="logout.php">Logout</a> </p> -->
-			</div>
+				<h4 class="center">Welcome Back, <?php if(isset($_SESSION['username'])) echo $_SESSION['username']; ?>!</h4> <!-- <a href="logout.php">Logout</a> </p> -->
 
+				<!--FIRST SECTION: Profile overview & Current Chapter-->
+				<div class="flex-container">
+					<!--Left container: PROFILE INFO-->
+					<div class="flex-panel">
+						<!--Profile image-->	
+						<div class="flex-panel flex-container" style="border: 2px dotted #682666;">
+							<!-- <div class="flex-panel"></div> -->
+							<!-- <div class="flex-panel"> -->
+								<img src="profile/character_small_portrait.php"/>
+							<!-- </div> -->
+							<!-- <div class="flex-panel"></div> -->
+						</div>
+
+						<!--Buttons container-->	
+						<div class="center" style="background-color: #f3def2;"><!--border: 2px dotted #682666; border-top: none;">-->
+							<a class="button pink_button" style="margin: 10px;" href="dorm.php">Dorm</a>
+							<a class="button pink_button" style="margin: 10px;" href="profile.php">Profile</a>
+							<div class="flex-panel"></div>
+							<div class="flex-panel"></div>
+						</div>
+					</div>
+
+					<!--Middle container: MOST AFFINITY-->
+					<div class="flex-panel2 add_padding">
+						<!--Profile image-->	
+						<h3 class="center add_padding">Highest Affinity</h3>
+						
+						<div class="flex-container">
+							<div class="flex-panel">
+								<img src="images/general/characters/chara_icons/alistair.png" style="width:100%; border-radius: 30%; box-shadow: 0 0 5px #000000;"/>
+								<h2 class="center" style="color: black;">Alistair</h2>
+							</div>
+							<div class="flex-panel2">
+								<p style="padding: 10px; text-align: justify;">The most promising athlete of the school, he’s on a scholarship just like your Scholar! Alistair specializes in martial arts in general, but his favorite sport is boxing, in which he dreams of making a career out of it and competing in the Olympic Games one day. Unlike most of his classmates, Alistair comes from a middle-class family that struggles with money, and he’s determined to change that. Despite the difference in social classes, he and Tadashi have been best friends for a long time.</p>
+							</div>
+						</div>
+						
+						<!--Buttons container-->	
+						<div class="center">
+							<a class="button pink_button" style="margin: 10px;" href="relationships.php">Relationships</a>
+						</div>
+					</div>
+					
+					<!--Right container: CURRENT CHAPTER-->
+					<div class="flex-panel2">
+						<div id = "currentEpisodeIndex">
+	
+						</div>
+					</div>
+				</div>
+			</div>
 
 			<div id="dashboard">
 
@@ -335,8 +385,10 @@
 
 <script src = "js/jquery_3.2.1.js"></script>
 <script src="js/charactersMeet.js"></script>
-<!-- <script src = "js/variables.js"></script> -->
+<script src = "js/variables.js"></script><!--needed for the logged in functionality of "current chapter"-->
 <script src = "js/library.js"></script>
+
+<script src = "js/index.js"></script><!--needed for the logged in functionality of "current chapter"-->
 
 <script>
 	// var img = new Image().src = "randomizer.php";

@@ -1,8 +1,18 @@
 #CHANGELOG
 
+Version 1.3.13 (Index Logged In)
+- *INDEX*               [index.php]         continued the design for the index page (il va rester à faire en sorte que le affinity truc fonctionne)
+- *CODE - DESIGN*       [index.js]          créé un fichier JS propre à index.php pour générer l'image du chapitre courant
+- *CODE - DESIGN*       [gameboot.js]       changé la génération, pour qu'on puisse générer d'autres types de containers in the future (using a string vs boolean)
+- *CODE - DESIGN*       [imageGenerator.php]        changé les types d'image qui peuvent être générées -> il reste quelques améliorations à faire ici
+- *DESIGN*              [CSS]               utilsé le ".card-firstdiv" pour changer les pages qui l'utilisent
+- *DESIGN*              [CSS]               le header a maintenant du box-shadow
+
 Version 1.3.11 (Minor Design Upgrades)
 - *DORM*                [dorm.php]          fixed the goddamn m_shoes.png issue
 - *DESIGN*              [about.php]         minor design changes
+- *DESIGN*              [CSS]               create a ".card-firstdiv" class for a card that only has rounded bottom corners
+- *DESIGN*              [index.php]         mettre le overlay des characters avec un rounded border, comme toutes les autres cartes
 
 Version 1.3.10 (QUIZ)
 - *PERSONALIY QUIZ*     [quiz.html]         le  quiz peut accepter n'importe quelle quantité de questions, et les questions sont maintenant dans un fichier JS séparé

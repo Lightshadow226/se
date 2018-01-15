@@ -20,16 +20,18 @@
 			
 			<a href="index.php"><img id="logo" src="images/general/se-logo.png"></a>
 
-			<div id="pink_logo_bar">
-				<!--This div has no other purpose than to take space while not complicating lives with margins and padding-->
-			</div>
+			<div id="all_pink_menu">
+				<div id="pink_logo_bar">
+					<!--This div has no other purpose than to take space while not complicating lives with margins and padding-->
+				</div>
 
-			<div id="pink_menu" class="">
-				<a class="menu_item" href="dorm.php">My Dorm</a>
-				<a class="menu_item" href="map.php">City Map</a>
-				<a class="menu_item" href="game.php">My Game</a>
-				<a class="menu_item" href="relationships.php">Relationships</a>
-				<a class="menu_item" href="profile.php">My Profile</a>
+				<div id="pink_menu">
+					<a class="menu_item" href="dorm.php">My Dorm</a>
+					<a class="menu_item" href="map.php">City Map</a>
+					<a class="menu_item" href="game.php">My Game</a>
+					<a class="menu_item" href="relationships.php">Relationships</a>
+					<a class="menu_item" href="profile.php">My Profile</a>
+				</div>
 			</div>
 		</div>
 
@@ -43,16 +45,18 @@
 
 			<a href="index.php"><img id="logo" src="images/general/se-logo.png"></a>
 
-			<div id="pink_logo_bar">
-				<!--This div has no other purpose than to take space while not complicating lives with margins and padding-->
-			</div>
+			<div id="all_pink_menu">
+				<div id="pink_logo_bar">
+					<!--This div has no other purpose than to take space while not complicating lives with margins and padding-->
+				</div>
 
-			<div id="pink_menu" class="">
-				<a class="menu_item" href="index.php">Home</a> 
-				<a class="menu_item" href="#">Shop</a>
-				<a class="menu_item" href="about.php">About</a>
-				<a class="menu_item" href="#">Terms</a>
-				<a class="menu_item" href="contact.php">Contact</a>
+				<div id="pink_menu">
+					<a class="menu_item" href="index.php">Home</a> 
+					<a class="menu_item" href="#">Shop</a>
+					<a class="menu_item" href="about.php">About</a>
+					<a class="menu_item" href="#">Terms</a>
+					<a class="menu_item" href="contact.php">Contact</a>
+				</div>
 			</div>
 		</div>
 

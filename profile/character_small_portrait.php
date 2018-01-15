@@ -40,8 +40,8 @@ while($rs = $statement->fetch())
 $skin_rgb = getSkinColor($skincolor);
 $hair_rgb = getHairColor($haircolor);
 $eye_rgb = getEyeColor($eyecolor);
-$hair_number = getHairStyle($sex, $hairstyle, "fullsprite");
-$genericVariables = getGenericVariables($sex, "fullsprite");
+$hair_number = getHairStyle($sex, $hairstyle, "mediumsprite");
+$genericVariables = getGenericVariables($sex, "mediumsprite");
 // GET PANTS
 // GET SHOES
 // etc. (must be simplified to the lowest level)
@@ -54,7 +54,6 @@ $source2 = imagecreatefrompng($genericVariables[2]);//eye image
 $source3 = imagecreatefrompng($genericVariables[3]);//lips image
 $source4 = imagecreatefrompng($hair_number);//hair style
 $source5 = imagecreatefrompng($genericVariables[4]);//uniform
-$source6 = imagecreatefrompng($genericVariables[5]);//shoes
 
 imagealphablending($source1, true);
 imagesavealpha($source1, true);
@@ -62,8 +61,8 @@ imagesavealpha($source1, true);
 imagealphablending($destination, true);
 imagesavealpha($destination, true);
 
-$largeur_source = imagesx($source1);
-$hauteur_source = imagesy($source1);
+$largeur_source1 = imagesx($source1);
+$hauteur_source1 = imagesy($source1);
 
 $largeur_source2 = imagesx($source2);
 $hauteur_source2 = imagesy($source2);
@@ -77,22 +76,18 @@ $hauteur_source4 = imagesy($source4);
 $largeur_source5 = imagesx($source5);
 $hauteur_source5 = imagesy($source5);
 
-$largeur_source6 = imagesx($source6);
-$hauteur_source6 = imagesy($source6);
-
+//Apply the colors
 imagefilter($source2, IMG_FILTER_COLORIZE, $eye_rgb[0], $eye_rgb[1], $eye_rgb[2], $eye_rgb[3]); //Eye color
 imagefilter($source3, IMG_FILTER_COLORIZE, $skin_rgb[0], $skin_rgb[1], $skin_rgb[2], $skin_rgb[3]); //Lip color = skin color
 imagefilter($source4, IMG_FILTER_COLORIZE, $hair_rgb[0], $hair_rgb[1], $hair_rgb[2], $hair_rgb[3]); //Hair color
 imagefilter($destination, IMG_FILTER_COLORIZE, $skin_rgb[0], $skin_rgb[1], $skin_rgb[2], $skin_rgb[3]);//Skin color
 
-
-imagecopy($destination, $source1, 0, 0, 0, 0, $largeur_source, $hauteur_source);
+imagecopy($destination, $source1, 0, 0, 0, 0, $largeur_source1, $hauteur_source1);
 imagecopy($destination, $source2, 0, 0, 0, 0, $largeur_source2, $hauteur_source2);
 imagecopy($destination, $source3, 0, 0, 0, 0, $largeur_source3, $hauteur_source3);
 imagecopy($destination, $source4, 0, 0, 0, 0, $largeur_source4, $hauteur_source4);
 imagecopy($destination, $source5, 0, 0, 0, 0, $largeur_source5, $hauteur_source5);
-imagecopy($destination, $source6, 0, 0, 0, 0, $largeur_source6, $hauteur_source6);
 
-imagepng($destination);	
+imagepng($destination);
 
 ?>

@@ -15,8 +15,8 @@ function generateImg()
 	$skin_rgb = getSkinColor($skin);
 	$hair_rgb = getHairColor($haircolor);
 	$eye_rgb = getEyeColor($eyecolor);
-	$hair_number = getHairStyle($sex, $hairstyle, false);
-	$genericVariables = getGenericVariables($sex, false);
+	$hair_number = getHairStyle($sex, $hairstyle, "mediumsprite");
+	$genericVariables = getGenericVariables($sex, "mediumsprite");
 	
 	/*****DEBUG*****
 		echo "Skin: R: " . $skin_rgb[0] . "; G: " . $skin_rgb[1] . "; B: " . $skin_rgb[2] . "; OP: " . $skin_rgb[3];

@@ -14,10 +14,10 @@
 `TODO: HIGH Importance`
 - *CODE - NEW FORM*     [gameengine.js]                                 il va falloir continuer avec les birthday, préférences, etc.
 - *CODE - PAGE*         [illustrations_achievements.php]                terminer la page Illustrations & Achievements
-- *CODE - DESIGN*       [game.php]                                      mettre le chapitre courant
 - *DEBUG*               [variables.js, get and pushvariables.php]       s'assurer qu'il n'y ait plus de variables utilisés sans la base de données
 - *DATABASE*            [relationships.php]                             Add infinity meter for all characters (in the database + DB_Handle)
-- *IMPROVEMENTS* [imageGenerator.php] there are still improvements to be made in this file
+- *IMPROVEMENTS*        [imageGenerator.php]                            there are still improvements to be made in this file
+- *INDEX*               [index.php]                                     faire en sorte que le affinity truc fonctionne
 
 `TODO: MEDIUM Importance`
 - *CODE - RESTRUCT*     [relationships.js, variables.js]                transférer les variables de Relationships.js à variables.js
@@ -36,9 +36,8 @@
 - *FILES - ADD*         [fonts]                                         downloader les fonts "great vibes" & "roboto" de Google API
 - *FILES - ADD*         [new images]                                    dessiner des nouveaux boutons pour friendship/romance
 - *DESIGN IDEA*         [CSS, idée]                                     Faire que quand on hover, ce soit mauve, mais que l'item d'à côté soit jaune, et l'autre rose (pour 3 items différents, comme sur la page contact.php (3 images, trois couleurs différentes))
-- *DESIGN*              [index.php]                                     mettre le overlay des characters avec un rounded border, comme toutes les autres cartes
 - *DESIGN*              [game.php]                                      progress bar ne doit pas afficher le pourcentage en-dessous de 10% (sinon ça a l'air moche)
-- *DESIGN*              [CSS]                                           create a ".first_card" class for a card that only has rounded bottom corners
+
 - *DESIGN*              [.PNG, index.php]                               modifier les dimensions de l'image "customize your character"
 
 

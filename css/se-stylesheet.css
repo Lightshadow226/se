@@ -188,6 +188,7 @@
 	#nav_menu_container/*header as a whole*/
 	{
 		width: 80%;
+		min-width: 1000px;
 		/* box-shadow: 0 0 5px #83827d; */
 	}
 
@@ -206,6 +207,13 @@
 		height: 25px;
 		border-top-right-radius: 10px;
 		border-top-left-radius: 10px;
+	}
+	
+	#all_pink_menu
+	{
+		box-shadow: 0 0 5px #83827d;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
 	}
 
 	#pink_menu/*navigation menu*/
@@ -242,17 +250,20 @@
 		text-align: center;
 		font-size: 0.8em;
 		letter-spacing: 0.2em;
-		width: 80%;
+		
 		box-shadow: 0 0 5px #83827d;
 		border-top-left-radius: 10px;
 		border-top-right-radius: 10px;
+		
+		width: 80%;
+		min-width: 1000px;
+		margin-top: 5px;
 	}
 
 	.footer_link
 	{
 		color:#682566;
 		font-size: 0.5em;
-
 	}
 
 /**********INDEX.PHP**********/
@@ -678,10 +689,9 @@
 
 	.features_illustration
 	{
-		/*width: 30%;*/
-		flex: 2;
-		/* margin: 20px; */
+		margin: 20px;
 		height: 250px;
+		width: 250px;
 	}
 
 	.description
@@ -696,7 +706,7 @@
 	.imgh
 	{
 		height: 100%;
-		width: auto;
+		width: 100%;
 		border-radius: 50%;
 		box-shadow: 0 0 7px 0px #682566;
 		/*border: 2px solid #EE4C5E;*/
@@ -846,6 +856,15 @@
 		color: white;
 	}
 
+	.play_episode_button_index
+	{
+		background-color: #EE4C5E;
+		
+		font-size: 1em;
+		align-content: center;
+		color: white;
+	}
+
 	.play_episode_button
 	{
 		position: absolute;
@@ -874,6 +893,15 @@
 		transform: translate3d(calc(-100% - 10px), calc(-100% - 30px), 0px);
 	}
 	*/
+
+	.character_img_index
+	{
+		/* max-height: 350px; */
+		margin: 10px;
+		width: calc(100% - 20px);
+		height: auto;
+		border-radius: 10px;
+	}
 
 	.character_img
 	{
@@ -1094,6 +1122,7 @@
 	.main_content
 	{
 		width: 80%;
+		min-width: 1000px;
 	}
 
 	.center-screen
@@ -1152,6 +1181,7 @@
 		box-shadow: 0 0 5px #83827d;
 		border-bottom-left-radius: 10px;
 		border-bottom-right-radius: 10px;
+		margin-bottom: 5px;
 	}
 
 	.card-nomargin/*no margin*/
@@ -1259,8 +1289,11 @@
 		text-decoration: none;/*enlever le underline -> ne va plus être nécessaire quand on va rendre le bouton un actual Button*/
 		border-radius: 3px;
 		text-align: center;
-		min-width: 50px;
+
+		/* width: auto; */
+		min-width: 75px;
 		max-width: 300px;
+		
 		-webkit-user-select: none;
 		display: inline-block;
 		flex: 1;
@@ -1268,8 +1301,8 @@
 
 		border: none;
 
-		-webkit-font-smoothing: antialiased;
-		-webkit-filter: blur(0.000001px);
+		/* -webkit-font-smoothing: antialiased;
+		-webkit-filter: blur(0.000001px); */
 	}
 
 	.pink_button

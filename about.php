@@ -22,7 +22,7 @@
 	<?php include_once 'partials/headers.php' ?>
 
 	<div class = "main_content">
-        <div class = "card-nomargin add_padding">
+        <div class = "card-firstdiv add_padding">
             <h1>Welcome to Sweet Elite!</h1>
             <p class="center add_padding">Sweet Elite is an online Otome game following the adventures of the students of Arlington Academy. Your character, the <b>Scholar</b>, is a scholarship student and makes a series of major choices, affecting both their destiny and those of the people around them. </p>
             <p class="center add_padding"><b>Flirt with students, build your romance and uncover Arlington Academy's dark secrets. Create your own story!<b></p>
@@ -38,7 +38,6 @@
                 </div>
 
             </div>
-
 
             <h6>Features:</h6>
                 <div class=" flex-container">
@@ -113,7 +112,7 @@
 
                 <h6>Need Convincing?</h6>
                 <p class="center"><b>All you need to do is try our demo!<b></p><br>
-                <p class="center"><a href = "signup.php" id = "signup_button" class = "button   ">Sign Up</a></p>
+                <p class="center"><a href = "signup.php" id = "signup_button" class = "button">Sign Up</a></p>
                 <p class="center"><a href = "login.php" id = "login_button" class = "button">Login</a></p>
                 
                 <div class = "flex-container">

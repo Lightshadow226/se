@@ -22,7 +22,7 @@
 
 	<div class = "main_content">
 	
-		<div class="card">
+		<div class="card-firstdiv">
 		<h1>Profile</h1>
 
 			<?php if(!isset($_SESSION['username'])):?>

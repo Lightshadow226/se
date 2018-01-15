@@ -52,6 +52,7 @@ var chapter_description =
 
 $(function create_interface()
 {
+    //TODO: Mettre des constantes
     refresh_lines(0, 2);//on affiche tous les chapitres
 })
 
@@ -61,19 +62,22 @@ function refresh_lines(beg, end)
     // finishedChapters_lines_container.innerHTML = "";
 
     // lines_container.innerHTML += '<div class="add_padding card-nomargin" style = "margin-bottom: 20px;"><h3 style="color:#682666; text-align:center;">Current Episode</h3></div>'; //<hr style="border-color:black; border-style: inset; border-width: 1.3px; margin-bottom: 10px; ">
-    create_line(user.last_chapter_played, true);
+    
+    //currentEpisodeIndex_lines_container
+
+    create_line(user.last_chapter_played, "current");
 
     // lines_container.innerHTML += '<div class="add_padding card-nomargin" style = "margin-bottom: 20px;"><h3 style="color:#682666; text-align:center;">Finished Chapters</h3><div>';
 
     for(var i = beg; i <= end; i++)
     {
-        create_line(i, false);
+        create_line(i, "nothing");
     }
 
     refreshProgressBar();
 }
 
-function create_line(index, isCurrentChapter)
+function create_line(index, type)
 {
     var line = document.createElement('div');
 
@@ -106,8 +110,8 @@ function create_line(index, isCurrentChapter)
         play_episode_button.className = "button play_episode_button";
         
     var objectiveContainer = document.createElement('div');
-    
-    if(isCurrentChapter)//if we're doing the unique "current chapter" div
+
+    if(type == "current")//if we're doing the unique "current chapter" div
     {
         objectiveContainer.id = "objectiveContainer";
         play_episode_button.id = user.last_chapter_played;
@@ -116,7 +120,6 @@ function create_line(index, isCurrentChapter)
         play_episode_button.innerHTML = "Continue Playing";
         //play_episode_button.className += " play_episode_button-big";
         chara_desc.innerHTML += "</br> <b>Progress: </b>"
-
 
         play_episode_button.addEventListener( "click",
                             function (e)
@@ -127,7 +130,7 @@ function create_line(index, isCurrentChapter)
 
         currentEpisode_lines_container.appendChild(line);
     }
-    else
+    else if(type == "nothing")
     {
         line.className += " line-small";
         line_left_content.className += " line-small";
