@@ -75,9 +75,11 @@ function create_line(index, type)
             title.style.fontSize = "2em";
 
         //current chapter image
-        var char_img = document.createElement('img');
-            char_img.src = character_portraits_path + chapter_images[index] + ".png";
-            char_img.className = "character_img_index";
+        var chap_img = document.createElement('img');
+            chap_img.src = character_portraits_path + chapter_images[index] + ".png";
+            chap_img.className = "character_img_index";
+            chap_img.style.border = "1px solid #F7B334";
+            chap_img.style.boxShadow = "0 0 10px #F7B334";
 
         //button
         var button_container = document.createElement('div');
@@ -101,7 +103,7 @@ function create_line(index, type)
 
         currentEpisodeIndex_lines_container.appendChild(currentChapter);
         currentEpisodeIndex_lines_container.appendChild(title);
-        currentEpisodeIndex_lines_container.appendChild(char_img);
+        currentEpisodeIndex_lines_container.appendChild(chap_img);
         currentEpisodeIndex_lines_container.appendChild(button_container);
             button_container.appendChild(left_wing);
             button_container.appendChild(play_episode_button);

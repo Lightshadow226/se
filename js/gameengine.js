@@ -88,6 +88,8 @@ function refreshInterface()//REFRESHES the interface
             var background = document.createElement("div");//Creates the background
                 
                 background.id = "game_frame";
+                // background.style.borderBottomLeftRadius = "10px";
+                // background.style.borderBottomRightRadius = "10px";
                 // background.style.backgroundImage = 'url(' + story[5][storyLocation] + ')';//l'image de background du jeu
 
             var overlay = document.createElement("div");//Creates the background
@@ -102,6 +104,8 @@ function refreshInterface()//REFRESHES the interface
 
                 background_img.id = "background_img";
                 background_img.className = "background_img";
+                background_img.style.borderBottomLeftRadius = "10px";
+                background_img.style.borderBottomRightRadius = "10px";
                 loadAllImages(background_img);
                 background_img.src = story[5][user.storyLocation];//l'image de background du jeu
                 
@@ -186,6 +190,8 @@ function refreshInterface()//REFRESHES the interface
                 
                 textContainer.id = "textContainer";
                 textContainer.innerHTML = story[main_text][user.storyLocation]//L'histoire à ce point-ci
+                textContainer.style.borderBottomLeftRadius = "10px";
+                textContainer.style.borderBottomRightRadius = "10px";
                 
                 //style
                     textContainer.className = "text_container";
@@ -1116,6 +1122,7 @@ function findLatestObjective(obj_cont)//returns the last time there was a new ob
 function refreshObjectiveContainer()
 {
     var obj_cont = document.getElementById('objectiveContainer');
+        obj_cont.style.borderRadius = "10px";
 
     obj_cont.innerHTML = "";
     

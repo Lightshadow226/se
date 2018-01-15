@@ -1,5 +1,9 @@
 #CHANGELOG
 
+Version 1.3.14 (BETA testing)
+- *CODE - DESIGN*       [CSS]               amélioré les chevrons (charactersScroll n'est plus utilisé)
+- *BETA AUDITIONS*      ['beta' folder]     créé un fichier standalone pour les auditions du beta testing
+
 Version 1.3.13 (Index Logged In)
 - *INDEX*               [index.php]         continued the design for the index page (il va rester à faire en sorte que le affinity truc fonctionne)
 - *CODE - DESIGN*       [index.js]          créé un fichier JS propre à index.php pour générer l'image du chapitre courant

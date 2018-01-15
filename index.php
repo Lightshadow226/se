@@ -152,15 +152,15 @@
 			
 			<!-- CHARACTER RANDOMIZER -->
 			<div class="card-nomargin flex-container" style="height:411.375px;"><!-- style="height=780px;" -->
-				<div>
+				<!-- <div>
 					<img class = "img-badge" style="height:100%; width:auto; border-top-left-radius: 10px; border-bottom-left-radius: 10px;" src = "images/banners/customize_your_character.png"></img>
-				</div>
+				</div> -->
 
 				<div class = "flex-panel2 flex-container">
 					
 					<div class="flex-panel"></div>
 
-					<div id="left_wing" class="flex-panel center_div"></div>
+					<div id="left_wing" class="center_div chevron-container"></div>
 
 					<div id="random_character_panel" class = "flex-panel">
 						<!-- <img src="randomizer.php" width="346" height="auto"> -->
@@ -171,7 +171,7 @@
 						<!-- ?php include_once 'randomizer.php' ?> -->
 					</div>
 
-					<div id="right_wing" class="flex-panel center_div"></div>
+					<div id="right_wing" class="center_div chevron-container"></div>
 					
 					<div class="flex-panel"></div>
 				
@@ -232,7 +232,7 @@
 					<!--Left container: PROFILE INFO-->
 					<div class="flex-panel">
 						<!--Profile image-->	
-						<div class="flex-panel flex-container" style="border: 2px dotted #682666;">
+						<div class="flex-panel flex-container" style="border: 2px solid #ffe2e4; border-top-left-radius: 10px; border-top-right-radius: 10px;">
 							<!-- <div class="flex-panel"></div> -->
 							<!-- <div class="flex-panel"> -->
 								<img src="profile/character_small_portrait.php"/>
@@ -241,7 +241,7 @@
 						</div>
 
 						<!--Buttons container-->	
-						<div class="center" style="background-color: #f3def2;"><!--border: 2px dotted #682666; border-top: none;">-->
+						<div class="center" style="background-color: #ffe2e4;  border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;"><!--border: 2px dotted #f3def2; border-top: none;">-->
 							<a class="button pink_button" style="margin: 10px;" href="dorm.php">Dorm</a>
 							<a class="button pink_button" style="margin: 10px;" href="profile.php">Profile</a>
 							<div class="flex-panel"></div>
@@ -256,7 +256,7 @@
 						
 						<div class="flex-container">
 							<div class="flex-panel">
-								<img src="images/general/characters/chara_icons/alistair.png" style="width:100%; border-radius: 30%; box-shadow: 0 0 5px #000000;"/>
+								<img src="images/game_images/sprites/square_portraits/alistair.jpg" style="width: 100%; border-radius: 50%; border: 2px solid #f3def2; box-shadow: 0 0 10px #f3def2;"/>
 								<h2 class="center" style="color: black;">Alistair</h2>
 							</div>
 							<div class="flex-panel2">
@@ -401,38 +401,38 @@
 	{
 		var left_wing = document.createElement('img');
 
-        //left_wing.style.height = "auto";
-        left_wing.src = "images/general/characters_page/chevrons/pink/leftchevron.png";
-        left_wing.className = "chevron";
-        left_wing.onmouseenter =    function f()
-                                    {
-                                        left_wing.src = "images/general/characters_page/chevrons/purple/leftchevron.png";
-                                    }
-        left_wing.onmouseleave =    function f()
-                                    {
-                                        left_wing.src = "images/general/characters_page/chevrons/pink/leftchevron.png";
-                                    }
-        left_wing.onclick =         function f()
-                                    {
-                                        randomImg();
-									}
+			//left_wing.style.height = "auto";
+			left_wing.src = "images/general/characters_page/chevrons/pink/leftchevron.png";
+			left_wing.className = "chevron-img";
+			left_wing.onmouseenter =    function f()
+										{
+											left_wing.src = "images/general/characters_page/chevrons/purple/leftchevron.png";
+										}
+			left_wing.onmouseleave =    function f()
+										{
+											left_wing.src = "images/general/characters_page/chevrons/pink/leftchevron.png";
+										}
+			left_wing.onclick =         function f()
+										{
+											randomImg();
+										}
 
 		var right_wing = document.createElement('img');
         
-		right_wing.src = "images/general/characters_page/chevrons/pink/rightchevron.png";
-		right_wing.className = "chevron";
-		right_wing.onmouseenter = function f()
-			{
-				right_wing.src = "images/general/characters_page/chevrons/purple/rightchevron.png";
-			}
-		right_wing.onmouseleave = function f()
-			{
-				right_wing.src = "images/general/characters_page/chevrons/pink/rightchevron.png";
-			}
-		right_wing.onclick = function f()
-			{
-				randomImg();
-			}
+			right_wing.src = "images/general/characters_page/chevrons/pink/rightchevron.png";
+			right_wing.className = "chevron-img";
+			right_wing.onmouseenter = function f()
+				{
+					right_wing.src = "images/general/characters_page/chevrons/purple/rightchevron.png";
+				}
+			right_wing.onmouseleave = function f()
+				{
+					right_wing.src = "images/general/characters_page/chevrons/pink/rightchevron.png";
+				}
+			right_wing.onclick = function f()
+				{
+					randomImg();
+				}
 
 		document.getElementById('left_wing').appendChild(left_wing);
 		document.getElementById('right_wing').appendChild(right_wing);
@@ -453,11 +453,13 @@
 		$.get('profile/randomizer.php');//amazingly faster
 
 		var img = document.createElement('img');
-
+			img.className = "true-center";
 			img.src = 'profile/randomizer.php';
-			img.width = "300";//initially 346
+			img.style.height = "100%";//initially 346
 
 		container.appendChild(img);
+		container.style.position = "relative";
+		// container.style.height = "100%";
 	}
 
 	initialize();

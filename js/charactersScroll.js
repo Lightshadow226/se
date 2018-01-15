@@ -263,7 +263,7 @@ function refresh_container(i)
 
         //left_wing.style.height = "auto";
         left_wing.src = "images/general/characters_page/chevrons/pink/leftchevron.png";
-        left_wing.className = "chevron";
+        left_wing.className = "chevron-img";
         left_wing.onmouseenter =    function f()
                                     {
                                         left_wing.src = "images/general/characters_page/chevrons/purple/leftchevron.png";
@@ -398,7 +398,7 @@ function refresh_container(i)
     var right_wing = document.createElement('img');
         
         right_wing.src = "images/general/characters_page/chevrons/pink/rightchevron.png";
-        right_wing.className = "chevron";
+        right_wing.className = "chevron-img";
         right_wing.onmouseenter =    function f()
                                     {
                                         right_wing.src = "images/general/characters_page/chevrons/purple/rightchevron.png";
