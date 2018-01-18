@@ -113,7 +113,7 @@ function create_line(index, type)
 
     if(type == "current")//if we're doing the unique "current chapter" div
     {
-        objectiveContainer.id = "objectiveContainer";
+        objectiveContainer.id = "objectiveContainer";//used to display the progress bar
         play_episode_button.id = user.last_chapter_played;
         line.className += " line-big";
         char_img.style.maxHeight = "350px";

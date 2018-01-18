@@ -23,8 +23,6 @@ include_once 'partials/parseLogin.php';
 
 <body class = "center-screen">
 	
-	<?php /*	include_once 'partials/headers.php' */?>
-	
 	<a href="index.php"><img id="logo" class="" src="images/general/se-logo.png"></a>
 
 	<div class = ""><!-- style = "width: fit-content;" -->
@@ -76,11 +74,9 @@ include_once 'partials/parseLogin.php';
 		</div>
 	</div>
 
-    <?php/* include_once 'partials/footers.php' */?>
-
 </body>
 
-<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src = "js/jquery_3.2.1.js"></script>
 <script>$('#login-username').focus();</script>
 
 </html>

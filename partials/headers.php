@@ -20,18 +20,15 @@
 			
 			<a href="index.php"><img id="logo" src="images/general/se-logo.png"></a>
 
-			<div id="all_pink_menu">
-				<div id="pink_logo_bar">
-					<!--This div has no other purpose than to take space while not complicating lives with margins and padding-->
-				</div>
-
-				<div id="pink_menu">
-					<a class="menu_item" href="dorm.php">My Dorm</a>
-					<a class="menu_item" href="map.php">City Map</a>
-					<a class="menu_item" href="game.php">My Game</a>
-					<a class="menu_item" href="relationships.php">Relationships</a>
-					<a class="menu_item" href="profile.php">My Profile</a>
-				</div>
+			<div id="pink_menu">
+				<div class="flex-panel"></div>
+				<a class="menu_item" href="index.php">Dashboard</a>
+				<a class="menu_item" href="dorm.php">My Dorm</a>
+				<a class="menu_item" href="map.php">City Map</a>
+				<a class="menu_item" href="game.php">My Game</a>
+				<a class="menu_item" href="relationships.php">Relationships</a>
+				<a class="menu_item" href="profile.php">My Profile</a>
+				<div class="flex-panel"></div>
 			</div>
 		</div>
 
@@ -45,21 +42,38 @@
 
 			<a href="index.php"><img id="logo" src="images/general/se-logo.png"></a>
 
-			<div id="all_pink_menu">
-				<div id="pink_logo_bar">
-					<!--This div has no other purpose than to take space while not complicating lives with margins and padding-->
-				</div>
-
-				<div id="pink_menu">
-					<a class="menu_item" href="index.php">Home</a> 
-					<a class="menu_item" href="#">Shop</a>
-					<a class="menu_item" href="about.php">About</a>
-					<a class="menu_item" href="#">Terms</a>
-					<a class="menu_item" href="contact.php">Contact</a>
-				</div>
+			<div id="pink_menu">
+				<div class="flex-panel"></div>
+				<a class="menu_item" href="index.php">Home</a> 
+				<a class="menu_item" href="#">Shop</a>
+				<a class="menu_item" href="about.php">About</a>
+				<a class="menu_item" href="#">Terms</a>
+				<a class="menu_item" href="contact.php">Contact</a>
+				<div class="flex-panel"></div>
 			</div>
 		</div>
 
 	<?php endif ?>
 
 </header>
+
+<script src = "js/jquery_3.2.1.js"></script>
+<script>
+// highlights the current page in the header
+$(function()
+{
+    page = location.href.toLowerCase();
+
+    $('.menu_item').each(function()
+    {
+        if (page.indexOf(this.href.toLowerCase()) > -1)
+        {
+            $(this).addClass('menu-item-activated');
+        }
+    });
+});
+
+//WORKS: http://huidesign.com/automatically-highlight-current-page-in-navigation-with-css-jquery/
+//DOESN'T WORK: https://stackoverflow.com/questions/30073190/html-css-navigation-bar-highlighting-current-page
+
+</script>

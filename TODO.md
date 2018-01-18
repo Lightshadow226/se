@@ -18,6 +18,10 @@
 - *DATABASE*            [relationships.php]                             Add infinity meter for all characters (in the database + DB_Handle)
 - *IMPROVEMENTS*        [imageGenerator.php]                            there are still improvements to be made in this file
 - *INDEX*               [index.php]                                     faire en sorte que le affinity truc fonctionne
+- *INDEX*               [index.php]                                     faire marcher le truc de best infinity
+- *DORM*                [dorm.php]                                      créer un loader pour attendre que l'image se génère avec $.get()
+- *DORM*                [dorm.php]                                      ajouter les images des highlights
+- *DORM*                [dorm.php]                                      arranger le bouton "Reset" dans le wardrobe form
 
 `TODO: MEDIUM Importance`
 - *CODE - RESTRUCT*     [relationships.js, variables.js]                transférer les variables de Relationships.js à variables.js
@@ -29,6 +33,7 @@
 - *DEBUG*               [se-stylesheet.css]                             Il faut que les page-specific attributes ne soient jamais utilisés dans une autre page
 - *DEBUG*               [???]                                           z-index du scholar est trop petit (la barre de texte est au-dessus)
 - *CODE - RESTRUCT*     [dorm.js]                                       enlever les .style et les remplacer par des classes
+- *INDEX*               [index.php]                                     mettre le CSS dans un autre fichier)
 
 `TODO: LOW Importance`
 - *DEBUG*               [login.php, signup.php, resetpassword.php]      Améliorer les messages d'erreurs pour login.php, signup.php, resetpassword.php
@@ -37,8 +42,8 @@
 - *FILES - ADD*         [new images]                                    dessiner des nouveaux boutons pour friendship/romance
 - *DESIGN IDEA*         [CSS, idée]                                     Faire que quand on hover, ce soit mauve, mais que l'item d'à côté soit jaune, et l'autre rose (pour 3 items différents, comme sur la page contact.php (3 images, trois couleurs différentes))
 - *DESIGN*              [game.php]                                      progress bar ne doit pas afficher le pourcentage en-dessous de 10% (sinon ça a l'air moche)
-
 - *DESIGN*              [.PNG, index.php]                               modifier les dimensions de l'image "customize your character"
+- *DESIGN*              [index.php]                                     le border shading entre le header et le first card est causé par: style="position: relative;"
 
 
 `TODO: ONGOING`

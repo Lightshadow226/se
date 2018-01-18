@@ -1,5 +1,14 @@
 #CHANGELOG
 
+Version 1.3.15 (INDEX, DORM, DESIGN)
+- *DESIGN*              [index.php]         terminé le design page (il reste à faire le infinity et mettre le CSS dans un autre fichier)
+- *CODE - DORM*         [dorm.php]          terminé la page dorm.php (terminé les tooltips, les liens, le positionnement des objets, etc.)
+- *DESIGN*              [CSS]               changé les couleurs des boutons, centralisé les couleurs, ajouté OFFICIAL colors vs LIGHT vs DARK
+- *DESIGN*              [CSS]               modifié l'apparence et la structure du header
+- *CODE - INDEX*        [index.php]         mis plus de HTML dans index.php, pour que ce soit plus facile à visualiser VS du JavaScript
+- *CODE - HEADER*       [index.php]         le header fait automatiquement l'inclusion de jQuery pour toutes les pages
+- *DESIGN - HEADER*     [index.php]         la page courante est highlightée (SAUF POUR LES CHAPITRES)
+
 Version 1.3.14 (BETA testing)
 - *CODE - DESIGN*       [CSS]               amélioré les chevrons (charactersScroll n'est plus utilisé)
 - *BETA AUDITIONS*      ['beta' folder]     créé un fichier standalone pour les auditions du beta testing

@@ -75,6 +75,7 @@ function create_interface()
     var illustrations_button = document.createElement('div');
 
         illustrations_button.className = "button yellow_button";
+        illustrations_button.style.margin = "10px";
         illustrations_button.innerHTML = "Illustrations";
 
         illustrations_button.addEventListener("click", function(e){refresh_lines(illustrations);})
@@ -86,6 +87,7 @@ function create_interface()
     var achievement_button = document.createElement('div');
 
         achievement_button.className = "button yellow_button";
+        achievement_button.style.margin = "10px";
         achievement_button.innerHTML = "Achievements";
         
         achievement_button.addEventListener("click", function(e){refresh_lines(achievements);})

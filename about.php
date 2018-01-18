@@ -137,5 +137,6 @@
     <?php include_once 'partials/footers.php' ?>
 
 </body>  
+
 </html>
 

@@ -223,25 +223,23 @@
 
 		<?php else: ?><!-- logged in -->
 
-			<div class="card-firstdiv add_padding">
+			<div class="card-firstdiv add_padding" style="position: relative;">
+				<img style="position: absolute; left: 0px; top: 10px; height: 5.5em; -webkit-font-smoothing: antialiased;" src="images/general/dashboard.png"/>
 				<!-- <h1>Homepage</h1> -->
-				<h4 class="center">Welcome Back, <?php if(isset($_SESSION['username'])) echo $_SESSION['username']; ?>!</h4> <!-- <a href="logout.php">Logout</a> </p> -->
+				<h4 class="center" style="margin-bottom: 10px;">Welcome Back, <?php if(isset($_SESSION['username'])) echo $_SESSION['username']; ?>!</h4> <!-- <a href="logout.php">Logout</a> </p> -->
 
 				<!--FIRST SECTION: Profile overview & Current Chapter-->
 				<div class="flex-container">
-					<!--Left container: PROFILE INFO-->
-					<div class="flex-panel">
+					<!--LEFT container: PROFILE INFO-->
+					<div class="flex-panel logged-in-three-containers">
 						<!--Profile image-->	
-						<div class="flex-panel flex-container" style="border: 2px solid #ffe2e4; border-top-left-radius: 10px; border-top-right-radius: 10px;">
-							<!-- <div class="flex-panel"></div> -->
-							<!-- <div class="flex-panel"> -->
-								<img src="profile/character_small_portrait.php"/>
-							<!-- </div> -->
-							<!-- <div class="flex-panel"></div> -->
+						<div id="profile-overview-top" class="flex-panel">
+							<img style="width:100%; display: block;" src="profile/character_small_portrait.php"/>
+							<!-- style="display:block;" fait en sorte que le gap en-dessous de l'image disparait https://stackoverflow.com/questions/7774814/remove-white-space-below-image -->
 						</div>
 
 						<!--Buttons container-->	
-						<div class="center" style="background-color: #ffe2e4;  border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;"><!--border: 2px dotted #f3def2; border-top: none;">-->
+						<div id="profile-overview-bottom" class="center"><!--border: 2px dotted #f3def2; border-top: none;">-->
 							<a class="button pink_button" style="margin: 10px;" href="dorm.php">Dorm</a>
 							<a class="button pink_button" style="margin: 10px;" href="profile.php">Profile</a>
 							<div class="flex-panel"></div>
@@ -249,31 +247,59 @@
 						</div>
 					</div>
 
-					<!--Middle container: MOST AFFINITY-->
-					<div class="flex-panel2 add_padding">
-						<!--Profile image-->	
-						<h3 class="center add_padding">Highest Affinity</h3>
-						
-						<div class="flex-container">
-							<div class="flex-panel">
-								<img src="images/game_images/sprites/square_portraits/alistair.jpg" style="width: 100%; border-radius: 50%; border: 2px solid #f3def2; box-shadow: 0 0 10px #f3def2;"/>
-								<h2 class="center" style="color: black;">Alistair</h2>
+					<!--MIDDLE container: MOST AFFINITY-->
+					<div class="flex-panel flex-container-vertical logged-in-three-containers">
+						<div class="flex-panel" style="padding: 10px; border: 2px solid #f3def2; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+							<!--title-->
+							<div class="flex-container">
+								<div class="flex-panel">
+									<img src="images/game_images/sprites/square_portraits/alistair.jpg" style="width: 100%; border-radius: 50%; border: 2px solid #f3def2; box-shadow: 0 0 10px #f3def2;"/>
+									<!-- <h2 class="center" style="color: black;">Alistair</h2> -->
+								</div>
+
+								<div class="flex-container-vertical">
+									<div class="flex-panel"></div>
+									<h4 style="vertical-align: middle; font-weight: 300; margin-left:20px; font-size: 1.5em;">Highest Infinity:</h4>
+									<h1 class="center" style="color: #682666; font-weight: 300;">Alistair</h1>
+									<div class="flex-panel"></div>
+								</div>
 							</div>
-							<div class="flex-panel2">
-								<p style="padding: 10px; text-align: justify;">The most promising athlete of the school, he’s on a scholarship just like your Scholar! Alistair specializes in martial arts in general, but his favorite sport is boxing, in which he dreams of making a career out of it and competing in the Olympic Games one day. Unlike most of his classmates, Alistair comes from a middle-class family that struggles with money, and he’s determined to change that. Despite the difference in social classes, he and Tadashi have been best friends for a long time.</p>
+
+							<!--description-->
+							<div class="flex-panel">
+								<p style="margin-top: 10px; line-height: 1.5em; text-align: justify;">The most promising athlete of the school, he’s on a scholarship just like your Scholar! Alistair specializes in martial arts in general, but his favorite sport is boxing, in which he dreams of making a career out of it and competing in the Olympic Games one day. Unlike most of his classmates, Alistair comes from a middle-class family that struggles with money, and he’s determined to change that. Despite the difference in social classes, he and Tadashi have been best friends for a long time.</p>
 							</div>
 						</div>
 						
-						<!--Buttons container-->	
-						<div class="center">
-							<a class="button pink_button" style="margin: 10px;" href="relationships.php">Relationships</a>
+						<!--Button container-->
+						<div class="center" style="width: 100%; background-color: #f3def2;  border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">
+							<div class="center">
+								<a class="button purple_button" style="margin: 10px;" href="relationships.php">Relationships</a>
+							</div>
 						</div>
 					</div>
-					
-					<!--Right container: CURRENT CHAPTER-->
-					<div class="flex-panel2">
-						<div id = "currentEpisodeIndex">
-	
+				
+					<!--RIGHT container: CURRENT CHAPTER-->
+					<div class="flex-panel flex-container-vertical logged-in-three-containers">
+						<div class="flex-panel" style="padding: 10px; border: 2px solid #fdeac7; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+							<h4 id="currentChapter" style="margin: 10px; text-align: center; font-weight: 300; font-size: 1.5em;">Current Chapter:</h4>
+
+							<img id="chap_img" class="character_img_index" style="border: 2px solid #fdeac7; box-shadow: 0 0 10px #fdeac7;"/>
+							<!-- box-shadow: 0 0 10px #F7B334; -->
+							
+							<h5 id="title" style="text-transform: uppercase; color: #F7B334; font-weight: 300; font-size: 2em;"></h5>
+							
+							<!--description-->
+							<div class="flex-panel">
+								<p id="description" style="margin-top: 10px; line-height: 1.5em; text-align: justify;"></p>
+							</div>
+							
+						</div>
+						
+
+						<!--Button container-->
+						<div class="center" style="width: 100%; background-color: #fdeac7;  border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">
+							<div id="button_container_index" style="margin:10px;"></div>
 						</div>
 					</div>
 				</div>
@@ -310,6 +336,8 @@
 			</div>
 		</div> -->
 
+		<!-- DEBUG <div class="box left-shadow bottom-shadow"></div> -->
+		
 		<!-- FOLLOW US -->
 		<div class="card">
 			<div class="card-header">
@@ -383,7 +411,6 @@
 
 </body>
 
-<script src = "js/jquery_3.2.1.js"></script>
 <script src="js/charactersMeet.js"></script>
 <script src = "js/variables.js"></script><!--needed for the logged in functionality of "current chapter"-->
 <script src = "js/library.js"></script>

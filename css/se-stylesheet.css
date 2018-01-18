@@ -2,14 +2,27 @@
 	CSS DOCUMENT
 	PROPERTY OF DULCET GAMES INC.
 
-	#ff4956 - ROSE
-    #682666 - MAUVE
-    #F7B334 - JAUNE
+
+	Official Colors:
+	#ff4956 - ROSE	(64%)
+    #682666 - MAUVE	(28%)
+    #F7B334 - JAUNE	(59%)
     #EFEEEA - GREY rgb(239, 238, 234) - GREY
+
+	Light Colors:
+	#ffe2e4 - ROSE	(94%)
+    #f3def2 - MAUVE	(91%)
+	#fdeac7 - JAUNE	(89%)
+	
+	Dark Colors:
+	#c0000e - ROSE	(38%)
+    #4f1d4e - MAUVE	(21%)
+	#de9409 - JAUNE	(45%)
 
 	#e42371 - Fun Pink (progress bar)
 	
-	color shades: http://www.0to255.com/682666
+	color shades:
+	http://www.0to255.com/682666
 
 	July 8, 2017
 */
@@ -45,16 +58,6 @@
 	.add_padding
 	{
 		padding: 20px;
-	}
-
-	.add_shading
-	{
-		box-shadow: 0 0 5px #83827d;
-	}
-
-	.add_shading_left_right
-	{
-		box-shadow: 0 0 5px 0px #83827d;
 	}
 
 	.true-center/*truly centers in parent div*/
@@ -122,7 +125,7 @@
 		font-family: 'Great Vibes', cursive;
 		color: black;
 		font-size: 3em;
-		margin: 5px;
+		/* margin: 5px; */
 		font-weight: 500;
 	}
 
@@ -219,30 +222,40 @@
 		border-top-left-radius: 10px;
 	}
 	
-	#all_pink_menu
+	#pink_menu/*navigation menu*/
 	{
 		box-shadow: 0 0 5px #83827d;
 		border-top-left-radius: 10px;
 		border-top-right-radius: 10px;
-	}
 
-	#pink_menu/*navigation menu*/
-	{
+		background-color: #EE4C5E;
+
 		display: flex;
 		font-size:0.8em;
 		color: white;
 		letter-spacing:0.15em;
+		padding-top: 20px;
+		padding-bottom: 5px;
 	}
 
 	.menu_item/*les items dans le menu*/
 	{
 		background-color:#EE4C5E;
-		padding:10px 0 10px 0;
+		padding: 10px;
 		text-align: center;
-		width: 100%;
 		user-select: none;
 		cursor: pointer;
 		color: white;
+		border-radius: 10px;
+		/* border-top-left-radius: 10px;
+		border-top-right-radius: 10px; */
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+
+	.menu-item-activated
+	{
+		background-color:#F7B334;
 	}
 
 	.menu_item:hover
@@ -363,6 +376,25 @@
 		text-align: center;
 		font-size: 0.96em;
 		letter-spacing: 0.1em;
+	}
+
+	#profile-overview-top
+	{
+		border: 2px solid #ffe2e4;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+	}
+
+	#profile-overview-bottom
+	{
+		background-color: #ffe2e4;
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
+	}
+
+	.logged-in-three-containers
+	{
+		margin: 5px;
 	}
 
 	.department-line
@@ -772,7 +804,7 @@
 		-webkit-user-select: none;
 	}
 
-	.chevron:hover
+	.chevron-img:hover
 	{
 		cursor: pointer;
 	}
@@ -802,6 +834,15 @@
 	.fixed_height
 	{
 		height: 110px;
+	}
+
+/**********GAME.PHP**********/
+
+	.game-title
+	{
+		background-color: #ffe2e4 !important;
+		text-align: center;
+		padding: 10px;
 	}
 
 /**********RELATIONSHIPS.HTML**********/
@@ -868,15 +909,6 @@
 		color: white;
 	}
 
-	.play_episode_button_index
-	{
-		background-color: #EE4C5E;
-		
-		font-size: 1em;
-		align-content: center;
-		color: white;
-	}
-
 	.play_episode_button
 	{
 		position: absolute;
@@ -909,8 +941,8 @@
 	.character_img_index
 	{
 		/* max-height: 350px; */
-		margin: 10px;
-		width: calc(100% - 20px);
+		/* margin: 10px; */
+		width: 100%;
 		height: auto;
 		border-radius: 10px;
 	}
@@ -1052,6 +1084,17 @@
 		
 		z-index: 1;
 	}
+
+	#dorm_overlay_wardrobe
+	{
+		position: absolute;
+		top: 0;
+		
+		width: 100%;
+		height: 100%;
+		
+		z-index: 20;
+	}
 	
 	#overlay_form/*the form that will pop up to customize the character*/
 	{
@@ -1066,7 +1109,7 @@
 		width: 80%;
 		height: 80%;
 		
-		z-index: 2;
+		z-index: 20;
 
 		transform: translate3d(-50%, -50%, 0);
 	}
@@ -1076,9 +1119,99 @@
 		width: 100%;
 	}
 
+	#dorm-bag
+	{
+		position: absolute;
+		/* border: 1px solid white; */
+
+		left: 49.3%;
+		top: 63%;
+
+		width: 7%;
+		height: 8.5%;
+	}
+
+	#dorm-wardrobe
+	{
+		position: absolute;
+
+		left: 0%;
+		top: 23%;
+
+		width: 15%;
+		height: 43%;
+	}
+	
+	#dorm-laptop
+	{
+		position: absolute;
+
+		left: 78.5%;
+		top: 56.3%;
+
+		width: 13.5%;
+		height: 15.3%;
+	}
+
+	#dorm-book
+	{
+		position: absolute;
+
+		left: 81%;
+		top: 72%;
+
+		width: 13%;
+		height: 9%;
+	}
+
+	.dorm-tooltiptext
+    {
+        visibility: hidden;
+        width: 120px;
+        background-color: rgb(239, 238, 234);
+        color: black;
+        opacity: 0.85;
+        text-align: center;
+        padding: 5px;
+        border-radius: 10px;
+    
+        /* Position the tooltip text*/
+        z-index: 10;
+        position: absolute;
+        top: 101%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+	.dorm-clickable
+	{
+		z-index: 10;
+		position: relative;
+	}
+
+	.dorm-clickable:hover
+	{
+		cursor: pointer;
+	}
+
+	.dorm-clickable:hover .dorm-tooltiptext
+	{
+		cursor: pointer;
+		visibility: visible;
+	}
+
+	/* .directional_button:hover .tooltiptext
+    {
+        visibility: visible;
+        z-index: 10;
+    } */
+
 	.img
 	{
 		width: 100%;
+		display: block;
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
 	}
 
 	.selector_choices
@@ -1117,6 +1250,7 @@
 		-webkit-user-select: none;
 		flex: 1;
 		font-weight: 300;
+		/* height: 1.28em; */
 
 		border: none;
 
@@ -1191,6 +1325,7 @@
 	{
 		background-color: white;
 		box-shadow: 0 0 5px #83827d;
+		
 		border-bottom-left-radius: 10px;
 		border-bottom-right-radius: 10px;
 		margin-bottom: 5px;
@@ -1250,7 +1385,7 @@
 	.flex-container-vertical/*contains flex panels*/
 	{
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 	}
 
 	.flex-panel/*must have a flex-container parent*/
@@ -1317,6 +1452,12 @@
 		-webkit-filter: blur(0.000001px); */
 	}
 
+	.button:hover
+	{
+		cursor: pointer;
+		background-color: #682566;
+	}
+
 	.pink_button
 	{
 		background-color: #EE4C5E;
@@ -1338,9 +1479,32 @@
 		font-size: 1.28em;
 		color: white;
 		letter-spacing:0.05em;
-		width: 100%;
-		margin-left: 10px;
-		margin-right: 10px;
+	}
+
+	.purple_button
+	{
+		background-color: #682666;
+		font-size: 1.28em;
+		color: white;
+		letter-spacing: 0.05em;
+	}
+
+	.pink_button:hover
+	{
+		cursor: pointer;
+		background-color: #c0000e;
+	}
+
+	.purple_button:hover
+	{
+		cursor: pointer;
+		background-color: #4f1d4e;
+	}
+
+	.yellow_button:hover
+	{
+		cursor: pointer;
+		background-color: #de9409;
 	}
 
 	.yellow_button_activated
@@ -1348,10 +1512,44 @@
 		background-color: #EE4C5E;
 	}
 
-	.button:hover
+/***************SHADOW***************/
+
+	.box
 	{
-		cursor: pointer;
-		background-color: #682566;
+		height: 150px;
+		width: 300px;
+		margin: 20px;
+		border: 1px solid #ccc;
+	}
+
+	.add_shading
+	{
+		box-shadow: 0 0 5px #83827d;
+	}
+
+	.top-shadow
+	{
+		box-shadow: 0 -5px 5px -5px #83827d;
+	}
+	
+	.left-shadow
+	{
+		box-shadow: -5px 0 5px -5px #83827d;
+	}
+	
+	.bottom-shadow
+	{
+		box-shadow: 0 5px 5px -5px #83827d;
+	}
+	
+	.right-shadow
+	{
+		box-shadow: 5px 0 5px -5px #83827d;
+	}
+	
+	.all-shadow
+	{
+		box-shadow: 0 0 5px #333;
 	}
 
 /***************DATABASE***************/

@@ -32,6 +32,16 @@ var shoes_img = ["Shoes"];
 
 function raz()//remise à zéro
 {
+    var wardrobe = document.getElementById('dorm-wardrobe');
+    var bag = document.getElementById('dorm-bag');
+    var laptop = document.getElementById('dorm-laptop');
+    var book = document.getElementById('dorm-book');
+
+    var wardrobeIMG = "images/game_images/dorm/dorm_ward.png";
+    var bagIMG = "images/game_images/dorm/dorm_ward.png";
+    var laptopIMG = "images/game_images/dorm/dorm_pc.png";
+    var bookIMG = "images/game_images/dorm/dorm_ward.png";
+
     container.innerHTML = "";
 
     var base = document.createElement('div');
@@ -42,9 +52,35 @@ function raz()//remise à zéro
         
         img.className = "img";
         img.src = "images/game_images/dorm/dorm.jpg";
-        
+
+    var overlay = document.createElement('div');
+        overlay.id = "dorm_overlay";
+
     container.appendChild(base);
         base.appendChild(img);
+        base.appendChild(bag);
+        base.appendChild(book);
+        base.appendChild(wardrobe);
+        base.appendChild(laptop);
+    container.appendChild(overlay);
+
+    //WARDROBE
+        wardrobe.onmouseover = function(){fillOverlay(container, overlay, wardrobeIMG, "Wardrobe", wardrobe)};
+        wardrobe.onmouseout = function(e){clearOverlay(overlay, wardrobe)};
+
+    //BAG
+        bag.onmouseover = function(){fillOverlay(container, overlay, bagIMG, "City Map", bag)};
+        bag.onmouseout = function(e){clearOverlay(overlay, bag)};
+
+    //LAPTOP
+        laptop.onmouseover = function(){fillOverlay(container, overlay, laptopIMG, "Game", laptop)};
+        laptop.onmouseout = function(e){clearOverlay(overlay, laptop)};
+
+    //BOOK
+        book.onmouseover = function(){fillOverlay(container, overlay, bookIMG, "Illustrations", book)};
+        book.onmouseout = function(e){clearOverlay(overlay, book)};
+
+    // document.getElementById('useless').innerHTML = "";
 
     /*
     mettre des higlights sur le wardrobe, le laptop, le sac, et les livres
@@ -57,6 +93,29 @@ function raz()//remise à zéro
 
     */
 
+}
+
+function fillOverlay(container, overlay, newImage, linkName, tooltipParent)
+{
+    var img = document.createElement('img');
+    img.id="hover";
+    img.className = "img";
+    img.src = newImage;
+
+    container.appendChild(overlay);
+        overlay.appendChild(img);//the image of the "highlight"
+
+    var tooltip = document.createElement('span');//span, div, who cares
+        tooltip.className = "dorm-tooltiptext";
+        tooltip.innerHTML = linkName;
+
+    tooltipParent.appendChild(tooltip);
+}
+
+function clearOverlay(overlay, item)
+{
+    overlay.innerHTML="";
+    item.innerHTML="";
 }
 
 function refreshImg()
@@ -117,15 +176,14 @@ function refreshImg()
 //     // document.getElementById('img_character').src = 'characterGenerator.php';
 // }
 
-$(function wardrobe()
+function wardrobe()
 {
     raz();
     
     //BASIC OVERLAY
 
     var overlay = document.createElement('div');
-    
-        overlay.id = "dorm_overlay";
+        overlay.id = "dorm_overlay_wardrobe";
 
     var img = document.createElement('img');
         
@@ -133,7 +191,6 @@ $(function wardrobe()
         img.src = "images/game_images/dorm/dorm_ward.png";
         
     var overlay_form = document.createElement('div');
-
         overlay_form.id = "overlay_form";
         overlay_form.className = "flex-container";    
 
@@ -229,6 +286,15 @@ $(function wardrobe()
                 button_save.className = "button pink_button";
                 button_save.style.margin = "10px";
                 button_save.innerHTML = "Save";
+
+        var button_container2 = document.createElement('div');
+            button_container2.style.position = "absolute";
+            button_container2.className = "x-left-y-bottom-real";
+
+            var button_back = document.createElement('div');
+                button_back.className = "button pink_button";//style="margin:20px;"
+                button_back.style.margin = "10px";
+                button_back.innerHTML = "Back";
             
         var right_container = document.createElement('div');//the character image container
             right_container.id = "right_container";
@@ -263,8 +329,10 @@ $(function wardrobe()
             selector_choices_line2.appendChild(choiceH);
 
         left_container.appendChild(button_container);
-            button_container.appendChild(button_reset);
-            button_container.appendChild(button_save);
+            // button_container.appendChild(button_reset);
+            // button_container.appendChild(button_save);
+        left_container.appendChild(button_container2);
+            button_container2.appendChild(button_back);
     
     overlay_form.appendChild(right_container);
         right_container.appendChild(img_character);
@@ -272,7 +340,7 @@ $(function wardrobe()
         refreshItems(currentScreen);
         refreshImg();
 
-    //3. once we click on the thumbnail, we see all shirts, all pants, etc.
+    //3. Once we click on the thumbnail, we see all shirts, all pants, etc.
 
         //clicking on "sex"
         category1.addEventListener("click", 
@@ -316,7 +384,7 @@ $(function wardrobe()
             refreshItems(category6.innerHTML);
         });
     
-    //4. clicking on one of the shirt should automatically update the image on the right/left of the field
+    //4. Clicking on one of the shirt should automatically update the image on the right/left of the field
 
         //choice A
         choiceA.addEventListener("click", 
@@ -375,7 +443,11 @@ $(function wardrobe()
             itemClick(choiceH.innerHTML, 7);
         });
 
-    //5 FUNCTIONS
+    //5. Buttons event listeners
+
+        button_back.addEventListener('click', function(e){raz()}, true);
+
+    //6. FUNCTIONS
     
     function refreshItems(newScreen)//refreshes the labels of the choices
     {
@@ -576,10 +648,9 @@ $(function wardrobe()
             });
         }
 
-
         refreshImg();
     }
 
     //5. we need to be able to save the presets
 
-});
+}

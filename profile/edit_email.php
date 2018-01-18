@@ -154,7 +154,7 @@ elseif(isset($_POST['updateEmailBtn']))
 
 </body>
 
-<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src = "../js/jquery_3.2.1.js"></script>
 <script>$('#edit-email').focus();</script>
 
 </html>

@@ -47,64 +47,42 @@ var chapter_description =
 
 $(function create_interface()
 {
-    //TODO: Mettre des constantes
-    refresh_lines(0, 2);//on affiche tous les chapitres
+    update_current_chapter(user.last_chapter_played, "currentIndex");
 })
 
-function refresh_lines(beg, end)
-{
-    create_line(user.last_chapter_played, "currentIndex");
-}
-
-function create_line(index, type)
+function update_current_chapter(index, type)
 {
     if(type == "currentIndex")//if we're on the index.php page
     {
-        //title
-        var currentChapter = document.createElement('h4');
-            currentChapter.innerHTML = "Current Chapter:";
-            currentChapter.style.textAlign = "center";
-            currentChapter.style.fontSize = "1.5em";
-
-        var title = document.createElement('h5');
+        var title = document.getElementById('title');
             title.innerHTML = chapters[index];
-            title.style.textTransform = "uppercase";
-            title.style.color = "#EE4C5E";
-            title.style.margin = "10px";
-            title.style.fontWeight = "300";
-            title.style.fontSize = "2em";
 
         //current chapter image
-        var chap_img = document.createElement('img');
+        var chap_img = document.getElementById('chap_img');
             chap_img.src = character_portraits_path + chapter_images[index] + ".png";
-            chap_img.className = "character_img_index";
-            chap_img.style.border = "1px solid #F7B334";
-            chap_img.style.boxShadow = "0 0 10px #F7B334";
+            
+        //description
+        var description = document.getElementById('description');
+            description.innerHTML = chapter_description[index];
 
         //button
-        var button_container = document.createElement('div');
-            button_container.className = "flex-container";
-            button_container.style.marginTop = "10px";
+        var button_container = document.getElementById('button_container_index');
 
-        var left_wing = document.createElement('div');
-            left_wing.className = "flex-panel";
+            var left_wing = document.createElement('div');
+                left_wing.className = "flex-panel";
 
-        var play_episode_button = document.createElement('div');
-            play_episode_button.id = user.last_chapter_played;
-            play_episode_button.className = "button play_episode_button_index";
-            play_episode_button.innerHTML = "Continue Playing";
-            play_episode_button.addEventListener( "click", function (e)
-            {
-                window.open(get_button_ID(play_episode_button.id), "_self");
-            }, true);
+            var play_episode_button = document.createElement('div');
+                play_episode_button.id = user.last_chapter_played;
+                play_episode_button.className = "button yellow_button";
+                play_episode_button.innerHTML = "Continue Playing";
+                play_episode_button.addEventListener( "click", function (e)
+                {
+                    window.open(get_button_ID(play_episode_button.id), "_self");
+                }, true);
 
-        var right_wing = document.createElement('div');
-            right_wing.className = "flex-panel";
+            var right_wing = document.createElement('div');
+                right_wing.className = "flex-panel";
 
-        currentEpisodeIndex_lines_container.appendChild(currentChapter);
-        currentEpisodeIndex_lines_container.appendChild(title);
-        currentEpisodeIndex_lines_container.appendChild(chap_img);
-        currentEpisodeIndex_lines_container.appendChild(button_container);
             button_container.appendChild(left_wing);
             button_container.appendChild(play_episode_button);
             button_container.appendChild(right_wing);

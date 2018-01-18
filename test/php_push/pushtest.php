@@ -50,7 +50,7 @@
 </div>
 </body>
 
-<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src = "../js/jquery_3.2.1.js"></script>
 <script src = "../../js/variables.js"></script><!--this is to get all the variables that are needed from the database-->
 <script src = "push.js"></script>
 

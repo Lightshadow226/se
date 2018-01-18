@@ -161,11 +161,12 @@ $(function create_interface()
 {
     const qty_main_10 = 10;//de 0 à 9 
     const qty_classmates = 2;//de 9 à 9 (parce qu'il n'y en a pas encore)
-    const qty_others = 2;//de 9 à 9 (parce qu'il n'y en a pas encore)
+    const qty_others = 1;//de 9 à 9 (parce qu'il n'y en a pas encore)
 
     var main_10_button = document.createElement('div');//de 0 à 9
 
         main_10_button.className = "button yellow_button";
+        main_10_button.style.margin = "10px";
         main_10_button.innerHTML = "Main 10";
 
         main_10_button.addEventListener("click", function(e){refresh_lines(0, qty_main_10); activate(main_10_button, classmates_button, others_button);})
@@ -173,6 +174,7 @@ $(function create_interface()
     var classmates_button = document.createElement('div');
 
         classmates_button.className = "button yellow_button";
+        classmates_button.style.margin = "10px";
         classmates_button.innerHTML = "Classmates";
         
         classmates_button.addEventListener("click", function(e){refresh_lines(qty_main_10, qty_main_10 + qty_classmates); activate(classmates_button, main_10_button, others_button);})
@@ -180,6 +182,7 @@ $(function create_interface()
     var others_button = document.createElement('div');
 
         others_button.className = "button yellow_button";
+        others_button.style.margin = "10px";
         others_button.innerHTML = "Others";
 
         others_button.addEventListener("click", function(e){refresh_lines(qty_main_10 + qty_classmates, qty_main_10 + qty_classmates + qty_others); activate(others_button, main_10_button, classmates_button);})

@@ -15,8 +15,6 @@
 	<link rel="icon" type="image/ico" href="images/favicon.png"/>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
 </head>
 
 <body id="body">
@@ -35,14 +33,13 @@
 				<img class="img" style="z-index:2;" src = "images/game_images/dorm/dorm_ward.png"></img>
 			</div> -->
 
-			
 		</div>
 
-		<div>
-			<button type="button" class="button pink-button-subtle" style="z-index:1;" onclick="window.open('map.php', '_self');">Bag (map)</button>
-			<button type="button" class="button pink-button-subtle" style="z-index:1;" onclick="window.open('dorm.php', '_self');">Book (objectives & progression)</button>
-			<button type="button" class="button pink-button-subtle" style="z-index:1;" onclick="window.open('illustrations_achievements.php', '_self');"> Laptop (Illustrations & achievements)</button>
-			<button type="button" class="button pink-button-subtle" style="z-index:1;" onclick="wardrobe();">Wardrobe (change clothes/appearance)</button>
+		<div id="useless" style="display:none;"><!-- useless div lol, seulement le contenu est important -->
+			<div id="dorm-wardrobe" class="dorm-clickable" onclick="wardrobe();"></div><!-- Wardrobe (change clothes/appearance) -->
+			<div id="dorm-bag" class="dorm-clickable" onclick="window.open('map.php', '_self');"></div><!-- Bag (map) -->
+			<div id="dorm-laptop" class="dorm-clickable" onclick="window.open('game.php', '_self');"></div><!-- Laptop (Illustrations & achievements) -->
+			<div id="dorm-book" class="dorm-clickable" onclick="window.open('illustrations_achievements.php', '_self');"></div><!-- Book (objectives & progression) -->
 		</div>
 		
 		<div id = "DB_handle">
@@ -63,10 +60,9 @@
 	</div>
 	
 	<?php include_once 'partials/footers.php' ?>
-</body>
 
+</body>
 	
-<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src = "js/variables.js"></script><!--this is to get all the variables that are needed from the database--><!--Eventually, this will become a PHP file, as we need to extract many values from the database-->
 <script src = "js/library.js"></script><!--this is to get all the functions that are needed-->
 <script src = "js/dorm.js"></script>
