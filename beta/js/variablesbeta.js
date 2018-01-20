@@ -4,11 +4,11 @@ All Variables used in the Sweet Elite game
 Written by Olivier Jalbert
 a.k.a. "Lightshadow"
 
-Copyright Dulcet Games 2016-2017.
+Copyright Dulcet Games 2016-2018.
 
 All rights reserved.
 
-July 23, 2017
+January 2018
 */
 
 //Chapter locations
