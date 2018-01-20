@@ -37,6 +37,16 @@ while($rs = $statement->fetch())
 
 }
 
+/*
+0: Department of Business, Commerce, and Politics,
+1: Department of Perfoming Arts,
+2: Department of Pure and Applied Sciences,
+3: Department of Health Sciences, 
+4: Department of Athletics,
+5: Department of Fine Arts,
+6: Department of Fashion
+*/
+
 //Allocation of student ID base depending on the user's departmnet
 if($department == "0")
 {
@@ -44,23 +54,24 @@ if($department == "0")
 }
 elseif($department == "1")
 {
-    $card_base = "studentid/bases/athletics.jpg";
+    $card_base = "studentid/bases/performingarts.jpg";
+    
 }
 elseif($department == "2")
 {
-    $card_base = "studentid/bases/finearts.jpg";
+    $card_base = "studentid/bases/puresciences.jpg";
 }
 elseif($department == "3")
 {
-    $card_base = "studentid/bases/performingarts.jpg";
+    $card_base = "studentid/bases/health.jpg";
 }
 elseif($department == "4")
 {
-    $card_base = "studentid/bases/puresciences.jpg";
+    $card_base = "studentid/bases/athletics.jpg";
 }
 elseif($department == "5")
 {
-    $card_base = "studentid/bases/health.jpg";
+    $card_base = "studentid/bases/finearts.jpg";
 }
 elseif($department == "6")
 {

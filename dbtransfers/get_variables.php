@@ -22,6 +22,21 @@ while($rs = $statement->fetch())//"rs" = "row statements"
 }
 
 //*********************************************
+//parse SCHOLARINFO table
+//*********************************************
+
+$id = $_SESSION['id'];
+
+$sqlQuery = "SELECT * FROM scholarinfo WHERE id = :id";
+$statement = $db->prepare($sqlQuery);
+$statement->execute(array(':id' => $id));
+
+while($rs = $statement->fetch())//"rs" = "row statements"
+{
+    $department = $rs['department'];
+}
+
+//*********************************************
 //parse STORY table
 //*********************************************
 
@@ -31,8 +46,9 @@ $statement->execute(array(':id' => $id));
 
 while($rs = $statement->fetch())//"rs" = "row statements"
 {
-    $story_location = $rs['storylocation'];//the variable username will contain the username of the last item of the array parsed
+    $story_location = $rs['storylocation'];
     $last_chapter = $rs['lastchapterplayed'];
+    $physicallocationint = $rs['physicallocationint'];
 }
 
 //*********************************************
@@ -72,12 +88,16 @@ while($rs = $statement->fetch())//"rs" = "row statements"
     <div id="db_handle_username"><?php echo $username; ?></div>
     <div id="db_handle_energy"><?php echo $energy; ?></div>
     <div id="db_handle_money"><?php echo $money; ?></div>
-    <div id="db_handle_nbreplays"><?php echo $nbreplays; ?></div>
+    <div id="db_handle_nbreplays"><?php echo $nbreplays; ?></div><!-- UNUSED -->
+
+    <!-- SCHOLARINFO table -->
+    <div id="db_handle_department"><?php echo $department; ?></div>
 
     <!-- STORY table -->
     <div id="db_handle_story_location"><?php echo $story_location; ?></div>
     <div id="db_handle_last_chapter_played"><?php echo $last_chapter; ?></div>
-
+    <input id="db_handle_physicallocationint" value=<?php echo $physicallocationint; ?>></input>
+    
     <!-- AFFINITY table -->
     <input id="db_handle_a1" value=<?php echo $a1; ?>></input>
     <input id="db_handle_a2" value= <?php echo $a2; ?>></input>

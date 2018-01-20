@@ -61,7 +61,7 @@ $(function initializeInterface()//CREATES the entire interface once the document
 
     //initializeVariables();//we initialize the variables only one in the game
     refreshInterface();//Start the first instance of the game
-    refreshTestContainer();//Refresh the test container for the first time
+    // refreshTestContainer();//Refresh the test container for the first time
     //refreshScholar();
 })
 
@@ -69,7 +69,7 @@ function refreshInterface()//REFRESHES the interface
 {
     gameContainer.innerHTML = "";//on détruit tout en premier
     
-    refreshTestContainer();
+    // refreshTestContainer();
     refreshObjectiveContainer();
 
     if(user.storyLocation >= story[main_text].length)//si le chapitre ("story") est terminé
@@ -86,28 +86,26 @@ function refreshInterface()//REFRESHES the interface
             // -----TODO: don't create them on every slide -----
             
             var background = document.createElement("div");//Creates the background
-                
                 background.id = "game_frame";
                 // background.style.borderBottomLeftRadius = "10px";
                 // background.style.borderBottomRightRadius = "10px";
                 // background.style.backgroundImage = 'url(' + story[5][storyLocation] + ')';//l'image de background du jeu
 
             var overlay = document.createElement("div");//Creates the background
-                
                 overlay.id = "game_overlay";
 
             var overlay_affinity_choice = document.createElement("div");//Creates the background
-            
                 overlay_affinity_choice.className = "game_overlay";
 
             var background_img = document.createElement('img');
-
                 background_img.id = "background_img";
                 background_img.className = "background_img";
                 background_img.style.borderBottomLeftRadius = "10px";
                 background_img.style.borderBottomRightRadius = "10px";
                 loadAllImages(background_img);
                 background_img.src = story[5][user.storyLocation];//l'image de background du jeu
+                // background_img.src = getLocationString(user.physicalLocationInt);
+                // alert(user.physicalLocationInt);
                 
             gameContainer.appendChild(background);//Appends the background
                 if(story[special_option][user.storyLocation] != -3)//we can't append the overlay if we need to click on something
@@ -339,7 +337,10 @@ function refreshInterface()//REFRESHES the interface
 
         if(story[special_option][user.storyLocation] == -2)// -2 === unlimited navigation is enabled
         {
-            user.physicalLocation = story[5][user.storyLocation];
+            // user.physicalLocation = story[5][user.storyLocation];
+            background_img.src = getLocationString(user.physicalLocationInt);
+            user.physicalLocation = getLocationString(user.physicalLocationInt);
+            // alert(getLocationString(user.physicalLocationInt));
 
             // refreshObjectiveContainer();
 
@@ -735,7 +736,7 @@ function refreshInterface()//REFRESHES the interface
                 line.addEventListener( "click",
                                         function (e)
                                         {
-                                            choice = form_names[index-1];
+                                            choice = index-1;//form_names[index-1];
                                             
                                             for(var id_index = 0; id_index < 7; id_index++)
                                             {
@@ -1254,8 +1255,7 @@ function browseLink(link, element)//link is the link of the story (story[special
     story[17][user.storyLocation] = true;
 
     user.physicalLocation = story[5][user.storyLocation];
-
-    // alert(user.physicalLocation);
+    user.physicalLocationInt = getLocationIndex(user.physicalLocation);
 
     if(link == -1)//si on va à la prochaine slide
     {
@@ -1264,6 +1264,23 @@ function browseLink(link, element)//link is the link of the story (story[special
     else if(link == -2)//activate navigation
     {
         var changelocation = true;
+
+        //on peut tout simplifier si on fait:
+
+        /*
+        if = textcontainer
+        {
+
+        }
+        else
+        {
+            conditions d'en bas
+
+            if
+            else if
+            else if
+        }
+        */
 
         if(element.id == "textContainer")//si on a cliqué sur le text container
         {
@@ -1382,20 +1399,26 @@ function browseLink(link, element)//link is the link of the story (story[special
         if(element.id != "textContainer")
         {
             if(changelocation){story[5][user.storyLocation] = element.id;}
+            
+            user.physicalLocation = element.id;//element.id est le physical location où on s'en va
+            user.physicalLocationInt = getLocationIndex(user.physicalLocation);
+            // alert(user.physicalLocationInt);
+            pushVariablesToDB();
         }
         
         refreshInterface();
     }
-    else if(link == -3)//Acts like a submit button
+    else if(link == -3)//Acts like a submit button for the form
     {
         if(choice == "null")
         {
-            //alert("Please choose a department!");
+            alert("Please choose a department!");
         }
         else
         {
             // alert('Your form was successfully sumbitted!');
             // alert(choice);
+            user.department = choice;
             user.storyLocation++;//we continue the story once we are done
         }
     }

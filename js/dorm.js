@@ -37,10 +37,10 @@ function raz()//remise à zéro
     var laptop = document.getElementById('dorm-laptop');
     var book = document.getElementById('dorm-book');
 
-    var wardrobeIMG = "images/game_images/dorm/dorm_ward.png";
-    var bagIMG = "images/game_images/dorm/dorm_ward.png";
-    var laptopIMG = "images/game_images/dorm/dorm_pc.png";
-    var bookIMG = "images/game_images/dorm/dorm_ward.png";
+    var wardrobeIMG = "images/game_images/dorm/tinted_ward.png";
+    var bagIMG = "images/game_images/dorm/tinted_bag.png";
+    var laptopIMG = "images/game_images/dorm/tinted_pc.png";
+    var bookIMG = "images/game_images/dorm/tinted_book.png";
 
     container.innerHTML = "";
 
@@ -188,7 +188,7 @@ function wardrobe()
     var img = document.createElement('img');
         
         img.className = "img";
-        img.src = "images/game_images/dorm/dorm_ward.png";
+        img.src = "images/game_images/dorm/tinted_ward.png";
         
     var overlay_form = document.createElement('div');
         overlay_form.id = "overlay_form";
@@ -295,16 +295,16 @@ function wardrobe()
                 button_back.className = "button pink_button";//style="margin:20px;"
                 button_back.style.margin = "10px";
                 button_back.innerHTML = "Back";
-            
-        var right_container = document.createElement('div');//the character image container
-            right_container.id = "right_container";
-            right_container.className = "flex-panel";
-            right_container.style.height = "100%";//initially 346
+    
+    var right_container = document.createElement('div');//the character image container
+        right_container.id = "right_container";
+        // right_container.className = "flex-panel";
+        right_container.style.height = "100%";//initially 346
 
-        var img_character = document.createElement('img');
-            img_character.id = "img_character";
-            img_character.style.height = "100%";//initially 346
-            img_character.src = "scholar_sprite.php";
+    var img_character = document.createElement('img');
+        img_character.id = "img_character";
+        img_character.style.height = "100%";//initially 346
+        img_character.src = "scholar_sprite.php";
 
     overlay_form.appendChild(left_container);
         left_container.appendChild(title);

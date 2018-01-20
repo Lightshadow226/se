@@ -40,11 +40,31 @@ include_once '../resources/utilities.php';
     }
 
     //*********************************************
+    //SCHOLARINFO table
+    //*********************************************
+
+    $department = $_POST['department'];
+
+    try
+    {
+        $sqlQuery1 = "UPDATE scholarinfo SET scholar_department = '$department' WHERE id = '$id'";
+        $statement = $db->prepare($sqlQuery1);
+        $statement->execute();
+
+        $status = "SQL Sent!";
+    }
+    catch (PDOException $ex)
+    {
+        echo $ex;
+    }
+
+    //*********************************************
     //STORY table
     //*********************************************
 
     $storylocation = $_POST['storylocation'];//storylocation
     $lastchapterplayed = $_POST['lastchapterplayed'];//lastchapterplayed
+    $physicallocationint = $_POST['physicallocationint'];//physical location int
     
     try
     {
@@ -55,6 +75,10 @@ include_once '../resources/utilities.php';
         $sqlQuery2 = "UPDATE story SET lastchapterplayed = '$lastchapterplayed' WHERE id = '$id'";
         $statement2 = $db->prepare($sqlQuery2);
         $statement2->execute();
+
+        $sqlQuery3 = "UPDATE story SET physicallocationint = '$physicallocationint' WHERE id = '$id'";
+        $statement3 = $db->prepare($sqlQuery3);
+        $statement3->execute();
 
         $status = "SQL Sent!";
     }

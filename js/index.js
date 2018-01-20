@@ -48,7 +48,7 @@ var chapter_description =
 $(function create_interface()
 {
     update_current_chapter(user.last_chapter_played, "currentIndex");
-})
+});
 
 function update_current_chapter(index, type)
 {

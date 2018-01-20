@@ -323,3 +323,75 @@ function refreshProgressBar()
 
     progressBar.style.width = progress + "%";
 }
+
+Object.size = function(object)
+{
+    var size = 0, key;
+    for (key in object)
+    {
+        if (object.hasOwnProperty(key)) size++;
+    }
+    return size;
+};
+
+function getLocationString(index)//returns the physical location (STRING) of the user, given an image(INT)
+{
+    switch(index)
+    {
+        case 0:
+            return locations.blackScreen;
+        case 1:
+            return locations.entrance;
+        case 2:
+            return locations.hall1;
+        case 3:
+            return locations.class1;
+        case 4:
+            return locations.class2;
+        case 5:
+            return locations.hall2;
+        case 6:
+            return locations.cafeteria;
+        case 7:
+            return locations.cafeteriaLounge;
+        case 8:
+            return locations.cafeteriaOutside;
+        case 9:
+            return locations.garden;
+        case 10:
+            return locations.gym;
+        case 11:
+            return locations.dormHall;
+        case 12:
+            return locations.dorm;
+        case 13:
+            return locations.dormBathroom;
+        default:
+            return("error");
+    }
+}
+
+function getLocationIndex(string)//returns the physical location (INT) of the user, given an image(STRING)
+{
+    var index = 0;
+    
+    // alert(Object.size(locations));
+    
+    for(var i = 0; i < Object.size(locations); i++)
+    {
+        // alert("string:" + string + " - calculated: " + getLocationString(i));
+        if(string == getLocationString(i))
+        {
+            // alert("int:" + i + " - string: " + getLocationString(i));
+            index = i;
+        }
+    }
+
+    // alert(index);
+    return index;
+}
+
+// function getLocationIndex()//returns the physical location (string) of the user, given an index (int)
+// {
+
+// }

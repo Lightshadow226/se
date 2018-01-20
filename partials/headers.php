@@ -8,6 +8,16 @@
 
 <header>
 
+	<div id="loader-wrapper">
+		<div id="loader">
+		</div>
+		<img id="img_loader" src="logo.png"/>
+		
+		<div class="loader-section section-left"></div>
+		<div class="loader-section section-right"></div>
+	
+	</div>
+
 	<i style="display: none;"><?php echo guard(); ?></i>
 
 	<?php if((isset($_SESSION['username']) || isCookieValid($db))): ?><!-- If the username is specified (the user is logged on) -->
@@ -22,7 +32,7 @@
 
 			<div id="pink_menu">
 				<div class="flex-panel"></div>
-				<a class="menu_item" href="index.php">Dashboard</a>
+				<a class="menu_item" href="index.php">Dashboard</a>	
 				<a class="menu_item" href="dorm.php">My Dorm</a>
 				<a class="menu_item" href="map.php">City Map</a>
 				<a class="menu_item" href="game.php">My Game</a>
@@ -71,6 +81,11 @@ $(function()
             $(this).addClass('menu-item-activated');
         }
     });
+});
+
+$(document).ready(function()
+{
+    $('body').addClass('loaded');
 });
 
 //WORKS: http://huidesign.com/automatically-highlight-current-page-in-navigation-with-css-jquery/

@@ -1,8 +1,6 @@
 ﻿#TODO NOTES
 
 `TODO: Next`
-
-- *DATABASE*            [variables.js, get and pushvariables.php]       AJOUTER "user.physicalLocation" dans le get et le push de DB_handle
 - *CHAPTER INPUT*       [chapter1.js]                                   la chapitre 1 est terminé jusqu'à la slide 129, donc il va falloir valider le reste + rajouter les émotions
 - *CHAPTER INPUT*       [chapter1.js]                                   il reste à ajouter les ghost slides pour la slide 44 (221-224)
 
@@ -19,8 +17,7 @@
 - *IMPROVEMENTS*        [imageGenerator.php]                            there are still improvements to be made in this file
 - *INDEX*               [index.php]                                     faire en sorte que le affinity truc fonctionne
 - *INDEX*               [index.php]                                     faire marcher le truc de best infinity
-- *DORM*                [dorm.php]                                      créer un loader pour attendre que l'image se génère avec $.get()
-- *DORM*                [dorm.php]                                      ajouter les images des highlights
+- *DORM - DESIGN*       [dorm.php]                                      créer un loader pour attendre que l'image se génère avec $.get()
 - *DORM*                [dorm.php]                                      arranger le bouton "Reset" dans le wardrobe form
 
 `TODO: MEDIUM Importance`
@@ -34,6 +31,7 @@
 - *DEBUG*               [???]                                           z-index du scholar est trop petit (la barre de texte est au-dessus)
 - *CODE - RESTRUCT*     [dorm.js]                                       enlever les .style et les remplacer par des classes
 - *INDEX*               [index.php]                                     mettre le CSS dans un autre fichier)
+- *GAME ENGINE*         [gameengine.js]                                 redesign the game engine for efficiency (put it on paper first)
 
 `TODO: LOW Importance`
 - *DEBUG*               [login.php, signup.php, resetpassword.php]      Améliorer les messages d'erreurs pour login.php, signup.php, resetpassword.php

@@ -33,7 +33,6 @@ const backgrounds_path = "images/game_images/backgrounds/";
 var locations = 
 {
     blackScreen: backgrounds_path + "blackscreen.jpg",
-    
     entrance: backgrounds_path + "entrance.jpg",
         hall1: backgrounds_path + "hall1.jpg",
             class1: backgrounds_path + "class1.jpg",
@@ -56,7 +55,9 @@ var user =
     money: 0,
     storyLocation: 0,//VARIABLE COMMUNE À TOUS LES CHAPITRES, LA SEULE CHOSE QUI PEU BLOQUER serait de mettre un IF(last_chapter_played == this)
     last_chapter_played: 0,
-    physicalLocation: backgrounds_path + locations.blackScreen
+    physicalLocation: backgrounds_path + locations.blackScreen,
+    physicalLocationInt: 0,
+    department: 0
 };
 
 //on va devoir écrire un code pour GET ces variables de la base de données. ces variables vont être propres à chaque utilisateur.
@@ -447,10 +448,16 @@ function pullVariablesFromDB()
         user.money = document.getElementById("db_handle_money").innerHTML;
 
         /********************
+        SCHOLARINFO table
+        *********************/
+        user.department = document.getElementById("db_handle_department").innerHTML;
+
+        /********************
         STORY table
         *********************/
         user.storyLocation = document.getElementById("db_handle_story_location").innerHTML;//we should use an input and .value
         user.last_chapter_played = document.getElementById("db_handle_last_chapter_played").innerHTML;//we should use an input and .value
+        user.physicalLocationInt = parseInt(document.getElementById("db_handle_physicallocationint").value);
 
         /********************
         AFFINITY table
@@ -485,10 +492,16 @@ function pushVariablesToDB()
         'money': user.money,
 
         //*********************************************
+        //SCHOLARINFO table
+        //*********************************************
+        'department': user.department,
+
+        //*********************************************
         //STORY table
         //*********************************************
         'storylocation': user.storyLocation,
         'lastchapterplayed': user.last_chapter_played,
+        'physicallocationint': user.physicalLocationInt,
 
         //*********************************************
         //AFFINITY table

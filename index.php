@@ -305,9 +305,8 @@
 				</div>
 			</div>
 
-			<div id="dashboard">
 
-			</div>
+			
 
 		<?php endif ?>
 		

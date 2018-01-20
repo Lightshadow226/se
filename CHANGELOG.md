@@ -1,5 +1,10 @@
 #CHANGELOG
 
+Version 1.3.17 (Loader, Database)
+- *DATABASE*            [variables.js, get and pushvariables.php]       AJOUTÉ "user.physicalLocation" dans le get et le push de DB_handle, et modifié un peu le game engine
+- *DORM - IMAGES*       [dorm.php]          ajouté les images des highlights (laptop, le wardrobe, le book et le bag)
+- *DESIGN*              [headers.php]       ajouté un loader à toutes les pages (il va rester à l'adapter pour le dorm.php -> wardrobe)
+
 Version 1.3.15 (INDEX, DORM, DESIGN)
 - *DESIGN*              [index.php]         terminé le design page (il reste à faire le infinity et mettre le CSS dans un autre fichier)
 - *CODE - DORM*         [dorm.php]          terminé la page dorm.php (terminé les tooltips, les liens, le positionnement des objets, etc.)
