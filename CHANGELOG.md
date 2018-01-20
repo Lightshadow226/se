@@ -5,6 +5,10 @@ Version 1.3.17 (Loader, Database)
 - *DORM - IMAGES*       [dorm.php]          ajouté les images des highlights (laptop, le wardrobe, le book et le bag)
 - *DESIGN*              [headers.php]       ajouté un loader à toutes les pages (il va rester à l'adapter pour le dorm.php -> wardrobe)
 
+Version 1.3.16 (Dollmaker images)
+- *VISUALS - DOLLMAKER* [dorm.php]          Images necessary for the dollmaker have been uploaded
+- *CODE - CHAPTERBETA*  [chapterbeta.js]    beta players test, not important for the demo
+
 Version 1.3.15 (INDEX, DORM, DESIGN)
 - *DESIGN*              [index.php]         terminé le design page (il reste à faire le infinity et mettre le CSS dans un autre fichier)
 - *CODE - DORM*         [dorm.php]          terminé la page dorm.php (terminé les tooltips, les liens, le positionnement des objets, etc.)
