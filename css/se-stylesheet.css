@@ -281,6 +281,12 @@
 		width: 80%;
 		min-width: 1000px;
 		margin-top: 5px;
+		
+		/* position:absolute;
+		bottom:0;
+		left: 50%;
+		transform: translateX(-50%);
+		height: 60px;*/
 	}
 
 	.footer_link
@@ -490,8 +496,8 @@
 			/*	-ms-transform: all 0.3s ease-out;  /* IE 9 */
 			/*		transform: all 0.3s ease-out;  /* Firefox 16+, IE 10+, Opera */
 	
-			-webkit-transition: all 0s 1s ease-out;  
-					transition: all 0s 1s ease-out;/*le premier chiffre est le temps de transition après l'animation, et le premier est la duration de la transition*/
+			/*-webkit-transition: all 0s 1s ease-out;  
+					transition: all 0s 1s ease-out;*le premier chiffre est le temps de transition après l'animation, et le premier est la duration de la transition*/
 		}
 		
 		/* JavaScript Turned Off */
@@ -1406,6 +1412,7 @@
 	.selector_choices
 	{
 		margin: 10px 0px;/*top & left*/
+		/* height: 50px; */
 	}
 
 	.choices
@@ -1414,13 +1421,11 @@
 		border-radius: 3px;
 		border: 2px dotted #ff4956;
 		vertical-align: middle;
+		width: 100%;
 
 		user-select: none;
 		-webkit-user-select: none;
 		cursor: pointer;
-		padding: 10px;
-		margin: 10px;
-		flex: 1;
 	}
 
 	.choices:hover
@@ -1428,28 +1433,29 @@
 		background-color: #F7B334;
 	}
 
+	.choices-button-container
+	{
+		margin: 10px;
+		padding: 10px;
+	}
+
 	.choices-button
 	{
-		margin: 10px;/*centers the button in its parent div*/
-		padding: 10px;
 		align-content: center;
 		border-radius: 3px;
+		width: 100%;
+		
 		text-decoration: none;/*enlever le underline -> ne va plus être nécessaire quand on va rendre le bouton un actual Button*/
 		text-align: center;
 		-webkit-user-select: none;
-		flex: 1;
-		font-weight: 300;
-		/* height: 1.28em; */
 
 		border: none;
-
-		-webkit-font-smoothing: antialiased;
-		-webkit-filter: blur(0.000001px);
 	}
 
 	.choices-button:hover
 	{
-		background-color: #682566;
+		/* background-color: #682566; */
+		cursor: pointer;
 	}
 
 /***************STRUCTURE***************/

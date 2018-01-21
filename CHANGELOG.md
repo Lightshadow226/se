@@ -1,5 +1,9 @@
 #CHANGELOG
 
+Version 1.3.19 (New structure, Dorm images)
+- *FILE MANAGEMENT*     [images]            Added a new structure (not implemented yet, but a tentative version is in the images folder)
+- *DORM - IMAGES*       [dorm.php]          modifié le engine pour customize l'apparence avec des images plutôt que tu texte (IL MANQUE LES IMAGES POUR LES SOULIERS)
+
 Version 1.3.18 (Profile Page)
 - *STUDENT ID*          [profile.php]       Added a better font and more info on the student ID card. Still missing highest infinity and current episode (will have to colaborate with Olivier)
 - *PROFILE SPRITE*      [profile.php]       Cuter scholar sprite
