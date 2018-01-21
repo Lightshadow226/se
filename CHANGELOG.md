@@ -1,5 +1,11 @@
 #CHANGELOG
 
+Version 1.3.18 (Profile Page)
+- *STUDENT ID*          [profile.php]       Added a better font and more info on the student ID card. Still missing highest infinity and current episode (will have to colaborate with Olivier)
+- *PROFILE SPRITE*      [profile.php]       Cuter scholar sprite
+- *DESIGN*              [profile.php]       Made the page overall better designed
+- *IMG GENERATOR*       [imageGenerator.php]    Added relevant changes to account for changes in profile.php
+
 Version 1.3.17 (Loader, Database)
 - *DATABASE*            [variables.js, get and pushvariables.php]       AJOUTÉ "user.physicalLocation" dans le get et le push de DB_handle, et modifié un peu le game engine
 - *DORM - IMAGES*       [dorm.php]          ajouté les images des highlights (laptop, le wardrobe, le book et le bag)
