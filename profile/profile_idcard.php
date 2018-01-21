@@ -28,12 +28,14 @@ $statement->execute(array(':id' => $id));
 while($rs = $statement->fetch())
 {
     $department = $rs['scholar_department'];
-	$sex = $rs['scholar_sex'];
+    $sex = $rs['scholar_sex'];
+    $gender = $rs['scholar_gender'];
 	$skincolor = $rs['scholar_skincolor'];
 	$hairstyle = $rs['scholar_hairstyle'];
 	$haircolor = $rs['scholar_haircolor'];
     $eyecolor = $rs['scholar_eyecolor'];
     $name = $rs['scholar_name'];
+    $dob = $rs['scholar_dob'];
 
 }
 
@@ -54,8 +56,7 @@ if($department == "0")
 }
 elseif($department == "1")
 {
-    $card_base = "studentid/bases/performingarts.jpg";
-    
+    $card_base = "studentid/bases/performingarts.jpg";   
 }
 elseif($department == "2")
 {
@@ -78,6 +79,50 @@ elseif($department == "6")
     $card_base = "studentid/bases/fashion.jpg";
 }
 
+//Allocation of departments to WRITE ON THE STUDENT ID (not the base image)
+if($department == "0")
+{
+    $dept_write = "Business, Commerce & Politics";
+}
+elseif($department == "1")
+{
+    $dept_write = "Performing Arts";  
+}
+elseif($department == "2")
+{
+    $dept_write = "Pure & Applied Sciences";
+}
+elseif($department == "3")
+{
+    $dept_write = "Health Sciences";
+}
+elseif($department == "4")
+{
+    $dept_write = "Athletics";
+}
+elseif($department == "5")
+{
+    $dept_write = "Fine Arts";
+}
+elseif($department == "6")
+{
+    $dept_write = "Fashion";
+}
+
+//Allocation of scholar's gender
+if($gender == "0") // "she" pronouns
+{
+    $gender_write = "F";
+}
+else if($gender == "1") //"he" pronouns
+{
+    $gender_write = "M";
+}
+else if($gender == "2") //"they" pronouns
+{
+    $gender_write = "NB";
+}
+
 $skin_rgb = getSkinColor($skincolor);
 $hair_rgb = getHairColor($haircolor);
 $eye_rgb = getEyeColor($eyecolor);
@@ -98,8 +143,12 @@ $source5 = imagecreatefrompng($genericVariables[4]);//uniform
 $source6 = imagecreatefrompng($genericVariables[0]);//body type
 
 //Writing on the image
-$textcolor = imagecolorallocate($destination, 0, 0, 255);
-imagestring($destination, 10, 150, 205, $name, $textcolor);
+$textcolor = imagecolorallocate($destination, 0, 0, 0);
+$font = "../fonts/arial.ttf";
+imagettftext($destination, 25, 0, 150, 220, $textcolor, $font, $name);
+imagettftext($destination, 22, 0, 430, 305, $textcolor, $font, $dob);
+imagettftext($destination, 25, 0, 150, 305, $textcolor, $font, $gender_write);
+imagettftext($destination, 25, 0, 150, 395, $textcolor, $font, $dept_write);
 
 imagealphablending($source1, true);
 imagesavealpha($source1, true);
