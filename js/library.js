@@ -318,7 +318,14 @@ function refreshProgressBar()
     var progress = user.storyLocation/chapterSize(user.last_chapter_played)*100;
     
     // progressBar.innerHTML = "";
-    progressBar.innerHTML = Math.round(progress) + "% <br>";
+    if(progress > 10)
+    {
+        progressBar.innerHTML = Math.round(progress) + "% <br>";
+    }
+    else
+    {
+        progressBar.innerHTML = "<br>";
+    }
     // progressBar.innerHTML = /*"Chapter progress: " +*/ Math.round(progress * 10) / 10 + "% <br>";//pour avoir 1 décimale
 
     progressBar.style.width = progress + "%";
@@ -391,6 +398,77 @@ function getLocationIndex(string)//returns the physical location (INT) of the us
     return index;
 }
 
+
+function getHighestAffinity()
+{
+    var char = alistair;
+    var highestAffinity = 0;
+
+    for(var i = 0; i < charList.length; i++)
+    {
+        var new_affinity = getPersonnageFromName(charList[i]).affinity;
+
+        if(new_affinity > highestAffinity)
+        {
+            char = getPersonnageFromName(charList[i]);
+        }
+    }
+
+    if(highestAffinity == 0)
+    {
+        char = empty;
+    }
+
+    return char;//char est le plus grand affinity
+}
+
+function createLoader()
+{
+    var loaderWrapper = document.createElement('div');
+        loaderWrapper.id = "small-loader-wrapper";
+    
+    var loader = document.createElement('div');
+        loader.id = "small-loader";
+    
+    var img_loader = document.createElement('img');
+        img_loader.id = "small-img_loader";
+        img_loader.src="logo.png";
+    
+    loaderWrapper.appendChild(loader);
+    loaderWrapper.appendChild(img_loader);
+
+    return loaderWrapper;
+
+    // <div id="loader-wrapper">
+	// 	<div id="loader">
+	// 	</div>
+
+	// 	<img id="img_loader" src="logo.png"/>
+		
+	// 	<div class="loader-section section-left"></div>
+	// 	<div class="loader-section section-right"></div>
+    // </div>
+}
+
+function getCurrentChapter()
+{
+    var index = user.last_chapter_played;//current chapter == index
+    const character_portraits_path = "images/general/chapter_images/";
+
+    var chapterImage = character_portraits_path + chapter_images[index] + ".png";
+    var chapterTitle = chapters[index];
+    var chapterDescription = chapter_description[index];
+
+    var currentChapter =
+    {
+        title: chapterTitle,
+        description: chapterDescription,
+        number: index,
+        image: chapterImage,
+    }
+
+    return currentChapter;
+}
 // function getLocationIndex()//returns the physical location (string) of the user, given an index (int)
 // {
 

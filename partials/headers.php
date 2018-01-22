@@ -35,7 +35,7 @@
 				<a class="menu_item" href="index.php">Dashboard</a>	
 				<a class="menu_item" href="dorm.php">My Dorm</a>
 				<a class="menu_item" href="map.php">City Map</a>
-				<a class="menu_item" href="game.php">My Game</a>
+				<a id="game_link" class="menu_item" href="game.php">My Game</a>
 				<a class="menu_item" href="relationships.php">Relationships</a>
 				<a class="menu_item" href="profile.php">My Profile</a>
 				<div class="flex-panel"></div>
@@ -73,14 +73,27 @@
 $(function()
 {
     page = location.href.toLowerCase();
-
+	
+	// alert(document.location.hostname);
+	// alert(document.location.pathname);
+	
     $('.menu_item').each(function()
     {
-        if (page.indexOf(this.href.toLowerCase()) > -1)
+		if (page.indexOf(this.href.toLowerCase()) > -1)
         {
             $(this).addClass('menu-item-activated');
-        }
-    });
+		}
+	});
+	
+	var extension = ".php";
+
+	for(var i = 0; i < chapter_images.length; i++)
+	{
+		if(document.location.pathname.toLowerCase() == "/se/" + chapter_images[i] + extension)
+		{
+			$('#game_link').addClass('menu-item-activated');
+		}
+	}
 });
 
 $(document).ready(function()

@@ -151,32 +151,26 @@
 			</div>
 			
 			<!-- CHARACTER RANDOMIZER -->
-			<div class="card-nomargin flex-container" style="height:411.375px;"><!-- style="height=780px;" -->
-				<!-- <div>
-					<img class = "img-badge" style="height:100%; width:auto; border-top-left-radius: 10px; border-bottom-left-radius: 10px;" src = "images/banners/customize_your_character.png"></img>
-				</div> -->
-
-				<div class = "flex-panel2 flex-container">
-					
-					<div class="flex-panel"></div>
-
-					<div id="left_wing" class="center_div chevron-container"></div>
-
-					<div id="random_character_panel" class = "flex-panel">
-						<!-- <img src="randomizer.php" width="346" height="auto"> -->
-
-						<!--ORIGINAL STYLE:
-						style="-webkit-user-select: none;background-position: 0px 0px, 10px 10px;background-size: 20px 20px;background-image:linear-gradient(45deg, #eee 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%),linear-gradient(45deg, #eee 25%, white 25%, white 75%, #eee 75%, #eee 100%);cursor: zoom-in;" -->
-						<!--solution found at: https://stackoverflow.com/questions/900207/return-a-php-page-as-an-image -->
-						<!-- ?php include_once 'randomizer.php' ?> -->
-					</div>
-
-					<div id="right_wing" class="center_div chevron-container"></div>
-					
-					<div class="flex-panel"></div>
-				
+			<div class="card">
+				<div class="card-header">
+					<h3>Customize your character!</h3>
 				</div>
-				
+
+				<div class="card-content flex-container" style="height:411.375px;"><!-- style="height=780px;" -->
+					<!-- <div>
+						<img class = "img-badge" style="height:100%; width:auto; border-top-left-radius: 10px; border-bottom-left-radius: 10px;" src = "images/banners/customize_your_character.png"></img>
+					</div> -->
+
+					<div class = "flex-panel2 flex-container">
+						<div class="flex-panel"></div>
+						<div id="left_wing" class="center_div chevron-container"></div>
+						<div id="random_character_panel" class = "flex-panel"></div>
+						<div id="right_wing" class="center_div chevron-container"></div>
+						<div class="flex-panel"></div>
+					
+					</div>
+					
+				</div>
 			</div>
 
 			<!-- START PLAYING -->
@@ -253,22 +247,23 @@
 							<!--title-->
 							<div class="flex-container">
 								<div class="flex-panel">
-									<img src="images/game_images/sprites/square_portraits/alistair.jpg" style="width: 100%; border-radius: 50%; border: 2px solid #f3def2; box-shadow: 0 0 10px #f3def2;"/>
+									<img id="highestAffinityIMG" style="width: 100%; border-radius: 50%; border: 2px solid #f3def2; box-shadow: 0 0 10px #f3def2;"/>
 									<!-- <h2 class="center" style="color: black;">Alistair</h2> -->
 								</div>
 
 								<div class="flex-container-vertical">
 									<div class="flex-panel"></div>
 									<h4 style="vertical-align: middle; font-weight: 300; margin-left:20px; font-size: 1.5em;">Highest Infinity:</h4>
-									<h1 class="center" style="color: #682666; font-weight: 300;">Alistair</h1>
+									<h1 id="highestAffinityTITLE" class="center" style="color: #682666; font-weight: 300;"></h1>
 									<div class="flex-panel"></div>
 								</div>
 							</div>
 
 							<!--description-->
-							<div class="flex-panel">
-								<p style="margin-top: 10px; line-height: 1.5em; text-align: justify;">The most promising athlete of the school, he’s on a scholarship just like your Scholar! Alistair specializes in martial arts in general, but his favorite sport is boxing, in which he dreams of making a career out of it and competing in the Olympic Games one day. Unlike most of his classmates, Alistair comes from a middle-class family that struggles with money, and he’s determined to change that. Despite the difference in social classes, he and Tadashi have been best friends for a long time.</p>
-							</div>
+							<p id="highestAffinityDESCRIPTION" style="margin-top: 10px; line-height: 1.5em; text-align: justify;"></p>
+							
+							<!--percentage-->
+							<h1 id="highestAffinityPERCENTAGE" style="margin-top: 10px; line-height: 1.5em; text-align: center; vertical-align: middle;"></h1>
 						</div>
 						
 						<!--Button container-->
@@ -417,79 +412,8 @@
 <script src = "js/index.js"></script><!--needed for the logged in functionality of "current chapter"-->
 
 <script>
-	// var img = new Image().src = "randomizer.php";
-
-	//$('#random_character_panel').html('<img src="' + ?php include_once 'randomizer.php' ?> + '"/>');
-
-	var container = document.getElementById('random_character_panel');
-	
-	function initialize()
-	{
-		var left_wing = document.createElement('img');
-
-			//left_wing.style.height = "auto";
-			left_wing.src = "images/general/characters_page/chevrons/pink/leftchevron.png";
-			left_wing.className = "chevron-img";
-			left_wing.onmouseenter =    function f()
-										{
-											left_wing.src = "images/general/characters_page/chevrons/purple/leftchevron.png";
-										}
-			left_wing.onmouseleave =    function f()
-										{
-											left_wing.src = "images/general/characters_page/chevrons/pink/leftchevron.png";
-										}
-			left_wing.onclick =         function f()
-										{
-											randomImg();
-										}
-
-		var right_wing = document.createElement('img');
-        
-			right_wing.src = "images/general/characters_page/chevrons/pink/rightchevron.png";
-			right_wing.className = "chevron-img";
-			right_wing.onmouseenter = function f()
-				{
-					right_wing.src = "images/general/characters_page/chevrons/purple/rightchevron.png";
-				}
-			right_wing.onmouseleave = function f()
-				{
-					right_wing.src = "images/general/characters_page/chevrons/pink/rightchevron.png";
-				}
-			right_wing.onclick = function f()
-				{
-					randomImg();
-				}
-
-		document.getElementById('left_wing').appendChild(left_wing);
-		document.getElementById('right_wing').appendChild(right_wing);
-
-		randomImg();
-	}
-
-	function clearImg()
-	{
-		container.innerHTML = "";
-	}
-
-	function randomImg()
-	{
-		clearImg();
-
-		// $('#IMG_handle').load('randomizer.php');//amazingly slow
-		$.get('profile/randomizer.php');//amazingly faster
-
-		var img = document.createElement('img');
-			img.className = "true-center";
-			img.src = 'profile/randomizer.php';
-			img.style.height = "100%";//initially 346
-
-		container.appendChild(img);
-		container.style.position = "relative";
-		// container.style.height = "100%";
-	}
-
-	initialize();
-
+	//logged out
+	initialize();//initialize the random generator
 </script>
 
 </html>

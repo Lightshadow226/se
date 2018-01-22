@@ -1,5 +1,14 @@
 #CHANGELOG
 
+Version 1.3.20 (Index, Dorm Loader)
+- *INDEX*               [index.php]         highest affinity is done, and the colours are 
+- *INDEX*               [index.php]         card headers are now pink instead of yellow
+- *HEADER*              [headers.php]       the game tag is highlighted when we're playing the game
+- *GAME*                [library.js]        progress bar doesn't show the progress % number under 10%
+- *DATABASE*            [get.php]           scholar_info est pulled (pas pushed!!!)
+- *DORM*                [dorm.php]          dorm loader is done (when we click on a new item)
+- *CODE - RESTRUCT*     [variables.js]      transféré les variables de relationships.js (et index.js) à variables.js
+
 Version 1.3.19 (New structure, Dorm images)
 - *FILE MANAGEMENT*     [images]            Added a new structure (not implemented yet, but a tentative version is in the images folder)
 - *DORM - IMAGES*       [dorm.php]          modifié le engine pour customize l'apparence avec des images plutôt que tu texte (IL MANQUE LES IMAGES POUR LES SOULIERS)

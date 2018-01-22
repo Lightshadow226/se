@@ -57,7 +57,14 @@ var user =
     last_chapter_played: 0,
     physicalLocation: backgrounds_path + locations.blackScreen,
     physicalLocationInt: 0,
-    department: 0
+    department: 0,
+    sex: 0, //0: female, 1: male
+    gender: 0,//0: she, 1: he, 2: they
+    haircolor: 0,//
+    hairstyle: 0,//
+    skincolor: 0,//
+    eyecolor: 0,//
+    wigID: 0
 };
 
 //on va devoir écrire un code pour GET ces variables de la base de données. ces variables vont être propres à chaque utilisateur.
@@ -78,12 +85,180 @@ var user =
         "tyler"
     ];
 
+//Characters (RELATIONSHIPS.PHP)
+    //est utilisé pour repérer le path des images
+    var characters = 
+    [
+        "alistair",
+        "axel",
+        "claire",
+        "ellie",
+        "karolina",
+        "neha",
+        "raquel",
+        "tadashi",
+        "tegan",
+        "tyler",
+        "Serena",
+        "ca",
+        "ladya",
+        //"Coach Davis",
+        //"Teacher 2",
+    ];
+
+    //first name is displayed
+    var first_name = 
+    [
+        "Alistair",
+        "Axel",
+        "Claire",
+        "Ellie",
+        "Karolina",
+        "Neha",
+        "Raquel",
+        "Tadashi",
+        "Tegan",
+        "Tyler",
+        "Serena",
+        "C & A",
+        "Lady Arlington",
+        "Coach Davis",
+    ];
+
+    //full name is unused
+    var fullname = 
+    [
+        "Alistair Drew",
+        "Classified",
+        "Claire Durand",
+        "Ellie Collins",
+        "Karolina Novakova",
+        "Neha Rao",
+        "Raquel Pereira Camargo",
+        "Tadashi Nakano",
+        "Tegan Novakov",
+        "Tyler Williams",
+        "Serena",
+        "C & A",
+        "Lady Amelia Arlington",
+        "Coach Murdoc Davis",
+    ];
+
+    var birthday = 
+    [
+        "March 1st",
+        "November 20th",
+        "October 5th",
+        "June 19",
+        "April 25th",
+        "July 7th",
+        "December 3rd",
+        "September 17th",
+        "April 25th",
+        "August 21st",
+        "June 30th",
+        "???",
+        "July 1st",
+        "",//davis
+    ];
+
+    var likes = 
+    [
+        "Sports, protein shakes and his family",
+        "Rock music, skipping classes and his guitar",
+        "Helping People, reading scientific papers and pretty notebooks",
+        "Mechanics, talking to people and dyeing her hair",
+        "Shopping, clothes, modelling and getting what she wants",
+        "Colourful fabrics, innovative designs, The colour gold",
+        "Soccer, winning and fast Food",
+        "Leading people, finance and relaxing",
+        "Video games, computers and taking Naps",
+        "Drawing, being the center of attention, going to the crafts store",
+        "Video Game Development, Writing, Interacting with her Fans",
+        "Pretty art, funny memes",
+        "Students who follow rules, Classical Music, Money"
+    ];
+
+    var dislikes = 
+    [
+        "Arrogance, laziness, coldness",
+        "Tadashi, country music, hypocrisy",
+        "rudeness, being made fun of, suffering",
+        "Bullying, not being taken seriously, everything boring",
+        "Being bothered, ugly clothes, being told what to do",
+        "Fashion disasters, being forced to be social, science class",
+        "Homework, classical music, party Poopers",
+        "Axel, inefficiency, dishonesty",
+        "Aggressiveness, loud parties, when his computer lags",
+        "Structure, school, close-mindedness",
+        "When fans do not read the FAQ before contacting her",
+        "When you pick the wrong dialog choice",
+        "Having her authority challenged, Tardiness"
+    ];
+
+    var fulldescription = 
+    [
+        "The most promising athlete of the school, he’s on a scholarship just like your Scholar! Alistair specializes in martial arts in general, but his favorite sport is boxing, in which he dreams of making a career out of it and competing in the Olympic Games one day. Unlike most of his classmates, Alistair comes from a middle-class family that struggles with money, and he’s determined to change that. Despite the difference in social classes, he and Tadashi have been best friends for a long time.",
+        "The rock star of the Academy. Literally. Axel is an internationally known teenage superstar and is usually seen touring for his new album. Cocky, sarcastic, and oh-so-charming, Axel only comes to Arlington because the law requires him to get his high school diploma and he makes sure everybody is aware of his nonchalance…But this musician constantly covers up who he is. In fact, is Axel even his real name?",
+        "Claire is an aspiring neurosurgeon that volunteers part-time at the local hospital. Deeply caring and protective of the people she loves, she’s the student everybody loves and respects, despite her spending most of her time studying and doing medical research alone. Claire will do anything to make her classmates happy, and she’ll do so with a smile. After all, the last thing she wants it to lose yet another person she cares about.",
+        "Inventor, mechanic and engineer to be, Ellie, nicknamed as “Tinker” by students is the famous president of Arlington’s robotics club! Despite being in a male-dominated field, Ellie is not afraid to shine. She loves maining new people and has a cute, cheerful exterior that charms her potential clients. But as time passes, Ellie realizes that there are several obstacles that might put not only her career at risk…but her identity as well.",
+        "Considered by many to be the prettiest girl in school, Karolina specializes in modelling. She’s gorgeous and fully aware of her charm. In fact, she makes sure that everybody knows that she’s the hottest, coolest, most amazing girl in this whole establishment, okay?! She is ruthless and will do anything to get what she wants. However, despite her overachieving ways and her promising future, Karolina finds herself struggling with her image…so much that it starts affecting her mental state and health. Her best friend and “second in command” is Neha.",
+        "An aspiring fashion designer, Neha loves making her own clothes and other’s clothes. She spends countless hours designing seasonal collections and actually sells them to the students of Arlington (at a very high price!) Her success in the school is huge and she’s almost always sold out…but she’s using that success to hide her secret…a secret she believes will destroy her. She uses Karolina as her main model and is Axel’s official stylist for his concerts and photoshoots. Rather reserved and cold, Neha can, however, be surprisingly nice…whenever Karolina isn’t around.",
+        "Raquel is passionate, borderline obsessed about soccer! A promising athlete in the athletics department, she’s energetic, ambitious and has no time for any crap. Despite being the most direct and honest student in Arlington, she can’t help but have a secret too…a secret she tries really hard to hide from her family. Raquel is always in it for the win, and that’s because she simply cannot afford to lose.",
+        "Tadashi is the current Student Body President of Arlington Academy. Having the highest GPA of the school, an estimated IQ of 160, being a star student and a jack of all trades, Tadashi doesn’t have time for any crap…and that means it will be very hard for your Scholar to get to know him. You’ll have to be sharp, organized and future-oriented…because the future is exactly what troubles this guy.",
+        "A European foreign student, Tegan specializes in Computer Science. He loves to program and spends the majority of his time in front of the computer. He also loves robotics and any kind of engineering. He has the second highest GPA of the school, beaten only by Tadashi. But despite his adorkableness and his intelligence, Tegan faces a lot of pressure from people…people who won’t believe in him and his dreams. His roommate and best friend is Tyler and he has a twin sister: Karolina.",
+        "A graphic designer in the Fine Arts department and highly skilled in anything involving visuals, thanks to his photographic memory, Tyler loves to be the center of attention! He is an artist from head to toe: charming, sensitive, creative…and highly critical of himself. It’s hard to constantly feel like your work isn’t good enough, especially when rejection is everywhere you look. Despite being very different, Tyler and Tegan make an incredible team, and being their friend comes with a lot of advantages!",
+        "Serena is the senior student that helped you understand how things work at Arlington Academy on your first day of school. She is weirdly knowledgeable in many things regarding the school’s rules, to the point where you wonder whether or not she is really a student...Serena and her friends are always there to assist you if you need any help!",
+        "Friends of Serena and senior students you have met on your first day at Arlington. They are friendly, but somewhat strange, and do not abide by the rules...yet again, aren’t all seniors like that? Nobody knows why A wears a radioactive suit and it is best not to ask any questions.",
+        "Lady Arlington is the President and Dean of Arlington Academy. She is very strict, powerful and rich. If you are a good student, you have nothing to fear."
+    ];
+
+//CHAPTERS & DESCRIPTION
+    const availableChapters = 3;
+
+    var chapters = 
+    [
+        "Introduction",
+        "Chapter 1",
+        "Chapter 2",
+        "Chapter 3",
+        "Chapter 4"
+    ];
+    
+    var chapter_images = 
+    [
+        "chapter0",
+        "chapter1",
+        "chapter2",
+        "chapter3",
+        "chapter4",
+        "chapter5",
+        "chapter6",
+        "chapter7",
+        "chapter8",
+        "chapter9"
+    ];
+
+    var chapter_description = 
+    [
+        "You just arrived at Arlington Academy, but everything is so new and big! You're going to need help from a few senior students who will lay down the basics on how things work around here.",
+        "Classes start tomorrow, so today is the time to try to make some new friends...but why is everybody so stressed today? Turns out even the simplest things back at home are much more complicated here at Arlington.",
+        "Oh no! You're running late to class on your first day! As if this wasn't bad enough, the whole school seems to be revolving around a certain teenage celebrity and an exclusive homecoming party. But things aren't exactly as great as they look on the surface...",
+        "Description",
+        "Description",
+        "Description",
+        "Description",
+        "Description",
+        "Description",
+        "Description",
+    ];
+
 //All Characters
 
     var alistair = 
     {
         isDatable: true,//const
-        affinity: 10,
+        affinity: 0,
         isCrush: false,
         name: "Alistair",//const
         fullName: "Alistair Drew",//const
@@ -97,7 +272,7 @@ var user =
     var axel = 
     {
         isDatable: true,//const
-        affinity: 11,
+        affinity: 0,
         isCrush: false,
         name: "Axel",//const
         fullName: "Classified",//const
@@ -111,7 +286,7 @@ var user =
     var claire = 
     {
         isDatable: true,//const
-        affinity: 20,
+        affinity: 0,
         isCrush: false,
         name: "Claire",//const
         fullName: "Claire Durand",//const
@@ -125,7 +300,7 @@ var user =
     var ellie = 
     {
         isDatable: true,//const
-        affinity: 31,
+        affinity: 0,
         isCrush: false,
         name: "Ellie",//const
         fullName: "Ellie Collins",//const
@@ -139,7 +314,7 @@ var user =
     var karolina = 
     {
         isDatable: true,//const
-        affinity: 30,
+        affinity: 0,
         isCrush: false,
         name: "Karolina",//const
         fullName: "Karolina Novakova",//const
@@ -153,7 +328,7 @@ var user =
     var neha = 
     {
         isDatable: true,//const
-        affinity: 14,
+        affinity: 0,
         isCrush: false,
         name: "Neha",//const
         fullName: "Neha Rao",//const
@@ -167,7 +342,7 @@ var user =
     var raquel = 
     {
         isDatable: true,//const
-        affinity: 21,
+        affinity: 0,
         isCrush: false,
         name: "Raquel",//const
         fullName: "Raquel Perriera",//const
@@ -181,7 +356,7 @@ var user =
     var tadashi = 
     {
         isDatable: true,//const
-        affinity: 99,
+        affinity: 0,
         isCrush: false,
         name: "Tadashi",//const
         fullName: "Tadashi Nakano",//const
@@ -195,7 +370,7 @@ var user =
     var tegan = 
     {
         isDatable: true,//const
-        affinity: 16,
+        affinity: 0,
         isCrush: false,
         name: "Tegan",//const
         fullName: "Tegan Novak",//const
@@ -209,7 +384,7 @@ var user =
     var tyler = 
     {
         isDatable: true,//const
-        affinity: 18,
+        affinity: 0,
         isCrush: false,
         name: "Tyler",//const
         fullName: "Tyler Williams",//const
@@ -223,7 +398,7 @@ var user =
     var lady_arlington = 
     {
         isDatable: false,//const
-        affinity: 20,
+        affinity: 0,
         isCrush: false,
         name: "Lady Arlington",//const
         fullName: "Lady Arlington",//const
@@ -290,6 +465,20 @@ var user =
         description: "",//const
     };
 
+    var empty = 
+    {
+        isDatable: false,//const
+        affinity: 0,
+        isCrush: false,
+        name: "None",//const
+        fullName: "None",//const
+        path: "tadashi",//const, no caps
+        birthday: "",//const
+        likes: "",//const
+        dislikes: "",//const
+        description: "You have 0% Infinity with all your friends. <br> Well... <br>You're at zero, so I guess <em><b>you have no friends</b></em>. <br><br> In any case, come back when you make some.<br> Don't neglect your homework for it, though. <br><br> Sincerely, <br><b>Tadashi Nakano <br>Student Body President</b>",//const
+    };
+
     /* Template *
     
         var empty = 
@@ -337,6 +526,7 @@ var user =
 
 const characters_path = "images/game_images/sprites/main10/";
 
+//les sprites pour chaque character
 var personnages = 
 {
     karolina:       [
@@ -356,68 +546,68 @@ var personnages =
                         characters_path + "alistair/surprise.png",  // 5: surprise
                     ],
     neha:           [
-                        characters_path + "neha/base.png",      // 0: base
-                        characters_path + "neha/happy.png",     // 1: happy
-                        characters_path + "neha/blush.png",     // 2: blush
-                        characters_path + "neha/annoyed.png",   // 3: annoyed
-                        characters_path + "neha/angry.png",     // 4: angry
-                        characters_path + "neha/surprise.png",  // 5: surprise
+                        characters_path + "neha/base.png",          // 0: base
+                        characters_path + "neha/happy.png",         // 1: happy
+                        characters_path + "neha/blush.png",         // 2: blush
+                        characters_path + "neha/annoyed.png",       // 3: annoyed
+                        characters_path + "neha/angry.png",         // 4: angry
+                        characters_path + "neha/surprise.png",      // 5: surprise
                     ],
     tadashi:        [
-                        characters_path + "tadashi/base.png",      // 0: base
-                        characters_path + "tadashi/happy.png",     // 1: happy
-                        characters_path + "tadashi/blush.png",     // 2: blush
-                        characters_path + "tadashi/annoyed.png",   // 3: annoyed
-                        characters_path + "tadashi/angry.png",     // 4: angry
-                        characters_path + "tadashi/surprise.png",  // 5: surprise
+                        characters_path + "tadashi/base.png",       // 0: base
+                        characters_path + "tadashi/happy.png",      // 1: happy
+                        characters_path + "tadashi/blush.png",      // 2: blush
+                        characters_path + "tadashi/annoyed.png",    // 3: annoyed
+                        characters_path + "tadashi/angry.png",      // 4: angry
+                        characters_path + "tadashi/surprise.png",   // 5: surprise
                     ],
     axel:           [
-                        characters_path + "axel/base.png",      // 0: base
-                        characters_path + "axel/happy.png",     // 1: happy
-                        characters_path + "axel/blush.png",     // 2: blush
-                        characters_path + "axel/annoyed.png",   // 3: annoyed
-                        characters_path + "axel/angry.png",     // 4: angry
-                        characters_path + "axel/surprise.png",  // 5: surprise
+                        characters_path + "axel/base.png",          // 0: base
+                        characters_path + "axel/happy.png",         // 1: happy
+                        characters_path + "axel/blush.png",         // 2: blush
+                        characters_path + "axel/annoyed.png",       // 3: annoyed
+                        characters_path + "axel/angry.png",         // 4: angry
+                        characters_path + "axel/surprise.png",      // 5: surprise
                     ],    
     raquel:         [
-                        characters_path + "raquel/base.png",      // 0: base
-                        characters_path + "raquel/happy.png",     // 1: happy
-                        characters_path + "raquel/blush.png",     // 2: blush
-                        characters_path + "raquel/annoyed.png",   // 3: annoyed
-                        characters_path + "raquel/angry.png",     // 4: angry
-                        characters_path + "raquel/surprise.png",  // 5: surprise
+                        characters_path + "raquel/base.png",        // 0: base
+                        characters_path + "raquel/happy.png",       // 1: happy
+                        characters_path + "raquel/blush.png",       // 2: blush
+                        characters_path + "raquel/annoyed.png",     // 3: annoyed
+                        characters_path + "raquel/angry.png",       // 4: angry
+                        characters_path + "raquel/surprise.png",    // 5: surprise
                     ],
     claire:         [
-                        characters_path + "claire/base.png",      // 0: base
-                        characters_path + "claire/happy.png",     // 1: happy
-                        characters_path + "claire/blush.png",     // 2: blush
-                        characters_path + "claire/annoyed.png",   // 3: annoyed
-                        characters_path + "claire/angry.png",     // 4: angry
-                        characters_path + "claire/surprise.png",  // 5: surprise
+                        characters_path + "claire/base.png",        // 0: base
+                        characters_path + "claire/happy.png",       // 1: happy
+                        characters_path + "claire/blush.png",       // 2: blush
+                        characters_path + "claire/annoyed.png",     // 3: annoyed
+                        characters_path + "claire/angry.png",       // 4: angry
+                        characters_path + "claire/surprise.png",    // 5: surprise
                     ],
     ellie:          [
-                        characters_path + "ellie/base.png",      // 0: base
-                        characters_path + "ellie/happy.png",     // 1: happy
-                        characters_path + "ellie/blush.png",     // 2: blush
-                        characters_path + "ellie/annoyed.png",   // 3: annoyed
-                        characters_path + "ellie/angry.png",     // 4: angry
-                        characters_path + "ellie/surprise.png",  // 5: surprise
+                        characters_path + "ellie/base.png",         // 0: base
+                        characters_path + "ellie/happy.png",        // 1: happy
+                        characters_path + "ellie/blush.png",        // 2: blush
+                        characters_path + "ellie/annoyed.png",      // 3: annoyed
+                        characters_path + "ellie/angry.png",        // 4: angry
+                        characters_path + "ellie/surprise.png",     // 5: surprise
                     ],
     tegan:          [
-                        characters_path + "tegan/base.png",      // 0: base
-                        characters_path + "tegan/happy.png",     // 1: happy
-                        characters_path + "tegan/blush.png",     // 2: blush
-                        characters_path + "tegan/annoyed.png",   // 3: annoyed
-                        characters_path + "tegan/angry.png",     // 4: angry
-                        characters_path + "tegan/surprise.png",  // 5: surprise
+                        characters_path + "tegan/base.png",         // 0: base
+                        characters_path + "tegan/happy.png",        // 1: happy
+                        characters_path + "tegan/blush.png",        // 2: blush
+                        characters_path + "tegan/annoyed.png",      // 3: annoyed
+                        characters_path + "tegan/angry.png",        // 4: angry
+                        characters_path + "tegan/surprise.png",     // 5: surprise
                     ],
     tyler:          [
-                        characters_path + "tyler/base.png",      // 0: base
-                        characters_path + "tyler/happy.png",     // 1: happy
-                        characters_path + "tyler/blush.png",     // 2: blush
-                        characters_path + "tyler/annoyed.png",   // 3: annoyed
-                        characters_path + "tyler/angry.png",     // 4: angry
-                        characters_path + "tyler/surprise.png",  // 5: surprise
+                        characters_path + "tyler/base.png",         // 0: base
+                        characters_path + "tyler/happy.png",        // 1: happy
+                        characters_path + "tyler/blush.png",        // 2: blush
+                        characters_path + "tyler/annoyed.png",      // 3: annoyed
+                        characters_path + "tyler/angry.png",        // 4: angry
+                        characters_path + "tyler/surprise.png",     // 5: surprise
                     ],
 
     charaX:         [
@@ -450,13 +640,20 @@ function pullVariablesFromDB()
         /********************
         SCHOLARINFO table
         *********************/
-        user.department = document.getElementById("db_handle_department").innerHTML;
+        user.department = document.getElementById("db_handle_department").value;
+        user.sex = parseInt(document.getElementById("db_handle_sex").value);
+        user.gender = parseInt(document.getElementById("db_handle_gender").value);
+        user.haircolor = parseInt(document.getElementById("db_handle_haircolor").value);
+        user.hairstyle = parseInt(document.getElementById("db_handle_hairstyle").value);
+        user.skincolor = parseInt(document.getElementById("db_handle_skincolor").value);
+        user.eyecolor = parseInt(document.getElementById("db_handle_eyecolor").value);
+        user.wigID = parseInt(document.getElementById("db_handle_wigID").value);
 
         /********************
         STORY table
         *********************/
-        user.storyLocation = document.getElementById("db_handle_story_location").innerHTML;//we should use an input and .value
-        user.last_chapter_played = document.getElementById("db_handle_last_chapter_played").innerHTML;//we should use an input and .value
+        user.storyLocation = document.getElementById("db_handle_story_location").value;//we should use an input and .value
+        user.last_chapter_played = document.getElementById("db_handle_last_chapter_played").value;//we should use an input and .value
         user.physicalLocationInt = parseInt(document.getElementById("db_handle_physicallocationint").value);
 
         /********************
@@ -495,6 +692,7 @@ function pushVariablesToDB()
         //SCHOLARINFO table
         //*********************************************
         'department': user.department,
+        //on n'enregistre pas les autres variables pour l'instant
 
         //*********************************************
         //STORY table

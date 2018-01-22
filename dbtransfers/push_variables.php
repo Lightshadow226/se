@@ -45,6 +45,8 @@ include_once '../resources/utilities.php';
 
     $department = $_POST['department'];
 
+    //we should push the rest of the variables (MAYBE it's wiser NOT to do it though)
+
     try
     {
         $sqlQuery1 = "UPDATE scholarinfo SET scholar_department = '$department' WHERE id = '$id'";

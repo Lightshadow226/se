@@ -75,7 +75,15 @@ var hair_color =
     itemsPATH + "haircolor/red" + extension
 ];
 
-var hair_style =
+var hair_style_male =
+[
+    itemsPATH + "hairstyles/m1" + extension,
+    itemsPATH + "hairstyles/m2" + extension,
+    itemsPATH + "hairstyles/m3" + extension,
+    itemsPATH + "hairstyles/m4" + extension
+];
+
+var hair_style_female =
 [
     itemsPATH + "hairstyles/f1" + extension,
     itemsPATH + "hairstyles/f2" + extension,
@@ -96,6 +104,8 @@ var shoes_img =
 
 function raz()//remise à zéro
 {
+    pullVariablesFromDB();
+
     var wardrobe = document.getElementById('dorm-wardrobe');
     var bag = document.getElementById('dorm-bag');
     var laptop = document.getElementById('dorm-laptop');
@@ -143,20 +153,6 @@ function raz()//remise à zéro
     //BOOK
         book.onmouseover = function(){fillOverlay(container, overlay, bookIMG, "Illustrations", book)};
         book.onmouseout = function(e){clearOverlay(overlay, book)};
-
-    // document.getElementById('useless').innerHTML = "";
-
-    /*
-    mettre des higlights sur le wardrobe, le laptop, le sac, et les livres
-
-    idées:
-    http://www.netzgesta.de/mapper/#
-    http://www.netzgesta.de/mapper/world_map.svg#
-    https://en.wikipedia.org/wiki/Scalable_Vector_Graphics    
-    https://www.sitepoint.com/highlight-image-map-area-hotspots-jquery/
-
-    */
-
 }
 
 function fillOverlay(container, overlay, newImage, linkName, tooltipParent)
@@ -184,67 +180,23 @@ function clearOverlay(overlay, item)
 
 function refreshImg()
 {
-    var Character_handle = document.getElementById("Character_handle");
+    /*var Character_handle = document.getElementById("Character_handle");
+        Character_handle.innerHTML = '';//empty the db handler first, to create all the elements only once*/
 
-        Character_handle.innerHTML = '';//empty the db handler first, to create all the elements only once
-        
     $.get('profile/scholar_sprite.php');//amazingly faster
     document.getElementById('img_character').src = 'profile/scholar_sprite.php';
-        // var character_handle_sex = document.createElement('input');
-        //     character_handle_sex.id = "Character_handle_sex";
-        //     character_handle_sex.type = "text";
-        //     character_handle_sex.value = "1";
-        //     character_handle_sex.innerHTML = character_handle_sex.value;
-
-        // var character_handle_skincolor = document.createElement('input');
-        //     character_handle_skincolor.id = "Character_handle_skincolor";
-        //     character_handle_skincolor.type = "text";
-        //     character_handle_skincolor.value = "1";
-        //     character_handle_skincolor.innerHTML = character_handle_skincolor.value;
-
-        // Character_handle.appendChild(character_handle_sex);
-        // Character_handle.appendChild(character_handle_skincolor);
-        
-        // alert($('#character_handle_sex').val());
-        // alert($('#character_handle_skincolor').val());
-        // alert(document.getElementById("character_handle_sex").innerHTML);
-
-        // var sex = $('#Character_handle_sex').val();
-        // var skincolor = $('#Character_handle_skincolor').val();
-
-        /*$.get('profile/scholar_sprite.php');//amazingly faster
-        document.getElementById('img_character').src = 'profile/scholar_sprite.php'; */
-
-        // $(function()
-        // {
-        //     $.post('profile/characterGenerator.php', {
-        //         'sex': sex,
-        //         'skincolor': skincolor
-        //     }, function(data, result, xhr)
-        //     {
-        //         // alert(result);
-        //         // document.getElementById('right_container').innerHTML = data; 
-        //         // $.get('characterGenerator.php');
-        //         document.getElementById('img_character').src = 'profile/characterGenerator.php'; 
-        //     });
-        // });
+    document.getElementById('img_character').onload = function()
+    {
+        document.getElementById('small-loader-wrapper').className = "small-loaded";    
+    };
 }
 
-// function cleardiv()
-// {
-//     document.getElementById('img_character').src = "images/game_images/sprites/main10/tadashi/happy.png"; 
-//     // document.getElementById('right_container').innerHTML = "";
-//     //$.get('characterGenerator.php');
-//     //$('#a_div').load('characterGenerator.php');
-//     // document.getElementById('img_character').src = 'characterGenerator.php';
-// }
-
-$(function wardrobe()
+function wardrobe()
 {
-    raz();
+    raz();//remise à zéro + PULL from DB
+    var reset_params = user;//we save the user as it is before customization
     
     //BASIC OVERLAY
-
     var overlay = document.createElement('div');
         overlay.id = "dorm_overlay_wardrobe";
 
@@ -262,211 +214,208 @@ $(function wardrobe()
         overlay.appendChild(overlay_form);//the "customize your appearance" form
 
     //DETAILS
-
     //1. title
-
-    var title = document.createElement('h1');
-    
-        title.innerHTML = "Customize Your Appearance";
+        var title = document.createElement('h1');
+            title.innerHTML = "Customize Your Appearance";
 
     //2. thumbnails (t-shirt, pants, shoes, etc.)
+        var left_container = document.createElement('div');//left
+            left_container.className = "flex-panel2";
+            left_container.style.height = "100%";
+            left_container.style.position = "relative";
 
-    var left_container = document.createElement('div');//left
-    
-        left_container.className = "flex-panel2";
-        left_container.style.height = "100%";
-        left_container.style.position = "relative";
+            var selector_line = document.createElement('div');//the selector to the left, where we choose the clothes, etc.
+                selector_line.className = "flex-container";
 
-        var selector_line = document.createElement('div');//the selector to the left, where we choose the clothes, etc.
-            selector_line.className = "flex-container";
+                var category1FLEX = document.createElement('div');
+                    category1FLEX.className = "flex-panel choices-button-container";
+                var category1 = document.createElement('img')
+                    category1.src = screens[0];
+                    category1.className = "choices-button";
 
-            var category1FLEX = document.createElement('div');
-                category1FLEX.className = "flex-panel choices-button-container";
-            var category1 = document.createElement('img')
-                category1.src = screens[0];
-                category1.className = "choices-button";
-
-            var category2FLEX = document.createElement('div');
-                category2FLEX.className = "flex-panel choices-button-container";
-            var category2 = document.createElement('img')
-                category2.src = screens[1];
-                category2.className = "choices-button";
+                var category2FLEX = document.createElement('div');
+                    category2FLEX.className = "flex-panel choices-button-container";
+                var category2 = document.createElement('img')
+                    category2.src = screens[1];
+                    category2.className = "choices-button";
+                    
+                var category3FLEX = document.createElement('div');
+                    category3FLEX.className = "flex-panel choices-button-container";
+                var category3 = document.createElement('img')
+                    category3.src = screens[2];
+                    category3.className = "choices-button";
                 
-            var category3FLEX = document.createElement('div');
-                category3FLEX.className = "flex-panel choices-button-container";
-            var category3 = document.createElement('img')
-                category3.src = screens[2];
-                category3.className = "choices-button";
-            
-            var category4FLEX = document.createElement('div');
-                category4FLEX.className = "flex-panel choices-button-container";
-            var category4 = document.createElement('img')
-                category4.src = screens[3];
-                category4.className = "choices-button";
-            
-            var category5FLEX = document.createElement('div');
-                category5FLEX.className = "flex-panel choices-button-container";
-            var category5 = document.createElement('img')
-                category5.src = screens[4];
-                category5.className = "choices-button";
-            
-            var category6FLEX = document.createElement('div');
-                category6FLEX.className = "flex-panel choices-button-container";
-            var category6 = document.createElement('img')
-                category6.src = screens[5];
-                category6.className = "choices-button";
+                var category4FLEX = document.createElement('div');
+                    category4FLEX.className = "flex-panel choices-button-container";
+                var category4 = document.createElement('img')
+                    category4.src = screens[3];
+                    category4.className = "choices-button";
+                
+                var category5FLEX = document.createElement('div');
+                    category5FLEX.className = "flex-panel choices-button-container";
+                var category5 = document.createElement('img')
+                    category5.src = screens[4];
+                    category5.className = "choices-button";
+                
+                var category6FLEX = document.createElement('div');
+                    category6FLEX.className = "flex-panel choices-button-container";
+                var category6 = document.createElement('img')
+                    category6.src = screens[5];
+                    category6.className = "choices-button";
 
-            var category7FLEX = document.createElement('div');
-                category7FLEX.className = "flex-panel choices-button-container";
-            // var category7 = document.createElement('img')
-            //     category7.src = screens[6];
-            //     category7.className = "choices-button";
+                var category7FLEX = document.createElement('div');
+                    category7FLEX.className = "flex-panel choices-button-container";
+                // var category7 = document.createElement('img')
+                //     category7.src = screens[6];
+                //     category7.className = "choices-button";
 
-            var category8FLEX = document.createElement('div');
-                category8FLEX.className = "flex-panel choices-button-container";
+                var category8FLEX = document.createElement('div');
+                    category8FLEX.className = "flex-panel choices-button-container";
 
-            var category9FLEX = document.createElement('div');
-                category9FLEX.className = "flex-panel choices-button-container";
+                var category9FLEX = document.createElement('div');
+                    category9FLEX.className = "flex-panel choices-button-container";
 
-            var category10FLEX = document.createElement('div');
-                category10FLEX.className = "flex-panel choices-button-container";
+                var category10FLEX = document.createElement('div');
+                    category10FLEX.className = "flex-panel choices-button-container";
 
-        var selector_choices_line1 = document.createElement('div');//the selector to the left, where we choose the clothes, etc.
-            selector_choices_line1.className = "flex-container selector_choices";
+            var selector_choices_line1 = document.createElement('div');//the selector to the left, where we choose the clothes, etc.
+                selector_choices_line1.className = "flex-container selector_choices";
 
-            var choiceAFLEX = document.createElement('div')
-                choiceAFLEX.className = "flex-panel choices-button-container";
-            var choiceA = document.createElement('img')
-                choiceA.className = "choices";
+                var choiceAFLEX = document.createElement('div')
+                    choiceAFLEX.className = "flex-panel choices-button-container";
+                var choiceA = document.createElement('img')
+                    choiceA.className = "choices";
 
-            var choiceBFLEX = document.createElement('div')
-                choiceBFLEX.className = "flex-panel choices-button-container";
-            var choiceB = document.createElement('img')
-                choiceB.className = "choices";
+                var choiceBFLEX = document.createElement('div')
+                    choiceBFLEX.className = "flex-panel choices-button-container";
+                var choiceB = document.createElement('img')
+                    choiceB.className = "choices";
 
-            var choiceCFLEX = document.createElement('div')
-                choiceCFLEX.className = "flex-panel choices-button-container";
-            var choiceC = document.createElement('img')
-                choiceC.className = "choices";
+                var choiceCFLEX = document.createElement('div')
+                    choiceCFLEX.className = "flex-panel choices-button-container";
+                var choiceC = document.createElement('img')
+                    choiceC.className = "choices";
 
-            var choiceDFLEX = document.createElement('div')
-                choiceDFLEX.className = "flex-panel choices-button-container";
-            var choiceD = document.createElement('img')
-                choiceD.className = "choices";
+                var choiceDFLEX = document.createElement('div')
+                    choiceDFLEX.className = "flex-panel choices-button-container";
+                var choiceD = document.createElement('img')
+                    choiceD.className = "choices";
 
-        var selector_choices_line2 = document.createElement('div');//the selector to the left, where we choose the clothes, etc.
-            selector_choices_line2.className = "flex-container selector_choices";
+                var choiceEFLEX = document.createElement('div')
+                    choiceEFLEX.className = "flex-panel choices-button-container";
+                var choiceE = document.createElement('img')
+                    choiceE.className = "choices";
 
-            var choiceEFLEX = document.createElement('div')
-                choiceEFLEX.className = "flex-panel choices-button-container";
-            var choiceE = document.createElement('img')
-                choiceE.className = "choices";
+                var choiceFFLEX = document.createElement('div')
+                    choiceFFLEX.className = "flex-panel choices-button-container";
+                var choiceF = document.createElement('img')
+                    choiceF.className = "choices";
 
-            var choiceFFLEX = document.createElement('div')
-                choiceFFLEX.className = "flex-panel choices-button-container";
-            var choiceF = document.createElement('img')
-                choiceF.className = "choices";
+                var choiceGFLEX = document.createElement('div')
+                    choiceGFLEX.className = "flex-panel choices-button-container";
+                var choiceG = document.createElement('img')
+                    choiceG.className = "choices";
 
-            var choiceGFLEX = document.createElement('div')
-                choiceGFLEX.className = "flex-panel choices-button-container";
-            var choiceG = document.createElement('img')
-                choiceG.className = "choices";
+                var choiceHFLEX = document.createElement('div')
+                    choiceHFLEX.className = "flex-panel choices-button-container";
+                var choiceH = document.createElement('img')
+                    choiceH.className = "choices";
 
-            var choiceHFLEX = document.createElement('div')
-                choiceHFLEX.className = "flex-panel choices-button-container";
-            var choiceH = document.createElement('img')
-                choiceH.className = "choices";
+            var button_container = document.createElement('div');
+                button_container.style.position = "absolute";
+                button_container.className = "x-right-y-bottom-real";
 
-        var button_container = document.createElement('div');
-            button_container.style.position = "absolute";
-            button_container.className = "x-right-y-bottom-real";
+                var button_reset = document.createElement('div');
+                    button_reset.className = "button pink_button";//style="margin:20px;"
+                    button_reset.style.margin = "10px";
+                    button_reset.innerHTML = "Reset";
+                
+                var button_save = document.createElement('div');
+                    button_save.className = "button pink_button";
+                    button_save.style.margin = "10px";
+                    button_save.innerHTML = "Save";
 
-            var button_reset = document.createElement('div');
-                button_reset.className = "button pink_button";//style="margin:20px;"
-                button_reset.style.margin = "10px";
-                button_reset.innerHTML = "Reset";
-            
-            var button_save = document.createElement('div');
-                button_save.className = "button pink_button";
-                button_save.style.margin = "10px";
-                button_save.innerHTML = "Save";
+            var button_container2 = document.createElement('div');
+                button_container2.style.position = "absolute";
+                button_container2.className = "flex-container x-left-y-bottom-real";
 
-        var button_container2 = document.createElement('div');
-            button_container2.style.position = "absolute";
-            button_container2.className = "x-left-y-bottom-real";
+                var button_back = document.createElement('div');
+                    button_back.className = "button pink_button";//style="margin:20px;"
+                    button_back.style.margin = "10px";
+                    button_back.innerHTML = "Back";
 
-            var button_back = document.createElement('div');
-                button_back.className = "button pink_button";//style="margin:20px;"
-                button_back.style.margin = "10px";
-                button_back.innerHTML = "Back";
-    
-    var right_container = document.createElement('div');//the character image container
-        right_container.id = "right_container";
-        // right_container.className = "flex-panel";
-        right_container.style.height = "100%";//initially 346
+                // var information_field = document.createElement('div');
+                //     information_field.id = "information_field";
+                //     information_field.innerHTML = "Nothing";
 
-    var img_character = document.createElement('img');
-        img_character.id = "img_character";
-        img_character.style.height = "100%";//initially 346
-        img_character.src = "scholar_sprite.php";
+        var right_container = document.createElement('div');//the character image container
+            right_container.id = "right_container";
+            right_container.style.position = "relative";
+            // right_container.className = "flex-panel";
+            right_container.style.height = "100%";//initially 346
 
-    overlay_form.appendChild(left_container);
-        left_container.appendChild(title);
-        left_container.appendChild(selector_line);
-            selector_line.appendChild(category1FLEX);
-                category1FLEX.appendChild(category1);
-            selector_line.appendChild(category2FLEX);
-                category2FLEX.appendChild(category2);
-            selector_line.appendChild(category3FLEX);
-                category3FLEX.appendChild(category3);
-            selector_line.appendChild(category4FLEX);
-                category4FLEX.appendChild(category4);
-            selector_line.appendChild(category5FLEX);
-                category5FLEX.appendChild(category5);
-            selector_line.appendChild(category6FLEX);
-                category6FLEX.appendChild(category6);
-            selector_line.appendChild(category7FLEX);
-                // category6FLEX.appendChild(category6);
-            selector_line.appendChild(category8FLEX);
-                // category6FLEX.appendChild(category6);
-            // selector_line.appendChild(category9FLEX);
-                // category6FLEX.appendChild(category6);
-            // selector_line.appendChild(category10FLEX);
-                // category6FLEX.appendChild(category6);
+        var img_character = document.createElement('img');
+            img_character.id = "img_character";
+            img_character.style.height = "100%";//initially 346
+            img_character.src = "scholar_sprite.php";
 
-        left_container.appendChild(selector_choices_line1);
-            selector_choices_line1.appendChild(choiceAFLEX);
-                choiceAFLEX.appendChild(choiceA);
-            selector_choices_line1.appendChild(choiceBFLEX);
-                choiceBFLEX.appendChild(choiceB);
-            selector_choices_line1.appendChild(choiceCFLEX);
-                choiceCFLEX.appendChild(choiceC);
-            selector_choices_line1.appendChild(choiceDFLEX);
-                choiceDFLEX.appendChild(choiceD);
+        overlay_form.appendChild(left_container);
+            left_container.appendChild(title);
+            left_container.appendChild(selector_line);
+                selector_line.appendChild(category1FLEX);
+                    category1FLEX.appendChild(category1);
+                selector_line.appendChild(category2FLEX);
+                    category2FLEX.appendChild(category2);
+                selector_line.appendChild(category3FLEX);
+                    category3FLEX.appendChild(category3);
+                selector_line.appendChild(category4FLEX);
+                    category4FLEX.appendChild(category4);
+                selector_line.appendChild(category5FLEX);
+                    category5FLEX.appendChild(category5);
+                selector_line.appendChild(category6FLEX);
+                    category6FLEX.appendChild(category6);
+                selector_line.appendChild(category7FLEX);
+                    // category6FLEX.appendChild(category6);
+                selector_line.appendChild(category8FLEX);
+                    // category6FLEX.appendChild(category6);
+                // selector_line.appendChild(category9FLEX);
+                    // category6FLEX.appendChild(category6);
+                // selector_line.appendChild(category10FLEX);
+                    // category6FLEX.appendChild(category6);
+
+            left_container.appendChild(selector_choices_line1);
+                selector_choices_line1.appendChild(choiceAFLEX);
+                    choiceAFLEX.appendChild(choiceA);
+                selector_choices_line1.appendChild(choiceBFLEX);
+                    choiceBFLEX.appendChild(choiceB);
+                selector_choices_line1.appendChild(choiceCFLEX);
+                    choiceCFLEX.appendChild(choiceC);
+                selector_choices_line1.appendChild(choiceDFLEX);
+                    choiceDFLEX.appendChild(choiceD);
+                selector_choices_line1.appendChild(choiceEFLEX);
+                    choiceEFLEX.appendChild(choiceE);
+                selector_choices_line1.appendChild(choiceFFLEX);
+                    choiceFFLEX.appendChild(choiceF);
+                selector_choices_line1.appendChild(choiceGFLEX);
+                    choiceGFLEX.appendChild(choiceG);
+                selector_choices_line1.appendChild(choiceHFLEX);
+                    choiceHFLEX.appendChild(choiceH);
+            // left_container.appendChild(selector_choices_line2);
+
+            left_container.appendChild(button_container);
+                // button_container.appendChild(button_reset);
+                // button_container.appendChild(button_save);
+            left_container.appendChild(button_container2);
+                button_container2.appendChild(button_back);
+                // button_container2.appendChild(information_field);
         
-        // left_container.appendChild(selector_choices_line2);
-            selector_choices_line1.appendChild(choiceEFLEX);
-                choiceEFLEX.appendChild(choiceE);
-            selector_choices_line1.appendChild(choiceFFLEX);
-                choiceFFLEX.appendChild(choiceF);
-            selector_choices_line1.appendChild(choiceGFLEX);
-                choiceGFLEX.appendChild(choiceG);
-            selector_choices_line1.appendChild(choiceHFLEX);
-                choiceHFLEX.appendChild(choiceH);
+        overlay_form.appendChild(right_container);
+            right_container.appendChild(img_character);
 
-        left_container.appendChild(button_container);
-            // button_container.appendChild(button_reset);
-            // button_container.appendChild(button_save);
-        left_container.appendChild(button_container2);
-            button_container2.appendChild(button_back);
-    
-    overlay_form.appendChild(right_container);
-        right_container.appendChild(img_character);
+    //3. add a cute loader
+        document.getElementById('right_container').appendChild(createLoader());
 
-        refreshItems(currentScreen);
-        refreshImg();
-
-    //3. Once we click on the thumbnail, we see all shirts, all pants, etc.
+    //4. Once we click on the thumbnail, we see all shirts, all pants, etc.
 
         //clicking on "sex"
         category1.onclick = function(e){refreshItems(screens[0])};
@@ -498,40 +447,27 @@ $(function wardrobe()
         category6.onmouseenter = function(e){category6.src = screens_hover[5]};
         category6.onmouseleave = function(e){category6.src = screens[5]};
 
-    //4. Clicking on one of the shirt should automatically update the image on the right/left of the field
+    //5. Clicking on one of the shirt should automatically update the image on the right/left of the field
 
-        //choice A
-        choiceA.onclick = function(){itemClick(choiceA.src, 0)};
+        choiceA.onclick = function(){itemClick(choiceA.src, 0)};//choice A
+        choiceB.onclick = function(){itemClick(choiceB.src, 1)};//choice B
+        choiceC.onclick = function(){itemClick(choiceC.src, 2)};//choice C
+        choiceD.onclick = function(){itemClick(choiceD.src, 3)};//choice D
+        choiceE.onclick = function(){itemClick(choiceE.src, 4)};//choice E
+        choiceF.onclick = function(){itemClick(choiceF.src, 5)};//choice F
+        choiceG.onclick = function(){itemClick(choiceG.src, 6)};//choice G
+        choiceH.onclick = function(){itemClick(choiceH.src, 7)};//choice H
 
-        //choice B
-        choiceB.onclick = function(){itemClick(choiceB.src, 1)};
-
-        //choice C
-        choiceC.onclick = function(){itemClick(choiceC.src, 2)};
-
-        //choiceD 
-        choiceD.onclick = function(){itemClick(choiceD.src, 3)};
-
-        //choice E
-        choiceE.onclick = function(){itemClick(choiceE.src, 4)};
-
-        //choice F
-        choiceF.onclick = function(){itemClick(choiceF.src, 5)};
-
-        //choice G 
-        choiceG.onclick = function(){itemClick(choiceG.src, 6)};
-
-        //choice H
-        choiceH.onclick = function(){itemClick(choiceH.src, 7)};
-
-    //5. Buttons event listeners
+    //6. Buttons event listeners
 
         button_back.onclick = function(e){raz()};
 
-    //6. FUNCTIONS
+    //7. FUNCTIONS
     
     function refreshItems(newScreen)//refreshes the labels of the choices
     {
+        document.getElementById('small-loader-wrapper').className = "";
+        
         // alert(newScreen);
         if(newScreen == screens[0])//"SEX"
         {
@@ -595,6 +531,17 @@ $(function wardrobe()
         }
         else if(newScreen == screens[3])//"HAIR STYLE"
         {
+            var hair_style = hair_style_male;
+
+            if(user.sex == 1)
+            {
+                hair_style = hair_style_male;
+            }
+            else
+            {
+                hair_style = hair_style_female;
+            }
+
             choiceA.src = hair_style[0];
             choiceB.src = hair_style[1];
             choiceC.src = hair_style[2];
@@ -655,16 +602,20 @@ $(function wardrobe()
         }
 
         currentScreen = newScreen;
+        document.getElementById('small-loader-wrapper').className = "small-loaded";
     }
 
     function itemClick(newItem, position)//determines what screen we're on, and what we clicked4
     {
+        document.getElementById('small-loader-wrapper').className = "";
+        // document.getElementById('information_field').innerHTML = 'item selected!';
+        
         // alert(newItem + " - " + position);
         if(currentScreen == screens[0])//"SEX"
         {
             pushToDB('sex', position);
         }
-        else if(currentScreen == screens[1])//"EYES"
+       else if(currentScreen == screens[1])//"EYES"
         {
             pushToDB('eyes', position);
         }
@@ -684,6 +635,8 @@ $(function wardrobe()
         {
             pushToDB('skin_color', position);
         }
+
+        pullVariablesFromDB();
     }
 
     function pushToDB(SQLname, value)//saves to the database
@@ -736,6 +689,7 @@ $(function wardrobe()
         refreshImg();
     }
 
-    //5. we need to be able to save the presets
-
-});
+    //8. start the wheel
+    refreshItems(currentScreen);
+    refreshImg();
+}

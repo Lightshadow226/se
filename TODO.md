@@ -3,25 +3,18 @@
 `TODO: Next`
 - *CHAPTER INPUT*       [chapter1.js]                                   la chapitre 1 est terminé jusqu'à la slide 129, donc il va falloir valider le reste + rajouter les émotions
 - *CHAPTER INPUT*       [chapter1.js]                                   il reste à ajouter les ghost slides pour la slide 44 (221-224)
+- *CODE - NEW FORM*     [gameengine.js]                                 FORM 2: il va falloir faire birthday, préférences, gender, etc.
+- *PPT*                 [Chapter2Slides Part2.ppt]                      slides à terminer chapitre 2 (le ppt et le code)]
 
 `TODO: in Order`
 - *DATABASE*            [variables.js, gameengine.js]                   account for movements -> movement meter/action points -> faire un système pour tout
-- *PPT*                 [Chapter2Slides Part2.ppt]                      slidesterminer chapitre 2 (le ppt et le code)]
-- *CODE - DESIGN*       [dorm.php]                                      mettre des higlights sur le wardrobe, le laptop, le sac, et les livres
 
 `TODO: HIGH Importance`
-- *CODE - NEW FORM*     [gameengine.js]                                 il va falloir continuer avec les birthday, préférences, etc.
 - *CODE - PAGE*         [illustrations_achievements.php]                terminer la page Illustrations & Achievements
 - *DEBUG*               [variables.js, get and pushvariables.php]       s'assurer qu'il n'y ait plus de variables utilisés sans la base de données
-- *DATABASE*            [relationships.php]                             Add infinity meter for all characters (in the database + DB_Handle)
-- *IMPROVEMENTS*        [imageGenerator.php]                            there are still improvements to be made in this file
-- *INDEX*               [index.php]                                     faire en sorte que le affinity truc fonctionne
-- *INDEX*               [index.php]                                     faire marcher le truc de best infinity
-- *DORM - DESIGN*       [dorm.php]                                      créer un loader pour attendre que l'image se génère avec $.get()
 - *DORM*                [dorm.php]                                      arranger le bouton "Reset" dans le wardrobe form
 
 `TODO: MEDIUM Importance`
-- *CODE - RESTRUCT*     [relationships.js, variables.js]                transférer les variables de Relationships.js à variables.js
 - *CODE - RESTRUCT*     [.php]                                          Organiser les fichiers PHP
 - *FILES - ADD*         [.jpg]                                          AJOUTER blackscreen.jpg
 - *FILES - ADD*         [profile_idcard.php, profile.php]               Download fonts in proper file format to complete the student ID card generation (JUNE)
@@ -30,8 +23,9 @@
 - *DEBUG*               [se-stylesheet.css]                             Il faut que les page-specific attributes ne soient jamais utilisés dans une autre page
 - *DEBUG*               [???]                                           z-index du scholar est trop petit (la barre de texte est au-dessus)
 - *CODE - RESTRUCT*     [dorm.js]                                       enlever les .style et les remplacer par des classes
-- *INDEX*               [index.php]                                     mettre le CSS dans un autre fichier)
+- *INDEX*               [index.php]                                     mettre le CSS dans un autre fichier
 - *GAME ENGINE*         [gameengine.js]                                 redesign the game engine for efficiency (put it on paper first)
+- *IMPROVEMENTS*        [imageGenerator.php]                            there are still improvements to be made in this file
 
 `TODO: LOW Importance`
 - *DEBUG*               [login.php, signup.php, resetpassword.php]      Améliorer les messages d'erreurs pour login.php, signup.php, resetpassword.php

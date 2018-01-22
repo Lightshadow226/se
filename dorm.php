@@ -58,7 +58,7 @@
 		<input id = "Character_handle_clothes"></input> -->
 
 	</div>
-	
+
 	<?php include_once 'partials/footers.php' ?>
 
 </body>
