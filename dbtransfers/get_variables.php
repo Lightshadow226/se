@@ -92,10 +92,10 @@ while($rs = $statement->fetch())//"rs" = "row statements"
 <html>
 
     <!-- USERINFO table -->
-    <div id="db_handle_username">   <?php echo $username; ?></div>
-    <div id="db_handle_energy">     <?php echo $energy; ?></div>
-    <div id="db_handle_money">      <?php echo $money; ?></div>
-    <div id="db_handle_nbreplays">  <?php echo $nbreplays; ?></div><!-- UNUSED -->
+    <div id="db_handle_username"><?php echo $username; ?></div>
+    <div id="db_handle_energy"><?php echo $energy; ?></div>
+    <div id="db_handle_money"><?php echo $money; ?></div>
+    <div id="db_handle_nbreplays"><?php echo $nbreplays; ?></div><!-- UNUSED -->
 
     <!-- SCHOLARINFO table -->
     <input id="db_handle_department"  value = <?php echo $department; ?>></input>

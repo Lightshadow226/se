@@ -37,10 +37,10 @@
 - *DESIGN*              [.PNG, index.php]                               modifier les dimensions de l'image "customize your character"
 - *DESIGN*              [index.php]                                     le border shading entre le header et le first card est causé par: style="position: relative;"
 
-
 `TODO: ONGOING`
 - *CHARACTERS - INPUT*  [relationships.js, variables.js]                we still need to add characters over time in "classmates" and "others"
 - *CHARACTERS - INPUT*  [variables.js]                                  think of possible achievements
+- *CHAPTER - INPUT*     [library.js]                                    chapterSize() needs to be updated every time the chapter changes size (new chapter has X slides, or existing chapter has more slides)
 
 `KNOWN BUGS`
 - *BUGS*                [???]                                           images that don't size perfectly (chapter 0 form -> link[6] = -3)

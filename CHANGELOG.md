@@ -1,5 +1,9 @@
 #CHANGELOG
 
+Version 1.3.21 (EXCEL Chap. 0)
+- *EXCEL TEMPLATE*      [chapter 0.xlsx]    made an excel template to make creating chapter data easy 
+- *CHAPTER 0*           [chapter 0.xlsx]    inputted chapter 0
+
 Version 1.3.20 (Index, Dorm Loader)
 - *INDEX*               [index.php]         highest affinity is done, and the colours are 
 - *INDEX*               [index.php]         card headers are now pink instead of yellow

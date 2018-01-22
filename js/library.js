@@ -118,11 +118,12 @@ function browseAffinity(affinity)
     return base_path + new_path;
 }
 
-function getPersonnage(char)
+function getPersonnage(char)//returns the character from a sprite "char"
 {
     var char_pointer;
+    const total_sprites = 6;
 
-    for(var i = 0; i<6; i++)
+    for(var i = 0; i < total_sprites; i++)
     {
         if(char == personnages.charaX[i])
         {
@@ -184,7 +185,7 @@ function getPersonnage(char)
     return char_pointer;
 }
 
-function getPersonnageFromName(name)
+function getPersonnageFromName(name)//returns a character from a string "name"
 {
     if(name == "alistair")
     {
@@ -248,7 +249,7 @@ function getPersonnageFromName(name)
     }
 }
 
-function loadAllImages()
+function loadAllImages()//unsuccessfully tries to load all the images prior to the start of the game
 {
     var loader = document.createElement('div')
         loader.style.display = "none";
@@ -260,7 +261,7 @@ function loadAllImages()
     //Il va falloir loader toutes les images une après l'autre
 }
 
-function createFlexPanel()
+function createFlexPanel()//returns a flex panel, to be used as a buffer
 {
     var flexPanel = document.createElement('div');
         flexPanel.className = "flex-panel";
@@ -268,14 +269,7 @@ function createFlexPanel()
     return flexPanel;
 }
 
-function createCurrentChapterPreview()
-{
-    var preview = document.createElement('div');
-
-    return preview;
-}
-
-function chapterSize(chapter)
+function chapterSize(chapter)//returns the size of a chapter (HAS TO BE MANUALLY CORRECTED)
 {
     if(chapter == 0)
     {
@@ -331,7 +325,7 @@ function refreshProgressBar()
     progressBar.style.width = progress + "%";
 }
 
-Object.size = function(object)
+Object.size = function(object)//returns the size of an object
 {
     var size = 0, key;
     for (key in object)
@@ -398,8 +392,7 @@ function getLocationIndex(string)//returns the physical location (INT) of the us
     return index;
 }
 
-
-function getHighestAffinity()
+function getHighestAffinity()//returns the character with the highest affinity
 {
     var char = alistair;
     var highestAffinity = 0;
@@ -422,7 +415,7 @@ function getHighestAffinity()
     return char;//char est le plus grand affinity
 }
 
-function createLoader()
+function createLoader()//returns a loader as an HTMLElement
 {
     var loaderWrapper = document.createElement('div');
         loaderWrapper.id = "small-loader-wrapper";
@@ -450,7 +443,7 @@ function createLoader()
     // </div>
 }
 
-function getCurrentChapter()
+function getCurrentChapter()//returns the current chapter as an object
 {
     var index = user.last_chapter_played;//current chapter == index
     const character_portraits_path = "images/general/chapter_images/";
@@ -469,7 +462,3 @@ function getCurrentChapter()
 
     return currentChapter;
 }
-// function getLocationIndex()//returns the physical location (string) of the user, given an index (int)
-// {
-
-// }

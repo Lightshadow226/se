@@ -1426,12 +1426,12 @@ function browseLink(link, element)//link is the link of the story (story[special
     {
         if(element.id == "friendship_button")
         {
-            // alert("friendship -> " + story[8][storyLocation]);
+            // alert("friendship -> " + story[8][user.storyLocation]);
             user.storyLocation = story[8][user.storyLocation];//on fait que la location devienne le numéro du link
         }
         else if(element.id == "romance_button")
         {
-            // alert("romance -> " + story[9][storyLocation]);
+            // alert("romance -> " + story[9][user.storyLocation]);
             user.storyLocation = story[9][user.storyLocation];//on fait que la location devienne le numéro du link
         }
         else
