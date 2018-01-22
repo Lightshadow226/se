@@ -71,7 +71,7 @@ story[0] = [
     "(Next)",
     "(I already knew about those but hearing " + CharaX_username + " list them makes it feel all too real...)",
     "Click here to submit",
-    "There, all done.",//25 
+    "There, all done.",//25 Department Form
     "(Next)",
     "(Next)",
     "Woah, it’s really nice. (This dorm room looks more expensive than my whole apartment back home...)",
@@ -160,7 +160,7 @@ story[0] = [
     "First, fill in the Academic Information Form. Arlington has 7 faculties in total: Business and Commerce, Pure and Applied Sciences, Medical Sciences, Fine Arts, Performing Arts, Fashion, and Athletics.",
     "null",
     "null",
-    "null",//25 
+    "null",//25 Department Form
     "Excellent!",
     "Thank you! Now let me show you where your dorm is.",
     "This is where you’re going to be staying until the end of high school!",
@@ -249,7 +249,7 @@ story[0] = [
     personnages.charaX[0],
     personnages.charaX[0],
     "null",
-    personnages.charaX[0],//25 
+    personnages.charaX[0],//25 Department Form
     personnages.charaX[1],
     personnages.charaX[1],
     personnages.charaX[1],
@@ -338,7 +338,7 @@ story[0] = [
     "null",
     "null",
     "null",
-    "null",//25 
+    "null",//25 Department Form
     "null",
     "null",
     "null",
@@ -427,7 +427,7 @@ story[0] = [
     "null",
     "null",
     "null",
-    "null",//25 
+    "null",//25 Department Form
     "null",
     "null",
     "null",
@@ -516,7 +516,7 @@ story[0] = [
     locations.hall1,
     locations.hall1,
     locations.hall1,
-    locations.hall1,//25 
+    locations.hall1,//25 Department Form
     locations.hall1,
     locations.hall1,
     locations.dorm,
@@ -605,7 +605,7 @@ story[0] = [
     -1,
     -1,
     -3,
-    -1,//25 
+    -1,//25 Department Form
     -1,
     -1,
     -1,
@@ -694,7 +694,7 @@ story[0] = [
     0,
     0,
     0,
-    0,//25 
+    0,//25 Department Form
     0,
     0,
     0,
@@ -783,7 +783,7 @@ story[0] = [
     -1,
     -1,
     -1,
-    -1,//25 
+    -1,//25 Department Form
     -1,
     -1,
     -1,
@@ -872,7 +872,7 @@ story[0] = [
     -1,
     -1,
     -1,
-    -1,//25 
+    -1,//25 Department Form
     -1,
     -1,
     -1,
@@ -961,7 +961,7 @@ story[0] = [
     -1,
     -1,
     -1,
-    -1,//25 
+    -1,//25 Department Form
     -1,
     -1,
     -1,
@@ -1050,7 +1050,7 @@ story[0] = [
     -1,
     -1,
     -1,
-    -1,//25 
+    -1,//25 Department Form
     -1,
     -1,
     -1,
@@ -1139,7 +1139,7 @@ story[0] = [
     -1,
     -1,
     -1,
-    -1,//25 
+    -1,//25 Department Form
     -1,
     -1,
     -1,
@@ -1228,7 +1228,7 @@ story[0] = [
     "null",
     "null",
     "null",
-    "null",//25 
+    "null",//25 Department Form
     "null",
     "null",
     "null",
@@ -1317,7 +1317,7 @@ story[0] = [
     "null",
     "null",
     "null",
-    "null",//25 
+    "null",//25 Department Form
     "null",
     "null",
     "null",
@@ -1406,7 +1406,7 @@ story[0] = [
     "null",
     "null",
     "null",
-    "null",//25 
+    "null",//25 Department Form
     "null",
     "null",
     "null",
@@ -1495,7 +1495,7 @@ story[0] = [
     0,
     0,
     0,
-    0,//25 
+    0,//25 Department Form
     0,
     0,
     0,
@@ -1584,7 +1584,7 @@ story[0] = [
     false,
     false,
     false,
-    false,//25 
+    false,//25 Department Form
     false,
     false,
     false,
@@ -1673,7 +1673,7 @@ story[0] = [
     -1,
     -1,
     -1,
-    -1,//25 
+    -1,//25 Department Form
     -1,
     -1,
     -1,
@@ -1762,7 +1762,7 @@ story[0] = [
     -1,
     -1,
     -1,
-    -1,//25 
+    -1,//25 Department Form
     -1,
     -1,
     -1,
