@@ -97,7 +97,7 @@ include_once '../resources/utilities.php';
     $neha = $_POST['neha_affinity'];
     $raquel = $_POST['raquel_affinity'];
     $claire = $_POST['claire_affinity'];
-    $allistair = $_POST['allistair_affinity'];
+    $alistair = $_POST['alistair_affinity'];
     $tadashi = $_POST['tadashi_affinity'];
     $tegan = $_POST['tegan_affinity'];
     $tyler = $_POST['tyler_affinity'];
@@ -130,7 +130,7 @@ include_once '../resources/utilities.php';
         $statement5 = $db->prepare($sqlQuery5);
         $statement5->execute();
 
-        $sqlQuery6 = "UPDATE affinity SET allistair = '$allistair' WHERE id = '$id'";
+        $sqlQuery6 = "UPDATE affinity SET alistair = '$alistair' WHERE id = '$id'";
         $statement6 = $db->prepare($sqlQuery6);
         $statement6->execute();
 

@@ -1,5 +1,11 @@
 #CHANGELOG
 
+Version 1.3.22 (EXCEL Significant changes, Chapter 1)
+- *CHAPTER 1*           [chapter 1.xlsx]    finished inputting variables for chapter 1
+- *CHAPTER 1*           [chapter 1.js]      chapter 1 is updated in the JS file
+- *GAME ENGINE*         [gameengine.js]     made changes for the affinity calculations (now it works perfectly)
+- *STRUCTURE*           [chapter1.js]       added another variable to track changes in affinity (characters 1 & 2)
+
 Version 1.3.21 (EXCEL Chap. 0)
 - *EXCEL TEMPLATE*      [chapter 0.xlsx]    made an excel template to make creating chapter data easy 
 - *CHAPTER 0*           [chapter 0.xlsx]    inputted chapter 0

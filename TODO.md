@@ -81,3 +81,6 @@ Start in : *%HOMEDRIVE%%HOMEPATH%*
 *CLOC:* https://github.com/AlDanial/cloc
 *JQUERY:* 
 *NODE.JS:* https://nodejs.org/en/
+
+`Amazing VS Code Shortcuts`
+Collapse all (or by level): https://stackoverflow.com/questions/42660670/collapse-all-methods-in-visual-studio-code

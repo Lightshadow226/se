@@ -27,6 +27,12 @@ var Container = document.getElementById("Container");
     const choiceB_text = 14;
     const choiceC_text = 15;
 
+    const infinityConsequence1 = 16;
+    const infinityConsequence2 = 17;
+
+    const POI = 18;
+    const LP = 19;
+
 $(function initializeInterface()//CREATES the entire interface once the document is $(document).READY()
 {
     Container.innerHTML = "";
@@ -69,7 +75,7 @@ function refreshInterface()//REFRESHES the interface
 {
     gameContainer.innerHTML = "";//on détruit tout en premier
     
-    // refreshTestContainer();
+    refreshTestContainer();
     refreshObjectiveContainer();
 
     if(user.storyLocation >= story[main_text].length)//si le chapitre ("story") est terminé
@@ -219,53 +225,15 @@ function refreshInterface()//REFRESHES the interface
                 affinity_meter2.style.width = "100%";
                 affinity_meter2.className = "y-center";
 
-            //Find out who's the main character on screen, and only display that character's bar
-
-                // var relevant_char = "0";
-
-                // if((story[4][storyLocation] != "null") && (story[2][storyLocation] != "null"))//if there are two characters on the slide
-                // {
-                //     //on peut optimiser les lignes ci-dessous, puisque 2 outcomes out of 3 sont les mêmes
-                //     if (story[1][storyLocation] != "null")
-                //     {
-                //         relevant_char = getPersonnage(story[2][storyLocation]);
-                //     }
-                //     else if (story[3][storyLocation] != "null")
-                //     {
-                //         relevant_char = getPersonnage(story[4][storyLocation]);
-                //     }
-                //     else
-                //     {
-                //         relevant_char = getPersonnage(story[2][storyLocation]);
-                //     }
-                //     //alert("two characters!");
-                // }
-                // else if (story[4][storyLocation] != "null")//if there is a character in the left container
-                // {
-                //     relevant_char = getPersonnage(story[4][storyLocation]);
-                //     // alert("left character!");
-                // }
-                // else if (story[2][storyLocation] != "null")//if there is a character in the right container
-                // {
-                //     // alert(relevant_char);
-                //     relevant_char = getPersonnage(story[2][storyLocation]);
-                // }
-                // else
-                // {
-                //     //When there are no characters, we do not need to create the affinity meter
-                //     // alert("no character!");
-                // }
-
-                // alert(getPersonnage(story[2][storyLocation]).affinity);
-                
         //APPEND all the things to the overlay
 
             //Left infinity meter
-            if(story[4][user.storyLocation] != "null")//if there is a character 1 in this slide, we append the infinity meter to the left
+            if(story[4][user.storyLocation] != "null")//if there is a character 2 in this slide, we append the infinity meter to the left
             {
                 var relevant_char = getPersonnage(story[4][user.storyLocation]);
 
-                relevant_char.affinity += Number(story[16][user.storyLocation]);//on doit s'assurer que la valeur est un nombre, parce que sinon, parfois, ça fait juste carrément rajouter un zéro
+                relevant_char.affinity = Number(relevant_char.affinity);
+                relevant_char.affinity += Number(story[infinityConsequence2][user.storyLocation]);//on doit s'assurer que la valeur est un nombre, parce que sinon, parfois, ça fait juste carrément rajouter un zéro
 
                 if(Number(relevant_char.affinity) < 0)
                 {
@@ -279,25 +247,7 @@ function refreshInterface()//REFRESHES the interface
             }
             
             overlay.appendChild(left_content);
-
-            // if(story[1][storyLocation] != "null")//if there is something is bubble 1
-            // {
-            //     overlay.appendChild(text_gap);
-            // }
-
             overlay.appendChild(middle_content);
-                
-            // if(story[3][storyLocation] != "null")//if there is something is bubble 2
-            // {
-            //     overlay.appendChild(text_gap);
-            // }
-
-            if(story[special_option][user.storyLocation] != -2)//we don't want to append the bubble is there is no need for it
-            {
-                middle_content.appendChild(bubble1);
-                middle_content.appendChild(bubble2);
-            }
-            
             overlay.appendChild(right_content);
 
             //Right infinity meter
@@ -305,16 +255,12 @@ function refreshInterface()//REFRESHES the interface
             {
                 var relevant_char = getPersonnage(story[2][user.storyLocation]);
                 
-                // alert(getPersonnage(story[2][user.storyLocation]).name + ": " + relevant_char.affinity);
-                // alert(getPersonnage(story[2][user.storyLocation]).name + "'s affinity += " + parseInt(story[16][user.storyLocation]));
-
                 //TODO: on doit seulement ajouter le affinity si on n'a jamais visité la page
 
-                var new_number = Number(story[16][user.storyLocation]) + Number(relevant_char.affinity);
+                relevant_char.affinity = Number(relevant_char.affinity);
+                relevant_char.affinity += Number(story[infinityConsequence1][user.storyLocation]);
                 
-                relevant_char.affinity = new_number;//on doit s'assurer que la valeur est un nombre, parce que sinon, parfois, ça fait juste carrément rajouter un zéro
-                
-                if(relevant_char.affinity < 0)
+                if(Number(relevant_char.affinity) < 0)
                 {
                     relevant_char.affinity = 0;
                 }
@@ -323,6 +269,12 @@ function refreshInterface()//REFRESHES the interface
 
                 overlay.appendChild(affinity_meter_content1);
                 affinity_meter_content1.appendChild(affinity_meter1);
+            }
+
+            if(story[special_option][user.storyLocation] != -2)//we don't want to append the bubble is there is no need for it
+            {
+                middle_content.appendChild(bubble1);
+                middle_content.appendChild(bubble2);
             }
 
             //Text Container (at the bottom)
@@ -867,6 +819,8 @@ function refreshInterface()//REFRESHES the interface
             var choiceC = document.createElement('div');
             
                 choiceC.id = "choiceC";
+                choiceC.style.borderBottomLeftRadius = "10px";
+                choiceC.style.borderBottomRightRadius = "10px";
                 choiceC.innerHTML = story[choiceC_text][user.storyLocation]//Le choix C
             
                 //style
@@ -905,86 +859,13 @@ function refreshInterface()//REFRESHES the interface
 
             refreshInterface();
         }
-        else if(story[special_option][user.storyLocation] == -7)
+        else if(story[special_option][user.storyLocation] == -7)//nothing for now
         {
-            // alert("asdf");
 
-            var customize_character_container = document.createElement('div');
-
-                customize_character_container.id = "customize_character_container";
-                // customize_character_container.innerHTML = "asdf";
-
-            var img1 = document.createElement('img');
-
-                img1.src = "images/game_images/sprites/scholar/male/body m.png";
-                img1.style.height = "100%";
-                img1.className = "customize_character_img";
-
-            var img2 = document.createElement('img');
-            
-                img2.src = "images/game_images/sprites/scholar/male/eyes m.png";
-                img2.style.height = "100%";
-                img2.className = "customize_character_img";
-                
-            var img3 = document.createElement('img');
-
-                img3.src = "images/game_images/sprites/scholar/male/face m.png";
-                img3.style.height = "100%";
-                img3.className = "customize_character_img";
-
-            var img4 = document.createElement('img');
-
-                img4.src = "images/game_images/sprites/scholar/male/hair 1 m.png";
-                img4.style.height = "100%";
-                img4.className = "customize_character_img";
-
-            var img5 = document.createElement('img');
-
-                img5.src = "images/game_images/sprites/scholar/male/lips m.png";
-                img5.style.height = "100%";
-                img5.className = "customize_character_img";
-
-            var img6 = document.createElement('img');
-            
-                img6.src = "images/game_images/sprites/scholar/male/underwear base 1 m.png";
-                img6.style.height = "100%";
-                img6.className = "customize_character_img";
-
-            background.appendChild(customize_character_container);
-            
-            // var canvas = document.getElementById("customize_character_container");
-            // var canvas = customize_character_container;
-            // var context = canvas.getContext("2d");
-        
-            // context.drawImage(img1, 0, 0);
-        
-            // context.fillStyle = "#FF0000";
-            // context.fillRect(0,0,150,75);
-            
-            // imageObj.className = "";
-            // imageObj.src = "images/game_images/sprites/scholar/male/body m.png";
-            /*
-                https://www.w3schools.com/graphics/tryit.asp?filename=trycanvas_image
-
-                https://www.w3schools.com/graphics/canvas_reference.asp
-
-                https://stackoverflow.com/questions/6268856/image-png-color-css-or-html-or-javascript
-
-                https://stackoverflow.com/questions/15504370/html5-canvas-drawimage-not-always-drawing-the-image
-            */
-
-
-                // customize_character_container.appendChild(imageObj);
-                customize_character_container.appendChild(img1);
-                customize_character_container.appendChild(img3);
-                customize_character_container.appendChild(img2);
-                customize_character_container.appendChild(img4);
-                customize_character_container.appendChild(img5);
-                customize_character_container.appendChild(img6);
         }
         else//if location or anything else is not enabled
         {
-            //nothing for now
+            //TODO: nothing for now
         }
 
         //EVENT LISTENER for the Text Container
@@ -1007,21 +888,44 @@ function refreshInterface()//REFRESHES the interface
     function refreshTestContainer()// affiche des données par rapport à la prev/current/next slide
     {
         var container1 = document.getElementById('testContainer1');
+            container1.style.position = "absolute";
+            container1.style.left = "0px";
+            container1.style.bottom = "50%";
         
         var text = "";
         
         container1.innerHTML = "";
-        
+
+        var input = document.createElement('input');
+            input.style.width = "100px";
+            input.id = "daInput";
+            // input.onkeypress = function(e){}
+            // input.onkeydown = function(e){alert("a")};
+
+        container1.appendChild(input);
+
+        input.onkeypress = function(e)
+        {
+            if(e.keyCode == 13)
+            {
+                // alert(user.storyLocation);
+                user.storyLocation = input.value;
+                refreshInterface();
+                // alert(user.storyLocation);
+            }
+        };
+
+        $('#daInput').focus();
+
         //Previous location(
-        text += "<b>Previous location (" + (user.storyLocation - 1) + ")</b><br>";
-        //alert(story[main_text][user.storyLocation-1]);
+        /*text += "<b>Previous location (" + (user.storyLocation - 1) + ")</b><br>";
         text += "Story Text: " + story[main_text][user.storyLocation - 1] + "<br>";
         text += "Visited: " + story[17][user.storyLocation - 1] + "<br>";
         text += "Affinity Increase: " + story[16][user.storyLocation - 1] + "<br>";
-        // text += "Bubble 1: " + story[1][user.storyLocation - 1] + "<br>";
-        // text += "Character 1: " + story[2][user.storyLocation - 1] + "<br>";
-        // text += "Bubble 2: " + story[3][user.storyLocation - 1] + "<br>";
-        // text += "Character 2: " + story[4][user.storyLocation - 1] + "<br>";
+        text += "Bubble 1: " + story[1][user.storyLocation - 1] + "<br>";
+        text += "Character 1: " + story[2][user.storyLocation - 1] + "<br>";
+        text += "Bubble 2: " + story[3][user.storyLocation - 1] + "<br>";
+        text += "Character 2: " + story[4][user.storyLocation - 1] + "<br>";
         text += "Location: " + story[5][user.storyLocation - 1] + "<br>";
         text += "Link: " + story[special_option][user.storyLocation - 1] + "<br>";11
         text += "<br>";
@@ -1032,11 +936,10 @@ function refreshInterface()//REFRESHES the interface
         text += "Story Text: " + story[main_text][user.storyLocation] + "<br>";
         text += "Visited: " + story[17][user.storyLocation] + "<br>";
         text += "Affinity Increase: " + story[16][user.storyLocation] + "<br>";
-        //alert(story[main_text][user.storyLocation] + "<br>");
-        // text += "Bubble 1: " + story[1][user.storyLocation] + "<br>";
-        // text += "Character 1: " + story[2][user.storyLocation] + "<br>";
-        // text += "Bubble 2: " + story[3][user.storyLocation] + "<br>";
-        // text += "Character 2: " + story[4][user.storyLocation] + "<br>";
+        text += "Bubble 1: " + story[1][user.storyLocation] + "<br>";
+        text += "Character 1: " + story[2][user.storyLocation] + "<br>";
+        text += "Bubble 2: " + story[3][user.storyLocation] + "<br>";
+        text += "Character 2: " + story[4][user.storyLocation] + "<br>";
         text += "Location: " + story[5][user.storyLocation] + "<br>";
         text += "Link: " + story[special_option][user.storyLocation] + "<br>";
         text += "Choice A: " + story[choiceA_text][user.storyLocation] + "<br>";
@@ -1046,39 +949,39 @@ function refreshInterface()//REFRESHES the interface
         
         
         //Next Location
-        text += "<b>Next location (" + (user.storyLocation + 1) + ")</b><br>";
-        text += "Story Text: " + story[main_text][user.storyLocation + 1] + "<br>";
-        text += "Affinity Increase: " + story[16][user.storyLocation + 1] + "<br>";
-        // text +=  "Bubble 1: " + story[1][user.storyLocation + 1] + "<br>";
-        // text +=  "Character 1: " + story[2][user.storyLocation + 1] + "<br>";
-        // text +=  "Bubble 2: " + story[3][user.storyLocation + 1] + "<br>";
-        // text +=  "Character 2: " + story[4][user.storyLocation + 1] + "<br>";
-        text +=  "Location: " + story[5][user.storyLocation+1] + "<br>";
-        text +=  "Link: " + story[special_option][user.storyLocation + 1] + "<br>";
+        text += "<b>Next location (" + (parseInt(user.storyLocation) + 1) + ")</b><br>";
+        text += "Story Text: " + story[main_text][parseInt(user.storyLocation) + 1] + "<br>";
+        text += "Affinity Increase: " + story[16][parseInt(user.storyLocation) + 1] + "<br>";
+        text +=  "Bubble 1: " + story[1][user.storyLocation + 1] + "<br>";
+        text +=  "Character 1: " + story[2][user.storyLocation + 1] + "<br>";
+        text +=  "Bubble 2: " + story[3][user.storyLocation + 1] + "<br>";
+        text +=  "Character 2: " + story[4][user.storyLocation + 1] + "<br>";
+        text +=  "Location: " + story[5][parseInt(user.storyLocation) + 1] + "<br>";
+        text +=  "Link: " + story[special_option][parseInt(user.storyLocation) + 1] + "<br>";
         text += "<br>";
 
-        container1.innerHTML = text;
+        container1.innerHTML = text;*/
 
-        var container2 = document.getElementById('testContainer2');
+        /*var container2 = document.getElementById('testContainer2');
 
         var index = 0;
 
         text = "";
 
-        // for (var i = 0; i < story[index].length; i++)
-        // {
-        //     if(storyLocation == i)
-        //     {
-        //         //alert(story[index][i]);
-        //         text += '<b>' + i + " - " + story[index][i] + "</b><br>";
-        //     }
-        //     else
-        //     {
-        //         text += i + " - " + story[index][i] + "<br>";
-        //     }
-        // }
+        for (var i = 0; i < story[index].length; i++)
+        {
+            if(storyLocation == i)
+            {
+                //alert(story[index][i]);
+                text += '<b>' + i + " - " + story[index][i] + "</b><br>";
+            }
+            else
+            {
+                text += i + " - " + story[index][i] + "<br>";
+            }
+        }
 
-        container2.innerHTML = text;
+        container2.innerHTML = text;*/
     }
 // -----END DEBUGGING TOOLS-----
 
@@ -1458,8 +1361,8 @@ function browseLink(link, element)//link is the link of the story (story[special
     }
     else if(link == -6)//Looks at links in the past to dermine where to go next
     {
-        var pointofinterest = story[18][user.storyLocation];
-        var landingpoint = story[19][user.storyLocation];
+        var pointofinterest = story[POI][user.storyLocation];
+        var landingpoint = story[LP][user.storyLocation];
 
         //alert(pointofinterest);
         //alert(landingpoint);

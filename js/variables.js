@@ -679,6 +679,9 @@ function pullVariablesFromDB()
 
 function pushVariablesToDB()
 {
+    // alert("tadashi: " + tadashi.affinity);
+    // alert("alistair: " + alistair.affinity);
+
     $.post('dbtransfers/push_variables.php',
     {
         //*********************************************

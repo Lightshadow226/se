@@ -753,8 +753,8 @@
 		border: 4px solid transparent;
 		border-top-color: #ff4956;
 
-		-webkit-animation: spincounter 3s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
-				animation: spincounter 3s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+		-webkit-animation: spin 3s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+				animation: spin 3s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
 	}
 
 	#loader:after
