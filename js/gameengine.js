@@ -8,8 +8,6 @@ Copyright Dulcet Games 2016-2017.
 All rights reserved.
 
 September 02, 2017
-
-ENLEVER TOUS LES GUILLEMETS POUR LES CHIFFRES DE LA BASE DE DONNÉES -> dans les chapitres.js et variables.js
 */
 
 var Container = document.getElementById("Container");
@@ -30,8 +28,8 @@ var Container = document.getElementById("Container");
     const infinityConsequence1 = 16;
     const infinityConsequence2 = 17;
 
-    const POI = 18;
-    const LP = 19;
+    const POI = 19;
+    const LP = 20;
 
 $(function initializeInterface()//CREATES the entire interface once the document is $(document).READY()
 {
@@ -64,11 +62,7 @@ $(function initializeInterface()//CREATES the entire interface once the document
 
     user.last_chapter_played = current_Chapter;
     pushVariablesToDB();//make sure the database reflects the fact that the current chapter is the one currently being played
-
-    //initializeVariables();//we initialize the variables only one in the game
     refreshInterface();//Start the first instance of the game
-    // refreshTestContainer();//Refresh the test container for the first time
-    //refreshScholar();
 })
 
 function refreshInterface()//REFRESHES the interface
@@ -108,7 +102,7 @@ function refreshInterface()//REFRESHES the interface
                 background_img.className = "background_img";
                 background_img.style.borderBottomLeftRadius = "10px";
                 background_img.style.borderBottomRightRadius = "10px";
-                loadAllImages(background_img);
+                // loadAllImages(background_img);
                 background_img.src = story[5][user.storyLocation];//l'image de background du jeu
                 // background_img.src = getLocationString(user.physicalLocationInt);
                 // alert(user.physicalLocationInt);
@@ -853,15 +847,36 @@ function refreshInterface()//REFRESHES the interface
             background.appendChild(choiceA);
                 choiceA.style.transform = "translateY(-" + (choiceB.clientHeight + choiceC.clientHeight) + "px)";//choice A needs to be above both choice B anc C
         }
-        else if(story[special_option][user.storyLocation] == -6)
+        else if(story[special_option][user.storyLocation] == -6)// -6 === checks if we visited a slide in the past, then go to another one if yes ***** GHOST SLIDE
         {
             browseLink(story[special_option][user.storyLocation], textContainer);
 
             refreshInterface();
         }
-        else if(story[special_option][user.storyLocation] == -7)//nothing for now
+        else if(story[special_option][user.storyLocation] == -7)// -7 === is the character of POI the one with the highest affinity? yes -> goto LP; no -> goto next slide ***** GHOST SLIDE
         {
+            //if the highest affinity is with character # [point of interest]
+            var character_nbr = story[POI][user.storyLocation];//get the point of interest, which is the negative # of the character
+                character_nbr = -character_nbr - 11;// -11 becomes 0, -15 becomes 4.
+                character_name = charList[character_nbr];
+            
+                // alert("highest character at slide # " + user.storyLocation + " is " + getHighestAffinity().name + " VS " + character_name);
 
+            if(getPersonnageFromName(character_name) == getHighestAffinity())//if the character that we're looking at is the one with the highest affinity
+            {
+                user.storyLocation = story[LP][user.storyLocation];//go to Landing Slide
+            }
+            else//if it is not the one with the highest affinity
+            {
+                user.storyLocation++;//go to the next slide
+            }
+
+            refreshInterface();
+        }
+        else if(story[special_option][user.storyLocation] == -10)// -10 === the end of the chapter ***** GHOST SLIDE
+        {
+            user.storyLocation = story[main_text].length;//the story is over
+            refreshInterface();
         }
         else//if location or anything else is not enabled
         {
@@ -882,274 +897,6 @@ function refreshInterface()//REFRESHES the interface
 
     user.last_chapter_played = current_Chapter;
     pushVariablesToDB();
-}
-
-// -----START DEBUGGING TOOLS-----
-    function refreshTestContainer()// affiche des données par rapport à la prev/current/next slide
-    {
-        var container1 = document.getElementById('testContainer1');
-            container1.style.position = "absolute";
-            container1.style.left = "0px";
-            container1.style.bottom = "50%";
-        
-        var text = "";
-        
-        container1.innerHTML = "";
-
-        var input = document.createElement('input');
-            input.style.width = "100px";
-            input.id = "daInput";
-            // input.onkeypress = function(e){}
-            // input.onkeydown = function(e){alert("a")};
-
-        container1.appendChild(input);
-
-        input.onkeypress = function(e)
-        {
-            if(e.keyCode == 13)
-            {
-                // alert(user.storyLocation);
-                user.storyLocation = input.value;
-                refreshInterface();
-                // alert(user.storyLocation);
-            }
-        };
-
-        $('#daInput').focus();
-
-        //Previous location(
-        /*text += "<b>Previous location (" + (user.storyLocation - 1) + ")</b><br>";
-        text += "Story Text: " + story[main_text][user.storyLocation - 1] + "<br>";
-        text += "Visited: " + story[17][user.storyLocation - 1] + "<br>";
-        text += "Affinity Increase: " + story[16][user.storyLocation - 1] + "<br>";
-        text += "Bubble 1: " + story[1][user.storyLocation - 1] + "<br>";
-        text += "Character 1: " + story[2][user.storyLocation - 1] + "<br>";
-        text += "Bubble 2: " + story[3][user.storyLocation - 1] + "<br>";
-        text += "Character 2: " + story[4][user.storyLocation - 1] + "<br>";
-        text += "Location: " + story[5][user.storyLocation - 1] + "<br>";
-        text += "Link: " + story[special_option][user.storyLocation - 1] + "<br>";11
-        text += "<br>";
-        
-        
-        //Current Location
-        text += "<b>Current location (" + user.storyLocation + ")</b><br>";
-        text += "Story Text: " + story[main_text][user.storyLocation] + "<br>";
-        text += "Visited: " + story[17][user.storyLocation] + "<br>";
-        text += "Affinity Increase: " + story[16][user.storyLocation] + "<br>";
-        text += "Bubble 1: " + story[1][user.storyLocation] + "<br>";
-        text += "Character 1: " + story[2][user.storyLocation] + "<br>";
-        text += "Bubble 2: " + story[3][user.storyLocation] + "<br>";
-        text += "Character 2: " + story[4][user.storyLocation] + "<br>";
-        text += "Location: " + story[5][user.storyLocation] + "<br>";
-        text += "Link: " + story[special_option][user.storyLocation] + "<br>";
-        text += "Choice A: " + story[choiceA_text][user.storyLocation] + "<br>";
-        text += "Choice B: " + story[choiceB_text][user.storyLocation] + "<br>";
-        text += "Choice C: " + story[choiceC_text][user.storyLocation] + "<br>";
-        text += "<br>";
-        
-        
-        //Next Location
-        text += "<b>Next location (" + (parseInt(user.storyLocation) + 1) + ")</b><br>";
-        text += "Story Text: " + story[main_text][parseInt(user.storyLocation) + 1] + "<br>";
-        text += "Affinity Increase: " + story[16][parseInt(user.storyLocation) + 1] + "<br>";
-        text +=  "Bubble 1: " + story[1][user.storyLocation + 1] + "<br>";
-        text +=  "Character 1: " + story[2][user.storyLocation + 1] + "<br>";
-        text +=  "Bubble 2: " + story[3][user.storyLocation + 1] + "<br>";
-        text +=  "Character 2: " + story[4][user.storyLocation + 1] + "<br>";
-        text +=  "Location: " + story[5][parseInt(user.storyLocation) + 1] + "<br>";
-        text +=  "Link: " + story[special_option][parseInt(user.storyLocation) + 1] + "<br>";
-        text += "<br>";
-
-        container1.innerHTML = text;*/
-
-        /*var container2 = document.getElementById('testContainer2');
-
-        var index = 0;
-
-        text = "";
-
-        for (var i = 0; i < story[index].length; i++)
-        {
-            if(storyLocation == i)
-            {
-                //alert(story[index][i]);
-                text += '<b>' + i + " - " + story[index][i] + "</b><br>";
-            }
-            else
-            {
-                text += i + " - " + story[index][i] + "<br>";
-            }
-        }
-
-        container2.innerHTML = text;*/
-    }
-// -----END DEBUGGING TOOLS-----
-
-/* à améliorer en fonction de l'histoire parcourue (seulement s'il est possible de faire 1-2-3-4-5-12-6-7-30-15-16-17) */
-function findLatestObjective(obj_cont)//returns the last time there was a new objective
-{
-    var POI = -1;
-
-    for(var i = 0; i < user.storyLocation; i++)
-    {
-        if(story[6][i] == -2)
-        {
-            POI = i;
-        }
-    }
-
-    if(story[13][POI] != "null")//if there is a new objective in choice A
-    {
-        obj_cont.innerHTML = story[13][POI];
-    }
-    else
-    {
-        POI = -1;
-    }
-
-    if(story[14][POI] != "null")//if there is a new objective in choice B
-    {
-        obj_cont.innerHTML += "<br>" + story[14][POI];
-    }
-
-    if(story[15][POI] != "null")//if there is a new objective in choice C
-    {
-        obj_cont.innerHTML += "<br>" + story[15][POI];
-    }
-
-    if(POI == -1)
-    {
-        obj_cont.innerHTML = "You have no objectives for now.";   
-    }
-}
-
-function refreshObjectiveContainer()
-{
-    var obj_cont = document.getElementById('objectiveContainer');
-        obj_cont.style.borderRadius = "10px";
-
-    obj_cont.innerHTML = "";
-    
-    if(story[6][user.storyLocation] == -2)
-    {
-        if(story[13][user.storyLocation] != "null")//if there is a new objective in choice A
-        {
-            obj_cont.innerHTML = story[13][user.storyLocation];
-        }
-        else
-        {
-            findLatestObjective(obj_cont);//if there's nothing in choice A, then there is no new objective
-        }
-    
-        if(story[14][user.storyLocation] != "null")//if there is a new objective in choice B
-        {
-            obj_cont.innerHTML += "<br>" + story[14][user.storyLocation];
-        }
-    
-        if(story[15][user.storyLocation] != "null")//if there is a new objective in choice C
-        {
-            obj_cont.innerHTML += "<br>" + story[15][user.storyLocation];
-        }
-    }
-    else
-    {
-        findLatestObjective(obj_cont);
-    }
-
-    refreshProgressBar();
-
-    /*  pour pouvoir afficher le character qui est à l'écran
-        var char_1 = getPersonnage(story[2][storyLocation]);
-        var char_2 = getPersonnage(story[4][storyLocation]);
-
-
-        if(char_1 + "" == "undefined")//if it is undefined, do nothing
-        {
-        }
-        else
-        {
-            obj_cont.innerHTML += "<br>Character on page: " + char_1.name;
-        }
-    */
-
-    //We need to show all characters as a round image
-    obj_cont.innerHTML += "<br>";
-    
-    var round_img_path = "images/game_images/sprites/round_portraits/";
-    
-    var char_container = document.createElement('div');
-    
-        char_container.id = "char_container";
-
-    var char_info_container = document.createElement('div');
-
-        char_info_container.id = "char_info_container";
-        char_info_container.className = "char_info_container_invisible";
-    
-        // char_info_container.id = "char_container";
-    
-    obj_cont.appendChild(char_container);
-    obj_cont.appendChild(char_info_container);
-    
-    for(var i = 0; i < charList.length; i++)//on affiche tous les characters, et on mets un Event Listener pour quand on hover dessus
-    {
-        var img = document.createElement('img');
-        
-        img.id = charList[i];
-        img.className = "game_char_portraits";
-        img.src = round_img_path + charList[i] + ".jpg";
-
-        char_container.appendChild(img);
-
-        // alert(tadashi.affinity);
-        // il y a un bug avec l'affinité de Tadashi
-
-        img.addEventListener("mouseover",
-        function (e)
-        {
-            var x = this.id;
-            var char = getPersonnageFromName(x);
-            
-            charName = (char.name + "").toLowerCase();
-
-            // alert(charName);
-            // alert(char.name + "'s Affinity: " + char.affinity);
-
-            char_info_container.innerHTML = "<b>My affinity with " + char.name + ": </b>" + char.affinity;
-            char_info_container.innerHTML += "<br><br><b> Likes: </b>" + char.likes;
-            char_info_container.innerHTML += "<br><br><b> Dislikes: </b>" + char.dislikes;
-            // char_info_container.style.left = document.getElementById(charName).style.left + "";
-
-            // alert(document.getElementById(charName).top);
-
-            char_info_container.className = "";
-        },
-        true);
-        /*
-        img.addEventListener("mouseout",
-        function (e)
-        {
-            var x = this.id;
-            var char = getPersonnageFromName(x);
-            
-            // alert(char.name + "'s Affinity: " + char.affinity);
-
-            char_info_container.innerHTML = "";
-
-            char_info_container.className = "char_info_container_invisible";
-        },
-        true);*/
-    }
-}
-
-function highlight(element, highlightedColor)
-{
-    element.style.backgroundColor = highlightedColor;
-}
-
-function dehighlight(element, baseColor)//we should call this function lowlight to make it a thing
-{
-    element.style.backgroundColor = baseColor;
 }
 
 //This function is to affect what happens when we click on the text container depending on the link
@@ -1367,7 +1114,7 @@ function browseLink(link, element)//link is the link of the story (story[special
         //alert(pointofinterest);
         //alert(landingpoint);
         
-        if(story[17][pointofinterest]) // if we visited the slide that is the "point of interest".
+        if(story[POI][pointofinterest]) // if we visited the slide that is the "point of interest".
         {
             // alert("you have visited " + pointofinterest);
             // alert("therefore, you are going to " + landingpoint);
@@ -1386,84 +1133,4 @@ function browseLink(link, element)//link is the link of the story (story[special
     }
 }
 
-function refreshScholar()
-{
-    var scholar_container = document.createElement('div');
-        scholar_container.id = "scholar_sprite";
-
-        scholar_container.style.position = "fixed"; 
-        scholar_container.style.width =  "11%";
-        scholar_container.style.right = "0px";
-        // scholar_container.style.transform = "transform: translateX(100%);"
-
-    var scholar_img = document.createElement('img');
-        scholar_img.style.width = "100%";
-
-        scholar_img.src = "images/game_images/sprites/scholar/male/body m TEMP.png"
-
-    document.getElementById("body").appendChild(scholar_container);
-        scholar_container.appendChild(scholar_img);
-}
-
-function loadAllImages(loader)
-{
-    // loader.style.visibility = "hidden";
-    
-    loader.src = locations.blackScreen;
-    loader.src = locations.cafeteria;
-    loader.src = locations.cafeteriaLounge;
-    loader.src = locations.cafeteriaOutside;
-    loader.src = locations.class1;
-    loader.src = locations.class2;
-    loader.src = locations.dorm;
-    loader.src = locations.dormBathroom;
-    loader.src = locations.dormHall;
-    loader.src = locations.entrance;
-    loader.src = locations.garden;
-    loader.src = locations.gym;
-    loader.src = locations.hall1;
-    loader.src = locations.hall2;
-}
-
 pullVariablesFromDB();
-// initializeInterface();
-
-/*
-
-    http://stackoverflow.com/questions/8865458/how-to-align-text-vertically-center-in-div-with-css
-
-    Useful Shortcuts:
-        Move Code:                  Alt+Up/Down
-        Comment Code Block:         Ctrl+K+C/Ctrl+K+U
-        Peek Definition:            Alt+F12
-        Change TAB Function:         Ctrl+M
-        
-        http://www.dofactory.com/reference/visual-studio-shortcuts
-
-    function Arraytest(id)
-    {
-        var i;
-        var j;
-
-        var text = "";
-        var test = [];
-
-        const c = 5; 
-        
-        for (i = 0; i < c; i++)
-        {
-            test[i]= new Array();
-            //test[i][i] = "works " + i;
-            //text += test[i][i] + "<br>";
-            text += "<br>";
-            
-            for (j = 0; j < c; j++)
-            {
-                test[i][j] = "yes " + j;
-                text += test[i][j] + "<br>";
-            }
-        }
-
-        document.getElementById(id).innerHTML = text;
-    }
-*/

@@ -2,9 +2,9 @@
 
 `TODO: Next`
 - *CHAPTER INPUT*       [chapter1.js]                                   la chapitre 1 est terminé jusqu'à la slide 129, donc il va falloir valider le reste + rajouter les émotions
-- *CHAPTER INPUT*       [chapter1.js]                                   il reste à ajouter les ghost slides pour la slide 44 (221-224)
 - *CODE - NEW FORM*     [gameengine.js]                                 FORM 2: il va falloir faire birthday, préférences, gender, etc.
 - *PPT*                 [Chapter2Slides Part2.ppt]                      slides à terminer chapitre 2 (le ppt et le code)]
+- *TODO*                [chapter 1.js]                                  il reste à implémenter les illustrations et le form pour sélectionner notre uniforme
 
 `TODO: in Order`
 - *DATABASE*            [variables.js, gameengine.js]                   account for movements -> movement meter/action points -> faire un système pour tout
@@ -83,4 +83,8 @@ Start in : *%HOMEDRIVE%%HOMEPATH%*
 *NODE.JS:* https://nodejs.org/en/
 
 `Amazing VS Code Shortcuts`
-Collapse all (or by level): https://stackoverflow.com/questions/42660670/collapse-all-methods-in-visual-studio-code
+*Collapse all (or by level):* https://stackoverflow.com/questions/42660670/collapse-all-methods-in-visual-studio-code
+*List of all shortcuts:* http://www.dofactory.com/reference/visual-studio-shortcuts
+
+`CSS tools`
+*CSS Center Vertically:* https://stackoverflow.com/questions/8865458/how-do-i-vertically-center-text-with-css

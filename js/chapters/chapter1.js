@@ -246,6 +246,15 @@ function Chapter1()
         "(I jumped out of bed and rushed to put on my uniform.)",
         "I can’t freaking believe this! ",//220 
         "END CHAPTER 1",
+        "null",
+        "null",//223 Alistair
+        "null",//224 Claire
+        "null",//225 Ellie
+        "null",//226 Karolina
+        "null",//227 Neha
+        "null",//228 Raquel
+        "null",//229 Tadashi
+        "null",//230 Tegan
         ];
     //story[1] === Bubble 1 === ce que le personnage 1 dit
     story[1] = [
@@ -471,6 +480,15 @@ function Chapter1()
         "null",
         "null",//220 
         "null",
+        "null",
+        "null",//223 Alistair
+        "null",//224 Claire
+        "null",//225 Ellie
+        "null",//226 Karolina
+        "null",//227 Neha
+        "null",//228 Raquel
+        "null",//229 Tadashi
+        "null",//230 Tegan
         ];
     //story[2] === Character 1
     story[2] = [
@@ -696,6 +714,15 @@ function Chapter1()
         "null",
         "null",//220 
         "null",
+        "null",
+        "null",//223 Alistair
+        "null",//224 Claire
+        "null",//225 Ellie
+        "null",//226 Karolina
+        "null",//227 Neha
+        "null",//228 Raquel
+        "null",//229 Tadashi
+        "null",//230 Tegan
         ];
     //story[3] === Bubble 2
     story[3] = [
@@ -921,6 +948,15 @@ function Chapter1()
         "null",
         "null",//220 
         "null",
+        "null",
+        "null",//223 Alistair
+        "null",//224 Claire
+        "null",//225 Ellie
+        "null",//226 Karolina
+        "null",//227 Neha
+        "null",//228 Raquel
+        "null",//229 Tadashi
+        "null",//230 Tegan
         ];
     //story[4] === Character 2
     story[4] = [
@@ -1146,6 +1182,15 @@ function Chapter1()
         "null",
         "null",//220 
         "null",
+        "null",
+        "null",//223 Alistair
+        "null",//224 Claire
+        "null",//225 Ellie
+        "null",//226 Karolina
+        "null",//227 Neha
+        "null",//228 Raquel
+        "null",//229 Tadashi
+        "null",//230 Tegan
         ];
     //story[5] === Location
     story[5] = [
@@ -1371,6 +1416,15 @@ function Chapter1()
         locations.dorm,
         locations.dorm,//220 
         locations.dorm,
+        locations.dorm,
+        "null",//223 Alistair
+        "null",//224 Claire
+        "null",//225 Ellie
+        "null",//226 Karolina
+        "null",//227 Neha
+        "null",//228 Raquel
+        "null",//229 Tadashi
+        "null",//230 Tegan
         ];
     //story[6] === Special Option: Specific state of this slide
     story[6] = [
@@ -1524,8 +1578,8 @@ function Chapter1()
         -2,
         -1,//148 illustrations
         -1,//149 illustrations
-        -1,//150 illustrations
-        -2,
+        222,//150 illustrations
+        -1,
         -1,
         -1,
         -1,
@@ -1541,7 +1595,7 @@ function Chapter1()
         -1,
         -1,//165 
         -1,
-        -1,
+        206,
         -1,
         -1,
         -1,//170 
@@ -1551,7 +1605,7 @@ function Chapter1()
         -1,
         -1,//175 
         -1,
-        -1,
+        206,
         -1,
         -1,
         -1,//180 
@@ -1564,7 +1618,7 @@ function Chapter1()
         -1,
         -1,
         -1,
-        -1,//190 
+        206,//190 
         -1,
         -1,
         -1,
@@ -1579,7 +1633,7 @@ function Chapter1()
         -1,
         -1,
         -1,
-        -1,//205 
+        206,//205 
         -1,
         -1,
         -1,
@@ -1595,7 +1649,16 @@ function Chapter1()
         -1,
         -1,
         -1,//220 
-        -1,
+        -10,
+        -2,
+        -7,//223 Alistair
+        -7,//224 Claire
+        -7,//225 Ellie
+        -7,//226 Karolina
+        -7,//227 Neha
+        -7,//228 Raquel
+        -7,//229 Tadashi
+        -7,//230 Tegan
         ];
     //story[7] === Objective -> "0" is no objective, all other numbers are specific cases
     story[7] = [
@@ -1750,7 +1813,7 @@ function Chapter1()
         0,//148 illustrations
         0,//149 illustrations
         0,//150 illustrations
-        10,
+        0,
         0,
         0,
         0,
@@ -1821,6 +1884,15 @@ function Chapter1()
         0,
         0,//220 
         0,
+        10,
+        0,//223 Alistair
+        0,//224 Claire
+        0,//225 Ellie
+        0,//226 Karolina
+        0,//227 Neha
+        0,//228 Raquel
+        0,//229 Tadashi
+        0,//230 Tegan
         ];
     //story[8] === Friendship Link -> "-1"is no link, otherwise the number represents the array number of the slide
     story[8] = [
@@ -2046,6 +2118,15 @@ function Chapter1()
         -1,
         -1,//220 
         -1,
+        -1,
+        -1,//223 Alistair
+        -1,//224 Claire
+        -1,//225 Ellie
+        -1,//226 Karolina
+        -1,//227 Neha
+        -1,//228 Raquel
+        -1,//229 Tadashi
+        -1,//230 Tegan
         ];
     //story[9] === Romance Link -> "-1"is no link, otherwise the number represents the array number of the slide
     story[9] = [
@@ -2271,6 +2352,15 @@ function Chapter1()
         -1,
         -1,//220 
         -1,
+        -1,
+        -1,//223 Alistair
+        -1,//224 Claire
+        -1,//225 Ellie
+        -1,//226 Karolina
+        -1,//227 Neha
+        -1,//228 Raquel
+        -1,//229 Tadashi
+        -1,//230 Tegan
         ];
     //story[10] === Choice 1 Link -> "-1"is no link, otherwise the number represents the array number of the slide
     story[10] = [
@@ -2496,6 +2586,15 @@ function Chapter1()
         -1,
         -1,//220 
         -1,
+        -1,
+        -1,//223 Alistair
+        -1,//224 Claire
+        -1,//225 Ellie
+        -1,//226 Karolina
+        -1,//227 Neha
+        -1,//228 Raquel
+        -1,//229 Tadashi
+        -1,//230 Tegan
         ];
     //story[11] === Choice 2 Link -> "-1"is no link, otherwise the number represents the array number of the slide
     story[11] = [
@@ -2721,6 +2820,15 @@ function Chapter1()
         -1,
         -1,//220 
         -1,
+        -1,
+        -1,//223 Alistair
+        -1,//224 Claire
+        -1,//225 Ellie
+        -1,//226 Karolina
+        -1,//227 Neha
+        -1,//228 Raquel
+        -1,//229 Tadashi
+        -1,//230 Tegan
         ];
     //story[12] === Choice 3 Link -> "-1"is no link, otherwise the number represents the array number of the slide
     story[12] = [
@@ -2946,6 +3054,15 @@ function Chapter1()
         -1,
         -1,//220 
         -1,
+        -1,
+        -1,//223 Alistair
+        -1,//224 Claire
+        -1,//225 Ellie
+        -1,//226 Karolina
+        -1,//227 Neha
+        -1,//228 Raquel
+        -1,//229 Tadashi
+        -1,//230 Tegan
         ];
     //story[13] === Choice 1 Text -> "null"is no link, otherwise the number represents the array number of the slide
     story[13] = [
@@ -3100,7 +3217,7 @@ function Chapter1()
         "null",//148 illustrations
         "null",//149 illustrations
         "null",//150 illustrations
-        "Objective Complete: Quick! Go back to your dorm and put on your uniform!",
+        "null",
         "null",
         "null",
         "null",
@@ -3171,6 +3288,15 @@ function Chapter1()
         "null",
         "null",//220 
         "null",
+        "Objective Complete: Quick! Go back to your dorm and put on your uniform!",
+        "null",//223 Alistair
+        "null",//224 Claire
+        "null",//225 Ellie
+        "null",//226 Karolina
+        "null",//227 Neha
+        "null",//228 Raquel
+        "null",//229 Tadashi
+        "null",//230 Tegan
         ];
     //story[14] === Choice 2 Text -> "null"is no link, otherwise the number represents the array number of the slide
     story[14] = [
@@ -3325,7 +3451,7 @@ function Chapter1()
         "null",//148 illustrations
         "null",//149 illustrations
         "null",//150 illustrations
-        "New Objective: Go to they gym and take your picture!",
+        "null",
         "null",
         "null",
         "null",
@@ -3396,6 +3522,15 @@ function Chapter1()
         "null",
         "null",//220 
         "null",
+        "New Objective: Go to they gym and take your picture!",
+        "null",//223 Alistair
+        "null",//224 Claire
+        "null",//225 Ellie
+        "null",//226 Karolina
+        "null",//227 Neha
+        "null",//228 Raquel
+        "null",//229 Tadashi
+        "null",//230 Tegan
         ];
     //story[15] === Choice 3 Text -> "null"is no link, otherwise the number represents the array number of the slide
     story[15] = [
@@ -3621,6 +3756,15 @@ function Chapter1()
         "null",
         "null",//220 
         "null",
+        "null",
+        "null",//223 Alistair
+        "null",//224 Claire
+        "null",//225 Ellie
+        "null",//226 Karolina
+        "null",//227 Neha
+        "null",//228 Raquel
+        "null",//229 Tadashi
+        "null",//230 Tegan
         ];
     //story[16] === Infinity meter consequence of going on that slide -> "0" is no consequence, otherwise the number represents what we add to the meter of the active person (the one talking, "relevant character")
     story[16] = [
@@ -3846,6 +3990,15 @@ function Chapter1()
         0,
         0,//220 
         0,
+        0,
+        0,//223 Alistair
+        0,//224 Claire
+        0,//225 Ellie
+        0,//226 Karolina
+        0,//227 Neha
+        0,//228 Raquel
+        0,//229 Tadashi
+        0,//230 Tegan
         ];
     //story[17] === Infinity meter consequence of going on that slide -> "0" is no consequence, otherwise the number represents what we add to the meter of the active person (the one talking, "relevant character")
     story[17] = [
@@ -4071,6 +4224,15 @@ function Chapter1()
         0,
         0,//220 
         0,
+        0,
+        0,//223 Alistair
+        0,//224 Claire
+        0,//225 Ellie
+        0,//226 Karolina
+        0,//227 Neha
+        0,//228 Raquel
+        0,//229 Tadashi
+        0,//230 Tegan
         ];
     //story[18] === visited -> FALSE by default, TRUE si le joueur a visité la slide
     story[18] = [
@@ -4296,6 +4458,15 @@ function Chapter1()
         false,
         false,//220 
         false,
+        false,
+        false,//223 Alistair
+        false,//224 Claire
+        false,//225 Ellie
+        false,//226 Karolina
+        false,//227 Neha
+        false,//228 Raquel
+        false,//229 Tadashi
+        false,//230 Tegan
         ];
     //story[19] === Point of interest -> -1 by defaut, we look if we have visited slide X so that we can manipulate that information
     story[19] = [
@@ -4521,6 +4692,15 @@ function Chapter1()
         -1,
         -1,//220 
         -1,
+        -1,
+        -11,//223 Alistair
+        -13,//224 Claire
+        -14,//225 Ellie
+        -15,//226 Karolina
+        -16,//227 Neha
+        -17,//228 Raquel
+        -18,//229 Tadashi
+        -19,//230 Tegan
         ];
     //story[20] === landing slide -> -1 by defaut, but we go to a specific slide after the current one
     story[20] = [
@@ -4746,6 +4926,15 @@ function Chapter1()
         -1,
         -1,//220 
         -1,
+        -1,
+        191,//223 Alistair
+        178,//224 Claire
+        168,//225 Ellie
+        152,//226 Karolina
+        152,//227 Neha
+        178,//228 Raquel
+        191,//229 Tadashi
+        168,//230 Tegan
         ];
     //end
 }

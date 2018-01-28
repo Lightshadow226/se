@@ -1,10 +1,17 @@
 #CHANGELOG
 
+Version 1.3.23 (Chapter 1 - Next slide related to Highest Affinity)
+- *STRUCTURE*           [chapter1.js/xlsx]  added another variable POSSIBILITY to Point of Interest for highest affinity manipulations
+- *GAME ENGINE*         [gameengine.js]     made changes for manipulations regarding affinity (go to slide X if highest affinity is with Y)
+- *CHAPTER INPUT*       [chpater1.js/xlsx]  ajouté les ghost slides pour la 2e moitié (selon les affinités)
+- *CHAPTER 1*           [chapter1.js/xlsx]  chapter 1 is updated (pretty much done??!)
+
 Version 1.3.22 (EXCEL Significant changes, Chapter 1)
 - *CHAPTER 1*           [chapter 1.xlsx]    finished inputting variables for chapter 1
 - *CHAPTER 1*           [chapter 1.js]      chapter 1 is updated in the JS file
 - *GAME ENGINE*         [gameengine.js]     made changes for the affinity calculations (now it works perfectly)
 - *STRUCTURE*           [chapter1.js]       added another variable to track changes in affinity (characters 1 & 2)
+- *CHAPTER INPUT*       [chapter1.js]       ajouté les ghost slides pour la slide 44 (pour des affinités multiples)
 
 Version 1.3.21 (EXCEL Chap. 0)
 - *EXCEL TEMPLATE*      [chapter 0.xlsx]    made an excel template to make creating chapter data easy 
