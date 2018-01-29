@@ -12,10 +12,10 @@
 
 	var department_description = [
 			"You belong in the Business, Commerce & Politics Department! You are a natural-born leader with a tendency to love working a little too much. You keep organized and get things done. You’re ambitious and never back down until you have reached your goal. You may come off as a little cold, but you care deeply about your classmates and only want everybody to succeed.",
-	   		"You belong in the Health Sciences Department! You are very compassionate and love helping people. You care very deeply about your classmates and use your intelligence to move people forward. While you may be a little sensitive due to your empathetic nature, and your shyness has played agains you in the past, you are the person everybody can rely on.",
+	   		"You belong in the Health Sciences Department! You are very compassionate and love helping people. You care very deeply about your classmates and use your intelligence to move people forward. While you may be a little sensitive due to your empathetic nature and your shyness has played against you in the past, you are the person everybody can rely on.",
 			"You belong in the Pure and Applied Sciences Department! You are intelligent, curious and love to solve problems. You’re straightforward, objective and very reliable! You have a wild imagination and keep an open mind. While you tend to be introverted and somewhat private, once your classmates get to know you, it becomes easy for you to win them over!",
-			"You belong in the Performing Arts Department! You are outgoing, bold and love to be the center of attention. Very few can keep up with your daring nature, but one thing’s for sure: there is never a boring day around you! While you tend to be overbearing and self-centred sometimes, you make an excellent friend and are able to shine in nearly any situation.",
-			"You belong in the Fine Arts Department! You are creative, fun and love to be free. You have a strong interest in beauty and nothing makes you happier than people appreciating your work! People can always count on you for inspiring them. You may be insecure at times, but your passion and sensibility makes you a great friend!",
+			"You belong in the Performing Arts Department! You are outgoing, bold and love to be the center of attention. Very few can keep up with your daring nature, but one thing’s for sure: there is never a boring day around you! While you tend to be overbearing and self-centered sometimes, you make an excellent friend and are able to shine in nearly any situation.",
+			"You belong in the Fine Arts Department! You are creative, fun and love to be free. You have a strong interest in beauty and nothing makes you happier than people appreciating your work! People can always count on you to inspire them. You may be insecure at times, but your passion and sensibility makes you a great friend!",
 			"You belong in the Athletics Department! You are headstrong, outgoing, passionate and very hardworking. You have a strong competitive streak and like to keep active and on the run! People can always count on you for motivating and inspiring them. You may be stubborn at times, but overall, your determination knows no limit!",
 			"You belong in the Fashion Department! You are sharp, assertive and a visionary. You love to express yourself through your clothes and place a lot of importance in looking good. You are focused and absolutely love getting things done. You may be a little too obsessed with your image and judgemental at times, but you lift off your friends and support them to no end."
 	];
@@ -49,7 +49,7 @@ function initialize()
 
 	//paragraph
 	var formSubHeader = document.createElement('p');//formerly h5
-		formSubHeader.innerHTML = "Which one of the seven departments do you belong to? <em>Take this quiz to find out!</em>";
+		formSubHeader.innerHTML = "Which one of the seven departments do you belong in? <em>Take this quiz to find out!</em>";
 
 	//image
 	var department_img_container = document.createElement('div');

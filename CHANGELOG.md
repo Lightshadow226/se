@@ -1,5 +1,11 @@
 #CHANGELOG
 
+Version 1.3.24 (Terms.pgp)
+- *TERMS & CONDITIONS*  [terms.php]         Added the terms
+- *FOOTER*              [footers.php]       Added the link to the terms page
+- *HEADER*              [headers.php]       Added the link to the terms page
+- *PERSONALITY QUIZ*                        Completed it and released it
+
 Version 1.3.23 (Chapter 1 - Next slide related to Highest Affinity)
 - *STRUCTURE*           [chapter1.js/xlsx]  added another variable POSSIBILITY to Point of Interest for highest affinity manipulations
 - *GAME ENGINE*         [gameengine.js]     made changes for manipulations regarding affinity (go to slide X if highest affinity is with Y)
