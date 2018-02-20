@@ -687,7 +687,7 @@ function pushVariablesToDB()
         //*********************************************
         //USERINFO table
         //*********************************************
-        'username': user.username,
+        // 'username': user.username,
         'energy': user.energy,
         'money': user.money,
 

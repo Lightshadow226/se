@@ -15,8 +15,6 @@ include_once '../resources/utilities.php';
     //*********************************************
 
     $username = $_POST['username'];
-    $energy = $_POST['energy'];
-    $money = $_POST['money'];
 
     try
     {
@@ -24,10 +22,33 @@ include_once '../resources/utilities.php';
         $statement = $db->prepare($sqlQuery1);
         $statement->execute();
 
+        $status = "SQL Sent!";
+    }
+    catch (PDOException $ex)
+    {
+        echo $ex;
+    }
+
+    try
+    {
+        $energy = $_POST['energy'];
+
         $sqlQuery2 = "UPDATE userinfo SET energy = '$energy' WHERE id = '$id'";
         $statement2 = $db->prepare($sqlQuery2);
         $statement2->execute();
 
+        $status = "SQL Sent!";
+    }
+    catch (PDOException $ex)
+    {
+        echo $ex;
+    }
+
+
+    try
+    {
+        $money = $_POST['money'];
+    
         $sqlQuery3 = "UPDATE userinfo SET money = '$money' WHERE id = '$id'";
         $statement3 = $db->prepare($sqlQuery2);
         $statement3->execute();
@@ -39,16 +60,33 @@ include_once '../resources/utilities.php';
         echo $ex;
     }
 
+
+    /*
+    
+    try
+    {
+
+
+        $status = "SQL Sent!";
+    }
+    catch (PDOException $ex)
+    {
+        echo $ex;
+    }
+    
+    */
+
+
+}
+
     //*********************************************
     //SCHOLARINFO table
     //*********************************************
 
-    $department = $_POST['department'];
-
-    //we should push the rest of the variables (MAYBE it's wiser NOT to do it though)
-
-    try
+    try//we should push the rest of the variables (MAYBE it's wiser NOT to do it though)
     {
+        $department = $_POST['department'];
+    
         $sqlQuery1 = "UPDATE scholarinfo SET scholar_department = '$department' WHERE id = '$id'";
         $statement = $db->prepare($sqlQuery1);
         $statement->execute();
@@ -64,20 +102,41 @@ include_once '../resources/utilities.php';
     //STORY table
     //*********************************************
 
-    $storylocation = $_POST['storylocation'];//storylocation
-    $lastchapterplayed = $_POST['lastchapterplayed'];//lastchapterplayed
-    $physicallocationint = $_POST['physicallocationint'];//physical location int
     
     try
     {
+        $storylocation = $_POST['storylocation'];//storylocation
+        
         $sqlQuery1 = "UPDATE story SET storylocation = '$storylocation' WHERE id = '$id'";
         $statement = $db->prepare($sqlQuery1);
         $statement->execute();
+
+        $status = "SQL Sent!";
+    }
+    catch (PDOException $ex)
+    {
+        echo $ex;
+    }
+
+    try
+    {
+        $lastchapterplayed = $_POST['lastchapterplayed'];//lastchapterplayed
 
         $sqlQuery2 = "UPDATE story SET lastchapterplayed = '$lastchapterplayed' WHERE id = '$id'";
         $statement2 = $db->prepare($sqlQuery2);
         $statement2->execute();
 
+        $status = "SQL Sent!";
+    }
+    catch (PDOException $ex)
+    {
+        echo $ex;
+    }
+
+    try
+    {
+        $physicallocationint = $_POST['physicallocationint'];//physical location int
+            
         $sqlQuery3 = "UPDATE story SET physicallocationint = '$physicallocationint' WHERE id = '$id'";
         $statement3 = $db->prepare($sqlQuery3);
         $statement3->execute();

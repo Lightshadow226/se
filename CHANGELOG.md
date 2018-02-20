@@ -1,7 +1,10 @@
 #CHANGELOG
 
+Version 1.3.26 (Dollmaker)
+- *DORM*                [dorm.js]           fixed the dollmaker
+
 Version 1.3.25 (School Files)
-- Pop up images for school file
+- *RELATIONSHIPS*       [relationships.js]  Made pop up images for school file
 
 Version 1.3.24 (Terms.pgp)
 - *TERMS & CONDITIONS*  [terms.php]         Added the terms

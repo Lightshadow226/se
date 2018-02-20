@@ -180,10 +180,9 @@ function clearOverlay(overlay, item)
 
 function refreshImg()
 {
-    /*var Character_handle = document.getElementById("Character_handle");
-        Character_handle.innerHTML = '';//empty the db handler first, to create all the elements only once*/
-
+    $.ajax('profile/scholar_sprite.php');//amazingly faster
     $.get('profile/scholar_sprite.php');//amazingly faster
+
     document.getElementById('img_character').src = 'profile/scholar_sprite.php';
     document.getElementById('img_character').onload = function()
     {
@@ -535,6 +534,14 @@ function wardrobe()
 
             if(user.sex == 1)
             {
+                // alert("New values:" + "\n"
+                // + " - sex: " + user.sex + "\n"
+                // + " - eyecolor: " + user.eyecolor + "\n"
+                // + " - hair_color: " + user.haircolor + "\n"
+                // + " - hair_style: " + user.hairstyle + "\n"
+                // + " - shoes: " + user.shoes_id + "\n"
+                // + " - skincolor: " + user.skincolor);
+
                 hair_style = hair_style_male;
             }
             else
@@ -610,12 +617,22 @@ function wardrobe()
         document.getElementById('small-loader-wrapper').className = "";
         // document.getElementById('information_field').innerHTML = 'item selected!';
         
+        // pullVariablesFromDB();
+
+        // pushToDB('sex', user.sex);
+        // pushToDB('eyes', user.eyecolor);
+        // pushToDB('hair_color', user.haircolor);
+        // pushToDB('hair_style', user.hairstyle);
+        // pushToDB('shoes', user.shoes);
+        // pushToDB('skin_color', user.skincolor);
+
         // alert(newItem + " - " + position);
+        
         if(currentScreen == screens[0])//"SEX"
         {
             pushToDB('sex', position);
         }
-       else if(currentScreen == screens[1])//"EYES"
+        else if(currentScreen == screens[1])//"EYES"
         {
             pushToDB('eyes', position);
         }
@@ -631,62 +648,101 @@ function wardrobe()
         {
             pushToDB('shoes', position);
         }
-        else if(currentScreen == screens[5])//"SHOES"
+        else if(currentScreen == screens[5])//"SKIN COLOR"
         {
             pushToDB('skin_color', position);
         }
 
-        pullVariablesFromDB();
+        // pullVariablesFromDB();
     }
 
     function pushToDB(SQLname, value)//saves to the database
     {
-        // alert(SQLname + " = " + value);
+        pullVariablesFromDB();
+
+        // alert("Current values:" + "\n"
+        //     + " - sex: " + user.sex + "\n"
+        //     + " - eyecolor: " + user.eyecolor + "\n"
+        //     + " - hair_color: " + user.haircolor + "\n"
+        //     + " - hair_style: " + user.hairstyle + "\n"
+        //     + " - shoes: " + user.shoes_id + "\n"
+        //     + " - skincolor: " + user.skincolor + "\n\n"
+        //     + "new " + SQLname + " = " + value);
 
         if(SQLname == 'sex')
         {
-            $.post('profile/savePresets.php',
-            {
-                'sex': value,
-            });
+            user.sex = value;
         }
         else if(SQLname == 'eyes')
         {
-            $.post('profile/savePresets.php',
-            {
-                'eyes': value,
-            });
+            user.eyecolor = value;
         }
         else if(SQLname == 'hair_color')
         {
-            $.post('profile/savePresets.php',
-            {
-                'hair_color': value,
-            });
+            user.haircolor = value;
         }
         else if(SQLname == 'hair_style')
         {
-            $.post('profile/savePresets.php',
-            {
-                'hair_style': value,
-            });
+            user.hairstyle = value;
         }
         else if(SQLname == 'shoes')
         {
-            $.post('profile/savePresets.php',
-            {
-                'shoes': value,
-            });
+            user.shoes_id = value;
         }
         else if(SQLname == 'skin_color')
         {
-            $.post('profile/savePresets.php',
-            {
-                'skin_color': value,
-            });
+            user.skincolor = value;
         }
 
+        $.post('profile/savePresets.php',
+        {
+            'sex': user.sex,
+            'eyes': user.eyecolor,
+            'hair_color': user.haircolor,
+            'hair_style': user.hairstyle,
+            //'shoes': user.shoes_id,
+            'skin_color': user.skincolor,
+        });
+
+        verifyChange(SQLname, value);
         refreshImg();
+    }
+
+    function verifyChange(SQLname, value)//verify that the change has been made in the DB
+    {
+        pullVariablesFromDB();
+
+        // alert("New values:" + "\n"
+        // + " - sex: " + user.sex + "\n"
+        // + " - eyecolor: " + user.eyecolor + "\n"
+        // + " - hair_color: " + user.haircolor + "\n"
+        // + " - hair_style: " + user.hairstyle + "\n"
+        // + " - shoes: " + user.shoes_id + "\n"
+        // + " - skincolor: " + user.skincolor + "\n\n"
+        // + "new " + SQLname + " = " + value);
+
+        if(SQLname == 'sex' && user.sex == value)//if we're changing the sex, and it has the right value, DO NOTHING
+        {
+        }
+        else if(SQLname == 'eyes' && user.eyecolor == value)
+        {
+        }
+        else if(SQLname == 'hair_color' && user.haircolor == value)
+        {
+        }
+        else if(SQLname == 'hair_style' && user.hairstyle == value)
+        {
+        }
+        else if(SQLname == 'shoes' && user.shoes_id == value)
+        {
+        }
+        else if(SQLname == 'skin_color' && user.skincolor == value)
+        {
+        }
+        else//if it's not the right value, do it again
+        {
+            pushToDB(SQLname, value);
+        }
     }
 
     //8. start the wheel
