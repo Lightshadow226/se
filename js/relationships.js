@@ -10,7 +10,6 @@ var relationship_enabled = true;
 
 var lines_container = document.getElementById("character_lines_container");
 var button_container = document.getElementById("button_container_horizontal");
-var popup_container = document.getElementById("popup-container");
 
 const character_portraits_path = "images/general/characters/characters_portraits/";
 
@@ -79,29 +78,6 @@ function refresh_lines(beg, end)
     }
 }
 
-$(document).keyup(function(e)//when we press a key
-{
-    if(e.keyCode == 27)//escape key maps to keycode `27`
-    {
-        clearPopup();
-    }
-});
-
-function clearPopup()
-{
-    popup_container.className = "invisible";
-}
-
-function showPopup(img_path)
-{
-    var school_files_img = document.getElementById('school_file_img_container');
-        school_files_img.src = img_path;
-
-    popup_container.className = "visible fullscreen";
-    document.getElementById("top-right-x").onclick = function(){clearPopup()};
-
-    //https://www.w3schools.com/howto/howto_css_modal_images.asp
-}
 
 function create_line(index)
 {

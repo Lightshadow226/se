@@ -5,6 +5,8 @@
 - **CODE - NEW FORM**     [gameengine.js]                                 FORM 2: il va falloir faire birthday, préférences, gender, etc.
 - **PPT**                 [Chapter2Slides Part2.ppt]                      slides à terminer chapitre 2 (le ppt et le code)]
 - **TODO**                [chapter 1.js]                                  il reste à implémenter les illustrations et le form pour sélectionner notre uniforme
+- Take out the illustrations and achievements but keep the page there for show
+
 
 `TODO: in Order`
 - **DATABASE**            [variables.js, gameengine.js]                   account for movements -> movement meter/action points -> faire un système pour tout

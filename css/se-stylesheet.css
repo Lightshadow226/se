@@ -699,7 +699,7 @@
 	/*LOADER FOR ALL THE PAGES*/
 	#loader-wrapper
 	{
-		position: absolute;
+		position: fixed;
 		top: 0;
 		left: 0;
 		width: 100%;
@@ -1121,46 +1121,6 @@
 
 /**********RELATIONSHIPS.HTML**********/
 
-	#popup-container
-	{
-		position: fixed;
-		height: 100%;
-		z-index: 10;
-		background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-	}
-	
-	#top-right-x
-	{
-		position: absolute;
-		right: 2%;
-		top: 2%;
-		color: white;
-		/* font-stretch: expanded; */
-		font-size: 3em;
-	}
-
-	#top-right-x:hover
-	{
-		cursor: pointer;
-	}
-	
-	#school_file_img_container
-	{
-		height: 90%;
-		opacity: 1.2;
-		width: auto;
-	}
-
-	.invisible
-	{
-		display: none;
-	}
-
-	.visible
-	{
-		display: block;
-	}
-
 	.line
 	{
 		position: relative;
@@ -1189,8 +1149,9 @@
 	{
 		height: inherit;
 		width: auto;
-		/* background-image: "images/game_images/achievements/achievement1.jpg"; */
 		max-height: 350px;
+		border-top-left-radius: 10px;
+		border-bottom-left-radius: 10px;
 	}
 
 	.line_middle_content
@@ -1296,44 +1257,27 @@
 
 /**********ILLUSTRATIONS & ACHIEVEMENTS.HTML**********/
 
-	.line_illustrations
-	{
-		position: relative;
-		box-shadow: 0 0 5px #83827d;
-		margin-top: 5px;
-		margin-bottom: 5px;
-		/* padding: 20px; */
-		display: auto;
-		background-color: #EFEEEA;
-	}
-
 	.line_achievement
 	{
 		position: relative;
-		/* background-color: white; */
 		box-shadow: 0 0 5px #83827d;
-		margin-top: 5px;
-		margin-bottom: 5px;
+		margin: 10px;
 		display: flex;
-		/* max-height: 350px; */
+		border-radius: 10px;
+		height: 100px;
 	}
 
 	.achievement_img
 	{
 		height: 100%;
 		width: auto;
-		overflow: auto;
+		border-top-left-radius: 10px;
+		border-bottom-left-radius: 10px;
 	}
 
 	#illustrations_container
 	{
 		display: flex;
-	}
-
-	.illustration_div
-	{
-		flex: 1;
-		margin: 4px;
 	}
 
 	.illustration
@@ -1342,26 +1286,6 @@
 		height: 100%;
 		margin: auto;
 		padding: auto;
-	}
-
-	.line_illustration_middle_content
-	{
-		height: inherit;
-		flex: auto;
-		position: relative; /*Nécessaire pour que le bouton soit bien placé*/
-		flex: 100;
-		padding: 20px;
-		max-height: 350px;
-	}
-
-	.wing
-	{
-		flex: 2;
-	}
-
-	.middle_wing
-	{
-		flex: 0;
 	}
 
 /**********PROFILE.PHP**********/
@@ -1687,11 +1611,148 @@
 		padding: 20px;
 	}
 
+	.card-left-content, .card-middle-content, .card-right-content
+	{
+		flex: 1;
+		border-radius: 10px;
+	}
+
+	.card-left-content
+	{
+		margin-right: 5px;
+	}
+
+	.card-middle-content
+	{
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+
+	.card-right-content
+	{
+		margin-left: 5px;
+	}
+
+	/*X-CARDS -> very fashionable*/
+	.x-card-purple, .x-card-pink, .x-card-yellow
+	{
+		margin: 10px;
+		padding: 10px;
+		border-radius: 10px;		
+	}
+
+	.x-card-purple-header, .x-card-pink-header, .x-card-yellow-header
+	{
+		width: 100%;
+		border-radius: 10px;
+		text-align: center;
+	}
+
+	.x-card-img-purple, .x-card-img-pink, .x-card-img-yellow
+	{
+		width: 100%;
+		height: auto;
+		border-radius: 10px;
+		cursor: pointer;
+	}
+
+	.x-card-content
+	{
+		margin-top: 10px;
+	}
+
+	.x-card-purple/*PURPLE*/
+	{
+		border: 2px solid #f3def2;
+	}
+
+	.x-card-purple-header
+	{
+		background-color: #f3def2;
+	}	
+	
+	.x-card-img-purple
+	{
+		box-shadow: 0 0 10px #f3def2;
+	}
+	
+	.x-card-pink/*PINK*/
+	{
+		border: 2px solid #ffe2e4;
+	}
+
+	.x-card-pink-header
+	{
+		background-color: #ffe2e4;
+	}
+	
+	.x-card-img-pink
+	{
+		box-shadow: 0 0 10px #ffe2e4;
+	}
+	
+	.x-card-yellow/*YELLOW*/
+	{
+		border: 2px solid #fdeac7;
+	}
+
+	.x-card-yellow-header
+	{
+		background-color: #fdeac7;
+	}
+	
+	.x-card-img-yellow
+	{
+		box-shadow: 0 0 10px #fdeac7;
+	}
+	
 	.card-fusionned
 	{
 
 	}
 
+
+/***************POPUPS***************/
+
+#popup-container
+	{
+		position: fixed;
+		height: 100%;
+		z-index: 10;
+		background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+	}
+	
+	#top-right-x
+	{
+		position: absolute;
+		right: 2%;
+		top: 2%;
+		color: white;
+		/* font-stretch: expanded; */
+		font-size: 3em;
+	}
+
+	#top-right-x:hover
+	{
+		cursor: pointer;
+	}
+
+	#popup-img
+	{
+		height: 90%;
+		widows: auto;
+	}
+	
+	.invisible
+	{
+		display: none;
+	}
+
+	.visible
+	{
+		display: block;
+	}
+	
 /***************HIGHLIGHTS***************/
 
 	.hightlight-grey:hover

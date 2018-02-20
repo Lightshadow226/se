@@ -17,9 +17,24 @@ var chapter1Location = 130;
 
 //Constant Colors
 const se_bottom_border_bc = "#D1D1D1";//"bc" for background color
-const se_bubble_bc = "#efeeea";
+const grey = "#EFEEEA";
 const se_highlight_bc = "#f7b334";
 const se_pink = "#ef4c5e";
+
+const pink = "#ff4956";
+const purple = "#682666";
+const yellow = "#F7B334";
+
+const pink_light = "#ffe2e4";
+const purple_light = "#f3def2";
+const yellow_light = "#fdeac7";
+
+const pink_dark = "#c0000e";
+const purple_dark = "#4f1d4e";
+const yellow_dark = "#de9409";
+
+const fun_pink = "#e42371"//for the progress bar
+
 
 //variable temporaire (ne pas inclure dans la base de données)
 var choice = "null";//Un choix pour les liens. Ex.: pour link = -3, "choice" va contenir le nom du département choisi

@@ -17,7 +17,7 @@ var chapter1Location = 130;
 
 //Constant Colors
 const se_bottom_border_bc = "#D1D1D1";//"bc" for background color
-const se_bubble_bc = "#efeeea";
+const grey = "#efeeea";
 const se_highlight_bc = "#f7b334";
 const se_pink = "#ef4c5e";
 

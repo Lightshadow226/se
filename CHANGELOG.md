@@ -1,5 +1,12 @@
 #CHANGELOG
 
+Version 1.3.27 (Illustrations & Achievements)
+- *ILLUSTRATIONS*       [illustration.php]  changed the design (now it's in HTML, not JS)
+- *ACHIEVEMENTS*        [illustration.php]  changed the design AND removed the achievements for the beta
+- *DELETE ACCOUNT*      [profile.php]       removed the "delete your profile" button
+- *DORM*                [dorm.js]           added the escape function to get out of the dollmaker
+- *LOADER               [headers.php]       fixed the position of the loader (no longer absolute)
+
 Version 1.3.26 (Dollmaker)
 - *DORM*                [dorm.js]           fixed the dollmaker
 

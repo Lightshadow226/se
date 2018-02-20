@@ -24,15 +24,9 @@
 	<div class = "main_content">
 
 		<div id="dorm">
-
 			<div id="dorm_base_img_container">
 				<img class="img" src = "images/game_images/dorm/dorm.jpg"></img>
 			</div>
-
-			<!-- <div id="dorm_overlay">
-				<img class="img" style="z-index:2;" src = "images/game_images/dorm/dorm_ward.png"></img>
-			</div> -->
-
 		</div>
 
 		<div id="useless" style="display:none;"><!-- useless div lol, seulement le contenu est important -->
@@ -42,20 +36,7 @@
 			<div id="dorm-book" class="dorm-clickable" onclick="window.open('illustrations_achievements.php', '_self');"></div><!-- Book (objectives & progression) -->
 		</div>
 		
-		<div id = "DB_handle">
-				
-		</div>
-
-	</div>
-
-	<div id = "Character_handle">
-
-		<!-- <input id = "Character_handle_sex" value = "1"></input>
-		<input id = "Character_handle_skincolor" value = "1"></input>
-		<input id = "Character_handle_haircolor"></input>
-		<input id = "Character_handle_hairstyle"></input>
-		<input id = "Character_handle_eyecolor"></input>
-		<input id = "Character_handle_clothes"></input> -->
+		<div id = "DB_handle"></div>
 
 	</div>
 
@@ -67,8 +48,4 @@
 <script src = "js/library.js"></script><!--this is to get all the functions that are needed-->
 <script src = "js/dorm.js"></script>
 
-<script>
-	raz();
-</script>
-	
 </html>

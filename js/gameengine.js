@@ -145,7 +145,7 @@ function refreshInterface()//REFRESHES the interface
                 var bubble1 = document.createElement('div');//bubble 1
 
                     bubble1.className = "bubble";
-                    bubble1.style.backgroundColor = se_bubble_bc;
+                    bubble1.style.backgroundColor = grey;
 
                     //s'il y a un personnage à gauche, il doit avoir un petit triangle qui pointe vers la gauche (pour fair comme un vrai phylactère)
 
@@ -162,7 +162,7 @@ function refreshInterface()//REFRESHES the interface
                 var bubble2 = document.createElement('div');//bubble 2
                     
                     bubble2.className = "bubble";
-                    bubble2.style.backgroundColor = se_bubble_bc;
+                    bubble2.style.backgroundColor = grey;
 
                     if(story[3][user.storyLocation] != "null")//if there is something in bubble 2
                     {

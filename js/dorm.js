@@ -180,7 +180,6 @@ function clearOverlay(overlay, item)
 
 function refreshImg()
 {
-    $.ajax('profile/scholar_sprite.php');//amazingly faster
     $.get('profile/scholar_sprite.php');//amazingly faster
 
     document.getElementById('img_character').src = 'profile/scholar_sprite.php';
@@ -193,6 +192,7 @@ function refreshImg()
 function wardrobe()
 {
     raz();//remise à zéro + PULL from DB
+    
     var reset_params = user;//we save the user as it is before customization
     
     //BASIC OVERLAY
@@ -219,6 +219,7 @@ function wardrobe()
 
     //2. thumbnails (t-shirt, pants, shoes, etc.)
         var left_container = document.createElement('div');//left
+            left_container.id = "left_container";
             left_container.className = "flex-panel2";
             left_container.style.height = "100%";
             left_container.style.position = "relative";
@@ -342,22 +343,18 @@ function wardrobe()
                     button_back.className = "button pink_button";//style="margin:20px;"
                     button_back.style.margin = "10px";
                     button_back.innerHTML = "Back";
-
-                // var information_field = document.createElement('div');
-                //     information_field.id = "information_field";
-                //     information_field.innerHTML = "Nothing";
-
+                    
+                    
         var right_container = document.createElement('div');//the character image container
             right_container.id = "right_container";
             right_container.style.position = "relative";
-            // right_container.className = "flex-panel";
             right_container.style.height = "100%";//initially 346
 
-        var img_character = document.createElement('img');
-            img_character.id = "img_character";
-            img_character.style.height = "100%";//initially 346
-            img_character.src = "scholar_sprite.php";
-
+            var img_character = document.createElement('img');
+                img_character.id = "img_character";
+                img_character.style.height = "100%";//initially 346
+                img_character.src = "scholar_sprite.php";
+    
         overlay_form.appendChild(left_container);
             left_container.appendChild(title);
             left_container.appendChild(selector_line);
@@ -407,13 +404,15 @@ function wardrobe()
             left_container.appendChild(button_container2);
                 button_container2.appendChild(button_back);
                 // button_container2.appendChild(information_field);
-        
         overlay_form.appendChild(right_container);
             right_container.appendChild(img_character);
-
+                
+        
     //3. add a cute loader
+            
         document.getElementById('right_container').appendChild(createLoader());
-
+        // document.getElementById('right_container').removeChild(document.getElementById('small-loader-wrapper'));//to remove the loader
+        
     //4. Once we click on the thumbnail, we see all shirts, all pants, etc.
 
         //clicking on "sex"
@@ -460,6 +459,14 @@ function wardrobe()
     //6. Buttons event listeners
 
         button_back.onclick = function(e){raz()};
+
+        $(document).keyup(function(e)//when we press a key
+        {
+            if(e.keyCode == 27)//escape key maps to keycode `27`
+            {
+                raz();
+            }
+        });
 
     //7. FUNCTIONS
     
@@ -749,3 +756,5 @@ function wardrobe()
     refreshItems(currentScreen);
     refreshImg();
 }
+
+raz();

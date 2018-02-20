@@ -92,7 +92,6 @@
 									<div style="padding: 10px;">
 										<div class="center">
 											<div class="button pink_button"><a style="color:white;" href="">Reset Progress</a></div>
-											<div class="button pink_button"><a style="color:white;" href="profile/delete_account.php?user_identity=<?php if(isset($encode_id)) echo $encode_id; ?>">DELETE ACCOUNT</a></div>
 										</div>
 									</div>
 

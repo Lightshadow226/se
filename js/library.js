@@ -660,6 +660,40 @@ function dehighlight(element, baseColor)//we should call this function lowlight 
     element.style.backgroundColor = baseColor;
 }
 
+$(document).keyup(function(e)//when we press a key
+{
+    if(e.keyCode == 27)//escape key maps to keycode `27`
+    {
+        try
+        {
+            clearPopup();
+        }
+        catch(e)
+        {
+
+        }
+    }
+});
+
+function clearPopup()
+{
+    var popup_container = document.getElementById("popup-container");
+            popup_container.className = "invisible";
+}
+
+function showPopup(img_path)
+{
+    var imgElement = document.getElementById("popup-img");
+        imgElement.src = img_path;
+    
+    var popup_container = document.getElementById("popup-container");
+        popup_container.className = "visible fullscreen";
+
+    document.getElementById("top-right-x").onclick = function(){clearPopup()};
+
+    //https://www.w3schools.com/howto/howto_css_modal_images.asp
+}
+
 // -----START DEBUGGING TOOLS-----
 function refreshTestContainer()// affiche des données par rapport à la prev/current/next slide
 {
