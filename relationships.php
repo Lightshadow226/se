@@ -21,6 +21,12 @@
 
     <?php include_once 'partials/headers.php' ?>
 
+
+    <div id="popup-container" class="invisible">
+        <img id="school_file_img_container" class="fullscreen-child" src="_new_images_folder/characters/school_files/alistair.png">
+        <div id="top-right-x">X</div>
+    </div>
+
     <div class = "main_content">
         
         <div class="add_padding card-firstdiv" style = "margin-bottom: 20px;">

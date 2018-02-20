@@ -1121,6 +1121,46 @@
 
 /**********RELATIONSHIPS.HTML**********/
 
+	#popup-container
+	{
+		position: fixed;
+		height: 100%;
+		z-index: 10;
+		background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+	}
+	
+	#top-right-x
+	{
+		position: absolute;
+		right: 2%;
+		top: 2%;
+		color: white;
+		/* font-stretch: expanded; */
+		font-size: 3em;
+	}
+
+	#top-right-x:hover
+	{
+		cursor: pointer;
+	}
+	
+	#school_file_img_container
+	{
+		height: 90%;
+		opacity: 1.2;
+		width: auto;
+	}
+
+	.invisible
+	{
+		display: none;
+	}
+
+	.visible
+	{
+		display: block;
+	}
+
 	.line
 	{
 		position: relative;
@@ -1569,6 +1609,16 @@
 		top: 0px;
 		width: 100%;
 		height: auto;
+	}
+
+	.fullscreen-child
+	{
+		position: absolute;
+
+		top: 50%;
+		left: 50%;
+
+		transform: translate3d(-50%, -50%, 0);/*-60% because of the header that takes space*/
 	}
 
 	.fullscreen-immovible/*if we want to do a popup to promote something*/

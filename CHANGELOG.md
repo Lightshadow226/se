@@ -1,5 +1,8 @@
 #CHANGELOG
 
+Version 1.3.25 (School Files)
+- Pop up images for school file
+
 Version 1.3.24 (Terms.pgp)
 - *TERMS & CONDITIONS*  [terms.php]         Added the terms
 - *FOOTER*              [footers.php]       Added the link to the terms page

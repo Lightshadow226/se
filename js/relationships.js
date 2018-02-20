@@ -9,8 +9,8 @@ Create the Character Scroll for the Characterpage
 var relationship_enabled = true;
 
 var lines_container = document.getElementById("character_lines_container");
-
 var button_container = document.getElementById("button_container_horizontal");
+var popup_container = document.getElementById("popup-container");
 
 const character_portraits_path = "images/general/characters/characters_portraits/";
 
@@ -29,9 +29,6 @@ const character_portraits_path = "images/general/characters/characters_portraits
     */
 
 /*****NE PAS METTRE LES ARRAYS DANS VARIABLES.JS*****/
-
-    
-
 $(function create_interface()
 {
     const qty_main_10 = 10;//de 0 à 9 
@@ -39,28 +36,22 @@ $(function create_interface()
     const qty_others = 1;//de 9 à 9 (parce qu'il n'y en a pas encore)
 
     var main_10_button = document.createElement('div');//de 0 à 9
-
         main_10_button.className = "button yellow_button";
         main_10_button.style.margin = "10px";
         main_10_button.innerHTML = "Main 10";
-
-        main_10_button.addEventListener("click", function(e){refresh_lines(0, qty_main_10); activate(main_10_button, classmates_button, others_button);})
+        main_10_button.onclick = function(e){refresh_lines(0, qty_main_10); activate(main_10_button, classmates_button, others_button);};
 
     var classmates_button = document.createElement('div');
-
         classmates_button.className = "button yellow_button";
         classmates_button.style.margin = "10px";
         classmates_button.innerHTML = "Classmates";
-        
-        classmates_button.addEventListener("click", function(e){refresh_lines(qty_main_10, qty_main_10 + qty_classmates); activate(classmates_button, main_10_button, others_button);})
+        classmates_button.onclick = function(e){refresh_lines(qty_main_10, qty_main_10 + qty_classmates); activate(classmates_button, main_10_button, others_button);};
 
     var others_button = document.createElement('div');
-
         others_button.className = "button yellow_button";
         others_button.style.margin = "10px";
         others_button.innerHTML = "Others";
-
-        others_button.addEventListener("click", function(e){refresh_lines(qty_main_10 + qty_classmates, qty_main_10 + qty_classmates + qty_others); activate(others_button, main_10_button, classmates_button);})
+        others_button.onclick = function(e){refresh_lines(qty_main_10 + qty_classmates, qty_main_10 + qty_classmates + qty_others); activate(others_button, main_10_button, classmates_button);};
 
     button_container.appendChild(createFlexPanel());
     button_container.appendChild(main_10_button);
@@ -69,7 +60,6 @@ $(function create_interface()
     button_container.appendChild(createFlexPanel());
 
     main_10_button.click();
-    //refresh_lines(0, qty_main_10);//on affiche les 10 originaux initialement
 });
 
 function activate(activatedButton, button2, button3)//highlights the "activatedButton" in pink and dehighlights the other buttons in yellow
@@ -89,54 +79,80 @@ function refresh_lines(beg, end)
     }
 }
 
+$(document).keyup(function(e)//when we press a key
+{
+    if(e.keyCode == 27)//escape key maps to keycode `27`
+    {
+        clearPopup();
+    }
+});
+
+function clearPopup()
+{
+    popup_container.className = "invisible";
+}
+
+function showPopup(img_path)
+{
+    var school_files_img = document.getElementById('school_file_img_container');
+        school_files_img.src = img_path;
+
+    popup_container.className = "visible fullscreen";
+    document.getElementById("top-right-x").onclick = function(){clearPopup()};
+
+    //https://www.w3schools.com/howto/howto_css_modal_images.asp
+}
+
 function create_line(index)
 {
-    var line = document.createElement('div');
+    //character information
+        var relevant_character = first_name[index];//get the first name of the relevant character
 
+        //mettre les school files séparément dans le fichier de chaque character
+        var school_files_path = "_new_images_folder/characters/school_files/" + relevant_character.toLowerCase() + ".png";
+        // alert(school_files_path);
+
+        var desc_header = '<h4 class="center" style="text-transform: uppercase; color: #EE4C5E">' + first_name[index] + '</h4>';
+        //var desc_fullname = '<p><b>Full name: </b>' + fullname[index] + '</p>';
+        var desc_birthday = '<p><b>Birthday: </b>' + birthday[index] + '</p>';
+        var desc_likes = '<p><b>Likes: </b>' + likes[index] + '</p>';
+        var desc_dislikes = '<p><b>Dislikes: </b>' + dislikes[index] + '</p><br>';
+        var desc_description = '<p class="chara_long_desc">' + fulldescription[index] + '</p>';
+
+        var percentage = getPersonnageFromName(characters[index]).affinity;
+
+    //create the divs
+    var line = document.createElement('div');
         line.className = "line line-big";
         
     var line_left_content = document.createElement('div');
-
         line_left_content.className = "line_left_content";
 
         var char_img = document.createElement('img');
-
             char_img.src = character_portraits_path + characters[index] + ".png";
             char_img.className = "character_img";
             char_img.style.maxHeight = "350px";
 
     var line_middle_content = document.createElement('div');
-
         line_middle_content.className = "line_middle_content";
 
         var chara_desc = document.createElement('div');
-
-            var desc_header = '<h4 class="center" style="text-transform: uppercase; color: #EE4C5E">' + first_name[index] + '</h4>';
-            //var desc_fullname = '<p class="chara_list"><b>Full name: </b>' + fullname[index] + '</p>';
-            var desc_birthday = '<p class="chara_list"><b>Birthday: </b>' + birthday[index] + '</p>';
-            var desc_likes = '<p class="chara_list"><b>Likes: </b>' + likes[index] + '</p>';
-            var desc_dislikes = '<p class="chara_list"><b>Dislikes: </b>' + dislikes[index] + '</p><br>';
-            var desc_description = '<p class="chara_long_desc">' + fulldescription[index] + '</p>';
-
-        chara_desc.innerHTML = desc_header + /*desc_fullname + */desc_birthday + desc_likes + desc_dislikes + desc_description;
+            chara_desc.innerHTML = desc_header + /*desc_fullname + */desc_birthday + desc_likes + desc_dislikes + desc_description;
 
         var school_files_button = document.createElement('div');
-
+            school_files_button.id = index;
             school_files_button.className = "button school_files_button x-left-y-bottom";
             school_files_button.innerHTML = "School File";
+            school_files_button.onclick = function(){showPopup(school_files_path)};
 
     var line_right_content = document.createElement('div');
-
         line_right_content.className = "line_right_content";
 
         var inf_meter = document.createElement('img');
-
-            var percentage = getPersonnageFromName(characters[index]).affinity;
             inf_meter.src = browseAffinity(percentage); //"images/game_images/infinity_meter/states/se-infinity-40-43.png";
             inf_meter.className = "inf_meter";
 
         var percentage_number = document.createElement('div');
-
             percentage_number.innerHTML = percentage + "%";
             percentage_number.className = "percentage_number";
 
@@ -149,6 +165,7 @@ function create_line(index)
         line.appendChild(line_right_content);
             line_right_content.appendChild(inf_meter);
             line_right_content.appendChild(percentage_number);
+    // lines_container.appendChild(school_files_img);
     
     // alert(line.clientHeight);
 }

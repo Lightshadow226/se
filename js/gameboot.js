@@ -66,12 +66,7 @@ function create_line(index, type)
         play_episode_button.innerHTML = "Continue Playing";
         chara_desc.innerHTML += "</br> <b>Progress: </b>"
 
-        play_episode_button.addEventListener( "click",
-                            function (e)
-                            {
-                                window.open(get_button_ID(play_episode_button.id), "_self");
-                            },
-                            true);
+        play_episode_button.onclick = function (e){window.open(get_button_ID(play_episode_button.id), "_self")};
 
         currentEpisode_lines_container.appendChild(line);
     }
