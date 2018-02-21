@@ -151,7 +151,7 @@ elseif(isset($_POST['changePasswordBtn']))
 
 					<div class = "flex-container">
 						<p class = "flex-panel login-signup-labels" style= "flex:2; padding-right:10px;">Current Password:</p>
-						<input id="current-password" class = "flex-panel2 login-signup-textfields" type="text" placeholder = "Password" type="password" name="current_password" value=""></input>
+						<input id="current_password" class = "flex-panel2 login-signup-textfields" type="text" placeholder = "Password" type="password" name="current_password" value=""></input>
 						<div class = "flex-panel"></div>
 					</div>
 					
@@ -160,7 +160,7 @@ elseif(isset($_POST['changePasswordBtn']))
 					<div class = "flex-container">
 						<p class = "flex-panel login-signup-labels" style= "flex:2; padding-right:10px;">New Password:</p>
 						
-						<input id="current-password" class = "flex-panel2 login-signup-textfields" type="text" placeholder = "Think of something cool!" type="password" name="new_password" value=""></input>
+						<input id="new_password" class = "flex-panel2 login-signup-textfields" type="text" placeholder = "Think of something cool!" type="password" name="new_password" value=""></input>
 						<div class = "flex-panel"></div>
 					</div>
 
@@ -169,7 +169,7 @@ elseif(isset($_POST['changePasswordBtn']))
 					<div class = "flex-container">
 						<p class = "flex-panel login-signup-labels" style= "flex:2; padding-right:10px;">Confirm New Password:</p>
 						
-						<input id="current-password" class = "flex-panel2 login-signup-textfields" type="text" placeholder = "Just to be safe!" type="password" name="confirm_password" value=""></input>
+						<input id="confirm_password" class = "flex-panel2 login-signup-textfields" type="text" placeholder = "Just to be safe!" type="password" name="confirm_password" value=""></input>
 						<div class = "flex-panel"></div>
 					</div>
 						

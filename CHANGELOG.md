@@ -1,5 +1,12 @@
 #CHANGELOG
 
+Version 1.3.28 (Character Tooltips in Objectives Container)
+- *TOOLTIPS*            [library.js]        added centered tooltips for the characters
+- *CSS*                 [.css]              optimized css and added some classes
+- *BUG FIXED*           [edit_password.php] fixed the bug of the password that was not changing
+- *CONTACT US*          [contact.php]       locked the footer to the bottom of the page
+- *ANIMATIONS*          [.css]              added animations (zoom, transitions) to buttons and the school files on relationship.php
+
 Version 1.3.27 (Illustrations & Achievements)
 - *ILLUSTRATIONS*       [illustration.php]  changed the design (now it's in HTML, not JS)
 - *ACHIEVEMENTS*        [illustration.php]  changed the design AND removed the achievements for the beta

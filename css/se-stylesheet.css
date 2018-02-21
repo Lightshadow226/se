@@ -52,6 +52,7 @@
 
 	img
 	{
+		user-select: none;
 		-webkit-user-select: none;
 	}
 
@@ -251,6 +252,8 @@
 		border-top-right-radius: 10px; */
 		margin-left: 10px;
 		margin-right: 10px;
+
+		transition: background-color 0.3s;
 	}
 
 	.menu-item-activated
@@ -364,11 +367,6 @@
 		background-color: #EE4C5E;
 	}
 
-	#dashboard
-	{
-
-	}
-
 	#img_comming_soon
 	{
 		width: 100%;
@@ -426,6 +424,7 @@
 	.img-badge
 	{
 		width: 100%;
+		border-radius: 10px;
 	}
 
 	.department-name-container
@@ -509,60 +508,63 @@
 
 	.MTC_container/*MTC for "Meet The Characters*/
 	{
-	position: relative;
-	width: 50%;
+		position: relative;
+		width: 50%;
+		transition: background-color 0.3s;
 	}
 
 	.MTC_image
 	{
-	display: block;
-	width: 100%;
-	height: auto;
+		display: block;
+		width: 100%;
+		height: auto;
 	}
 
 	.MTC_overlay
 	{
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	height: 100%;
-	width: 100%;
-	opacity: 0;
-	transition: .5s ease;
-	background-color: #682666;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 100%;
+		width: 100%;
+		opacity: 0;
+		transition: .5s ease;
+		background-color: #682666;
+		transition: background-color 0.3s;
 	}
 
 	.MTC_container:hover .MTC_overlay
 	{
-	opacity: 0.85;
+		opacity: 0.85;
+		transition: background-color 0.3s;
 	}
 
 	.MTC_text
 	{
-	color: white;
-	font-size: 1.3em;/*20px*/
-	position: absolute;
-	font-weight: bold;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	user-select: none;
-	text-transform: uppercase;
+		color: white;
+		font-size: 1.3em;/*20px*/
+		position: absolute;
+		font-weight: bold;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		user-select: none;
+		text-transform: uppercase;
 	}
 
 	.MTC_text_description
 	{
-	color: white;
-	font-size: 0.8em;
-	position: absolute;
-	top: 75%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	user-select: none;
+		color: white;
+		font-size: 0.8em;
+		position: absolute;
+		top: 75%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		user-select: none;
 	}
 
 	/**************************SOCIAL MEDIA BUTTONS IN INDEX.HTML********************************/
@@ -1075,6 +1077,7 @@
 	.chevron-img/*for all chevrons that are 150px high*/
 	{
 		width: 100px;
+		user-select: none;
 		-webkit-user-select: none;
 	}
 
@@ -1196,6 +1199,7 @@
 		align-content: center;
 		color: white;
 		-webkit-font-smoothing: antialiased;
+		filter: blur(0.000001px);
 		-webkit-filter: blur(0.000001px);
 	}
 
@@ -1473,12 +1477,6 @@
 		cursor: pointer;
 	}
 
-	.choices:hover
-	{
-		/* border: 2px solid #682666; */
-		/*border-color: #682666;/*c0000e*/
-	}
-
 	.choices-button-container
 	{
 		margin: 10px;
@@ -1495,6 +1493,7 @@
 		
 		text-decoration: none;/*enlever le underline -> ne va plus être nécessaire quand on va rendre le bouton un actual Button*/
 		text-align: center;
+		user-select: none;
 		-webkit-user-select: none;
 
 		border: none;
@@ -1706,15 +1705,9 @@
 		box-shadow: 0 0 10px #fdeac7;
 	}
 	
-	.card-fusionned
-	{
-
-	}
-
-
 /***************POPUPS***************/
 
-#popup-container
+	#popup-container
 	{
 		position: fixed;
 		height: 100%;
@@ -1746,11 +1739,44 @@
 	.invisible
 	{
 		display: none;
+		animation-name: dezoom;
+		animation-duration: 0.5s;
+		-webkit-animation-name: dezoom;
+		-webkit-animation-duration: 0.5s;
 	}
 
 	.visible
 	{
 		display: block;
+		animation-name: zoom;
+		animation-duration: 0.5s;
+		-webkit-animation-name: zoom;
+		-webkit-animation-duration: 0.5s;
+	}
+	
+	@keyframes zoom
+	{
+		from {transform:scale(0)} 
+		to {transform:scale(1)}
+	}
+
+	@-webkit-keyframes zoom
+	{
+		from {-webkit-transform:scale(0)} 
+		to {-webkit-transform:scale(1)}
+	}
+	
+	@keyframes dezoom
+	{
+		from {transform:scale(1)} 
+		to {transform:scale(0)}
+		display: none;
+	}
+
+	@-webkit-keyframes dezoom
+	{
+		from {-webkit-transform:scale(1)} 
+		to {-webkit-transform:scale(0)}
 	}
 	
 /***************HIGHLIGHTS***************/
@@ -1836,12 +1862,14 @@
 		min-width: 75px;
 		max-width: 300px;
 		
+		user-select: none;
 		-webkit-user-select: none;
 		display: inline-block;
 		flex: 1;
 		font-weight: 300;
 
 		border: none;
+		transition: background-color 0.3s;
 
 		/* -webkit-font-smoothing: antialiased;
 		-webkit-filter: blur(0.000001px); */

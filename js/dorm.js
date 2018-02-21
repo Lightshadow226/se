@@ -711,8 +711,8 @@ function wardrobe()
             'skin_color': user.skincolor,
         });
 
-        verifyChange(SQLname, value);
         refreshImg();
+        verifyChange(SQLname, value);
     }
 
     function verifyChange(SQLname, value)//verify that the change has been made in the DB

@@ -331,7 +331,7 @@ function getHighestAffinity()//returns the character with the highest affinity
 }
 
 //*****OBJECTIVES*****
-function findLatestObjective(obj_cont)//returns the last time there was a new objective
+function findLatestObjective(objective_container)//returns the last time there was a new objective
 {
     var x = -1;
 
@@ -345,7 +345,7 @@ function findLatestObjective(obj_cont)//returns the last time there was a new ob
 
     if(story[13][x] != "null")//if there is a new objective in choice A
     {
-        obj_cont.innerHTML = story[13][x];
+        objective_container.innerHTML = story[13][x];
     }
     else
     {
@@ -354,55 +354,106 @@ function findLatestObjective(obj_cont)//returns the last time there was a new ob
 
     if(story[14][x] != "null")//if there is a new objective in choice B
     {
-        obj_cont.innerHTML += "<br>" + story[14][x];
+        objective_container.innerHTML += "<br>" + story[14][x];
     }
 
     if(story[15][x] != "null")//if there is a new objective in choice C
     {
-        obj_cont.innerHTML += "<br>" + story[15][x];
+        objective_container.innerHTML += "<br>" + story[15][x];
     }
 
     if(x == -1)
     {
-        obj_cont.innerHTML = "You have no objectives for now.";   
+        objective_container.innerHTML = "You have no objectives for now.";   
     }
 }
 
 /* à améliorer en fonction de l'histoire parcourue (seulement s'il est possible de faire 1-2-3-4-5-12-6-7-30-15-16-17) */
+/* idéalement, on devrait regarder toutes les slides qui on été déjà visitées*/
 function refreshObjectiveContainer()
 {
-    var obj_cont = document.getElementById('objectiveContainer');
-        obj_cont.style.borderRadius = "10px";
-
-    obj_cont.innerHTML = "";
+    var objective_container = document.getElementById('objectiveContainer');
+        objective_container.style.borderRadius = "10px";
+        objective_container.style.marginBottom = "300px";
+        objective_container.innerHTML = "";
     
     if(story[6][user.storyLocation] == -2)
     {
         if(story[13][user.storyLocation] != "null")//if there is a new objective in choice A
         {
-            obj_cont.innerHTML = story[13][user.storyLocation];
+            objective_container.innerHTML = story[13][user.storyLocation];
         }
         else
         {
-            findLatestObjective(obj_cont);//if there's nothing in choice A, then there is no new objective
+            findLatestObjective(objective_container);//if there's nothing in choice A, then there is no new objective
         }
     
         if(story[14][user.storyLocation] != "null")//if there is a new objective in choice B
         {
-            obj_cont.innerHTML += "<br>" + story[14][user.storyLocation];
+            objective_container.innerHTML += "<br>" + story[14][user.storyLocation];
         }
     
         if(story[15][user.storyLocation] != "null")//if there is a new objective in choice C
         {
-            obj_cont.innerHTML += "<br>" + story[15][user.storyLocation];
+            objective_container.innerHTML += "<br>" + story[15][user.storyLocation];
         }
     }
     else
     {
-        findLatestObjective(obj_cont);
+        findLatestObjective(objective_container);
     }
 
     refreshProgressBar();
+
+    //We need to show all characters as a round image
+    objective_container.innerHTML += "<br>";
+    
+    var round_img_path = "images/game_images/sprites/round_portraits/";
+    
+    var char_container = document.createElement('div');//contains all 10 portraits
+        char_container.id = "char_container";
+
+    objective_container.appendChild(char_container);
+    
+    for(var i = 0; i < charList.length; i++)//on affiche tous les characters, et on mets un Event Listener pour quand on hover dessus
+    {
+        var character = document.createElement('div');
+            character.className = "char-container";
+
+        var char = getPersonnageFromName(charList[i]);
+        var char_info_container = document.createElement('div');
+            char_info_container.id = "char" + charList[i];
+            char_info_container.className = "char_info_container char_info_container_invisible";
+            char_info_container.innerHTML = "<b>My affinity with " + char.name + ": </b>" + char.affinity;
+            char_info_container.innerHTML += "<br><br><b> Likes: </b>" + char.likes;
+            char_info_container.innerHTML += "<br><br><b> Dislikes: </b>" + char.dislikes;
+
+        var img = document.createElement('img');
+            img.id = charList[i];
+            img.className = "game_char_portraits";
+            img.src = round_img_path + charList[i] + ".jpg";
+
+            char_container.appendChild(character)
+            character.appendChild(img);
+            character.appendChild(char_info_container);
+
+        img.onmouseover = function (){document.getElementById("char" + this.id).className = "char_info_container"};
+        img.onmouseout = function(){document.getElementById("char" + this.id).className = "char_info_container char_info_container_invisible"};
+
+        /*
+        img.addEventListener("mouseout",
+        function (e)
+        {
+            var char = getPersonnageFromName(x);
+            
+            // alert(char.name + "'s Affinity: " + char.affinity);
+
+            char_info_container.innerHTML = "";
+
+            char_info_container.className = "char_info_container_invisible";
+        },
+        true);*/
+    }
 
     /*  pour pouvoir afficher le character qui est à l'écran
         var char_1 = getPersonnage(story[2][storyLocation]);
@@ -414,83 +465,15 @@ function refreshObjectiveContainer()
         }
         else
         {
-            obj_cont.innerHTML += "<br>Character on page: " + char_1.name;
+            objective_container.innerHTML += "<br>Character on page: " + char_1.name;
         }
     */
 
-    //We need to show all characters as a round image
-    obj_cont.innerHTML += "<br>";
-    
-    var round_img_path = "images/game_images/sprites/round_portraits/";
-    
-    var char_container = document.createElement('div');
-    
-        char_container.id = "char_container";
-
-    var char_info_container = document.createElement('div');
-
-        char_info_container.id = "char_info_container";
-        char_info_container.className = "char_info_container_invisible";
-    
-        // char_info_container.id = "char_container";
-    
-    obj_cont.appendChild(char_container);
-    obj_cont.appendChild(char_info_container);
-    
-    for(var i = 0; i < charList.length; i++)//on affiche tous les characters, et on mets un Event Listener pour quand on hover dessus
-    {
-        var img = document.createElement('img');
-        
-        img.id = charList[i];
-        img.className = "game_char_portraits";
-        img.src = round_img_path + charList[i] + ".jpg";
-
-        char_container.appendChild(img);
-
-        // alert(tadashi.affinity);
-        // il y a un bug avec l'affinité de Tadashi
-
-        img.addEventListener("mouseover",
-        function (e)
-        {
-            var x = this.id;
-            var char = getPersonnageFromName(x);
-            
-            charName = (char.name + "").toLowerCase();
-
-            // alert(charName);
-            // alert(char.name + "'s Affinity: " + char.affinity);
-
-            char_info_container.innerHTML = "<b>My affinity with " + char.name + ": </b>" + char.affinity;
-            char_info_container.innerHTML += "<br><br><b> Likes: </b>" + char.likes;
-            char_info_container.innerHTML += "<br><br><b> Dislikes: </b>" + char.dislikes;
-            // char_info_container.style.left = document.getElementById(charName).style.left + "";
-
-            // alert(document.getElementById(charName).top);
-
-            char_info_container.className = "";
-        },
-        true);
-        /*
-        img.addEventListener("mouseout",
-        function (e)
-        {
-            var x = this.id;
-            var char = getPersonnageFromName(x);
-            
-            // alert(char.name + "'s Affinity: " + char.affinity);
-
-            char_info_container.innerHTML = "";
-
-            char_info_container.className = "char_info_container_invisible";
-        },
-        true);*/
-    }
 }
 
 function refreshProgressBar()
 {
-    var obj_cont = document.getElementById('objectiveContainer');
+    var objective_container = document.getElementById('objectiveContainer');
 
     var logo = document.createElement('img');
 
@@ -508,7 +491,7 @@ function refreshProgressBar()
             progressBar.id = "progress_bar";
             progressBar.style.color = "white";
 
-    obj_cont.appendChild(progressBarContainer);
+    objective_container.appendChild(progressBarContainer);
         progressBarContainer.appendChild(logo);
         progressBarContainer.appendChild(progressBar);
     

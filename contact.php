@@ -52,5 +52,15 @@
 
 </body>
 
+<style>
+    footer
+    {
+        left: 50%;
+        bottom: 0;
+        position: fixed;
+        transform: translateX(-50%);
+    }
+</style>
+
 </html>
 
