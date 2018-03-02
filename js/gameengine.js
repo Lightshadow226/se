@@ -33,19 +33,18 @@ var Container = document.getElementById("Container");
 
 $(function initializeInterface()//CREATES the entire interface once the document is $(document).READY()
 {
-    Container.innerHTML = "";
+    pullVariablesFromDB();
 
     var gameContainer = document.createElement('div');
         gameContainer.id = "gameContainer";
             
-        Container.appendChild(gameContainer);
-
     var objectiveContainer = document.createElement('div');
         objectiveContainer.id = "objectiveContainer";
-
         objectiveContainer.innerHTML = "You have no objectives for now.";
-
-        Container.appendChild(objectiveContainer);
+        
+    Container.innerHTML = "";
+    Container.appendChild(gameContainer);
+    Container.appendChild(objectiveContainer);
 
     var testContainer = document.createElement('div');
         testContainer.id = "testContainer";
@@ -61,7 +60,8 @@ $(function initializeInterface()//CREATES the entire interface once the document
             testContainer.appendChild(testContainer2);
 
     user.last_chapter_played = current_Chapter;
-    pushVariablesToDB();//make sure the database reflects the fact that the current chapter is the one currently being played
+    // user.storyLocation = user.storyLocation //TODO: régler le problème de la priorité quand on LOAD vs SAVE
+    // pushVariablesToDB();//make sure the database reflects the fact that the current chapter is the one currently being played
     refreshInterface();//Start the first instance of the game
 })
 
@@ -276,8 +276,6 @@ function refreshInterface()//REFRESHES the interface
             {
                 background.appendChild(textContainer);
             }
-
-            pushVariablesToDB();
 
         // ----- Special Option: Specific state of this slide -----
 
@@ -682,7 +680,7 @@ function refreshInterface()//REFRESHES the interface
                 line.addEventListener( "click",
                                         function (e)
                                         {
-                                            choice = index-1;//form_names[index-1];
+                                            choice = index - 1;//form_names[index-1];
                                             
                                             for(var id_index = 0; id_index < 7; id_index++)
                                             {
@@ -701,6 +699,56 @@ function refreshInterface()//REFRESHES the interface
             {
                 createFormLine(index, form_container);
             }
+        }
+        else if(story[special_option][user.storyLocation] == -31)// -31 === Form to choose gender, skin color, hairstyle, etc.
+        {
+            var form_container = document.createElement('div');
+                form_container.className = "form_container flex-container-vertical";
+                form_container.style.zIndex= "10";
+
+            var formHeader = document.createElement('h6');
+                formHeader.innerHTML = "Name Your Scholar";
+
+            var formSubHeader = document.createElement('h5');
+                formSubHeader.innerHTML = "<br>Give a name to your Scholar! CHOOSE WISELY, you will <em>not</em> be able to change it later.";
+
+            var name = '<div class="flex-panel"></div>\
+                <div class = "flex-container">\
+                    <div class = "flex-panel"></div>\
+                    <p class = "flex-panel login-signup-labels">Username:</p>\
+                    <input id="new_name" class = "flex-panel2 login-signup-textfields" type="text" placeholder = "Name" name="Name"></input>\
+                    <div class = "flex-panel"></div>\
+                </div>\
+                <div class="flex-panel"></div>\
+            ';
+
+            var formSubHeader2 = document.createElement('h5');
+                formSubHeader2.innerHTML = "How will the other Characters refer to your scholar? <br> Pronouns can be changed later.";
+            
+            var gender_container = document.createElement('div');
+                gender_container.className = "flex-panel";
+                var hehim = document.createElement('div');
+                    hehim.className = "button pink_button";
+                    hehim.style.margin = "10px";
+                    hehim.innerHTML = "He/Him";
+                var sheher = document.createElement('div');
+                    sheher.className = "button pink_button";    
+                    sheher.style.margin = "10px";
+                    sheher.innerHTML = "She/Her";
+                var theythem = document.createElement('div');
+                    theythem.className = "button pink_button";
+                    theythem.style.margin = "10px";
+                    theythem.innerHTML = "They/Them";
+
+            background.appendChild(form_container);
+                form_container.appendChild(formHeader);
+                form_container.appendChild(formSubHeader);
+                form_container.innerHTML += name;
+                form_container.appendChild(formSubHeader2);
+                form_container.appendChild(gender_container);
+                    gender_container.appendChild(hehim);
+                    gender_container.appendChild(sheher);
+                    gender_container.appendChild(theythem);
         }
         else if(story[special_option][user.storyLocation] == -4)// -4 === Choice of romance or friendship
         {
@@ -896,7 +944,7 @@ function refreshInterface()//REFRESHES the interface
     }
 
     user.last_chapter_played = current_Chapter;
-    pushVariablesToDB();
+    // pushVariablesToDB();
 }
 
 //This function is to affect what happens when we click on the text container depending on the link
@@ -1053,7 +1101,7 @@ function browseLink(link, element)//link is the link of the story (story[special
             user.physicalLocation = element.id;//element.id est le physical location où on s'en va
             user.physicalLocationInt = getLocationIndex(user.physicalLocation);
             // alert(user.physicalLocationInt);
-            pushVariablesToDB();
+            // pushVariablesToDB();
         }
         
         refreshInterface();
@@ -1069,6 +1117,20 @@ function browseLink(link, element)//link is the link of the story (story[special
             // alert('Your form was successfully sumbitted!');
             // alert(choice);
             user.department = choice;
+            user.storyLocation++;//we continue the story once we are done
+        }
+    }
+    else if(link == -31)//Acts like a submit button for the form
+    {
+        var value = document.getElementById('new_name').value;
+
+        if(value == "")
+        {
+            alert("Please choose a username!");
+        }
+        else
+        {
+            user.username = document.getElementById('new_name').value;
             user.storyLocation++;//we continue the story once we are done
         }
     }
@@ -1131,6 +1193,6 @@ function browseLink(link, element)//link is the link of the story (story[special
     {
         user.storyLocation = story[special_option][user.storyLocation];//on fait que la location devienne le numéro du link
     }
-}
 
-pullVariablesFromDB();
+    pushVariablesToDB();
+}

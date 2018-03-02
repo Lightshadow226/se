@@ -644,99 +644,117 @@ function pullVariablesFromDB()
     //we're going to load the data from the database, and put it in the div with the ID = "#DB_handle" -> thus why we use $('#DB_handle')
 
     $('#DB_handle').load('dbtransfers/get_variables.php', function()//pull variables from the DB
-    {
-        /********************
-        USERINFO table
-        *********************/
-        user.username = document.getElementById("db_handle_username").innerHTML;
-        user.energy = document.getElementById("db_handle_energy").innerHTML;
-        user.money = document.getElementById("db_handle_money").innerHTML;
+    /*$.ajax({
+        type: "GET",
+        url: 'dbtransfers/get_variables.php',
+        success: function(JSONdata)//pull variables from the DB*/
+        {
+            // document.getElementById('DB_handle').innerHTML = JSONdata;
+            // alert(JSONdata)
 
-        /********************
-        SCHOLARINFO table
-        *********************/
-        user.department = document.getElementById("db_handle_department").value;
-        user.sex = parseInt(document.getElementById("db_handle_sex").value);
-        user.gender = parseInt(document.getElementById("db_handle_gender").value);
-        user.haircolor = parseInt(document.getElementById("db_handle_haircolor").value);
-        user.hairstyle = parseInt(document.getElementById("db_handle_hairstyle").value);
-        user.skincolor = parseInt(document.getElementById("db_handle_skincolor").value);
-        user.eyecolor = parseInt(document.getElementById("db_handle_eyecolor").value);
-        user.wigID = parseInt(document.getElementById("db_handle_wigID").value);
+            // var data_array = $.parseJSON(JSONdata);
+            /********************
+            USERINFO table
+            *********************/
+            user.username = document.getElementById("db_handle_username").innerHTML;
+            user.energy = document.getElementById("db_handle_energy").innerHTML;
+            user.money = document.getElementById("db_handle_money").innerHTML;
 
-        /********************
-        STORY table
-        *********************/
-        user.storyLocation = document.getElementById("db_handle_story_location").value;//we should use an input and .value
-        user.last_chapter_played = document.getElementById("db_handle_last_chapter_played").value;//we should use an input and .value
-        user.physicalLocationInt = parseInt(document.getElementById("db_handle_physicallocationint").value);
+            /********************
+            SCHOLARINFO table
+            *********************/
+            user.department = document.getElementById("db_handle_department").value;
+            user.sex = parseInt(document.getElementById("db_handle_sex").value);
+            user.gender = parseInt(document.getElementById("db_handle_gender").value);
+            user.haircolor = parseInt(document.getElementById("db_handle_haircolor").value);
+            user.hairstyle = parseInt(document.getElementById("db_handle_hairstyle").value);
+            user.skincolor = parseInt(document.getElementById("db_handle_skincolor").value);
+            user.eyecolor = parseInt(document.getElementById("db_handle_eyecolor").value);
+            user.wigID = parseInt(document.getElementById("db_handle_wigID").value);
 
-        /********************
-        AFFINITY table
-        *********************/
-        karolina.affinity = document.getElementById("db_handle_a1").value;
-        ellie.affinity = document.getElementById("db_handle_a2").value;
-        neha.affinity = document.getElementById("db_handle_a3").value;
-        raquel.affinity = document.getElementById("db_handle_a4").value;
-        claire.affinity = document.getElementById("db_handle_a5").value;
-        alistair.affinity = document.getElementById("db_handle_a6").value;
-        tadashi.affinity = document.getElementById("db_handle_a7").value;
-        tegan.affinity = document.getElementById("db_handle_a8").value;
-        tyler.affinity = document.getElementById("db_handle_a9").value;
-        axel.affinity = document.getElementById("db_handle_a10").value;
-        lady_arlington.affinity = document.getElementById("db_handle_a11").value;
-        coach_davis.affinity = document.getElementById("db_handle_a12").value;
-        serena.affinity = document.getElementById("db_handle_a13").value;
-        cecile.affinity = document.getElementById("db_handle_a14").value;
-        teacher_chapter_2.affinity = document.getElementById("db_handle_a15").value;
-    });
+            /********************
+            STORY table
+            *********************/
+            user.storyLocation = document.getElementById("db_handle_story_location").value;//we should use an input and .value
+            user.last_chapter_played = document.getElementById("db_handle_last_chapter_played").value;//we should use an input and .value
+            user.physicalLocationInt = parseInt(document.getElementById("db_handle_physicallocationint").value);
+            
+            // user.storyLocation = JSONdata.getElementById("db_handle_story_location").value;//we should use an input and .value
+            // user.storyLocation = data_array['username'];
+            // alert("pull: " + user.storyLocation);
+
+            /********************
+            AFFINITY table
+            *********************/
+            karolina.affinity = document.getElementById("db_handle_a1").value;
+            ellie.affinity = document.getElementById("db_handle_a2").value;
+            neha.affinity = document.getElementById("db_handle_a3").value;
+            raquel.affinity = document.getElementById("db_handle_a4").value;
+            claire.affinity = document.getElementById("db_handle_a5").value;
+            alistair.affinity = document.getElementById("db_handle_a6").value;
+            tadashi.affinity = document.getElementById("db_handle_a7").value;
+            tegan.affinity = document.getElementById("db_handle_a8").value;
+            tyler.affinity = document.getElementById("db_handle_a9").value;
+            axel.affinity = document.getElementById("db_handle_a10").value;
+            lady_arlington.affinity = document.getElementById("db_handle_a11").value;
+            coach_davis.affinity = document.getElementById("db_handle_a12").value;
+            serena.affinity = document.getElementById("db_handle_a13").value;
+            cecile.affinity = document.getElementById("db_handle_a14").value;
+            teacher_chapter_2.affinity = document.getElementById("db_handle_a15").value;
+
+            try{refreshInterface();}catch(e){};
+        });
 }
 
 function pushVariablesToDB()
 {
     // alert("tadashi: " + tadashi.affinity);
     // alert("alistair: " + alistair.affinity);
+    alert("push: " + user.username);
 
-    $.post('dbtransfers/push_variables.php',
+    $(document).ready(function()
     {
-        //*********************************************
-        //USERINFO table
-        //*********************************************
-        // 'username': user.username,
-        'energy': user.energy,
-        'money': user.money,
+        $.post('dbtransfers/push_variables.php',
+        {
+            //*********************************************
+            //USERINFO table
+            //*********************************************
+            'username': user.username,
+            'energy': user.energy,
+            'money': user.money,
 
-        //*********************************************
-        //SCHOLARINFO table
-        //*********************************************
-        'department': user.department,
-        //on n'enregistre pas les autres variables pour l'instant
+            //*********************************************
+            //SCHOLARINFO table
+            //*********************************************
+            'department': user.department,
+            //on n'enregistre pas les autres variables pour l'instant
 
-        //*********************************************
-        //STORY table
-        //*********************************************
-        'storylocation': user.storyLocation,
-        'lastchapterplayed': user.last_chapter_played,
-        'physicallocationint': user.physicalLocationInt,
+            //*********************************************
+            //STORY table
+            //*********************************************
+            'storylocation': user.storyLocation,
+            'lastchapterplayed': user.last_chapter_played,
+            'physicallocationint': user.physicalLocationInt,
 
-        //*********************************************
-        //AFFINITY table
-        //*********************************************
-        'karolina_affinity': karolina.affinity,
-        'ellie_affinity': ellie.affinity,
-        'neha_affinity': neha.affinity,
-        'raquel_affinity': raquel.affinity,
-        'claire_affinity': claire.affinity,
-        'alistair_affinity': alistair.affinity,
-        'tadashi_affinity': tadashi.affinity,
-        'tegan_affinity': tegan.affinity,
-        'tyler_affinity': tyler.affinity,
-        'axel_affinity': axel.affinity,
-        'lady_arlington_affinity': lady_arlington.affinity,
-        'coach_davis_affinity': coach_davis.affinity,
-        'serena_affinity': serena.affinity,
-        'cecile_affinity': cecile.affinity,
-        'teacher_chapter_2_affinity': teacher_chapter_2.affinity,
+            //*********************************************
+            //AFFINITY table
+            //*********************************************
+            'karolina_affinity': karolina.affinity,
+            'ellie_affinity': ellie.affinity,
+            'neha_affinity': neha.affinity,
+            'raquel_affinity': raquel.affinity,
+            'claire_affinity': claire.affinity,
+            'alistair_affinity': alistair.affinity,
+            'tadashi_affinity': tadashi.affinity,
+            'tegan_affinity': tegan.affinity,
+            'tyler_affinity': tyler.affinity,
+            'axel_affinity': axel.affinity,
+            'lady_arlington_affinity': lady_arlington.affinity,
+            'coach_davis_affinity': coach_davis.affinity,
+            'serena_affinity': serena.affinity,
+            'cecile_affinity': cecile.affinity,
+            'teacher_chapter_2_affinity': teacher_chapter_2.affinity,
+        })
     });
 }
 

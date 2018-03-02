@@ -85,6 +85,45 @@ while($rs = $statement->fetch())//"rs" = "row statements"
     $a15 = $rs['teacherchapter2'];
 }
 
+/*TEST with JSON_encode
+    <!-- USERINFO table -->
+    echo json_encode($username);
+    echo json_encode($energy);
+    echo json_encode($money);
+    echo json_encode($nbreplays);
+
+    <!-- SCHOLARINFO table -->
+    echo json_encode($department);
+    echo json_encode($sex);
+    echo json_encode($gender);
+    echo json_encode($haircolor);
+    echo json_encode($hairstyle);
+    echo json_encode($skincolor);
+    echo json_encode($eyecolor);
+    echo json_encode($wigID);
+
+    <!-- STORY table -->
+    echo json_encode($story_location);
+    echo json_encode($last_chapter);
+    echo json_encode($physicallocationint);
+    
+    <!-- AFFINITY table -->
+    echo json_encode($a1);
+    echo json_encode($a2);
+    echo json_encode($a3);
+    echo json_encode($a4);
+    echo json_encode($a5);
+    echo json_encode($a6);
+    echo json_encode($a7);
+    echo json_encode($a8);
+    echo json_encode($a9);
+    echo json_encode($a10);
+    echo json_encode($a11);
+    echo json_encode($a12);
+    echo json_encode($a13);
+    echo json_encode($a14);
+    echo json_encode($a15);
+*/
 ?>
 
 <!-- NOW WE NEED TO OUTPUT ALL OF THIS TO HTML TO PASS IT TO THE JS CODE -->

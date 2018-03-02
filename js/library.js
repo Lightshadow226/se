@@ -433,7 +433,7 @@ function refreshObjectiveContainer()
             img.className = "game_char_portraits";
             img.src = round_img_path + charList[i] + ".jpg";
 
-            char_container.appendChild(character)
+            char_container.appendChild(character);
             character.appendChild(img);
             character.appendChild(char_info_container);
 

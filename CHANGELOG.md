@@ -1,5 +1,9 @@
 #CHANGELOG
 
+Version 1.3.29 (Ch. 0 - Form 2)
+- *TOOLTIPS*            [.css]              fixed the tooltips (there were 2 classes with the same name that overlapped)
+- *CODE - NEW FORM*     [gameengine.js]     commencé le Ch.0 - Form 2 (il reste à terminer les pronoms)
+
 Version 1.3.28 (Character Tooltips in Objectives Container)
 - *TOOLTIPS*            [library.js]        added centered tooltips for the characters
 - *CSS*                 [.css]              optimized css and added some classes

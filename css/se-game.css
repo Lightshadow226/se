@@ -73,7 +73,7 @@
 
     .char-container/*will contain the image and the tooltip*/
     {
-        flex: 1;
+        /* flex: 1; */
         width: 100px;
         height: 100px;
         position: relative;
@@ -96,7 +96,7 @@
         cursor: pointer;
     }
 
-    .game_char_portraits
+    .char_info_container/*image*/
     {
         position: absolute;
         width: 300px;
@@ -261,7 +261,7 @@
         display: none;/*not there (it doesn't occupy any space)*/
     }
 
-/*CHOOSE YOUR DEPARMENT FORM*/
+/*CHAPTER 0 - CHOOSE YOUR DEPARMENT FORM*/
 
     .form_container
     {

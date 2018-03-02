@@ -2,7 +2,6 @@
 
 `TODO: Next`
 - **CHAPTER INPUT**       [chapter1.js]                                   la chapitre 1 est terminé jusqu'à la slide 129, donc il va falloir valider le reste + rajouter les émotions
-- **CODE - NEW FORM**     [gameengine.js]                                 FORM 2: il va falloir faire birthday, préférences, gender, etc.
 - **PPT**                 [Chapter2Slides Part2.ppt]                      slides à terminer chapitre 2 (le ppt et le code)]
 - **TODO**                [chapter 1.js]                                  il reste à implémenter les illustrations et le form pour sélectionner notre uniforme
 
@@ -25,6 +24,7 @@
 - **INDEX**               [index.php]                                     mettre le CSS dans un autre fichier
 - **GAME ENGINE**         [gameengine.js]                                 redesign the game engine for efficiency (put it on paper first)
 - **IMPROVEMENTS**        [imageGenerator.php]                            there are still improvements to be made in this file
+- **IMPROVEMENTS**        [gameengine.js, variables.js]                   remove the variable "choice" (for the Ch.0 Form)
 
 `TODO: LOW Importance`
 - **DEBUG**               [login.php, signup.php, resetpassword.php]      Améliorer les messages d'erreurs pour login.php, signup.php, resetpassword.php

@@ -60,25 +60,6 @@ include_once '../resources/utilities.php';
         echo $ex;
     }
 
-
-    /*
-    
-    try
-    {
-
-
-        $status = "SQL Sent!";
-    }
-    catch (PDOException $ex)
-    {
-        echo $ex;
-    }
-    
-    */
-
-
-}
-
     //*********************************************
     //SCHOLARINFO table
     //*********************************************

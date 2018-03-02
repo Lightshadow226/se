@@ -45,7 +45,7 @@ function Chapter0()
     }
 
     //story[0] === Story Text
-    story[0] = [
+story[0] = [
     "(The trip to Arlington was long, but I’m finally here!)",//0 
     "(I’ve worked so hard to get here, but I’m ready to start fresh at this school.)",
     "(I watched the shuttle that carried me here from the airport drive away as I sat my suitcase down on the ground.)",
@@ -77,7 +77,7 @@ function Chapter0()
     "Woah, it’s really nice. (This dorm room looks more expensive than my whole apartment back home...)",
     "(I may as well write out my life story at this rate.)",
     "Of course, I understand.",//30 
-    "************Not actually a form but rather a page where the player can choose the gender, skin color, hairstyle, etc. of the Scholar************",
+    "Click here to submit",//31 Choose your name Form
     "(That was the weirdest medical form I have ever filled out...)",
     "(Next)",
     "Alright!",
@@ -151,7 +151,7 @@ function Chapter0()
     "null",
     "Hi there!",
     "null",//15 
-    "Hehe, sorry. I didn’t mean to startle you. You must be " + user.username + ".",
+    "Hehe, sorry. I didn’t mean to startle you. You must be our new scholar.",
     "My name is " + CharaX_username + " and I was assigned by the principal to help you with all the formalities here at Arlington.",
     "It’s nice to meet you! Now, follow me please. Before I show you where your dorm and classrooms are, you have some paperwork to fill.",
     "null",
@@ -166,7 +166,7 @@ function Chapter0()
     "This is where you’re going to be staying until the end of high school!",
     "The last thing I’m going to need you to do is to fill out this medical form. This is an important part of your file.",
     "null",//30 
-    "null",
+    "null",//31 Choose your name Form
     "Thanks! All the paperwork is now done!",
     "Now that you know where your dorm is, try exploring the school a little.",
     "I’ll be waiting for you in the hallway.",
@@ -255,7 +255,7 @@ function Chapter0()
     personnages.charaX[1],
     personnages.charaX[1],
     personnages.charaX[1],//30 
-    "null",
+    "null",//31 Choose your name Form
     personnages.charaX[1],
     personnages.charaX[0],
     personnages.charaX[0],
@@ -344,7 +344,7 @@ function Chapter0()
     "null",
     "null",
     "null",//30 
-    "null",
+    "null",//31 Choose your name Form
     "null",
     "null",
     "null",
@@ -433,7 +433,7 @@ function Chapter0()
     "null",
     "null",
     "null",//30 
-    "null",
+    "null",//31 Choose your name Form
     "null",
     "null",
     "null",
@@ -522,7 +522,7 @@ function Chapter0()
     locations.dorm,
     locations.dorm,
     locations.dorm,//30 
-    locations.dorm,
+    locations.dorm,//31 Choose your name Form
     locations.dorm,
     locations.dorm,
     locations.dorm,
@@ -611,7 +611,7 @@ function Chapter0()
     -1,
     -1,
     -1,//30 
-    -1,
+    -31,//31 Choose your name Form
     -1,
     -1,
     -1,
@@ -636,13 +636,13 @@ function Chapter0()
     -1,
     -4,
     -5,//55 
-    66,
-    66,
-    66,
+    64,
+    64,
+    64,
     -5,
-    66,//60 
-    66,
-    66,
+    64,//60 
+    64,
+    64,
     -2,
     -6,//64 ghost slide
     -6,//65 ghost slide
@@ -650,9 +650,9 @@ function Chapter0()
     -6,//67 ghost slide
     -6,//68 ghost slide
     -6,//69 ghost slide
-    76,//70 
-    76,
-    76,
+    74,//70 
+    74,
+    74,
     -1,
     -1,
     -1,//75 
@@ -700,7 +700,7 @@ function Chapter0()
     0,
     0,
     0,//30 
-    0,
+    0,//31 Choose your name Form
     0,
     0,
     0,
@@ -789,7 +789,7 @@ function Chapter0()
     -1,
     -1,
     -1,//30 
-    -1,
+    -1,//31 Choose your name Form
     -1,
     -1,
     -1,
@@ -878,7 +878,7 @@ function Chapter0()
     -1,
     -1,
     -1,//30 
-    -1,
+    -1,//31 Choose your name Form
     -1,
     -1,
     -1,
@@ -967,7 +967,7 @@ function Chapter0()
     -1,
     -1,
     -1,//30 
-    -1,
+    -1,//31 Choose your name Form
     -1,
     -1,
     -1,
@@ -1056,7 +1056,7 @@ function Chapter0()
     -1,
     -1,
     -1,//30 
-    -1,
+    -1,//31 Choose your name Form
     -1,
     -1,
     -1,
@@ -1145,7 +1145,7 @@ function Chapter0()
     -1,
     -1,
     -1,//30 
-    -1,
+    -1,//31 Choose your name Form
     -1,
     -1,
     -1,
@@ -1234,7 +1234,7 @@ function Chapter0()
     "null",
     "null",
     "null",//30 
-    "null",
+    "null",//31 Choose your name Form
     "null",
     "null",
     "null",
@@ -1323,7 +1323,7 @@ function Chapter0()
     "null",
     "null",
     "null",//30 
-    "null",
+    "null",//31 Choose your name Form
     "null",
     "null",
     "null",
@@ -1412,7 +1412,7 @@ function Chapter0()
     "null",
     "null",
     "null",//30 
-    "null",
+    "null",//31 Choose your name Form
     "null",
     "null",
     "null",
@@ -1501,7 +1501,7 @@ function Chapter0()
     0,
     0,
     0,//30 
-    0,
+    0,//31 Choose your name Form
     0,
     0,
     0,
@@ -1590,7 +1590,7 @@ function Chapter0()
     false,
     false,
     false,//30 
-    false,
+    false,//31 Choose your name Form
     false,
     false,
     false,
@@ -1679,7 +1679,7 @@ function Chapter0()
     -1,
     -1,
     -1,//30 
-    -1,
+    -1,//31 Choose your name Form
     -1,
     -1,
     -1,
@@ -1712,12 +1712,12 @@ function Chapter0()
     -1,
     -1,
     -1,
-    59,//64 ghost slide
-    60,//65 ghost slide
-    61,//66 ghost slide
-    63,//67 ghost slide
-    64,//68 ghost slide
-    65,//69 ghost slide
+    56,//64 ghost slide
+    57,//65 ghost slide
+    58,//66 ghost slide
+    60,//67 ghost slide
+    61,//68 ghost slide
+    62,//69 ghost slide
     -1,//70 
     -1,
     -1,
@@ -1768,7 +1768,7 @@ function Chapter0()
     -1,
     -1,
     -1,//30 
-    -1,
+    -1,//31 Choose your name Form
     -1,
     -1,
     -1,
@@ -1801,12 +1801,12 @@ function Chapter0()
     -1,
     -1,
     -1,
-    73,//64 ghost slide
-    74,//65 ghost slide
-    75,//66 ghost slide
-    73,//67 ghost slide
-    74,//68 ghost slide
-    75,//69 ghost slide
+    70,//64 ghost slide
+    71,//65 ghost slide
+    72,//66 ghost slide
+    70,//67 ghost slide
+    71,//68 ghost slide
+    72,//69 ghost slide
     -1,//70 
     -1,
     -1,
@@ -1824,8 +1824,7 @@ function Chapter0()
     -1,
     -1,//85 
     ];
-    
-    
+        
     
 }
 

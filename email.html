@@ -1,0 +1,38 @@
+
+
+<div id="container"></div>
+
+<script>
+
+var original= "Tjsaugbd    efsaslgl adalvb a;Qf BeHfGG e   mTGTmGGGeGGG    lG  a   pDFTlDGDuHDJsK41 874m+65e416r463v120e351i321l035l4  e3.1u416uFDSsVBHeJLA    aXK uDL     mSWXoHF n;LKdJNfedg  afsEdgjThgv    J   Esbz hjvThjf'dfsAdshDjfsOad R dcEghk.";
+var container = document.getElementById("container");
+
+var start = 0;
+
+// var bond = "john petrucci".length;
+// var bond = "petrucci".length;
+// var bond = "guitar".length;
+// var bond = "guitare".length;
+// var bond = "musicman".length;
+// var bond = "june".length;
+// var bond = "dodo".length;
+// var bond = 3;
+
+
+for(start = 0; start < 40; start ++)//on essaie tous les débuts
+{
+    for(bond = 1; bond < 40; bond ++)//on essaie tous les bons
+    {
+        // alert("Start: " + start + " - Bond: " + bond);
+        var newWord = "";
+
+        for(var i = start; i<original.length; i+=bond)
+        {
+            newWord+= original[i];
+        }
+
+        container.innerHTML += "Start: " + start + " - Bond: " + bond + " - " + newWord + "<br>";
+    }
+}
+
+</script>
