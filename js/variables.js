@@ -710,7 +710,7 @@ function pushVariablesToDB()
 {
     // alert("tadashi: " + tadashi.affinity);
     // alert("alistair: " + alistair.affinity);
-    alert("push: " + user.username);
+    // alert("push: " + user.username);
 
     $(document).ready(function()
     {

@@ -282,6 +282,7 @@ function refreshInterface()//REFRESHES the interface
         if(story[special_option][user.storyLocation] == -2)// -2 === unlimited navigation is enabled
         {
             // user.physicalLocation = story[5][user.storyLocation];
+            // alert(user.physicalLocationInt);
             background_img.src = getLocationString(user.physicalLocationInt);
             user.physicalLocation = getLocationString(user.physicalLocationInt);
             // alert(getLocationString(user.physicalLocationInt));
@@ -1015,7 +1016,8 @@ function browseLink(link, element)//link is the link of the story (story[special
                 
                 // story[5][storyLocation] = element.id;
                 user.storyLocation++;//we continue the story once we are done
-
+                // alert(story[choiceA_text][user.storyLocation]);
+                // document.getElementById('objectiveContainer').innerHTML = story[choiceA_text][user.storyLocation];
                 //Mettre un message pour dire bravo "Objective complete!"
             }
         }
@@ -1118,6 +1120,7 @@ function browseLink(link, element)//link is the link of the story (story[special
             // alert(choice);
             user.department = choice;
             user.storyLocation++;//we continue the story once we are done
+            pushVariablesToDB();
         }
     }
     else if(link == -31)//Acts like a submit button for the form
@@ -1132,6 +1135,7 @@ function browseLink(link, element)//link is the link of the story (story[special
         {
             user.username = document.getElementById('new_name').value;
             user.storyLocation++;//we continue the story once we are done
+            pushVariablesToDB();
         }
     }
     else if(link == -4)//friendship/romance buttons are enabled

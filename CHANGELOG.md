@@ -1,5 +1,9 @@
 #CHANGELOG
 
+Version 1.3.30 (Ch. 0 - Completed V1)
+- *OBJECTIVES*          [library.js]        implemented the "Objective Complete" functionality
+- *CHAPTER 0*           [chapter0.js/xlsx]  chapter 0 is updated with the new template (pretty much done)
+
 Version 1.3.29 (Ch. 0 - Form 2)
 - *TOOLTIPS*            [.css]              fixed the tooltips (there were 2 classes with the same name that overlapped)
 - *CODE - NEW FORM*     [gameengine.js]     commencé le Ch.0 - Form 2 (il reste à terminer les pronoms)

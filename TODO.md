@@ -4,6 +4,8 @@
 - **CHAPTER INPUT**       [chapter1.js]                                   la chapitre 1 est terminé jusqu'à la slide 129, donc il va falloir valider le reste + rajouter les émotions
 - **PPT**                 [Chapter2Slides Part2.ppt]                      slides à terminer chapitre 2 (le ppt et le code)]
 - **TODO**                [chapter 1.js]                                  il reste à implémenter les illustrations et le form pour sélectionner notre uniforme
+- **DEBUG**               [gameengine.js]                                   empêcher le infinity meter d'augmenter si on a déjà visité la slide (il faut faire isVisited)
+https://www.w3schools.com/css/tryit.asp?filename=trycss3_transition1
 
 
 `TODO: in Order`

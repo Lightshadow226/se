@@ -343,23 +343,31 @@ function findLatestObjective(objective_container)//returns the last time there w
         }
     }
 
-    if(story[13][x] != "null")//if there is a new objective in choice A
+    if(story[choiceA_text][x + 1].includes("Complete"))//if there is something after
     {
-        objective_container.innerHTML = story[13][x];
+        // alert(story[choiceA_text][x + 1]);
+        objective_container.innerHTML += story[choiceA_text][x + 1];
     }
-    else
+    else//if the objective i
     {
-        x = -1;
-    }
+        if(story[13][x] != "null")//if there is a new objective in choice A
+        {
+            objective_container.innerHTML = story[13][x];
+        }
+        else
+        {
+            x = -1;
+        }
 
-    if(story[14][x] != "null")//if there is a new objective in choice B
-    {
-        objective_container.innerHTML += "<br>" + story[14][x];
-    }
+        if(story[14][x] != "null")//if there is a new objective in choice B
+        {
+            objective_container.innerHTML += "<br>" + story[14][x];
+        }
 
-    if(story[15][x] != "null")//if there is a new objective in choice C
-    {
-        objective_container.innerHTML += "<br>" + story[15][x];
+        if(story[15][x] != "null")//if there is a new objective in choice C
+        {
+            objective_container.innerHTML += "<br>" + story[15][x];
+        }
     }
 
     if(x == -1)
@@ -747,14 +755,13 @@ function refreshTestContainer()// affiche des données par rapport à la prev/cu
     {
         if(e.keyCode == 13)
         {
-            // alert(user.storyLocation);
-            user.storyLocation = input.value;
+            if(input.value) {user.storyLocation = input.value}
             refreshInterface();
-            // alert(user.storyLocation);
         }
     };
 
     $('#daInput').focus();
+    document.getElementById('daInput').placeholder = user.storyLocation;
 
     /*var container2 = document.getElementById('testContainer2');
 
