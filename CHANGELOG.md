@@ -1,5 +1,10 @@
 #CHANGELOG
 
+Version 1.4.0 (Split CSS, Ch. 0 - Completed V2)
+- *DELETION*            [/beta]             removed the beta folder
+- *STRUCTURE*           [.css]              split the css into multiple files
+- *CHAPTER 0*           [gameengine.js]     Terminé Ch.0 - Form 2 (avec le DB, le nom, et les pronoms)
+
 Version 1.3.30 (Ch. 0 - Completed V1)
 - *OBJECTIVES*          [library.js]        implemented the "Objective Complete" functionality
 - *CHAPTER 0*           [chapter0.js/xlsx]  chapter 0 is updated with the new template (pretty much done)

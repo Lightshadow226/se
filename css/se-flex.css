@@ -1,0 +1,58 @@
+/*
+	CSS DOCUMENT
+	PROPERTY OF DULCET GAMES INC.
+
+	https://stackoverflow.com/questions/34352140/what-are-the-differences-between-flex-basis-and-width
+
+	March 7, 2018
+*/
+
+.flex-container/*contains flex panels*/
+{
+	display: flex;
+	/* flex-direction: row; */
+}
+
+.flex-container-vertical/*contains flex panels*/
+{
+	display: flex;
+	flex-direction: column;
+}
+
+.flex-panel/*must have a flex-container parent*/
+{
+	flex:1;
+}
+
+.flex-panel2/*must have a flex-container parent*/
+{
+	flex:2;
+}
+
+.flex-panel3/*must have a flex-container parent*/
+{
+	flex:3;
+	margin: 5px;
+}
+
+.login-signup-labels
+{
+	text-align: right;
+	padding: 5px;
+}
+
+.login-signup-textfields
+{
+	text-align: left;
+	padding: 5px;
+}
+
+.table-container
+{
+	display: table;
+}
+
+.table-cell
+{
+	display: table-cell;
+}

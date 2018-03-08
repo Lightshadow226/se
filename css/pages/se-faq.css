@@ -1,0 +1,135 @@
+/*
+	CSS DOCUMENT
+	PROPERTY OF DULCET GAMES INC.
+
+	March 7, 2018
+*/
+
+/*Accordion*/
+
+button.accordion
+{
+	background-color: white;
+	color: #EE4C5E;
+
+	/* letter-spacing: 0.1em; */
+	text-align: left;
+	font-size: 1.5em;
+	font-weight: 300;
+
+	cursor: pointer;
+
+	width: 100%;
+	padding: 10px;
+	border: 2px solid #EE4C5E;
+	margin-top: -2px;
+
+	outline: none;
+	transition: 0.1s ease-out;
+
+	position: relative;/*on a besoin de ça pour l z-index*/
+	z-index: 1;
+}
+
+button.accordion:hover
+{
+	background-color: white;
+	color: #682666;
+	/* margin-top: 2px; */
+	/* margin-bottom: 4px; */
+
+	border: 2px solid #682666;/*or #EE4C5E???*/
+	font-weight: 400;
+	transition: 0.1s ease-out;
+
+	position: relative;/*on a besoin de ça pour l z-index*/
+	z-index: 100;
+}
+
+/*Accordion (Active)*/
+
+button.accordion.active
+{
+	background-color: white;
+	color: #682666;
+
+	margin-top: 2px;
+	border: 2px solid #682666;
+}
+
+button.accordion.active:hover
+{
+	background-color: white;
+	color: #682666;
+
+	margin-top: 2px;
+	margin-bottom: 0px;
+	border: 2px solid #682666;
+	font-weight: 400;
+}
+
+/*les flèches du dropdown*/
+
+button.accordion:after
+{
+	content: '\02795'; /* Unicode character for "plus" sign (+) */
+	font-size: 13px;
+	float: left;
+	padding: 5px 10px 5px 5px;
+}
+
+button.accordion.active:after
+{
+	content: "\2796"; /* Unicode character for "minus" sign (-) */
+	color: #682666;
+}
+
+div.inside_accordion
+{
+	background-color: white;
+
+	width: 100%;
+	display: none;
+	max-height: 0;
+	list-style: none;
+
+	overflow: hidden;
+	transition: max-height 0.5s ease-out;
+}
+
+div.inside_accordion b
+{
+	font-size: 1.3em;
+}
+
+.ul-style
+{
+	background-color: #efefef;
+	width: calc(100% - 4px);
+	border: 2px solid #682666;
+	border-top: 0px;
+	margin-bottom: 5px;
+	padding: 0px;
+}
+
+li
+{
+	text-align: justify;
+	list-style-type: square;
+	width: 90%;
+}
+
+section
+{
+	background-color: #efefef;
+	width: calc(100% - 2em - 4px);
+	padding: 1em;
+
+	border: 2px solid #682666;
+	margin-bottom: 1em;
+}
+
+.faq_text
+{
+	text-align: justify;
+}

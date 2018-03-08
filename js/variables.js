@@ -66,6 +66,7 @@ var locations =
 var user = 
 {
     username: "None",
+    scholarname: "None",
     energy: 0,
     money: 0,
     storyLocation: 0,//VARIABLE COMMUNE À TOUS LES CHAPITRES, LA SEULE CHOSE QUI PEU BLOQUER serait de mettre un IF(last_chapter_played == this)
@@ -79,8 +80,11 @@ var user =
     hairstyle: 0,//
     skincolor: 0,//
     eyecolor: 0,//
-    wigID: 0
+    wigID: 0,
+    pronoun: 0,//0: she, 1: he, 3: they
 };
+
+var genders = ["She/Her", "He/Him", "They/Them"];
 
 //on va devoir écrire un code pour GET ces variables de la base de données. ces variables vont être propres à chaque utilisateur.
 
@@ -663,6 +667,7 @@ function pullVariablesFromDB()
             /********************
             SCHOLARINFO table
             *********************/
+            user.scholarname = document.getElementById("db_handle_scholarname").value;
             user.department = document.getElementById("db_handle_department").value;
             user.sex = parseInt(document.getElementById("db_handle_sex").value);
             user.gender = parseInt(document.getElementById("db_handle_gender").value);
@@ -727,6 +732,8 @@ function pushVariablesToDB()
             //SCHOLARINFO table
             //*********************************************
             'department': user.department,
+            'scholarname': user.scholarname,
+            'gender': user.gender,
             //on n'enregistre pas les autres variables pour l'instant
 
             //*********************************************

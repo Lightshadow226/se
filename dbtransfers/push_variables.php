@@ -68,8 +68,38 @@ include_once '../resources/utilities.php';
     {
         $department = $_POST['department'];
     
-        $sqlQuery1 = "UPDATE scholarinfo SET scholar_department = '$department' WHERE id = '$id'";
-        $statement = $db->prepare($sqlQuery1);
+        $sqlQuery = "UPDATE scholarinfo SET scholar_department = '$department' WHERE id = '$id'";
+        $statement = $db->prepare($sqlQuery);
+        $statement->execute();
+
+        $status = "SQL Sent!";
+    }
+    catch (PDOException $ex)
+    {
+        echo $ex;
+    }
+
+    try
+    {
+        $scholarname = $_POST['scholarname'];
+    
+        $sqlQuery = "UPDATE scholarinfo SET scholar_name = '$scholarname' WHERE id = '$id'";
+        $statement = $db->prepare($sqlQuery);
+        $statement->execute();
+
+        $status = "SQL Sent!";
+    }
+    catch (PDOException $ex)
+    {
+        echo $ex;
+    }
+
+    try
+    {
+        $gender = $_POST['gender'];
+    
+        $sqlQuery = "UPDATE scholarinfo SET scholar_gender = '$gender' WHERE id = '$id'";
+        $statement = $db->prepare($sqlQuery);
         $statement->execute();
 
         $status = "SQL Sent!";

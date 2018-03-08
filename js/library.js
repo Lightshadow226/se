@@ -685,6 +685,24 @@ function showPopup(img_path)
     //https://www.w3schools.com/howto/howto_css_modal_images.asp
 }
 
+//this function should be move to chapter0.php or.js
+function toggle_pronouns(clicked, one, two)
+{
+    clicked.classList.toggle("pronoun-button-selected");
+    one.classList.remove("pronoun-button-selected");
+    two.classList.remove("pronoun-button-selected")
+
+    if(clicked.className.includes("pronoun-button-selected"))
+    {
+        // alert (clicked.className);
+        return clicked.innerHTML;
+    }
+    else
+    {
+        return "null";
+    }
+}
+
 // -----START DEBUGGING TOOLS-----
 function refreshTestContainer()// affiche des données par rapport à la prev/current/next slide
 {

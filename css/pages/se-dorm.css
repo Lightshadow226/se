@@ -1,0 +1,201 @@
+/*
+	CSS DOCUMENT
+	PROPERTY OF DULCET GAMES INC.
+
+	March 7, 2018
+*/
+
+#dorm	
+{
+	position: relative;
+	/* margin: 0 !important;    */
+}
+
+#dorm_overlay
+{
+	position: absolute;
+	top: 0;
+	
+	width: 100%;
+	height: 100%;
+	
+	z-index: 1;
+}
+
+#dorm_overlay_wardrobe
+{
+	position: absolute;
+	top: 0;
+	
+	width: 100%;
+	height: 100%;
+	
+	z-index: 20;
+}
+
+#overlay_form/*the form that will pop up to customize the character*/
+{
+	background-color: #eeeeee;/*abcdef is a cool color*/
+	padding: 10px;
+	
+	position: absolute;
+	max-height: 1000px;
+	border-radius: 10px;
+	top: 50%;
+	left: 50%;
+
+	width: 80%;
+	height: 80%;
+	
+	z-index: 20;
+
+	transform: translate3d(-50%, -50%, 0);
+}
+
+#dorm_base_img
+{
+	width: 100%;
+}
+
+#dorm-bag
+{
+	position: absolute;
+	/* border: 1px solid white; */
+
+	left: 49.3%;
+	top: 63%;
+
+	width: 7%;
+	height: 8.5%;
+}
+
+#dorm-wardrobe
+{
+	position: absolute;
+
+	left: 0%;
+	top: 23%;
+
+	width: 15%;
+	height: 43%;
+}
+
+#dorm-laptop
+{
+	position: absolute;
+
+	left: 78.5%;
+	top: 56.3%;
+
+	width: 13.5%;
+	height: 15.3%;
+}
+
+#dorm-book
+{
+	position: absolute;
+
+	left: 81%;
+	top: 72%;
+
+	width: 13%;
+	height: 9%;
+}
+
+.dorm-tooltiptext
+{
+	visibility: hidden;
+	width: 120px;
+	background-color: rgb(239, 238, 234);
+	color: black;
+	opacity: 0.85;
+	text-align: center;
+	padding: 5px;
+	border-radius: 10px;
+
+	/* Position the tooltip text*/
+	z-index: 10;
+	position: absolute;
+	top: 101%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.dorm-clickable
+{
+	z-index: 10;
+	position: relative;
+}
+
+.dorm-clickable:hover
+{
+	cursor: pointer;
+}
+
+.dorm-clickable:hover .dorm-tooltiptext
+{
+	cursor: pointer;
+	visibility: visible;
+}
+
+/* .directional_button:hover .tooltiptext
+{
+	visibility: visible;
+	z-index: 10;
+} */
+
+.img
+{
+	width: 100%;
+	display: block;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.selector_choices
+{
+	margin: 10px 0px;/*top & left*/
+	/* height: 50px; */
+}
+
+.choices
+{
+	text-align: center;
+	border-radius: 3px;
+	/* border: 2px solid #ff4956; */
+	vertical-align: middle;
+	width: 100%;
+	border-radius: 50%;
+
+	user-select: none;
+	-webkit-user-select: none;
+	cursor: pointer;
+}
+
+.choices-button-container
+{
+	margin: 10px;
+	padding: 10px;
+	/* border: 2px solid #ff4956; */
+}
+
+.choices-button
+{
+	align-content: center;
+	border-radius: 3px;
+	width: 100%;
+	border-radius: 50%;
+	
+	text-decoration: none;/*enlever le underline -> ne va plus être nécessaire quand on va rendre le bouton un actual Button*/
+	text-align: center;
+	user-select: none;
+	-webkit-user-select: none;
+
+	border: none;
+}
+
+.choices-button:hover
+{
+	/* background-color: #682666; */
+	cursor: pointer;
+}

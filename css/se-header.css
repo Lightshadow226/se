@@ -1,0 +1,90 @@
+/*
+	CSS DOCUMENT
+	PROPERTY OF DULCET GAMES INC.
+
+    https://ihatetomatoes.net/create-custom-preloading-screen/
+
+	March 7, 2018
+*/
+
+#user_info/*pour le header, la barre mauve qui donne le status de l'utilisateur*/
+{
+    width: 100%;
+    position: fixed;
+    text-align:center;
+    padding: 5px 0 5px 0;
+
+    background-color:#682666;
+    color:#ffffff;
+
+    font-size:0.7em;
+    letter-spacing:0.15em;
+    z-index: 4;
+}
+
+#nav_menu_container/*header as a whole*/
+{
+    width: 80%;
+    min-width: 1000px;
+    /* box-shadow: 0 0 5px #83827d; */
+}
+
+#logo/*Main navigation logo*/
+{
+    position: relative;
+    top: 22px;
+    /* left: 14%; */
+    border:none;
+    z-index:3;
+}
+
+#pink_logo_bar/*buffer rose au-dessus du navigation menu (en-dessous du logo et au-dessus des menu items)*/
+{
+    background-color:#EE4C5E;
+    height: 25px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+#pink_menu/*navigation menu*/
+{
+    box-shadow: 0 0 5px #83827d;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    background-color: #EE4C5E;
+
+    display: flex;
+    font-size:0.8em;
+    color: white;
+    letter-spacing:0.15em;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+
+.menu_item/*les items dans le menu*/
+{
+    background-color:#EE4C5E;
+    padding: 10px;
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+    color: white;
+    border-radius: 10px;
+    /* border-top-left-radius: 10px;
+    border-top-right-radius: 10px; */
+    margin-left: 10px;
+    margin-right: 10px;
+
+    transition: background-color 0.3s;
+}
+
+.menu-item-activated
+{
+    background-color:#F7B334;
+}
+
+.menu_item:hover
+{
+    background-color:#F7B334;
+}

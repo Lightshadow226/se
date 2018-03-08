@@ -34,6 +34,7 @@ $statement->execute(array(':id' => $id));
 while($rs = $statement->fetch())//"rs" = "row statements"
 {
     $department = $rs['scholar_department'];
+    $scholarname = $rs['scholar_name'];
     $sex = $rs['scholar_sex'];
     $gender = $rs['scholar_gender'];
     $haircolor = $rs['scholar_haircolor'];
@@ -137,6 +138,7 @@ while($rs = $statement->fetch())//"rs" = "row statements"
     <div id="db_handle_nbreplays"><?php echo $nbreplays; ?></div><!-- UNUSED -->
 
     <!-- SCHOLARINFO table -->
+    <input id="db_handle_scholarname"  value = <?php echo $scholarname; ?>></input>
     <input id="db_handle_department"  value = <?php echo $department; ?>></input>
     <input id="db_handle_sex"         value = <?php echo $sex; ?>></input>
     <input id="db_handle_gender"      value = <?php echo $gender; ?>></input>

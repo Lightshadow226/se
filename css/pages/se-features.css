@@ -1,0 +1,31 @@
+/*
+	CSS DOCUMENT
+	PROPERTY OF DULCET GAMES INC.
+
+	March 7, 2018
+*/
+
+.features_illustration
+{
+	margin: 20px;
+	height: 250px;
+	width: 250px;
+}
+
+.description
+{
+	flex:7;
+	padding:20px 0 10px 0;
+	font-style: thin;
+	text-align: center;
+	margin: 20px;
+}
+
+.imgh
+{
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+	box-shadow: 0 0 7px 0px #682666;
+	/*border: 2px solid #EE4C5E;*/
+}

@@ -1,0 +1,78 @@
+/*
+	CSS DOCUMENT
+	PROPERTY OF DULCET GAMES INC.
+
+	March 7, 2018
+*/
+
+#popup-container
+{
+	position: fixed;
+	height: 100%;
+	z-index: 10;
+	background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+#top-right-x
+{
+	position: absolute;
+	right: 2%;
+	top: 2%;
+	color: white;
+	/* font-stretch: expanded; */
+	font-size: 3em;
+}
+
+#top-right-x:hover
+{
+	cursor: pointer;
+}
+
+#popup-img
+{
+	height: 90%;
+	widows: auto;
+}
+
+.invisible
+{
+	display: none;
+	animation-name: dezoom;
+	animation-duration: 0.5s;
+	-webkit-animation-name: dezoom;
+	-webkit-animation-duration: 0.5s;
+}
+
+.visible
+{
+	display: block;
+	animation-name: zoom;
+	animation-duration: 0.5s;
+	-webkit-animation-name: zoom;
+	-webkit-animation-duration: 0.5s;
+}
+
+@keyframes zoom
+{
+	from {transform:scale(0)} 
+	to {transform:scale(1)}
+}
+
+@-webkit-keyframes zoom
+{
+	from {-webkit-transform:scale(0)} 
+	to {-webkit-transform:scale(1)}
+}
+
+@keyframes dezoom
+{
+	from {transform:scale(1)} 
+	to {transform:scale(0); display: none;}
+	
+}
+
+@-webkit-keyframes dezoom
+{
+	from {-webkit-transform:scale(1)} 
+	to {-webkit-transform:scale(0)}
+}

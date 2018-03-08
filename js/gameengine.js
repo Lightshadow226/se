@@ -704,52 +704,58 @@ function refreshInterface()//REFRESHES the interface
         else if(story[special_option][user.storyLocation] == -31)// -31 === Form to choose gender, skin color, hairstyle, etc.
         {
             var form_container = document.createElement('div');
-                form_container.className = "form_container flex-container-vertical";
-                form_container.style.zIndex= "10";
+                form_container.className = "form_container-small";
+
+            var padding_div = document.createElement('div');
+                padding_div.className = "flex-panel";
 
             var formHeader = document.createElement('h6');
-                formHeader.innerHTML = "Name Your Scholar";
+                formHeader.innerHTML = "Name Your Character";
 
             var formSubHeader = document.createElement('h5');
-                formSubHeader.innerHTML = "<br>Give a name to your Scholar! CHOOSE WISELY, you will <em>not</em> be able to change it later.";
+                formSubHeader.innerHTML = "<br>Give a name to your Character! CHOOSE WISELY, you will <em>not</em> be able to change it later.<br><br>";
 
-            var name = '<div class="flex-panel"></div>\
-                <div class = "flex-container">\
-                    <div class = "flex-panel"></div>\
-                    <p class = "flex-panel login-signup-labels">Username:</p>\
-                    <input id="new_name" class = "flex-panel2 login-signup-textfields" type="text" placeholder = "Name" name="Name"></input>\
-                    <div class = "flex-panel"></div>\
-                </div>\
-                <div class="flex-panel"></div>\
-            ';
+            var name = '<div class = "flex-container">\
+                            <input id="new_name" class = "flex-panel2 login-signup-textfields" type="text" placeholder = "Scholar Name" name="new_name"></input>\
+                        </div>';
 
             var formSubHeader2 = document.createElement('h5');
-                formSubHeader2.innerHTML = "How will the other Characters refer to your scholar? <br> Pronouns can be changed later.";
+                formSubHeader2.innerHTML = "<br>How will the other Characters refer to your scholar? <br> Pronouns can be changed later.";
             
             var gender_container = document.createElement('div');
                 gender_container.className = "flex-panel";
-                var hehim = document.createElement('div');
-                    hehim.className = "button pink_button";
-                    hehim.style.margin = "10px";
-                    hehim.innerHTML = "He/Him";
+
                 var sheher = document.createElement('div');
+                    sheher.id = "0";
                     sheher.className = "button pink_button";    
                     sheher.style.margin = "10px";
-                    sheher.innerHTML = "She/Her";
+                    sheher.innerHTML = genders[0];
+                var hehim = document.createElement('div');
+                    hehim.id = "1";
+                    hehim.className = "button pink_button";
+                    hehim.style.margin = "10px";
+                    hehim.innerHTML = genders[1];
                 var theythem = document.createElement('div');
+                    theythem.id = "2";
                     theythem.className = "button pink_button";
                     theythem.style.margin = "10px";
-                    theythem.innerHTML = "They/Them";
+                    theythem.innerHTML = genders[2];
+
+            hehim.onclick = function(e){choice = toggle_pronouns(this, sheher, theythem)};
+            sheher.onclick = function(e){choice = toggle_pronouns(this, hehim, theythem)};
+            theythem.onclick = function(e){choice = toggle_pronouns(this, hehim, sheher)};
 
             background.appendChild(form_container);
+                // form_container.appendChild(padding_div);
                 form_container.appendChild(formHeader);
                 form_container.appendChild(formSubHeader);
                 form_container.innerHTML += name;
                 form_container.appendChild(formSubHeader2);
                 form_container.appendChild(gender_container);
-                    gender_container.appendChild(hehim);
                     gender_container.appendChild(sheher);
+                    gender_container.appendChild(hehim);
                     gender_container.appendChild(theythem);
+                // form_container.appendChild(padding_div);
         }
         else if(story[special_option][user.storyLocation] == -4)// -4 === Choice of romance or friendship
         {
@@ -1126,14 +1132,28 @@ function browseLink(link, element)//link is the link of the story (story[special
     else if(link == -31)//Acts like a submit button for the form
     {
         var value = document.getElementById('new_name').value;
+        
+        // alert(choice);
 
         if(value == "")
         {
             alert("Please choose a username!");
         }
+        else if(choice == "null")
+        {
+            alert("Please choose a pronoun!");
+        }
         else
         {
-            user.username = document.getElementById('new_name').value;
+            var chosen_gender;
+            
+            for(var i = 0; i < genders.length; i++)
+            {
+                if(choice == genders[i]){chosen_gender = i}
+            }
+
+            user.gender = chosen_gender;
+            user.scholarname = document.getElementById('new_name').value;
             user.storyLocation++;//we continue the story once we are done
             pushVariablesToDB();
         }

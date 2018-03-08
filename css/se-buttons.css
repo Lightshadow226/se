@@ -1,0 +1,92 @@
+/*
+	CSS DOCUMENT
+	PROPERTY OF DULCET GAMES INC.
+
+	March 7, 2018
+*/
+
+.button
+{
+    margin: 0 auto;/*centers the button in its parent div*/
+    align-content: center;
+    padding: 10px;
+    text-decoration: none;/*enlever le underline -> ne va plus être nécessaire quand on va rendre le bouton un actual Button*/
+    border-radius: 5px;
+    text-align: center;
+
+    /* width: auto; */
+    min-width: 75px;
+    max-width: 300px;
+    
+    user-select: none;
+    -webkit-user-select: none;
+    display: inline-block;
+    flex: 1;
+    font-weight: 300;
+
+    border: none;
+    transition: background-color 0.3s;
+
+    /* -webkit-font-smoothing: antialiased;
+    -webkit-filter: blur(0.000001px); */
+}
+
+.button:hover
+{
+    cursor: pointer;
+    background-color: #682666;
+}
+
+.pink_button
+{
+    background-color: #EE4C5E;
+    font-size: 1.28em;
+    color: white;
+    letter-spacing: 0.05em;
+    /* width: 100%; */
+}
+
+.pink-button-subtle
+{
+    background-color: #EE4C5E;
+    color: white;
+}
+
+.yellow_button
+{
+    background-color: #F7B334;
+    font-size: 1.28em;
+    color: white;
+    letter-spacing:0.05em;
+}
+
+.purple_button
+{
+    background-color: #682666;
+    font-size: 1.28em;
+    color: white;
+    letter-spacing: 0.05em;
+}
+
+.pink_button:hover
+{
+    cursor: pointer;
+    background-color: #c0000e;
+}
+
+.purple_button:hover
+{
+    cursor: pointer;
+    background-color: #4f1d4e;
+}
+
+.yellow_button:hover
+{
+    cursor: pointer;
+    background-color: #de9409;
+}
+
+.yellow_button_activated
+{
+    background-color: #EE4C5E;
+}

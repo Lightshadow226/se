@@ -1,0 +1,31 @@
+/*
+	CSS DOCUMENT
+	PROPERTY OF DULCET GAMES INC.
+
+	March 7, 2018
+*/
+
+.staff_name
+{
+	background-color: #682666;
+	color: white;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: 100;
+	font-size: 1.5em;
+	padding: 5px;
+}
+
+.staff_title
+{
+	text-align: center;
+	margin-top: 10px;
+	color: #ff4956;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+.fixed_height
+{
+	height: 110px;
+}

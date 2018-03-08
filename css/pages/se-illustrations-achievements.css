@@ -1,0 +1,38 @@
+/*
+	CSS DOCUMENT
+	PROPERTY OF DULCET GAMES INC.
+
+	March 7, 2018
+*/
+
+
+.line_achievement
+{
+	position: relative;
+	box-shadow: 0 0 5px #83827d;
+	margin: 10px;
+	display: flex;
+	border-radius: 10px;
+	height: 100px;
+}
+
+.achievement_img
+{
+	height: 100%;
+	width: auto;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+#illustrations_container
+{
+	display: flex;
+}
+
+.illustration
+{
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	padding: auto;
+}

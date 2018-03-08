@@ -1,0 +1,21 @@
+/*
+	CSS DOCUMENT
+	PROPERTY OF DULCET GAMES INC.
+
+	March 7, 2018
+*/
+
+.scholar-id-card
+{
+	/* left: 50%;
+	transform: translatex(-50%);  */
+	text-align: center;
+	align-content: center;
+}
+
+#button-container
+{
+	display: flex;
+	margin: 20px;
+	/* flex-direction: vertical; */
+}

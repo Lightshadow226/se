@@ -19,6 +19,13 @@
 
 /*STRUCTURE*/
 
+    .game-title /*on game.php*/
+    {
+        background-color: #ffe2e4 !important;
+        text-align: center;
+        padding: 10px;
+    }
+
     #objectiveContainer
     {
         color: black;
@@ -283,10 +290,25 @@
         opacity: 0.95;
     }
 
-    .form_container
+    .form_container-small
     {
+        position: absolute;
         display: flex;
         flex-direction: column;
+        border-radius: 10px;
+        padding: 10px;
+
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        
+        width: auto;
+        height: auto;
+
+        margin: 0 auto;
+        background-color: rgb(239, 238, 234);
+        opacity: 0.95;
+        z-index: 10;
     }
 
     .form_line
@@ -297,6 +319,7 @@
         flex-direction: row;
         text-align: left;
         align-content: left;
+        border-radius: 10px;
     }
 
     .form_img_container
@@ -394,6 +417,11 @@
     {
         visibility: visible;
         z-index: 10;
+    }
+
+    .pronoun-button-selected
+    {
+        background-color: #682666;
     }
 
 /*TOOLTIPS*/

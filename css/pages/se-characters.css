@@ -1,0 +1,60 @@
+/*
+	CSS DOCUMENT
+	PROPERTY OF DULCET GAMES INC.
+
+	March 7, 2018
+*/
+
+#horizontal_scroll
+{
+	padding-left: 0px;
+	margin-left: 0px;
+	width: 100%;
+	display: flex;
+	height: auto;
+	box-shadow: none;
+}
+
+.character_line
+{
+	padding-left: 0px;
+	padding-right: 0px;
+	box-shadow: none;
+}
+
+.scroll_img_container
+{
+	flex: auto;
+	width: 100%;
+	margin: 3px;
+}
+
+.scroll_img
+{
+	height: auto;
+	max-height: 100%;
+	max-width: 100%;
+}
+
+.scroll_img:hover
+{
+	cursor: pointer;
+}
+
+.chevron-container
+{
+	position: relative;
+	width: 100px;
+}
+
+.chevron-img/*for all chevrons that are 150px high*/
+{
+	width: 100px;
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+.chevron-img:hover
+{
+	cursor: pointer;
+}

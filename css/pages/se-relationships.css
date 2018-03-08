@@ -1,0 +1,141 @@
+/*
+	CSS DOCUMENT
+	PROPERTY OF DULCET GAMES INC.
+
+	March 7, 2018
+*/
+
+.line
+{
+	position: relative;
+	display: flex;
+	background-color: white;
+	box-shadow: 0 0 5px #83827d;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding: 0px;
+	max-height: 350px;
+	border-radius: 10px;
+}
+
+.line-big
+{
+	margin-top: 0px;
+	margin-bottom: 20px;
+}
+
+.line-small
+{
+	max-height: 200px;
+}
+
+.line_left_content
+{
+	height: inherit;
+	width: auto;
+	max-height: 350px;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+.line_middle_content
+{
+	flex: auto;
+	position: relative; /*Nécessaire pour que le bouton soit bien placé*/
+	flex: 100;
+	padding: 20px;
+	height: inherit;
+	/* max-height: 350px; */
+}
+
+.line_right_content
+{
+	/* flex: auto; */
+	max-height: 350px;
+}
+
+.school_files_button
+{
+	position: absolute;
+	bottom: 10px;
+	width: auto;
+	height: auto;
+	/* min-height: 20px; */
+
+	background-color: #EE4C5E;
+	font-size: 1em;
+	align-content: center;
+	color: white;
+}
+
+.play_episode_button
+{
+	position: absolute;
+	background-color: #EE4C5E;
+	
+	bottom: 10px;
+	right: 10px;
+	/* right: 0px; */
+	font-size: 1em;
+	align-content: center;
+	color: white;
+	-webkit-font-smoothing: antialiased;
+	filter: blur(0.000001px);
+	-webkit-filter: blur(0.000001px);
+}
+
+/* cette section a été remplacée par le "bottom: 10px;" et "right: 10px;" directement dans la classe du bouton, et le bouton a été append au middle_content
+.play_episode_button-small
+{
+	left: 90%;
+	transform: translate3d(calc(-100% - 10px), calc(-100% - 15px), 0px);
+}
+
+.play_episode_button-big
+{
+	left: 90%;
+	transform: translate3d(calc(-100% - 10px), calc(-100% - 30px), 0px);
+}
+*/
+
+.character_img_index
+{
+	/* max-height: 350px; */
+	/* margin: 10px; */
+	width: 100%;
+	height: auto;
+	border-radius: 10px;
+}
+
+.character_img
+{
+	/* max-height: 350px; */
+	width: auto;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+.inf_meter
+{
+	max-height: 310px;/*le 40 px de moins vient du percentage_number*/
+	width: auto;
+}
+
+.percentage_number/*va mesurer 40px*/
+{
+	font-family: 'Great Vibes', cursive;
+	font-size: 2em;
+	color: #682666;
+	font-weight: normal;
+	text-align: center;
+}
+
+.three_buttons/*WTF IS THIS "Three Buttons"...*/
+{
+	background-color: #F7B334;
+	font-size: 1.28em;
+	align-content: center;
+	color: white;
+	letter-spacing:0.05em;
+	width: 50%;
+}
