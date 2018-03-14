@@ -46,7 +46,7 @@ function Chapter0()
 
     //story[0] === Story Text
     story[0] = [
-        "(Lady Arlington stands there for a couple of seconds, a look of utter shock in her face, before quickly composing herself and extending her hand for me to shake.)",//0 
+        "(The trip to Arlington was long, but I’m finally here!)",//0 
         "(I’ve worked so hard to get here, but I’m ready to start fresh at this school.)",
         "(I watched the shuttle that carried me here from the airport drive away as I sat my suitcase down on the ground.)",
         "(This is so exciting! Everybody here looks so...famous.)",
@@ -57,7 +57,7 @@ function Chapter0()
         "(There was an emptiness in my stomach as I remembered my friends and family back home.)",
         "(I miss them. There’s something about this place that makes me feel like I don’t belong.)",
         "*Sigh*",//10 
-        "(I can’t go back now. I’ve worked too hard for this. Arlington Academy only accepts 10 scholarship students per year and I’m not going to waste this opportunity. Mom and Dad would be so disappointed...)",
+        "(I can’t go back now. I’ve worked too hard for this. Arlington Academy only accepts 10 scholarship students per year and I’m not going to waste this opportunity. Dad would be so disappointed...)",
         "(I firmly grasped the handle of my suitcase.)",
         "(I needed to find someone.)",
         "(I jumped out of surprise.)",
@@ -70,8 +70,8 @@ function Chapter0()
         "(Next)",
         "(Next)",
         "(I already knew about those but hearing " + CharaX_username + " list them makes it feel all too real...)",
-        "Click here to submit",
-        "There, all done.",//25 Department Form
+        "Click here to submit",//24 Department Form
+        "There, all done.",//25 
         "(Next)",
         "(Next)",
         "Woah, it’s really nice. (This dorm room looks more expensive than my whole apartment back home...)",
@@ -124,12 +124,12 @@ function Chapter0()
         "Oh, I see. (I suddenly felt a little nervous.)",//75 
         "(We walked until we met a beautiful lady in the hallway.)",
         "(Lady Arlington was probably in her forties, considering her position in the school, but she looked much younger.)",
-        "(She had an aura of power and mystery… I felt intimidated and amazed at the same time. (Character X) handed her the paperwork I filled out.)",
+        "(She had an aura of power and mystery… I felt intimidated and amazed at the same time. " + CharaX_username + " handed her the paperwork I filled out.)",
         "(Lady Arlington turned to look at us.)",
         "(Hey eyes met mine and...)",//80 
         "(She almost dropped my paperwork on the ground.)",
         "(The principal looked at me as if she saw a ghost. It felt very awkward and I didn’t know where to look.)",
-        "W-Wait! (But –Character X- just left the hallway, leaving me alone with the Principal.)",
+        "W-Wait! (But " + CharaX_username + " just left the hallway, leaving me alone with the Principal.)",
         "(Her look lingered for a couple of seconds. I could feel myself beginning to sweat a little as her eyes pierced my soul.)",
         "(END OF CHAPTER 0)",//85 
         ];
@@ -159,8 +159,8 @@ function Chapter0()
         "It’s important for the school’s administration to know as much about you as possible so that Arlington can give you the education you need to tackle the world when you graduate.",
         "First, fill in the Academic Information Form. Arlington has 7 faculties in total: Business and Commerce, Pure and Applied Sciences, Medical Sciences, Fine Arts, Performing Arts, Fashion, and Athletics.",
         "null",
-        "null",
-        "null",//25 Department Form
+        "null",//24 Department Form
+        "null",//25 
         "Excellent!",
         "Thank you! Now let me show you where your dorm is.",
         "This is where you’re going to be staying until the end of high school!",
@@ -179,12 +179,12 @@ function Chapter0()
         "Be careful! If you miss one day, you’ll go back to 10 points.",
         "You’ll need your energy to fulfill your destiny here at Arlington Academy. You will also meet a lot of characters that will be with you until the very end.",
         "Some people will be relatively easy to get along with, others… not so much.",
-        "All the characters you’re going to meet will have an “attraction meter”. You will have several dialogue choices. You’re going to have to choose whether you want your choices to build on your friendship with them, or your romance.",
+        "All the characters you’re going to meet will have an “infinity meter”. You will have several dialogue choices. You’re going to have to choose whether you want your choices to build on your friendship with them, or your romance.",
         "Friendship dialogue options will be indicated with a handshake button while romance dialogue options will be indicated with a heart button!",//45 
-        "Furthermore, if you choose to just stay friends with a character and only pick friendship dialogue options, your attraction meter will only go up to a certain number, not one point more.",
-        "Only romance dialogue options will make your attraction meter with a character reach its max.",
-        "Once you choose, you’ll have to make yet another choice of dialogues that will either raise, drop, or leave your attraction meter as it is.",
-        "Choose wisely! If your attraction meter is too low, you will not get the date you want with your favorite character at the end of each chapter.",
+        "Furthermore, if you choose to just stay friends with a character and only pick friendship dialogue options, your infinity meter will only go up to a certain number, not one point more.",
+        "Only romance dialogue options will make your infinity meter with a character reach its max.",
+        "Once you choose, you’ll have to make yet another choice of dialogues that will either raise, drop, or leave your infinity meter as it is.",
+        "Choose wisely! If your infinity meter is too low, you will not get the date you want with your favorite character at the end of each chapter.",
         "Haha! You’ll find that the students at Arlington Academy aren’t as simple to figure out.",//50 
         "Go ahead and give it a try. I think I see someone in Classroom 1. Talk to them and see if you can make the right choice.",
         "null",
@@ -248,8 +248,8 @@ function Chapter0()
         personnages.charaX[0],
         personnages.charaX[0],
         personnages.charaX[0],
-        "null",
-        personnages.charaX[0],//25 Department Form
+        "null",//24 Department Form
+        personnages.charaX[0],//25 
         personnages.charaX[1],
         personnages.charaX[1],
         personnages.charaX[1],
@@ -277,16 +277,16 @@ function Chapter0()
         personnages.charaX[1],//50 
         personnages.charaX[1],
         "null",
-        personnages.karolina[0],
-        personnages.karolina[0],
-        personnages.karolina[0],//55 
-        personnages.karolina[0],
-        personnages.karolina[0],
-        personnages.karolina[0],
-        personnages.karolina[0],
-        personnages.karolina[0],//60 
-        personnages.karolina[0],
-        personnages.karolina[0],
+        personnages.charaY[0],
+        personnages.charaY[0],
+        personnages.charaY[0],//55 
+        personnages.charaY[0],
+        personnages.charaY[0],
+        personnages.charaY[0],
+        personnages.charaY[0],
+        personnages.charaY[0],//60 
+        personnages.charaY[0],
+        personnages.charaY[0],
         "null",
         "null",//64 ghost slide
         "null",//65 ghost slide
@@ -308,8 +308,8 @@ function Chapter0()
         personnages.charaX[0],
         personnages.charaX[0],
         personnages.charaX[0],
-        personnages.l_arlington[0],
-        personnages.l_arlington[0],//85 
+        personnages.l_arlington[5],
+        personnages.l_arlington[5],//85 
         ];
     //story[3] === Bubble 2
     story[3] = [
@@ -337,8 +337,8 @@ function Chapter0()
         "null",
         "null",
         "null",
-        "null",
-        "null",//25 Department Form
+        "null",//24 Department Form
+        "null",//25 
         "null",
         "null",
         "null",
@@ -426,8 +426,8 @@ function Chapter0()
         "null",
         "null",
         "null",
-        "null",
-        "null",//25 Department Form
+        "null",//24 Department Form
+        "null",//25 
         "null",
         "null",
         "null",
@@ -475,17 +475,17 @@ function Chapter0()
         "null",//70 
         "null",
         "null",
-        personnages.l_arlington[1],
-        personnages.l_arlington[1],
-        personnages.l_arlington[1],//75 
-        personnages.l_arlington[1],
-        personnages.l_arlington[1],
-        personnages.l_arlington[1],
-        personnages.l_arlington[1],
-        personnages.l_arlington[1],//80 
-        personnages.l_arlington[1],
-        personnages.l_arlington[1],
-        personnages.l_arlington[1],
+        "null",
+        "null",
+        "null",//75 
+        "null",
+        personnages.l_arlington[0],
+        personnages.l_arlington[0],
+        "null",
+        personnages.l_arlington[0],//80 
+        personnages.l_arlington[5],
+        personnages.l_arlington[5],
+        "null",
         "null",
         "null",//85 
         ];
@@ -515,8 +515,8 @@ function Chapter0()
         locations.hall1,
         locations.hall1,
         locations.hall1,
-        locations.hall1,
-        locations.hall1,//25 Department Form
+        locations.hall1,//24 Department Form
+        locations.hall1,//25 
         locations.hall1,
         locations.hall1,
         locations.dorm,
@@ -604,8 +604,8 @@ function Chapter0()
         -1,
         -1,
         -1,
-        -3,
-        -1,//25 Department Form
+        -3,//24 Department Form
+        -1,//25 
         -1,
         -1,
         -1,
@@ -693,8 +693,8 @@ function Chapter0()
         0,
         0,
         0,
-        0,
-        0,//25 Department Form
+        0,//24 Department Form
+        0,//25 
         0,
         0,
         0,
@@ -756,7 +756,7 @@ function Chapter0()
         0,
         0,//85 
         ];
-    //story[8] === Friendship Link -> "-1"is no link, otherwise the number represents the array number of the slide
+    //story[8] === Friendship Link -> "-1" is no link, otherwise the number represents the array number of the slide
     story[8] = [
         -1,//0 
         -1,
@@ -782,8 +782,8 @@ function Chapter0()
         -1,
         -1,
         -1,
-        -1,
-        -1,//25 Department Form
+        -1,//24 Department Form
+        -1,//25 
         -1,
         -1,
         -1,
@@ -845,7 +845,7 @@ function Chapter0()
         -1,
         -1,//85 
         ];
-    //story[9] === Romance Link -> "-1"is no link, otherwise the number represents the array number of the slide
+    //story[9] === Romance Link -> "-1" is no link, otherwise the number represents the array number of the slide
     story[9] = [
         -1,//0 
         -1,
@@ -871,8 +871,8 @@ function Chapter0()
         -1,
         -1,
         -1,
-        -1,
-        -1,//25 Department Form
+        -1,//24 Department Form
+        -1,//25 
         -1,
         -1,
         -1,
@@ -934,7 +934,7 @@ function Chapter0()
         -1,
         -1,//85 
         ];
-    //story[10] === Choice 1 Link -> "-1"is no link, otherwise the number represents the array number of the slide
+    //story[10] === Choice 1 Link -> "-1" is no link, otherwise the number represents the array number of the slide
     story[10] = [
         -1,//0 
         -1,
@@ -960,8 +960,8 @@ function Chapter0()
         -1,
         -1,
         -1,
-        -1,
-        -1,//25 Department Form
+        -1,//24 Department Form
+        -1,//25 
         -1,
         -1,
         -1,
@@ -1023,7 +1023,7 @@ function Chapter0()
         -1,
         -1,//85 
         ];
-    //story[11] === Choice 2 Link -> "-1"is no link, otherwise the number represents the array number of the slide
+    //story[11] === Choice 2 Link -> "-1" is no link, otherwise the number represents the array number of the slide
     story[11] = [
         -1,//0 
         -1,
@@ -1049,8 +1049,8 @@ function Chapter0()
         -1,
         -1,
         -1,
-        -1,
-        -1,//25 Department Form
+        -1,//24 Department Form
+        -1,//25 
         -1,
         -1,
         -1,
@@ -1112,7 +1112,7 @@ function Chapter0()
         -1,
         -1,//85 
         ];
-    //story[12] === Choice 3 Link -> "-1"is no link, otherwise the number represents the array number of the slide
+    //story[12] === Choice 3 Link -> "-1" is no link, otherwise the number represents the array number of the slide
     story[12] = [
         -1,//0 
         -1,
@@ -1138,8 +1138,8 @@ function Chapter0()
         -1,
         -1,
         -1,
-        -1,
-        -1,//25 Department Form
+        -1,//24 Department Form
+        -1,//25 
         -1,
         -1,
         -1,
@@ -1201,7 +1201,7 @@ function Chapter0()
         -1,
         -1,//85 
         ];
-    //story[13] === Choice 1 Text -> "null"is no link, otherwise the number represents the array number of the slide
+    //story[13] === Choice 1 Text -> "null" is no link, otherwise the number represents the array number of the slide
     story[13] = [
         "null",//0 
         "null",
@@ -1227,8 +1227,8 @@ function Chapter0()
         "null",
         "null",
         "null",
-        "null",
-        "null",//25 Department Form
+        "null",//24 Department Form
+        "null",//25 
         "null",
         "null",
         "null",
@@ -1290,7 +1290,7 @@ function Chapter0()
         "null",
         "null",//85 
         ];
-    //story[14] === Choice 2 Text -> "null"is no link, otherwise the number represents the array number of the slide
+    //story[14] === Choice 2 Text -> "null" is no link, otherwise the number represents the array number of the slide
     story[14] = [
         "null",//0 
         "null",
@@ -1316,8 +1316,8 @@ function Chapter0()
         "null",
         "null",
         "null",
-        "null",
-        "null",//25 Department Form
+        "null",//24 Department Form
+        "null",//25 
         "null",
         "null",
         "null",
@@ -1347,11 +1347,11 @@ function Chapter0()
         "null",
         "null",
         "null",
-        "Hi! I'm " + user.username + ".",//55 
+        "Hi! I'm " + user.scholarname + ".",//55 
         "null",
         "null",
         "null",
-        "Hi! I’m " + user.username + ". It’s nice to meet you!",
+        "Hi! I’m " + user.scholarname + ". It’s nice to meet you!",
         "null",//60 
         "null",
         "null",
@@ -1379,7 +1379,7 @@ function Chapter0()
         "null",
         "null",//85 
         ];
-    //story[15] === Choice 3 Text -> "null"is no link, otherwise the number represents the array number of the slide
+    //story[15] === Choice 3 Text -> "null" is no link, otherwise the number represents the array number of the slide
     story[15] = [
         "null",//0 
         "null",
@@ -1405,8 +1405,8 @@ function Chapter0()
         "null",
         "null",
         "null",
-        "null",
-        "null",//25 Department Form
+        "null",//24 Department Form
+        "null",//25 
         "null",
         "null",
         "null",
@@ -1494,8 +1494,8 @@ function Chapter0()
         0,
         0,
         0,
-        0,
-        0,//25 Department Form
+        0,//24 Department Form
+        0,//25 
         0,
         0,
         0,
@@ -1526,13 +1526,13 @@ function Chapter0()
         0,
         0,
         0,//55 
+        -5,
         0,
+        5,
         0,
+        -5,//60 
         0,
-        0,
-        0,//60 
-        0,
-        0,
+        5,
         0,
         0,//64 ghost slide
         0,//65 ghost slide
@@ -1583,8 +1583,8 @@ function Chapter0()
         0,
         0,
         0,
-        0,
-        0,//25 Department Form
+        0,//24 Department Form
+        0,//25 
         0,
         0,
         0,
@@ -1672,8 +1672,8 @@ function Chapter0()
         false,
         false,
         false,
-        false,
-        false,//25 Department Form
+        false,//24 Department Form
+        false,//25 
         false,
         false,
         false,
@@ -1761,8 +1761,8 @@ function Chapter0()
         -1,
         -1,
         -1,
-        -1,
-        -1,//25 Department Form
+        -1,//24 Department Form
+        -1,//25 
         -1,
         -1,
         -1,
@@ -1826,101 +1826,93 @@ function Chapter0()
         ];
     //story[20] === landing slide -> -1 by defaut, but we go to a specific slide after the current one
     story[20] = [
-            -1,//0 
-            -1,
-            -1,
-            -1,
-            -1,
-            -1,//5 
-            -1,
-            -1,
-            -1,
-            -1,
-            -1,//10 
-            -1,
-            -1,
-            -1,
-            -1,
-            -1,//15 
-            -1,
-            -1,
-            -1,
-            -1,
-            -1,//20 
-            -1,
-            -1,
-            -1,
-            -1,
-            -1,//25 Department Form
-            -1,
-            -1,
-            -1,
-            -1,
-            -1,//30 
-            -1,//31 Choose your name Form
-            -1,
-            -1,
-            -1,
-            -1,//35 
-            -1,
-            -1,
-            -1,
-            -1,
-            -1,//40 
-            -1,
-            -1,
-            -1,
-            -1,
-            -1,//45 
-            -1,
-            -1,
-            -1,
-            -1,
-            -1,//50 
-            -1,
-            -1,
-            -1,
-            -1,
-            -1,//55 
-            -1,
-            -1,
-            -1,
-            -1,
-            -1,//60 
-            -1,
-            -1,
-            -1,
-            70,//64 ghost slide
-            71,//65 ghost slide
-            72,//66 ghost slide
-            70,//67 ghost slide
-            71,//68 ghost slide
-            72,//69 ghost slide
-            -1,//70 
-            -1,
-            -1,
-            -1,
-            -1,
-            -1,//75 
-            -1,
-            -1,
-            -1,
-            -1,
-            -1,//80 
-            -1,
-            -1,
-            -1,
-            -1,
-            -1,//85 
-            ];
-    
-    
-    
-
-    
-    
-        
-    
+        -1,//0 
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,//5 
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,//10 
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,//15 
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,//20 
+        -1,
+        -1,
+        -1,
+        -1,//24 Department Form
+        -1,//25 
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,//30 
+        -1,//31 Choose your name Form
+        -1,
+        -1,
+        -1,
+        -1,//35 
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,//40 
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,//45 
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,//50 
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,//55 
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,//60 
+        -1,
+        -1,
+        -1,
+        70,//64 ghost slide
+        71,//65 ghost slide
+        72,//66 ghost slide
+        70,//67 ghost slide
+        71,//68 ghost slide
+        72,//69 ghost slide
+        -1,//70 
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,//75 
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,//80 
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,//85 
+        ];
 }
 
 Chapter0();//the simple act of appending the .js file will load the chapter into memory
