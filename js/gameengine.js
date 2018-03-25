@@ -530,13 +530,13 @@ function refreshInterface()//REFRESHES the interface
         }
         else if(story[special_option][user.storyLocation] == -3)// -3 === Form to choose the department
         {
-            var form_names = [  "Department of Business, Commerce, and Politics",
-                                "Department of Perfoming Arts",
-                                "Department of Pure and Applied Sciences",
-                                "Department of Health Sciences", 
-                                "Department of Athletics",
-                                "Department of Fine Arts",
-                                "Department of Fashion"];
+            var form_names = [  "Department of Business, Commerce, and Politics \
+                                Department of Perfoming Arts \
+                                Department of Pure and Applied Sciences \
+                                Department of Health Sciences \
+                                Department of Athletics \
+                                Department of Fine Arts \
+                                Department of Fashion"];
 
             var form_container = document.createElement('div');
                 form_container.id = "form_container";

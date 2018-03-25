@@ -11,34 +11,34 @@ const unlocked_achievement_path = "_new_images_folder/game/achievements/unlocked
 
 var unlocked_achievements_list = 
 [
-    "Unlocked - Alignment: True Neutral",
-    "Unlocked - Bookworm - Unocked",
-    "Unlocked - Newbie Attitude",
-    "Unlocked - Party Animal",
+    "Unlocked - Alignment: True Neutral \
+    Unlocked - Bookworm - Unocked \
+    Unlocked - Newbie Attitude \
+    Unlocked - Party Animal",
 ];
 
 var unlocked_achievements_list_description = 
 [
-    "Unlocked - Alignment: True Neutral",
-    "Unlocked - Bookworm - Unocked",
-    "Unlocked - Newbie Attitude",
-    "Unlocked - Party Animal",
+    "Unlocked - Alignment: True Neutral \
+    Unlocked - Bookworm - Unocked \
+    Unlocked - Newbie Attitude \
+    Unlocked - Party Animal"
 ];
 
 var locked_achievements_list = 
 [
-    "Locked - Alignment: True Neutral",
-    "Locked - Bookworm",
-    "Locked - Newbie Attitude",
-    "Locked - Party Animal",
+    "Locked - Alignment: True Neutral\
+    Locked - Bookworm \
+    Locked - Newbie Attitude \
+    Locked - Party Animal",
 ];
 
 var locked_achievements_list_description = 
 [
-    "???",
-    "???",
-    "???",
-    "???",
+    "??? \
+    ??? \
+    ??? \
+    ???"
 ];
 
 function createAchievements()

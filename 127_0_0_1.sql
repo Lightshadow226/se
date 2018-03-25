@@ -108,7 +108,7 @@ CREATE TABLE IF NOT EXISTS `story` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `storylocation` int(11) NOT NULL DEFAULT '0',
   `lastchapterplayed` int(11) NOT NULL DEFAULT '0',
-  `physicallocationint` int(11) NOT NULL,
+  `physicallocationint` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 

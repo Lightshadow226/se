@@ -34,30 +34,30 @@ var chara_2 = document.getElementById("chara_2");
 
 var characters = 
 [
-    "alistair",
-    "axel",
-    "tadashi",
-    "tegan",
-    "tyler",
-    "claire",
-    "ellie",
-    "karolina",
-    "neha",
-    "raquel",    
+    "alistair \
+    axel \
+    tadashi \
+    tegan \
+    tyler \
+    claire \
+    ellie \
+    karolina \
+    neha \
+    raquel"    
 ];
 
 var description = 
 [
-    "Future Olympian",
-    "The Academy's Rockstar",
-    "Student Council President",
-    "The Geeky Mastermind",
-    "The Artistic Genius",
-    "The Heart of the Academy",
-    "Inventor Extraordinaire",
-    "The Top Model",
-    "The Fashion Designer",
-    "Soccer Team Captain"
+    "Future Olympian \
+    The Academy's Rockstar \
+    Student Council President \
+    The Geeky Mastermind \
+    The Artistic Genius \
+    The Heart of the Academy \
+    Inventor Extraordinaire \
+    The Top Model \
+    The Fashion Designer \
+    Soccer Team Captain"
 ];
 
 appendImage(chara_1, 0, false, false);

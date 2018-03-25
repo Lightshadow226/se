@@ -17,11 +17,13 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss3_transition1
 - Progress bar tends to work weirdly?? Like, it will go from 90% progress to 85% randomly, then go back to 90%.  (coding error)
 - On the index.php dashboard. The "Highest Infinity" section stays at "none" despite me clearly having higher infinity with some characters (coding error)
 - Same with "Current Chapter", it stays at Ch. 0 (coding error)
+- Name stays at "NONE" in game even thought it's changed in the card and in database (coding error) - same with Chapter0
 
 `TODO: HIGH Importance`
 - **DEBUG**               [variables.js, get and pushvariables.php]       s'assurer qu'il n'y ait plus de variables utilisés sans la base de données
 - **DATABASE**            [variables.js, get & push.php]                  push seulement les variables nécéssaires
 - **DATABASE**            [variables.js, get & push.php]                  régler le problème de async
+- **DATABASE**                                                            créer un nouvel utilisateur ne crée que le nouveau compte et n'ajoute pas une nouvelle ligne dans les autres tables pour le nouvel utilisateur
 
 `TODO: MEDIUM Importance`
 - **DATABASE**            [variables.js, gameengine.js]                   account for movements -> movement meter/action points -> faire un système pour tout
@@ -105,3 +107,7 @@ Start in : **%HOMEDRIVE%%HOMEPATH%**
 `Bootstrap Frameworks`
 Bootstrap Studio (60$): https://bootstrapstudio.io/
 Pingendo (99$): https://pingendo.com/index.html
+
+`Useful coding links`
+**Checks for errors and warnings and makes the code run faster**
+Closure Compiler: https://closure-compiler.appspot.com/home
