@@ -38,7 +38,7 @@ var screens_hover =
 ];
 
 //LES CHOIX (DB)
-var screens_DB = ["Sex \ Eyes \ Hair Color \ Hair Style \ Shoes \ Skin Color"];
+var screens_DB = ["Sex", "Eyes", "Hair Color", "Hair Style", "Shoes", "Skin Color"];
 var currentScreen = screens[0];//est === à l'adresse (avec .png and shit)
 
 //THE IMAGES THAT APPEAR FOR EVERY ITEM

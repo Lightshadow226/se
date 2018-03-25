@@ -530,13 +530,13 @@ function refreshInterface()//REFRESHES the interface
         }
         else if(story[special_option][user.storyLocation] == -3)// -3 === Form to choose the department
         {
-            var form_names = [  "Department of Business, Commerce, and Politics \
-                                Department of Perfoming Arts \
-                                Department of Pure and Applied Sciences \
-                                Department of Health Sciences \
-                                Department of Athletics \
-                                Department of Fine Arts \
-                                Department of Fashion"];
+            var form_names = [  "Department of Business, Commerce, and Politics",
+                                "Department of Perfoming Arts",
+                                "Department of Pure and Applied Sciences",
+                                "Department of Health Sciences",
+                                "Department of Athletics",
+                                "Department of Fine Arts",
+                                "Department of Fashion"];
 
             var form_container = document.createElement('div');
                 form_container.id = "form_container";
@@ -627,9 +627,9 @@ function refreshInterface()//REFRESHES the interface
             var formSubHeader = document.createElement('h5');
                 formSubHeader.innerHTML = "<br>Give a name to your Character! CHOOSE WISELY, you will <em>not</em> be able to change it later.<br><br>";
 
-            var name = '<div class = "flex-container">\
-                            <input id="new_name" class = "flex-panel2 login-signup-textfields" type="text" placeholder = "Scholar Name" name="new_name"></input>\
-                        </div>';
+            var name = `<div class = "flex-container">
+                            <input id="new_name" class = "flex-panel2 login-signup-textfields" type="text" placeholder = "Scholar Name" name="new_name"></input>
+                        </div>`;
 
             var formSubHeader2 = document.createElement('h5');
                 formSubHeader2.innerHTML = "<br>How will the other Characters refer to your scholar? <br> Pronouns can be changed later.";
