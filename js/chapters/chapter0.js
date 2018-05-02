@@ -119,13 +119,13 @@ function Chapter0()
         "(Next)",//70 
         "null",
         "null",
-        "Uh yeah…(Shoot, they looked a little mad.)",
-        "Later! (That went pretty well.)",
-        "See you around! (That went really well! But what do they mean by “tutorial”? This isn’t a video game!)",//75 
+        "O-kay! (Shoot, they looked a little mad.)",
+        "See you later! (I think that went okay.)",
+        "Later! (That went pretty well!)",//75 
         "null",
-        "Uh yeah…(Shoot, they looked a little mad.)",
-        "Later! (That went pretty well.)",
-        "See you around! (That went really well! But what do they mean by “tutorial”? This isn’t a video game!)",
+        "O-kay! (Shoot, they looked a little mad.)",
+        "See you later! (I think that went okay.)",
+        "Later! (That went pretty well!)",
         "null",//80 
         "null",//81 ghost slide
         "null",//82 ghost slide
@@ -225,13 +225,13 @@ function Chapter0()
         "Hi! You must be a new scholarship student. Welcome to Arlington!",//70 
         "null",
         "null",
-        "You look pretty tired, you should get back to your dorm and take a nap. See ya!",
-        "I’m " + CharaY_username + " ! It’s nice to meet you. I bet you still have tons of things to unpack, so I’ll see you later!",
-        "That’s the spirit! I’ll let you finish the tutorial, you’re almost done. See you around!",//75 
+        "It is for us to know and for you to never find out. ",
+        "It’s nice to meet you. I bet you still have tons of things to unpack, so I’ll see you later!",
+        "That’s the spirit! I’ll let Serena guide you through the rest of this introduction, you’re almost done. See you around!",//75 
         "null",
-        "My name is " + CharaY_username + ". You look pretty tired. I’ll let you get back to your dorm to get some rest. See ya!",
-        "I’m " + CharaY_username + "! It’s nice to meet you too! I bet you still have tons of things to unpack, so I’ll see you later!",
-        "Aw, it’s no biggie. I’m glad to meet a new player. I’ll let you finish the tutorial, you’re almost done. See you around!",
+        "It is for us to know and for you to never find out. ",
+        "It’s nice to meet you. I bet you still have tons of things to unpack, so I’ll see you later!",
+        "Aw, it’s no biggie. I’m glad to meet a new player! I’ll let Serena guide you through the rest of this introduction, you’re almost done. See you around!",
         "null",//80 
         "null",//81 ghost slide
         "null",//82 ghost slide
@@ -1496,11 +1496,11 @@ function Chapter0()
         "New Objective: Go Talk to the Person inside Classroom 1",
         "Objective Complete: Go Talk to the Person inside Classroom 1",//70 
         "null",
-        "Yeah, hi.",
+        "Um, what’s with the gas mask?",
         "null",
         "null",
         "null",//75 
-        "And...who are you?",
+        "What’s with the lame radioactive suit?",
         "null",
         "null",
         "null",
@@ -1602,11 +1602,11 @@ function Chapter0()
         "null",
         "null",//70 
         "null",
-        "Hi! I'm " + user.scholarname + ".",
+        "Hi! Yes, that’s me, I just arrived a few minutes ago.",
         "null",
         "null",
         "null",//75 
-        "Hi! I’m " + user.scholarname + ". It’s nice to meet you!",
+        "Hi! Yes, that’s me, I just arrived a few minutes ago.",
         "null",
         "null",
         "null",
@@ -1708,7 +1708,7 @@ function Chapter0()
         "null",
         "null",//70 
         "null",
-        "Thank you! I'm so excited to start!",
+        "Thank you! I’m so excited to start",
         "null",
         "null",
         "null",//75 

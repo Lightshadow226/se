@@ -59,6 +59,11 @@
             <!-- Game Background -->
             <img id = "background_img" class = "background_img"></img>
         </div>
+
+        <!-- Contains end of chapter results -->
+        <div id = "replay_handler">
+
+        </div>
     </div>
 
     <!-- Objective Container -->

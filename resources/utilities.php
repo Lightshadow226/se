@@ -214,7 +214,7 @@ function signout()
 function guard()
 {
 	$isValid = true;
-	$inactive = 60*20; //20 mins
+	$inactive = 60*60*24*30; //60 mins/h * 24h/day * 30 days
 	$fingerprint = md5($_SERVER['REMOTE_ADDR'] . $_SERVER['HTTP_USER_AGENT']);
 	
 	if((isset($_SESSION['fingerprint']) && $_SESSION['fingerprint'] != $fingerprint))

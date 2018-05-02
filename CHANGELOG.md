@@ -1,9 +1,12 @@
 #CHANGELOG
 
-Version 1.5.3.2 (Ch. 0 Improvements)
+Version 1.5.3.4 (Ch. 0 Improvements)
 - *EXCEL*               [chapter0.js]
                         [chapter0.xlsx]     made some changes to the dialog
 - *DORM IMAGE*          [dorm.jpg]          modified the image of the dorm (the wardrobe was missing...?)
+- *DESIGNS*             [replay.php]        
+- *REPLAY*              [replay.php]        
+                        [gameengine.js      Implemented the replay/next chapter function when you reach the end of a chapter
 
 Version 1.5.2 (June forgot to write patch notes)
 - *JUNE FORGOT*

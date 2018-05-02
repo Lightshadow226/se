@@ -40,6 +40,38 @@ $(function initializeInterface()//CREATES the entire interface once the document
     refreshInterface();//Start the first instance of the game
 })
 
+function restartChapter()
+{
+    console.log("Restarting the chapter...");
+    document.getElementById('game_frame').style.display = "block";
+    document.getElementById('objectiveContainer').style.display = "block";
+    document.getElementById('replay_handler').style.display = "none";
+
+    user.storyLocation = 0;//TODO: get the variable from the DATABASE with PHP
+    refreshInterface();
+}
+
+function nextChapter()
+{
+    console.log("Opening next chapter...");
+    var newChapter = parseInt(current_Chapter);
+        newChapter++;
+    
+    var newChapterAddress = "chapter" + newChapter + ".php";
+        window.open(newChapterAddress, "_self");
+}
+
+function endOfChapter()
+{
+    document.getElementById('game_frame').style.display = "none";
+    document.getElementById('objectiveContainer').style.display = "none";
+
+    user.storyLocation = 0;//TODO: get the variable from the DATABASE with PHP
+    
+    // $.get('partials/replay.php');
+    $("#replay_handler").load("partials/replay.php");
+}
+
 function refreshInterface()//REFRESHES the interface
 {
     refreshTestContainer();
@@ -47,10 +79,8 @@ function refreshInterface()//REFRESHES the interface
 
     if(user.storyLocation >= story[main_text].length)//si le chapitre ("story") est terminé
     {
-        user.storyLocation = 0;//TODO: get the variable from the DATABASE with PHP
-        // alert("The story is over! Come back another time!");
-        
-        refreshInterface();
+        endOfChapter();
+        // refreshInterface();
     }
     else//sinon, on continue l'histoire
     {
