@@ -20,6 +20,11 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss3_transition1
 - **TODO**                [chapter 1.js]                                  il reste à implémenter les illustrations et le form pour sélectionner notre uniforme
 - **DEBUG**               [gameengine.js]                                 empêcher le infinity meter d'augmenter si on a déjà visité la slide (il faut faire isVisited)
 - **DEBUG**               [variables.js, get and pushvariables.php]       s'assurer qu'il n'y ait plus de variables utilisés sans la base de données
+- **ILLUSTRATION GENER.** [illustration_generator.php]                    generate illustrations based on [locked vs not, colors, etc.]
+- **ACHIEVEMENTS**        [illustrations_achievements.php]                make sure that isVisited shows the proper achievements
+- **INF METER**           [gameengine.js]                                 Fix bug that keeps incrementing the points
+- **CH 0 FORM**           [gameengine.js, Chapter0.xlsx]                  Pronoun choice, and Scholar name instead of username
+- **GAME**                [game.php]                                      Current vs Finished vs Unattempted Chapters + Replay option
 - **DATABASE**            [variables.js, get & push.php]                  push seulement les variables nécéssaires
 - **DATABASE**            [variables.js, get & push.php]                  régler le problème de async
 - **DATABASE**                                                            créer un nouvel utilisateur ne crée que le nouveau compte et n'ajoute pas une nouvelle ligne dans les autres tables pour le nouvel utilisateur
@@ -37,12 +42,15 @@ FUCKING FIX THE ASYNC PROBLEM
 - **DEBUG**               [se-stylesheet.css]                             Il faut que les page-specific attributes ne soient jamais utilisés dans une autre page
 - **DEBUG**               [???]                                           z-index du scholar est trop petit (la barre de texte est au-dessus)
 - **CODE - RESTRUCT**     [dorm.js]                                       enlever les .style et les remplacer par des classes
+- **DOLLMAKER**           [dorm.js]                                       Add pronoun change option and all the missing images (shoes, top, bottom, etc.)
 - **INDEX**               [index.php]                                     mettre le CSS dans un autre fichier
 - **GAME ENGINE**         [gameengine.js]                                 redesign the game engine for efficiency (put it on paper first)
 - **IMPROVEMENTS**        [imageGenerator.php]                            there are still improvements to be made in this file
 - **IMPROVEMENTS**        [gameengine.js, variables.js]                   remove the variable "choice" (for the Ch.0 Form)
 - **Card ID**             [profile.php]                                   afficher l'épisode et le highest affinity sur le ID Card
 - **School files**        [relationships.php]                             zoom function on the school files
+- **PROFILE**             [profile.php]                                   Functionning Reset Progress Button
+- **PROFILE**             [profile.php]                                   Loader for images
 
 `TODO: LOW Importance`
 - **DEBUG**               [login.php, signup.php, resetpassword.php]      Améliorer les messages d'erreurs pour login.php, signup.php, resetpassword.php
