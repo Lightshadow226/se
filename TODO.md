@@ -1,6 +1,5 @@
 ﻿#TODO NOTES
 
-
 `June's List for Ch. 1:`
 - Same as Ch. 0, the characters don't have the right emotion sprites (Admin error)
 - All Main 10 Sprites are not properly proportionned for some reason (Waiting for Cecile to correct that)
