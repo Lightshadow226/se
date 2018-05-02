@@ -2,6 +2,7 @@
 
 Version 1.5.3 (Ch. 0 Improvements)
 - *Excel*               [chapter0.js]       made some changes to the dialog
+- *DESIGN*              LKJSADHFLKASJDHFLASDFHSLDKFJH
 
 Version 1.5.1 (Game Engine, TODO, DataBase)
 - *STRUCTURE*           [gameengine.js]
