@@ -66,8 +66,11 @@ function getPersonnage(char)//returns the character from a sprite "char"
     {
         if(char == personnages.charaX[i])
         {
-            char_pointer = tadashi;
-            // alert("tadashi");
+            char_pointer = serena;
+        }
+        if(char == personnages.charaY[i])
+        {
+            char_pointer = cecile;
         }
         else if(char == personnages.karolina[i])
         {
@@ -311,12 +314,17 @@ function getHighestAffinity()//returns the character with the highest affinity
 
     for(var i = 0; i < charList.length; i++)
     {
-        var new_affinity = getPersonnageFromName(charList[i]).affinity;
+        var new_char = getPersonnageFromName(charList[i]);
+        var new_affinity = new_char.affinity;
         
-        if(new_affinity > highestAffinity)
+        // alert(new_char.name + ": " + new_affinity);
+        
+        if(parseInt(new_affinity) > parseInt(highestAffinity))
         {
-            char = getPersonnageFromName(charList[i]);
+            char = new_char;
             highestAffinity = new_affinity;
+            
+            // alert("highest affinity: " + highestAffinity + " (" + char.name + ")");
         }
     }
 
@@ -324,8 +332,6 @@ function getHighestAffinity()//returns the character with the highest affinity
     {
         char = empty;
     }
-
-    // alert(char.name + " @ " + new_affinity);
 
     return char;//char est le plus grand affinity
 }
@@ -717,49 +723,50 @@ function refreshTestContainer()// affiche des données par rapport à la prev/cu
     container1.innerHTML = "";
 
     //Previous location(
-    /*text += "<b>Previous location (" + (user.storyLocation - 1) + ")</b><br>";
-    text += "Story Text: " + story[main_text][user.storyLocation - 1] + "<br>";
-    text += "Visited: " + story[17][user.storyLocation - 1] + "<br>";
-    text += "Affinity Increase: " + story[16][user.storyLocation - 1] + "<br>";
-    text += "Bubble 1: " + story[1][user.storyLocation - 1] + "<br>";
-    text += "Character 1: " + story[2][user.storyLocation - 1] + "<br>";
-    text += "Bubble 2: " + story[3][user.storyLocation - 1] + "<br>";
-    text += "Character 2: " + story[4][user.storyLocation - 1] + "<br>";
-    text += "Location: " + story[5][user.storyLocation - 1] + "<br>";
-    text += "Link: " + story[special_option][user.storyLocation - 1] + "<br>";11
-    text += "<br>";*/
+    /*text += "<b>Previous location (" + (user.storyLocation - 1) + ")</b>\n";
+    text += "Story Text: " + story[main_text][user.storyLocation - 1] + "\n";
+    text += "Visited: " + story[17][user.storyLocation - 1] + "\n";
+    text += "Affinity Increase: " + story[16][user.storyLocation - 1] + "\n";
+    text += "Bubble 1: " + story[1][user.storyLocation - 1] + "\n";
+    text += "Character 1: " + story[2][user.storyLocation - 1] + "\n";
+    text += "Bubble 2: " + story[3][user.storyLocation - 1] + "\n";
+    text += "Character 2: " + story[4][user.storyLocation - 1] + "\n";
+    text += "Location: " + story[5][user.storyLocation - 1] + "\n";
+    text += "Link: " + story[special_option][user.storyLocation - 1] + "\n";11
+    text += "\n";*/
     
-    /*
+    
     //Current Location
-    text += "<b>Current location (" + user.storyLocation + ")</b><br>";
-    text += "Story Text: " + story[main_text][user.storyLocation] + "<br>";
-    text += "Point of Interest: " + story[POI][user.storyLocation] + "<br>";
-    text += "Affinity Increase: " + story[16][user.storyLocation] + "<br>";
-    text += "Bubble 1: " + story[1][user.storyLocation] + "<br>";
-    text += "Character 1: " + story[2][user.storyLocation] + "<br>";
-    text += "Bubble 2: " + story[3][user.storyLocation] + "<br>";
-    text += "Character 2: " + story[4][user.storyLocation] + "<br>";
-    text += "Location: " + story[5][user.storyLocation] + "<br>";
-    text += "Link: " + story[special_option][user.storyLocation] + "<br>";
-    text += "Choice A: " + story[choiceA_text][user.storyLocation] + "<br>";
-    text += "Choice B: " + story[choiceB_text][user.storyLocation] + "<br>";
-    text += "Choice C: " + story[choiceC_text][user.storyLocation] + "<br>";
-    text += "<br>";*/
+    text += "Current location (" + user.storyLocation + ")\t";
+    // text += "Story Text: " + story[main_text][user.storyLocation] + "\t";
+    // text += "Point of Interest: " + story[POI][user.storyLocation] + "\t";
+    // text += "Affinity Increase: " + story[16][user.storyLocation] + "\t";
+    // text += "Bubble 1: " + story[1][user.storyLocation] + "\t";
+    // text += "Character 1: " + story[2][user.storyLocation] + "\t";
+    // text += "Bubble 2: " + story[3][user.storyLocation] + "\t";
+    // text += "Character 2: " + story[4][user.storyLocation] + "\t";
+    // text += "Location: " + story[5][user.storyLocation] + "\t";
+    text += "Link: " + story[special_option][user.storyLocation] + "\t";
+    // text += "Choice A: " + story[choiceA_text][user.storyLocation] + "\t";
+    // text += "Choice B: " + story[choiceB_text][user.storyLocation] + "\t";
+    // text += "Choice C: " + story[choiceC_text][user.storyLocation] + "\t";
+    text += "\n";
     
-    /*
+    
     //Next Location
-    text += "<b>Next location (" + (parseInt(user.storyLocation) + 1) + ")</b><br>";
-    text += "Story Text: " + story[main_text][parseInt(user.storyLocation) + 1] + "<br>";
-    text += "Affinity Increase: " + story[16][parseInt(user.storyLocation) + 1] + "<br>";
-    text +=  "Bubble 1: " + story[1][user.storyLocation + 1] + "<br>";
-    text +=  "Character 1: " + story[2][user.storyLocation + 1] + "<br>";
-    text +=  "Bubble 2: " + story[3][user.storyLocation + 1] + "<br>";
-    text +=  "Character 2: " + story[4][user.storyLocation + 1] + "<br>";
-    text +=  "Location: " + story[5][parseInt(user.storyLocation) + 1] + "<br>";
-    text +=  "Link: " + story[special_option][parseInt(user.storyLocation) + 1] + "<br>";
-    text += "<br>";*/
+    // text += "Next location (" + (parseInt(user.storyLocation) + 1) + ")\n";
+    // text += "Story Text: " + story[main_text][parseInt(user.storyLocation) + 1] + "\n";
+    // text += "Affinity Increase: " + story[16][parseInt(user.storyLocation) + 1] + "\n";
+    // text += "Bubble 1: " + story[1][user.storyLocation + 1] + "\n";
+    // text += "Character 1: " + story[2][user.storyLocation + 1] + "\n";
+    // text += "Bubble 2: " + story[3][user.storyLocation + 1] + "\n";
+    // text += "Character 2: " + story[4][user.storyLocation + 1] + "\n";
+    // text += "Location: " + story[5][parseInt(user.storyLocation) + 1] + "\n";
+    // text += "Link: " + story[special_option][parseInt(user.storyLocation) + 1] + "\n";
+    // text += "\n";
 
-    container1.innerHTML = text;
+    console.log(text);
+    // container1.innerHTML = text;
 
     var input = document.createElement('input');
         input.style.width = "100px";
@@ -771,9 +778,10 @@ function refreshTestContainer()// affiche des données par rapport à la prev/cu
 
     input.onkeypress = function(e)
     {
-        if(e.keyCode == 13)
+        if(e.keyCode == 13)//when we press "enter"
         {
             if(input.value) {user.storyLocation = input.value}
+            pushVariablesToDB();
             refreshInterface();
         }
     };

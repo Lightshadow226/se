@@ -225,7 +225,7 @@
 					<div class="flex-panel logged-in-three-containers">
 						<!--Profile image-->	
 						<div id="profile-overview-top" class="flex-panel">
-							<img style="width:100%; display: block;" src="profile/character_small_portrait.php"/>
+							<img id="index-profile-img" style="width:100%; display: block;" src="profile/character_small_portrait.php"/>
 							<!-- style="display:block;" fait en sorte que le gap en-dessous de l'image disparait https://stackoverflow.com/questions/7774814/remove-white-space-below-image -->
 						</div>
 
@@ -243,9 +243,11 @@
 						<div class="flex-panel" style="padding: 10px; border: 2px solid #f3def2; border-top-left-radius: 10px; border-top-right-radius: 10px;">
 							<!--title-->
 							<div class="flex-container">
-								<div class="flex-panel">
-									<img id="highestAffinityIMG" style="width: 100%; border-radius: 50%; border: 2px solid #f3def2; box-shadow: 0 0 10px #f3def2;"/>
-									<!-- <h2 class="center" style="color: black;">Alistair</h2> -->
+								<div class="flex-panel" style="position: relative;">
+									<!--image-->
+									<img id="highestAffinityIMG"/>
+									<!--percentage-->
+									<h1 id="highestAffinityPERCENTAGE"></h1>
 								</div>
 
 								<div class="flex-container-vertical">
@@ -259,8 +261,6 @@
 							<!--description-->
 							<p id="highestAffinityDESCRIPTION" style="margin-top: 10px; line-height: 1.5em; text-align: justify;"></p>
 							
-							<!--percentage-->
-							<h1 id="highestAffinityPERCENTAGE" style="margin-top: 10px; line-height: 1.5em; text-align: center; vertical-align: middle;"></h1>
 						</div>
 						
 						<!--Button container-->
@@ -396,18 +396,18 @@
 		<div id = "IMG_handle">
 			
 		</div>
+
+
 	</div>
 
 <?php include_once 'partials/footers.php' ?>
 
 </body>
 
-<script src="js/charactersMeet.js"></script>
+<script src = "js/charactersMeet.js"></script>
 <script src = "js/variables.js"></script><!--needed for the logged in functionality of "current chapter"-->
 <script src = "js/library.js"></script>
-
 <script src = "js/index.js"></script><!--needed for the logged in functionality of "current chapter"-->
-
 <script>
 	//logged out
 	initialize();//initialize the random generator

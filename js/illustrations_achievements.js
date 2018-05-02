@@ -14,7 +14,7 @@ var unlocked_achievements_list =
     "Unlocked - Alignment: True Neutral",
     "Unlocked - Bookworm - Unocked",
     "Unlocked - Newbie Attitude",
-    "Unlocked - Party Animal",
+    "Unlocked - Party Animal"
 ];
 
 var unlocked_achievements_list_description = 
@@ -22,7 +22,7 @@ var unlocked_achievements_list_description =
     "Unlocked - Alignment: True Neutral",
     "Unlocked - Bookworm - Unocked",
     "Unlocked - Newbie Attitude",
-    "Unlocked - Party Animal",
+    "Unlocked - Party Animal"
 ];
 
 var locked_achievements_list = 
@@ -30,7 +30,7 @@ var locked_achievements_list =
     "Locked - Alignment: True Neutral",
     "Locked - Bookworm",
     "Locked - Newbie Attitude",
-    "Locked - Party Animal",
+    "Locked - Party Animal"
 ];
 
 var locked_achievements_list_description = 
@@ -38,7 +38,7 @@ var locked_achievements_list_description =
     "???",
     "???",
     "???",
-    "???",
+    "???"
 ];
 
 function createAchievements()

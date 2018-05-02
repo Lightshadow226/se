@@ -23,10 +23,10 @@
 
 	<?php include_once 'partials/headers.php' ?>
 
-	<div class = "main_content">
+	<div class="main_content">
 
         <?php if(isset($_SESSION['username'])): ?>
-            <div id="coming_soon" class="center add_shading">
+			<div id="coming_soon" class="center add_shading">
 			    <img id="img_comming_soon" src="images/general/comingsoon.png">
 		    </div>
 
@@ -43,7 +43,7 @@
                 </div>
 		    </div>
 
-            <div id="coming_soon" class="center">
+            <div id="coming_soon" class="center" style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; margin-bottom: 5px;">
                 <style>
 					.fa
 					{

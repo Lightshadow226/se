@@ -2,8 +2,6 @@
 	CSS DOCUMENT
 	PROPERTY OF DULCET GAMES INC.
 
-	https://ihatetomatoes.net/create-custom-preloading-screen/
-
 	March 7, 2018
 */
 
@@ -269,6 +267,29 @@
 	transform: translate(-50%, -50%);
 	-ms-transform: translate(-50%, -50%);
 	user-select: none;
+}
+
+#highestAffinityIMG
+{
+	position: relative;
+	width: 100%;
+	border-radius: 50%;
+	border: 2px solid #f3def2;
+	box-shadow: 0 0 10px #f3def2;
+}
+
+#highestAffinityPERCENTAGE
+{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	
+	text-align: right;
+	vertical-align: bottom;
+
+	font-size: 1.5em;
+
+	transform: translateX(50%);
 }
 
 /**************************SOCIAL MEDIA BUTTONS IN INDEX.HTML********************************/

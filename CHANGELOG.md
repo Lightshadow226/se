@@ -1,5 +1,19 @@
 #CHANGELOG
 
+Version 1.5.1 (Game Engine, TODO, DataBase)
+- *STRUCTURE*           [gameengine.js]
+                        [header.js]       arrangment of all string continuations in JS files
+
+- *ADDITION*            [TODO.md]           addition of compiling link
+- *CODE*                [127_0_0_1.sql]     addition of default value to variable "physicalallocationint"            
+
+Version 1.5.0 (Game Engine, Google Ads)
+- *STRUCTURE*           [gameengine.js]     creation of the game DOM is now in a php file [generateGameContainer.php], with the style in a css file rather than directly in JS
+- *CSS*                 [map.php]           rounded the corners
+- *GOOGLE ADS*          [googleAds.php]     added google ads to all pages with [footers.php, headers.php]
+- *DESIGN*              [.jpg]              changed the friendship and romance options (they are now square and no shading, and they appear as round)
+- *CODE*                [library.js]        added serena and cecile as coded objects
+
 Version 1.4.0 (Split CSS, Ch. 0 - Completed V2)
 - *DELETION*            [/beta]             removed the beta folder
 - *STRUCTURE*           [.css]              split the css into multiple files
@@ -25,7 +39,7 @@ Version 1.3.27 (Illustrations & Achievements)
 - *ACHIEVEMENTS*        [illustration.php]  changed the design AND removed the achievements for the beta
 - *DELETE ACCOUNT*      [profile.php]       removed the "delete your profile" button
 - *DORM*                [dorm.js]           added the escape function to get out of the dollmaker
-- *LOADER               [headers.php]       fixed the position of the loader (no longer absolute)
+- *LOADER*               [headers.php]       fixed the position of the loader (no longer absolute)
 
 Version 1.3.26 (Dollmaker)
 - *DORM*                [dorm.js]           fixed the dollmaker

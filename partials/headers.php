@@ -105,3 +105,5 @@ $(document).ready(function()
 //DOESN'T WORK: https://stackoverflow.com/questions/30073190/html-css-navigation-bar-highlighting-current-page
 
 </script>
+
+<?php include_once 'partials/googleAds.php' ?>

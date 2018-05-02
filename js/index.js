@@ -20,39 +20,36 @@ $(function create_interface()
 function initialize()
 {
     var left_wing = document.createElement('img');
-
-        //left_wing.style.height = "auto";
         left_wing.src = "images/general/characters_page/chevrons/pink/leftchevron.png";
         left_wing.className = "chevron-img";
-        left_wing.onmouseenter =    function f()
-                                    {
-                                        left_wing.src = "images/general/characters_page/chevrons/purple/leftchevron.png";
-                                    }
-        left_wing.onmouseleave =    function f()
-                                    {
-                                        left_wing.src = "images/general/characters_page/chevrons/pink/leftchevron.png";
-                                    }
-        left_wing.onclick =         function f()
-                                    {
-                                        randomImg();
-                                    }
+        left_wing.onmouseenter = function f()
+        {
+            left_wing.src = "images/general/characters_page/chevrons/purple/leftchevron.png";
+        }
+        left_wing.onmouseleave = function f()
+        {
+            left_wing.src = "images/general/characters_page/chevrons/pink/leftchevron.png";
+        }
+        left_wing.onclick = function f()
+        {
+            randomImg();
+        }
 
     var right_wing = document.createElement('img');
-    
         right_wing.src = "images/general/characters_page/chevrons/pink/rightchevron.png";
         right_wing.className = "chevron-img";
         right_wing.onmouseenter = function f()
-            {
-                right_wing.src = "images/general/characters_page/chevrons/purple/rightchevron.png";
-            }
+        {
+            right_wing.src = "images/general/characters_page/chevrons/purple/rightchevron.png";
+        }
         right_wing.onmouseleave = function f()
-            {
-                right_wing.src = "images/general/characters_page/chevrons/pink/rightchevron.png";
-            }
+        {
+            right_wing.src = "images/general/characters_page/chevrons/pink/rightchevron.png";
+        }
         right_wing.onclick = function f()
-            {
-                randomImg();
-            }
+        {
+            randomImg();
+        }
 
     document.getElementById('left_wing').appendChild(left_wing);
     document.getElementById('right_wing').appendChild(right_wing);
@@ -90,6 +87,12 @@ function randomImg()
 }
 
 //LOGGED IN
+function update_profile_img()
+{
+    $.get('profile/character_small_portrait.php');//amazingly faster
+    document.getElementById('index-profile-img').src = "profile/character_small_portrait.php";
+}
+
 function update_highest_affinity()
 {
     var char = getHighestAffinity();

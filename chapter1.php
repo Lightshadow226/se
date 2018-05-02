@@ -25,7 +25,7 @@
 	<div class = "main_content">
 
 		<div id = "Container">
-
+			<?php include_once 'partials/generateGameContainer.php' ?>
 		</div>
 		
 		<div id = "DB_handle">

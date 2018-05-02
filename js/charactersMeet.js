@@ -43,7 +43,7 @@ var characters =
     "ellie",
     "karolina",
     "neha",
-    "raquel",    
+    "raquel"    
 ];
 
 var description = 

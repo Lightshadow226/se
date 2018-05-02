@@ -7,9 +7,17 @@
 - **DEBUG**               [gameengine.js]                                 empêcher le infinity meter d'augmenter si on a déjà visité la slide (il faut faire isVisited)
 https://www.w3schools.com/css/tryit.asp?filename=trycss3_transition1
 
-
-`TODO: in Order`
-- **DATABASE**            [variables.js, gameengine.js]                   account for movements -> movement meter/action points -> faire un système pour tout
+`June's List for Ch. 1:`
+- Same as Ch. 0, the characters don't have the right emotion sprites (Admin error)
+- All Main 10 Sprites are not properly proportionned for some reason (Waiting for Cecile to correct that)
+- The bar at the bottom which shows the affinity with all characters does not automatically update whenever you make a dialog choice. Not sure if that was intentional. (coding error)
+- "You have no objectives for now" shows up after Neha's dialog despite us still being on the "Explore the School" objective. (coding error)
+- SLIDE 148 should have a choice of outfit but it is not coded yet. Not an error per say, but a to-do.
+- Tadashi and Neha have a determinant dialog that you unlock in the gym depending on prior choices earlier in the episode and it doesn't work properly (coding error)
+- Progress bar tends to work weirdly?? Like, it will go from 90% progress to 85% randomly, then go back to 90%.  (coding error)
+- On the index.php dashboard. The "Highest Infinity" section stays at "none" despite me clearly having higher infinity with some characters (coding error)
+- Same with "Current Chapter", it stays at Ch. 0 (coding error)
+- Name stays at "NONE" in game even thought it's changed in the card and in database (coding error) - same with Chapter0
 
 `TODO: HIGH Importance`
 - **DEBUG**               [variables.js, get and pushvariables.php]       s'assurer qu'il n'y ait plus de variables utilisés sans la base de données
@@ -18,10 +26,12 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss3_transition1
 - **INF METER**           [gameengine.js]                                 Fix bug that keeps incrementing the points
 - **CH 0 FORM**           [gameengine.js, Chapter0.xlsx]                  Pronoun choice, and Scholar name instead of username
 - **GAME**                [game.php]                                      Current vs Finished vs Unattempted Chapters + Replay option
-
-
+- **DATABASE**            [variables.js, get & push.php]                  push seulement les variables nécéssaires
+- **DATABASE**            [variables.js, get & push.php]                  régler le problème de async
+- **DATABASE**                                                            créer un nouvel utilisateur ne crée que le nouveau compte et n'ajoute pas une nouvelle ligne dans les autres tables pour le nouvel utilisateur
 
 `TODO: MEDIUM Importance`
+- **DATABASE**            [variables.js, gameengine.js]                   account for movements -> movement meter/action points -> faire un système pour tout
 - **CODE - RESTRUCT**     [.php]                                          Organiser les fichiers PHP
 - **FILES - ADD**         [.jpg]                                          AJOUTER blackscreen.jpg
 - **FILES - ADD**         [profile_idcard.php, profile.php]               Download fonts in proper file format to complete the student ID card generation (JUNE)
@@ -47,6 +57,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss3_transition1
 - **DESIGN**              [game.php]                                      progress bar ne doit pas afficher le pourcentage en-dessous de 10% (sinon ça a l'air moche)
 - **DESIGN**              [.PNG, index.php]                               modifier les dimensions de l'image "customize your character"
 - **DESIGN**              [index.php]                                     le border shading entre le header et le first card est causé par: style="position: relative;"
+- **DESIGN**              [gameengine.php]                                le infinity meter coupe le côté droit de l'image (il faut le mettre en position absolue)
 
 `TODO: ONGOING`
 - **CHARACTERS - INPUT**  [relationships.js, variables.js]                we still need to add characters over time in "classmates" and "others"
@@ -104,3 +115,7 @@ Start in : **%HOMEDRIVE%%HOMEPATH%**
 `Bootstrap Frameworks`
 Bootstrap Studio (60$): https://bootstrapstudio.io/
 Pingendo (99$): https://pingendo.com/index.html
+
+`Useful coding links`
+**Checks for errors and warnings and makes the code run faster**
+Closure Compiler: https://closure-compiler.appspot.com/home

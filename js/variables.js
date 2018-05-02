@@ -120,7 +120,7 @@ var genders = ["She/Her", "He/Him", "They/Them"];
         "tyler",
         "Serena",
         "ca",
-        "ladya",
+        "ladya"
         //"Coach Davis",
         //"Teacher 2",
     ];
@@ -140,8 +140,8 @@ var genders = ["She/Her", "He/Him", "They/Them"];
         "Tyler",
         "Serena",
         "C & A",
-        "Lady Arlington",
-        "Coach Davis",
+        "Lady Arlington"
+        //Coach Davis"
     ];
 
     //full name is unused
@@ -159,8 +159,8 @@ var genders = ["She/Her", "He/Him", "They/Them"];
         "Tyler Williams",
         "Serena",
         "C & A",
-        "Lady Amelia Arlington",
-        "Coach Murdoc Davis",
+        "Lady Amelia Arlington"
+        //"Coach Murdoc Davis",
     ];
 
     var birthday = 
@@ -177,8 +177,8 @@ var genders = ["She/Her", "He/Him", "They/Them"];
         "August 21st",
         "June 30th",
         "???",
-        "July 1st",
-        "",//davis
+        "July 1st"
+        //"",//davis
     ];
 
     var likes = 
@@ -202,7 +202,7 @@ var genders = ["She/Her", "He/Him", "They/Them"];
     [
         "Arrogance, laziness, coldness",
         "Tadashi, country music, hypocrisy",
-        "rudeness, being made fun of, suffering",
+        "rudeness, being made fun of, suffering" ,
         "Bullying, not being taken seriously, everything boring",
         "Being bothered, ugly clothes, being told what to do",
         "Fashion disasters, being forced to be social, science class",
@@ -262,14 +262,14 @@ var genders = ["She/Her", "He/Him", "They/Them"];
     [
         "You just arrived at Arlington Academy, but everything is so new and big! You're going to need help from a few senior students who will lay down the basics on how things work around here.",
         "Classes start tomorrow, so today is the time to try to make some new friends...but why is everybody so stressed today? Turns out even the simplest things back at home are much more complicated here at Arlington.",
-        "Oh no! You're running late to class on your first day! As if this wasn't bad enough, the whole school seems to be revolving around a certain teenage celebrity and an exclusive homecoming party. But things aren't exactly as great as they look on the surface...",
+        "Oh no! You're running late to class on your first day! As if this wasn't bad enough, the whole school seems to be revolving around a certain teenage celebrity and an exclusive homecoming party. But things aren't exactly as great as they look on the surface... ",
         "Description",
         "Description",
         "Description",
         "Description",
         "Description",
         "Description",
-        "Description",
+        "Description"
     ];
 
 //All Characters
@@ -637,9 +637,21 @@ var personnages =
                         characters_path + "../other/serena/angry.png",      // 4: angry
                         characters_path + "../other/serena/surprise.png",   // 5: surprise
                     ],
+    charaY:         [
+        characters_path + "../other/cecile/base.png",       // 0: base
+        characters_path + "../other/serena/happy.png",      // 1: happy
+        characters_path + "../other/serena/blush.png",      // 2: blush
+        characters_path + "../other/serena/annoyed.png",    // 3: annoyed
+        characters_path + "../other/serena/angry.png",      // 4: angry
+        characters_path + "../other/serena/surprise.png",   // 5: surprise
+                    ],
     l_arlington:    [
-                        characters_path + "l_arlington/larlingtonneutral.png",   // 0 : Neutral expresion
-                        characters_path + "l_arlington/larlingtonneutral_2.png",   // 1 : reverse....wtf we need a nomenclature for left and right...Unless there is a way to reverse an image from left to right by code
+                        characters_path + "../teachers/LadyArlington/base.png",    // 0 : Neutral expresion
+                        characters_path + "../teachers/LadyArlington/happy.png",   // 1 : Neutral expresion
+                        characters_path + "../teachers/LadyArlington/blush.png",   // 2 : Neutral expresion
+                        characters_path + "../teachers/LadyArlington/annoyed.png", // 3 : Neutral expresion
+                        characters_path + "../teachers/LadyArlington/angry.png",   // 4 : Neutral expresion
+                        characters_path + "../teachers/LadyArlington/surprise.png",// 5 : Neutral expresion
                     ]
 };
 
@@ -648,67 +660,66 @@ function pullVariablesFromDB()
     //we're going to load the data from the database, and put it in the div with the ID = "#DB_handle" -> thus why we use $('#DB_handle')
 
     $('#DB_handle').load('dbtransfers/get_variables.php', function()//pull variables from the DB
-    /*$.ajax({
-        type: "GET",
-        url: 'dbtransfers/get_variables.php',
-        success: function(JSONdata)//pull variables from the DB*/
-        {
-            // document.getElementById('DB_handle').innerHTML = JSONdata;
-            // alert(JSONdata)
+    {
+        // document.getElementById('DB_handle').innerHTML = JSONdata;
+        // alert(JSONdata)
 
-            // var data_array = $.parseJSON(JSONdata);
-            /********************
-            USERINFO table
-            *********************/
-            user.username = document.getElementById("db_handle_username").innerHTML;
-            user.energy = document.getElementById("db_handle_energy").innerHTML;
-            user.money = document.getElementById("db_handle_money").innerHTML;
+        // var data_array = $.parseJSON(JSONdata);
+        /********************
+        USERINFO table
+        *********************/
+        user.username = document.getElementById("db_handle_username").innerHTML;
+        user.energy = document.getElementById("db_handle_energy").innerHTML;
+        user.money = document.getElementById("db_handle_money").innerHTML;
 
-            /********************
-            SCHOLARINFO table
-            *********************/
-            user.scholarname = document.getElementById("db_handle_scholarname").value;
-            user.department = document.getElementById("db_handle_department").value;
-            user.sex = parseInt(document.getElementById("db_handle_sex").value);
-            user.gender = parseInt(document.getElementById("db_handle_gender").value);
-            user.haircolor = parseInt(document.getElementById("db_handle_haircolor").value);
-            user.hairstyle = parseInt(document.getElementById("db_handle_hairstyle").value);
-            user.skincolor = parseInt(document.getElementById("db_handle_skincolor").value);
-            user.eyecolor = parseInt(document.getElementById("db_handle_eyecolor").value);
-            user.wigID = parseInt(document.getElementById("db_handle_wigID").value);
+        /********************
+        SCHOLARINFO table
+        *********************/
+        user.scholarname = document.getElementById("db_handle_scholarname").value;
+        user.department = document.getElementById("db_handle_department").value;
+        user.sex = parseInt(document.getElementById("db_handle_sex").value);
+        user.gender = parseInt(document.getElementById("db_handle_gender").value);
+        user.haircolor = parseInt(document.getElementById("db_handle_haircolor").value);
+        user.hairstyle = parseInt(document.getElementById("db_handle_hairstyle").value);
+        user.skincolor = parseInt(document.getElementById("db_handle_skincolor").value);
+        user.eyecolor = parseInt(document.getElementById("db_handle_eyecolor").value);
+        user.wigID = parseInt(document.getElementById("db_handle_wigID").value);
+        
+        // alert(user.scholarname);
 
-            /********************
-            STORY table
-            *********************/
-            user.storyLocation = document.getElementById("db_handle_story_location").value;//we should use an input and .value
-            user.last_chapter_played = document.getElementById("db_handle_last_chapter_played").value;//we should use an input and .value
-            user.physicalLocationInt = parseInt(document.getElementById("db_handle_physicallocationint").value);
-            
-            // user.storyLocation = JSONdata.getElementById("db_handle_story_location").value;//we should use an input and .value
-            // user.storyLocation = data_array['username'];
-            // alert("pull: " + user.storyLocation);
+        /********************
+        STORY table
+        *********************/
+        user.storyLocation = document.getElementById("db_handle_story_location").value;//we should use an input and .value
+        user.last_chapter_played = document.getElementById("db_handle_last_chapter_played").value;//we should use an input and .value
+        user.physicalLocationInt = parseInt(document.getElementById("db_handle_physicallocationint").value);
+        
+        // user.storyLocation = JSONdata.getElementById("db_handle_story_location").value;//we should use an input and .value
+        // user.storyLocation = data_array['username'];
+        // alert("pull: " + user.storyLocation);
 
-            /********************
-            AFFINITY table
-            *********************/
-            karolina.affinity = document.getElementById("db_handle_a1").value;
-            ellie.affinity = document.getElementById("db_handle_a2").value;
-            neha.affinity = document.getElementById("db_handle_a3").value;
-            raquel.affinity = document.getElementById("db_handle_a4").value;
-            claire.affinity = document.getElementById("db_handle_a5").value;
-            alistair.affinity = document.getElementById("db_handle_a6").value;
-            tadashi.affinity = document.getElementById("db_handle_a7").value;
-            tegan.affinity = document.getElementById("db_handle_a8").value;
-            tyler.affinity = document.getElementById("db_handle_a9").value;
-            axel.affinity = document.getElementById("db_handle_a10").value;
-            lady_arlington.affinity = document.getElementById("db_handle_a11").value;
-            coach_davis.affinity = document.getElementById("db_handle_a12").value;
-            serena.affinity = document.getElementById("db_handle_a13").value;
-            cecile.affinity = document.getElementById("db_handle_a14").value;
-            teacher_chapter_2.affinity = document.getElementById("db_handle_a15").value;
+        /********************
+        AFFINITY table
+        *********************/
+        karolina.affinity = document.getElementById("db_handle_a1").value;
+        ellie.affinity = document.getElementById("db_handle_a2").value;
+        neha.affinity = document.getElementById("db_handle_a3").value;
+        raquel.affinity = document.getElementById("db_handle_a4").value;
+        claire.affinity = document.getElementById("db_handle_a5").value;
+        alistair.affinity = document.getElementById("db_handle_a6").value;
+        tadashi.affinity = document.getElementById("db_handle_a7").value;
+        tegan.affinity = document.getElementById("db_handle_a8").value;
+        tyler.affinity = document.getElementById("db_handle_a9").value;
+        axel.affinity = document.getElementById("db_handle_a10").value;
+        lady_arlington.affinity = document.getElementById("db_handle_a11").value;
+        coach_davis.affinity = document.getElementById("db_handle_a12").value;
+        serena.affinity = document.getElementById("db_handle_a13").value;
+        cecile.affinity = document.getElementById("db_handle_a14").value;
+        teacher_chapter_2.affinity = document.getElementById("db_handle_a15").value;
 
-            try{refreshInterface();}catch(e){};
-        });
+        $(document).ready(function(){try{refreshInterface();}catch(e){}});
+        $(document).ready(function(){try{update_highest_affinity(); update_current_chapter();}catch(e){}});
+    });
 }
 
 function pushVariablesToDB()
@@ -719,6 +730,8 @@ function pushVariablesToDB()
 
     $(document).ready(function()
     {
+        console.log("pulling data from database...");
+
         $.post('dbtransfers/push_variables.php',
         {
             //*********************************************
@@ -761,7 +774,7 @@ function pushVariablesToDB()
             'serena_affinity': serena.affinity,
             'cecile_affinity': cecile.affinity,
             'teacher_chapter_2_affinity': teacher_chapter_2.affinity,
-        })
+        });
     });
 }
 

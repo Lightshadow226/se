@@ -23,8 +23,6 @@ include_once 'partials/parsePasswordReset.php';
 
 <body class = "center-screen">
 
-    <?php /*include_once 'partials/headers.php'*/?>
-
 	<a href="index.php"><img id="logo" class="" src="images/general/se-logo.png"></a>
 
 	<div class = "">
@@ -60,8 +58,6 @@ include_once 'partials/parsePasswordReset.php';
 		<br><p style="text-align:center;"><a href="index.php">Back</a> </p>
         </div>
 	</div>
-
-    <?php/* include_once 'partials/footers.php'*/ ?>
 
 </body>
 
