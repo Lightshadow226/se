@@ -1,11 +1,5 @@
 ﻿#TODO NOTES
 
-`TODO: Next`
-- **CHAPTER INPUT**       [chapter1.js]                                   la chapitre 1 est terminé jusqu'à la slide 129, donc il va falloir valider le reste + rajouter les émotions
-- **PPT**                 [Chapter2Slides Part2.ppt]                      slides à terminer chapitre 2 (le ppt et le code)]
-- **TODO**                [chapter 1.js]                                  il reste à implémenter les illustrations et le form pour sélectionner notre uniforme
-- **DEBUG**               [gameengine.js]                                 empêcher le infinity meter d'augmenter si on a déjà visité la slide (il faut faire isVisited)
-https://www.w3schools.com/css/tryit.asp?filename=trycss3_transition1
 
 `June's List for Ch. 1:`
 - Same as Ch. 0, the characters don't have the right emotion sprites (Admin error)
@@ -20,16 +14,24 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss3_transition1
 - Name stays at "NONE" in game even thought it's changed in the card and in database (coding error) - same with Chapter0
 
 `TODO: HIGH Importance`
+https://www.w3schools.com/css/tryit.asp?filename=trycss3_transition1
+- **CHAPTER INPUT**       [chapter1.js]                                   la chapitre 1 est terminé jusqu'à la slide 129, donc il va falloir valider le reste + rajouter les émotions
+- **PPT**                 [Chapter2Slides Part2.ppt]                      slides à terminer chapitre 2 (le ppt et le code)]
+- **TODO**                [chapter 1.js]                                  il reste à implémenter les illustrations et le form pour sélectionner notre uniforme
+- **DEBUG**               [gameengine.js]                                 empêcher le infinity meter d'augmenter si on a déjà visité la slide (il faut faire isVisited)
 - **DEBUG**               [variables.js, get and pushvariables.php]       s'assurer qu'il n'y ait plus de variables utilisés sans la base de données
 - **DATABASE**            [variables.js, get & push.php]                  push seulement les variables nécéssaires
 - **DATABASE**            [variables.js, get & push.php]                  régler le problème de async
 - **DATABASE**                                                            créer un nouvel utilisateur ne crée que le nouveau compte et n'ajoute pas une nouvelle ligne dans les autres tables pour le nouvel utilisateur
+- **Illustration generator**                                              finish it
+- **Structure**           [game.php]                                      3 sections: current chapter, chapters to go, finished chapters
+make sure that relationship levels are the same in relationships, game, etc.
+FUCKING FIX THE ASYNC PROBLEM
 
 `TODO: MEDIUM Importance`
 - **DATABASE**            [variables.js, gameengine.js]                   account for movements -> movement meter/action points -> faire un système pour tout
 - **CODE - RESTRUCT**     [.php]                                          Organiser les fichiers PHP
 - **FILES - ADD**         [.jpg]                                          AJOUTER blackscreen.jpg
-- **FILES - ADD**         [profile_idcard.php, profile.php]               Download fonts in proper file format to complete the student ID card generation (JUNE)
 - **DEBUG**               [chapter0.js, chapter1.js]                      valider que toutes les valeurs sont affectées à la bonne slide (array du chapter 0 & 1)
 - **DEBUG**               [se-stylesheet.css]                             réviser le CSS dans "se-stylesheet" pour les balises: GENERAL, INDEX.PHP, FAQ.PHP, FEATURES.HTML.
 - **DEBUG**               [se-stylesheet.css]                             Il faut que les page-specific attributes ne soient jamais utilisés dans une autre page
@@ -39,6 +41,8 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss3_transition1
 - **GAME ENGINE**         [gameengine.js]                                 redesign the game engine for efficiency (put it on paper first)
 - **IMPROVEMENTS**        [imageGenerator.php]                            there are still improvements to be made in this file
 - **IMPROVEMENTS**        [gameengine.js, variables.js]                   remove the variable "choice" (for the Ch.0 Form)
+- **Card ID**             [profile.php]                                   afficher l'épisode et le highest affinity sur le ID Card
+- **School files**        [relationships.php]                             zoom function on the school files
 
 `TODO: LOW Importance`
 - **DEBUG**               [login.php, signup.php, resetpassword.php]      Améliorer les messages d'erreurs pour login.php, signup.php, resetpassword.php
@@ -50,6 +54,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss3_transition1
 - **DESIGN**              [.PNG, index.php]                               modifier les dimensions de l'image "customize your character"
 - **DESIGN**              [index.php]                                     le border shading entre le header et le first card est causé par: style="position: relative;"
 - **DESIGN**              [gameengine.php]                                le infinity meter coupe le côté droit de l'image (il faut le mettre en position absolue)
+- **STRUCTURE**           ["\images -> "\_new_images_folder"]             change the path of all images to the new images folder
 
 `TODO: ONGOING`
 - **CHARACTERS - INPUT**  [relationships.js, variables.js]                we still need to add characters over time in "classmates" and "others"
@@ -103,6 +108,7 @@ Start in : **%HOMEDRIVE%%HOMEPATH%**
 
 `CSS tools`
 **CSS Center Vertically:** https://stackoverflow.com/questions/8865458/how-do-i-vertically-center-text-with-css
+Amazing designs: https://semantic-ui.com/elements/button.html
 
 `Bootstrap Frameworks`
 Bootstrap Studio (60$): https://bootstrapstudio.io/
@@ -111,3 +117,17 @@ Pingendo (99$): https://pingendo.com/index.html
 `Useful coding links`
 **Checks for errors and warnings and makes the code run faster**
 Closure Compiler: https://closure-compiler.appspot.com/home
+
+`To Buy`
+Affinity Designer: https://affinity.serif.com/en-gb/designer/
+
+
+`Marketing Tools`
+https://www.creativebloq.com/graphic-design/free-graphic-design-software-8134039
+https://www.techradar.com/news/the-best-free-software-for-graphic-designers-2017
+https://www.cnewcomer.com/canva-alternatives/
+
+
+`Gravit Designer Tools`
+Shortcuts: https://medium.com/@lfl1984/keyboard-shortcuts-for-gravit-designer-21e8021707f5
+Tips: https://medium.com/gravitdesigner/these-13-features-will-boost-your-productivity-in-gravit-designer-f594e151de5c

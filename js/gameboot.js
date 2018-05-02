@@ -83,12 +83,7 @@ function create_line(index, type)
             line.style.margin = "0px;";
         }
         
-        play_episode_button.addEventListener( "click",
-        function (e)
-        {
-            window.open(get_button_ID(play_episode_button.id), "_self");
-        },
-        true);
+        play_episode_button.onclick = function (){window.open(get_button_ID(play_episode_button.id), "_self")};
 
         finishedChapters_lines_container.appendChild(line);
     }

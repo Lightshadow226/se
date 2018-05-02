@@ -356,10 +356,14 @@
     {
         flex: 1;/*toutes les lignes vont avoir la même hauteur*/
         width: 100%;
+
         display: flex;
         flex-direction: row;
+
         text-align: left;
         align-content: left;
+        margin: 1px;
+        
         border-radius: 10px;
     }
 

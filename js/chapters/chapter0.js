@@ -43,7 +43,6 @@ function Chapter0()
     {
         story[i]= new Array();//il faut créer des arrays pour chaque array. Donc pour x[0], il faut créer des arrays, mais pour x[1] aussi, les deux sont indépendents. Il peut y avoir x[0][1][1][10] et x[1][2] qui coexistent
     }
-
     //story[0] === Story Text
     story[0] = [
         "(The trip to Arlington was long, but I’m finally here!)",//0 
@@ -65,8 +64,8 @@ function Chapter0()
         "(Next)",
         "Hi " + CharaX_username + " ! (Finally, a smiling face!)",
         "(Ugh, I hate paperwork. But at least now I’m not completely lost.)",
-        "Go inside!",
-        "(They handed me several papers, all filled with questions I had to answer.)",//20 
+        "(I followed Serena inside the school.)",
+        "(She handed me several papers, all filled with questions I had to answer.)",//20 
         "(Next)",
         "(Next)",
         "(I already knew about those but hearing " + CharaX_username + " list them makes it feel all too real...)",
@@ -97,7 +96,7 @@ function Chapter0()
         "(Next)",
         "Pfff. That sounds easy enough. How hard can it be to make friends?",
         "(I remembered how nobody was smiling at the entrance of the school earlier. I hope I can make some friends!)",//50 
-        "(Next)",
+        "(…Gas mask?)",
         "null",
         "(Next)",
         "null",
@@ -127,9 +126,9 @@ function Chapter0()
         "(She had an aura of power and mystery… I felt intimidated and amazed at the same time. " + CharaX_username + " handed her the paperwork I filled out.)",
         "(Lady Arlington turned to look at us.)",
         "(Hey eyes met mine and...)",//80 
-        "(She almost dropped my paperwork on the ground.)",
+        "(She dropped my paperwork on the ground.)",
         "(The principal looked at me as if she saw a ghost. It felt very awkward and I didn’t know where to look.)",
-        "W-Wait! (But " + CharaX_username + " just left the hallway, leaving me alone with the Principal.)",
+        "W-Wait! (But " + CharaX_username + " just left the hallway, leaving me alone with the principal.)",
         "(Her look lingered for a couple of seconds. I could feel myself beginning to sweat a little as her eyes pierced my soul.)",
         "(END OF CHAPTER 0)",//85 
         ];
@@ -151,13 +150,13 @@ function Chapter0()
         "null",
         "Hi there!",
         "null",//15 
-        "Hehe, sorry. I didn’t mean to startle you. You must be our new scholar.",
+        "Hehe, sorry. I didn’t mean to startle you. You must be our new scholarship student.",
         "My name is " + CharaX_username + " and I was assigned by the principal to help you with all the formalities here at Arlington.",
         "It’s nice to meet you! Now, follow me please. Before I show you where your dorm and classrooms are, you have some paperwork to fill.",
         "null",
         "null",//20 
         "It’s important for the school’s administration to know as much about you as possible so that Arlington can give you the education you need to tackle the world when you graduate.",
-        "First, fill in the Academic Information Form. Arlington has 7 faculties in total: Business and Commerce, Pure and Applied Sciences, Medical Sciences, Fine Arts, Performing Arts, Fashion, and Athletics.",
+        "First, tell me which department you belong to. Arlington has seven in total: Business and Commerce, Pure and Applied Sciences, Medical Sciences, Fine Arts, Performing Arts, Fashion, and Athletics.",
         "null",
         "null",//24 Department Form
         "null",//25 
@@ -169,7 +168,7 @@ function Chapter0()
         "null",//31 Choose your name Form
         "Thanks! All the paperwork is now done!",
         "Now that you know where your dorm is, try exploring the school a little.",
-        "I’ll be waiting for you in the hallway.",
+        "I’ll be waiting for you right here.",
         "null",//35 
         "Hi again!",
         "Oh! I forgot to tell you about energy.",
@@ -181,12 +180,12 @@ function Chapter0()
         "Some people will be relatively easy to get along with, others… not so much.",
         "All the characters you’re going to meet will have an “infinity meter”. You will have several dialogue choices. You’re going to have to choose whether you want your choices to build on your friendship with them, or your romance.",
         "Friendship dialogue options will be indicated with a handshake button while romance dialogue options will be indicated with a heart button!",//45 
-        "Furthermore, if you choose to just stay friends with a character and only pick friendship dialogue options, your infinity meter will only go up to a certain number, not one point more.",
+        "Furthermore, if you choose to just stay friends with a character and only pick friendship dialogue options, your infinity meter will only go up to 50%, not one percent more.",
         "Only romance dialogue options will make your infinity meter with a character reach its max.",
         "Once you choose, you’ll have to make yet another choice of dialogues that will either raise, drop, or leave your infinity meter as it is.",
         "Choose wisely! If your infinity meter is too low, you will not get the date you want with your favorite character at the end of each chapter.",
         "Haha! You’ll find that the students at Arlington Academy aren’t as simple to figure out.",//50 
-        "Go ahead and give it a try. I think I see someone in Classroom 1. Talk to them and see if you can make the right choice.",
+        "Go ahead and give it a try. I know some of my friends are in Classroom 1. Why don't you pay them a visit? Oh and also… Don’t mind the gas mask, it's for aesthetic purposes.",
         "null",
         "Hi! You must be a new scholarship student. Welcome to Arlington!",
         "null",
@@ -214,13 +213,13 @@ function Chapter0()
         "null",
         "null",
         "null",
-        "Here’s one of the new scholarship students Mrs. Arlington!",
+        "Here’s one of the new scholarship students Ms. Arlington!",
         "null",//80 
         "null",
         "null",
         "Well, this feels a bit awkward...so I’m going to head out. I’ve got a game to develop. Good luck and have fun at Arlington!",
         "null",
-        "C-Could it be…that you are...?",//85 
+        "null",//85 
         ];
     //story[2] === Character 1
     story[2] = [
@@ -252,11 +251,11 @@ function Chapter0()
         personnages.charaX[0],//25 
         personnages.charaX[1],
         personnages.charaX[1],
-        personnages.charaX[1],
-        personnages.charaX[1],
-        personnages.charaX[1],//30 
+        personnages.charaX[0],
+        personnages.charaX[0],
+        personnages.charaX[0],//30 
         "null",//31 Choose your name Form
-        personnages.charaX[1],
+        personnages.charaX[0],
         personnages.charaX[0],
         personnages.charaX[0],
         "null",//35 
@@ -304,9 +303,9 @@ function Chapter0()
         personnages.charaX[0],
         personnages.charaX[0],
         personnages.charaX[0],
-        personnages.charaX[0],//80 
-        personnages.charaX[0],
-        personnages.charaX[0],
+        "null",//80 
+        "null",
+        "null",
         personnages.charaX[0],
         personnages.l_arlington[5],
         personnages.l_arlington[5],//85 
@@ -1913,6 +1912,8 @@ function Chapter0()
         -1,
         -1,//85 
         ];
+
+
 }
 
 Chapter0();//the simple act of appending the .js file will load the chapter into memory

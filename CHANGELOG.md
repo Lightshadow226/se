@@ -1,8 +1,11 @@
 #CHANGELOG
 
+Version 1.5.3 (Ch. 0 Improvements)
+- *Excel*               [chapter0.js]       made some changes to the dialog
+
 Version 1.5.1 (Game Engine, TODO, DataBase)
 - *STRUCTURE*           [gameengine.js]
-                        [header.js]       arrangment of all string continuations in JS files
+                        [header.js]         arrangment of all string continuations in JS files
 
 - *ADDITION*            [TODO.md]           addition of compiling link
 - *CODE*                [127_0_0_1.sql]     addition of default value to variable "physicalallocationint"            
@@ -39,7 +42,7 @@ Version 1.3.27 (Illustrations & Achievements)
 - *ACHIEVEMENTS*        [illustration.php]  changed the design AND removed the achievements for the beta
 - *DELETE ACCOUNT*      [profile.php]       removed the "delete your profile" button
 - *DORM*                [dorm.js]           added the escape function to get out of the dollmaker
-- *LOADER*               [headers.php]       fixed the position of the loader (no longer absolute)
+- *LOADER*               [headers.php]      fixed the position of the loader (no longer absolute)
 
 Version 1.3.26 (Dollmaker)
 - *DORM*                [dorm.js]           fixed the dollmaker
@@ -90,7 +93,9 @@ Version 1.3.18 (Profile Page)
 - *IMG GENERATOR*       [imageGenerator.php]    Added relevant changes to account for changes in profile.php
 
 Version 1.3.17 (Loader, Database)
-- *DATABASE*            [variables.js, get and pushvariables.php]       AJOUTÉ "user.physicalLocation" dans le get et le push de DB_handle, et modifié un peu le game engine
+- *DATABASE*            [variables.js]
+                        [getvariables.php]
+                        [pushvariables.php] AJOUTÉ "user.physicalLocation" dans le get et le push de DB_handle, et modifié un peu le game engine
 - *DORM - IMAGES*       [dorm.php]          ajouté les images des highlights (laptop, le wardrobe, le book et le bag)
 - *DESIGN*              [headers.php]       ajouté un loader à toutes les pages (il va rester à l'adapter pour le dorm.php -> wardrobe)
 
@@ -152,12 +157,15 @@ Version 1.3.7
 - *OLD WEBSITE*         [old HTML]          added the old website folder
 
 Version 1.3.6
-- *DATABASE*            [variables.js]              enregistré toutes les variables dans la DB d'une shot (à chaque fois qu'on clique quelque part sur la page)
-- *CHAPTER INPUT*       [variables.js, getvariables.php, pushvariables.php]     terminé toutes les manipulations PHP/JS (push and pull)
-- *DATABASE*            [variables.js]              Fixed the affinity = "" (a string worth nothing or 0) -> when adding -5, would give "0-5"
-- *DOLL MAKER*          [dorm.js]                   added the skin color as a customization option
-- *DEBUG*               [gameengine.js]             added back the debugging feature of the game
-- *RELATIONSHIPS*       [relationships.js, library.js]          added back the infinity meter in the relationships page (added the characters as variables, and in the library.js function)
+- *DATABASE*            [variables.js]      enregistré toutes les variables dans la DB d'une shot (à chaque fois qu'on clique quelque part sur la page)
+- *CHAPTER INPUT*       [variables.js]
+                        [getvariables.php]
+                        [pushvariables.php] terminé toutes les manipulations PHP/JS (push and pull)
+- *DATABASE*            [variables.js]      Fixed the affinity = "" (a string worth nothing or 0) -> when adding -5, would give "0-5"
+- *DOLL MAKER*          [dorm.js]           added the skin color as a customization option
+- *DEBUG*               [gameengine.js]     added back the debugging feature of the game
+- *RELATIONSHIPS*       [relationships.js]
+                        [library.js]        added back the infinity meter in the relationships page (added the characters as variables, and in the library.js function)
 
 Version 1.3.5 (June)
 - Added more content in the "Start Playing" div in index.php
@@ -168,16 +176,20 @@ Version 1.3.5 (June)
 
 Version 1.3.4 (STABLE)
 
-- *TYPO*            [ALL FILES]                     changé "Sweet Elite: Flirt and Uncover the Secrets of Arlington Academy!<" pour enlever le typo
-- *DOLL MAKER*      [dorm.php]                      finished the Doll Maker
-- *DM - NOTE*       [characterGenerator.php]        this file is unused, but is kept just in case we want to try to make it work
-- *DM - NOTE*       [randomizer.php, imageGenerator.php, profileidcard.php, scholar_sprite.php]        optimization
-- *DM - NOTE*       [dorm.js]                       le wardrobe est sélectionné par défaut, par AJAX $(function(){});
-- *BUG*             [profile_idcard]                the colors are weird
+- *TYPO*            [ALL FILES]                 changé "Sweet Elite: Flirt and Uncover the Secrets of Arlington Academy!<" pour enlever le typo
+- *DOLL MAKER*      [dorm.php]                  finished the Doll Maker
+- *DM - NOTE*       [characterGenerator.php]    this file is unused, but is kept just in case we want to try to make it work
+- *DM - NOTE*       [randomizer.php]
+                    [imageGenerator.php]
+                    [profileidcard.php]
+                    [ scholar_sprite.php]       optimization
+- *DM - NOTE*       [dorm.js]                   le wardrobe est sélectionné par défaut, par AJAX $(function(){});
+- *BUG*             [profile_idcard]            the colors are weird
 
 Version 1.3.3 (UNSTABLE)
 
-- *DOLL MAKER*      [dorm.php, characterGenerator.php] Started the Doll maker (this is the things that works best) -> les variables se passent en paramètre quand on ne veut pas créer une image, mais l'image ne fonctionne pas quand on l'appelle.
+- *DOLL MAKER*      [dorm.php]
+                    [characterGenerator.php]    Started the Doll maker (this is the things that works best) -> les variables se passent en paramètre quand on ne veut pas créer une image, mais l'image ne fonctionne pas quand on l'appelle.
 
 Version 1.3.2 (June)
 - Added 'locked' image for illustrations that are still locked
