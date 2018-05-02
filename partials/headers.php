@@ -72,16 +72,32 @@
 // highlights the current page in the header
 $(function()
 {
-    page = location.href.toLowerCase();
+	page = location.href.toLowerCase();//contains the URL of the current page
 	
+	//if directly on SE: http://localhost/se/
+
+	//alert(page);
 	// alert(document.location.hostname);
 	// alert(document.location.pathname);
 	
     $('.menu_item').each(function()
     {
-		if (page.indexOf(this.href.toLowerCase()) > -1)
+		var pageName = this.href.toLowerCase();//contains the entire URL
+		
+		// alert(page.substr(page.length - 3));
+		// alert(pageName);
+		// alert(pageName.substr(pageName.length - 9));
+
+		var last3 = page.substr(page.length - 3);//to verify if the folder is simply "se/"
+		var last9 = pageName.substr(pageName.length - 9);//to verify if the page leads to "index.php"
+
+		if (page.indexOf(pageName) > -1)//returns the position of the word  || (pageName == "index"))
         {
             $(this).addClass('menu-item-activated');
+		}
+		else if (last3 == "se/" && last9 == "index.php")//if the URL is empty but the page directs to "index.php" like "google.com" vs "https://www.google.com/index.php"
+		{
+			$(this).addClass('menu-item-activated');//TODO: change the condition for the final release, as the game is not going ot be in the folder "se/"
 		}
 	});
 	

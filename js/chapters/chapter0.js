@@ -82,67 +82,71 @@ function Chapter0()
         "G-Got it! (Oh gosh, better not make a mistake!)",
         "null",
         "(Next)",//35 
-        "(Better get this right)",
+        "(Better get this right.)",
         "Click here to submit",//37 Department Form
         "There, all done.",
         "(Next)",
         "(Next)",//40 
         "Woah, it’s really nice. (This dorm room looks more expensive than my whole apartment back home...)",
+        "(Next)",
+        "(Next)",
+        "I can’t wait!",
+        "(Next)",//45 
+        "null",
         "(I may as well write out my life story at this rate.)",
         "Of course, I understand.",
-        "Click here to submit",//44 Choose your name Form
-        "(That was the weirdest medical form I have ever filled out...)",//45 
+        "Click here to submit",//49 Choose your name Form
+        "(That was the weirdest medical form I have ever filled out...)",//50 
         "(Next)",
         "Alright!",
         "(Once you are done exploring, click here to proceed)",
         "*Pant* Why do I feel so tired?",
-        "(Next)",//50 
-        "(Next)",
-        "Nice!",
-        "That sounds awesome!",
-        "I’ll make sure to remember that!",
         "(Next)",//55 
         "(Next)",
+        "(That sounds awesome!)",
+        "null",
+        "(Next)",
+        "(Next)",//60 
         "Wait, how will I be able to tell the difference?",
         "Got it!",
         "(Next)",
-        "(Next)",//60 
         "(Next)",
-        "Pfff. That sounds easy enough. How hard can it be to make friends?",
+        "(Next)",//65 
+        "null",
         "(I remembered how nobody was smiling at the entrance of the school earlier. I hope I can make some friends!)",
         "(…Gas mask?)",
-        "null",//65 
-        "(Next)",
         "null",
+        "(Next)",//70 
         "null",
-        "Uh yeah…(Shoot, they looked a little mad.)",
-        "Later! (That went pretty well.)",//70 
-        "See you around! (That went really well! But what do they mean by “tutorial”? This isn’t a video game!)",
         "null",
         "Uh yeah…(Shoot, they looked a little mad.)",
         "Later! (That went pretty well.)",
         "See you around! (That went really well! But what do they mean by “tutorial”? This isn’t a video game!)",//75 
         "null",
-        "null",//77 ghost slide
-        "null",//78 ghost slide
-        "null",//79 ghost slide
-        "null",//80 ghost slide
+        "Uh yeah…(Shoot, they looked a little mad.)",
+        "Later! (That went pretty well.)",
+        "See you around! (That went really well! But what do they mean by “tutorial”? This isn’t a video game!)",
+        "null",//80 
         "null",//81 ghost slide
         "null",//82 ghost slide
+        "null",//83 ghost slide
+        "null",//84 ghost slide
+        "null",//85 ghost slide
+        "null",//86 ghost slide
         "Okay, I’ll have to brush up on my social skills.",
         "I’ll get better, you’ll see! There’s no way I’m missing the opportunity to make new friends!",
-        "Told you it would be easy!",//85 
-        "Sweet!",
+        "Told you it would be easy!",
+        "Sweet!",//90 
         "That’s pretty nice of her.",
         "Oh, I see. (I suddenly felt a little nervous.)",
         "(We walked until we met a beautiful lady in the hallway.)",
-        "(Lady Arlington was probably in her forties, considering her position in the school, but she looked much younger.)",//90 
-        "(She had an aura of power and mystery… I felt intimidated and amazed at the same time. " + CharaX_username + " handed her the paperwork I filled out.)",
+        "(Lady Arlington was probably in her forties, considering her position in the school, but she looked much younger.)",
+        "(She had an aura of power and mystery… I felt intimidated and amazed at the same time. " + CharaX_username + " handed her the paperwork I filled out.)",//95 
         "(Lady Arlington turned to look at us.)",
         "(Hey eyes met mine and...)",
         "(She dropped my paperwork on the ground.)",
-        "(The principal looked at me as if she saw a ghost. It felt very awkward and I didn’t know where to look.)",//95 
-        "W-Wait! (But " + CharaX_username + " just left the hallway, leaving me alone with the principal.)",
+        "(The principal looked at me as if she saw a ghost. It felt very awkward and I didn’t know where to look.)",
+        "W-Wait! (But " + CharaX_username + " just left the hallway, leaving me alone with the principal.)",//100 
         "(Her look lingered for a couple of seconds. I could feel myself beginning to sweat a little as her eyes pierced my soul.)",
         "(END OF CHAPTER 0)",
         ];
@@ -183,68 +187,72 @@ function Chapter0()
         "The Academy already has your choice registered in our computers, but I’d like you to sign and fill in this form to confirm your choice once and for all.",
         "Choose wisely! You won’t be able to change it afterwards",
         "Do you want me to repeat, or are you ready to choose?",
-        "Alright here's the form.",//35 
+        "Alright, here's the form.",//35 
         "null",
         "null",//37 Department Form
         "null",
         "Excellent!",
         "Thank you! Now let me show you where your dorm is.",//40 
         "This is where you’re going to be staying until the end of high school!",
+        "You can access this place anytime you’re visiting Arlington Academy. Click on “My Dorm” on the pink navigation bar that’s on top of my head.",
+        "By clicking on the wardrobe, you can change your appearance and your outfit!",
+        "Clicking on your bag will bring you out to the city! Of course, the city is still unavailable for now. But once the full version of the game releases, you’ll gain access to shops and mini-games!",
+        "Click on the laptop on your desk and you’ll be transported right here, in the game!",//45 
+        "Finally, you can click on the book on your desk to have access to all of the illustrations you’ve collected throughout your time at Arlington! You can also see how many achievements of the game you’ve unlocked. Not many people manage to completely finish the game…maybe you’ll be one of them!",
         "The last thing I’m going to need you to do is to fill out this medical form. This is an important part of your file.",
         "null",
-        "null",//44 Choose your name Form
-        "Thanks! All the paperwork is now done!",//45 
+        "null",//49 Choose your name Form
+        "Thanks! All the paperwork is now done!",//50 
         "Now that you know where your dorm is, try exploring the school a little.",
         "I’ll be waiting for you right here.",
         "null",
         "Hi again!",
-        "Oh! I forgot to tell you about energy.",//50 
-        "Each movement you make around the school will take out one energy point from your total energy.",
-        "Each day you log in, you’ll automatically receive 10 energy points.",
-        "Plus, the more days in a row you log in, the more energy points you will receive. If you log in two days in a row, you’ll get 15 points. If you log in three days in a row, you’ll get 20 points. Four days in a row is 25 points and five days in a row is a whopping 30 points!",
-        "Be careful! If you miss one day, you’ll go back to 10 points.",
-        "You’ll need your energy to fulfill your destiny here at Arlington Academy. You will also meet a lot of characters that will be with you until the very end.",//55 
-        "Some people will be relatively easy to get along with, others… not so much.",
+        "Oh! I forgot to tell you about energy.",//55 
+        "Each day you log in, you’ll automatically receive energy points.",
+        "The more days you log into the game, the more energy points you will be able to get! Of course, for the sake of this demo, you will have infinite energy. Consider this a small welcome gift from the Academy.",
+        "You can check how much energy you currently have on the purple bar at the top of this page. After a certain point in your adventures at Arlington, you will begin to use up your energy. At that point, when the full version of the game is released, I promise I’ll be back to explain how you get can more energy!",
+        "You’ll need your energy to fulfill your destiny here at Arlington Academy. You will also meet a lot of characters that will be with you until the very end.",
+        "Some people will be relatively easy to get along with, others… not so much.",//60 
         "All the characters you’re going to meet will have an “infinity meter”. You will have several dialogue choices. You’re going to have to choose whether you want your choices to build on your friendship with them, or your romance.",
         "Friendship dialogue options will be indicated with a handshake button while romance dialogue options will be indicated with a heart button!",
         "Furthermore, if you choose to just stay friends with a character and only pick friendship dialogue options, your infinity meter will only go up to 50%, not one percent more.",
-        "Only romance dialogue options will make your infinity meter with a character reach its max.",//60 
-        "Once you choose, you’ll have to make yet another choice of dialogues that will either raise, drop, or leave your infinity meter as it is.",
+        "Only romance dialogue options will make your infinity meter with a character reach its max.",
+        "Once you choose, you’ll have to make yet another choice of dialogues that will either raise, drop, or leave your infinity meter as it is.",//65 
         "Choose wisely! If your infinity meter is too low, you will not get the date you want with your favorite character at the end of each chapter.",
         "Haha! You’ll find that the students at Arlington Academy aren’t as simple to figure out.",
         "Go ahead and give it a try. I know some of my friends are in Classroom 1. Why don't you pay them a visit? Oh and also… Don’t mind the gas mask, it's for aesthetic purposes.",
-        "null",//65 
-        "Hi! You must be a new scholarship student. Welcome to Arlington!",
+        "null",
+        "Hi! You must be a new scholarship student. Welcome to Arlington!",//70 
         "null",
         "null",
         "You look pretty tired, you should get back to your dorm and take a nap. See ya!",
-        "I’m " + CharaY_username + " ! It’s nice to meet you. I bet you still have tons of things to unpack, so I’ll see you later!",//70 
-        "That’s the spirit! I’ll let you finish the tutorial, you’re almost done. See you around!",
+        "I’m " + CharaY_username + " ! It’s nice to meet you. I bet you still have tons of things to unpack, so I’ll see you later!",
+        "That’s the spirit! I’ll let you finish the tutorial, you’re almost done. See you around!",//75 
         "null",
         "My name is " + CharaY_username + ". You look pretty tired. I’ll let you get back to your dorm to get some rest. See ya!",
         "I’m " + CharaY_username + "! It’s nice to meet you too! I bet you still have tons of things to unpack, so I’ll see you later!",
-        "Aw, it’s no biggie. I’m glad to meet a new player. I’ll let you finish the tutorial, you’re almost done. See you around!",//75 
-        "null",
-        "null",//77 ghost slide
-        "null",//78 ghost slide
-        "null",//79 ghost slide
-        "null",//80 ghost slide
+        "Aw, it’s no biggie. I’m glad to meet a new player. I’ll let you finish the tutorial, you’re almost done. See you around!",
+        "null",//80 
         "null",//81 ghost slide
         "null",//82 ghost slide
+        "null",//83 ghost slide
+        "null",//84 ghost slide
+        "null",//85 ghost slide
+        "null",//86 ghost slide
         "“Easy” you said?",
         "Not bad, but not perfect either.",
-        "It looks like I underestimated you. That interaction was pretty smooth.",//85 
-        "Haha! Well it seems like you’re ready to start your adventure here at Arlington.",
+        "It looks like I underestimated you. That interaction was pretty smooth.",
+        "Haha! Well it seems like you’re ready to start your adventure here at Arlington.",//90 
         "I’ll take you to the principal, Lady Arlington. She insists on welcoming all new students at the beginning of each year.",
         "HA! She’s nice alright… until you start breaking any rules.",
         "null",
-        "null",//90 
         "null",
+        "null",//95 
         "Here’s one of the new scholarship students Ms. Arlington!",
         "null",
         "null",
-        "null",//95 
-        "Well, this feels a bit awkward...so I’m going to head out. I’ve got a game to develop. Good luck and have fun at Arlington!",
+        "null",
+        "Well, this feels a bit awkward...so I’m going to head out. I’ve got a game to develop. Good luck and have fun at Arlington!",//100 
         "null",
         "null",
         ];
@@ -294,59 +302,63 @@ function Chapter0()
         personnages.charaX[0],
         personnages.charaX[0],
         personnages.charaX[0],
-        "null",//44 Choose your name Form
+        personnages.charaX[0],
         personnages.charaX[0],//45 
+        personnages.charaX[0],
+        personnages.charaX[0],
+        personnages.charaX[0],
+        "null",//49 Choose your name Form
+        personnages.charaX[0],//50 
         personnages.charaX[0],
         personnages.charaX[0],
         "null",
         personnages.charaX[1],
-        personnages.charaX[0],//50 
+        personnages.charaX[0],//55 
         personnages.charaX[0],
-        personnages.charaX[0],
-        personnages.charaX[1],
-        personnages.charaX[0],
-        personnages.charaX[1],//55 
-        personnages.charaX[1],
-        personnages.charaX[0],
-        personnages.charaX[1],
-        personnages.charaX[0],
-        personnages.charaX[0],//60 
         personnages.charaX[0],
         personnages.charaX[0],
         personnages.charaX[1],
+        personnages.charaX[1],//60 
+        personnages.charaX[0],
         personnages.charaX[1],
-        "null",//65 
-        personnages.charaY[0],
-        personnages.charaY[0],
-        personnages.charaY[0],
-        personnages.charaY[0],
+        personnages.charaX[0],
+        personnages.charaX[0],
+        personnages.charaX[0],//65 
+        personnages.charaX[0],
+        personnages.charaX[1],
+        personnages.charaX[1],
+        "null",
         personnages.charaY[0],//70 
         personnages.charaY[0],
         personnages.charaY[0],
         personnages.charaY[0],
         personnages.charaY[0],
         personnages.charaY[0],//75 
-        "null",
-        "null",//77 ghost slide
-        "null",//78 ghost slide
-        "null",//79 ghost slide
-        "null",//80 ghost slide
+        personnages.charaY[0],
+        personnages.charaY[0],
+        personnages.charaY[0],
+        personnages.charaY[0],
+        "null",//80 
         "null",//81 ghost slide
         "null",//82 ghost slide
-        personnages.charaX[0],
-        personnages.charaX[0],
-        personnages.charaX[0],//85 
-        personnages.charaX[0],
+        "null",//83 ghost slide
+        "null",//84 ghost slide
+        "null",//85 ghost slide
+        "null",//86 ghost slide
         personnages.charaX[0],
         personnages.charaX[0],
         personnages.charaX[0],
         personnages.charaX[0],//90 
         personnages.charaX[0],
         personnages.charaX[0],
-        "null",
-        "null",
-        "null",//95 
         personnages.charaX[0],
+        personnages.charaX[0],
+        personnages.charaX[0],//95 
+        personnages.charaX[0],
+        "null",
+        "null",
+        "null",
+        personnages.charaX[0],//100 
         personnages.l_arlington[5],
         personnages.l_arlington[5],
         ];
@@ -396,12 +408,12 @@ function Chapter0()
         "null",
         "null",
         "null",
-        "null",//44 Choose your name Form
+        "null",
         "null",//45 
         "null",
         "null",
         "null",
-        "null",
+        "null",//49 Choose your name Form
         "null",//50 
         "null",
         "null",
@@ -429,26 +441,30 @@ function Chapter0()
         "null",
         "null",//75 
         "null",
-        "null",//77 ghost slide
-        "null",//78 ghost slide
-        "null",//79 ghost slide
-        "null",//80 ghost slide
+        "null",
+        "null",
+        "null",
+        "null",//80 
         "null",//81 ghost slide
         "null",//82 ghost slide
-        "null",
-        "null",
-        "null",//85 
-        "null",
+        "null",//83 ghost slide
+        "null",//84 ghost slide
+        "null",//85 ghost slide
+        "null",//86 ghost slide
         "null",
         "null",
         "null",
         "null",//90 
         "null",
         "null",
-        "Thank you, I’ll be handling it from no-",
-        "*GASP*",
+        "null",
+        "null",
         "null",//95 
         "null",
+        "Thank you, I’ll be handling it from no-",
+        "*GASP*",
+        "null",
+        "null",//100 
         "null",
         "null",
         ];
@@ -498,12 +514,12 @@ function Chapter0()
         "null",
         "null",
         "null",
-        "null",//44 Choose your name Form
+        "null",
         "null",//45 
         "null",
         "null",
         "null",
-        "null",
+        "null",//49 Choose your name Form
         "null",//50 
         "null",
         "null",
@@ -531,26 +547,30 @@ function Chapter0()
         "null",
         "null",//75 
         "null",
-        "null",//77 ghost slide
-        "null",//78 ghost slide
-        "null",//79 ghost slide
-        "null",//80 ghost slide
+        "null",
+        "null",
+        "null",
+        "null",//80 
         "null",//81 ghost slide
         "null",//82 ghost slide
+        "null",//83 ghost slide
+        "null",//84 ghost slide
+        "null",//85 ghost slide
+        "null",//86 ghost slide
         "null",
         "null",
-        "null",//85 
+        "null",
+        "null",//90 
         "null",
         "null",
         "null",
-        "null",
-        personnages.l_arlington[0],//90 
         personnages.l_arlington[0],
+        personnages.l_arlington[0],//95 
         "null",
         personnages.l_arlington[0],
         personnages.l_arlington[5],
-        personnages.l_arlington[5],//95 
-        "null",
+        personnages.l_arlington[5],
+        "null",//100 
         "null",
         "null",
         ];
@@ -600,12 +620,12 @@ function Chapter0()
         locations.dorm,
         locations.dorm,
         locations.dorm,
-        locations.dorm,//44 Choose your name Form
+        locations.dorm,
         locations.dorm,//45 
         locations.dorm,
         locations.dorm,
         locations.dorm,
-        locations.dorm,
+        locations.dorm,//49 Choose your name Form
         locations.dorm,//50 
         locations.dorm,
         locations.dorm,
@@ -622,10 +642,10 @@ function Chapter0()
         locations.dorm,
         locations.dorm,
         locations.dorm,//65 
-        locations.class1,
-        locations.class1,
-        locations.class1,
-        locations.class1,
+        locations.dorm,
+        locations.dorm,
+        locations.dorm,
+        locations.dorm,
         locations.class1,//70 
         locations.class1,
         locations.class1,
@@ -633,16 +653,16 @@ function Chapter0()
         locations.class1,
         locations.class1,//75 
         locations.class1,
-        "null",//77 ghost slide
-        "null",//78 ghost slide
-        "null",//79 ghost slide
-        "null",//80 ghost slide
+        locations.class1,
+        locations.class1,
+        locations.class1,
+        locations.class1,//80 
         "null",//81 ghost slide
         "null",//82 ghost slide
-        locations.hall1,
-        locations.hall1,
-        locations.hall1,//85 
-        locations.hall1,
+        "null",//83 ghost slide
+        "null",//84 ghost slide
+        "null",//85 ghost slide
+        "null",//86 ghost slide
         locations.hall1,
         locations.hall1,
         locations.hall1,
@@ -653,6 +673,10 @@ function Chapter0()
         locations.hall1,
         locations.hall1,//95 
         locations.hall1,
+        locations.hall1,
+        locations.hall1,
+        locations.hall1,
+        locations.hall1,//100 
         locations.hall1,
         locations.hall1,
         ];
@@ -702,52 +726,52 @@ function Chapter0()
         -1,
         -1,
         -1,
-        -31,//44 Choose your name Form
+        -1,
         -1,//45 
+        -5,
+        -1,
+        -1,
+        -31,//49 Choose your name Form
+        -1,//50 
         -1,
         -1,
         -2,
         -1,
-        -1,//50 
-        -1,
-        -1,
-        -1,
-        -1,
         -1,//55 
         -1,
         -1,
-        -1,
+        -5,
         -1,
         -1,//60 
         -1,
         -1,
         -1,
         -1,
-        -2,//65 
+        -1,//65 
+        -5,
         -1,
+        -1,
+        -2,
+        -1,//70 
         -4,
         -5,
-        64,
-        64,//70 
-        64,
+        80,
+        80,
+        80,//75 
         -5,
-        64,
-        64,
-        64,//75 
-        -2,
-        -6,//77 ghost slide
-        -6,//78 ghost slide
-        -6,//79 ghost slide
-        -6,//80 ghost slide
+        80,
+        80,
+        80,
+        -2,//80 
         -6,//81 ghost slide
         -6,//82 ghost slide
-        74,
-        74,
-        74,//85 
-        -1,
-        -1,
-        -1,
-        -1,
+        -6,//83 ghost slide
+        -6,//84 ghost slide
+        -6,//85 ghost slide
+        -6,//86 ghost slide
+        91,
+        91,
+        91,
         -1,//90 
         -1,
         -1,
@@ -755,6 +779,10 @@ function Chapter0()
         -1,
         -1,//95 
         -1,
+        -1,
+        -1,
+        -1,
+        -1,//100 
         -1,
         -1,
         ];
@@ -804,12 +832,12 @@ function Chapter0()
         0,
         0,
         0,
-        0,//44 Choose your name Form
+        0,
         0,//45 
         0,
         0,
         0,
-        0,
+        0,//49 Choose your name Form
         0,//50 
         0,
         0,
@@ -825,28 +853,28 @@ function Chapter0()
         0,
         0,
         0,
-        3,//65 
+        0,//65 
         0,
         0,
         0,
-        0,
+        3,
         0,//70 
         0,
         0,
         0,
         0,
         0,//75 
-        2,
-        0,//77 ghost slide
-        0,//78 ghost slide
-        0,//79 ghost slide
-        0,//80 ghost slide
+        0,
+        0,
+        0,
+        0,
+        2,//80 
         0,//81 ghost slide
         0,//82 ghost slide
-        0,
-        0,
-        0,//85 
-        0,
+        0,//83 ghost slide
+        0,//84 ghost slide
+        0,//85 ghost slide
+        0,//86 ghost slide
         0,
         0,
         0,
@@ -857,6 +885,10 @@ function Chapter0()
         0,
         0,//95 
         0,
+        0,
+        0,
+        0,
+        0,//100 
         0,
         0,
         ];
@@ -906,12 +938,12 @@ function Chapter0()
         -1,
         -1,
         -1,
-        -1,//44 Choose your name Form
+        -1,
         -1,//45 
         -1,
         -1,
         -1,
-        -1,
+        -1,//49 Choose your name Form
         -1,//50 
         -1,
         -1,
@@ -929,26 +961,26 @@ function Chapter0()
         -1,
         -1,//65 
         -1,
-        55,
+        -1,
         -1,
         -1,
         -1,//70 
-        -1,
+        72,
         -1,
         -1,
         -1,
         -1,//75 
         -1,
-        -1,//77 ghost slide
-        -1,//78 ghost slide
-        -1,//79 ghost slide
-        -1,//80 ghost slide
+        -1,
+        -1,
+        -1,
+        -1,//80 
         -1,//81 ghost slide
         -1,//82 ghost slide
-        -1,
-        -1,
-        -1,//85 
-        -1,
+        -1,//83 ghost slide
+        -1,//84 ghost slide
+        -1,//85 ghost slide
+        -1,//86 ghost slide
         -1,
         -1,
         -1,
@@ -959,6 +991,10 @@ function Chapter0()
         -1,
         -1,//95 
         -1,
+        -1,
+        -1,
+        -1,
+        -1,//100 
         -1,
         -1,
         ];
@@ -1008,12 +1044,12 @@ function Chapter0()
         -1,
         -1,
         -1,
-        -1,//44 Choose your name Form
+        -1,
         -1,//45 
         -1,
         -1,
         -1,
-        -1,
+        -1,//49 Choose your name Form
         -1,//50 
         -1,
         -1,
@@ -1031,26 +1067,26 @@ function Chapter0()
         -1,
         -1,//65 
         -1,
-        59,
+        -1,
         -1,
         -1,
         -1,//70 
-        -1,
+        76,
         -1,
         -1,
         -1,
         -1,//75 
         -1,
-        -1,//77 ghost slide
-        -1,//78 ghost slide
-        -1,//79 ghost slide
-        -1,//80 ghost slide
+        -1,
+        -1,
+        -1,
+        -1,//80 
         -1,//81 ghost slide
         -1,//82 ghost slide
-        -1,
-        -1,
-        -1,//85 
-        -1,
+        -1,//83 ghost slide
+        -1,//84 ghost slide
+        -1,//85 ghost slide
+        -1,//86 ghost slide
         -1,
         -1,
         -1,
@@ -1061,6 +1097,10 @@ function Chapter0()
         -1,
         -1,//95 
         -1,
+        -1,
+        -1,
+        -1,
+        -1,//100 
         -1,
         -1,
         ];
@@ -1110,12 +1150,12 @@ function Chapter0()
         -1,
         -1,
         -1,
-        -1,//44 Choose your name Form
+        -1,
         -1,//45 
+        47,
         -1,
         -1,
-        -1,
-        -1,
+        -1,//49 Choose your name Form
         -1,//50 
         -1,
         -1,
@@ -1124,7 +1164,7 @@ function Chapter0()
         -1,//55 
         -1,
         -1,
-        -1,
+        56,
         -1,
         -1,//60 
         -1,
@@ -1132,27 +1172,27 @@ function Chapter0()
         -1,
         -1,
         -1,//65 
+        61,
         -1,
         -1,
-        56,
         -1,
         -1,//70 
         -1,
-        60,
+        73,
         -1,
         -1,
         -1,//75 
+        77,
         -1,
-        -1,//77 ghost slide
-        -1,//78 ghost slide
-        -1,//79 ghost slide
-        -1,//80 ghost slide
+        -1,
+        -1,
+        -1,//80 
         -1,//81 ghost slide
         -1,//82 ghost slide
-        -1,
-        -1,
-        -1,//85 
-        -1,
+        -1,//83 ghost slide
+        -1,//84 ghost slide
+        -1,//85 ghost slide
+        -1,//86 ghost slide
         -1,
         -1,
         -1,
@@ -1163,6 +1203,10 @@ function Chapter0()
         -1,
         -1,//95 
         -1,
+        -1,
+        -1,
+        -1,
+        -1,//100 
         -1,
         -1,
         ];
@@ -1212,12 +1256,12 @@ function Chapter0()
         -1,
         -1,
         -1,
-        -1,//44 Choose your name Form
+        -1,
         -1,//45 
+        42,
         -1,
         -1,
-        -1,
-        -1,
+        -1,//49 Choose your name Form
         -1,//50 
         -1,
         -1,
@@ -1226,7 +1270,7 @@ function Chapter0()
         -1,//55 
         -1,
         -1,
-        -1,
+        59,
         -1,
         -1,//60 
         -1,
@@ -1234,27 +1278,27 @@ function Chapter0()
         -1,
         -1,
         -1,//65 
+        67,
         -1,
         -1,
-        57,
         -1,
         -1,//70 
         -1,
-        61,
+        74,
         -1,
         -1,
         -1,//75 
+        78,
         -1,
-        -1,//77 ghost slide
-        -1,//78 ghost slide
-        -1,//79 ghost slide
-        -1,//80 ghost slide
+        -1,
+        -1,
+        -1,//80 
         -1,//81 ghost slide
         -1,//82 ghost slide
-        -1,
-        -1,
-        -1,//85 
-        -1,
+        -1,//83 ghost slide
+        -1,//84 ghost slide
+        -1,//85 ghost slide
+        -1,//86 ghost slide
         -1,
         -1,
         -1,
@@ -1265,6 +1309,10 @@ function Chapter0()
         -1,
         -1,//95 
         -1,
+        -1,
+        -1,
+        -1,
+        -1,//100 
         -1,
         -1,
         ];
@@ -1314,12 +1362,12 @@ function Chapter0()
         -1,
         -1,
         -1,
-        -1,//44 Choose your name Form
+        -1,
         -1,//45 
         -1,
         -1,
         -1,
-        -1,
+        -1,//49 Choose your name Form
         -1,//50 
         -1,
         -1,
@@ -1338,25 +1386,25 @@ function Chapter0()
         -1,//65 
         -1,
         -1,
-        58,
+        -1,
         -1,
         -1,//70 
         -1,
-        62,
+        75,
         -1,
         -1,
         -1,//75 
+        79,
         -1,
-        -1,//77 ghost slide
-        -1,//78 ghost slide
-        -1,//79 ghost slide
-        -1,//80 ghost slide
+        -1,
+        -1,
+        -1,//80 
         -1,//81 ghost slide
         -1,//82 ghost slide
-        -1,
-        -1,
-        -1,//85 
-        -1,
+        -1,//83 ghost slide
+        -1,//84 ghost slide
+        -1,//85 ghost slide
+        -1,//86 ghost slide
         -1,
         -1,
         -1,
@@ -1367,6 +1415,10 @@ function Chapter0()
         -1,
         -1,//95 
         -1,
+        -1,
+        -1,
+        -1,
+        -1,//100 
         -1,
         -1,
         ];
@@ -1416,49 +1468,49 @@ function Chapter0()
         "null",
         "null",
         "null",
-        "null",//44 Choose your name Form
+        "null",
         "null",//45 
+        "Sounds like a challenge!",
+        "null",
+        "null",
+        "null",//49 Choose your name Form
+        "null",//50 
         "null",
         "null",
         "New Objective: Explore the School!",
         "Objective Complete: Explore the school!",
-        "null",//50 
-        "null",
-        "null",
-        "null",
-        "null",
         "null",//55 
         "null",
         "null",
-        "null",
+        "Can you repeat that please?",
         "null",
         "null",//60 
         "null",
         "null",
         "null",
         "null",
-        "New Objective: Go Talk to the Person inside Classroom 1",//65 
-        "Objective Complete: Go Talk to the Person inside Classroom 1",
+        "null",//65 
+        "Can you repeat that please?",
+        "null",
+        "null",
+        "New Objective: Go Talk to the Person inside Classroom 1",
+        "Objective Complete: Go Talk to the Person inside Classroom 1",//70 
         "null",
         "Yeah, hi.",
         "null",
-        "null",//70 
         "null",
+        "null",//75 
         "And...who are you?",
         "null",
         "null",
-        "null",//75 
-        "New Objective: Go Talk to the Person inside Hallway 1",
-        "Objective Complete: Go Talk to the Person inside Hallway 1",//77 ghost slide
-        "null",//78 ghost slide
-        "null",//79 ghost slide
-        "null",//80 ghost slide
-        "null",//81 ghost slide
+        "null",
+        "New Objective: Go Talk to the Person inside Hallway 1",//80 
+        "Objective Complete: Go Talk to the Person inside Hallway 1",//81 ghost slide
         "null",//82 ghost slide
-        "null",
-        "null",
-        "null",//85 
-        "null",
+        "null",//83 ghost slide
+        "null",//84 ghost slide
+        "null",//85 ghost slide
+        "null",//86 ghost slide
         "null",
         "null",
         "null",
@@ -1469,6 +1521,10 @@ function Chapter0()
         "null",
         "null",//95 
         "null",
+        "null",
+        "null",
+        "null",
+        "null",//100 
         "null",
         "null",
         ];
@@ -1518,12 +1574,12 @@ function Chapter0()
         "null",
         "null",
         "null",
-        "null",//44 Choose your name Form
+        "null",
         "null",//45 
+        "Can you repeat all of this, please?",
         "null",
         "null",
-        "null",
-        "null",
+        "null",//49 Choose your name Form
         "null",//50 
         "null",
         "null",
@@ -1532,7 +1588,7 @@ function Chapter0()
         "null",//55 
         "null",
         "null",
-        "null",
+        "I’ll make sure to remember that, thanks!",
         "null",
         "null",//60 
         "null",
@@ -1540,27 +1596,27 @@ function Chapter0()
         "null",
         "null",
         "null",//65 
+        "Pfff. That sounds easy enough. How hard can it be to make friends?",
         "null",
         "null",
-        "Hi! I'm " + user.scholarname + ".",
         "null",
         "null",//70 
         "null",
-        "Hi! I’m " + user.scholarname + ". It’s nice to meet you!",
+        "Hi! I'm " + user.scholarname + ".",
         "null",
         "null",
         "null",//75 
+        "Hi! I’m " + user.scholarname + ". It’s nice to meet you!",
         "null",
-        "null",//77 ghost slide
-        "null",//78 ghost slide
-        "null",//79 ghost slide
-        "null",//80 ghost slide
+        "null",
+        "null",
+        "null",//80 
         "null",//81 ghost slide
         "null",//82 ghost slide
-        "null",
-        "null",
-        "null",//85 
-        "null",
+        "null",//83 ghost slide
+        "null",//84 ghost slide
+        "null",//85 ghost slide
+        "null",//86 ghost slide
         "null",
         "null",
         "null",
@@ -1571,6 +1627,10 @@ function Chapter0()
         "null",
         "null",//95 
         "null",
+        "null",
+        "null",
+        "null",
+        "null",//100 
         "null",
         "null",
         ];
@@ -1620,12 +1680,12 @@ function Chapter0()
         "null",
         "null",
         "null",
-        "null",//44 Choose your name Form
+        "null",
         "null",//45 
         "null",
         "null",
         "null",
-        "null",
+        "null",//49 Choose your name Form
         "null",//50 
         "null",
         "null",
@@ -1644,25 +1704,25 @@ function Chapter0()
         "null",//65 
         "null",
         "null",
-        "Thank you! I'm so excited to start!",
+        "null",
         "null",
         "null",//70 
         "null",
-        "Thank you! It feels really nice to be so warmly welcomed!",
+        "Thank you! I'm so excited to start!",
         "null",
         "null",
         "null",//75 
+        "Thank you! It feels really nice to be so warmly welcomed!",
         "null",
-        "null",//77 ghost slide
-        "null",//78 ghost slide
-        "null",//79 ghost slide
-        "null",//80 ghost slide
+        "null",
+        "null",
+        "null",//80 
         "null",//81 ghost slide
         "null",//82 ghost slide
-        "null",
-        "null",
-        "null",//85 
-        "null",
+        "null",//83 ghost slide
+        "null",//84 ghost slide
+        "null",//85 ghost slide
+        "null",//86 ghost slide
         "null",
         "null",
         "null",
@@ -1673,6 +1733,10 @@ function Chapter0()
         "null",
         "null",//95 
         "null",
+        "null",
+        "null",
+        "null",
+        "null",//100 
         "null",
         "null",
         ];
@@ -1722,12 +1786,12 @@ function Chapter0()
         0,
         0,
         0,
-        0,//44 Choose your name Form
+        0,
         0,//45 
         0,
         0,
         0,
-        0,
+        0,//49 Choose your name Form
         0,//50 
         0,
         0,
@@ -1747,24 +1811,24 @@ function Chapter0()
         0,
         0,
         0,
-        -5,
+        0,
         0,//70 
-        5,
+        0,
         0,
         -5,
         0,
         5,//75 
         0,
-        0,//77 ghost slide
-        0,//78 ghost slide
-        0,//79 ghost slide
-        0,//80 ghost slide
+        -5,
+        0,
+        5,
+        0,//80 
         0,//81 ghost slide
         0,//82 ghost slide
-        0,
-        0,
-        0,//85 
-        0,
+        0,//83 ghost slide
+        0,//84 ghost slide
+        0,//85 ghost slide
+        0,//86 ghost slide
         0,
         0,
         0,
@@ -1775,6 +1839,10 @@ function Chapter0()
         0,
         0,//95 
         0,
+        0,
+        0,
+        0,
+        0,//100 
         0,
         0,
         ];
@@ -1824,12 +1892,12 @@ function Chapter0()
         0,
         0,
         0,
-        0,//44 Choose your name Form
+        0,
         0,//45 
         0,
         0,
         0,
-        0,
+        0,//49 Choose your name Form
         0,//50 
         0,
         0,
@@ -1857,16 +1925,16 @@ function Chapter0()
         0,
         0,//75 
         0,
-        0,//77 ghost slide
-        0,//78 ghost slide
-        0,//79 ghost slide
-        0,//80 ghost slide
+        0,
+        0,
+        0,
+        0,//80 
         0,//81 ghost slide
         0,//82 ghost slide
-        0,
-        0,
-        0,//85 
-        0,
+        0,//83 ghost slide
+        0,//84 ghost slide
+        0,//85 ghost slide
+        0,//86 ghost slide
         0,
         0,
         0,
@@ -1877,6 +1945,10 @@ function Chapter0()
         0,
         0,//95 
         0,
+        0,
+        0,
+        0,
+        0,//100 
         0,
         0,
         ];
@@ -1926,12 +1998,12 @@ function Chapter0()
         false,
         false,
         false,
-        false,//44 Choose your name Form
+        false,
         false,//45 
         false,
         false,
         false,
-        false,
+        false,//49 Choose your name Form
         false,//50 
         false,
         false,
@@ -1959,16 +2031,16 @@ function Chapter0()
         false,
         false,//75 
         false,
-        false,//77 ghost slide
-        false,//78 ghost slide
-        false,//79 ghost slide
-        false,//80 ghost slide
+        false,
+        false,
+        false,
+        false,//80 
         false,//81 ghost slide
         false,//82 ghost slide
-        false,
-        false,
-        false,//85 
-        false,
+        false,//83 ghost slide
+        false,//84 ghost slide
+        false,//85 ghost slide
+        false,//86 ghost slide
         false,
         false,
         false,
@@ -1979,6 +2051,10 @@ function Chapter0()
         false,
         false,//95 
         false,
+        false,
+        false,
+        false,
+        false,//100 
         false,
         false,
         ];
@@ -2028,12 +2104,12 @@ function Chapter0()
         -1,
         -1,
         -1,
-        -1,//44 Choose your name Form
+        -1,
         -1,//45 
         -1,
         -1,
         -1,
-        -1,
+        -1,//49 Choose your name Form
         -1,//50 
         -1,
         -1,
@@ -2061,16 +2137,16 @@ function Chapter0()
         -1,
         -1,//75 
         -1,
-        56,//77 ghost slide
-        57,//78 ghost slide
-        58,//79 ghost slide
-        60,//80 ghost slide
-        61,//81 ghost slide
-        62,//82 ghost slide
         -1,
         -1,
-        -1,//85 
         -1,
+        -1,//80 
+        73,//81 ghost slide
+        74,//82 ghost slide
+        75,//83 ghost slide
+        77,//84 ghost slide
+        78,//85 ghost slide
+        79,//86 ghost slide
         -1,
         -1,
         -1,
@@ -2081,6 +2157,10 @@ function Chapter0()
         -1,
         -1,//95 
         -1,
+        -1,
+        -1,
+        -1,
+        -1,//100 
         -1,
         -1,
         ];
@@ -2130,12 +2210,12 @@ function Chapter0()
         -1,
         -1,
         -1,
-        -1,//44 Choose your name Form
+        -1,
         -1,//45 
         -1,
         -1,
         -1,
-        -1,
+        -1,//49 Choose your name Form
         -1,//50 
         -1,
         -1,
@@ -2163,16 +2243,16 @@ function Chapter0()
         -1,
         -1,//75 
         -1,
-        70,//77 ghost slide
-        71,//78 ghost slide
-        72,//79 ghost slide
-        70,//80 ghost slide
-        71,//81 ghost slide
-        72,//82 ghost slide
         -1,
         -1,
-        -1,//85 
         -1,
+        -1,//80 
+        87,//81 ghost slide
+        88,//82 ghost slide
+        89,//83 ghost slide
+        90,//84 ghost slide
+        91,//85 ghost slide
+        92,//86 ghost slide
         -1,
         -1,
         -1,
@@ -2183,6 +2263,10 @@ function Chapter0()
         -1,
         -1,//95 
         -1,
+        -1,
+        -1,
+        -1,
+        -1,//100 
         -1,
         -1,
         ];

@@ -1,7 +1,12 @@
 #CHANGELOG
 
-Version 1.5.3 (Ch. 0 Improvements)
-- *Excel*               [chapter0.js]       made some changes to the dialog
+Version 1.5.3.2 (Ch. 0 Improvements)
+- *EXCEL*               [chapter0.js]
+                        [chapter0.xlsx]     made some changes to the dialog
+- *DORM IMAGE*          [dorm.jpg]          modified the image of the dorm (the wardrobe was missing...?)
+
+Version 1.5.2 (June forgot to write patch notes)
+- *JUNE FORGOT*
 
 Version 1.5.1 (Game Engine, TODO, DataBase)
 - *STRUCTURE*           [gameengine.js]
