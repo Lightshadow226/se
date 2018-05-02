@@ -14,8 +14,8 @@ include_once '../resources/utilities.php';
         $sex = $_POST['sex'];
 
         $sqlQuery1 = "UPDATE scholarinfo SET scholar_sex = '$sex' WHERE id = '$id'";
-        $statement = $db->prepare($sqlQuery1);
-        $statement->execute();
+        $statement1 = $db->prepare($sqlQuery1);
+        $statement1->execute();
 
         $status = "SQL Sent!";
     }
@@ -29,9 +29,9 @@ include_once '../resources/utilities.php';
     {
         $eyes = $_POST['eyes'];
 
-        $sqlQuery1 = "UPDATE scholarinfo SET scholar_eyecolor = '$eyes' WHERE id = '$id'";
-        $statement = $db->prepare($sqlQuery1);
-        $statement->execute();
+        $sqlQuery2 = "UPDATE scholarinfo SET scholar_eyecolor = '$eyes' WHERE id = '$id'";
+        $statement2 = $db->prepare($sqlQuery2);
+        $statement2->execute();
 
         $status = "SQL Sent!";
     }
@@ -45,9 +45,9 @@ include_once '../resources/utilities.php';
     {
         $hair_color = $_POST['hair_color'];
 
-        $sqlQuery1 = "UPDATE scholarinfo SET scholar_haircolor = '$hair_color' WHERE id = '$id'";
-        $statement = $db->prepare($sqlQuery1);
-        $statement->execute();
+        $sqlQuery3 = "UPDATE scholarinfo SET scholar_haircolor = '$hair_color' WHERE id = '$id'";
+        $statemen3 = $db->prepare($sqlQuery3);
+        $statemen3->execute();
 
         $status = "SQL Sent!";
     }
@@ -61,9 +61,9 @@ include_once '../resources/utilities.php';
     {
         $hair_style = $_POST['hair_style'];
 
-        $sqlQuery1 = "UPDATE scholarinfo SET scholar_hairstyle = '$hair_style' WHERE id = '$id'";
-        $statement = $db->prepare($sqlQuery1);
-        $statement->execute();
+        $sqlQuery4 = "UPDATE scholarinfo SET scholar_hairstyle = '$hair_style' WHERE id = '$id'";
+        $statement4 = $db->prepare($sqlQuery4);
+        $statement4->execute();
 
         $status = "SQL Sent!";
     }
@@ -77,9 +77,9 @@ include_once '../resources/utilities.php';
     {
         $shoes = $_POST['shoes'];
 
-        $sqlQuery1 = "UPDATE scholarinfo SET scholar_shoes_id = '$shoes' WHERE id = '$id'";
-        $statement = $db->prepare($sqlQuery1);
-        $statement->execute();
+        $sqlQuery5 = "UPDATE scholarinfo SET scholar_shoes_id = '$shoes' WHERE id = '$id'";
+        $statement5 = $db->prepare($sqlQuery5);
+        $statement5->execute();
 
         $status = "SQL Sent!";
     }
@@ -91,9 +91,9 @@ include_once '../resources/utilities.php';
     //SKIN COLOR
     try
     {
-        $shoes = $_POST['skin_color'];
+        $skin = $_POST['skin_color'];
 
-        $sqlQuery1 = "UPDATE scholarinfo SET scholar_skincolor = '$shoes' WHERE id = '$id'";
+        $sqlQuery1 = "UPDATE scholarinfo SET scholar_skincolor = '$skin' WHERE id = '$id'";
         $statement = $db->prepare($sqlQuery1);
         $statement->execute();
 

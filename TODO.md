@@ -4,7 +4,7 @@
 - **CHAPTER INPUT**       [chapter1.js]                                   la chapitre 1 est terminé jusqu'à la slide 129, donc il va falloir valider le reste + rajouter les émotions
 - **PPT**                 [Chapter2Slides Part2.ppt]                      slides à terminer chapitre 2 (le ppt et le code)]
 - **TODO**                [chapter 1.js]                                  il reste à implémenter les illustrations et le form pour sélectionner notre uniforme
-- **DEBUG**               [gameengine.js]                                   empêcher le infinity meter d'augmenter si on a déjà visité la slide (il faut faire isVisited)
+- **DEBUG**               [gameengine.js]                                 empêcher le infinity meter d'augmenter si on a déjà visité la slide (il faut faire isVisited)
 https://www.w3schools.com/css/tryit.asp?filename=trycss3_transition1
 
 
@@ -13,6 +13,13 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss3_transition1
 
 `TODO: HIGH Importance`
 - **DEBUG**               [variables.js, get and pushvariables.php]       s'assurer qu'il n'y ait plus de variables utilisés sans la base de données
+- **ILLUSTRATION GENER.** [illustration_generator.php]                    generate illustrations based on [locked vs not, colors, etc.]
+- **ACHIEVEMENTS**        [illustrations_achievements.php]                make sure that isVisited shows the proper achievements
+- **INF METER**           [gameengine.js]                                 Fix bug that keeps incrementing the points
+- **CH 0 FORM**           [gameengine.js, Chapter0.xlsx]                  Pronoun choice, and Scholar name instead of username
+- **GAME**                [game.php]                                      Current vs Finished vs Unattempted Chapters + Replay option
+
+
 
 `TODO: MEDIUM Importance`
 - **CODE - RESTRUCT**     [.php]                                          Organiser les fichiers PHP
@@ -23,10 +30,13 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss3_transition1
 - **DEBUG**               [se-stylesheet.css]                             Il faut que les page-specific attributes ne soient jamais utilisés dans une autre page
 - **DEBUG**               [???]                                           z-index du scholar est trop petit (la barre de texte est au-dessus)
 - **CODE - RESTRUCT**     [dorm.js]                                       enlever les .style et les remplacer par des classes
+- **DOLLMAKER**           [dorm.js]                                       Add pronoun change option and all the missing images (shoes, top, bottom, etc.)
 - **INDEX**               [index.php]                                     mettre le CSS dans un autre fichier
 - **GAME ENGINE**         [gameengine.js]                                 redesign the game engine for efficiency (put it on paper first)
 - **IMPROVEMENTS**        [imageGenerator.php]                            there are still improvements to be made in this file
 - **IMPROVEMENTS**        [gameengine.js, variables.js]                   remove the variable "choice" (for the Ch.0 Form)
+- **PROFILE**             [profile.php]                                   Functionning Reset Progress Button
+- **PROFILE**             [profile.php]                                   Loader for images
 
 `TODO: LOW Importance`
 - **DEBUG**               [login.php, signup.php, resetpassword.php]      Améliorer les messages d'erreurs pour login.php, signup.php, resetpassword.php

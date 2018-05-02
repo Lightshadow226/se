@@ -155,13 +155,10 @@
 				<div class="card-header">
 					<h3>Customize your character!</h3>
 				</div>
+				
+				<div class="flex-container" style="height:411.375px; padding: 0px;"><!-- style="height=780px;" -->
 
-				<div class="card-content flex-container" style="height:411.375px;"><!-- style="height=780px;" -->
-					<!-- <div>
-						<img class = "img-badge" style="height:100%; width:auto; border-top-left-radius: 10px; border-bottom-left-radius: 10px;" src = "images/banners/customize_your_character.png"></img>
-					</div> -->
-
-					<div class = "flex-panel2 flex-container">
+					<div class = "flex-panel3 flex-container">
 						<div class="flex-panel"></div>
 						<div id="left_wing" class="center_div chevron-container"></div>
 						<div id="random_character_panel" class = "flex-panel"></div>
