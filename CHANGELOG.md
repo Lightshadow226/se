@@ -7,6 +7,7 @@ Version 1.5.3.4 (Ch. 0 Improvements)
 - *DESIGNS*             [replay.php]        
 - *REPLAY*              [replay.php]        
                         [gameengine.js      Implemented the replay/next chapter function when you reach the end of a chapter
+- *TAG TEST*
 
 Version 1.5.2 (June forgot to write patch notes)
 - *JUNE FORGOT*
