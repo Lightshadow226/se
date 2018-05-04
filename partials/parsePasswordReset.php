@@ -127,7 +127,7 @@ else if(isset($_POST['passwordRecoveryBtn']))//Password Recovery
 				
 				<p>Contact us if you are still having problems.</p>
 				
-				<p><strong>The Sweet Elite Staff</strong></p>
+				<p><b>The Sweet Elite Staff</b></p>
 				</div>
 				
 				<footer style="background-color:#DBDAD7; color:#682566; padding: 5px 0 5px 0; text-align: center;">

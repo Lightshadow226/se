@@ -110,7 +110,7 @@ function initialize_quiz(question_number)
 	//question
 	var formSubHeader = document.createElement('h5');//formerly h5
 		formSubHeader.id= "form_subheader";
-		formSubHeader.innerHTML = /*"<strong>" + */questions[question_number]/* + "</strong>"*/;
+		formSubHeader.innerHTML = /*"<b>" + */questions[question_number]/* + "</b>"*/;
 
 	document.getElementById('quiz').appendChild(form_container);
 		form_container.appendChild(formHeader);

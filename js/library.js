@@ -25,16 +25,17 @@ function getCurrentChapter()//returns the current chapter as an object
     var index = user.last_chapter_played;//current chapter == index
     const character_portraits_path = "images/general/chapter_images/";
 
-    var chapterImage = character_portraits_path + chapter_images[index] + ".png";
+    //declared in variables.js
     var chapterTitle = chapters[index];
     var chapterDescription = chapter_description[index];
+    var chapterImage = character_portraits_path + chapter_images[index] + ".png";
 
     var currentChapter =
     {
         title: chapterTitle,
         description: chapterDescription,
-        number: index,
         image: chapterImage,
+        number: index,
     }
 
     return currentChapter;

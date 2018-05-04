@@ -29,7 +29,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss3_transition1
 - **DATABASE**                                                            créer un nouvel utilisateur ne crée que le nouveau compte et n'ajoute pas une nouvelle ligne dans les autres tables pour le nouvel utilisateur
 - **Illustration generator**                                              finish it
 - **Structure**           [game.php]                                      3 sections: current chapter, chapters to go, finished chapters
-make sure that relationship levels are the same in relationships, game, etc.
+- ****             make sure that relationship percentage levels are the same in relationships, game, etc.
 FUCKING FIX THE ASYNC PROBLEM
 
 `TODO: MEDIUM Importance`
@@ -91,7 +91,8 @@ FUCKING FIX THE ASYNC PROBLEM
 `Useful links for GIT`
 **Stuck in the git commit window:** https://stackoverflow.com/questions/26228848/how-do-i-exit-my-git-commit-message-im-not-in-the-vim-i-used-the-commit-m
 **Initializing GIT:** https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/
-Unstage commit**: https://stackoverflow.com/questions/1611215/remove-a-git-commit-which-has-not-pushed
+**Unstage commit:** https://stackoverflow.com/questions/1611215/remove-a-git-commit-which-has-not-pushed
+**Git Tag:** https://git-scm.com/book/en/v2/Git-Basics-Tagging
 
 `GIT original configuration:`
 Target: += **--cd-to-home**
@@ -112,6 +113,10 @@ Start in : **%HOMEDRIVE%%HOMEPATH%**
 `Amazing VS Code Shortcuts`
 **Collapse all (or by level):** https://stackoverflow.com/questions/42660670/collapse-all-methods-in-visual-studio-code
 **List of all shortcuts:** http://www.dofactory.com/reference/visual-studio-shortcuts
+ctrl + é : toggle comments
+ctrl + è : open/close terminal
+ctrl + , : open VS Code User Settings
+q : quit the "git show v1.1.1" mode
 
 `CSS tools`
 **CSS Center Vertically:** https://stackoverflow.com/questions/8865458/how-do-i-vertically-center-text-with-css
@@ -124,17 +129,4 @@ Pingendo (99$): https://pingendo.com/index.html
 `Useful coding links`
 **Checks for errors and warnings and makes the code run faster**
 Closure Compiler: https://closure-compiler.appspot.com/home
-
-`To Buy`
-Affinity Designer: https://affinity.serif.com/en-gb/designer/
-
-
-`Marketing Tools`
-https://www.creativebloq.com/graphic-design/free-graphic-design-software-8134039
-https://www.techradar.com/news/the-best-free-software-for-graphic-designers-2017
-https://www.cnewcomer.com/canva-alternatives/
-
-
-`Gravit Designer Tools`
-Shortcuts: https://medium.com/@lfl1984/keyboard-shortcuts-for-gravit-designer-21e8021707f5
-Tips: https://medium.com/gravitdesigner/these-13-features-will-boost-your-productivity-in-gravit-designer-f594e151de5c
+Async Problem Solution: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function

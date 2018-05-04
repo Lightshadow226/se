@@ -23,7 +23,13 @@
 	<?php if((isset($_SESSION['username']) || isCookieValid($db))): ?><!-- If the username is specified (the user is logged on) -->
 
 		<div id="user_info" class="">
-			Welcome Back <?php if(isset($_SESSION['username'])) echo $_SESSION['username']; ?>! <a href="logout.php" style="font-size:8px; color:white;">LOGOUT</a> </p>
+			Welcome Back <?php if(isset($_SESSION['username'])) echo $_SESSION['username']; ?>!
+			<strong>| Episode: </strong> <span id="barEpisode"></span>
+			<strong>| Highest Affinity: </strong> <span id="barAffinity"></span>
+			<strong>| Money: </strong> <span id="barMoney"></span>
+			<strong>| Energy: </strong> <span id="barEnergy"></span>
+			<strong>|</strong> 
+			<a href="logout.php" style="font-size:8px; color:white;">LOGOUT</a>
 		</div>
 
 		<div id="nav_menu_container">
@@ -68,6 +74,10 @@
 </header>
 
 <script src = "js/jquery_3.2.1.js"></script>
+<!-- TODO: remove included files from most pages and add them here instead for them to always be loaded (variables.js, library.js) -->
+
+<!--<script src = "js/variables.js"></script>
+<script src = "js/library.js"></script>-->
 <script>
 // highlights the current page in the header
 $(function()
@@ -110,12 +120,32 @@ $(function()
 			$('#game_link').addClass('menu-item-activated');
 		}
 	}
+
+	updateTopBar();
 });
 
 $(document).ready(function()
 {
-    $('body').addClass('loaded');
+	$('body').addClass('loaded');
+	
+	updateTopBar();
 });
+
+async function updateTopBar()
+{
+	alert(user.last_chapter_played);
+	await pullVariablesFromDB();
+	alert(user.last_chapter_played);
+
+	document.getElementById('barEpisode').innerHTML = getCurrentChapter().title;
+	
+	//TODO: ASYNC PROBLEM AGAIN: solution found at https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function
+	document.getElementById('barAffinity').innerHTML = getHighestAffinity().name;
+	
+	document.getElementById('barMoney').innerHTML = "∞";
+	
+	document.getElementById('barEnergy').innerHTML = "∞";
+}
 
 //WORKS: http://huidesign.com/automatically-highlight-current-page-in-navigation-with-css-jquery/
 //DOESN'T WORK: https://stackoverflow.com/questions/30073190/html-css-navigation-bar-highlighting-current-page

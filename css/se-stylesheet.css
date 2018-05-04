@@ -156,10 +156,10 @@
 		color:#682666;
 	}
 
-	strong/*vs b*/
+	strong/*is white, as opposed to b which is purple*/
 	{
 		font-weight: 500;
-		color:#682666;
+		color: white;
 	}
 
 	a
@@ -170,6 +170,13 @@
 	}
 
 /***************STRUCTURE***************/
+
+	.energy
+	{
+		position: fixed;
+		right: 0;
+	}
+
 
 	.main_content
 	{

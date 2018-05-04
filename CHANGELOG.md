@@ -1,13 +1,18 @@
 #CHANGELOG
 
-Version 1.5.3.4 (Ch. 0 Improvements)
+Version 1.5.4 (Async Solution)
+- *TOP BAR DESIGN*      [headers.php]       Added information on the purple bar on top of the page
+- *README*              [README.md]         updated the README
+- *CSS*                 [.css]              updated <b> to be purple and <strong> to be white
+- *ASYNC*               [headers.php]       found a solution to the Async problem (link in TODO.md) and used it to display information on the top purple bar
+
+Version 1.5.3 (Ch. 0 Improvements)
 - *EXCEL*               [chapter0.js]
                         [chapter0.xlsx]     made some changes to the dialog
 - *DORM IMAGE*          [dorm.jpg]          modified the image of the dorm (the wardrobe was missing...?)
 - *DESIGNS*             [replay.php]        
 - *REPLAY*              [replay.php]        
                         [gameengine.js      Implemented the replay/next chapter function when you reach the end of a chapter
-- *TAG TEST*
 
 Version 1.5.2 (June forgot to write patch notes)
 - *JUNE FORGOT*
