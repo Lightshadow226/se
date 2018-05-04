@@ -108,4 +108,8 @@
 	<?php include_once 'partials/footers.php' ?>
 
 </body>
+
+<script src = "js/variables.js"></script><!--needed for the logged in functionality of "current chapter"-->
+<script src = "js/library.js"></script>
+
 </html>

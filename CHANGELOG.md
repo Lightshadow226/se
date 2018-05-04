@@ -1,5 +1,11 @@
 #CHANGELOG
 
+Version 1.5.5 (Solution to the Async problem)
+- *EXCEL*               [chapter0.js]
+                        [chapter0.xlsx]     made some changes to slide links
+- *TODO*                [todo.md]           placed the chapter 1 todo list on the Google Drive
+- *ASYNC*               [variables.php]     fixed the async problem once and for all (pull AND push)
+
 Version 1.5.4 (Async Solution)
 - *TOP BAR DESIGN*      [headers.php]       Added information on the purple bar on top of the page
 - *README*              [README.md]         updated the README

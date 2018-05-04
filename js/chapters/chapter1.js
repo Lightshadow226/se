@@ -11,7 +11,9 @@ September 02, 2017
 */
 var story = new Array();
 
-const current_Chapter = 1;
+const current_Chapter = 1;//TODO: remove this
+user.last_chapter_played = 1;
+pushVariablesToDB();
 
 const c = 19;
 

@@ -121,31 +121,22 @@ $(function()
 		}
 	}
 
-	updateTopBar();
+	updateGameBar();
 });
 
 $(document).ready(function()
 {
 	$('body').addClass('loaded');
 	
-	updateTopBar();
+	updateGameBar();
 });
 
-async function updateTopBar()
-{
-	alert(user.last_chapter_played);
-	await pullVariablesFromDB();
-	alert(user.last_chapter_played);
-
-	document.getElementById('barEpisode').innerHTML = getCurrentChapter().title;
-	
-	//TODO: ASYNC PROBLEM AGAIN: solution found at https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function
-	document.getElementById('barAffinity').innerHTML = getHighestAffinity().name;
-	
-	document.getElementById('barMoney').innerHTML = "∞";
-	
-	document.getElementById('barEnergy').innerHTML = "∞";
-}
+// function updateTopBar()
+// {
+	// alert(user.last_chapter_played);
+	// await pullVariablesFromDB();
+	// alert(user.last_chapter_played);
+// }
 
 //WORKS: http://huidesign.com/automatically-highlight-current-page-in-navigation-with-css-jquery/
 //DOESN'T WORK: https://stackoverflow.com/questions/30073190/html-css-navigation-bar-highlighting-current-page

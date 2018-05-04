@@ -19,6 +19,21 @@ Object.size = function(object)//returns the size of an object
     return size;
 };
 
+//*****PURPLE GAME BAR*****
+function updateGameBar()
+{
+    pullVariablesFromDB();
+
+    document.getElementById('barEpisode').innerHTML = getCurrentChapter().title;
+	
+	//TODO: ASYNC PROBLEM AGAIN: solution found at https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function
+	document.getElementById('barAffinity').innerHTML = getHighestAffinity().name;
+	
+	document.getElementById('barMoney').innerHTML = "∞";
+	
+	document.getElementById('barEnergy').innerHTML = "∞";
+}
+
 //*****CHAPTERS*****
 function getCurrentChapter()//returns the current chapter as an object
 {

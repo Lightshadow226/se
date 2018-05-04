@@ -11,7 +11,9 @@ August 19, 2017
 */
 var story = new Array();
 
-const current_Chapter = 0;
+const current_Chapter = 0;//TODO: remove this
+user.last_chapter_played = 0;
+pushVariablesToDB();
 
 const c = 17;
 /* "c" values:
@@ -43,7 +45,6 @@ function Chapter0()
     {
         story[i]= new Array();//il faut créer des arrays pour chaque array. Donc pour x[0], il faut créer des arrays, mais pour x[1] aussi, les deux sont indépendents. Il peut y avoir x[0][1][1][10] et x[1][2] qui coexistent
     }
-
     //story[0] === Story Text
     story[0] = [
         "(The trip to Arlington was long, but I’m finally here!)",//0 
@@ -208,7 +209,7 @@ function Chapter0()
         "null",
         "Hi again!",
         "Oh! I forgot to tell you about energy.",//55 
-        "Each day you log in, you’ll automatically receive energy points.",
+        "Each day you log in, you’ll be able to receive energy points.",
         "The more days you log into the game, the more energy points you will be able to get! Of course, for the sake of this demo, you will have infinite energy. Consider this a small welcome gift from the Academy.",
         "You can check how much energy you currently have on the purple bar at the top of this page. After a certain point in your adventures at Arlington, you will begin to use up your energy. At that point, when the full version of the game is released, I promise I’ll be back to explain how you get can more energy!",
         "You’ll need your energy to fulfill your destiny here at Arlington Academy. You will also meet a lot of characters that will be with you until the very end.",
@@ -331,11 +332,11 @@ function Chapter0()
         personnages.charaY[0],//70 
         personnages.charaY[0],
         personnages.charaY[0],
-        personnages.charaY[0],
+        personnages.charaY[4],
         personnages.charaY[0],
         personnages.charaY[0],//75 
         personnages.charaY[0],
-        personnages.charaY[0],
+        personnages.charaY[4],
         personnages.charaY[0],
         personnages.charaY[0],
         "null",//80 
@@ -769,9 +770,9 @@ function Chapter0()
         -6,//84 ghost slide
         -6,//85 ghost slide
         -6,//86 ghost slide
-        91,
-        91,
-        91,
+        90,
+        90,
+        90,
         -1,//90 
         -1,
         -1,
@@ -2250,9 +2251,9 @@ function Chapter0()
         87,//81 ghost slide
         88,//82 ghost slide
         89,//83 ghost slide
-        90,//84 ghost slide
-        91,//85 ghost slide
-        92,//86 ghost slide
+        87,//84 ghost slide
+        88,//85 ghost slide
+        89,//86 ghost slide
         -1,
         -1,
         -1,
@@ -2270,7 +2271,6 @@ function Chapter0()
         -1,
         -1,
         ];
-
 }
 
 Chapter0();//the simple act of appending the .js file will load the chapter into memory

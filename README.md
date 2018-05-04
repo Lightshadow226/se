@@ -2,7 +2,7 @@
 
 Every *new commit* shall have the following message: *Version 1.1.1 - QUIZ* with a meaningful title for the new version 
 
-* First Number: With *each OFFICIAL REALEASE*, the left number has to be incremented (`Version 2.0.0`)
+* First Number: With *each OFFICIAL RELEASE*, the left number has to be incremented (`Version 2.0.0`)
 
 * Second Number: With *each MAJOR change*, such as a new chapter, the mid number has to be incremented, (`Version 1.2.0`)
 

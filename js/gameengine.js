@@ -32,45 +32,13 @@ September 02, 2017
 
 $(function initializeInterface()//CREATES the entire interface once the document is $(document).READY()
 {
-    pullVariablesFromDB();
+    // await pullVariablesFromDB();
     console.log("Completed pulling data from database.")
     
     // user.storyLocation = user.storyLocation //TODO: régler le problème de la priorité quand on LOAD vs SAVE
     // pushVariablesToDB();//make sure the database reflects the fact that the current chapter is the one currently being played
     refreshInterface();//Start the first instance of the game
 })
-
-function restartChapter()
-{
-    console.log("Restarting the chapter...");
-    document.getElementById('game_frame').style.display = "block";
-    document.getElementById('objectiveContainer').style.display = "block";
-    document.getElementById('replay_handler').style.display = "none";
-
-    user.storyLocation = 0;//TODO: get the variable from the DATABASE with PHP
-    refreshInterface();
-}
-
-function nextChapter()
-{
-    console.log("Opening next chapter...");
-    var newChapter = parseInt(current_Chapter);
-        newChapter++;
-    
-    var newChapterAddress = "chapter" + newChapter + ".php";
-        window.open(newChapterAddress, "_self");
-}
-
-function endOfChapter()
-{
-    document.getElementById('game_frame').style.display = "none";
-    document.getElementById('objectiveContainer').style.display = "none";
-
-    user.storyLocation = 0;//TODO: get the variable from the DATABASE with PHP
-    
-    // $.get('partials/replay.php');
-    $("#replay_handler").load("partials/replay.php");
-}
 
 function refreshInterface()//REFRESHES the interface
 {
@@ -1021,9 +989,8 @@ function browseLink(link, element)//link is the link of the story (story[special
             user.scholarname = document.getElementById('new_name').value;
             user.storyLocation++;//we continue the story once we are done
             pushVariablesToDB();
+            HideForms();
         }
-
-        HideForms();
     }
     else if(link == -4)//friendship/romance buttons are enabled
     {
@@ -1096,4 +1063,43 @@ function HideForms()
     {
         forms[i].style.visibility = "hidden";
     }
+}
+
+function endOfChapter()
+{
+    //hide the game and objectives
+    document.getElementById('game_frame').style.display = "none";
+    document.getElementById('objectiveContainer').style.display = "none";
+
+    user.storyLocation = 0;//TODO: get the variable from the DATABASE with PHP
+    
+    // $.get('partials/replay.php');
+    $("#replay_handler").load("partials/replay.php");
+}
+
+function restartChapter()
+{
+    console.log("Restarting the chapter...");
+
+    //display the game and objective containers
+    document.getElementById('game_frame').style.display = "block";
+    document.getElementById('objectiveContainer').style.display = "block";
+
+    //hide the replay handler
+    document.getElementById('replay_handler').style.display = "none";
+
+    user.storyLocation = 0;//TODO: get the variable from the DATABASE with PHP
+    refreshInterface();
+}
+
+function nextChapter()
+{
+    console.log("Opening next chapter...");
+    var newChapter = parseInt(current_Chapter);
+        newChapter++;
+    
+    user.storyLocation = 0;//start the next chapter at slide 0
+
+    var newChapterAddress = "chapter" + newChapter + ".php";
+        window.open(newChapterAddress, "_self");
 }

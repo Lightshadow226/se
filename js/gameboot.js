@@ -112,4 +112,3 @@ function get_button_ID(index)
     }
 }
 // initializeInterface();
-pullVariablesFromDB();

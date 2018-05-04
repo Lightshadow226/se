@@ -168,5 +168,3 @@ function get_button_ID(index)
     //     return "chapter2.php";
     // }
 }
-
-pullVariablesFromDB();

@@ -221,7 +221,7 @@ var genders = ["She/Her", "He/Him", "They/Them"];
         "The rock star of the Academy. Literally. Axel is an internationally known teenage superstar and is usually seen touring for his new album. Cocky, sarcastic, and oh-so-charming, Axel only comes to Arlington because the law requires him to get his high school diploma and he makes sure everybody is aware of his nonchalance…But this musician constantly covers up who he is. In fact, is Axel even his real name?",
         "Claire is an aspiring neurosurgeon that volunteers part-time at the local hospital. Deeply caring and protective of the people she loves, she’s the student everybody loves and respects, despite her spending most of her time studying and doing medical research alone. Claire will do anything to make her classmates happy, and she’ll do so with a smile. After all, the last thing she wants it to lose yet another person she cares about.",
         "Inventor, mechanic and engineer to be, Ellie, nicknamed as “Tinker” by students is the famous president of Arlington’s robotics club! Despite being in a male-dominated field, Ellie is not afraid to shine. She loves maining new people and has a cute, cheerful exterior that charms her potential clients. But as time passes, Ellie realizes that there are several obstacles that might put not only her career at risk…but her identity as well.",
-        "Considered by many to be the prettiest girl in school, Karolina specializes in modelling. She’s gorgeous and fully aware of her charm. In fact, she makes sure that everybody knows that she’s the hottest, coolest, most amazing girl in this whole establishment, okay?! She is ruthless and will do anything to get what she wants. However, despite her overachieving ways and her promising future, Karolina finds herself struggling with her image…so much that it starts affecting her mental state and health. Her best friend and “second in command” is Neha.",
+        "Considered by many to be the prettiest girl in school, Karolina specializes in modelling. She’s gorgeous and fully aware of her charm. In fact, she makes sure that everybody knows that she’s the hottest, coolest, most amazing girl in this whole establishment, okay?! She is ruthless and will do anything to get what she wants. However, despite her overachieving ways and her promising future, Karolina finds herself struggling with her image…so much that it loadVariabless affecting her mental state and health. Her best friend and “second in command” is Neha.",
         "An aspiring fashion designer, Neha loves making her own clothes and other’s clothes. She spends countless hours designing seasonal collections and actually sells them to the students of Arlington (at a very high price!) Her success in the school is huge and she’s almost always sold out…but she’s using that success to hide her secret…a secret she believes will destroy her. She uses Karolina as her main model and is Axel’s official stylist for his concerts and photoshoots. Rather reserved and cold, Neha can, however, be surprisingly nice…whenever Karolina isn’t around.",
         "Raquel is passionate, borderline obsessed about soccer! A promising athlete in the athletics department, she’s energetic, ambitious and has no time for any crap. Despite being the most direct and honest student in Arlington, she can’t help but have a secret too…a secret she tries really hard to hide from her family. Raquel is always in it for the win, and that’s because she simply cannot afford to lose.",
         "Tadashi is the current Student Body President of Arlington Academy. Having the highest GPA of the school, an estimated IQ of 160, being a star student and a jack of all trades, Tadashi doesn’t have time for any crap…and that means it will be very hard for your Scholar to get to know him. You’ll have to be sharp, organized and future-oriented…because the future is exactly what troubles this guy.",
@@ -261,7 +261,7 @@ var genders = ["She/Her", "He/Him", "They/Them"];
     var chapter_description = 
     [
         "You just arrived at Arlington Academy, but everything is so new and big! You're going to need help from a few senior students who will lay down the basics on how things work around here.",
-        "Classes start tomorrow, so today is the time to try to make some new friends...but why is everybody so stressed today? Turns out even the simplest things back at home are much more complicated here at Arlington.",
+        "Classes tomorrow, so today is the time to try to make some new friends...but why is everybody so stressed today? Turns out even the simplest things back at home are much more complicated here at Arlington.",
         "Oh no! You're running late to class on your first day! As if this wasn't bad enough, the whole school seems to be revolving around a certain teenage celebrity and an exclusive homecoming party. But things aren't exactly as great as they look on the surface... ",
         "Description",
         "Description",
@@ -341,7 +341,7 @@ var genders = ["She/Her", "He/Him", "They/Them"];
         birthday: "April 25th",//const
         likes: "Shopping, clothes, modelling and getting what she wants",//const
         dislikes: "Being bothered, ugly clothes, being told what to do",//const
-        description: "Considered by many to be the prettiest girl in school, Karolina specializes in modelling. She’s gorgeous and fully aware of her charm. In fact, she makes sure that everybody knows that she’s the hottest, coolest, most amazing girl in this whole establishment, okay?! She is ruthless and will do anything to get what she wants. However, despite her overachieving ways and her promising future, Karolina finds herself struggling with her image…so much that it starts affecting her mental state and health. Her best friend and “second in command” is Neha.",//const
+        description: "Considered by many to be the prettiest girl in school, Karolina specializes in modelling. She’s gorgeous and fully aware of her charm. In fact, she makes sure that everybody knows that she’s the hottest, coolest, most amazing girl in this whole establishment, okay?! She is ruthless and will do anything to get what she wants. However, despite her overachieving ways and her promising future, Karolina finds herself struggling with her image…so much that it loadVariabless affecting her mental state and health. Her best friend and “second in command” is Neha.",//const
     };
     
     var neha = 
@@ -655,16 +655,27 @@ var personnages =
                     ]
 };
 
+
+// var xhr = ""; //XMLHttpRequest
+
 function pullVariablesFromDB()
 {
     //we're going to load the data from the database, and put it in the div with the ID = "#DB_handle" -> thus why we use $('#DB_handle')
 
-    $('#DB_handle').load('dbtransfers/get_variables.php', function()//pull variables from the DB
+    // $('#DB_handle').load('dbtransfers/get_variables.php', function()//pull variables from the DB
+    $.ajax('dbtransfers/get_variables.php',
     {
-        // document.getElementById('DB_handle').innerHTML = JSONdata;
-        // alert(JSONdata)
+        type: 'GET',
+        async: false,
+        dataType: 'html',
+    }).done(function (response)//when the request is done, we execute the following code:
+    {
+        //we print the response in #DB_handle:
 
-        // var data_array = $.parseJSON(JSONdata);
+        $('#DB_handle').html(response);
+
+        //then we save them as JS variables:
+
         /********************
         USERINFO table
         *********************/
@@ -693,6 +704,7 @@ function pullVariablesFromDB()
         user.storyLocation = document.getElementById("db_handle_story_location").value;//we should use an input and .value
         user.last_chapter_played = document.getElementById("db_handle_last_chapter_played").value;//we should use an input and .value
         user.physicalLocationInt = parseInt(document.getElementById("db_handle_physicallocationint").value);
+        console.log("Chapter " + user.last_chapter_played + " (Inside loop)");
         
         // user.storyLocation = JSONdata.getElementById("db_handle_story_location").value;//we should use an input and .value
         // user.storyLocation = data_array['username'];
@@ -719,7 +731,14 @@ function pullVariablesFromDB()
 
         $(document).ready(function(){try{refreshInterface();}catch(e){}});
         $(document).ready(function(){try{update_highest_affinity(); update_current_chapter();}catch(e){}});
-    });
+        
+        // xhr = "done";
+    });//, console.log(user.last_chapter_played)
+
+    // $(document).ajaxComplete(function()
+    // {
+        // $("#wait").css("display", "none");
+    // });
 }
 
 function pushVariablesToDB()
@@ -727,59 +746,91 @@ function pushVariablesToDB()
     // alert("tadashi: " + tadashi.affinity);
     // alert("alistair: " + alistair.affinity);
     // alert("push: " + user.username);
+    // alert(user.last_chapter_played);
 
-    $(document).ready(function()
-    {
-        console.log("pulling data from database...");
+    // await function()
+    // {
+        console.log("pushing data to the database...");
+        console.log("Chapter " + user.last_chapter_played);
 
-        $.post('dbtransfers/push_variables.php',
-        {
-            //*********************************************
-            //USERINFO table
-            //*********************************************
-            'username': user.username,
-            'energy': user.energy,
-            'money': user.money,
+        // $.post('dbtransfers/push_variables.php',
+        $.ajax('dbtransfers/push_variables.php',
+            {
+                type: 'POST',
+                async: false,
+                // dataType: "script",
+                data:
+            {
+                //*********************************************
+                //USERINFO table
+                //*********************************************
+                'username': user.username,
+                'energy': user.energy,
+                'money': user.money,
 
-            //*********************************************
-            //SCHOLARINFO table
-            //*********************************************
-            'department': user.department,
-            'scholarname': user.scholarname,
-            'gender': user.gender,
-            //on n'enregistre pas les autres variables pour l'instant
+                //*********************************************
+                //SCHOLARINFO table
+                //*********************************************
+                'department': user.department,
+                'scholarname': user.scholarname,
+                'gender': user.gender,
+                //on n'enregistre pas les autres variables pour l'instant
 
-            //*********************************************
-            //STORY table
-            //*********************************************
-            'storylocation': user.storyLocation,
-            'lastchapterplayed': user.last_chapter_played,
-            'physicallocationint': user.physicalLocationInt,
+                //*********************************************
+                //STORY table
+                //*********************************************
+                'storylocation': user.storyLocation,
+                'lastchapterplayed': user.last_chapter_played,
+                'physicallocationint': user.physicalLocationInt,
 
-            //*********************************************
-            //AFFINITY table
-            //*********************************************
-            'karolina_affinity': karolina.affinity,
-            'ellie_affinity': ellie.affinity,
-            'neha_affinity': neha.affinity,
-            'raquel_affinity': raquel.affinity,
-            'claire_affinity': claire.affinity,
-            'alistair_affinity': alistair.affinity,
-            'tadashi_affinity': tadashi.affinity,
-            'tegan_affinity': tegan.affinity,
-            'tyler_affinity': tyler.affinity,
-            'axel_affinity': axel.affinity,
-            'lady_arlington_affinity': lady_arlington.affinity,
-            'coach_davis_affinity': coach_davis.affinity,
-            'serena_affinity': serena.affinity,
-            'cecile_affinity': cecile.affinity,
-            'teacher_chapter_2_affinity': teacher_chapter_2.affinity,
+                //*********************************************
+                //AFFINITY table
+                //*********************************************
+                'karolina_affinity': karolina.affinity,
+                'ellie_affinity': ellie.affinity,
+                'neha_affinity': neha.affinity,
+                'raquel_affinity': raquel.affinity,
+                'claire_affinity': claire.affinity,
+                'alistair_affinity': alistair.affinity,
+                'tadashi_affinity': tadashi.affinity,
+                'tegan_affinity': tegan.affinity,
+                'tyler_affinity': tyler.affinity,
+                'axel_affinity': axel.affinity,
+                'lady_arlington_affinity': lady_arlington.affinity,
+                'coach_davis_affinity': coach_davis.affinity,
+                'serena_affinity': serena.affinity,
+                'cecile_affinity': cecile.affinity,
+                'teacher_chapter_2_affinity': teacher_chapter_2.affinity,
+            }
         });
-    });
+    // };
 }
 
 // pullVariablesFromDB();
 // pushVariablesToDB();
+
+/*Solution to ASYNC problem:
+    - await function: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function
+    - use $.ajax instead of $().load(): https://stackoverflow.com/questions/29200720/what-is-the-ajax-equivalent-of-load
+    - $.ajax documentation ("async: false" tag): http://api.jquery.com/jquery.ajax/
+    - idea to use "async: false":   https://stackoverflow.com/questions/133310/how-can-i-get-jquery-to-perform-a-synchronous-rather-than-asynchronous-ajax-re
+                                    https://stackoverflow.com/questions/755885/how-do-i-make-jquery-wait-for-an-ajax-call-to-finish-before-it-returns
+
+    - $().load documentation (useless for the solution): http://api.jquery.com/load/
+*/
+
+// function loadVariables()
+// {
+    // do
+    // {
+        // console.log("before: " + user.last_chapter_played);
+        // await buffer();
+        // pullVariablesFromDB();
+        // console.log("after: " + user.last_chapter_played);// + ", xhr = " + xhr);
+    // }while(!buffer);
+
+    // xhr = "0";
+// }
 
 /**
      * https://openclassrooms.com/courses/simplifiez-vos-developpements-javascript-avec-jquery/premiers-pas-avec-ajax
