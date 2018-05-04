@@ -25,4 +25,4 @@ Git Commands:
 3. tag this commit:
     git tag -a v1.1.1 -m "Version 1.1.1"
 4. push all commits to gitlab on the branch "master" (you don't have to push for every commit; you can push after a few commits; however, you have to commit your changes often)
-    git push gitlab master
+    git push gitlab master --tags
