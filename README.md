@@ -1,28 +1,21 @@
 # SE README
 
-Every *new commit* shall have the following message: *Version 1.1.1 - QUIZ* with a meaningful title for the new version 
+Commit Checklist
+1. Write patch notes in *CHANGELOG.md*
+2. Find a meaningful title
+3. Commit often and when changes are small but meaningful
 
-* First Number: With *each OFFICIAL RELEASE*, the left number has to be incremented (`Version 2.0.0`)
-
-* Second Number: With *each MAJOR change*, such as a new chapter, the mid number has to be incremented, (`Version 1.2.0`)
-
-* Third Number: With *each MINOR change*, the right number has to be incremented(`Version 1.1.2`)
-
-With every commit, patch notes must be written in the *CHANGELOG.md*
-
-Format for Patch Notes & TODOs (use TAB to insert a blank space):
-
-- *Category*        [Pages affected]    TODO
-- *CODE*            [game.php]          identifier le chapitre le plus récent
-
-.md extension (MarkDown) `https://en.wikipedia.org/wiki/Markdown`
+Version numbers are incremented as follow:
+* `Version X.1.1`: With *each OFFICIAL RELEASE*
+* `Version 1.X.1`: With *each MAJOR change*, (New Chapter and other major changes)
+* `Version 1.1.X`: With *each MINOR change*
 
 Git Commands:
-1. add modified files:
-    git add .
+1. add all modified files:
+    `git add .`
 2. commit those files:
-    git commit -m "Message"
+    `git commit -m "Message"`
 3. tag this commit:
-    git tag -a v1.1.1 -m "Version 1.1.1"
+    `git tag -a v1.1.1 -m "Version 1.1.1 (Title)"`
 4. push all commits to gitlab on the branch "master" (you don't have to push for every commit; you can push after a few commits; however, you have to commit your changes often)
-    git push gitlab master --tags
+    `git push gitlab master --tags`
