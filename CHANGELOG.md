@@ -1,17 +1,18 @@
-# CHANGELOG
 
-Version 1.5.6 (New Gameboot appearance and functionality)
+
+# Version 1.5.6 (New Gameboot appearance and functionality)
 ## Added
--   [gameboot.js]    
-    [game.php]    
+-   [gameboot.js]   [game.php]    
     > added chapters finished vs next chapters    
     > added the replay type (#1 vs #2) -> we still have to code the specifics, which are detailed in the file
 
 ## Changed
--   [variables.js]      > added pullVariablesFromDB as a default to the file (it will pull database variables if we include the file)
--   [chapter0.js]
-:   [chapter0.js]
-:   [gameengine.js]     > changed the variable used for the chapter location, because it was redondant -> now it's in each chapter's JS file
+-   [variables.js]      
+    > added pullVariablesFromDB as a default to the file (it will pull database variables if we include the file)
+-   [chapter0.js]       
+    [chapter0.js]       
+    [gameengine.js]     
+    > changed the variable used for the chapter location, because it was redondant -> now it's in each chapter's JS file
 
 Version 1.5.5 (Solution to the Async problem)
 - *EXCEL*               [chapter0.js]
