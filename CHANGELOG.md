@@ -14,7 +14,7 @@
 - changed the variable used for the chapter location, because it was redundant -> now it's in each chapter's JS file        
 
 `README.md`         
-- git tag -a v1.1.1 -m "Version 1.1.1 (Title)"      
+- git tag -a v1.1.1 -m "Version 1.1.1 (Title)" was a bit long and redundant so I changed it for `git tag v1.1.1`
 
 Version 1.5.5 (Solution to the Async problem)
 - *EXCEL*               [chapter0.js]
