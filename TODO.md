@@ -7,14 +7,11 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss3_transition1
 - *TODO*                [chapter 1.js]                                  il reste à implémenter les illustrations et le form pour sélectionner notre uniforme
 - *isVisited*           [gameengine.js]                                 empêcher le infinity meter d'augmenter si on a déjà visité la slide (il faut faire isVisited)
 - *isVisited*           [gameengine.js]                                 quand on recommence un chapitre, on doit
-                                                                            1. undo all the infinity consequences of visited slides
-                                                                            2. destroy all progress for that chapter (wipe the chapter's isVisited)
-                                                                            3. IF we replay chapter 13, all subsequent chapters must be replayed (memory is wiped out as well)
-                                                                            4. Replay type 2: nothing is wiped out, but it doesn't affect infinity. (we still need to register isVisited for achievement purposes)
-                                                                                -> we need to save the # of replays per chapter
-                                                                                -> FINAL TERMINAL CONCLUSION: WE NEED 2 TABLES isVisited
-                                                                                    |-> one official replay: mode "OFFICIAL"
-                                                                                    |-> all subsequent replays: mode "ACHIEVEMENTS"
+    A) Open a chapter through game.php (see further details in gameboot.js)
+    B) open a chapter page not normally (type chapter1.php to access it "illegally")
+        - redirect to game.php (write a script that reads the current chapter and compares it to the database)
+        - must be included in every chapter -> we can't use the game engine because it's going to be too late (user.last_chapter_played will already be modified)
+
 - *ACHIEVEMENTS*        [illustrations_achievements.php]                make sure that isVisited shows the proper achievements
 - *DEBUG*               [variables.js, get and pushvariables.php]       s'assurer qu'il n'y ait plus de variables utilisés sans la base de données
 - *ILLUSTRATION GENER.* [illustration_generator.php]                    generate illustrations based on [locked vs not, colors, etc.]

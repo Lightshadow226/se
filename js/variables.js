@@ -806,6 +806,8 @@ function pushVariablesToDB()
     // };
 }
 
+pullVariablesFromDB();
+
 // pullVariablesFromDB();
 // pushVariablesToDB();
 

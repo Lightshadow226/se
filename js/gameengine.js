@@ -779,7 +779,7 @@ function refreshInterface()//REFRESHES the interface
             };
     }
 
-    user.last_chapter_played = current_Chapter;
+    // user.last_chapter_played = current_Chapter;
     // pushVariablesToDB();
 }
 
@@ -1095,7 +1095,7 @@ function restartChapter()
 function nextChapter()
 {
     console.log("Opening next chapter...");
-    var newChapter = parseInt(current_Chapter);
+    var newChapter = parseInt(user.last_chapter_played);
         newChapter++;
     
     user.storyLocation = 0;//start the next chapter at slide 0

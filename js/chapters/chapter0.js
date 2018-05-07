@@ -11,11 +11,10 @@ August 19, 2017
 */
 var story = new Array();
 
-const current_Chapter = 0;//TODO: remove this
 user.last_chapter_played = 0;
 pushVariablesToDB();
 
-const c = 17;
+const c = 17;//TODO: update this because it should be 20
 /* "c" values:
     0 -> story text (ce qui apparait dans le text container)
     1 -> bubble 1

@@ -23,26 +23,16 @@
 
 	<div class = "main_content">
 
-		<!-- <div class="add_padding card-nomargin" style = "margin-bottom: 20px;"> -->
 		<h3 class="game-title card-firstdiv">Current Episode</h3>
-		<!-- </div> -->
-		
-		<div id = "currentEpisode">
-			
-		</div>
+		<div id = "currentEpisode"></div>
 
-		<!-- <div class="add_padding card-nomargin" style = "margin-bottom: 20px;"> -->
-			
-		<h3 class="card game-title">All Chapters</h3>
-		<!-- <div> -->
+		<h3 class="card game-title">Next Chapters</h3>
+		<div id = "nextChapters"></div>
 
-		<div id = "finishedChapters">
+		<h3 class="card game-title">Finished Chapters</h3>
+		<div id = "finishedChapters"></div>
 
-		</div>
-
-		<div id = "DB_handle">
-			
-		</div>
+		<div id = "DB_handle"></div>
 
 	</div>
 

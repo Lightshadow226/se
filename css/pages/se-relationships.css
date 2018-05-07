@@ -68,6 +68,22 @@
 	color: white;
 }
 
+.replay_episode_button
+{
+	position: absolute;
+	background-color: #EE4C5E;
+	
+	bottom: 10px;
+	left: 10px;
+	/* right: 0px; */
+	font-size: 1em;
+	align-content: center;
+	color: white;
+	-webkit-font-smoothing: antialiased;
+	filter: blur(0.000001px);
+	-webkit-filter: blur(0.000001px);
+}
+
 .play_episode_button
 {
 	position: absolute;
