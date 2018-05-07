@@ -9,8 +9,10 @@
 ## Changed
 `variables.js`      
 - added pullVariablesFromDB as a default to the file (it will pull database variables if we include the file)       
+
 `chapter0.js`       `chapter0.js`       `gameengine.js`     
 - changed the variable used for the chapter location, because it was redundant -> now it's in each chapter's JS file        
+
 `README.md`         
 - git tag -a v1.1.1 -m "Version 1.1.1 (Title)"      
 
