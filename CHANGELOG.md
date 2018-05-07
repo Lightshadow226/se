@@ -2,33 +2,31 @@
 
 # Version 1.5.6 (New Gameboot appearance and functionality)
 ## Added
-`gameboot.js`       `game.php`    
-- added chapters finished vs next chapters    
-- added the replay type (#1 vs #2) -> we still have to code the specifics, which are detailed in the file [gameboot.js]
+- `gameboot.js`       `game.php`    
+    - added chapters finished vs next chapters    
+    - added the replay type (#1 vs #2) -> we still have to code the specifics, which are detailed in the file [gameboot.js]
 
 ## Changed
-`variables.js`      
-- added pullVariablesFromDB as a default to the file (it will pull database variables if we include the file)       
+- `variables.js`      
+    - added pullVariablesFromDB as a default to the file (it will pull database variables if we include the file)       
+- `chapter0.js`       `chapter0.js`       `gameengine.js`     
+    - changed the variable used for the chapter location, because it was redundant -> now it's in each chapter's JS file        
+- `README.md`         
+    - git tag -a v1.1.1 -m "Version 1.1.1 (Title)" was a bit long and redundant so I changed it for `git tag v1.1.1`
 
-`chapter0.js`       `chapter0.js`       `gameengine.js`     
-- changed the variable used for the chapter location, because it was redundant -> now it's in each chapter's JS file        
-
-`README.md`         
-- git tag -a v1.1.1 -m "Version 1.1.1 (Title)" was a bit long and redundant so I changed it for `git tag v1.1.1`
-
-Version 1.5.5 (Solution to the Async problem)
+# Version 1.5.5 (Solution to the Async problem)
 - *EXCEL*               [chapter0.js]
                         [chapter0.xlsx]     made some changes to slide links
 - *TODO*                [todo.md]           placed the chapter 1 todo list on the Google Drive
 - *ASYNC*               [variables.php]     fixed the async problem once and for all (pull AND push)
 
-Version 1.5.4 (Async Solution)
+# Version 1.5.4 (Async Solution)
 - *TOP BAR DESIGN*      [headers.php]       Added information on the purple bar on top of the page
 - *README*              [README.md]         updated the README
 - *CSS*                 [.css]              updated >b< to be purple and >strong< to be white
 - *ASYNC*               [headers.php]       found a solution to the Async problem (link in TODO.md) and used it to display information on the top purple bar
 
-Version 1.5.3 (Ch. 0 Improvements)
+# Version 1.5.3 (Ch. 0 Improvements)
 - *EXCEL*               [chapter0.js]
                         [chapter0.xlsx]     made some changes to the dialog
 - *DORM IMAGE*          [dorm.jpg]          modified the image of the dorm (the wardrobe was missing...?)
@@ -36,17 +34,17 @@ Version 1.5.3 (Ch. 0 Improvements)
 - *REPLAY*              [replay.php]        
                         [gameengine.js      Implemented the replay/next chapter function when you reach the end of a chapter
 
-Version 1.5.2 (June forgot to write patch notes)
+# Version 1.5.2 (June forgot to write patch notes)
 - *JUNE FORGOT*
 
-Version 1.5.1 (Game Engine, TODO, DataBase)
+# Version 1.5.1 (Game Engine, TODO, DataBase)
 - *STRUCTURE*           [gameengine.js]
                         [header.js]         arrangment of all string continuations in JS files
 
 - *ADDITION*            [TODO.md]           addition of compiling link
 - *CODE*                [127_0_0_1.sql]     addition of default value to variable "physicalallocationint"            
 
-Version 1.5.0 (Game Engine, Google Ads)
+# Version 1.5.0 (Game Engine, Google Ads)
 - *STRUCTURE*           [gameengine.js]     creation of the game DOM is now in a php file [generateGameContainer.php], with the style in a css file rather than directly in JS
 - *CSS*                 [map.php]           rounded the corners
 - *GOOGLE ADS*          [googleAds.php]     added google ads to all pages with [footers.php, headers.php]
