@@ -23,7 +23,7 @@ Version 1.5.5 (Solution to the Async problem)
 Version 1.5.4 (Async Solution)
 - *TOP BAR DESIGN*      [headers.php]       Added information on the purple bar on top of the page
 - *README*              [README.md]         updated the README
-- *CSS*                 [.css]              updated <b> to be purple and <strong> to be white
+- *CSS*                 [.css]              updated >b< to be purple and >strong< to be white
 - *ASYNC*               [headers.php]       found a solution to the Async problem (link in TODO.md) and used it to display information on the top purple bar
 
 Version 1.5.3 (Ch. 0 Improvements)
