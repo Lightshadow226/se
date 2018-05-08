@@ -1,5 +1,13 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`
 
+# Version 1.5.8 (Small Fixes - about.php and images)
+## Added
+- `relationships.php`        
+    - Added a higher resolution file for classified school files
+## Changed
+- `about.php`           
+    - removed the buttons to sign up and log in if the user is already logged in
+
 # Version 1.5.7 (isVisited)
 ## Added
 - `variables.js`        

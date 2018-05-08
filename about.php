@@ -97,6 +97,7 @@
 
                 </div>
 
+                <?php if(!isset($_SESSION['username'])): ?><!-- logged off -->
                 <div class = "flex-container">
                     <div class = "flex-panel3">
                     </div>
@@ -114,7 +115,8 @@
                 <p class="center"><b>All you need to do is try our demo!<b></p><br>
                 <p class="center"><a href = "signup.php" id = "signup_button" class = "button">Sign Up</a></p>
                 <p class="center"><a href = "login.php" id = "login_button" class = "button">Login</a></p>
-                
+                <?php endif ?>
+
                 <div class = "flex-container">
                     <div class = "flex-panel3">
                     </div>
