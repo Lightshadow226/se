@@ -10,31 +10,8 @@ All rights reserved.
 September 02, 2017
 */
 
-//a few pointers to constant references in the chapter variables files
-    const main_text = 0;
-
-    const special_option = 6;
-
-    const choiceA_link = 10;
-    const choiceB_link = 11;
-    const choiceC_link = 12;
-
-    const choiceA_text = 13;
-    const choiceB_text = 14;
-    const choiceC_text = 15;
-
-    const infinityConsequence1 = 16;
-    const infinityConsequence2 = 17;
-
-    const isVisited = 18;
-    const POI = 19;
-    const LP = 20;
-
 $(function initializeInterface()//CREATES the entire interface once the document is $(document).READY()
 {
-    // await pullVariablesFromDB();
-    console.log("Completed pulling data from database.")
-    
     // user.storyLocation = user.storyLocation //TODO: régler le problème de la priorité quand on LOAD vs SAVE
     // pushVariablesToDB();//make sure the database reflects the fact that the current chapter is the one currently being played
     refreshInterface();//Start the first instance of the game
@@ -779,6 +756,8 @@ function refreshInterface()//REFRESHES the interface
             };
     }
 
+    
+    // pushVariablesToDB();
     // user.last_chapter_played = current_Chapter;
     // pushVariablesToDB();
 }
@@ -1051,6 +1030,7 @@ function browseLink(link, element)//link is the link of the story (story[special
         user.storyLocation = story[special_option][user.storyLocation];//on fait que la location devienne le numéro du link
     }
 
+    saveIsVisited();
     pushVariablesToDB();
     refreshInterface();
 }

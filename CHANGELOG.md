@@ -1,5 +1,17 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`
 
+# Version 1.5.7 (isVisited)
+## Added
+- `variables.js`        
+    - added loading of the isVisited of ch. 0
+    - added saving of the isVisited of ch. 0
+- `database`        
+    - added the chapter0_story table
+## Changed
+- `gameboot.js`           
+    - optimized the file
+    - a instead of div and .href instead of .onclick
+
 # Version 1.5.6 (New Gameboot appearance and functionality)
 ## Added
 - `gameboot.js`       `game.php`    

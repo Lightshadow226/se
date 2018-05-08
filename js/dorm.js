@@ -4,6 +4,10 @@ Create the Dorm Change appearance on Dorm.php
 
 Created on December 29, 2017
 
+TODO: remove all the pullVariablesFromDB();
+The files are supposed to be optimized so that including the variables.js file automatically pulls from the database, and pushing should be done periodically
+(no more pulling after the initial one)
+
 */
 
 var container = document.getElementById('dorm');

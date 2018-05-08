@@ -2273,3 +2273,5 @@ function Chapter0()
 }
 
 Chapter0();//the simple act of appending the .js file will load the chapter into memory
+
+try{loadIsVisited();}catch(e){};//TODO: only if logged in

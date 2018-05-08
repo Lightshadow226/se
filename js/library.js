@@ -22,7 +22,7 @@ Object.size = function(object)//returns the size of an object
 //*****PURPLE GAME BAR*****
 function updateGameBar()
 {
-    pullVariablesFromDB();
+    // pullVariablesFromDB();
 
     document.getElementById('barEpisode').innerHTML = getCurrentChapter().title;
 	
@@ -783,7 +783,7 @@ function refreshTestContainer()// affiche des données par rapport à la prev/cu
     // text += "Link: " + story[special_option][parseInt(user.storyLocation) + 1] + "\n";
     // text += "\n";
 
-    console.log(text);
+    // console.log(text);
     // container1.innerHTML = text;
 
     var input = document.createElement('input');
@@ -799,6 +799,7 @@ function refreshTestContainer()// affiche des données par rapport à la prev/cu
         if(e.keyCode == 13)//when we press "enter"
         {
             if(input.value) {user.storyLocation = input.value}
+            saveIsVisited();
             pushVariablesToDB();
             refreshInterface();
         }

@@ -75,9 +75,10 @@
 
 <script src = "js/jquery_3.2.1.js"></script>
 <!-- TODO: remove included files from most pages and add them here instead for them to always be loaded (variables.js, library.js) -->
-
-<!--<script src = "js/variables.js"></script>
-<script src = "js/library.js"></script>-->
+<!--
+<script src = "js/variables.js"></script>
+<script src = "js/library.js"></script>
+-->
 <script>
 // highlights the current page in the header
 $(function()

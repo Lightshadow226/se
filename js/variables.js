@@ -655,13 +655,99 @@ var personnages =
                     ]
 };
 
+//a few pointers to constant references in the chapter variables files
+    const main_text = 0;
 
-// var xhr = ""; //XMLHttpRequest
+    const special_option = 6;
 
-function pullVariablesFromDB()
+    const choiceA_link = 10;
+    const choiceB_link = 11;
+    const choiceC_link = 12;
+
+    const choiceA_text = 13;
+    const choiceB_text = 14;
+    const choiceC_text = 15;
+
+    const infinityConsequence1 = 16;
+    const infinityConsequence2 = 17;
+
+    const isVisited = 18;
+    const POI = 19;
+    const LP = 20;
+
+
+function loadIsVisited(chapter)
 {
-    //we're going to load the data from the database, and put it in the div with the ID = "#DB_handle" -> thus why we use $('#DB_handle')
+    $.ajax('dbtransfers/load_is_visited.php',
+    {
+        type: 'GET',
+        async: false,
+        dataType: 'html',
+    }).done(function (response)//when the request is done, we execute the following code:
+    {
+        //we print the response in #DB_handle:
+        $('#DB_handle').html(response);
+        
+        var chapter_size = document.getElementById("chapter_size").value;
+        console.log("Loaded isVisited for " + chapter_size + " slides.");
+        
+        //then we save them as JS variables:
+        for(var i = 0; i <= chapter_size; i++)
+        {
+            var new_variable = "c" + i;
+            var isVisitedValue = document.getElementById(new_variable).value;
+            
+            //convert from int to boolean 1 -> true
+            var actualValue = false;
+            if(isVisitedValue == 1) actualValue = true;
 
+            story[isVisited][i] = actualValue;
+        }
+    });
+}
+
+function saveIsVisited(chapter)
+{
+    // solution: https://stackoverflow.com/questions/1184123/is-it-possible-to-add-dynamically-named-properties-to-javascript-object
+    var jsonData = {};
+    
+    var chapter_size = story[0].length - 1;
+    
+    //convert the data into JSON (true -> 1)
+    for(var i = 0; i <= chapter_size; i++)
+    {
+        // console.log("(saving) " + i + ": " + story[isVisited][i]);
+        
+        var JSONpropertyName = "c" + i;
+        var value = 0;
+
+        if(story[isVisited][i])
+        {
+            value = 1;
+        }
+
+        jsonData[JSONpropertyName] = value;
+    }
+
+    //send the JSON data to the server
+    $.ajax('dbtransfers/save_is_visited.php',
+        {
+            type: 'POST',
+            async: false,
+            dataType: "json",
+            data: jsonData
+    }).done(function (response)
+    {
+        console.log(response);
+    });
+
+    console.log("Saved isVisited for " + chapter_size + " slides.");
+}
+
+function pullVariablesFromDB()//we load the data from the database, and put it in the div with the ID = "#DB_handle" -> thus why we use $('#DB_handle')
+{
+    // console.log("Pulling data from the database...");
+    
     // $('#DB_handle').load('dbtransfers/get_variables.php', function()//pull variables from the DB
     $.ajax('dbtransfers/get_variables.php',
     {
@@ -696,20 +782,14 @@ function pullVariablesFromDB()
         user.eyecolor = parseInt(document.getElementById("db_handle_eyecolor").value);
         user.wigID = parseInt(document.getElementById("db_handle_wigID").value);
         
-        // alert(user.scholarname);
-
         /********************
         STORY table
         *********************/
         user.storyLocation = document.getElementById("db_handle_story_location").value;//we should use an input and .value
         user.last_chapter_played = document.getElementById("db_handle_last_chapter_played").value;//we should use an input and .value
         user.physicalLocationInt = parseInt(document.getElementById("db_handle_physicallocationint").value);
-        console.log("Chapter " + user.last_chapter_played + " (Inside loop)");
+        // console.log("Chapter " + user.last_chapter_played + " (Inside loop)");
         
-        // user.storyLocation = JSONdata.getElementById("db_handle_story_location").value;//we should use an input and .value
-        // user.storyLocation = data_array['username'];
-        // alert("pull: " + user.storyLocation);
-
         /********************
         AFFINITY table
         *********************/
@@ -731,85 +811,70 @@ function pullVariablesFromDB()
 
         $(document).ready(function(){try{refreshInterface();}catch(e){}});
         $(document).ready(function(){try{update_highest_affinity(); update_current_chapter();}catch(e){}});
-        
-        // xhr = "done";
-    });//, console.log(user.last_chapter_played)
+    });
 
-    // $(document).ajaxComplete(function()
-    // {
-        // $("#wait").css("display", "none");
-    // });
+    console.log("Loaded data from database.")
 }
 
 function pushVariablesToDB()
 {
-    // alert("tadashi: " + tadashi.affinity);
-    // alert("alistair: " + alistair.affinity);
-    // alert("push: " + user.username);
-    // alert(user.last_chapter_played);
+    // console.log("Pushing data to the database...");
 
-    // await function()
-    // {
-        console.log("pushing data to the database...");
-        console.log("Chapter " + user.last_chapter_played);
+    // $.post('dbtransfers/push_variables.php',
+    $.ajax('dbtransfers/push_variables.php',
+        {
+            type: 'POST',
+            async: false,
+            // dataType: "script",
+            data:
+        {
+            //*********************************************
+            //USERINFO table
+            //*********************************************
+            'username': user.username,
+            'energy': user.energy,
+            'money': user.money,
 
-        // $.post('dbtransfers/push_variables.php',
-        $.ajax('dbtransfers/push_variables.php',
-            {
-                type: 'POST',
-                async: false,
-                // dataType: "script",
-                data:
-            {
-                //*********************************************
-                //USERINFO table
-                //*********************************************
-                'username': user.username,
-                'energy': user.energy,
-                'money': user.money,
+            //*********************************************
+            //SCHOLARINFO table
+            //*********************************************
+            'department': user.department,
+            'scholarname': user.scholarname,
+            'gender': user.gender,
+            //on n'enregistre pas les autres variables pour l'instant
 
-                //*********************************************
-                //SCHOLARINFO table
-                //*********************************************
-                'department': user.department,
-                'scholarname': user.scholarname,
-                'gender': user.gender,
-                //on n'enregistre pas les autres variables pour l'instant
+            //*********************************************
+            //STORY table
+            //*********************************************
+            'storylocation': user.storyLocation,
+            'lastchapterplayed': user.last_chapter_played,
+            'physicallocationint': user.physicalLocationInt,
 
-                //*********************************************
-                //STORY table
-                //*********************************************
-                'storylocation': user.storyLocation,
-                'lastchapterplayed': user.last_chapter_played,
-                'physicallocationint': user.physicalLocationInt,
+            //*********************************************
+            //AFFINITY table
+            //*********************************************
+            'karolina_affinity': karolina.affinity,
+            'ellie_affinity': ellie.affinity,
+            'neha_affinity': neha.affinity,
+            'raquel_affinity': raquel.affinity,
+            'claire_affinity': claire.affinity,
+            'alistair_affinity': alistair.affinity,
+            'tadashi_affinity': tadashi.affinity,
+            'tegan_affinity': tegan.affinity,
+            'tyler_affinity': tyler.affinity,
+            'axel_affinity': axel.affinity,
+            'lady_arlington_affinity': lady_arlington.affinity,
+            'coach_davis_affinity': coach_davis.affinity,
+            'serena_affinity': serena.affinity,
+            'cecile_affinity': cecile.affinity,
+            'teacher_chapter_2_affinity': teacher_chapter_2.affinity,
+        }
+    });
 
-                //*********************************************
-                //AFFINITY table
-                //*********************************************
-                'karolina_affinity': karolina.affinity,
-                'ellie_affinity': ellie.affinity,
-                'neha_affinity': neha.affinity,
-                'raquel_affinity': raquel.affinity,
-                'claire_affinity': claire.affinity,
-                'alistair_affinity': alistair.affinity,
-                'tadashi_affinity': tadashi.affinity,
-                'tegan_affinity': tegan.affinity,
-                'tyler_affinity': tyler.affinity,
-                'axel_affinity': axel.affinity,
-                'lady_arlington_affinity': lady_arlington.affinity,
-                'coach_davis_affinity': coach_davis.affinity,
-                'serena_affinity': serena.affinity,
-                'cecile_affinity': cecile.affinity,
-                'teacher_chapter_2_affinity': teacher_chapter_2.affinity,
-            }
-        });
-    // };
+    console.log("Saved data to database.")
 }
 
 pullVariablesFromDB();
-
-// pullVariablesFromDB();
-// pushVariablesToDB();
 
 /*Solution to ASYNC problem:
     - await function: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function
