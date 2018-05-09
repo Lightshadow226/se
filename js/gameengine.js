@@ -745,6 +745,8 @@ function refreshInterface()//REFRESHES the interface
     
     saveIsVisited();
     pushVariablesToDB();
+
+    updateGameBar();
 }
 
 //This function is to affect what happens when we click on the text container depending on the link

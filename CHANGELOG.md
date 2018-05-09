@@ -1,5 +1,38 @@
-`Important: put more than 2 spaces at the end of a line if you want a line break`
+`Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
+
+# Version 1.5.14 (Beta Fixes - Spelling, Small Bugs and School Files)
+## Changed
+- `multiple files`
+    - Spelling and Grammar fixes
+    - index.php, about.php, variables.js, parents.php
+- `School Files`
+    - Added updates images for the school files.
+
+
+# Version 1.5.13 (Design changes)
+## Added
+- `headers.php`
+    - added "replays" at the top of the purple bar
+    - moved the "Welcome Back!" to the left of the bar
+    - moved the "Login" to the right of the bar
+    - TODO: we can put something like "help" next to the logout
+- `users.sql`
+    - added the database for users to the root folder
+    - use the "import" feature in phpmyadmin to import the new database to your machine
+
+## Changed
+- `game.php`        `gameboot.php`
+    - changed the appearance of the start episode buttons (when they are disabled, they are now grey)
+    - TODO: build the table for ch. 1 and ch. 2 (tentative)
+    - TODO: uncomment the loop so that ch. 1 and ch. 2 can be included in the replay function (with wiping of memory)
+    - TODO: create a database variable to know if the chapter currently being played is in mode #1 or #2
+- `gameengine.js`
+    - the game bar (purple top bar) is updated at every click
+    - TODO: update the 10 images at the bottomat every click as well
+    - TODO: popups dans le jeu (please enter a username, please do X)
+    - TODO: mettre ce popup dans library.js
+
 
 # Version 1.5.12 (Replay Story type #1 - Infinity consequences)
 ## Added
@@ -7,9 +40,6 @@
     - undo all infinity consequences for the chapter
     - the code is now a function in library.js called "wipeCurrentChapter()"
     - this function will wipe the contextual chapter
-    - TODO: build the table for ch. 1 and ch. 2 (tentative)
-    - TODO: uncomment the loop so that ch. 1 and ch. 2 can be included in the replay function (with wiping of memory)
-    - TODO: create a database variable to know if the chapter currently being played is in mode #1 or #2
 
 ## Changed
 - `push_variables.php`
@@ -17,11 +47,9 @@
     - this was causing an issue when saving to the database
     - all the characters after coach davis and lady arlington were not read (such as cecile and serena)
     - now it works as intended
-    
 - `replay.php`
     - remove the "Next Chapter" button
     - TODO: put it back lol
-
 - `variables.js`
     - removed the refreshInterface call in the variables.js file (it was calling it twice in the game engine)
     - this is a result of trying to fix the async bug a few months ago
@@ -34,7 +62,7 @@
     - coded the first type of replay
     - replay type 1 = reset progress (replay story) -> ex.: if we replay chapter 13, all subsequent chapters must be replayed (memory is wiped out as well)
     - ex. 1: we're currently playing ch. 1, we click on ch. 0.
-        - it will wipe the memory of chapter 0 for now (the SQL table chapter1_story is not yet created)
+        - it will wipe the memory of chapter 0 for now (    the SQL table chapter1_story is not yet created)
         - isVisited is going to be 0 for all of the slides and we will restart ch. 0 at slide 0
     - ex. 2: if we're playing ch. 0 and we click on ch. 0, it will NOT reset progress and will proceed with the story (as intended)
 
