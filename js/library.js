@@ -32,6 +32,8 @@ function updateGameBar()
 	document.getElementById('barMoney').innerHTML = "∞";
 	
 	document.getElementById('barEnergy').innerHTML = "∞";
+    
+    document.getElementById('barReplays').innerHTML = "∞";
 }
 
 //*****CHAPTERS*****

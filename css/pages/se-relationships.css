@@ -68,52 +68,6 @@
 	color: white;
 }
 
-.replay_episode_button
-{
-	position: absolute;
-	background-color: #EE4C5E;
-	
-	bottom: 10px;
-	left: 10px;
-	/* right: 0px; */
-	font-size: 1em;
-	align-content: center;
-	color: white;
-	-webkit-font-smoothing: antialiased;
-	filter: blur(0.000001px);
-	-webkit-filter: blur(0.000001px);
-}
-
-.play_episode_button
-{
-	position: absolute;
-	background-color: #EE4C5E;
-	
-	bottom: 10px;
-	right: 10px;
-	/* right: 0px; */
-	font-size: 1em;
-	align-content: center;
-	color: white;
-	-webkit-font-smoothing: antialiased;
-	filter: blur(0.000001px);
-	-webkit-filter: blur(0.000001px);
-}
-
-/* cette section a été remplacée par le "bottom: 10px;" et "right: 10px;" directement dans la classe du bouton, et le bouton a été append au middle_content
-.play_episode_button-small
-{
-	left: 90%;
-	transform: translate3d(calc(-100% - 10px), calc(-100% - 15px), 0px);
-}
-
-.play_episode_button-big
-{
-	left: 90%;
-	transform: translate3d(calc(-100% - 10px), calc(-100% - 30px), 0px);
-}
-*/
-
 .character_img_index
 {
 	/* max-height: 350px; */

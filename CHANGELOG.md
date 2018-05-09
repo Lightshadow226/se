@@ -1,5 +1,29 @@
-`Important: put more than 2 spaces at the end of a line if you want a line break`
+`Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
+
+# Version 1.5.13 (Design changes)
+## Added
+- `headers.php`
+    - added "replays" at the top of the purple bar
+    - moved the "Welcome Back!" to the left of the bar
+    - moved the "Login" to the right of the bar
+    - TODO: we can put something like "help" next to the logout
+- `users.sql`
+    - added the database for users to the root folder
+    - use the "import" feature in phpmyadmin to import the new database to your machine
+
+## Changed
+- `game.php`        `gameboot.php`
+    - changed the appearance of the start episode buttons (when they are disabled, they are now grey)
+    - TODO: build the table for ch. 1 and ch. 2 (tentative)
+    - TODO: uncomment the loop so that ch. 1 and ch. 2 can be included in the replay function (with wiping of memory)
+    - TODO: create a database variable to know if the chapter currently being played is in mode #1 or #2
+- `gameengine.js`
+    - the game bar (purple top bar) is updated at every click
+    - TODO: update the 10 images at the bottomat every click as well
+    - TODO: popups dans le jeu (please enter a username, please do X)
+    - TODO: mettre ce popup dans library.js
+
 
 # Version 1.5.12 (Replay Story type #1 - Infinity consequences)
 ## Added
@@ -7,9 +31,6 @@
     - undo all infinity consequences for the chapter
     - the code is now a function in library.js called "wipeCurrentChapter()"
     - this function will wipe the contextual chapter
-    - TODO: build the table for ch. 1 and ch. 2 (tentative)
-    - TODO: uncomment the loop so that ch. 1 and ch. 2 can be included in the replay function (with wiping of memory)
-    - TODO: create a database variable to know if the chapter currently being played is in mode #1 or #2
 
 ## Changed
 - `push_variables.php`
@@ -17,11 +38,9 @@
     - this was causing an issue when saving to the database
     - all the characters after coach davis and lady arlington were not read (such as cecile and serena)
     - now it works as intended
-    
 - `replay.php`
     - remove the "Next Chapter" button
     - TODO: put it back lol
-
 - `variables.js`
     - removed the refreshInterface call in the variables.js file (it was calling it twice in the game engine)
     - this is a result of trying to fix the async bug a few months ago

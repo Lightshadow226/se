@@ -422,6 +422,91 @@
 
 /*BUTTONS*/
 
+
+    .replay_episode_button
+    {
+        position: absolute;
+        background-color: #EE4C5E;
+        
+        bottom: 10px;
+        left: 10px;
+        /* right: 0px; */
+        font-size: 1em;
+        align-content: center;
+        color: white;
+        -webkit-font-smoothing: antialiased;
+        filter: blur(0.000001px);
+        -webkit-filter: blur(0.000001px);
+    }
+
+    .play_episode_button
+    {
+        position: absolute;
+        background-color: #EE4C5E;
+        
+        bottom: 10px;
+        right: 10px;
+        /* right: 0px; */
+        font-size: 1em;
+        align-content: center;
+        color: white;
+        -webkit-font-smoothing: antialiased;
+        filter: blur(0.000001px);
+        -webkit-filter: blur(0.000001px);
+    }
+
+    .play_episode_button_disabled
+    {
+        position: absolute;
+        color: #EE4C5E;
+        background-color: #EFEEEA;
+
+        /*position*/
+        bottom: 10px;
+        right: 10px;
+
+        /*font*/
+        font-size: 1em;
+        -webkit-font-smoothing: antialiased;
+        filter: blur(0.000001px);
+        -webkit-filter: blur(0.000001px);
+
+
+        margin: 0 auto;/*centers the button in its parent div*/
+        align-content: center;
+        padding: 10px;
+        text-decoration: none;/*enlever le underline -> ne va plus être nécessaire quand on va rendre le bouton un actual Button*/
+        border-radius: 5px;
+        text-align: center;
+
+        min-width: 75px;
+        max-width: 300px;
+        
+        /*position*/
+        user-select: none;
+        -webkit-user-select: none;
+        display: inline-block;
+        flex: 1;
+        font-weight: 300;
+
+        border: none;
+        transition: background-color 0.3s;
+    }
+
+    /* cette section a été remplacée par le "bottom: 10px;" et "right: 10px;" directement dans la classe du bouton, et le bouton a été append au middle_content
+    .play_episode_button-small
+    {
+        left: 90%;
+        transform: translate3d(calc(-100% - 10px), calc(-100% - 15px), 0px);
+    }
+
+    .play_episode_button-big
+    {
+        left: 90%;
+        transform: translate3d(calc(-100% - 10px), calc(-100% - 30px), 0px);
+    }
+    */
+
     .directional_button /*les boutons pour se déplacer dans l'histoire*/
     {
         position: absolute;
