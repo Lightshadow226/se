@@ -1,4 +1,12 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`
+# Version 1.5.10 (Appearance)
+## Changed
+- `index.php`
+    - Bug fixing (the wrong classes were being called for the buttons)
+- `se-buttons.css`
+- `se-index.css`
+    - Adding fading effect to the buttons
+
 # Version 1.5.9 (Forgotten PassWord Appearence)
 ## Changed
 - `forgot_password.php`
