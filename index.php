@@ -21,12 +21,13 @@
 <body>
 
 	<?php include_once 'partials/headers.php' ?>
-
+	
 	<div class = "main_content">
 
 		<?php if(!isset($_SESSION['username'])): ?><!-- logged off -->
 			<!-- <P>You are currently not signed in. <a href="login.php">Login</a> to your account. Not yet a member? <a href="signup.php">Signup</a>.</p> -->
 
+			<!-- BANNER -->
 			<div id="banner">
 				<img id="img_banner" src="images/banners/banner_logged_off.png">
 				<div id = "button_container">
@@ -297,9 +298,6 @@
 				</div>
 			</div>
 
-
-			
-
 		<?php endif ?>
 		
 		<!-- MERCHANDISE -->
@@ -325,6 +323,21 @@
 					<img class = "img-badge" style="height:100%; border-bottom-right-radius: 10px;" src = "images/banners/customize_your_character.png"></img>
 				</div>
 			</div>
+		</div> -->
+
+		<!-- Test pour Mouna -->
+		<!-- <div class = "card">
+			
+			<div class="card-header">
+				<h3>Header</h3>
+			</div>
+
+			<div class="card-content">
+				<p>CONTENT</p>
+				<br>
+				<a class="button pink_button" href="game.php">blabla</a>
+			</div>
+
 		</div> -->
 
 		<!-- DEBUG <div class="box left-shadow bottom-shadow"></div> -->
