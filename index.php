@@ -45,7 +45,7 @@
 					
 					</br>
 
-					<p><i>In a school filled with rich, beautiful and insanely talented students, nothing could go wrong….could it? Arlington Academy has its secrets. Secrets it doesn’t want to expose.</i></p>
+					<p><i>In a school filled with rich, beautiful and insanely talented students, nothing could go wrong… could it? Arlington Academy has its secrets. Secrets it doesn’t want to expose.</i></p>
 
 					</br>
 					

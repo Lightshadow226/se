@@ -1,13 +1,21 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`
 `Two tabs should work`
 
+# Version 1.5.13 (Beta Fixes - Spelling, Small Bugs and School Files)
+## Changed
+- `multiple files`
+    - Spelling and Grammar fixes
+    - index.php, about.php, variables.js, parents.php
+- `School Files`
+    - Added updates images for the school files.
+
 # Version 1.5.11 (Replay Story type #1)
 ## Added
 - `gameboot.js`
     - coded the first type of replay
     - replay type 1 = reset progress (replay story) -> ex.: if we replay chapter 13, all subsequent chapters must be replayed (memory is wiped out as well)
     - ex. 1: we're currently playing ch. 1, we click on ch. 0.
-        - it will wipe the memory of chapter 0 for now (the SQL table chapter1_story is not yet created)
+        - it will wipe the memory of chapter 0 for now (    the SQL table chapter1_story is not yet created)
         - isVisited is going to be 0 for all of the slides and we will restart ch. 0 at slide 0
         - TODO: undo infinity consequences for the chapter (easy)
     - ex. 2: if we're playing ch. 0 and we click on ch. 0, it will NOT reset progress and will proceed with the story (as intended)

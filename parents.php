@@ -27,7 +27,7 @@
             <h5>Your Child's Wellbeing on Sweet Elite</h5>
 
 			<h2>What is Sweet Elite?</h2>
-			<p>Sweet Elite is an online dating simulation and mystery game that centers around the main character transferring into an elite boarding school made for the smartest, most talented teenagers in the world.</p><br>
+			<p>Sweet Elite is an online dating simulation and mystery game that centers around the main character transferring into an elite boarding school made for the most intelligent, most talented teenagers in the world.</p><br>
 			<p>Your child experiences the story in “Visual Novel” style, a script written in a way to allow the player to make different choices and impact the story and their relationships with the characters as they wish. Sweet Elite also allows the player to customize their character with different clothing options.</p><br>
 			<p>The aim of the game is to solve the mysteries of the school and build relationships with fellow students while experiencing a thrilling adventure at Arlington Academy.</p><br>
 			<p>The game can be played entirely for free. However, we do offer options to purchase in-game credits and official merchandise in our stores. Note that those purchases are completely optional and we will never obligate your child to purchase anything from us. As stated in our TERMS AND CONDITIONS, we do not allow individuals under the age of 18 years of age to purchase credits without the consent of their parent or legal guardian.</p><br>
@@ -43,10 +43,10 @@
 			<p>We make sure to provide a safe and fun environment for players. We closely monitor for any players that do not adhere to the rules of the game. Any player that attempts illegal activity or harassment/harm to another player will be banned from the game. No types of cheating and stealing will be tolerated.<p><br>
 
 			<h2>What about the advertisements on the website?</h2>
-			<p>Your child may encounter some advertisements on the bottom, top or side of our pages. These advertisements are closely monitored by us to ensure that they are safe and appropriate. We strictly exclude all advertisements promoting adult content such as gambling, pornography and other mature subjects. Links to websites appropriate for teenagers will have priority.</p><br>
+			<p>Your child may encounter some advertisements on the bottom, top or side of our pages. These advertisements are closely monitored by us to ensure that they are safe and appropriate. We strictly exclude all advertisements promoting adult content such as gambling, pornography and other mature subject matter. Links to websites appropriate for teenagers will have priority.</p><br>
 
 			<h2>What about personal data?</h2>
-			<p>In order to register, an email address is required. We will never use this email address provided for commercial purposes. It is never shared with outside parties or individuals.</p><br>
+			<p>In order to register, an email address is required. We will never use this email address provided for commercial purposes. It will never be shared with outside parties or individuals.</p><br>
 
 			<h2>What can you do as a parent?</h2>
 			<p>Children and teenagers tend to learn from calm discussion and genuine advice. We recommend discussing internet activities with your child to make sure their experiences are positive. Feel free to consult reliable websites that can help you approach the subject.<p><br>
