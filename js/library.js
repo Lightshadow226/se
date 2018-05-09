@@ -732,6 +732,64 @@ function toggle_pronouns(clicked, one, two)
     }
 }
 
+function wipeCurrentChapter()
+{
+    var chapterSize = story[isVisited].length;
+
+    console.log("chapter size: " + chapterSize);
+                    
+    for(var j = 0; j < chapterSize; j++)//for every slide
+    {
+        // STEP 4: wipe the infinity consequences
+        // TODO: for every slide, we have to undo the infinity consequence IF IT WAS VISITED
+        
+        if(story[isVisited][j])
+        {
+            //Left infinity meter
+            if(story[4][j] != "null")//if there is a character 2 in this slide
+            {
+                var relevant_char = getPersonnage(story[4][j]);
+                    relevant_char.affinity = Number(relevant_char.affinity);
+                    relevant_char.affinity -= Number(story[infinityConsequence2][j]);//on doit s'assurer que la valeur est un nombre, parce que sinon, parfois, ça fait juste carrément rajouter un zéro
+                
+                if(Number(relevant_char.affinity) < 0)
+                {
+                    relevant_char.affinity = 0;
+                }
+            
+                console.log(j + " story[4][j]: " + story[4][j]);
+            }
+
+            //Right infinity meter
+            if(story[2][j] != "null")//if there is a character 1 in this slide
+            {
+                relevant_char = getPersonnage(story[2][j]);
+                relevant_char.affinity = Number(relevant_char.affinity);
+                relevant_char.affinity -= Number(story[infinityConsequence1][j]);
+                
+                if(Number(relevant_char.affinity) < 0)
+                {
+                    relevant_char.affinity = 0;
+                }
+
+                console.log(j + " story[2][j]: " + story[2][j]);
+            }
+        }
+
+        // STEP 5: then, wipe isVisited
+        story[isVisited][j] = false;
+    }
+
+    // STEP 6: start the chapter fresh at slide 0
+    user.storyLocation = 0;
+
+    // STEP 7: save all the variables to the database
+    saveIsVisited();
+    pushVariablesToDB();
+
+    console.log("Successfully wiped the memory for chapter " + user.last_chapter_played);
+}
+
 // -----START DEBUGGING TOOLS-----
 function refreshTestContainer()// affiche des données par rapport à la prev/current/next slide
 {

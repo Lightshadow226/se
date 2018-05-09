@@ -172,70 +172,70 @@ include_once '../resources/utilities.php';
     $tegan = $_POST['tegan_affinity'];
     $tyler = $_POST['tyler_affinity'];
     $axel = $_POST['axel_affinity'];
-    $ladyarlington = $_POST['ladyarlington_affinity'];
-    $coachdavis = $_POST['coachdavis_affinity'];
+    $ladyarlington = $_POST['lady_arlington_affinity'];
+    $coachdavis = $_POST['coach_davis_affinity'];
     $serena = $_POST['serena_affinity'];
     $cecile = $_POST['cecile_affinity'];
-    $teacherchapter2 = $_POST['teacherchapter2_affinity'];
+    $teacherchapter2 = $_POST['teacher_chapter_2_affinity'];
 
     try
     {
         $sqlQuery1 = "UPDATE affinity SET karolina = '$karolina' WHERE id = '$id'";
         $statement = $db->prepare($sqlQuery1);
         $statement->execute();
-
+        
         $sqlQuery2 = "UPDATE affinity SET ellie = '$ellie' WHERE id = '$id'";
         $statement2 = $db->prepare($sqlQuery2);
         $statement2->execute();
-
+        
         $sqlQuery3 = "UPDATE affinity SET neha = '$neha' WHERE id = '$id'";
         $statement3 = $db->prepare($sqlQuery3);
         $statement3->execute();
-
+        
         $sqlQuery4 = "UPDATE affinity SET raquel = '$raquel' WHERE id = '$id'";
         $statement4 = $db->prepare($sqlQuery4);
         $statement4->execute();
-
+        
         $sqlQuery5 = "UPDATE affinity SET claire = '$claire' WHERE id = '$id'";
         $statement5 = $db->prepare($sqlQuery5);
         $statement5->execute();
-
+        
         $sqlQuery6 = "UPDATE affinity SET alistair = '$alistair' WHERE id = '$id'";
         $statement6 = $db->prepare($sqlQuery6);
         $statement6->execute();
-
+        
         $sqlQuery7 = "UPDATE affinity SET tadashi = '$tadashi' WHERE id = '$id'";
         $statement7 = $db->prepare($sqlQuery7);
         $statement7->execute();
-
+        
         $sqlQuery8 = "UPDATE affinity SET tegan = '$tegan' WHERE id = '$id'";
         $statement8 = $db->prepare($sqlQuery8);
         $statement8->execute();
-
+        
         $sqlQuery9 = "UPDATE affinity SET tyler = '$tyler' WHERE id = '$id'";
         $statement9 = $db->prepare($sqlQuery9);
         $statement9->execute();
-
+        
         $sqlQuery10 = "UPDATE affinity SET axel = '$axel' WHERE id = '$id'";
         $statement10 = $db->prepare($sqlQuery10);
         $statement10->execute();
-
+        
         $sqlQuery11 = "UPDATE affinity SET ladyarlington = '$ladyarlington' WHERE id = '$id'";
         $statement11 = $db->prepare($sqlQuery11);
         $statement11->execute();
-
+        
         $sqlQuery12 = "UPDATE affinity SET coachdavis = '$coachdavis' WHERE id = '$id'";
         $statement12 = $db->prepare($sqlQuery12);
         $statement12->execute();
-
+        
         $sqlQuery13 = "UPDATE affinity SET serena = '$serena' WHERE id = '$id'";
         $statement13 = $db->prepare($sqlQuery13);
         $statement13->execute();
-
+        
         $sqlQuery14 = "UPDATE affinity SET cecile = '$cecile' WHERE id = '$id'";
         $statement14 = $db->prepare($sqlQuery14);
         $statement14->execute();
-
+        
         $sqlQuery15 = "UPDATE affinity SET teacherchapter2 = '$teacherchapter2' WHERE id = '$id'";
         $statement15 = $db->prepare($sqlQuery15);
         $statement15->execute();

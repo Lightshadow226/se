@@ -205,23 +205,7 @@ function get_button_consequence(index, replayType = 1)//replayType is optional, 
                 // STEP 3: wipe the variables from the chapter
                 script.onload = function()
                 {
-                    var chapterSize = story[isVisited].length;
-                    
-                    for(var j = 0; j < chapterSize; j++)//for every slide
-                    {
-                        // STEP 4: wipe the infinity consequences
-                        // TODO: for every slide, we have to undo the infinity consequence IF IT WAS VISITED
-                        
-                        // STEP 5: then, wipe isVisited
-                        story[isVisited][j] = false;
-                    }
-
-                    // STEP 6: start the chapter fresh at slide 0
-                    user.storyLocation = 0;
-
-                    // STEP 7: save all the variables to the database
-                    saveIsVisited();
-                    pushVariablesToDB();
+                    wipeCurrentChapter();
                 }
 
                 // STEP 8: remove the script for the next loop

@@ -811,7 +811,7 @@ function pullVariablesFromDB()//we load the data from the database, and put it i
         cecile.affinity = document.getElementById("db_handle_a14").value;
         teacher_chapter_2.affinity = document.getElementById("db_handle_a15").value;
 
-        $(document).ready(function(){try{refreshInterface();}catch(e){}});
+        // $(document).ready(function(){try{refreshInterface();}catch(e){}});
         $(document).ready(function(){try{update_highest_affinity(); update_current_chapter();}catch(e){}});
     });
 
