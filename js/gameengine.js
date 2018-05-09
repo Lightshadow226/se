@@ -12,8 +12,6 @@ September 02, 2017
 
 $(function initializeInterface()//CREATES the entire interface once the document is $(document).READY()
 {
-    // user.storyLocation = user.storyLocation //TODO: régler le problème de la priorité quand on LOAD vs SAVE
-    // pushVariablesToDB();//make sure the database reflects the fact that the current chapter is the one currently being played
     refreshInterface();//Start the first instance of the game
 })
 
@@ -21,11 +19,10 @@ function refreshInterface()//REFRESHES the interface
 {
     refreshTestContainer();
     refreshObjectiveContainer();
-
+    
     if(user.storyLocation >= story[main_text].length)//si le chapitre ("story") est terminé
     {
         endOfChapter();
-        // refreshInterface();
     }
     else//sinon, on continue l'histoire
     {
@@ -115,14 +112,14 @@ function refreshInterface()//REFRESHES the interface
                 relevant_char.affinity = Number(relevant_char.affinity);
                 relevant_char.affinity += Number(story[infinityConsequence2][user.storyLocation]);//on doit s'assurer que la valeur est un nombre, parce que sinon, parfois, ça fait juste carrément rajouter un zéro
 
-                if(Number(relevant_char.affinity) < 0)
-                {
-                    relevant_char.affinity = 0;
-                }
+            if(Number(relevant_char.affinity) < 0)
+            {
+                relevant_char.affinity = 0;
+            }
 
-                affinity_meter2.src = browseAffinity(relevant_char.affinity);//character 2 (left)
+            affinity_meter2.src = browseAffinity(relevant_char.affinity);//character 2 (left)
 
-                affinity_meter2.style.visibility = "visible";
+            affinity_meter2.style.visibility = "visible";
         }
         else
         {
@@ -133,9 +130,8 @@ function refreshInterface()//REFRESHES the interface
         if(story[2][user.storyLocation] != "null")//if there is a character 1 in this slide, we append the infinity meter to the right
         {
             var relevant_char = getPersonnage(story[2][user.storyLocation]);
-            
-            relevant_char.affinity = Number(relevant_char.affinity);
-            relevant_char.affinity += Number(story[infinityConsequence1][user.storyLocation]);
+                relevant_char.affinity = Number(relevant_char.affinity);
+                relevant_char.affinity += Number(story[infinityConsequence1][user.storyLocation]);
             
             if(Number(relevant_char.affinity) < 0)
             {
@@ -651,9 +647,7 @@ function refreshInterface()//REFRESHES the interface
                 friendship_button.style.visibility = "visible";
                 friendship_button.onclick = function()
                 {
-                    // alert("friendship");
                     browseLink(story[special_option][user.storyLocation], friendship_button);
-                    refreshInterface();
                 };
             
             //Romance button
@@ -662,9 +656,7 @@ function refreshInterface()//REFRESHES the interface
                 romance_button.style.visibility = "visible";
                 romance_button.onclick = function()
                 {
-                    // alert("romance");
                     browseLink(story[special_option][user.storyLocation], romance_button);
-                    refreshInterface();
                 };
         }
         else if(story[special_option][user.storyLocation] == -5)// -5 === multiple choices (la variable links = -5 veut dire qu'on va afficher plusieurs liens -> MAX 4)
@@ -673,21 +665,18 @@ function refreshInterface()//REFRESHES the interface
             choiceA.onclick = function (e)
             {
                 browseLink(story[special_option][user.storyLocation], choiceA);
-                // refreshInterface();
             };
             
             choiceB.innerHTML = story[choiceB_text][user.storyLocation]//Le choix B
             choiceB.onclick = function (e)
             {
                 browseLink(story[special_option][user.storyLocation], choiceB);
-                // refreshInterface();
             };
             
             choiceC.innerHTML = story[choiceC_text][user.storyLocation]//Le choix C
             choiceC.onclick = function (e)
             {
                 browseLink(story[special_option][user.storyLocation], choiceC);
-                // refreshInterface();
             };
             
             $(choiceA).removeClass("bottomChoice");
@@ -716,7 +705,6 @@ function refreshInterface()//REFRESHES the interface
         else if(story[special_option][user.storyLocation] == -6)// -6 === checks if we visited a slide in the past, then go to another one if yes ***** GHOST SLIDE
         {
             browseLink(story[special_option][user.storyLocation], textContainer);
-            refreshInterface();
         }
         else if(story[special_option][user.storyLocation] == -7)// -7 === is the character of POI the one with the highest affinity? yes -> goto LP; no -> goto next slide ***** GHOST SLIDE
         {
@@ -752,14 +740,13 @@ function refreshInterface()//REFRESHES the interface
             textContainer.onclick = function()
             {
                 browseLink(story[special_option][user.storyLocation], textContainer);
-                // refreshInterface();
             };
     }
-
     
-    // pushVariablesToDB();
-    // user.last_chapter_played = current_Chapter;
-    // pushVariablesToDB();
+    saveIsVisited();
+    pushVariablesToDB();
+
+    updateGameBar();
 }
 
 //This function is to affect what happens when we click on the text container depending on the link
@@ -921,14 +908,12 @@ function browseLink(link, element)//link is the link of the story (story[special
         }
 
         document.getElementById('navigation-container').innerHTML = "";//clear the navigation buttons
-
-        refreshInterface();
     }
     else if(link == -3)//Acts like a submit button for the form
     {
         if(choice == "null")
         {
-            alert("Please choose a department!");
+            console.log("Please choose a department!"); //Mouna TODO: make a cute popup
         }
         else
         {
@@ -948,11 +933,11 @@ function browseLink(link, element)//link is the link of the story (story[special
 
         if(value == "")
         {
-            alert("Please choose a username!");
+            console.log("Please choose a username!");
         }
         else if(choice == "null")
         {
-            alert("Please choose a pronoun!");
+            console.log("Please choose a pronoun!");
         }
         else
         {
@@ -1029,8 +1014,6 @@ function browseLink(link, element)//link is the link of the story (story[special
         user.storyLocation = story[special_option][user.storyLocation];//on fait que la location devienne le numéro du link
     }
 
-    saveIsVisited();
-    pushVariablesToDB();
     refreshInterface();
 }
 
@@ -1050,8 +1033,6 @@ function endOfChapter()
     document.getElementById('game_frame').style.display = "none";
     document.getElementById('objectiveContainer').style.display = "none";
 
-    user.storyLocation = 0;//TODO: get the variable from the DATABASE with PHP
-    
     // $.get('partials/replay.php');
     $("#replay_handler").load("partials/replay.php");
 }
@@ -1059,6 +1040,7 @@ function endOfChapter()
 function restartChapter()
 {
     console.log("Restarting the chapter...");
+    wipeCurrentChapter();
 
     //display the game and objective containers
     document.getElementById('game_frame').style.display = "block";
@@ -1067,7 +1049,6 @@ function restartChapter()
     //hide the replay handler
     document.getElementById('replay_handler').style.display = "none";
 
-    user.storyLocation = 0;//TODO: get the variable from the DATABASE with PHP
     refreshInterface();
 }
 

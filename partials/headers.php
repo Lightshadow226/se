@@ -22,14 +22,14 @@
 
 	<?php if((isset($_SESSION['username']) || isCookieValid($db))): ?><!-- If the username is specified (the user is logged on) -->
 
-		<div id="user_info" class="">
-			Welcome Back <?php if(isset($_SESSION['username'])) echo $_SESSION['username']; ?>!
-			<strong>| Episode: </strong> <span id="barEpisode"></span>
-			<strong>| Highest Affinity: </strong> <span id="barAffinity"></span>
-			<strong>| Money: </strong> <span id="barMoney"></span>
-			<strong>| Energy: </strong> <span id="barEnergy"></span>
-			<strong>|</strong> 
-			<a href="logout.php" style="font-size:8px; color:white;">LOGOUT</a>
+		<div id="user_info">
+			<span style="position: absolute; left: 10px;">Welcome Back <?php if(isset($_SESSION['username'])) echo $_SESSION['username']; ?>!</span>
+			<strong>Episode: </strong> <span id="barEpisode"></span>
+			<strong> | Highest Affinity: </strong> <span id="barAffinity"></span>
+			<strong> | Money: </strong> <span id="barMoney"></span>
+			<strong> | Energy: </strong> <span id="barEnergy"></span>
+			<strong> | Replays: </strong> <span id="barReplays"></span>
+			<span style="position: absolute; right: 10px;"><a href="logout.php" style="color:white;">LOGOUT</a></span>
 		</div>
 
 		<div id="nav_menu_container">
@@ -50,7 +50,7 @@
 
 	<?php else: ?><!-- If the  user is NOT logged on -->
 	
-		<div id="user_info" class="">
+		<div id="user_info">
 			HELLO FUTURE SCHOLAR! <a href="login.php" style="font-size:8px; color:white;">LOGIN</a> | <a href="Signup.php" style="font-size:8px; color:white;">SIGNUP</a>
 		</div>
 		

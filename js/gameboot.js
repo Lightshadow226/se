@@ -102,6 +102,7 @@ function create_line(index, type)
         else
         {
             play_episode_button.innerHTML = "Start the episode";//play the story (replay type #1)
+            play_episode_button.className = "play_episode_button_disabled";//we can't play the story
         }
 
         play_episode_button.href = get_button_href(index);// play_episode_button.id);
@@ -125,8 +126,7 @@ function create_line(index, type)
         play_episode_button.onclick = function (){get_button_consequence(index, 1)};
         
         replay_episode_button.href = get_button_href(index);//play_episode_button.id, 2);
-        // play_episode_button.onclick = function (){window.open(get_button_href(play_episode_button.id, 1), "_self")};
-        // replay_episode_button.onclick = function (){window.open(get_button_href(play_episode_button.id, 2), "_self")};
+        replay_episode_button.onclick = function (){get_button_consequence(index, 2)};
 
         finishedChapters_lines_container.appendChild(line);
     }
@@ -137,7 +137,7 @@ function create_line(index, type)
         line_middle_content.appendChild(chara_desc);
         line_middle_content.appendChild(objectiveContainer);
         line_middle_content.appendChild(play_episode_button);
-        if(type == "finished"){line_middle_content.appendChild(replay_episode_button);}
+        // if(type == "finished"){line_middle_content.appendChild(replay_episode_button);}
 }
         
 function get_button_href(index)
@@ -205,23 +205,7 @@ function get_button_consequence(index, replayType = 1)//replayType is optional, 
                 // STEP 3: wipe the variables from the chapter
                 script.onload = function()
                 {
-                    var chapterSize = story[isVisited].length;
-                    
-                    for(var j = 0; j < chapterSize; j++)//for every slide
-                    {
-                        // STEP 4: wipe the infinity consequences
-                        // TODO: for every slide, we have to undo the infinity consequence IF IT WAS VISITED
-                        
-                        // STEP 5: then, wipe isVisited
-                        story[isVisited][j] = false;
-                    }
-
-                    // STEP 6: start the chapter fresh at slide 0
-                    user.storyLocation = 0;
-
-                    // STEP 7: save all the variables to the database
-                    saveIsVisited();
-                    pushVariablesToDB();
+                    wipeCurrentChapter();
                 }
 
                 // STEP 8: remove the script for the next loop
