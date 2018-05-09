@@ -233,6 +233,12 @@ function get_button_consequence(index, replayType = 1)//replayType is optional, 
     {
         //if we're clicking on a future chapter, we need to tell the user that he has to wait until being able to play it.
         alert("You cannot play this chapter yet!");
+        //var popup = document.createElement('div');
+        //popup.id = "alert";
+        //play_episode_button.className = "popup-container";
+
+        
+
     }
 
     //TODO: il va avoir un bug, mais il va falloir détecter quand un chapitre est terminé, A.K.A. quand le isVisited pour la dernière slide d'un chapitre = true en mode story
