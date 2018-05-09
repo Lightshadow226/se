@@ -44,6 +44,8 @@
 	text-decoration: none;/*enlever le underline -> ne va plus être nécessaire quand on va rendre le bouton un actual Button*/
 	border-radius: 5px;
 	font-weight: 200;
+	transition: background-color 0.3s;
+
 }
 
 #signup_button:hover
@@ -62,6 +64,8 @@
 	text-decoration: none;/*enlever le underline -> ne va plus être nécessaire quand on va rendre le bouton un actual Button*/
 	border-radius: 5px;
 	font-weight: 200;
+	transition: background-color 0.3s;
+
 }
 
 #login_button:hover
@@ -174,6 +178,7 @@
 	text-decoration: none;/*enlever le underline -> ne va plus être nécessaire quand on va rendre le bouton un actual Button*/
 	border-radius: 5px;
 	font-weight: 200;
+	transition: background-color 0.3s;
 }
 
 #signup_button_v2:hover
@@ -192,6 +197,7 @@
 	text-decoration: none;/*enlever le underline -> ne va plus être nécessaire quand on va rendre le bouton un actual Button*/
 	border-radius: 5px;
 	font-weight: 200;
+	transition: background-color 0.3s;
 }
 
 #login_button_v2:hover
@@ -239,8 +245,7 @@
 
 .MTC_container:hover .MTC_overlay
 {
-	opacity: 0.85;
-	transition: background-color 0.3s;
+	opacity: 0.75;
 }
 
 .MTC_text

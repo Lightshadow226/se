@@ -33,35 +33,36 @@ if(isset($_GET['id']))
 
 </head>
 
-<body>
+<body class = "center-screen">
 
-	<header id="header">
+	<a href="index.php"><img id="logo" class="" src="images/general/se-logo.png"></a>
 
-	</header>
-
-    <?php include_once 'partials/headers.php' ?>
-
-	<div class = "main_content">
+	<div class = "">
         <div class="card-nomargin add_padding">
             <h1>Password Reset</h1>
 		<?php if(isset($result)) echo $result; ?>
 		<?php if(!empty($form_errors)) echo show_errors($form_errors); ?>
 		<form method="post" action="" class="center">
-		        New Password:
-		        <p><input type="password" value="" name="new_password"></p>
-		        Confirm Password:
-		        <p><input type="password" value="" name="confirm_password"></p>
+
+				<div class = "flex-container">
+					<p class = "flex-panel login-signup-labels">New Password:</p>
+					<p><input class = "flex-panel2 login-signup-textfields" type="password" value="" name="new_password"></p>
+					<div class = "flex-panel"></div>
+				</div>
+		
+				<div class = "flex-container">
+					<p class = "flex-panel login-signup-labels">Confirm Password:</p>
+					<p><input class = "flex-panel2 login-signup-textfields" type="password" value="" name="confirm_password"></p>
+					<div class = "flex-panel"></div>
+				</div>
+		
 		     	<input type="hidden" value="<?php if(isset($id)) echo $id; ?>" name="user_id">
 		     	
-		        <br><p><input type="submit" name="passwordResetBtn" value="Reset Password"></p><br>
+		        <br><p><input class = "button pink-button-subtle" type="submit" name="passwordResetBtn" value="Reset Password"></p><br>
 		</form>
 
-	<br><p style="text-align:center;"><a href="index.php">Back</a></p>
-        </div>
+<p style="text-align:center;"><a href="index.php">Back</a></p>        </div>
 	</div>
-
-
-    <?php include_once 'partials/footers.php' ?>    
 
 </body>
 

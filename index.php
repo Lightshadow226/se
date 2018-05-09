@@ -31,7 +31,7 @@
 			<div id="banner">
 				<img id="img_banner" src="images/banners/banner_logged_off.png">
 				<div id = "button_container">
-					<a href = "signup.php" id = "signup_button" class = "	">Sign Up</a>
+					<a href = "signup.php" id = "signup_button" class = "button">Sign Up</a>
 					<a href = "login.php" id = "login_button" class = "button">Login</a>
 				</div>
 			</div>
@@ -202,12 +202,12 @@
 						</div>
 					</div>
 				</div>
-
+				
 				<div style = "position: relative;">
 					<div id = "button_container_v2">
 						<div class = "flex-panel"></div>
-						<a href = "signup.php" id = "signup_button_v2">Sign Up</a>
-						<a href = "login.php" id = "login_button_v2">Login</a>
+						<a href = "signup.php" id = "signup_button_v2" class = "signup_button_v2">Sign Up </a>
+						<a href = "login.php" id = "login_button_v2" class = "login_button_v2">Login</a>
 						<div class = "flex-panel"></div>
 					</div>
 				</div>
@@ -360,6 +360,7 @@
 						text-decoration: none;
 						margin: 5px 2px;
 						border-radius: 50%;
+						transition: background-color 0.3s;
 					}
 
 					.fa:hover
