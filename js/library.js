@@ -58,20 +58,25 @@ function getCurrentChapter()//returns the current chapter as an object
 
 function chapterSize(chapter)//returns the size of a chapter (HAS TO BE MANUALLY CORRECTED)
 {
-    return story[0].length;
-
-    // if(chapter == 0)
-    // {
-    //     return 103;
-    // }
-    // else if (chapter == 1)
-    // {
-    //     return 230;
-    // }
-    // else if (chapter == 2)
-    // {
-    //     return 300;
-    // }
+    try
+    {
+        return story[0].length;//if the story is appended (like in most cases)
+    }
+    catch(e)//if this is the game.php file (where individual chapters are not appended)
+    {
+        if(chapter == 0)
+        {
+            return 103;
+        }
+        else if (chapter == 1)
+        {
+            return 230;
+        }
+        else if (chapter == 2)
+        {
+            return 300;
+        }
+    }
 }
 
 //*****CHARACTERS*****

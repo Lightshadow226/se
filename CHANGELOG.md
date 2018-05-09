@@ -1,64 +1,91 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`
+`Two tabs should work`
+
+# Version 1.5.11 (Replay Story type #1)
+## Added
+- `gameboot.js`
+    - coded the first type of replay
+    - replay type 1 = reset progress (replay story) -> ex.: if we replay chapter 13, all subsequent chapters must be replayed (memory is wiped out as well)
+    - ex. 1: we're currently playing ch. 1, we click on ch. 0.
+        - it will wipe the memory of chapter 0 for now (the SQL table chapter1_story is not yet created)
+        - isVisited is going to be 0 for all of the slides and we will restart ch. 0 at slide 0
+        - TODO: undo infinity consequences for the chapter (easy)
+    - ex. 2: if we're playing ch. 0 and we click on ch. 0, it will NOT reset progress and will proceed with the story (as intended)
+    - TODO: build the table for ch. 1 and ch. 2 (tentative)
+    - TODO: uncomment the loop so that ch. 1 and ch. 2 can be included in the replay function (with wiping of memory)
+    - TODO: create a database variable to know if the chapter currently being played is in mode #1 or #2
+
+## Changed
+- `library.js`
+    - changed the way the chapter size is found
+    - now it will try to get the size from story[0].length
+    - if that doesn't work, manually inputted numbers will do
+
+
 # Version 1.5.10 (Appearance)
 ## Changed
 - `index.php`
     - Bug fixing (the wrong classes were being called for the buttons)
-- `se-buttons.css`
-- `se-index.css`
+- `se-buttons.css`      `se-index.css`
     - Adding fading effect to the buttons
+
 
 # Version 1.5.9 (Forgotten PassWord Appearence)
 ## Changed
 - `forgot_password.php`
     - Changed its appearance to fit with the rest of the theme of the website
 
+
 # Version 1.5.8 (Small Fixes - about.php and images)
 ## Added
-- `relationships.php`        
+- `relationships.php`
     - Added a higher resolution file for classified school files
 ## Changed
-- `about.php`           
+- `about.php`   
     - removed the buttons to sign up and log in if the user is already logged in
+
 
 # Version 1.5.7 (isVisited)
 ## Added
-- `variables.js`        
+- `variables.js`
     - added loading of the isVisited of ch. 0
     - added saving of the isVisited of ch. 0
 - `database`        
     - added the chapter0_story table
 ## Changed
-- `gameboot.js`           
+- `gameboot.js`
     - optimized the file
     - a instead of div and .href instead of .onclick
 
+
 # Version 1.5.6 (New Gameboot appearance and functionality)
 ## Added
-- `gameboot.js`       `game.php`    
-    - added chapters finished vs next chapters    
+- `gameboot.js`       `game.php`
+    - added chapters finished vs next chapters
     - added the replay type (#1 vs #2) -> we still have to code the specifics, which are detailed in the file [gameboot.js]
 
 ## Changed
-- `variables.js`      
-    - added pullVariablesFromDB as a default to the file (it will pull database variables if we include the file)       
-- `chapter0.js`       `chapter0.js`       `gameengine.js`     
-    - changed the variable used for the chapter location, because it was redundant -> now it's in each chapter's JS file        
-- `README.md`         
+- `variables.js`
+    - added pullVariablesFromDB as a default to the file (it will pull database variables if we include the file)
+- `chapter0.js`       `chapter0.js`       `gameengine.js`
+    - changed the variable used for the chapter location, because it was redundant -> now it's in each chapter's JS file
+- `README.md`
     - git tag -a v1.1.1 -m "Version 1.1.1 (Title)" was a bit long and redundant so I changed it for `git tag v1.1.1`
 
-# Version 1.5.5 (Solution to the Async problem)
+
+Version 1.5.5 (Solution to the Async problem)
 - *EXCEL*               [chapter0.js]
                         [chapter0.xlsx]     made some changes to slide links
 - *TODO*                [todo.md]           placed the chapter 1 todo list on the Google Drive
 - *ASYNC*               [variables.php]     fixed the async problem once and for all (pull AND push)
 
-# Version 1.5.4 (Async Solution)
+Version 1.5.4 (Async Solution)
 - *TOP BAR DESIGN*      [headers.php]       Added information on the purple bar on top of the page
 - *README*              [README.md]         updated the README
 - *CSS*                 [.css]              updated >b< to be purple and >strong< to be white
 - *ASYNC*               [headers.php]       found a solution to the Async problem (link in TODO.md) and used it to display information on the top purple bar
 
-# Version 1.5.3 (Ch. 0 Improvements)
+Version 1.5.3 (Ch. 0 Improvements)
 - *EXCEL*               [chapter0.js]
                         [chapter0.xlsx]     made some changes to the dialog
 - *DORM IMAGE*          [dorm.jpg]          modified the image of the dorm (the wardrobe was missing...?)
@@ -66,17 +93,17 @@
 - *REPLAY*              [replay.php]        
                         [gameengine.js      Implemented the replay/next chapter function when you reach the end of a chapter
 
-# Version 1.5.2 (June forgot to write patch notes)
+Version 1.5.2 (June forgot to write patch notes)
 - *JUNE FORGOT*
 
-# Version 1.5.1 (Game Engine, TODO, DataBase)
+Version 1.5.1 (Game Engine, TODO, DataBase)
 - *STRUCTURE*           [gameengine.js]
                         [header.js]         arrangment of all string continuations in JS files
 
 - *ADDITION*            [TODO.md]           addition of compiling link
 - *CODE*                [127_0_0_1.sql]     addition of default value to variable "physicalallocationint"            
 
-# Version 1.5.0 (Game Engine, Google Ads)
+Version 1.5.0 (Game Engine, Google Ads)
 - *STRUCTURE*           [gameengine.js]     creation of the game DOM is now in a php file [generateGameContainer.php], with the style in a css file rather than directly in JS
 - *CSS*                 [map.php]           rounded the corners
 - *GOOGLE ADS*          [googleAds.php]     added google ads to all pages with [footers.php, headers.php]

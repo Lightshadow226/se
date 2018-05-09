@@ -766,7 +766,6 @@ function refreshInterface()//REFRESHES the interface
 function browseLink(link, element)//link is the link of the story (story[special_option][storyLocation]), element is the ID of the button on which the user clicked (which should be the location where the button is going)
 {
     story[isVisited][user.storyLocation] = true;
-    console.log('clicked!')
 
     user.physicalLocation = story[5][user.storyLocation];
     user.physicalLocationInt = getLocationIndex(user.physicalLocation);

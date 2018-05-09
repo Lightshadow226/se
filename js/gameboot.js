@@ -83,8 +83,9 @@ function create_line(index, type)
         chara_desc.innerHTML += "</br> <b>Progress: </b>";
         
         play_episode_button.innerHTML = "Continue Playing";
-        play_episode_button.href = get_button_ID(play_episode_button.id);
-        // play_episode_button.onclick = function (e){window.open(get_button_ID(play_episode_button.id), "_self")};
+        play_episode_button.href = get_button_href(index);// play_episode_button.id);
+        // play_episode_button.onclick = function (e){window.open(get_button_href(play_episode_button.id), "_self")};
+        play_episode_button.onclick = function (e){console.log("Continue story")};
 
         currentEpisode_lines_container.appendChild(line);
     }
@@ -103,8 +104,11 @@ function create_line(index, type)
             play_episode_button.innerHTML = "Start the episode";//play the story (replay type #1)
         }
 
-        play_episode_button.href = get_button_ID(play_episode_button.id);
-        // play_episode_button.onclick = function (){window.open(get_button_ID(play_episode_button.id), "_self")};
+        play_episode_button.href = get_button_href(index);// play_episode_button.id);
+        play_episode_button.onclick = function (){get_button_consequence(index, 1)};
+        // get_button_consequence(0, 1);
+        
+        // play_episode_button.onclick = function (){window.open(get_button_href(play_episode_button.id), "_self")};
 
         nextChapters_lines_container.appendChild(line);
     }
@@ -117,10 +121,12 @@ function create_line(index, type)
         play_episode_button.innerHTML = "Restart story";//replay the story (replay type #1)
         replay_episode_button.innerHTML = "Replay for achievements";//replay for achievements (replay type #2)
         
-        play_episode_button.href = get_button_ID(play_episode_button.id, 1);
-        replay_episode_button.href = get_button_ID(play_episode_button.id, 2);
-        // play_episode_button.onclick = function (){window.open(get_button_ID(play_episode_button.id, 1), "_self")};
-        // replay_episode_button.onclick = function (){window.open(get_button_ID(play_episode_button.id, 2), "_self")};
+        play_episode_button.href = get_button_href(index);//play_episode_button.id, 1);
+        play_episode_button.onclick = function (){get_button_consequence(index, 1)};
+        
+        replay_episode_button.href = get_button_href(index);//play_episode_button.id, 2);
+        // play_episode_button.onclick = function (){window.open(get_button_href(play_episode_button.id, 1), "_self")};
+        // replay_episode_button.onclick = function (){window.open(get_button_href(play_episode_button.id, 2), "_self")};
 
         finishedChapters_lines_container.appendChild(line);
     }
@@ -134,12 +140,24 @@ function create_line(index, type)
         if(type == "finished"){line_middle_content.appendChild(replay_episode_button);}
 }
         
+function get_button_href(index)
+{
+    if(index <= current_chapter)//if we create a link to a past or current chapter
+    {
+        return "chapter" + index + ".php";
+    }
+    else//if we selected future chapters
+    {
+        return "#";//alert("Finish previous chapters first!");
+    }
+}
+
 /*
     A) Open a chapter through game.php
         1. if we click the current chapter, resume where it is
         2. if we click a prior chapter, there are 2 choices:
             a) reset progress (replay story) -> ex.: if we replay chapter 13, all subsequent chapters must be replayed (memory is wiped out as well)
-                1. destroy all progress for *this chapter* and *subsequent chapters* 
+                1. destroy all progress for this chapter and subsequent chapters 
                     - isVisited
                     - infinity consequences
             b) achievement reset (replay for achievements)
@@ -151,26 +169,88 @@ function create_line(index, type)
                 |-> one official replay: mode "OFFICIAL" (boolean)
                 |-> all subsequent replays: mode "ACHIEVEMENTS" (integer)
         3. if we click on a next chapter, we have to play the previous ones before
+    B) open a chapter page not normally (type chapter1.php to access it "illegally")
+        - redirect to game.php (write a script that reads the current chapter and compares it to the database)
+        - must be included in every chapter -> we can't use the game engine because it's going to be too late (user.last_chapter_played will already be modified)
 */
 
-function get_button_ID(index, replayType = 1)//replayType is optional, default is 1
+function get_button_consequence(index, replayType = 1)//replayType is optional, default is 1
 {
-    console.log("index: " + index + ", replay type: " + replayType);
+    console.log("replay type: " + replayType);
+    
+    // A) Open a chapter through game.php
+    if(index == current_chapter)
+    {
+        // 1. if we click the current chapter, resume where it is (so basically don't do shit)
+    }
+    // 2. if we click a prior chapter, there are 2 choices:
+    else if(index < current_chapter)
+    {
+        // a) reset progress (replay story) -> ex.: if we replay chapter 13, all subsequent chapters must be replayed (memory is wiped out as well)
+        if(replayType == 1)
+        {
+            // STEP 1: create a script to work with
+            var head = document.getElementsByTagName('head')[0];
 
-    if(index <= current_chapter)//if we create a link to a past chapter
-    {
-        if(index >= 0)
-        {
-            return "chapter" + index + ".php";
+            var script = document.createElement('script');
+                script.type = 'text/javascript';
+                
+            //for(var i = index; index <= current_chapter; i++)//we delete every chapter from the one we selected until the current one (wipe selected chapter and subsequent chapters)
+            {
+                //STEP 2: change the script and append it to the HTML head
+                script.src = 'js/chapters/chapter' + index + '.js';//starts with index, then goes up to current chapter
+                
+                head.appendChild(script);
+                
+                // STEP 3: wipe the variables from the chapter
+                script.onload = function()
+                {
+                    var chapterSize = story[isVisited].length;
+                    
+                    for(var j = 0; j < chapterSize; j++)//for every slide
+                    {
+                        // STEP 4: wipe the infinity consequences
+                        // TODO: for every slide, we have to undo the infinity consequence IF IT WAS VISITED
+                        
+                        // STEP 5: then, wipe isVisited
+                        story[isVisited][j] = false;
+                    }
+
+                    // STEP 6: start the chapter fresh at slide 0
+                    user.storyLocation = 0;
+
+                    // STEP 7: save all the variables to the database
+                    saveIsVisited();
+                    pushVariablesToDB();
+                }
+
+                // STEP 8: remove the script for the next loop
+                // head.removeChild(script);
+            }
         }
-        else//if there's a mistake (chapter is less than 0...)
+        // b) achievement reset (replay for achievements)
+        else if(replayType == 2)
         {
-            get_button_ID(user.last_chapter_played);
+            /*
+                Consequences:
+                 - nothing is wiped out
+                 - infinity is disabled throughout the replay (and it) doesn't affect previous infinity consequences)
+                 - we need to register isVisited in a second table (for achievement purposes)
+                    -> we need to save the # of replays per chapter
+            */
+        }
+        else
+        {
+            // this should never happen
         }
     }
-    else//if we selected future chapters
+    // 3. if we click on a next chapter, we have to play the previous ones before
+    else
     {
-        return "";
-        // alert("Finish previous chapters first!");
+        //if we're clicking on a future chapter, we need to tell the user that he has to wait until being able to play it.
+        alert("You cannot play this chapter yet!");
     }
+
+    //TODO: il va avoir un bug, mais il va falloir détecter quand un chapitre est terminé, A.K.A. quand le isVisited pour la dernière slide d'un chapitre = true en mode story
+    //TODO: once we finish a chapter, the current chapter is the next one (if there's no next one, the current one is the last one and the progress is at 100%... FUCK, this is annoying)
 }

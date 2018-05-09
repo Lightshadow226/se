@@ -9,9 +9,7 @@ $status = "Error Sending SQL";
 
 //semi-solution: https://stackoverflow.com/questions/17449014/using-a-variable-as-the-column-name-in-a-mysql-query
 
-//we have to make this generic AF
-
-//first, the correct table: chapter0_story
+//TODO: first, the correct table: chapter0_story
 $table = "chapter0_story";
 $table_size = 102;
 

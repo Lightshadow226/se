@@ -691,6 +691,8 @@ function loadIsVisited(chapter)
         var chapter_size = document.getElementById("chapter_size").value;
         console.log("Loaded isVisited for " + chapter_size + " slides.");
         
+        //chapter_size is actually one more (+1)
+
         //then we save them as JS variables:
         for(var i = 0; i <= chapter_size; i++)
         {

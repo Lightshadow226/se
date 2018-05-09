@@ -56,6 +56,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss3_transition1
 - *DESIGN*              [.PNG, index.php]                               modifier les dimensions de l'image "customize your character"
 - *DESIGN*              [index.php]                                     le border shading entre le header et le first card est causé par: style="position: relative;"
 - *DESIGN*              [gameengine.php]                                le infinity meter coupe le côté droit de l'image (il faut le mettre en position absolue)
+- *DESIGN*              [gameboot.php]                                  mettre un popup pour dire "Finish previous chapters first!"
 - *STRUCTURE*           ["\images -> "\_new_images_folder"]             change the path of all images to the new images folder
 
 `TODO: ONGOING`

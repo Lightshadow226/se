@@ -16,7 +16,7 @@ pushVariablesToDB();
 
 const c = 19;//TODO: update this because it should be 20
 
-function Chapter1()
+function Chapter()
 {
     for (var i = 0; i < c; i++)
     {
@@ -5018,4 +5018,4 @@ HALL 1 (Tadashi)
 
 */
 
-Chapter1();//the simple act of appending the .js file will load the chapter into memory
+Chapter();//the simple act of appending the .js file will load the chapter into memory

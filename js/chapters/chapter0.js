@@ -38,7 +38,7 @@ const c = 17;//TODO: update this because it should be 20
     19 -> Landing Slide "y" (if we visited slide x, go to slide y)
 */
 
-function Chapter0()
+function Chapter()
 {
     for (var i = 0; i < c; i++)
     {
@@ -2272,6 +2272,8 @@ function Chapter0()
         ];
 }
 
-Chapter0();//the simple act of appending the .js file will load the chapter into memory
+Chapter();//the simple act of appending the .js file will load the chapter into memory
+
+// alert("ASDF");
 
 try{loadIsVisited();}catch(e){};//TODO: only if logged in
