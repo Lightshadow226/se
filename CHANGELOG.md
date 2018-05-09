@@ -1,4 +1,8 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`
+# Version 1.5.9 (Forgotten PassWord Appearence)
+## Changed
+- `forgot_password.php`
+    - Changed its appearance to fit with the rest of the theme of the website
 
 # Version 1.5.8 (Small Fixes - about.php and images)
 ## Added
