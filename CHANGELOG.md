@@ -1,7 +1,7 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
 
-# Version 1.5.17 (Beta fixes)
+# Version 1.5.18 (Beta fixes)
 - `chapter0.php`
 - `chapter1.php`
     - design of logged off game
