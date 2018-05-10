@@ -27,6 +27,13 @@
     - TODO:  Write a function to push all variables modified in the gameengine loop
     - changed pushVariablesToDB() to saveVariables() where possible
 
+    
+# Version 1.5.18 (Beta fixes)
+- `chapter0.php`
+- `chapter1.php`
+    - design of logged off game
+
+
 # Version 1.5.17 (Appearance changes)
 ##Changed
 - `activate.php`

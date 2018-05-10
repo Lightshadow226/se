@@ -29,7 +29,7 @@
 		<div class = "">
 			<div class="card-nomargin add_padding" style="position: relative;">
 				<h1>Game</h1>
-				<p>Sorry! Only registered members are allowed to see this page. <br><a href="login.php">Log in</a> or <a href="signup.php">Sign up</a> to play</br></p>
+				<p>Sorry! Only registered members are allowed to see this page. <br><a href="login.php">Log in</a> or <a href="signup.php">Sign up</a> to play.</br></p>
 			</div>
 		</div>
 	</body>
