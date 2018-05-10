@@ -1,7 +1,7 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
 
-# Version 1.5.16 (Appearance changes)
+# Version 1.5.17 (Appearance changes)
 ##Changed
 - `activate.php`
     - redesign of the email confirmation page
