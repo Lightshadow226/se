@@ -1,81 +1,108 @@
 ﻿#TODO NOTES
 
-- `index.php`
+## Chapters
+`chapter1.js`       `chapter1.php`
+    - réviser le script (s'assurer que tout est terminé)
+    - écrire le script dans le fichier excel
+    - régler les bugs... possiblement ajouter des fonctions JS (écrire améliorations possibles pour *gameengine.js*)
+    - le chapitre 1 est terminé jusqu'à la slide 129, donc il va falloir valider le reste + rajouter les émotions
+    - il reste à implémenter les illustrations et le form pour sélectionner notre uniforme
+    - valider que toutes les valeurs sont affectées à la bonne slide (dans le fichier excel)
+
+## Core Files
+`variables.js`
+    - Also, there is major lag online and sometimes the server isn't fast enough to save all of the choices made
+    - The server crashes if the player moves too fast
+    - and it doesn't save the progress
+
+`variables.js`          `get_variables.php`     `push_variables.php`
+    - push/pull seulement les variables nécéssaires
+    - s'assurer qu'il n'y ait plus de variables utilisés sans la base de données
+
+`library.js`
+    - chapterSize() needs to be updated manually every time a chapter changes size or when a new chapter is created
+
+`gameengine.js`
+    - When my sprite gets on the "happy" sprite, my infinity meter goes up by 5 on the game interface randomly. This does not affect the database
+    - When you refresh during a dialog choice with infinity meter consequences, it keeps incrementing it
+        - (and this causes the "wipe" you do during the replay to not work fully)
+        - empêcher le infinity meter d'augmenter si on a déjà visité la slide (il faut faire isVisited)
+    - quand on recommence un chapitre, on doit
+        A) Open a chapter through game.php (see further details in *gameboot.js*)
+        B) open a chapter page not normally (type chapter1.php to access it `illegally`)
+            - redirect to *game.php* (write a script that reads the current chapter and compares it to the database)
+            - must be included in every chapter -> we can't use the game engine because it's going to be too late (user.last_chapter_played will already be modified)
+    - optimize the game engine for efficiency (put it on paper first)
+    - *variables.js* remove the variable "choice" (for the Ch.0 Form)
+    - *variables.js* account for movements -> movement meter/action points -> faire un système pour tout
+    - *Chapter0.xlsx* Pronoun choice, and Scholar name instead of username
+    - *chapterXX.js* Sprites that don't resize properly in the game
+    - images that don't size perfectly (chapter 0 form -> link[6] = -3)
+
+`CSS`
+    - Il faut que les page-specific attributes ne soient jamais utilisés dans une autre page
+    - Faire que quand on hover, ce soit mauve, mais que l'item d'à côté soit jaune, et l'autre rose (sur la page contact.php (3 images, trois couleurs différentes)
+    - https://www.w3schools.com/css/tryit.asp?filename=trycss3_transition1
+    - il faudrait faire une classe et une fonction pour un popup pour TOUS les messages ("please write your username!", "please choose a department", )
+
+## Partial Files
+`headers.php`
+    -mettre variables.js et library.js dans le header/head
+
+`illustration_generator.php`
+    - generate illustrations based on [locked vs not, colors, etc.]
+    - there are still improvements to be made in this file
+    - optimize this file
+
+
+## Pages
+`index.php`             `index.js`              `se-index.css`
     - "Start story" instead of "continue story" when user.storyLocation == 0
+    - put the css in se-index.css
+    - mettre le CSS dans un autre fichier
+    - le css est wobly and all over the place
+    - le border shading entre le header et le first card est causé par: style="position: relative;"
+    - ajouter le personality quiz
+
+`game.php`              `gameboot.js`           `se-game.css`
+    - mettre un popup pour dire "Finish previous chapters first!" -> voir *CSS*
+
+`dorm.php`              `dorm.js`               `se-dorm.css`
+    - enlever les .style et les remplacer par des classes
+    - Add pronoun change option and all the missing images (shoes, top, bottom, etc.)
+
+`profile.php`
+    - afficher l'épisode et le highest affinity sur le ID Card
+    - functionning Reset Progress Button
+    - Loader for images
+
+`relationships.php`     `relationships.js`      `se-relationships.css`
+    - zoom function on the school files
+    - *variables.js* we still need to add characters over time in "classmates" and "others"
+
+`login.php`             `signup.php`            `resetpassword.php`
+    -  Améliorer les messages d'erreurs pour login.php, signup.php, resetpassword.php
+
+`illustrations_achievements.php`
+    - think of possible achievements
+    - make sure that a scan of isVisited can show the proper achievements
 
 
-`TODO: HIGH Importance`
-https://www.w3schools.com/css/tryit.asp?filename=trycss3_transition1
-- *CHAPTER INPUT*       [chapter1.js]                                   la chapitre 1 est terminé jusqu'à la slide 129, donc il va falloir valider le reste + rajouter les émotions
-- *PPT*                 [Chapter2Slides Part2.ppt]                      slides à terminer chapitre 2 (le ppt et le code)]
-- *TODO*                [chapter 1.js]                                  il reste à implémenter les illustrations et le form pour sélectionner notre uniforme
-- *isVisited*           [gameengine.js]                                 empêcher le infinity meter d'augmenter si on a déjà visité la slide (il faut faire isVisited)
-- *isVisited*           [gameengine.js]                                 quand on recommence un chapitre, on doit
-    A) Open a chapter through game.php (see further details in gameboot.js)
-    B) open a chapter page not normally (type chapter1.php to access it "illegally")
-        - redirect to game.php (write a script that reads the current chapter and compares it to the database)
-        - must be included in every chapter -> we can't use the game engine because it's going to be too late (user.last_chapter_played will already be modified)
+# Idées
+    - faire que le progress bar soit en fonction des illustrations, des achievements, etc.
+        - peut-être plusieurs progress bars
+        - une de illustrations (ex.: 1/4 unlocked)
+        - une de easter eggs (ex.: 2/3 found)
+        - une de bonus (ex.: 1/2 found)
+    - downloader les fonts "great vibes" & "roboto" de Google API
+    - réorganiser les fichiers PHP
+    - optimiser les fonctions qui reviennent plus qu'une fois, et les mettre dans utilities.php
+        - [edit-email.php, edit-username.php]
+    - change the path of all images to the new images folder
+        - ["\images -> "\_new_images_folder"]             
 
-- *ACHIEVEMENTS*        [illustrations_achievements.php]                make sure that isVisited shows the proper achievements
-- *DEBUG*               [variables.js, get and pushvariables.php]       s'assurer qu'il n'y ait plus de variables utilisés sans la base de données
-- *ILLUSTRATION GENER.* [illustration_generator.php]                    generate illustrations based on [locked vs not, colors, etc.]
-- *INF METER*           [gameengine.js]                                 Fix bug that keeps incrementing the points
-- *CH 0 FORM*           [gameengine.js, Chapter0.xlsx]                  Pronoun choice, and Scholar name instead of username
-- *GAME*                [game.php]                                      Current vs Finished vs Unattempted Chapters + Replay option
-- *DATABASE*            [variables.js, get & push.php]                  push seulement les variables nécéssaires
-- *DATABASE*            [variables.js, get & push.php]                  régler le problème de async
-- *DATABASE*                                                            créer un nouvel utilisateur ne crée que le nouveau compte et n'ajoute pas une nouvelle ligne dans les autres tables pour le nouvel utilisateur
-- *Illustration generator*                                              finish it
-- *Structure*           [game.php]                                      3 sections: current chapter, chapters to go, finished chapters
-- *ASYNC*             make sure that relationship percentage levels are the same in relationships, game, etc.
-- *ASYNC*                 [dorm.js]
-                          [relationships.js]                            replace pullVariablesFromDB by loadVariables, which is the async equivalent that WAITS until pullVariablesFromDB is complete
-
-`TODO: MEDIUM Importance`
-- *DATABASE*            [variables.js, gameengine.js]                   account for movements -> movement meter/action points -> faire un système pour tout
-- *CODE - RESTRUCT*     [.php]                                          Organiser les fichiers PHP
-- *FILES - ADD*         [.jpg]                                          AJOUTER blackscreen.jpg
-- *DEBUG*               [chapter0.js, chapter1.js]                      valider que toutes les valeurs sont affectées à la bonne slide (array du chapter 0 & 1)
-- *DEBUG*               [se-stylesheet.css]                             réviser le CSS dans "se-stylesheet" pour les balises: GENERAL, INDEX.PHP, FAQ.PHP, FEATURES.HTML.
-- *DEBUG*               [se-stylesheet.css]                             Il faut que les page-specific attributes ne soient jamais utilisés dans une autre page
-- *DEBUG*               [???]                                           z-index du scholar est trop petit (la barre de texte est au-dessus)
-- *CODE - RESTRUCT*     [dorm.js]                                       enlever les .style et les remplacer par des classes
-- *DOLLMAKER*           [dorm.js]                                       Add pronoun change option and all the missing images (shoes, top, bottom, etc.)
-- *INDEX*               [index.php]                                     mettre le CSS dans un autre fichier
-- *GAME ENGINE*         [gameengine.js]                                 redesign the game engine for efficiency (put it on paper first)
-- *IMPROVEMENTS*        [imageGenerator.php]                            there are still improvements to be made in this file
-- *IMPROVEMENTS*        [gameengine.js, variables.js]                   remove the variable "choice" (for the Ch.0 Form)
-- *Card ID*             [profile.php]                                   afficher l'épisode et le highest affinity sur le ID Card
-- *School files*        [relationships.php]                             zoom function on the school files
-- *PROFILE*             [profile.php]                                   Functionning Reset Progress Button
-- *PROFILE*             [profile.php]                                   Loader for images
-
-`TODO: LOW Importance`
-- *DEBUG*               [login.php, signup.php, resetpassword.php]      Améliorer les messages d'erreurs pour login.php, signup.php, resetpassword.php
-- *DEBUG*               [edit-email.php, edit-username.php]             optimiser les fonctions qui reviennent plus qu'une fois, et les mettre dans utilities.php
-- *FILES - ADD*         [fonts]                                         downloader les fonts "great vibes" & "roboto" de Google API
-- *FILES - ADD*         [new images]                                    dessiner des nouveaux boutons pour friendship/romance
-- *DESIGN IDEA*         [CSS, idée]                                     Faire que quand on hover, ce soit mauve, mais que l'item d'à côté soit jaune, et l'autre rose (pour 3 items différents, comme sur la page contact.php (3 images, trois couleurs différentes))
-- *DESIGN*              [game.php]                                      progress bar ne doit pas afficher le pourcentage en-dessous de 10% (sinon ça a l'air moche)
-- *DESIGN*              [.PNG, index.php]                               modifier les dimensions de l'image "customize your character"
-- *DESIGN*              [index.php]                                     le border shading entre le header et le first card est causé par: style="position: relative;"
-- *DESIGN*              [gameengine.php]                                le infinity meter coupe le côté droit de l'image (il faut le mettre en position absolue)
-- *DESIGN*              [gameboot.php]                                  mettre un popup pour dire "Finish previous chapters first!"
-- *STRUCTURE*           ["\images -> "\_new_images_folder"]             change the path of all images to the new images folder
-
-`TODO: ONGOING`
-- *CHARACTERS - INPUT*  [relationships.js, variables.js]                we still need to add characters over time in "classmates" and "others"
-- *CHARACTERS - INPUT*  [variables.js]                                  think of possible achievements
-- *CHAPTER - INPUT*     [library.js]                                    chapterSize() needs to be updated every time the chapter changes size (new chapter has X slides, or existing chapter has more slides)
-
-`KNOWN BUGS`
-- *BUGS*                [???]                                           images that don't size perfectly (chapter 0 form -> link[6] = -3)
-- *BUGS*                [gameengine.js, chapterXX.js]                   Sprites that don't resize properly in the game
-
-`Database à implémenter`
-- *CREATE DATABASE*     [SQL]                                           quelle slide que tu es rendu (1 variables par épisode = 50 variables au total)
-- *CREATE DATABASE*     [SQL]                                           is visited? (200 + variables par chapitre) - FIRST PLAYTHROUGH
-- *CREATE DATABASE*     [SQL]                                           is visited? (200 + variables par chapitre) - BONUS -> for the progress bar
+# Process pour passer de GIT à En ligne
+    1. Demander à June de l'écrire ici
 
 #Tools
 

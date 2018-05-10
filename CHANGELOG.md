@@ -1,6 +1,13 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
 
+# Version 1.5.16 (Todo list)
+## Changed
+- `todo.md`
+    - changed the entire list
+    - rearranged the order in terms of files, not of importance
+    - structure is still subject to change
+
 # Version 1.5.15 (Beta Fixes - Small Changes)
 ## Changed
 - `profile.php`
