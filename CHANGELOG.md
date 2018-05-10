@@ -1,12 +1,25 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
 
-# Version 1.5.15 (Small changes in appearance)
+# Version 1.5.15 (Beta Fixes - Small Changes)
 ## Changed
 - `profile.php`
-    - Changed design and organized the code
-- `se-cards.css`
-    - Centered text in cards
+    - fixed the order of the divs so that the offline and online versions are both working as they should
+- `headers.php`
+    - changed the "Signup" to "signup"
+- `users.sql`
+    - updated the user database again
+- `gameengine.js`
+    - fixed the write your name form of slide 49
+    - now it works properly and every key prints a log in the developper console
+- `library.js`
+    - the debugging tool removes the forms
+- `signup.php`
+    - "Log In" instead of "Login"
+- `parseSignup.php`
+    - changed the way a user row is created
+    - now it is created much more efficiently
+
 
 # Version 1.5.14 (Beta Fixes - Spelling, Small Bugs and School Files)
 ## Changed

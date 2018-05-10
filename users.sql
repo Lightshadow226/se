@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: May 09, 2018 at 08:36 PM
+-- Generation Time: May 10, 2018 at 12:45 AM
 -- Server version: 5.7.19
 -- PHP Version: 5.6.31
 
@@ -47,16 +47,14 @@ CREATE TABLE IF NOT EXISTS `affinity` (
   `cecile` int(50) NOT NULL DEFAULT '0',
   `teacherchapter2` int(50) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `affinity`
 --
 
 INSERT INTO `affinity` (`id`, `karolina`, `ellie`, `neha`, `raquel`, `claire`, `alistair`, `tadashi`, `tegan`, `tyler`, `axel`, `ladyarlington`, `coachdavis`, `serena`, `cecile`, `teacherchapter2`) VALUES
-(1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0),
-(2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+(1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -178,9 +176,7 @@ CREATE TABLE IF NOT EXISTS `chapter0_story` (
 --
 
 INSERT INTO `chapter0_story` (`id`, `c0`, `c1`, `c2`, `c3`, `c4`, `c5`, `c6`, `c7`, `c8`, `c9`, `c10`, `c11`, `c12`, `c13`, `c14`, `c15`, `c16`, `c17`, `c18`, `c19`, `c20`, `c21`, `c22`, `c23`, `c24`, `c25`, `c26`, `c27`, `c28`, `c29`, `c30`, `c31`, `c32`, `c33`, `c34`, `c35`, `c36`, `c37`, `c38`, `c39`, `c40`, `c41`, `c42`, `c43`, `c44`, `c45`, `c46`, `c47`, `c48`, `c49`, `c50`, `c51`, `c52`, `c53`, `c54`, `c55`, `c56`, `c57`, `c58`, `c59`, `c60`, `c61`, `c62`, `c63`, `c64`, `c65`, `c66`, `c67`, `c68`, `c69`, `c70`, `c71`, `c72`, `c73`, `c74`, `c75`, `c76`, `c77`, `c78`, `c79`, `c80`, `c81`, `c82`, `c83`, `c84`, `c85`, `c86`, `c87`, `c88`, `c89`, `c90`, `c91`, `c92`, `c93`, `c94`, `c95`, `c96`, `c97`, `c98`, `c99`, `c100`, `c101`, `c102`) VALUES
-(1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+(1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -215,9 +211,7 @@ CREATE TABLE IF NOT EXISTS `scholarinfo` (
 --
 
 INSERT INTO `scholarinfo` (`id`, `scholar_name`, `scholar_dob`, `scholar_gender`, `scholar_sex`, `scholar_department`, `scholar_haircolor`, `scholar_hairstyle`, `scholar_skincolor`, `scholar_eyecolor`, `wig_id`, `shirt_id`, `pants_id`, `socks_id`, `shoes_id`, `accessory_id`) VALUES
-(1, 'cdfgvdfsgdsfg', 'XX-XX-XXXX', 0, 1, 4, 1, 0, 2, 1, 0, 1, 1, 1, 1, 1),
-(2, 'Scholar', 'XX-XX-XXXX', 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-(3, 'Scholar', 'XX-XX-XXXX', 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
+(1, 'Scholar', 'XX-XX-XXXX', 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -230,18 +224,16 @@ CREATE TABLE IF NOT EXISTS `story` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `storylocation` int(11) NOT NULL DEFAULT '0',
   `lastchapterplayed` int(11) NOT NULL DEFAULT '0',
-  `physicallocationint` int(11) NOT NULL,
+  `physicallocationint` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `story`
 --
 
 INSERT INTO `story` (`id`, `storylocation`, `lastchapterplayed`, `physicallocationint`) VALUES
-(1, 0, 0, 3),
-(2, 52, 0, 0),
-(3, 0, 0, 0);
+(1, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -261,16 +253,14 @@ CREATE TABLE IF NOT EXISTS `userinfo` (
   `money` int(11) NOT NULL DEFAULT '100',
   `nbreplays` int(11) NOT NULL DEFAULT '5',
   UNIQUE KEY `id` (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `userinfo`
 --
 
 INSERT INTO `userinfo` (`id`, `username`, `password`, `email`, `activated`, `joindate`, `energy`, `money`, `nbreplays`) VALUES
-(1, 'serena', '$2y$10$0Sno.aZA6rg4tEbs8F4pmu6WxKre7ukty4d5jcOX5m9i40zZZlR3W', 'june.serena.b@gmail.com', '1', '2017-10-30 16:28:33', 0, 100, 5),
-(2, 'lightshadow', '$2y$10$WNc23xD/a6K3mDfXrcGkPepbmzev3qAN0jwB8rXLOTVsZzX/uFuKO', 'lightshadowman@gmail.com', '1', '2017-10-30 16:30:26', -1, 100, 5),
-(3, 'shadex', '$2y$10$2JltO2.YjLpwiNQcU0ELb.RUWJCfLDLI9A.Qcsmvl5O.KnqgvcLEa', 'shadex@gmail.com', '1', '2017-11-02 20:59:09', -1, 100, 5);
+(1, 'Lightshadow', '$2y$10$UZMJfJuMm4C.5In91X/P7.uadWRn0/ZP9so5oONeRo.yVtIze1Psy', 'lightshadowman@gmail.com', '1', '2018-05-09 20:43:53', -1, 100, 5);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

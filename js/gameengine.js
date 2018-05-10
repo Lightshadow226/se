@@ -589,18 +589,26 @@ function refreshInterface()//REFRESHES the interface
                 form_container.id = "form_container";
                 form_container.className = "form_container form_container-small";
 
-            var padding_div = document.createElement('div');
-                padding_div.className = "flex-panel";
-
             var formHeader = document.createElement('h6');
                 formHeader.innerHTML = "Name Your Character";
 
             var formSubHeader = document.createElement('h5');
                 formSubHeader.innerHTML = "<br>Give a name to your Character! CHOOSE WISELY, you will <em>not</em> be able to change it later.<br><br>";
 
-            var name = '<div class = "flex-container">\
-                            <input id="new_name" class = "flex-panel2 login-signup-textfields" type="text" placeholder = "Scholar Name" name="new_name"></input>\
-                        </div>';
+            var nameContainer = document.createElement('div');
+                nameContainer.className = "flex-container";
+
+            var name = document.createElement('input');
+                name.id = "new_name";
+                name.className = "flex-panel2 login-signup-textfields";
+                name.type = "text";
+                name.placeholder = "Scholar Name";
+                // name.name = "new_name";// is this even necessary?
+
+                name.onkeyup = function(e)
+                {
+                    console.log("Temp Username: " + name.value);
+                };
 
             var formSubHeader2 = document.createElement('h5');
                 formSubHeader2.innerHTML = "<br>How will the other Characters refer to your scholar? <br> Pronouns can be changed later.";
@@ -629,16 +637,15 @@ function refreshInterface()//REFRESHES the interface
             theythem.onclick = function(e){choice = toggle_pronouns(this, hehim, sheher)};
 
             game_frame.appendChild(form_container);
-                // form_container.appendChild(padding_div);
                 form_container.appendChild(formHeader);
                 form_container.appendChild(formSubHeader);
-                form_container.innerHTML += name;
+                form_container.appendChild(nameContainer);
+                    nameContainer.appendChild(name);
                 form_container.appendChild(formSubHeader2);
                 form_container.appendChild(gender_container);
                     gender_container.appendChild(sheher);
                     gender_container.appendChild(hehim);
                     gender_container.appendChild(theythem);
-                // form_container.appendChild(padding_div);
         }
         else if(story[special_option][user.storyLocation] == -4)// -4 === Choice of romance or friendship
         {
@@ -929,7 +936,7 @@ function browseLink(link, element)//link is the link of the story (story[special
     {
         var value = document.getElementById('new_name').value;
         
-        // alert(value);
+        console.log("Username Saved in DB: " + value);
 
         if(value == "")
         {

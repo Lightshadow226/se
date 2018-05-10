@@ -866,6 +866,7 @@ function refreshTestContainer()// affiche des données par rapport à la prev/cu
             if(input.value) {user.storyLocation = input.value}
             saveIsVisited();
             pushVariablesToDB();
+            HideForms();
             refreshInterface();
         }
     };

@@ -29,7 +29,7 @@
 			<strong> | Money: </strong> <span id="barMoney"></span>
 			<strong> | Energy: </strong> <span id="barEnergy"></span>
 			<strong> | Replays: </strong> <span id="barReplays"></span>
-			<span style="position: absolute; right: 10px;"><a href="logout.php" style="color:white;">LOGOUT</a></span>
+			<span style="position: absolute; right: 10px;"><a href="logout.php" style="color:white;">Logout</a></span>
 		</div>
 
 		<div id="nav_menu_container">
@@ -51,7 +51,7 @@
 	<?php else: ?><!-- If the  user is NOT logged on -->
 	
 		<div id="user_info">
-			HELLO FUTURE SCHOLAR! <a href="login.php" style="font-size:8px; color:white;">LOGIN</a> | <a href="Signup.php" style="font-size:8px; color:white;">SIGNUP</a>
+			HELLO FUTURE SCHOLAR! <a href="login.php" style="font-size:8px; color:white;">LOGIN</a> | <a href="signup.php" style="font-size:8px; color:white;">SIGNUP</a>
 		</div>
 		
 		<div id="nav_menu_container">
@@ -80,67 +80,54 @@
 <script src = "js/library.js"></script>
 -->
 <script>
-// highlights the current page in the header
-$(function()
-{
-	page = location.href.toLowerCase();//contains the URL of the current page
-	
-	//if directly on SE: http://localhost/se/
 
-	//alert(page);
-	// alert(document.location.hostname);
-	// alert(document.location.pathname);
-	
-    $('.menu_item').each(function()
-    {
-		var pageName = this.href.toLowerCase();//contains the entire URL
-		
-		// alert(page.substr(page.length - 3));
-		// alert(pageName);
-		// alert(pageName.substr(pageName.length - 9));
-
-		var last3 = page.substr(page.length - 3);//to verify if the folder is simply "se/"
-		var last9 = pageName.substr(pageName.length - 9);//to verify if the page leads to "index.php"
-
-		if (page.indexOf(pageName) > -1)//returns the position of the word  || (pageName == "index"))
-        {
-            $(this).addClass('menu-item-activated');
-		}
-		else if (last3 == "se/" && last9 == "index.php")//if the URL is empty but the page directs to "index.php" like "google.com" vs "https://www.google.com/index.php"
-		{
-			$(this).addClass('menu-item-activated');//TODO: change the condition for the final release, as the game is not going ot be in the folder "se/"
-		}
-	});
-	
-	var extension = ".php";
-
-	for(var i = 0; i < chapter_images.length; i++)
+	// highlights the current page in the header
+	$(function()
 	{
-		if(document.location.pathname.toLowerCase() == "/se/" + chapter_images[i] + extension)
+		page = location.href.toLowerCase();//contains the URL of the current page
+		
+		//if directly on SE: http://localhost/se/
+
+		console.log("URL: " + page);
+		// alert(document.location.hostname);
+		// alert(document.location.pathname);
+		
+		//WORKS: http://huidesign.com/automatically-highlight-current-page-in-navigation-with-css-jquery/
+		$('.menu_item').each(function()
 		{
-			$('#game_link').addClass('menu-item-activated');
+			var pageName = this.href.toLowerCase();//contains the entire URL
+			var last3 = page.substr(page.length - 3);//to verify if the folder is simply "se/"
+			var last9 = pageName.substr(pageName.length - 9);//to verify if the page leads to "index.php"
+
+			if (page.indexOf(pageName) > -1)//returns the position of the word  || (pageName == "index"))
+			{
+				$(this).addClass('menu-item-activated');
+			}
+			else if (last3 == "se/" && last9 == "index.php")//if the URL is empty but the page directs to "index.php" like "google.com" vs "https://www.google.com/index.php"
+			{
+				$(this).addClass('menu-item-activated');//TODO: change the condition for the final release, as the game is not going ot be in the folder "se/"
+			}
+		});
+		
+		var extension = ".php";
+
+		for(var i = 0; i < chapter_images.length; i++)
+		{
+			if(document.location.pathname.toLowerCase() == "/se/" + chapter_images[i] + extension)
+			{
+				$('#game_link').addClass('menu-item-activated');
+			}
 		}
-	}
 
-	updateGameBar();
-});
+		updateGameBar();
+	});
 
-$(document).ready(function()
-{
-	$('body').addClass('loaded');
-	
-	updateGameBar();
-});
-
-// function updateTopBar()
-// {
-	// alert(user.last_chapter_played);
-	// await pullVariablesFromDB();
-	// alert(user.last_chapter_played);
-// }
-
-//WORKS: http://huidesign.com/automatically-highlight-current-page-in-navigation-with-css-jquery/
-//DOESN'T WORK: https://stackoverflow.com/questions/30073190/html-css-navigation-bar-highlighting-current-page
+	$(document).ready(function()
+	{
+		$('body').addClass('loaded');
+		
+		updateGameBar();
+	});
 
 </script>
 
