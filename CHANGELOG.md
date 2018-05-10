@@ -1,6 +1,13 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
 
+# Version 1.5.15 (Small changes in appearance)
+## Changed
+- `profile.php`
+    - Changed design and organized the code
+- `se-cards.css`
+    - Centered text in cards
+
 # Version 1.5.14 (Beta Fixes - Spelling, Small Bugs and School Files)
 ## Changed
 - `multiple files`

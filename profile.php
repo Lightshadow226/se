@@ -17,19 +17,26 @@
 
 <body>
 
-	<?php include_once 'partials/headers.php' ?>
-	<?php include_once 'partials/parseProfile.php' ?>
-
-	<div class = "main_content">
-	
 	<div class="card-firstdiv add_padding" style="position: relative;">
 
 			<?php if(!isset($_SESSION['username'])):?>
-				<h1>Profile</h1>
-				<p>Sorry! Only registered members are allowed to see this page. <a href="login.php">Log in</a> or <a href="signup.php">Sign up</a> to view your profile!</p>
+				
+				<body class = "center-screen">
+					<a href="index.php"><img id="logo" class="" src="images/general/se-logo.png"></a>
+							<div class = "">
+								<div class="card-nomargin add_padding">
+									<h1>Profile</h1>
+									<p>Sorry! Only registered members are allowed to see this page.</p>
+									<p><a href="login.php">Log in</a> or <a href="signup.php">Sign up</a> to view your profile!</p>
+								</div>
+							</div>
+				</body>	
 			
 			<?php else: ?>
-				
+
+				<?php  'partials/headers.php' ?>
+				<?php  'partials/parseProfile.php' ?>
+				<div class = "main_content">
 				<div class="flex-container">
 				
 					<div class="flex-panel add_padding">
@@ -101,11 +108,11 @@
 						</div>
 					</div>
 				</div>
+				<?php include_once 'partials/footers.php' ?>
 			<?php endif ?>
 		</div>
 	</div>
 
-	<?php include_once 'partials/footers.php' ?>
 
 </body>
 
