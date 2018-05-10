@@ -3,18 +3,15 @@
 Create the Meet the Characters div for the home page
 
 */
-
+try
+{
 var chara_1 = document.getElementById("chara_1");
-
     chara_1.innerHTML="";
-    //chara_1.style.height="200px";
     chara_1.style.display="flex";
 
 var chara_2 = document.getElementById("chara_2");
-
     chara_2.innerHTML="";
     chara_2.style.paddingTop = "0px";//pour ne pas avoir le double de padding
-    //chara_2.style.height="200px";
     chara_2.style.display="flex";
     
 
@@ -125,4 +122,9 @@ function appendImage(parent, c_index, borderRadiusBottomLeft, borderRadiusBottom
         overlay.appendChild(text_description);
 
     parent.appendChild(container);
+}
+}
+catch(e)
+{
+    //if online, the characters meet will not display
 }

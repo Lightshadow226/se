@@ -751,6 +751,16 @@ function refreshInterface()//REFRESHES the interface
     }
     
     saveIsVisited();
+
+    /*  Write a function to push all variables modified in the process
+        - story location
+        - all affinities
+        - physical location
+        - energy
+        - money
+        - replays?
+        - call it something like "saveGameVariables()" which will use the function saveVariables() in variables.js
+    */
     pushVariablesToDB();
 
     updateGameBar();
@@ -928,7 +938,8 @@ function browseLink(link, element)//link is the link of the story (story[special
             // alert(choice);
             user.department = choice;
             user.storyLocation++;//we continue the story once we are done
-            pushVariablesToDB();
+            saveVariables('department', 'storylocation');
+            // pushVariablesToDB();
             HideForms();
         }
     }
@@ -958,7 +969,8 @@ function browseLink(link, element)//link is the link of the story (story[special
             user.gender = chosen_gender;
             user.scholarname = document.getElementById('new_name').value;
             user.storyLocation++;//we continue the story once we are done
-            pushVariablesToDB();
+            saveVariables('gender', 'scholarname', 'storylocation');
+            // pushVariablesToDB();
             HideForms();
         }
     }

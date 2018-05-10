@@ -15,15 +15,23 @@
     - The server crashes if the player moves too fast
     - and it doesn't save the progress
 
-`variables.js`          `get_variables.php`     `push_variables.php`
+`variables.js`
     - push/pull seulement les variables nécéssaires
     - s'assurer qu'il n'y ait plus de variables utilisés sans la base de données
+    - *MAJOR BUMMER* "Async: false" is going to be removed... (https://xhr.spec.whatwg.org/#synchronous-flag)
+
 
 `library.js`
     - chapterSize() needs to be updated manually every time a chapter changes size or when a new chapter is created
 
-`gameengine.js`
-    - When my sprite gets on the "happy" sprite, my infinity meter goes up by 5 on the game interface randomly. This does not affect the database
+`gameengine.js`         `chapterX.php`
+    - il doit y avoir 4 text container au total
+        - 1 div parent
+            - position: absolute; left: 0px; bottom: 0px;
+            - Children: 3 choix de dialogue
+            - ne pas faire les calculs pour les placer à chaque fois (le parent va se resize automatiquement)
+        - 1 div de texte général (pour l'histoire normale, story[0])
+    - When Serena's sprite gets on the "happy" sprite, my infinity meter goes up by 5 on the game interface randomly. This does not affect the database
     - When you refresh during a dialog choice with infinity meter consequences, it keeps incrementing it
         - (and this causes the "wipe" you do during the replay to not work fully)
         - empêcher le infinity meter d'augmenter si on a déjà visité la slide (il faut faire isVisited)
@@ -40,14 +48,27 @@
     - images that don't size perfectly (chapter 0 form -> link[6] = -3)
 
 `CSS`
+    - [Mouna] *Make zooming possible!!!*
+    - [Mouna] put the CSS media buttons in a separate file, so we can just call a php file to include them in a parent div
     - Il faut que les page-specific attributes ne soient jamais utilisés dans une autre page
-    - Faire que quand on hover, ce soit mauve, mais que l'item d'à côté soit jaune, et l'autre rose (sur la page contact.php (3 images, trois couleurs différentes)
+    - Faire que quand on hover, ce soit mauve, mais que l'item d'à côté soit jaune, et l'autre rose
+        - comme sur index.php: 3 images, trois couleurs différentes
+        - à changer sur la page contact.php
     - https://www.w3schools.com/css/tryit.asp?filename=trycss3_transition1
     - il faudrait faire une classe et une fonction pour un popup pour TOUS les messages ("please write your username!", "please choose a department", )
 
 ## Partial Files
+`push_variables.php`
+    - optimize pushing variables
+    - make a for loop with an array for all the $_POST[] that tests them one after the other
+    - change the way the affinity is pushed
+        - we can only push them all at once
+        - otherwise, the code will crash, as it executes 15 queries at the same time
+
+`get_variables.php`
+
 `headers.php`
-    -mettre variables.js et library.js dans le header/head
+    - mettre variables.js et library.js dans le header/head
 
 `illustration_generator.php`
     - generate illustrations based on [locked vs not, colors, etc.]
@@ -77,7 +98,7 @@
     - Loader for images
 
 `relationships.php`     `relationships.js`      `se-relationships.css`
-    - zoom function on the school files
+    - [Mouna] zoom function on the school files
     - *variables.js* we still need to add characters over time in "classmates" and "others"
 
 `login.php`             `signup.php`            `resetpassword.php`
@@ -111,7 +132,8 @@
 *Initializing GIT:* https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/
 *Unstage commit:* https://stackoverflow.com/questions/1611215/remove-a-git-commit-which-has-not-pushed
 *Git Tag:* https://git-scm.com/book/en/v2/Git-Basics-Tagging
-*Git Rename Tag*: https://stackoverflow.com/questions/1028649/how-do-you-rename-a-git-tag
+*Git Rename Tag:* https://stackoverflow.com/questions/1028649/how-do-you-rename-a-git-tag
+*Git Log:* git log --all --decorate --oneline --graph (https://stackoverflow.com/questions/1057564/pretty-git-branch-graphs)
 
 `GIT original configuration:`
 Target: += *--cd-to-home*

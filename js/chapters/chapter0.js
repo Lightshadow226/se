@@ -12,7 +12,8 @@ August 19, 2017
 var story = new Array();
 
 user.last_chapter_played = 0;
-pushVariablesToDB();
+saveVariables(user.last_chapter_played);
+// pushVariablesToDB();
 
 const c = 17;//TODO: update this because it should be 20
 /* "c" values:

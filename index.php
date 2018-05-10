@@ -414,7 +414,7 @@
 
 	</div>
 
-<?php include_once 'partials/footers.php' ?>
+	<?php include_once 'partials/footers.php' ?>
 
 </body>
 
@@ -424,7 +424,14 @@
 <script src = "js/index.js"></script><!--needed for the logged in functionality of "current chapter"-->
 <script>
 	//logged out
-	initialize();//initialize the random generator
+	try
+	{
+		initialize();//initialize the random generator
+	}
+	catch(e)
+	{
+		//if logged in
+	}
 </script>
 
 </html>

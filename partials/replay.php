@@ -84,7 +84,7 @@
             <!-- <p class="center">You can also replay previous chapters while you wait!</p> -->
             <div class="center" style="padding: 10px;">
                 <div class="button pink_button"><a style="color:white;" onclick="restartChapter()">Replay Episode</a></div>
-                <!-- <div class="button pink_button"><a style="color:white;" onclick="nextChapter()">Next Chapter</a></div> -->
+                <div class="button pink_button"><a style="color:white;" onclick="nextChapter()">Next Chapter</a></div>
             </div>
             
         </div>

@@ -51,7 +51,12 @@
 	<?php else: ?><!-- If the  user is NOT logged on -->
 	
 		<div id="user_info">
-			HELLO FUTURE SCHOLAR! <a href="login.php" style="font-size:8px; color:white;">LOGIN</a> | <a href="signup.php" style="font-size:8px; color:white;">SIGNUP</a>
+			HELLO FUTURE SCHOLAR!
+			<span style="position: absolute; right: 10px;">
+				<a href="login.php" style="color:white;">Log In</a>
+				<strong>|</strong>
+				<a href="signup.php" style="color:white;">Sign Up</a>
+			</span>
 		</div>
 		
 		<div id="nav_menu_container">

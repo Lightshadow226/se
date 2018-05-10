@@ -792,6 +792,93 @@ function wipeCurrentChapter()
     console.log("Successfully wiped the memory for chapter " + user.last_chapter_played);
 }
 
+//used when saving specific variables to the database through saveVariables(1)
+function getJSONPropertyValue(propertyName)
+{
+    switch(propertyName)
+    {
+        //USERINFO table
+        case x.username:
+            return user.username;
+
+        case x.energy:
+            return user.energy;
+
+        case x.money:
+            return user.money;
+
+        //SCHOLARINFO table
+        case x.department:
+            return user.department;
+
+        case x.scholarName:
+            return user.scholarname;
+
+        case x.gender:
+            return user.gender;
+        
+        //STORY table
+        case x.storyLocation:
+            return user.storyLocation;
+
+        case x.lastChapterPlayed:
+            return user.last_chapter_played;
+
+        case x.physicalLocationInt:
+            return user.physicalLocationInt;
+
+        //AFFINITY table (Main 10)
+        case x.karolina:
+            return karolina.affinity;
+
+        case x.ellie:
+            return ellie.affinity;
+
+        case x.neha:
+            return neha.affinity;
+
+        case x.raquel:
+            return raquel.affinity;
+
+        case x.claire:
+            return claire.affinity;
+
+        case x.alistair:
+            return alistair.affinity;
+
+        case x.tadashi:
+            return tadashi.affinity;
+
+        case x.tegan:
+            return tegan.affinity;
+
+        case x.tyler:
+            return tyler.affinity;
+
+        return x.axel;
+            case axel.affinity:
+
+        //AFFINITY table (Other)
+        case x.ladyArlington:
+            return lady_arlington.affinity;
+
+        case x.coachDavis:
+            return coach_davis.affinity;
+
+        case x.serena:
+            return serena.affinity;
+
+        case x.cecile:
+            return cecile.affinity;
+        
+        case x.teacherChapter2:
+            return teacher_chapter_2.affinity;
+
+        default:
+            return '2y10UZMJfJuMm4C5In91XP7uadWRn0ZP9so5oONeRoyVtIze1Psy';
+    }
+}
+
 // -----START DEBUGGING TOOLS-----
 function refreshTestContainer()// affiche des données par rapport à la prev/current/next slide
 {
@@ -896,3 +983,12 @@ function refreshTestContainer()// affiche des données par rapport à la prev/cu
     container2.innerHTML = text;*/
 }
 // -----END DEBUGGING TOOLS-----
+
+user.username = "Lightshadow";
+user.money = 10;
+user.energy = -1;
+
+// saveVariables('username', 'energy', 'money');
+saveVariables(x.username, x.money, x.energy);
+
+// saveVariables(user.money);

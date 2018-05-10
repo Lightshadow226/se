@@ -4,22 +4,18 @@ include_once '../resources/session.php';
 include_once '../resources/database.php';
 include_once '../resources/utilities.php';
 
-    
-
     $id = $_SESSION['id'];
-
     $status = "Error Sending SQL";
+    $username = $_POST['username'];
 
     //*********************************************
     //USERINFO table
     //*********************************************
 
-    $username = $_POST['username'];
-
     try
     {
-        $sqlQuery1 = "UPDATE userinfo SET username = '$username' WHERE id = '$id'";
-        $statement = $db->prepare($sqlQuery1);
+        $sqlQuery = "UPDATE userinfo SET username = '$username' WHERE id = '$id'";
+        $statement = $db->prepare($sqlQuery);
         $statement->execute();
 
         $status = "SQL Sent!";
@@ -33,9 +29,9 @@ include_once '../resources/utilities.php';
     {
         $energy = $_POST['energy'];
 
-        $sqlQuery2 = "UPDATE userinfo SET energy = '$energy' WHERE id = '$id'";
-        $statement2 = $db->prepare($sqlQuery2);
-        $statement2->execute();
+        $sqlQuery = "UPDATE userinfo SET energy = '$energy' WHERE id = '$id'";
+        $statement = $db->prepare($sqlQuery);
+        $statement->execute();
 
         $status = "SQL Sent!";
     }
@@ -49,9 +45,9 @@ include_once '../resources/utilities.php';
     {
         $money = $_POST['money'];
     
-        $sqlQuery3 = "UPDATE userinfo SET money = '$money' WHERE id = '$id'";
-        $statement3 = $db->prepare($sqlQuery2);
-        $statement3->execute();
+        $sqlQuery = "UPDATE userinfo SET money = '$money' WHERE id = '$id'";
+        $statement = $db->prepare($sqlQuery);
+        $statement->execute();
 
         $status = "SQL Sent!";
     }
@@ -118,8 +114,8 @@ include_once '../resources/utilities.php';
     {
         $storylocation = $_POST['storylocation'];//storylocation
         
-        $sqlQuery1 = "UPDATE story SET storylocation = '$storylocation' WHERE id = '$id'";
-        $statement = $db->prepare($sqlQuery1);
+        $sqlQuery = "UPDATE story SET storylocation = '$storylocation' WHERE id = '$id'";
+        $statement = $db->prepare($sqlQuery);
         $statement->execute();
 
         $status = "SQL Sent!";
@@ -133,9 +129,9 @@ include_once '../resources/utilities.php';
     {
         $lastchapterplayed = $_POST['lastchapterplayed'];//lastchapterplayed
 
-        $sqlQuery2 = "UPDATE story SET lastchapterplayed = '$lastchapterplayed' WHERE id = '$id'";
-        $statement2 = $db->prepare($sqlQuery2);
-        $statement2->execute();
+        $sqlQuery = "UPDATE story SET lastchapterplayed = '$lastchapterplayed' WHERE id = '$id'";
+        $statement = $db->prepare($sqlQuery);
+        $statement->execute();
 
         $status = "SQL Sent!";
     }
@@ -148,9 +144,9 @@ include_once '../resources/utilities.php';
     {
         $physicallocationint = $_POST['physicallocationint'];//physical location int
             
-        $sqlQuery3 = "UPDATE story SET physicallocationint = '$physicallocationint' WHERE id = '$id'";
-        $statement3 = $db->prepare($sqlQuery3);
-        $statement3->execute();
+        $sqlQuery = "UPDATE story SET physicallocationint = '$physicallocationint' WHERE id = '$id'";
+        $statement = $db->prepare($sqlQuery);
+        $statement->execute();
 
         $status = "SQL Sent!";
     }

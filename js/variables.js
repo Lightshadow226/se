@@ -655,6 +655,44 @@ var personnages =
                     ]
 };
 
+//contains the php nomenclature
+var x = 
+{
+    //USERINFO table
+    username: 'username',
+    energy: 'energy',
+    money: 'money',
+
+    //SCHOLARINFO table
+    department: 'department',
+    scholarName: 'scholarname',
+    gender: 'gender',
+    
+    //STORY table
+    storyLocation: 'storylocation',
+    lastChapterPlayed: 'lastchapterplayed',
+    physicalLocationInt: 'physicallocationint',
+
+    //AFFINITY table (Main 10)
+    karolina: 'karolina_affinity',
+    ellie: 'ellie_affinity',
+    neha: 'neha_affinity',
+    raquel: 'raquel_affinity',
+    claire: 'claire_affinity',
+    alistair: 'alistair_affinity',
+    tadashi: 'tadashi_affinity',
+    tegan: 'tegan_affinity',
+    tyler: 'tyler_affinity',
+    axel: 'axel_affinity',
+
+    //AFFINITY table (Other)
+    ladyArlington: 'lady_arlington_affinity',
+    coachDavis: 'coach_davis_affinity',
+    serena: 'serena_affinity',
+    cecile: 'cecile_affinity',
+    teacherChapter2: 'teacher_chapter_2_affinity'
+}
+
 //a few pointers to constant references in the chapter variables files
     const main_text = 0;
 
@@ -874,6 +912,43 @@ function pushVariablesToDB()
     });
 
     console.log("Saved data to database.")
+}
+
+function saveVariables()
+{
+    var jsonData = {};
+    var dataSize = arguments.length;
+
+    console.log("Saving " + dataSize + " variables: ");
+
+    for(var i = 0; i < dataSize; i++)
+    {
+        // console.log("arguments[" + i + "] = " + arguments[i] + " \n-> yields " + getJSONPropertyName(arguments[i]))
+        var JSONpropertyName = arguments[i];
+        var JSONpropertyValue = getJSONPropertyValue(arguments[i]);
+        
+        if(JSONpropertyValue != '2y10UZMJfJuMm4C5In91XP7uadWRn0ZP9so5oONeRoyVtIze1Psy')//if the variable was found
+        {
+            jsonData[JSONpropertyName] = JSONpropertyValue;
+        }
+        else
+        {
+            console.log("Oh no! Something went wrong while trying to save \'" + arguments[i]) + "\'";
+        }
+    }
+
+    console.log(jsonData);
+
+    $.ajax('dbtransfers/push_variables.php',
+    {
+            type: 'POST',
+            async: false,
+            data: jsonData
+    }).done(function (response)
+    {
+        // console.log("Saving Successful");
+        // console.log(response);
+    });
 }
 
 pullVariablesFromDB();

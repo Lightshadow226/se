@@ -11,7 +11,7 @@ var container = document.getElementById('random_character_panel');
 
 $(function create_interface()
 {
-    //logged int
+    //logged in
     update_highest_affinity();
     update_current_chapter(user.last_chapter_played, "currentIndex");
 });

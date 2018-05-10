@@ -1,6 +1,32 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
 
+# Version 1.5.19 (Optimization of saving to DB)
+## Added
+- `variables.js`        `library.js`
+    - added a functionality to save specific variables
+    - saveVariables(user.username, user.energy);
+    - we can list as many variables as we want
+
+## Changed
+- `push_variables.php`
+    - there were mismatching queries
+    - money was never saved because it was using $sqlQuery2 instead of 3
+    - all numbers were removed because they are all independently isolated in their own try/catch loops
+
+- `chapter0.js`         `chapter1.js`
+    - changed pushVariablesToDB() for saveVariables(user.last_chapter_played);
+    - much more efficient
+    - it saves one variable instead of all of them
+
+- `index.php`           `charactersmeet.js`
+    - included a try/catch to make sure no error messages are displayed in the console when logged in
+    - essence, this doesn't change anything
+
+- `gameengine.js`
+    - TODO:  Write a function to push all variables modified in the gameengine loop
+    - changed pushVariablesToDB() to saveVariables() where possible
+
 # Version 1.5.17 (Appearance changes)
 ##Changed
 - `activate.php`
@@ -17,6 +43,7 @@
     - changed the entire list
     - rearranged the order in terms of files, not of importance
     - structure is still subject to change
+
 
 # Version 1.5.15 (Beta Fixes - Small Changes)
 ## Changed
@@ -128,6 +155,7 @@
 ## Added
 - `relationships.php`
     - Added a higher resolution file for classified school files
+
 ## Changed
 - `about.php`   
     - removed the buttons to sign up and log in if the user is already logged in
@@ -140,6 +168,7 @@
     - added saving of the isVisited of ch. 0
 - `database`        
     - added the chapter0_story table
+
 ## Changed
 - `gameboot.js`
     - optimized the file
