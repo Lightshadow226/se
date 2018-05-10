@@ -1,9 +1,3 @@
-<?php
-include_once 'partials/headers.php';
-include_once 'partials/parseSignup.php';
-?>
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,21 +17,17 @@ include_once 'partials/parseSignup.php';
 
 </head>
 
-<body>
-
-
-	<?php include_once 'partials/headers.php' ?>
-
-	<div class = "main_content">
-        <div class="card-nomargin add_padding">
-            <h1>Email Confirmation</h1>
+<body class= "center-screen">
+		<a href="index.php"><img id="logo" class="" src="images/general/se-logo.png"></a>
+		<div class = "">
+			<div class="card-nomargin add_padding">
+				<h1>Email Confirmation</h1>
+				<p style="text-align:center;">Your email address has been verified, you can now <a href="login.php">Log in</a> with your email and password.</p>
+				<br><p style="text-align:center;"><a href="index.php">Back</a> </p> </br>
             	<?php if(isset($result)) echo $result; ?>
-		    <p style="text-align:center;"><a href="index.php">Back</a> </p>
 
-        </div>
-	</div>
-
-	<?php include_once 'partials/footers.php' ?>
+        	</div>
+		</div>
 
 </body>
 

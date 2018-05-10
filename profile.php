@@ -24,13 +24,15 @@
 <body>
 
 	<?php if(!isset($_SESSION['username'])):?>
-		<div class = "main_content">
-			<div class="card-firstdiv add_padding" style="position: relative;">
+	<body class = "center-screen">
+		<a href="index.php"><img id="logo" class="" src="images/general/se-logo.png"></a>
+		<div class = "">
+			<div class="card-nomargin add_padding" style="position: relative;">
 				<h1>Profile</h1>
-				<p>Sorry! Only registered members are allowed to see this page. <a href="login.php">Log in</a> or <a href="signup.php">Sign up</a> to view your profile!</p>
+				<p>Sorry! Only registered members are allowed to see this page. <br><a href="login.php">Log in</a> or <a href="signup.php">Sign up</a> to view your profile!</br></p>
 			</div>
 		</div>
-	
+	</body>
 	<?php else: ?>
 
 		<?php include_once 'partials/headers.php' ?>

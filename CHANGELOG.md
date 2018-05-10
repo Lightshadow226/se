@@ -1,6 +1,16 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
 
+# Version 1.5.16 (Appearance changes)
+##Changed
+- `activate.php`
+    - redesign of the email confirmation page
+- `profile.php`
+    - redesign of the profile page when logged off
+- `game.php`
+    - redesign of the game page when logged off
+
+
 # Version 1.5.16 (Todo list)
 ## Changed
 - `todo.md`
