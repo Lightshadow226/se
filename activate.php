@@ -37,7 +37,7 @@ include_once 'partials/parseSignup.php';
         </div>
 	</div>
 
-<?php include_once 'partials/footers.php' ?>
+	<?php include_once 'partials/footers.php' ?>
 
 </body>
 

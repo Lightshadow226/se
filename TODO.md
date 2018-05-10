@@ -1,5 +1,9 @@
 ﻿#TODO NOTES
 
+- `index.php`
+    - "Start story" instead of "continue story" when user.storyLocation == 0
+
+
 `TODO: HIGH Importance`
 https://www.w3schools.com/css/tryit.asp?filename=trycss3_transition1
 - *CHAPTER INPUT*       [chapter1.js]                                   la chapitre 1 est terminé jusqu'à la slide 129, donc il va falloir valider le reste + rajouter les émotions
@@ -80,6 +84,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss3_transition1
 *Initializing GIT:* https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/
 *Unstage commit:* https://stackoverflow.com/questions/1611215/remove-a-git-commit-which-has-not-pushed
 *Git Tag:* https://git-scm.com/book/en/v2/Git-Basics-Tagging
+*Git Rename Tag*: https://stackoverflow.com/questions/1028649/how-do-you-rename-a-git-tag
 
 `GIT original configuration:`
 Target: += *--cd-to-home*

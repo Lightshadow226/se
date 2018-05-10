@@ -50,27 +50,38 @@ if(isset($_POST['signupBtn'],$_POST['token']))
 			{
 				//Creating the SQL Statement
 				$sqlInsert = "INSERT INTO userinfo (username, email, password, joindate) VALUES (:username, :email, :password, now())";
-				$sqlInsert2 = "INSERT INTO story (storylocation, lastchapterplayed) VALUES ('0', '0')";
-				$sqlInsert3 = "INSERT INTO affinity (karolina, ellie, neha, raquel, claire, alistair, tadashi, tegan, tyler, axel, ladyarlington, coachdavis, serena, cecile, teacherchapter2) VALUES ('0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0')"; //
-				// $sqlInsert3 = "INSERT INTO scholar_info"
-
+				
 				//Using PDO to sanitize the data
 				$statement = $db->prepare($sqlInsert);
-				$statement2 = $db->prepare($sqlInsert2);
-				$statement3 = $db->prepare($sqlInsert3);
-			
+				
 				//Adding the data into the database
 				$statement->execute(array(':username' => $username, ':email' => $email, ':password' => $hashed_password));
-				$statement2->execute();
-				$statement3->execute();
-			
+				
 				//Checking if one new row has been created
 				if ($statement->rowCount() == 1)
 				{
 					//Get the last inserted ID that was inserted into the database and encoding it
 					$user_id = $db->lastInsertId();
 					$encode_id = base64_encode("encodeuserid{$user_id}");
+
+					//generate the rest of the database row for that user based on the ID
+					$sqlInsert2 = "INSERT INTO story (id) SELECT id FROM userinfo WHERE id = $user_id";
+					$sqlInsert3 = "INSERT INTO affinity (id) SELECT id FROM userinfo WHERE id = $user_id";
+					$sqlInsert4 = "INSERT INTO scholarinfo (id) SELECT id FROM userinfo WHERE id = $user_id";
+					$sqlInsert5 = "INSERT INTO chapter0_story (id) SELECT id FROM userinfo WHERE id = $user_id";
 					
+					//Using PDO to sanitize the data
+					$statement2 = $db->prepare($sqlInsert2);
+					$statement3 = $db->prepare($sqlInsert3);
+					$statement4 = $db->prepare($sqlInsert4);
+					$statement5 = $db->prepare($sqlInsert5);
+
+					//Adding the data into the database
+					$statement2->execute();
+					$statement3->execute();
+					$statement4->execute();
+					$statement5->execute();
+				
 					/*THE CLASS "logo_div"  DOESN'T EXIST*/
 					
 					//Preparing the body of the email
@@ -124,11 +135,11 @@ if(isset($_POST['signupBtn'],$_POST['token']))
 					//Error Handling for PHPMailer
 					if(!$mail->Send())
 					{
-					$result = "Email sending failed: $mail->ErrorInfo";
+						$result = "Email sending failed: $mail->ErrorInfo";
 					}
 					else
 					{
-					$result = "Registration Succesful! Please check your email to activate your account.";
+						$result = "Registration Succesful! Please check your email to activate your account.";
 					}
 				}	
 			}
