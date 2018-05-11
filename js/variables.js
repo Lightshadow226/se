@@ -664,9 +664,9 @@ var x =
     money: 'money',
 
     //SCHOLARINFO table
-    department: 'department',
+    department: 'scholar_department',
     scholarName: 'scholarname',
-    gender: 'gender',
+    gender: 'scholar_gender',
     
     //STORY table
     storyLocation: 'storylocation',
@@ -674,16 +674,16 @@ var x =
     physicalLocationInt: 'physicallocationint',
 
     //AFFINITY table (Main 10)
-    karolina: 'karolina_affinity',
-    ellie: 'ellie_affinity',
-    neha: 'neha_affinity',
-    raquel: 'raquel_affinity',
-    claire: 'claire_affinity',
-    alistair: 'alistair_affinity',
-    tadashi: 'tadashi_affinity',
-    tegan: 'tegan_affinity',
-    tyler: 'tyler_affinity',
-    axel: 'axel_affinity',
+    karolina: 'karolina',
+    ellie: 'ellie',
+    neha: 'neha',
+    raquel: 'raquel',
+    claire: 'claire',
+    alistair: 'alistair',
+    tadashi: 'tadashi',
+    tegan: 'tegan',
+    tyler: 'tyler',
+    axel: 'axel',
 
     //AFFINITY table (Other)
     ladyArlington: 'lady_arlington_affinity',
@@ -858,60 +858,13 @@ function pullVariablesFromDB()//we load the data from the database, and put it i
 
 function pushVariablesToDB()
 {
-    // console.log("Pushing data to the database...");
+    saveUserInfo();
+    saveScholarInfo();
+    saveStory();
+    saveAffinity();
+    saveAffinityOthers();
 
-    // $.post('dbtransfers/push_variables.php',
-    $.ajax('dbtransfers/push_variables.php',
-        {
-            type: 'POST',
-            async: false,
-            // dataType: "script",
-            data:
-        {
-            //*********************************************
-            //USERINFO table
-            //*********************************************
-            'username': user.username,
-            'energy': user.energy,
-            'money': user.money,
-
-            //*********************************************
-            //SCHOLARINFO table
-            //*********************************************
-            'department': user.department,
-            'scholarname': user.scholarname,
-            'gender': user.gender,
-            //on n'enregistre pas les autres variables pour l'instant
-
-            //*********************************************
-            //STORY table
-            //*********************************************
-            'storylocation': user.storyLocation,
-            'lastchapterplayed': user.last_chapter_played,
-            'physicallocationint': user.physicalLocationInt,
-
-            //*********************************************
-            //AFFINITY table
-            //*********************************************
-            'karolina_affinity': karolina.affinity,
-            'ellie_affinity': ellie.affinity,
-            'neha_affinity': neha.affinity,
-            'raquel_affinity': raquel.affinity,
-            'claire_affinity': claire.affinity,
-            'alistair_affinity': alistair.affinity,
-            'tadashi_affinity': tadashi.affinity,
-            'tegan_affinity': tegan.affinity,
-            'tyler_affinity': tyler.affinity,
-            'axel_affinity': axel.affinity,
-            'lady_arlington_affinity': lady_arlington.affinity,
-            'coach_davis_affinity': coach_davis.affinity,
-            'serena_affinity': serena.affinity,
-            'cecile_affinity': cecile.affinity,
-            'teacher_chapter_2_affinity': teacher_chapter_2.affinity,
-        }
-    });
-
-    console.log("Saved data to database.")
+    console.log("Saved alldata to database.")
 }
 
 function saveVariables()
@@ -933,7 +886,7 @@ function saveVariables()
         }
         else
         {
-            console.log("Oh no! Something went wrong while trying to save \'" + arguments[i]) + "\'";
+            console.log("Something went wrong while trying to save \'" + arguments[i]) + "\'";
         }
     }
 
@@ -946,8 +899,7 @@ function saveVariables()
             data: jsonData
     }).done(function (response)
     {
-        // console.log("Saving Successful");
-        // console.log(response);
+        console.log(response);
     });
 }
 

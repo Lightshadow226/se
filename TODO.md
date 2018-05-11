@@ -11,15 +11,11 @@
 
 ## Core Files
 `variables.js`
-    - Also, there is major lag online and sometimes the server isn't fast enough to save all of the choices made
-    - The server crashes if the player moves too fast
-    - and it doesn't save the progress
-
-`variables.js`
-    - push/pull seulement les variables nécéssaires
+    - There is major lag online and sometimes the server isn't fast enough to save all of the choices made
+    - optimize pulling variables from the DB the same way as pushing was optimized
+    - The server crashes if the player moves too fast and it doesn't save the progress
     - s'assurer qu'il n'y ait plus de variables utilisés sans la base de données
     - *MAJOR BUMMER* "Async: false" is going to be removed... (https://xhr.spec.whatwg.org/#synchronous-flag)
-
 
 `library.js`
     - chapterSize() needs to be updated manually every time a chapter changes size or when a new chapter is created
@@ -58,15 +54,6 @@
     - il faudrait faire une classe et une fonction pour un popup pour TOUS les messages ("please write your username!", "please choose a department", )
 
 ## Partial Files
-`push_variables.php`
-    - optimize pushing variables
-    - make a for loop with an array for all the $_POST[] that tests them one after the other
-    - change the way the affinity is pushed
-        - we can only push them all at once
-        - otherwise, the code will crash, as it executes 15 queries at the same time
-
-`get_variables.php`
-
 `headers.php`
     - mettre variables.js et library.js dans le header/head
 

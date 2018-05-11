@@ -792,6 +792,10 @@ function wipeCurrentChapter()
     console.log("Successfully wiped the memory for chapter " + user.last_chapter_played);
 }
 
+// *********************************
+// Database Manipulations
+// *********************************
+
 //used when saving specific variables to the database through saveVariables(1)
 function getJSONPropertyValue(propertyName)
 {
@@ -855,8 +859,8 @@ function getJSONPropertyValue(propertyName)
         case x.tyler:
             return tyler.affinity;
 
-        return x.axel;
-            case axel.affinity:
+        case x.axel:
+            return axel.affinity;
 
         //AFFINITY table (Other)
         case x.ladyArlington:
@@ -878,6 +882,38 @@ function getJSONPropertyValue(propertyName)
             return '2y10UZMJfJuMm4C5In91XP7uadWRn0ZP9so5oONeRoyVtIze1Psy';
     }
 }
+
+function saveUserInfo()
+{
+    saveVariables(x.username, x.energy, x.money);
+}
+
+function saveScholarInfo()
+{
+    saveVariables(x.department, x.scholarName, x.gender);
+}
+
+function saveStory()
+{
+    saveVariables(x.storyLocation, x.lastChapterPlayed, x.physicalLocationInt);
+}
+
+function saveAffinity()
+{
+    saveVariables(x.karolina, x.ellie, x.neha, x.raquel, x.claire, x. alistair, x.tadashi, x.tegan, x.tyler, x.axel);
+}
+
+function saveAffinityOthers()
+{
+    saveVariables(
+        x.ladyArlington,
+        x.coachDavis,
+        x.serena,
+        x.cecile,
+        x.teacherChapter2
+    );
+}
+
 
 // -----START DEBUGGING TOOLS-----
 function refreshTestContainer()// affiche des données par rapport à la prev/current/next slide
@@ -983,12 +1019,3 @@ function refreshTestContainer()// affiche des données par rapport à la prev/cu
     container2.innerHTML = text;*/
 }
 // -----END DEBUGGING TOOLS-----
-
-user.username = "Lightshadow";
-user.money = 10;
-user.energy = -1;
-
-// saveVariables('username', 'energy', 'money');
-saveVariables(x.username, x.money, x.energy);
-
-// saveVariables(user.money);

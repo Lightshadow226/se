@@ -12,7 +12,7 @@ August 19, 2017
 var story = new Array();
 
 user.last_chapter_played = 0;
-saveVariables(user.last_chapter_played);
+saveVariables(x.lastChapterPlayed);
 // pushVariablesToDB();
 
 const c = 17;//TODO: update this because it should be 20

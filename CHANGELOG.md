@@ -1,6 +1,19 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
 
+# Version 1.6.0 (Major changes to saving to the DB)
+## Changed
+- `push_variables.php`
+    - fixed the file
+    - now the file is less than 100 lines instead of 246
+    - the file is optimized and works when any variables are posted
+- `variables.js`
+    - modified pushVariablesToDB()
+    - created functions to break down saving variables by functions
+    - now everything passes through the function saveVariables()
+    - saveVariables() is fully optimized, and free of bugs
+    - we might have to create another JS file to handle all the DB related content
+
 # Version 1.5.19 (Optimization of saving to DB)
 ## Added
 - `variables.js`        `library.js`
@@ -27,7 +40,7 @@
     - TODO:  Write a function to push all variables modified in the gameengine loop
     - changed pushVariablesToDB() to saveVariables() where possible
 
-    
+
 # Version 1.5.18 (Beta fixes)
 - `chapter0.php`
 - `chapter1.php`
