@@ -43,9 +43,18 @@
     - *chapterXX.js* Sprites that don't resize properly in the game
     - images that don't size perfectly (chapter 0 form -> link[6] = -3)
 
+`chapterX.php`
+    - we should make a generic php file to play the game
+    - one php file with a script to include the current chapter's JS file
+    - generateGameContianer.php, variables.js, library.js and gameengine.js are already independent
+    - we should make one php file to automatically play the current chapter
+    - rename game.php to gameboot.php
+    - create game.php or chapter.php, which will be a copy of chapter0.php with a modification to be used in any chapter
+
 `CSS`
     - [Mouna] *Make zooming possible!!!*
     - [Mouna] put the CSS media buttons in a separate file, so we can just call a php file to include them in a parent div
+    - crop sprites en coupe américaine (movie perspectives)
     - Il faut que les page-specific attributes ne soient jamais utilisés dans une autre page
     - Faire que quand on hover, ce soit mauve, mais que l'item d'à côté soit jaune, et l'autre rose
         - comme sur index.php: 3 images, trois couleurs différentes

@@ -35,6 +35,8 @@
 	</body>
 	<?php else: ?>
 
+		<?php include_once 'partials/headers.php' ?>
+		
 		<div class = "main_content">
 
 			<div id = "Container">

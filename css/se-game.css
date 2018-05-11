@@ -17,7 +17,7 @@
     border: 1px solid black;  
 } */
 
-/*STRUCTURE*/
+/* #region STRUCTURE */
 
     .game-title /*on game.php*/
     {
@@ -185,14 +185,14 @@
 
     #game_frame
     {
-        display: flex;
+        /* display: flex; */
         position: relative;
 
         background-size: 100%;/*acts as width: 100%;*/
         background-repeat: no-repeat;
         
-        height: 100%;
-        margin: 0 !important;   
+        /* height: 100%; */
+        /* margin: 0 !important;    */
     }
 
     .bubble
@@ -308,6 +308,8 @@
         display: none;/*not there (it doesn't occupy any space)*/
     }
 
+/* #endregion STRUCTURE*/
+
 /*CHAPTER 0 - CHOOSE YOUR DEPARMENT FORM*/
 
     .form_container
@@ -370,7 +372,7 @@
     .form_img_container
     {
         width: 7%; 
-        height: 100%;
+        /* height: 100%; */
     }
 
     .form_img
@@ -381,7 +383,9 @@
 
     .form_text_container
     {
-        height: 100%;
+        /* height: 100%; */
+        width: 90%;
+        margin-left: 3%;
         flex: 1;
         
         display: flex;

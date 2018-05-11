@@ -83,7 +83,6 @@
 
 </body>
 
-<script src = "js/jquery_3.2.1.js"></script>
 <script src = "js/variables.js"></script>
 <script src = "js/library.js"></script>
 <script src="js/illustrations_achievements.js"></script>

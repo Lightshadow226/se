@@ -25,6 +25,7 @@ $variables = array
         'username',
         'energy',
         'money',
+        'nbreplays',
     ),
 
     //SCHOLARINFO table

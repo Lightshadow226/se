@@ -662,11 +662,23 @@ var x =
     username: 'username',
     energy: 'energy',
     money: 'money',
+    nbreplays: 'nbreplays',
 
     //SCHOLARINFO table
-    department: 'scholar_department',
-    scholarName: 'scholarname',
+    scholarName: 'scholar_name',
     gender: 'scholar_gender',
+    // sex: 'scholar_sex',
+    department: 'scholar_department',
+    // haircolor: 'scholar_haircolor',
+    // hairstyle: 'scholar_hairstyle',
+    // skincolor: 'scholar_skincolor',
+    // eyecolor: 'scholar_eyecolor',
+    // wigID: 'wig_id',
+    // shirtId: 'shirt_id',
+    // pantsID: 'pants_id',
+    // socksID: 'socks_id',
+    // shoesID: 'shoes_id',
+    // accessoryID: 'accessory_id',
     
     //STORY table
     storyLocation: 'storylocation',
@@ -851,9 +863,10 @@ function pullVariablesFromDB()//we load the data from the database, and put it i
 
         // $(document).ready(function(){try{refreshInterface();}catch(e){}});
         $(document).ready(function(){try{update_highest_affinity(); update_current_chapter();}catch(e){}});
+        
+        console.log("Loaded data from database.")
+        console.log("pulled name: " + user.scholarName);
     });
-
-    console.log("Loaded data from database.")
 }
 
 function pushVariablesToDB()

@@ -43,7 +43,7 @@
 				<?php include_once 'partials/generateGameContainer.php' ?>
 			</div>
 
-			<div id = "DB_handle">
+			<div id = "DB_handle"></div>
 				
 		</div>
 		<?php include_once 'partials/footers.php' ?>

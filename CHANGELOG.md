@@ -1,6 +1,29 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
 
+# Version 1.6.1 (Bug fixes)
+## Added
+- `push_variables.php`  `variables.js`
+    - nbreplays to the list of variables that can be pulled and pushed
+    - prepared the scholarinfo JS array for future DB manipulations (not present in the php file)
+    
+## Fixed
+- `chapter0.php`
+    - issue: the footer was not the correct width (it was too narrow)
+    - solution: there was a missing </div> at the end of the DB_handle
+- `chapter1.php`
+    - issue: the header was not there and it was causing multiple bugs
+    - solution: added the headers php include_once
+- `se-game.css`         `chapter0.php`
+    - issue: the background image was not the correct proportions, the image was streched vertically
+    - solution: #game_frame was in flex mode
+
+## Deleted
+- `relationships.php`   `illustrations_achievements.php`
+    - deleted the jQuery include on those pages
+    - jQuery is already included in the headers
+    - we should also include variables.js and library.js in the headers
+
 # Version 1.6.0 (Major changes to saving to the DB)
 ## Changed
 - `push_variables.php`
