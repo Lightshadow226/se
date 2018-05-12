@@ -1,6 +1,23 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
 
+# Version 1.6.3 (Optimisation)
+## Changed
+-  `variables.js`
+    - changed the definition of "x" and "user"
+    - changed the function pullVariablesFromDB so it would change "user"'s affinity and not each of the
+    character's affinities individually
+    - added a variable "oldUser"
+    - created an "initialiseOldUser" function that pulls the old user's variables from the database (as an 
+    element of comparison)
+    - created a "saveGameVariables" function that compares each "user" and "oldUser" variable and calls
+    "saveVariable" when there's a difference between both variables
+- `gameengine.js`
+    - calling "initialiseOldUser" in the beginning of each "refreshInterface" 
+    - calling "saveGameVariables" at the end of each "refreshInterface"
+    - deleting calls to "pushVariablesToDB" as it became obsolete.
+    
+
 # Version 1.6.1 (Bug fixes)
 ## Added
 - `push_variables.php`  `variables.js`

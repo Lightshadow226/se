@@ -63,27 +63,6 @@ var locations =
             dormBathroom: backgrounds_path + "dormbathroom.jpg",
 };
 
-var user = 
-{
-    username: "None",
-    scholarname: "None",
-    energy: 0,
-    money: 0,
-    storyLocation: 0,//VARIABLE COMMUNE À TOUS LES CHAPITRES, LA SEULE CHOSE QUI PEU BLOQUER serait de mettre un IF(last_chapter_played == this)
-    last_chapter_played: 0,
-    physicalLocation: backgrounds_path + locations.blackScreen,
-    physicalLocationInt: 0,
-    department: 0,
-    sex: 0, //0: female, 1: male
-    gender: 0,//0: she, 1: he, 2: they
-    haircolor: 0,//
-    hairstyle: 0,//
-    skincolor: 0,//
-    eyecolor: 0,//
-    wigID: 0,
-    pronoun: 0,//0: she, 1: he, 3: they
-};
-
 var genders = ["She/Her", "He/Him", "They/Them"];
 
 //on va devoir écrire un code pour GET ces variables de la base de données. ces variables vont être propres à chaque utilisateur.
@@ -698,12 +677,89 @@ var x =
     axel: 'axel',
 
     //AFFINITY table (Other)
-    ladyArlington: 'lady_arlington_affinity',
-    coachDavis: 'coach_davis_affinity',
+    lady_arlington: 'lady_arlington_affinity',
+    coach_davis: 'coach_davis_affinity',
     serena: 'serena_affinity',
     cecile: 'cecile_affinity',
     teacherChapter2: 'teacher_chapter_2_affinity'
 }
+
+var user = 
+{
+    username: "None",
+    scholarname: "None",
+    energy: 0,
+    money: 0,
+    storyLocation: 0,//VARIABLE COMMUNE À TOUS LES CHAPITRES, LA SEULE CHOSE QUI PEU BLOQUER serait de mettre un IF(last_chapter_played == this)
+    last_chapter_played: 0,
+    physicalLocation: backgrounds_path + locations.blackScreen,
+    physicalLocationInt: 0,
+    department: 0,
+    sex: 0, //0: female, 1: male
+    gender: 0,//0: she, 1: he, 2: they
+    haircolor: 0,//
+    hairstyle: 0,//
+    skincolor: 0,//
+    eyecolor: 0,//
+    wigID: 0,
+    pronoun: 0,//0: she, 1: he, 3: they
+
+    karolina: 'karolina_affinity',
+    ellie: 'ellie_affinity',
+    neha: 'neha_affinity',
+    raquel: 'raquel_affinity',
+    claire: 'claire_affinity',
+    alistair: 'alistair_affinity',
+    tadashi: 'tadashi_affinity',
+    tegan: 'tegan_affinity',
+    tyler: 'tyler_affinity',
+    axel: 'axel_affinity',
+  
+    lady_arlington: 'lady_arlington_affinity',
+    coach_davis: 'coach_davis_affinity',
+    serena: 'serena_affinity',
+    cecile: 'cecile_affinity',
+    teacherChapter2: 'teacher_chapter_2_affinity',
+};
+
+var oldUser = 
+{
+    username: "None",
+    scholarname: "None",
+    energy: 0,
+    money: 0,
+    storyLocation: 0,//VARIABLE COMMUNE À TOUS LES CHAPITRES, LA SEULE CHOSE QUI PEU BLOQUER serait de mettre un IF(last_chapter_played == this)
+    last_chapter_played: 0,
+    physicalLocation: backgrounds_path + locations.blackScreen,
+    physicalLocationInt: 0,
+    department: 0,
+    sex: 0, //0: female, 1: male
+    gender: 0,//0: she, 1: he, 2: they
+    haircolor: 0,//
+    hairstyle: 0,//
+    skincolor: 0,//
+    eyecolor: 0,//
+    wigID: 0,
+    pronoun: 0,//0: she, 1: he, 3: they
+
+    karolina: 'karolina_affinity',
+    ellie: 'ellie_affinity',
+    neha: 'neha_affinity',
+    raquel: 'raquel_affinity',
+    claire: 'claire_affinity',
+    alistair: 'alistair_affinity',
+    tadashi: 'tadashi_affinity',
+    tegan: 'tegan_affinity',
+    tyler: 'tyler_affinity',
+    axel: 'axel_affinity',
+  
+    lady_arlington: 'lady_arlington_affinity',
+    coach_davis: 'coach_davis_affinity',
+    serena: 'serena_affinity',
+    cecile: 'cecile_affinity',
+    teacherChapter2: 'teacher_chapter_2_affinity'
+};
+
 
 //a few pointers to constant references in the chapter variables files
     const main_text = 0;
@@ -845,21 +901,21 @@ function pullVariablesFromDB()//we load the data from the database, and put it i
         /********************
         AFFINITY table
         *********************/
-        karolina.affinity = document.getElementById("db_handle_a1").value;
-        ellie.affinity = document.getElementById("db_handle_a2").value;
-        neha.affinity = document.getElementById("db_handle_a3").value;
-        raquel.affinity = document.getElementById("db_handle_a4").value;
-        claire.affinity = document.getElementById("db_handle_a5").value;
-        alistair.affinity = document.getElementById("db_handle_a6").value;
-        tadashi.affinity = document.getElementById("db_handle_a7").value;
-        tegan.affinity = document.getElementById("db_handle_a8").value;
-        tyler.affinity = document.getElementById("db_handle_a9").value;
-        axel.affinity = document.getElementById("db_handle_a10").value;
-        lady_arlington.affinity = document.getElementById("db_handle_a11").value;
-        coach_davis.affinity = document.getElementById("db_handle_a12").value;
-        serena.affinity = document.getElementById("db_handle_a13").value;
-        cecile.affinity = document.getElementById("db_handle_a14").value;
-        teacher_chapter_2.affinity = document.getElementById("db_handle_a15").value;
+        user.karolina = document.getElementById("db_handle_a1").value;
+        user.ellie = document.getElementById("db_handle_a2").value;
+        user.neha = document.getElementById("db_handle_a3").value;
+        user.raquel = document.getElementById("db_handle_a4").value;
+        user.claire = document.getElementById("db_handle_a5").value;
+        user.alistair = document.getElementById("db_handle_a6").value;
+        user.tadashi = document.getElementById("db_handle_a7").value;
+        user.tegan = document.getElementById("db_handle_a8").value;
+        user.tyler = document.getElementById("db_handle_a9").value;
+        user.axel = document.getElementById("db_handle_a10").value;
+        user.lady_arlington = document.getElementById("db_handle_a11").value;
+        user.coach_davis = document.getElementById("db_handle_a12").value;
+        user.serena = document.getElementById("db_handle_a13").value;
+        user.cecile = document.getElementById("db_handle_a14").value;
+        user.teacher_chapter_2 = document.getElementById("db_handle_a15").value;
 
         // $(document).ready(function(){try{refreshInterface();}catch(e){}});
         $(document).ready(function(){try{update_highest_affinity(); update_current_chapter();}catch(e){}});
@@ -916,6 +972,246 @@ function saveVariables()
     });
 }
 
+function initialiseOldUser()// initialise the Old User - will be later used to compare oldUser to currentUser and save variables
+{
+    // console.log("Pulling data from the database...");
+    
+    // $('#DB_handle').load('dbtransfers/get_variables.php', function()//pull variables from the DB
+    $.ajax('dbtransfers/get_variables.php',
+    {
+        type: 'GET',
+        async: false,
+        dataType: 'html',
+    }).done(function (response)//when the request is done, we execute the following code:
+    {
+        //we print the response in #DB_handle:
+
+        $('#DB_handle').html(response);
+
+        //then we save them as JS variables:
+
+        /********************
+        USERINFO table
+        *********************/
+        oldUser.username = document.getElementById("db_handle_username").innerHTML;
+        oldUser.energy = document.getElementById("db_handle_energy").innerHTML;
+        oldUser.money = document.getElementById("db_handle_money").innerHTML;
+
+        /********************
+        SCHOLARINFO table
+        *********************/
+        oldUser.scholarname = document.getElementById("db_handle_scholarname").value;
+        oldUser.department = document.getElementById("db_handle_department").value;
+        oldUser.sex = parseInt(document.getElementById("db_handle_sex").value);
+        oldUser.gender = parseInt(document.getElementById("db_handle_gender").value);
+        oldUser.haircolor = parseInt(document.getElementById("db_handle_haircolor").value);
+        oldUser.hairstyle = parseInt(document.getElementById("db_handle_hairstyle").value);
+        oldUser.skincolor = parseInt(document.getElementById("db_handle_skincolor").value);
+        oldUser.eyecolor = parseInt(document.getElementById("db_handle_eyecolor").value);
+        oldUser.wigID = parseInt(document.getElementById("db_handle_wigID").value);
+        
+        /********************
+        STORY table
+        *********************/
+        oldUser.storyLocation = document.getElementById("db_handle_story_location").value;//we should use an input and .value
+        oldUser.last_chapter_played = document.getElementById("db_handle_last_chapter_played").value;//we should use an input and .value
+        oldUser.physicalLocationInt = parseInt(document.getElementById("db_handle_physicallocationint").value);
+        // console.log("Chapter " + user.last_chapter_played + " (Inside loop)");
+        
+        oldUser.karolina = document.getElementById("db_handle_a1").value;
+        oldUser.ellie = document.getElementById("db_handle_a2").value;
+        oldUser.neha = document.getElementById("db_handle_a3").value;
+        oldUser.raquel = document.getElementById("db_handle_a4").value;
+        oldUser.claire = document.getElementById("db_handle_a5").value;
+        oldUser.alistair = document.getElementById("db_handle_a6").value;
+        oldUser.tadashi = document.getElementById("db_handle_a7").value;
+        oldUser.tegan = document.getElementById("db_handle_a8").value;
+        oldUser.tyler = document.getElementById("db_handle_a9").value;
+        oldUser.axel = document.getElementById("db_handle_a10").value;
+        oldUser.lady_arlington = document.getElementById("db_handle_a11").value;
+        oldUser.coach_davis = document.getElementById("db_handle_a12").value;
+        oldUser.serena = document.getElementById("db_handle_a13").value;
+        oldUser.cecile = document.getElementById("db_handle_a14").value;
+        oldUser.teacher_chapter_2 = document.getElementById("db_handle_a15").value;
+
+        // $(document).ready(function(){try{refreshInterface();}catch(e){}});
+        $(document).ready(function(){try{update_highest_affinity(); update_current_chapter();}catch(e){}});
+        
+        console.log("Initialized old User")
+        console.log("pulled name: " + user.scholarName);
+    });
+}
+
+
+function saveGameVariables()
+{
+    /********************
+        USERINFO table
+    *********************/
+
+    if(oldUser.username != user.username)
+    {
+        saveVariables(x.username);
+    }
+    
+    if(oldUser.energy != user.energy)
+    {
+        saveVariables(x.energy);
+    }
+
+    if(oldUser.money != user.money)
+    {
+        saveVariables(x.money);
+    }
+
+    /********************
+    SCHOLARINFO table
+    *********************/
+    if(oldUser.scholarname != user.scholarname) //could become an option
+    {
+        saveVariables(x.scholarName);
+    }
+
+    if(oldUser.department != user.department) //could become an option
+    {
+        saveVariables(x.department);
+    }
+
+    if(oldUser.sex != user.sex)
+    {
+        saveVariables(x.sex);
+    }
+
+
+    if(oldUser.gender != user.gender) //could become an option
+    {
+        saveVariables(x.gender);
+    }
+
+    if(oldUser.haircolor != user.haircolor)
+    {
+        saveVariables(x.haircolor);
+    }
+
+    if(oldUser.hairstyle != user.hairstyle)
+    {
+        saveVariables(x.hairstyle);
+    }
+
+    if(oldUser.skincolor != user.skincolor)
+    {
+        saveVariables(x.skincolor);
+    }
+
+    if(oldUser.eyecolor != user.eyecolor)
+    {
+        saveVariables(x.eyecolor);
+    }
+
+    if(oldUser.wigID != user.wigID)
+    {
+        saveVariables(x.wigID);
+    }
+    
+    /********************
+    STORY table
+    *********************/
+   
+   if(oldUser.storyLocation != user.storyLocation)
+   {
+       saveVariables(x.storyLocation);
+   }
+
+    if(oldUser.last_chapter_played != user.last_chapter_played)
+    {
+        saveVariables(x.lastChapterPlayed);
+    }
+
+    if(oldUser.physicalLocationInt != user.physicalLocation)
+    {
+        saveVariables(x.physicalLocationInt);
+    }
+
+    /********************
+    AFFINITY table
+    *********************/
+   if(oldUser.karolina != user.karolina)
+   {
+       saveVariables(x.karolina);
+   }
+
+   if(oldUser.ellie != user.ellie)
+   {
+       saveVariables(x.ellie);
+   }
+
+   if(oldUser.neha != user.neha)
+   {
+       saveVariables(x.neha);
+   }
+
+   if(oldUser.raquel != user.raquel)
+   {
+       saveVariables(x.raquel);
+   }
+
+   if(oldUser.claire != user.claire)
+   {
+       saveVariables(x.claire);
+   }
+
+   if(oldUser.alistair != user.alistair)
+   {
+       saveVariables(x.alistair);
+   }
+
+   if(oldUser.tadashi != user.tadashi)
+   {
+       saveVariables(x.tadashi);
+   }
+
+   if(oldUser.tegan != user.tegan)
+   {
+       saveVariables(x.tegan);
+   }
+
+   if(oldUser.tyler != user.tyler)
+   {
+       saveVariables(x.tyler);
+   }
+
+   if(oldUser.axel != user.axel)
+   {
+       saveVariables(x.axel);
+   }
+
+   if(oldUser.lady_arlington != user.lady_arlington)
+   {
+       saveVariables(x.lady_arlington);
+   }
+
+   if(oldUser.coach_davis != user.coach_davis)
+   {
+       saveVariables(x.coach_davis);
+   }
+
+   if(oldUser.serena != user.serena)
+   {
+       saveVariables(x.coach_davis);
+   }
+
+   if(oldUser.cecile != user.cecile)
+   {
+       saveVariables(x.cecile);
+   }
+   
+   if(oldUser.teacher_chapter_2 != user.teacher_chapter_2)
+   {
+       saveVariables(x.teacher_chapter_2);
+   }
+}
+
+
 pullVariablesFromDB();
 
 /*Solution to ASYNC problem:
@@ -944,4 +1240,6 @@ pullVariablesFromDB();
 /**
      * https://openclassrooms.com/courses/simplifiez-vos-developpements-javascript-avec-jquery/premiers-pas-avec-ajax
      */
-    
+
+
+ 

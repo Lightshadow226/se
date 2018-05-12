@@ -19,6 +19,7 @@ function refreshInterface()//REFRESHES the interface
 {
     refreshTestContainer();
     refreshObjectiveContainer();
+    initialiseOldUser();
     
     if(user.storyLocation >= story[main_text].length)//si le chapitre ("story") est terminé
     {
@@ -752,16 +753,9 @@ function refreshInterface()//REFRESHES the interface
     
     saveIsVisited();
 
-    /*  Write a function to push all variables modified in the process
-        - story location
-        - all affinities
-        - physical location
-        - energy
-        - money
-        - replays?
-        - call it something like "saveGameVariables()" which will use the function saveVariables() in variables.js
-    */
-    pushVariablesToDB();
+    saveGameVariables();
+
+    /*pushVariablesToDB();*/
 
     updateGameBar();
 }
