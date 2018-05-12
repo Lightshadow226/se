@@ -129,7 +129,7 @@
 	h5/*SAME AS H4, BUT DIFFERENT FONT-SIZE*/
 	{
 		font-family: 'Roboto', sans-serif;
-		font-size: 1.3em;
+		font-size: 1.4em;
 		letter-spacing:0.1em;
 		font-weight: 100;
 		text-align: center;
@@ -149,6 +149,8 @@
 	{
 		color:#ff4956;
 		font-style: italic;
+		font-size: 1.3em;
+		font-weight: 100;
 	}
 
 	b

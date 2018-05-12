@@ -1,6 +1,15 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
 
+# Version 1.6.4 (Departments Carousel on index.php)
+## Added
+-  `index.php`  `se-stylesheet.css`   `se-index.css`
+    - Added the departments carousel
+    - Added the css for the departments carousel in se-index.css
+    - Small fixes for spelling and grammar
+    - Slight change in design for <i> and <h5>
+    - Added relevant images in new images folder
+
 # Version 1.6.3 (Amendment of v1.6.2 - Saving modified variables only)
 ## Changed
 -  `variables.js`
