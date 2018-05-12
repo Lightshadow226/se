@@ -19,7 +19,6 @@ function refreshInterface()//REFRESHES the interface
 {
     refreshTestContainer();
     refreshObjectiveContainer();
-    initialiseOldUser();
     
     if(user.storyLocation >= story[main_text].length)//si le chapitre ("story") est terminé
     {
@@ -751,12 +750,12 @@ function refreshInterface()//REFRESHES the interface
             };
     }
     
+    
+    // console.log("oldUser: " + oldUser.storyLocation);
+    // console.log("User: " + user.storyLocation);
+    
     saveIsVisited();
-
-    saveGameVariables();
-
-    /*pushVariablesToDB();*/
-
+    pushVariablesToDB();
     updateGameBar();
 }
 
@@ -941,8 +940,6 @@ function browseLink(link, element)//link is the link of the story (story[special
     {
         var value = document.getElementById('new_name').value;
         
-        console.log("Username Saved in DB: " + value);
-
         if(value == "")
         {
             console.log("Please choose a username!");
@@ -961,10 +958,9 @@ function browseLink(link, element)//link is the link of the story (story[special
             }
 
             user.gender = chosen_gender;
-            user.scholarname = document.getElementById('new_name').value;
+            user.scholarname = value;
             user.storyLocation++;//we continue the story once we are done
-            saveVariables('gender', 'scholarname', 'storylocation');
-            // pushVariablesToDB();
+            pushVariablesToDB();
             HideForms();
         }
     }
@@ -1072,6 +1068,8 @@ function nextChapter()
         newChapter++;
     
     user.storyLocation = 0;//start the next chapter at slide 0
+
+    pushVariablesToDB();
 
     var newChapterAddress = "chapter" + newChapter + ".php";
         window.open(newChapterAddress, "_self");

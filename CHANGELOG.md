@@ -1,6 +1,30 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
 
+# Version 1.6.3 (Amendment of v1.6.2 - Saving modified variables only)
+## Changed
+-  `variables.js`
+    - put back the values of x as they should be
+    - user.karolina etc. are not used
+        - however, oldUser.karolina is used
+        - we use the character's affinity directly, since it's already built in
+        - we could find a way to change it to require 2 variables instead of 3, but it doesn't change performance at all
+        - NOT A BIG DEAL
+    - changed chapter_size so that it yields the proper amount of slides
+    - I was having fun, so it can tell whether you are saving 1 variable or many variables, and it will write it correctly in the console log
+
+-  `library.js`
+    - All the saving functions are here now
+    - put back all the saving in pushVariablesToDB(); (no more subfunctions of one line)
+    - modified saveVariables() so only save the prescribed variables if they require saving (A.K.A. if they were modified during the session)
+    - created a function hasToBeSaved() that determines whether a variable has been modified since the loading of the page
+        - returns true or false
+        - affinities are determined in this function as well, although through a slightly different approach
+        - affinities compare [karolina.affinity to oldUser.karolina] rather than [user.karolina to oldUser.karolina]
+
+- `gameengine.js`
+    - put back pushVariablesToDB(); everywhere
+
 # Version 1.6.2 (Optimisation)
 ## Changed
 -  `variables.js`

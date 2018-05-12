@@ -634,7 +634,7 @@ var personnages =
                     ]
 };
 
-//contains the php nomenclature
+//contains the php nomenclature (DO NOT MODIFY. EVER. Unless database names change, of course)
 var x = 
 {
     //USERINFO table
@@ -677,11 +677,11 @@ var x =
     axel: 'axel',
 
     //AFFINITY table (Other)
-    lady_arlington: 'lady_arlington_affinity',
-    coach_davis: 'coach_davis_affinity',
-    serena: 'serena_affinity',
-    cecile: 'cecile_affinity',
-    teacherChapter2: 'teacher_chapter_2_affinity'
+    ladyArlington: 'ladyarlington',
+    coach_davis: 'coachdavis',
+    serena: 'serena',
+    cecile: 'cecile',
+    teacherChapter2: 'teacherchapter2'
 }
 
 var user = 
@@ -704,62 +704,25 @@ var user =
     wigID: 0,
     pronoun: 0,//0: she, 1: he, 3: they
 
-    karolina: 'karolina_affinity',
-    ellie: 'ellie_affinity',
-    neha: 'neha_affinity',
-    raquel: 'raquel_affinity',
-    claire: 'claire_affinity',
-    alistair: 'alistair_affinity',
-    tadashi: 'tadashi_affinity',
-    tegan: 'tegan_affinity',
-    tyler: 'tyler_affinity',
-    axel: 'axel_affinity',
+    karolina: 0,
+    ellie: 0,
+    neha: 0,
+    raquel: 0,
+    claire: 0,
+    alistair: 0,
+    tadashi: 0,
+    tegan: 0,
+    tyler: 0,
+    axel: 0,
   
-    lady_arlington: 'lady_arlington_affinity',
-    coach_davis: 'coach_davis_affinity',
-    serena: 'serena_affinity',
-    cecile: 'cecile_affinity',
-    teacherChapter2: 'teacher_chapter_2_affinity',
+    lady_arlington: 0,
+    coach_davis: 0,
+    serena: 0,
+    cecile: 0,
+    teacherChapter2: 0,
 };
 
-var oldUser = 
-{
-    username: "None",
-    scholarname: "None",
-    energy: 0,
-    money: 0,
-    storyLocation: 0,//VARIABLE COMMUNE À TOUS LES CHAPITRES, LA SEULE CHOSE QUI PEU BLOQUER serait de mettre un IF(last_chapter_played == this)
-    last_chapter_played: 0,
-    physicalLocation: backgrounds_path + locations.blackScreen,
-    physicalLocationInt: 0,
-    department: 0,
-    sex: 0, //0: female, 1: male
-    gender: 0,//0: she, 1: he, 2: they
-    haircolor: 0,//
-    hairstyle: 0,//
-    skincolor: 0,//
-    eyecolor: 0,//
-    wigID: 0,
-    pronoun: 0,//0: she, 1: he, 3: they
-
-    karolina: 'karolina_affinity',
-    ellie: 'ellie_affinity',
-    neha: 'neha_affinity',
-    raquel: 'raquel_affinity',
-    claire: 'claire_affinity',
-    alistair: 'alistair_affinity',
-    tadashi: 'tadashi_affinity',
-    tegan: 'tegan_affinity',
-    tyler: 'tyler_affinity',
-    axel: 'axel_affinity',
-  
-    lady_arlington: 'lady_arlington_affinity',
-    coach_davis: 'coach_davis_affinity',
-    serena: 'serena_affinity',
-    cecile: 'cecile_affinity',
-    teacherChapter2: 'teacher_chapter_2_affinity'
-};
-
+var oldUser = user;
 
 //a few pointers to constant references in the chapter variables files
     const main_text = 0;
@@ -794,7 +757,7 @@ function loadIsVisited(chapter)
         //we print the response in #DB_handle:
         $('#DB_handle').html(response);
         
-        var chapter_size = document.getElementById("chapter_size").value;
+        var chapter_size = parseInt(document.getElementById("chapter_size").value) + 1;
         console.log("Loaded isVisited for " + chapter_size + " slides.");
         
         //chapter_size is actually one more (+1)
@@ -819,10 +782,10 @@ function saveIsVisited(chapter)
     // solution: https://stackoverflow.com/questions/1184123/is-it-possible-to-add-dynamically-named-properties-to-javascript-object
     var jsonData = {};
     
-    var chapter_size = story[0].length - 1;
+    var chapter_size = story[0].length;
     
     //convert the data into JSON (true -> 1)
-    for(var i = 0; i <= chapter_size; i++)
+    for(var i = 0; i < chapter_size; i++)
     {
         // console.log("(saving) " + i + ": " + story[isVisited][i]);
         
@@ -915,302 +878,84 @@ function pullVariablesFromDB()//we load the data from the database, and put it i
         user.coach_davis = document.getElementById("db_handle_a12").value;
         user.serena = document.getElementById("db_handle_a13").value;
         user.cecile = document.getElementById("db_handle_a14").value;
-        user.teacher_chapter_2 = document.getElementById("db_handle_a15").value;
+        user.teacherChapter2 = document.getElementById("db_handle_a15").value;
 
         // $(document).ready(function(){try{refreshInterface();}catch(e){}});
         $(document).ready(function(){try{update_highest_affinity(); update_current_chapter();}catch(e){}});
         
         console.log("Loaded data from database.")
-        console.log("pulled name: " + user.scholarName);
+
+        oldUser = Object.create(user);
+        resetOldUserValues();
     });
 }
 
-function pushVariablesToDB()
+function resetOldUserValues()
 {
-    saveUserInfo();
-    saveScholarInfo();
-    saveStory();
-    saveAffinity();
-    saveAffinityOthers();
-
-    console.log("Saved alldata to database.")
-}
-
-function saveVariables()
-{
-    var jsonData = {};
-    var dataSize = arguments.length;
-
-    console.log("Saving " + dataSize + " variables: ");
-
-    for(var i = 0; i < dataSize; i++)
-    {
-        // console.log("arguments[" + i + "] = " + arguments[i] + " \n-> yields " + getJSONPropertyName(arguments[i]))
-        var JSONpropertyName = arguments[i];
-        var JSONpropertyValue = getJSONPropertyValue(arguments[i]);
-        
-        if(JSONpropertyValue != '2y10UZMJfJuMm4C5In91XP7uadWRn0ZP9so5oONeRoyVtIze1Psy')//if the variable was found
-        {
-            jsonData[JSONpropertyName] = JSONpropertyValue;
-        }
-        else
-        {
-            console.log("Something went wrong while trying to save \'" + arguments[i]) + "\'";
-        }
-    }
-
-    console.log(jsonData);
-
-    $.ajax('dbtransfers/push_variables.php',
-    {
-            type: 'POST',
-            async: false,
-            data: jsonData
-    }).done(function (response)
-    {
-        console.log(response);
-    });
-}
-
-function initialiseOldUser()// initialise the Old User - will be later used to compare oldUser to currentUser and save variables
-{
-    // console.log("Pulling data from the database...");
-    
-    // $('#DB_handle').load('dbtransfers/get_variables.php', function()//pull variables from the DB
-    $.ajax('dbtransfers/get_variables.php',
-    {
-        type: 'GET',
-        async: false,
-        dataType: 'html',
-    }).done(function (response)//when the request is done, we execute the following code:
-    {
-        //we print the response in #DB_handle:
-
-        $('#DB_handle').html(response);
-
-        //then we save them as JS variables:
-
-        /********************
-        USERINFO table
-        *********************/
-        oldUser.username = document.getElementById("db_handle_username").innerHTML;
-        oldUser.energy = document.getElementById("db_handle_energy").innerHTML;
-        oldUser.money = document.getElementById("db_handle_money").innerHTML;
-
-        /********************
-        SCHOLARINFO table
-        *********************/
-        oldUser.scholarname = document.getElementById("db_handle_scholarname").value;
-        oldUser.department = document.getElementById("db_handle_department").value;
-        oldUser.sex = parseInt(document.getElementById("db_handle_sex").value);
-        oldUser.gender = parseInt(document.getElementById("db_handle_gender").value);
-        oldUser.haircolor = parseInt(document.getElementById("db_handle_haircolor").value);
-        oldUser.hairstyle = parseInt(document.getElementById("db_handle_hairstyle").value);
-        oldUser.skincolor = parseInt(document.getElementById("db_handle_skincolor").value);
-        oldUser.eyecolor = parseInt(document.getElementById("db_handle_eyecolor").value);
-        oldUser.wigID = parseInt(document.getElementById("db_handle_wigID").value);
-        
-        /********************
-        STORY table
-        *********************/
-        oldUser.storyLocation = document.getElementById("db_handle_story_location").value;//we should use an input and .value
-        oldUser.last_chapter_played = document.getElementById("db_handle_last_chapter_played").value;//we should use an input and .value
-        oldUser.physicalLocationInt = parseInt(document.getElementById("db_handle_physicallocationint").value);
-        // console.log("Chapter " + user.last_chapter_played + " (Inside loop)");
-        
-        oldUser.karolina = document.getElementById("db_handle_a1").value;
-        oldUser.ellie = document.getElementById("db_handle_a2").value;
-        oldUser.neha = document.getElementById("db_handle_a3").value;
-        oldUser.raquel = document.getElementById("db_handle_a4").value;
-        oldUser.claire = document.getElementById("db_handle_a5").value;
-        oldUser.alistair = document.getElementById("db_handle_a6").value;
-        oldUser.tadashi = document.getElementById("db_handle_a7").value;
-        oldUser.tegan = document.getElementById("db_handle_a8").value;
-        oldUser.tyler = document.getElementById("db_handle_a9").value;
-        oldUser.axel = document.getElementById("db_handle_a10").value;
-        oldUser.lady_arlington = document.getElementById("db_handle_a11").value;
-        oldUser.coach_davis = document.getElementById("db_handle_a12").value;
-        oldUser.serena = document.getElementById("db_handle_a13").value;
-        oldUser.cecile = document.getElementById("db_handle_a14").value;
-        oldUser.teacher_chapter_2 = document.getElementById("db_handle_a15").value;
-
-        // $(document).ready(function(){try{refreshInterface();}catch(e){}});
-        $(document).ready(function(){try{update_highest_affinity(); update_current_chapter();}catch(e){}});
-        
-        console.log("Initialized old User")
-        console.log("pulled name: " + user.scholarName);
-    });
-}
-
-
-function saveGameVariables()
-{
-    /********************
-        USERINFO table
+     /********************
+    USERINFO table
     *********************/
-
-    if(oldUser.username != user.username)
-    {
-        saveVariables(x.username);
-    }
-    
-    if(oldUser.energy != user.energy)
-    {
-        saveVariables(x.energy);
-    }
-
-    if(oldUser.money != user.money)
-    {
-        saveVariables(x.money);
-    }
+    oldUser.username = user.username;
+    oldUser.energy = user.energy; 
+    oldUser.money = user.money;
 
     /********************
-    SCHOLARINFO table
+     SCHOLARINFO table
     *********************/
-    if(oldUser.scholarname != user.scholarname) //could become an option
-    {
-        saveVariables(x.scholarName);
-    }
-
-    if(oldUser.department != user.department) //could become an option
-    {
-        saveVariables(x.department);
-    }
-
-    if(oldUser.sex != user.sex)
-    {
-        saveVariables(x.sex);
-    }
-
-
-    if(oldUser.gender != user.gender) //could become an option
-    {
-        saveVariables(x.gender);
-    }
-
-    if(oldUser.haircolor != user.haircolor)
-    {
-        saveVariables(x.haircolor);
-    }
-
-    if(oldUser.hairstyle != user.hairstyle)
-    {
-        saveVariables(x.hairstyle);
-    }
-
-    if(oldUser.skincolor != user.skincolor)
-    {
-        saveVariables(x.skincolor);
-    }
-
-    if(oldUser.eyecolor != user.eyecolor)
-    {
-        saveVariables(x.eyecolor);
-    }
-
-    if(oldUser.wigID != user.wigID)
-    {
-        saveVariables(x.wigID);
-    }
+    oldUser.scholarname = user.scholarname;
+    oldUser.department = user.department
+    oldUser.sex = user.sex
+    oldUser.gender = user.gender
+    oldUser.haircolor = user.haircolor
+    oldUser.hairstyle = user.hairstyle
+    oldUser.skincolor = user.skincolor
+    oldUser.eyecolor = user.eyecolor
+    oldUser.wigID = user.wigID
     
     /********************
-    STORY table
+     STORY table
     *********************/
-   
-   if(oldUser.storyLocation != user.storyLocation)
-   {
-       saveVariables(x.storyLocation);
-   }
-
-    if(oldUser.last_chapter_played != user.last_chapter_played)
-    {
-        saveVariables(x.lastChapterPlayed);
-    }
-
-    if(oldUser.physicalLocationInt != user.physicalLocation)
-    {
-        saveVariables(x.physicalLocationInt);
-    }
-
+    oldUser.storyLocation = user.storyLocation
+    oldUser.last_chapter_played = user.last_chapter_played
+    oldUser.physicalLocationInt = user.physicalLocationInt
+    
     /********************
-    AFFINITY table
+     AFFINITY table
     *********************/
-   if(oldUser.karolina != user.karolina)
-   {
-       saveVariables(x.karolina);
-   }
+    oldUser.karolina = user.karolina
+    oldUser.ellie = user.ellie
+    oldUser.neha = user.neha
+    oldUser.raquel = user.raquel
+    oldUser.claire = user.claire
+    oldUser.alistair = user.alistair
+    oldUser.tadashi = user.tadashi
+    oldUser.tegan = user.tegan
+    oldUser.tyler = user.tyler
+    oldUser.axel = user.axel
 
-   if(oldUser.ellie != user.ellie)
-   {
-       saveVariables(x.ellie);
-   }
+    oldUser.lady_arlington = user.lady_arlington
+    oldUser.coach_davis = user.coach_davis
+    oldUser.serena = user.serena
+    oldUser.cecile = user.cecile
+    oldUser.teacherChapter2 = user.teacherChapter2
 
-   if(oldUser.neha != user.neha)
-   {
-       saveVariables(x.neha);
-   }
+    karolina.affinity = oldUser.karolina;
+    ellie.affinity = oldUser.ellie;
+    neha.affinity = oldUser.neha;
+    raquel.affinity = oldUser.raquel;
+    claire.affinity = oldUser.claire;
+    alistair.affinity = oldUser.alistair;
+    tadashi.affinity = oldUser.tadashi;
+    tegan.affinity = oldUser.tegan;
+    tyler.affinity = oldUser.tyler;
+    axel.affinity = oldUser.axel;
 
-   if(oldUser.raquel != user.raquel)
-   {
-       saveVariables(x.raquel);
-   }
-
-   if(oldUser.claire != user.claire)
-   {
-       saveVariables(x.claire);
-   }
-
-   if(oldUser.alistair != user.alistair)
-   {
-       saveVariables(x.alistair);
-   }
-
-   if(oldUser.tadashi != user.tadashi)
-   {
-       saveVariables(x.tadashi);
-   }
-
-   if(oldUser.tegan != user.tegan)
-   {
-       saveVariables(x.tegan);
-   }
-
-   if(oldUser.tyler != user.tyler)
-   {
-       saveVariables(x.tyler);
-   }
-
-   if(oldUser.axel != user.axel)
-   {
-       saveVariables(x.axel);
-   }
-
-   if(oldUser.lady_arlington != user.lady_arlington)
-   {
-       saveVariables(x.lady_arlington);
-   }
-
-   if(oldUser.coach_davis != user.coach_davis)
-   {
-       saveVariables(x.coach_davis);
-   }
-
-   if(oldUser.serena != user.serena)
-   {
-       saveVariables(x.coach_davis);
-   }
-
-   if(oldUser.cecile != user.cecile)
-   {
-       saveVariables(x.cecile);
-   }
-   
-   if(oldUser.teacher_chapter_2 != user.teacher_chapter_2)
-   {
-       saveVariables(x.teacher_chapter_2);
-   }
+    lady_arlington.affinity = oldUser.lady_arlington;
+    coach_davis.affinity = oldUser.coach_davis;
+    serena.affinity = oldUser.serena;
+    cecile.affinity = oldUser.cecile;
+    teacher_chapter_2.affinity = oldUser.teacherChapter2;
 }
-
 
 pullVariablesFromDB();
 
