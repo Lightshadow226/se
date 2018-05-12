@@ -1,7 +1,7 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
 
-# Version 1.6.3 (Optimisation)
+# Version 1.6.2 (Optimisation)
 ## Changed
 -  `variables.js`
     - changed the definition of "x" and "user"
