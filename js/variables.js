@@ -63,27 +63,6 @@ var locations =
             dormBathroom: backgrounds_path + "dormbathroom.jpg",
 };
 
-var user = 
-{
-    username: "None",
-    scholarname: "None",
-    energy: 0,
-    money: 0,
-    storyLocation: 0,//VARIABLE COMMUNE À TOUS LES CHAPITRES, LA SEULE CHOSE QUI PEU BLOQUER serait de mettre un IF(last_chapter_played == this)
-    last_chapter_played: 0,
-    physicalLocation: backgrounds_path + locations.blackScreen,
-    physicalLocationInt: 0,
-    department: 0,
-    sex: 0, //0: female, 1: male
-    gender: 0,//0: she, 1: he, 2: they
-    haircolor: 0,//
-    hairstyle: 0,//
-    skincolor: 0,//
-    eyecolor: 0,//
-    wigID: 0,
-    pronoun: 0,//0: she, 1: he, 3: they
-};
-
 var genders = ["She/Her", "He/Him", "They/Them"];
 
 //on va devoir écrire un code pour GET ces variables de la base de données. ces variables vont être propres à chaque utilisateur.
@@ -655,7 +634,7 @@ var personnages =
                     ]
 };
 
-//contains the php nomenclature
+//contains the php nomenclature (DO NOT MODIFY. EVER. Unless database names change, of course)
 var x = 
 {
     //USERINFO table
@@ -698,12 +677,52 @@ var x =
     axel: 'axel',
 
     //AFFINITY table (Other)
-    ladyArlington: 'lady_arlington_affinity',
-    coachDavis: 'coach_davis_affinity',
-    serena: 'serena_affinity',
-    cecile: 'cecile_affinity',
-    teacherChapter2: 'teacher_chapter_2_affinity'
+    ladyArlington: 'ladyarlington',
+    coach_davis: 'coachdavis',
+    serena: 'serena',
+    cecile: 'cecile',
+    teacherChapter2: 'teacherchapter2'
 }
+
+var user = 
+{
+    username: "None",
+    scholarname: "None",
+    energy: 0,
+    money: 0,
+    storyLocation: 0,//VARIABLE COMMUNE À TOUS LES CHAPITRES, LA SEULE CHOSE QUI PEU BLOQUER serait de mettre un IF(last_chapter_played == this)
+    last_chapter_played: 0,
+    physicalLocation: backgrounds_path + locations.blackScreen,
+    physicalLocationInt: 0,
+    department: 0,
+    sex: 0, //0: female, 1: male
+    gender: 0,//0: she, 1: he, 2: they
+    haircolor: 0,//
+    hairstyle: 0,//
+    skincolor: 0,//
+    eyecolor: 0,//
+    wigID: 0,
+    pronoun: 0,//0: she, 1: he, 3: they
+
+    karolina: 0,
+    ellie: 0,
+    neha: 0,
+    raquel: 0,
+    claire: 0,
+    alistair: 0,
+    tadashi: 0,
+    tegan: 0,
+    tyler: 0,
+    axel: 0,
+  
+    lady_arlington: 0,
+    coach_davis: 0,
+    serena: 0,
+    cecile: 0,
+    teacherChapter2: 0,
+};
+
+var oldUser = user;
 
 //a few pointers to constant references in the chapter variables files
     const main_text = 0;
@@ -738,7 +757,7 @@ function loadIsVisited(chapter)
         //we print the response in #DB_handle:
         $('#DB_handle').html(response);
         
-        var chapter_size = document.getElementById("chapter_size").value;
+        var chapter_size = parseInt(document.getElementById("chapter_size").value) + 1;
         console.log("Loaded isVisited for " + chapter_size + " slides.");
         
         //chapter_size is actually one more (+1)
@@ -763,10 +782,10 @@ function saveIsVisited(chapter)
     // solution: https://stackoverflow.com/questions/1184123/is-it-possible-to-add-dynamically-named-properties-to-javascript-object
     var jsonData = {};
     
-    var chapter_size = story[0].length - 1;
+    var chapter_size = story[0].length;
     
     //convert the data into JSON (true -> 1)
-    for(var i = 0; i <= chapter_size; i++)
+    for(var i = 0; i < chapter_size; i++)
     {
         // console.log("(saving) " + i + ": " + story[isVisited][i]);
         
@@ -845,75 +864,97 @@ function pullVariablesFromDB()//we load the data from the database, and put it i
         /********************
         AFFINITY table
         *********************/
-        karolina.affinity = document.getElementById("db_handle_a1").value;
-        ellie.affinity = document.getElementById("db_handle_a2").value;
-        neha.affinity = document.getElementById("db_handle_a3").value;
-        raquel.affinity = document.getElementById("db_handle_a4").value;
-        claire.affinity = document.getElementById("db_handle_a5").value;
-        alistair.affinity = document.getElementById("db_handle_a6").value;
-        tadashi.affinity = document.getElementById("db_handle_a7").value;
-        tegan.affinity = document.getElementById("db_handle_a8").value;
-        tyler.affinity = document.getElementById("db_handle_a9").value;
-        axel.affinity = document.getElementById("db_handle_a10").value;
-        lady_arlington.affinity = document.getElementById("db_handle_a11").value;
-        coach_davis.affinity = document.getElementById("db_handle_a12").value;
-        serena.affinity = document.getElementById("db_handle_a13").value;
-        cecile.affinity = document.getElementById("db_handle_a14").value;
-        teacher_chapter_2.affinity = document.getElementById("db_handle_a15").value;
+        user.karolina = document.getElementById("db_handle_a1").value;
+        user.ellie = document.getElementById("db_handle_a2").value;
+        user.neha = document.getElementById("db_handle_a3").value;
+        user.raquel = document.getElementById("db_handle_a4").value;
+        user.claire = document.getElementById("db_handle_a5").value;
+        user.alistair = document.getElementById("db_handle_a6").value;
+        user.tadashi = document.getElementById("db_handle_a7").value;
+        user.tegan = document.getElementById("db_handle_a8").value;
+        user.tyler = document.getElementById("db_handle_a9").value;
+        user.axel = document.getElementById("db_handle_a10").value;
+        user.lady_arlington = document.getElementById("db_handle_a11").value;
+        user.coach_davis = document.getElementById("db_handle_a12").value;
+        user.serena = document.getElementById("db_handle_a13").value;
+        user.cecile = document.getElementById("db_handle_a14").value;
+        user.teacherChapter2 = document.getElementById("db_handle_a15").value;
 
         // $(document).ready(function(){try{refreshInterface();}catch(e){}});
         $(document).ready(function(){try{update_highest_affinity(); update_current_chapter();}catch(e){}});
         
         console.log("Loaded data from database.")
-        console.log("pulled name: " + user.scholarName);
+
+        oldUser = Object.create(user);
+        resetOldUserValues();
     });
 }
 
-function pushVariablesToDB()
+function resetOldUserValues()
 {
-    saveUserInfo();
-    saveScholarInfo();
-    saveStory();
-    saveAffinity();
-    saveAffinityOthers();
+     /********************
+    USERINFO table
+    *********************/
+    oldUser.username = user.username;
+    oldUser.energy = user.energy; 
+    oldUser.money = user.money;
 
-    console.log("Saved alldata to database.")
-}
+    /********************
+     SCHOLARINFO table
+    *********************/
+    oldUser.scholarname = user.scholarname;
+    oldUser.department = user.department
+    oldUser.sex = user.sex
+    oldUser.gender = user.gender
+    oldUser.haircolor = user.haircolor
+    oldUser.hairstyle = user.hairstyle
+    oldUser.skincolor = user.skincolor
+    oldUser.eyecolor = user.eyecolor
+    oldUser.wigID = user.wigID
+    
+    /********************
+     STORY table
+    *********************/
+    oldUser.storyLocation = user.storyLocation
+    oldUser.last_chapter_played = user.last_chapter_played
+    oldUser.physicalLocationInt = user.physicalLocationInt
+    
+    /********************
+     AFFINITY table
+    *********************/
+    oldUser.karolina = user.karolina
+    oldUser.ellie = user.ellie
+    oldUser.neha = user.neha
+    oldUser.raquel = user.raquel
+    oldUser.claire = user.claire
+    oldUser.alistair = user.alistair
+    oldUser.tadashi = user.tadashi
+    oldUser.tegan = user.tegan
+    oldUser.tyler = user.tyler
+    oldUser.axel = user.axel
 
-function saveVariables()
-{
-    var jsonData = {};
-    var dataSize = arguments.length;
+    oldUser.lady_arlington = user.lady_arlington
+    oldUser.coach_davis = user.coach_davis
+    oldUser.serena = user.serena
+    oldUser.cecile = user.cecile
+    oldUser.teacherChapter2 = user.teacherChapter2
 
-    console.log("Saving " + dataSize + " variables: ");
+    karolina.affinity = oldUser.karolina;
+    ellie.affinity = oldUser.ellie;
+    neha.affinity = oldUser.neha;
+    raquel.affinity = oldUser.raquel;
+    claire.affinity = oldUser.claire;
+    alistair.affinity = oldUser.alistair;
+    tadashi.affinity = oldUser.tadashi;
+    tegan.affinity = oldUser.tegan;
+    tyler.affinity = oldUser.tyler;
+    axel.affinity = oldUser.axel;
 
-    for(var i = 0; i < dataSize; i++)
-    {
-        // console.log("arguments[" + i + "] = " + arguments[i] + " \n-> yields " + getJSONPropertyName(arguments[i]))
-        var JSONpropertyName = arguments[i];
-        var JSONpropertyValue = getJSONPropertyValue(arguments[i]);
-        
-        if(JSONpropertyValue != '2y10UZMJfJuMm4C5In91XP7uadWRn0ZP9so5oONeRoyVtIze1Psy')//if the variable was found
-        {
-            jsonData[JSONpropertyName] = JSONpropertyValue;
-        }
-        else
-        {
-            console.log("Something went wrong while trying to save \'" + arguments[i]) + "\'";
-        }
-    }
-
-    console.log(jsonData);
-
-    $.ajax('dbtransfers/push_variables.php',
-    {
-            type: 'POST',
-            async: false,
-            data: jsonData
-    }).done(function (response)
-    {
-        console.log(response);
-    });
+    lady_arlington.affinity = oldUser.lady_arlington;
+    coach_davis.affinity = oldUser.coach_davis;
+    serena.affinity = oldUser.serena;
+    cecile.affinity = oldUser.cecile;
+    teacher_chapter_2.affinity = oldUser.teacherChapter2;
 }
 
 pullVariablesFromDB();
@@ -944,4 +985,6 @@ pullVariablesFromDB();
 /**
      * https://openclassrooms.com/courses/simplifiez-vos-developpements-javascript-avec-jquery/premiers-pas-avec-ajax
      */
-    
+
+
+ 

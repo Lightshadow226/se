@@ -37,105 +37,105 @@
 			</div>
 
 			<!-- BADGES -->
-			<div class = "card-nomargin">
+
+			<div class="card">
+				<div class="card-header">
+					<h3>Welcome to Arlington Academy</h3>
+				</div>
 
 				<div class = "card-fusionned card-content">
-					<h1>Welcome to Arlington Academy</h1>
-					<h5>Flirt and Uncover the Secrets of Arlington Academy</h5>
+					<h5>Flirt and Uncover the Secrets of Arlington Academy!</h5>
 					
 					</br>
 
-					<p><i>In a school filled with rich, beautiful and insanely talented students, nothing could go wrong… could it? Arlington Academy has its secrets. Secrets it doesn’t want to expose.</i></p>
+					<p><i>In a school filled with rich, beautiful and insanely talented students, nothing could go wrong… could it?</i></p>
 
 					</br>
 					
-					<p>Follow the adventures of the students of Arlington Academy, a prestigious high school only accessible to the best teenagers in their respective academic fields.</p>
+					<p>Follow the adventures of the students of Arlington Academy, a prestigious high school only accessible to the best teenagers in their respective fields.</p>
 					
 					</br>
 
-					<p>Choose your department, make friends, build a romance with your favorite character and work together to solve the Academy's dark secrets...</p>
+					<p>The competition is intense, the stakes are high, and everyday is a new challenge. Some of your classmates will be helpful, others will be...unfriendly.</p>
+					
+					</br>
+
+					<p>Choose your department, make friends, build a romance with your favorite character and work together to solve the Academy's dark secrets...Secrets it does not want to expose.</p>
 					
 					</br>
 					
 					<p><i>Will you be able to find out the truth? Or will the pressure be too much to handle... it's up to you!</i></p>
+					</br>
+
+					<a href = "about.php" class = "button pink_button">Learn More</a>
 
 				</div>
+			</div>
 
-				<div class = "card-fusionned flex-container">
-					<img style = "width: 50%;" src = "images/separator.jpg"></img>	
+			<div class="card">
+				<div class="card-header">
+					<h3>Choose your Department</h3>
 				</div>
 
-				<div class = "card-fusionned flex-container">
+				<div class="slideshow-container">
 
-					<div class = "flex-panel">
-						<div class = "badge">
-							<img class = "img-badge" src = "images/game_images/badges/arlington_logo.png"></img>
-						</div>
+					<div class="mySlides fade">
+					<img src="_new_images_folder/departments/1_Business.png" style="width:100%">
 					</div>
+
+					<div class="mySlides fade">
+					<img src="_new_images_folder/departments/2_Performing Arts.png" style="width:100%">
+					</div>
+
+					<div class="mySlides fade">
+					<img src="_new_images_folder/departments/3_Pure and Applied.png" style="width:100%">
+					</div>
+
+					<div class="mySlides fade">
+					<img src="_new_images_folder/departments/4_Health Sciences.png" style="width:100%">
+					</div>
+
+					<div class="mySlides fade">
+					<img src="_new_images_folder/departments/5_Athletics.png" style="width:100%">
+					</div>
+
+					<div class="mySlides fade">
+					<img src="_new_images_folder/departments/6_Fine Arts.png" style="width:100%">
+					</div>
+
+					<div class="mySlides fade">
+					<img src="_new_images_folder/departments/7_Fashion.png" style="width:100%">
+					</div>
+
+				</div>
+
+				<br><div style="text-align:center">
+					<span class="dot"></span> 
+					<span class="dot"></span> 
+					<span class="dot"></span> 
+					<span class="dot"></span> 
+					<span class="dot"></span> 
+					<span class="dot"></span>
+					<span class="dot"></span>
+				</div>
+
+				<div class="card-content">
+					<h5>Arlington Academy Has Seven Departments!</h5><br>
+					<p><i>Which One Will You Choose?</i></p>
+					<br>
+
+					<p>Each department houses students with specific skills and personality traits, and it’s up to you to choose which one suits you best based on your talents and on who you are!</p>
+					</br>
+
+					<p>The department you choose will not affect your relationships, but it's a part of who you are as a player! Pick the one that is right for you and show some school pride!</p>
+					</br>
 					
-					<!-- les 4 premiers badges -->
-					<div class = "flex-panel flex-container" style="flex-direction: column;">
+					<p><i>Not Sure Which Department You Belong In? Take Our Quiz!</i></p>
+					</br>
 
-						<div class = "department-line flex-container">
-							<div class = "badge">
-								<img class = "img-badge" src = "images/game_images/badges/text/1.png"></img>
-							</div>
-						</div>
+					<a href = "" class = "button pink_button">Take the Quiz</a>
 
-						<div class = "department-line flex-container">
-							<div class = "badge">
-								<img class = "img-badge" src = "images/game_images/badges/text/2.png"></img>
-							</div>
-						</div>
-
-						<div class = "department-line flex-container">
-							<div class = "badge">
-								<img class = "img-badge" src = "images/game_images/badges/text/3.png"></img>
-							</div>
-						</div>
-
-						<div class = "department-line flex-container">
-							<div class = "badge">
-								<img class = "img-badge" src = "images/game_images/badges/text/4.png"></img>
-							</div>
-						</div>
-
-					</div>
-
-					<!-- les 3 + 1 derniers badges -->
-					<div class = "flex-panel flex-container" style="flex-direction: column;">
-
-						<div class = "department-line flex-container">
-							<div class = "badge">
-								<img class = "img-badge" src = "images/game_images/badges/text/5.png"></img>
-							</div>
-						</div>
-
-						<div class = "department-line flex-container">
-							<div class = "badge">
-								<img class = "img-badge" src = "images/game_images/badges/text/6.png"></img>
-							</div>
-						</div>
-
-						<div class = "department-line flex-container">
-							<div class = "badge">
-								<img class = "img-badge" src = "images/game_images/badges/text/7.png"></img>
-							</div>
-						</div>
-
-						<div class = "department-line flex-container">
-							<div class = "badge">
-								<img class = "img-badge" src = "images/game_images/badges/text/8.png"></img>
-							</div>
-						</div>
-
-					</div>
-					
 				</div>
-				<!-- 
-				<div class = "flex-panel">
-					<img class = "img-badge" src = "images/banners/welcome_to_arlignton.png"></img>
-				</div> -->
 			</div>
 
 			<!-- MEET THE CHARACTERS -->
@@ -179,7 +179,7 @@
 				
 				<div class = "card-content">
 					<h4>Sweet Elite's Demo is Now Available!</h4>
-					<p><b>Sign up now and get access to 3 FREE chapters to celebrate the demo's release!</b></p>
+					<p><b>Sign up now and get access to 3 chapters UNLIMITED to celebrate the demo's release!</b></p>
 					<br>
 
 					<div class = "flex-container">
@@ -432,6 +432,29 @@
 	{
 		//if logged in
 	}
+</script>
+
+<!--Script for Carousel-->
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2500); // Change image every 2.5 seconds
+}
 </script>
 
 </html>

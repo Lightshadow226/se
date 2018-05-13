@@ -763,19 +763,12 @@ function refreshInterface()//REFRESHES the interface
             };
     }
     
+    
+    // console.log("oldUser: " + oldUser.storyLocation);
+    // console.log("User: " + user.storyLocation);
+    
     saveIsVisited();
-
-    /*  Write a function to push all variables modified in the process
-        - story location
-        - all affinities
-        - physical location
-        - energy
-        - money
-        - replays?
-        - call it something like "saveGameVariables()" which will use the function saveVariables() in variables.js
-    */
     pushVariablesToDB();
-
     updateGameBar();
 }
 
@@ -960,8 +953,6 @@ function browseLink(link, element)//link is the link of the story (story[special
     {
         var value = document.getElementById('new_name').value;
         
-        console.log("Username Saved in DB: " + value);
-
         if(value == "")
         {
             console.log("Please choose a username!");
@@ -980,10 +971,9 @@ function browseLink(link, element)//link is the link of the story (story[special
             }
 
             user.gender = chosen_gender;
-            user.scholarname = document.getElementById('new_name').value;
+            user.scholarname = value;
             user.storyLocation++;//we continue the story once we are done
-            saveVariables('gender', 'scholarname', 'storylocation');
-            // pushVariablesToDB();
+            pushVariablesToDB();
             HideForms();
         }
     }
@@ -1091,6 +1081,8 @@ function nextChapter()
         newChapter++;
     
     user.storyLocation = 0;//start the next chapter at slide 0
+
+    pushVariablesToDB();
 
     var newChapterAddress = "chapter" + newChapter + ".php";
         window.open(newChapterAddress, "_self");

@@ -782,7 +782,7 @@ function wipeCurrentChapter()
         story[isVisited][j] = false;
     }
 
-    // STEP 6: start the chapter fresh at slide 0
+    // STEP 6: start the chapter fresh, at slide 0
     user.storyLocation = 0;
 
     // STEP 7: save all the variables to the database
@@ -799,6 +799,7 @@ function wipeCurrentChapter()
 //used when saving specific variables to the database through saveVariables(1)
 function getJSONPropertyValue(propertyName)
 {
+    // console.log("Received Property Name: " + propertyName);
     switch(propertyName)
     {
         //USERINFO table
@@ -883,35 +884,205 @@ function getJSONPropertyValue(propertyName)
     }
 }
 
-function saveUserInfo()
+function pushVariablesToDB()
 {
-    saveVariables(x.username, x.energy, x.money);
-}
-
-function saveScholarInfo()
-{
-    saveVariables(x.department, x.scholarName, x.gender);
-}
-
-function saveStory()
-{
-    saveVariables(x.storyLocation, x.lastChapterPlayed, x.physicalLocationInt);
-}
-
-function saveAffinity()
-{
-    saveVariables(x.karolina, x.ellie, x.neha, x.raquel, x.claire, x. alistair, x.tadashi, x.tegan, x.tyler, x.axel);
-}
-
-function saveAffinityOthers()
-{
+    //saving this way will only generate one query to the DB
     saveVariables(
-        x.ladyArlington,
-        x.coachDavis,
-        x.serena,
-        x.cecile,
-        x.teacherChapter2
+        //USERINFO table
+        x.username, x.energy, x.money,
+
+        //SCHOLARINFO table
+        x.department, x.scholarName, x.gender,
+
+        //STORY table
+        x.storyLocation, x.lastChapterPlayed, x.physicalLocationInt,
+
+        //AFFINITY table (Main 10)
+        x.karolina, x.ellie, x.neha, x.raquel, x.claire, x. alistair, x.tadashi, x.tegan, x.tyler, x.axel,
+
+        //AFFINITY table (Other)
+        x.ladyArlington, x.coachDavis, x.serena, x.cecile, x.teacherChapter2
     );
+
+    resetOldUserValues();//the most recent copy of the DB is the most recently saved one
+}
+
+function saveVariables()
+{
+    var jsonData = {};
+    var dataSize = arguments.length;
+    var variablesSaved = 0;
+
+    for(var i = 0; i < dataSize; i++)
+    {
+        // console.log("arguments[" + i + "] = " + arguments[i] + " \n-> yields " + getJSONPropertyName(arguments[i]))
+        // console.log("parsing " + arguments[i]);
+        var JSONpropertyName = arguments[i];
+        var JSONpropertyValue = getJSONPropertyValue(arguments[i]);
+        
+        var toSave = hasToBeSaved(arguments[i]);
+        
+        if(toSave)//if the variable has to be saved
+        {
+            if(!JSONpropertyValue != '2y10UZMJfJuMm4C5In91XP7uadWRn0ZP9so5oONeRoyVtIze1Psy')//if the variable was found
+            {
+                jsonData[JSONpropertyName] = JSONpropertyValue;
+                variablesSaved ++;
+            }
+            else
+            {
+                console.log("Something went wrong while trying to save \'" + arguments[i]) + "\'";
+            }
+        }
+        else
+        {
+            // console.log("\'" + arguments[i] + "\' doesn't have to be saved");
+        }
+    }
+
+    if(variablesSaved > 0)
+    {
+        var variablesString = "variables";
+        if(variablesSaved == 1) variablesString = "variable";
+
+        console.log("Saving " + variablesSaved + " " + variablesString + ": ");
+        console.log(jsonData);
+    }
+    else
+    {
+        // console.log("No variable have to be saved.");
+    }
+
+    $.ajax('dbtransfers/push_variables.php',
+    {
+            type: 'POST',
+            async: false,
+            data: jsonData
+    }).done(function (response)
+    {
+        if(response != '')
+        {
+            console.log("\'" + response + "\'");
+        }
+    });
+}
+
+function hasToBeSaved(propertyName)//returns either true or false (has to be saved or not)
+{
+    // console.log("To be saved? Property Name: " + propertyName);
+    
+    switch(propertyName)
+    {
+        //USERINFO table
+        case x.username:
+            if (user.username != oldUser.username) return true;
+            break;
+
+        case x.energy:
+            if (user.energy != oldUser.energy) return true;
+            break;
+
+        case x.money:
+            if (user.money != oldUser.money) return true;
+            break;
+
+        //SCHOLARINFO table
+        case x.department:
+            if (user.department != oldUser.department) return true;
+            break;
+
+        case x.scholarName:
+            if (user.scholarname != oldUser.scholarname) return true;
+            break;
+
+        case x.gender:
+            if (user.gender != oldUser.gender) return true;
+            break;
+        
+        //STORY table
+        case x.storyLocation:
+            if (user.storyLocation != oldUser.storyLocation) return true;
+            break;
+
+        case x.lastChapterPlayed:
+            if (user.last_chapter_played != oldUser.last_chapter_played) return true;
+            break;
+
+        case x.physicalLocationInt:
+            if (user.physicalLocationInt != oldUser.physicalLocationInt) return true;
+            break;
+
+        //AFFINITY table (Main 10)
+        case x.karolina:
+            if (karolina.affinity != oldUser.karolina) return true;
+            break;
+
+        case x.ellie:
+            if (ellie.affinity != oldUser.ellie) return true;
+            break;
+
+        case x.neha:
+            if (neha.affinity != oldUser.neha) return true;
+            break;
+
+        case x.raquel:
+            if (raquel.affinity != oldUser.raquel) return true;
+            break;
+
+        case x.claire:
+            if (claire.affinity != oldUser.claire) return true;
+            break;
+
+        case x.alistair:
+            if (alistair.affinity != oldUser.alistair) return true;
+            break;
+
+        case x.tadashi:
+            if (tadashi.affinity != oldUser.tadashi) return true;
+            break;
+
+        case x.tegan:
+            if (tegan.affinity != oldUser.tegan) return true;
+            break;
+
+        case x.tyler:
+            if (tyler.affinity != oldUser.tyler) return true;
+            break;
+
+        case x.axel:
+            if (axel.affinity != oldUser.axel) return true;
+            break;
+
+        //AFFINITY table (Other)
+        case x.ladyArlington:
+            if (lady_arlington.affinity != oldUser.lady_arlington) return true;
+            break;
+
+        case x.coachDavis:
+            if (coach_davis.affinity != oldUser.coach_davis) return true;
+            break;
+
+        case x.serena:
+            if (serena.affinity != oldUser.serena) return true;
+            break;
+
+        case x.cecile:
+            // console.log("oldUser: " + oldUser.cecile);
+            // console.log("User: " + user.cecile);
+            // console.log("Cecile: " + cecile.affinity);
+            if (cecile.affinity != oldUser.cecile) return true;
+            break;
+        
+        case x.teacherChapter2:
+            if (teacher_chapter_2.affinity != oldUser.teacherChapter2) return true;
+            break;
+
+        default:
+            return false;
+            break;
+    }
+
+    return false;
 }
 
 

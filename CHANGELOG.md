@@ -1,6 +1,56 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
 
+# Version 1.6.4 (Departments Carousel on index.php)
+## Added
+-  `index.php`  `se-stylesheet.css`   `se-index.css`
+    - Added the departments carousel
+    - Added the css for the departments carousel in se-index.css
+    - Small fixes for spelling and grammar
+    - Slight change in design for <i> and <h5>
+    - Added relevant images in new images folder
+
+# Version 1.6.3 (Amendment of v1.6.2 - Saving modified variables only)
+## Changed
+-  `variables.js`
+    - put back the values of x as they should be
+    - user.karolina etc. are not used
+        - however, oldUser.karolina is used
+        - we use the character's affinity directly, since it's already built in
+        - we could find a way to change it to require 2 variables instead of 3, but it doesn't change performance at all
+        - NOT A BIG DEAL
+    - changed chapter_size so that it yields the proper amount of slides
+    - I was having fun, so it can tell whether you are saving 1 variable or many variables, and it will write it correctly in the console log
+
+-  `library.js`
+    - All the saving functions are here now
+    - put back all the saving in pushVariablesToDB(); (no more subfunctions of one line)
+    - modified saveVariables() so only save the prescribed variables if they require saving (A.K.A. if they were modified during the session)
+    - created a function hasToBeSaved() that determines whether a variable has been modified since the loading of the page
+        - returns true or false
+        - affinities are determined in this function as well, although through a slightly different approach
+        - affinities compare [karolina.affinity to oldUser.karolina] rather than [user.karolina to oldUser.karolina]
+
+- `gameengine.js`
+    - put back pushVariablesToDB(); everywhere
+
+# Version 1.6.2 (Optimisation)
+## Changed
+-  `variables.js`
+    - changed the definition of "x" and "user"
+    - changed the function pullVariablesFromDB so it would change "user"'s affinity and not each of the
+    character's affinities individually
+    - added a variable "oldUser"
+    - created an "initialiseOldUser" function that pulls the old user's variables from the database (as an 
+    element of comparison)
+    - created a "saveGameVariables" function that compares each "user" and "oldUser" variable and calls
+    "saveVariable" when there's a difference between both variables
+- `gameengine.js`
+    - calling "initialiseOldUser" in the beginning of each "refreshInterface" 
+    - calling "saveGameVariables" at the end of each "refreshInterface"
+    - deleting calls to "pushVariablesToDB" as it became obsolete.
+    
+
 # Version 1.6.1 (Bug fixes)
 ## Added
 - `push_variables.php`  `variables.js`
