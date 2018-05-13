@@ -719,6 +719,19 @@ function refreshInterface()//REFRESHES the interface
             var character_nbr = story[POI][user.storyLocation];//get the point of interest, which is the negative # of the character
                 character_nbr = -character_nbr - 11;// -11 becomes 0, -15 becomes 4.
                 character_name = charList[character_nbr];
+
+                /*
+                11: "alistair", -> becomes [0]
+                12: "axel",
+                13: "claire",
+                14: "ellie",
+                15: "karolina", -> becomes [4]
+                16: "neha",
+                17: "raquel",
+                18: "tadashi",
+                19: "tegan",
+                20: "tyler"
+                */
             
                 // alert("highest character at slide # " + user.storyLocation + " is " + getHighestAffinity().name + " VS " + character_name);
 
