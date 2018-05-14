@@ -1,6 +1,16 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
 
+# Version 1.7.1 (Successful registration page)
+## Added
+- `registration_successful.php`
+    - added a new page to confirm the registration
+
+## Changed
+- `parseSignup.php`
+    - commented the previous confirmation
+    - added a link to redirect to the new page
+
 # Version 1.7.0 (Chapter 1)
 ## Added
 -  `chapter1.js`  `chapter1.xlsx`

@@ -132,6 +132,9 @@ if(isset($_POST['signupBtn'],$_POST['token']))
 					$mail->Subject = "Welcome to Sweet Elite";
 					$mail->Body = $mail_body;
 	
+					header('Location: registration_successful.php');
+					exit();
+
 					//Error Handling for PHPMailer
 					if(!$mail->Send())
 					{
@@ -139,9 +142,11 @@ if(isset($_POST['signupBtn'],$_POST['token']))
 					}
 					else
 					{
-						$result = "Registration Succesful! Please check your email to activate your account.";
+						//$result = "Registration Succesful! Please check your email to activate your account.";
+						header('Location: registration_successful.php');
+						exit();		
 					}
-				}	
+				}
 			}
 			catch(PDOException $ex) 
 			{
