@@ -1,6 +1,20 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
 
+# Version 1.7.0 (Chapter 1)
+## Added
+-  `chapter1.js`  `chapter1.xlsx`
+    - Drafted chapter 1 in excel
+    - we will need to review every slide one after the other
+
+## Changed
+- `index.php`   `se-index.css`
+    - changed class "active" to "dot-active" to be more accurate
+- `variables.js`
+    - changed "Serena" to "serena"
+    - this was causing some issues
+
+
 # Version 1.6.4 (Departments Carousel on index.php)
 ## Added
 -  `index.php`  `se-stylesheet.css`   `se-index.css`

@@ -325,21 +325,6 @@
 			</div>
 		</div> -->
 
-		<!-- Test pour Mouna -->
-		<!-- <div class = "card">
-			
-			<div class="card-header">
-				<h3>Header</h3>
-			</div>
-
-			<div class="card-content">
-				<p>CONTENT</p>
-				<br>
-				<a class="button pink_button" href="game.php">blabla</a>
-			</div>
-
-		</div> -->
-
 		<!-- DEBUG <div class="box left-shadow bottom-shadow"></div> -->
 		
 		<!-- FOLLOW US -->
@@ -439,21 +424,29 @@
 var slideIndex = 0;
 showSlides();
 
-function showSlides() {
+function showSlides()
+{
     var i;
     var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    for (i = 0; i < slides.length; i++) {
+	var dots = document.getElementsByClassName("dot");
+	
+	for (i = 0; i < slides.length; i++)
+	{
        slides[i].style.display = "none";  
-    }
+	}
+	
     slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}    
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
+	
+	if (slideIndex > slides.length) {slideIndex = 1}
+
+	for (i = 0; i < dots.length; i++)
+	{
+        dots[i].className = dots[i].className.replace(" dot-active", "");
+	}
+	
     slides[slideIndex-1].style.display = "block";  
-    dots[slideIndex-1].className += " active";
-    setTimeout(showSlides, 2500); // Change image every 2.5 seconds
+    dots[slideIndex-1].className += " dot-active";
+    setTimeout(showSlides, 3000); // Change image every 3 seconds
 }
 </script>
 

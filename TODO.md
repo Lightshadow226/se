@@ -8,6 +8,7 @@
     - le chapitre 1 est terminé jusqu'à la slide 129, donc il va falloir valider le reste + rajouter les émotions
     - il reste à implémenter les illustrations et le form pour sélectionner notre uniforme
     - valider que toutes les valeurs sont affectées à la bonne slide (dans le fichier excel)
+    - slide 93: the two choices are overlapping
 
 ## Core Files
 `variables.js`

@@ -1016,15 +1016,24 @@ function browseLink(link, element)//link is the link of the story (story[special
         var pointofinterest = story[POI][user.storyLocation];
         var landingpoint = story[LP][user.storyLocation];
 
+
         // alert("we are looking if you visited: " + pointofinterest + " (" + story[isVisited][pointofinterest] + ")");
+        console.log("slide: " + pointofinterest + " = " + story[isVisited][pointofinterest]);
         
+        //TODO: make a switch case
         if(story[isVisited][pointofinterest]) // if we visited the slide that is the "point of interest".
         {
-            // alert("you have visited " + pointofinterest);
-            // alert("therefore, you are going to " + landingpoint);
+            console.log("you have visited " + pointofinterest);
+            console.log("therefore, you are going to " + landingpoint);
             //alert("storylocation was " + storyLocation);
             user.storyLocation = landingpoint;
             //alert("storylocation is now " + storyLocation);
+        }
+        else if(pointofinterest == -1)
+        {
+            console.log(user.storyLocation + " going to : " + pointofinterest);
+            user.storyLocation = landingpoint;
+            refreshInterface();
         }
         else//if not, we go to the next slide
         {

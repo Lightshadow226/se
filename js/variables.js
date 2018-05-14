@@ -97,7 +97,7 @@ var genders = ["She/Her", "He/Him", "They/Them"];
         "tadashi",
         "tegan",
         "tyler",
-        "Serena",
+        "serena",
         "ca",
         "ladya"
         //"Coach Davis",
