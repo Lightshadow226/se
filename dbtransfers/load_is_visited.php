@@ -5,26 +5,25 @@ include_once "../resources/database.php";
 
 $id = $_SESSION['id'];
 
-//*********************************************
-//parse STORY table to find out current chapter
-//*********************************************
-
+//TODO: first, find the current chapter
 $sqlQuery = "SELECT * FROM story WHERE id = :id";
 $statement = $db->prepare($sqlQuery);
 $statement->execute(array(':id' => $id));
 
 while($rs = $statement->fetch())//"rs" = "row statements"
 {
-    $story_location = $rs['storylocation'];
-    $last_chapter = $rs['lastchapterplayed'];
-    $physicallocationint = $rs['physicallocationint'];
+    $last_chapter = $rs['lastchapterplayed'];//get the last chapter played
 }
+
+//Then, modify the correct table: chapterX_story
+$table = "chapter" . $last_chapter ."_story";
 
 //*********************************************
 //parse chapterX table
 //*********************************************
 
-$sqlQuery = "SELECT * FROM chapter0_story WHERE id = :id";
+$sqlQuery = "SELECT * FROM " . $table . " WHERE id = '$id'";
+// echo $sqlQuery . "\n";
 $statement = $db->prepare($sqlQuery);
 $statement->execute(array(':id' => $id));
 
@@ -37,22 +36,23 @@ while($rs = $statement->fetch())//"rs" = "row statements"
     // echo $rs['c'] . "\n";
 }
 
-$size = (sizeof($isVisited) / 2) - 2;
+$size = (sizeof($isVisited) / 2) - 1;
 
-echo "<html>";
-echo "<input id=\"chapter_size\" value = $size></input>";
+echo "<html>\n";
+echo "<input id=\"chapter_size\" value = $size></input>\n";//output the chapter size once
 
 //for each slide in the current chapter
-for($i = 0; $i <= $size; $i++)
+for($i = 0; $i < $size; $i++)
 {
     //on identifie la nouvelle variable
     $newVariable = "c" . $i;
-
+    
     //on store la variable
     $slide = $isVisited[$newVariable];
-
-    //on crée la variable dans le DOM
-    echo "<input id= \"$newVariable\" value = $slide></input>";
+    
+    //on affiche la variable dans le DOM
+    echo "<input id= \"$newVariable\" value = $slide></input>\n";
 }
+echo "</html>\n";
 
 ?>

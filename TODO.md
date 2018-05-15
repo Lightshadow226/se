@@ -11,16 +11,6 @@
     - slide 93: the two choices are overlapping
 
 ## Core Files
-`variables.js`
-    - There is major lag online and sometimes the server isn't fast enough to save all of the choices made
-    - optimize pulling variables from the DB the same way as pushing was optimized
-    - The server crashes if the player moves too fast and it doesn't save the progress
-    - s'assurer qu'il n'y ait plus de variables utilisés sans la base de données
-    - *MAJOR BUMMER* "Async: false" is going to be removed... (https://xhr.spec.whatwg.org/#synchronous-flag)
-
-`library.js`
-    - chapterSize() needs to be updated manually every time a chapter changes size or when a new chapter is created
-
 `gameengine.js`         `chapterX.php`
     - il doit y avoir 4 text container au total
         - 1 div parent
@@ -52,17 +42,6 @@
     - rename game.php to gameboot.php
     - create game.php or chapter.php, which will be a copy of chapter0.php with a modification to be used in any chapter
 
-`CSS`
-    - [Mouna] *Make zooming possible!!!*
-    - [Mouna] put the CSS media buttons in a separate file, so we can just call a php file to include them in a parent div
-    - crop sprites en coupe américaine (movie perspectives)
-    - Il faut que les page-specific attributes ne soient jamais utilisés dans une autre page
-    - Faire que quand on hover, ce soit mauve, mais que l'item d'à côté soit jaune, et l'autre rose
-        - comme sur index.php: 3 images, trois couleurs différentes
-        - à changer sur la page contact.php
-    - https://www.w3schools.com/css/tryit.asp?filename=trycss3_transition1
-    - il faudrait faire une classe et une fonction pour un popup pour TOUS les messages ("please write your username!", "please choose a department", )
-
 ## Partial Files
 `headers.php`
     - mettre variables.js et library.js dans le header/head
@@ -71,56 +50,6 @@
     - generate illustrations based on [locked vs not, colors, etc.]
     - there are still improvements to be made in this file
     - optimize this file
-
-
-## Pages
-`index.php`             `index.js`              `se-index.css`
-    - "Start story" instead of "continue story" when user.storyLocation == 0
-    - put the css in se-index.css
-    - mettre le CSS dans un autre fichier
-    - le css est wobly and all over the place
-    - le border shading entre le header et le first card est causé par: style="position: relative;"
-    - ajouter le personality quiz
-
-`game.php`              `gameboot.js`           `se-game.css`
-    - mettre un popup pour dire "Finish previous chapters first!" -> voir *CSS*
-
-`dorm.php`              `dorm.js`               `se-dorm.css`
-    - enlever les .style et les remplacer par des classes
-    - Add pronoun change option and all the missing images (shoes, top, bottom, etc.)
-
-`profile.php`
-    - afficher l'épisode et le highest affinity sur le ID Card
-    - functionning Reset Progress Button
-    - Loader for images
-
-`relationships.php`     `relationships.js`      `se-relationships.css`
-    - [Mouna] zoom function on the school files
-    - *variables.js* we still need to add characters over time in "classmates" and "others"
-
-`login.php`             `signup.php`            `resetpassword.php`
-    -  Améliorer les messages d'erreurs pour login.php, signup.php, resetpassword.php
-
-`illustrations_achievements.php`
-    - think of possible achievements
-    - make sure that a scan of isVisited can show the proper achievements
-
-
-# Idées
-    - faire que le progress bar soit en fonction des illustrations, des achievements, etc.
-        - peut-être plusieurs progress bars
-        - une de illustrations (ex.: 1/4 unlocked)
-        - une de easter eggs (ex.: 2/3 found)
-        - une de bonus (ex.: 1/2 found)
-    - downloader les fonts "great vibes" & "roboto" de Google API
-    - réorganiser les fichiers PHP
-    - optimiser les fonctions qui reviennent plus qu'une fois, et les mettre dans utilities.php
-        - [edit-email.php, edit-username.php]
-    - change the path of all images to the new images folder
-        - ["\images -> "\_new_images_folder"]             
-
-# Process pour passer de GIT à En ligne
-    1. Demander à June de l'écrire ici
 
 #Tools
 

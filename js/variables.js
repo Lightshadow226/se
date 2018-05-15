@@ -762,18 +762,25 @@ function loadIsVisited(chapter)
         dataType: 'html',
     }).done(function (response)//when the request is done, we execute the following code:
     {
+        // console.log(response);
+        // TODO: encode the response in JSON directly in the php file
+        // that way, there is no need to append to the DOM
+        
         //we print the response in #DB_handle:
         $('#DB_handle').html(response);
+        console.log("value of C0: " + document.getElementById('c0').value);
         
-        var chapter_size = parseInt(document.getElementById("chapter_size").value) + 1;
+        
+        var chapter_size = parseInt(document.getElementById("chapter_size").value);
         console.log("Loaded isVisited for " + chapter_size + " slides.");
         
         //chapter_size is actually one more (+1)
 
         //then we save them as JS variables:
-        for(var i = 0; i <= chapter_size; i++)
+        for(var i = 0; i < chapter_size; i++)
         {
             var new_variable = "c" + i;
+            // console.log(new_variable);
             var isVisitedValue = document.getElementById(new_variable).value;
             
             //convert from int to boolean 1 -> true
@@ -808,6 +815,8 @@ function saveIsVisited(chapter)
         jsonData[JSONpropertyName] = value;
     }
 
+    console.log(jsonData);
+    
     //send the JSON data to the server
     $.ajax('dbtransfers/save_is_visited.php',
         {
@@ -818,9 +827,8 @@ function saveIsVisited(chapter)
     }).done(function (response)
     {
         console.log(response);
+        console.log("Saved isVisited for " + chapter_size + " slides.");
     });
-
-    console.log("Saved isVisited for " + chapter_size + " slides.");
 }
 
 function pullVariablesFromDB()//we load the data from the database, and put it in the div with the ID = "#DB_handle" -> thus why we use $('#DB_handle')

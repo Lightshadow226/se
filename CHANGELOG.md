@@ -1,6 +1,28 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
 
+# Version 1.7.3 (Chapter 1 Excel & Debug)
+## Changed
+- `chapter1.js`  `chapter1.xlsx`
+    - updated chapter 1
+    - fixed errors
+    - see todo on google drive
+- `load_is_visited.php`     `save_is_visited.php`       `variables.js`
+    - Now it loads and saves any chapter number
+    - there are still some bugs
+    - TODO: make sure that the chapter size is the right one across all 4 functions
+        - PHP load
+        - PHP save
+        - JS load
+        - JS save
+
+- `images`
+    - created files to make up for missing sprites
+    - TODO: get all the correct sprites for all characters
+
+- `library.js`      `generateGameContainer.php`     `headers.php`
+    - made debugging a bit better
+
 
 # Version 1.7.2 (Chapter 2)
 ## Added

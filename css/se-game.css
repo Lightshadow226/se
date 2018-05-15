@@ -815,3 +815,17 @@
 
         transform: translate3d(-50%, -50%, 0);   
     }
+
+
+#testContainer1
+{   
+    position: absolute;
+    left: 0px;
+    bottom: 50%;
+    background-color: #efeeea;
+}
+
+#daInput
+{
+    width: 50px;
+}

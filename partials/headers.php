@@ -93,7 +93,7 @@
 		
 		//if directly on SE: http://localhost/se/
 
-		console.log("URL: " + page);
+		// console.log("URL: " + page);
 		// alert(document.location.hostname);
 		// alert(document.location.pathname);
 		

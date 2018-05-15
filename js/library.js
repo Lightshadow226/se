@@ -1089,16 +1089,26 @@ function hasToBeSaved(propertyName)//returns either true or false (has to be sav
 // -----START DEBUGGING TOOLS-----
 function refreshTestContainer()// affiche des données par rapport à la prev/current/next slide
 {
-    var container1 = document.getElementById('testContainer1');
-        container1.style.position = "absolute";
-        container1.style.left = "0px";
-        container1.style.bottom = "50%";
-        container1.style.backgroundColor = "#efeeea";
+    var daInput = document.getElementById('daInput');
     
+    daInput.onkeypress = function(e)
+    {
+        if(e.keyCode == 13)//when we press "enter"
+        {
+            if(daInput.value) {user.storyLocation = daInput.value}
+            daInput.value = "";
+            saveIsVisited();
+            pushVariablesToDB();
+            HideForms();
+            refreshInterface();
+        }
+    };
+
+    $('#daInput').focus();
+    daInput.placeholder = user.storyLocation;
+
     var text = "";
     
-    container1.innerHTML = "";
-
     //Previous location(
     /*text += "<b>Previous location (" + (user.storyLocation - 1) + ")</b>\n";
     text += "Story Text: " + story[main_text][user.storyLocation - 1] + "\n";
@@ -1145,28 +1155,8 @@ function refreshTestContainer()// affiche des données par rapport à la prev/cu
     // console.log(text);
     // container1.innerHTML = text;
 
-    var input = document.createElement('input');
-        input.style.width = "100px";
-        input.id = "daInput";
         // input.onkeypress = function(e){}
         // input.onkeydown = function(e){alert("a")};
-
-    container1.appendChild(input);
-
-    input.onkeypress = function(e)
-    {
-        if(e.keyCode == 13)//when we press "enter"
-        {
-            if(input.value) {user.storyLocation = input.value}
-            saveIsVisited();
-            pushVariablesToDB();
-            HideForms();
-            refreshInterface();
-        }
-    };
-
-    $('#daInput').focus();
-    document.getElementById('daInput').placeholder = user.storyLocation;
 
     /*var container2 = document.getElementById('testContainer2');
 
