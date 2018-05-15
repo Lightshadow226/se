@@ -99,9 +99,9 @@ var genders = ["She/Her", "He/Him", "They/Them"];
         "tyler",
         "serena",
         "ca",
-        "ladya"
+        "ladya",
         //"Coach Davis",
-        //"Teacher 2",
+        "Teacher",
     ];
 
     //first name is displayed
@@ -449,13 +449,13 @@ var genders = ["She/Her", "He/Him", "They/Them"];
         description: "",//const
     };
 
-    var teacher_chapter_2 = 
+    var teacher = 
     {
         isDatable: false,//const
         affinity: 0,
         isCrush: false,
-        name: "Teacher 2",//const
-        fullName: "Teacher 2",//const
+        name: "Teacher",//const
+        fullName: "Teacher",//const
         path: "",//const, no caps
         birthday: "",//const
         likes: "",//const
@@ -631,6 +631,14 @@ var personnages =
                         characters_path + "../teachers/LadyArlington/annoyed.png", // 3 : Neutral expresion
                         characters_path + "../teachers/LadyArlington/angry.png",   // 4 : Neutral expresion
                         characters_path + "../teachers/LadyArlington/surprise.png",// 5 : Neutral expresion
+                    ],
+    teacher:    [
+                        characters_path + "../teachers/LadyArlington/base.png",    // 0 : Neutral expresion
+                        characters_path + "../teachers/LadyArlington/happy.png",   // 1 : Neutral expresion
+                        characters_path + "../teachers/LadyArlington/blush.png",   // 2 : Neutral expresion
+                        characters_path + "../teachers/LadyArlington/annoyed.png", // 3 : Neutral expresion
+                        characters_path + "../teachers/LadyArlington/angry.png",   // 4 : Neutral expresion
+                        characters_path + "../teachers/LadyArlington/surprise.png",// 5 : Neutral expresion
                     ]
 };
 
@@ -719,7 +727,7 @@ var user =
     coach_davis: 0,
     serena: 0,
     cecile: 0,
-    teacherChapter2: 0,
+    teacher: 0,
 };
 
 var oldUser = user;
@@ -954,7 +962,7 @@ function resetOldUserValues()
     coach_davis.affinity = oldUser.coach_davis;
     serena.affinity = oldUser.serena;
     cecile.affinity = oldUser.cecile;
-    teacher_chapter_2.affinity = oldUser.teacherChapter2;
+    teacher.affinity = oldUser.teacher;
 }
 
 pullVariablesFromDB();

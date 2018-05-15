@@ -22,7 +22,7 @@
 	<?php include_once 'partials/headers.php' ?>
 
 	<div class = "main_content">
-        <div class = "card-nomargin add_padding">
+        <div class = "card-firstdiv add_padding">
             <h1>Terms and Conditions</h1>
 
             <h2>GENERAL INTRODUCTION</h2>

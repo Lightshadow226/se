@@ -876,8 +876,8 @@ function getJSONPropertyValue(propertyName)
         case x.cecile:
             return cecile.affinity;
         
-        case x.teacherChapter2:
-            return teacher_chapter_2.affinity;
+        case x.teacher:
+            return teacher.affinity;
 
         default:
             return '2y10UZMJfJuMm4C5In91XP7uadWRn0ZP9so5oONeRoyVtIze1Psy';
@@ -1074,7 +1074,7 @@ function hasToBeSaved(propertyName)//returns either true or false (has to be sav
             break;
         
         case x.teacherChapter2:
-            if (teacher_chapter_2.affinity != oldUser.teacherChapter2) return true;
+            if (teacher.affinity != oldUser.teacher) return true;
             break;
 
         default:
