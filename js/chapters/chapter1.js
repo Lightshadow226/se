@@ -299,7 +299,6 @@ function Chapter()
         "(I jumped out of bed and rushed to put on my uniform.)",
         "I can’t freaking believe this!",
         "END CHAPTER 1",
-        "null",// 
         ];
     //story[1] === Bubble 1 === ce que le personnage 1 dit
     story[1] = [
@@ -577,7 +576,6 @@ function Chapter()
         "null",
         "null",
         "null",
-        "null",// 
         ];
     //story[2] === Character 1
     story[2] = [
@@ -855,7 +853,6 @@ function Chapter()
         "null",
         "null",
         "null",
-        "null",// 
         ];
     //story[3] === Bubble 2
     story[3] = [
@@ -1133,7 +1130,6 @@ function Chapter()
         "null",
         "null",
         "null",
-        "null",// 
         ];
     //story[4] === Character 2
     story[4] = [
@@ -1411,7 +1407,6 @@ function Chapter()
         "null",
         "null",
         "null",
-        "null",// 
         ];
     //story[5] === Location
     story[5] = [
@@ -1689,7 +1684,6 @@ function Chapter()
         locations.dorm,
         locations.dorm,
         locations.dorm,
-        "null",// 
         ];
     //story[6] === Special Option: Specific state of this slide
     story[6] = [
@@ -1967,7 +1961,6 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,// 
         ];
     //story[7] === Objective -> "0" is no objective, all other numbers are specific cases
     story[7] = [
@@ -2245,7 +2238,6 @@ function Chapter()
         0,
         0,
         0,
-        0,// 
         ];
     //story[8] === Friendship Link -> "-1"is no link, otherwise the number represents the array number of the slide
     story[8] = [
@@ -2523,7 +2515,6 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,// 
         ];
     //story[9] === Romance Link -> "-1"is no link, otherwise the number represents the array number of the slide
     story[9] = [
@@ -2801,7 +2792,6 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,// 
         ];
     //story[10] === Choice 1 Link -> "-1"is no link, otherwise the number represents the array number of the slide
     story[10] = [
@@ -3079,7 +3069,6 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,// 
         ];
     //story[11] === Choice 2 Link -> "-1"is no link, otherwise the number represents the array number of the slide
     story[11] = [
@@ -3357,7 +3346,6 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,// 
         ];
     //story[12] === Choice 3 Link -> "-1"is no link, otherwise the number represents the array number of the slide
     story[12] = [
@@ -3635,7 +3623,6 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,// 
         ];
     //story[13] === Choice 1 Text -> "null"is no link, otherwise the number represents the array number of the slide
     story[13] = [
@@ -3913,7 +3900,6 @@ function Chapter()
         "null",
         "null",
         "null",
-        "null",// 
         ];
     //story[14] === Choice 2 Text -> "null"is no link, otherwise the number represents the array number of the slide
     story[14] = [
@@ -4191,7 +4177,6 @@ function Chapter()
         "null",
         "null",
         "null",
-        "null",// 
         ];
     //story[15] === Choice 3 Text -> "null"is no link, otherwise the number represents the array number of the slide
     story[15] = [
@@ -4469,7 +4454,6 @@ function Chapter()
         "null",
         "null",
         "null",
-        "null",// 
         ];
     //story[16] === Infinity meter consequence of going on that slide -> "0" is no consequence, otherwise the number represents what we add to the meter of the active person (the one talking, "relevant character")
     story[16] = [
@@ -4747,7 +4731,6 @@ function Chapter()
         0,
         0,
         0,
-        0,// 
         ];
     //story[17] === Infinity meter consequence of going on that slide -> "0" is no consequence, otherwise the number represents what we add to the meter of the active person (the one talking, "relevant character")
     story[17] = [
@@ -5025,7 +5008,6 @@ function Chapter()
         0,
         0,
         0,
-        0,// 
         ];
     //story[18] === visited -> FALSE by default, TRUE si le joueur a visité la slide
     story[18] = [
@@ -5303,7 +5285,6 @@ function Chapter()
         false,
         false,
         false,
-        false,// 
         ];
     //story[19] === Point of interest -> -1 by defaut, we look if we have visited slide X so that we can manipulate that information
     story[19] = [
@@ -5581,7 +5562,6 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,// 
         ];
     //story[20] === landing slide -> -1 by defaut, but we go to a specific slide after the current one
     story[20] = [
@@ -5859,7 +5839,6 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,// 
         ];
 
 }

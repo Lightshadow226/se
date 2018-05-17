@@ -746,10 +746,18 @@ function refreshInterface()//REFRESHES the interface
 
             refreshInterface();
         }
+        else if(story[special_option][user.storyLocation] == -8)// -8 === affect the affinity of a character without displaying it -> then goto next slide ***** GHOST SLIDE
+        {
+
+        }
         else if(story[special_option][user.storyLocation] == -10)// -10 === the end of the chapter ***** GHOST SLIDE
         {
             user.storyLocation = story[main_text].length;//the story is over
             refreshInterface();
+        }
+        else if(story[special_option][user.storyLocation] == -11)// -11 === same as -7, but look at a slide from a previous chapter and then go to current chapter slide ***** GHOST SLIDE
+        {
+
         }
         else//if location or anything else is not enabled
         {

@@ -762,14 +762,11 @@ function loadIsVisited(chapter)
         dataType: 'html',
     }).done(function (response)//when the request is done, we execute the following code:
     {
-        // console.log(response);
         // TODO: encode the response in JSON directly in the php file
         // that way, there is no need to append to the DOM
         
         //we print the response in #DB_handle:
         $('#DB_handle').html(response);
-        console.log("value of C0: " + document.getElementById('c0').value);
-        
         
         var chapter_size = parseInt(document.getElementById("chapter_size").value);
         console.log("Loaded isVisited for " + chapter_size + " slides.");

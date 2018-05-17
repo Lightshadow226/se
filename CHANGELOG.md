@@ -1,6 +1,26 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
 
+# Version 1.7.4 (Chapter 2 Excel)
+## Changed
+- `chapter2.js`  `chapter2.xlsx`
+    - Finished chapter 2 in excel (100% done)
+    - TODO: There are still many bugs to debug
+- `gameengine.js`
+    - option == -8
+        - affect the affinity of a character without displaying it
+        > then goto next slide
+        * GHOST SLIDE
+    - option == -11
+        - look at a slide from a previous chapter (same as -7)
+        > then go to current chapter landing slide
+        * GHOST SLIDE
+- `chapter1.js`
+    - fixed the problem of slide 274
+    - issue: there was one too many slides
+    - this was causing a slide with "null" values all across
+
+
 # Version 1.7.3 (Chapter 1 Excel & Debug)
 ## Changed
 - `chapter1.js`  `chapter1.xlsx`
@@ -26,7 +46,7 @@
 
 # Version 1.7.2 (Chapter 2)
 ## Added
--  `chapter2.js`  `chapter2.xlsx`
+- `chapter2.js`  `chapter2.xlsx`
     - Drafted chapter 2 in excel (50% done)
     - TODO: There are many bugs...
 
