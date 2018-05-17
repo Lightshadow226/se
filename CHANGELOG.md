@@ -1,6 +1,12 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
 
+# Version 1.7.5 (Chapter 2 Excel)
+## Changed
+- `chapter2.js`  `chapter2.xlsx`
+    - Debug/Audit of chapter 2 in excel
+    - TODO: Chapter 2 Issues (Google Doc)
+
 # Version 1.7.4 (Chapter 2 Excel)
 ## Changed
 - `chapter2.js`  `chapter2.xlsx`

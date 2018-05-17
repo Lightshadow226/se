@@ -23,6 +23,7 @@ function Chapter()
     {
         story[i]= new Array();//il faut créer des arrays pour chaque array. Donc pour x[0], il faut créer des arrays, mais pour x[1] aussi, les deux sont indépendents. Il peut y avoir x[0][1][1][10] et x[1][2] qui coexistent
     }
+    
     //story[0] === Story Text
     story[0] = [
         "(I brushed my teeth and put on my clothes in record time. Clumsily grabbing my schoolbag, I rushed out of the dorms and made my way into the school, running.)",//0 
@@ -32,14 +33,14 @@ function Chapter()
         "(I groaned and slapped my forehead. Then, I took out my phone and checked my schedule.)",
         "Well, now I know the room number, but how in the world am I going to know where that room is? This school is huge! ",//5 
         "*Sigh*",
-        "(I guess I might as well find someone to help me… That is, if there’s anybody who is not in class right now.)",
-        "Err…(My stomach was rumbling really loudly.)",
+        "(I guess I might as well find someone to help me…That is, if there’s anybody who is not in class right now.)",
+        "Err…(My stomach was rumbling really loudly.)",//8 POPUP
         "I’m already late, might as well get breakfast and avoid starvation.",
         "null",//10 
         "(I made my way to the counter and ordered some food.)",
         "(As the lunch lady handed me my breakfast sandwich, I noticed someone taking a nap on one of the cafeteria tables, at the very back of the room.)",
         "(It was a boy with colored hair and a couple of piercings. He looked a little intimidating. I was reluctant to wake him up… he seemed to be having a nice nap.)",
-        "Well " + user.Scholarname + ", he’s the only one who can help you since he isn’t in class like everyone else…",
+        "Well " + user.scholarname + ", he’s the only one who can help you since he isn’t in class like everyone else…",
         "(Hesitantly, I made my way to the boy’s table and shook him gently.)",//15 
         "Hey um, I’m sorry to wake you up but… I kind of need to ask you something?",
         "(The boy moved slightly, but only to reposition himself and fall back asleep.)",
@@ -188,7 +189,7 @@ function Chapter()
         "(Next)",//160 
         "(Next)",
         "Tadashi may be busy but I doubt he’ll bite. ",
-        "Oh come on, it can’t be that bad!",
+        "Oh come on, it can’t be <em>that</em> bad!",
         "(Next)",
         "(Next)",//165 
         "You’ve got to trust your instincts sometimes, right?",
@@ -203,8 +204,8 @@ function Chapter()
         "(Next)",//175 
         "Later, you guys!",
         "null",
-        "(Next)",
-        "(Next)",
+        "(Alistair is in the back of the gym, lifting weights.)",
+        "(Once he saw me, he put his dumbell down and waved at me.)",
         "Do you do this everyday?",//180 
         "You must be passionate!",
         "(Next)",
@@ -218,7 +219,7 @@ function Chapter()
         "It’s just, you have to train really really hard for that. Only the best make it in. Could you handle rejection?",//190 
         "(Alistair’s eyes were glued to the floor. I couldn’t help but feel bad for bringing it up.)",
         "I’m sure you can make it though!",
-        "(Next)",
+        "(Alistair’s phone vibrated. He took it out, read his text, and broke into a huge smile.)",
         "Woah, I’ve never seen someone become so happy because of a text!",
         "(Next)",//195 
         "(Next)",
@@ -275,11 +276,11 @@ function Chapter()
         "He was in the cafeteria this morning. ",
         "(Tadashi took a step back, the anger in his eyes slowly fading away to make place for satisfaction.)",
         "(He left quickly, walking straight towards the cafeteria.)",
-        "(Great thinking " + user.scholarname + " , you try to make friends, but you only end up making the number one ranked kid of the Academy mad at you.)",//250 
+        "(Great thinking " + user.scholarname + ", you try to make friends, but you only end up making the number one ranked kid of the Academy mad at you.)",//250 
         "*Sigh*",
         "(I should try talking to someone else.) ",
         "null",
-        "(I entered the cafeteria, that was already full of people.)",
+        "(I entered the cafeteria, which was already full of people.)",
         "(I looked around, hoping to spot Axel in the crowd, but he was nowhere to be found.)",//255 
         "(Raquel wasn’t kidding when she said he was a pro at hiding.)",
         "(Speak of the devil!)",
@@ -316,7 +317,7 @@ function Chapter()
         "Nah, it’s only because you make it sound so fun.",
         "(Next)",
         "Okay!",//290 
-        "(Next)",
+        "(Raquel took a quick look at her phone before gasping.)",
         "(She gobbled up her sandwich in a record time.)",
         "(I doubt that’s good for you before playing sports… She could get a cramp.)",
         "See ya!",
@@ -340,7 +341,7 @@ function Chapter()
         "(Next)",
         "I’m sure you will.",
         "(Next)",
-        "null",//315 
+        "(Next)",//315 
         "Oh, it’s okay. I hope things work out in the end!",
         "(Next)",
         "Talk to you later, Claire!",
@@ -414,7 +415,7 @@ function Chapter()
         "(It’s pretty sad to be this closed off to people. Is Karolina this hard to befriend? Should I even bother?)",
         "Yeah...After seeing her so distressed I tried to ask her if she was alright, but…",
         "*Sigh*",
-        "She told me to stay away from you and Tadashi. She told me you guys didn’t need a “useless scholarship student” as a friend.",
+        "She told me to stay away from you and Tadashi. She told me you guys didn’t need a 'useless scholarship student' as a friend.",
         "(Next)",//390 
         "(Next)",
         "Well…",
@@ -508,17 +509,17 @@ function Chapter()
         "(Next)",//480 
         "(Next)",
         "(A small crowd was beginning to form, most of them excited to see Axel.)",
-        "(I spotted Raquel, Alistair, and Karolina in the crowd looking pretty concerned.) [Show Sprites]",//483 Special Background
+        "(I spotted Raquel, Alistair, and Karolina in the crowd looking pretty concerned.)",//483 Special Background
         "(Axel, who looked mostly nonchalant before, now had a piercing glare on his face.)",
         "(Next)",//485 
-        "null",
-        "null",
-        "null",
-        "null",
-        "null",//490 
-        "null",
-        "null",
-        "null",
+        "(Next)",
+        "(Next)",
+        "(Next)",
+        "(Next)",
+        "(Next)",//490 
+        "(Next)",
+        "(Next)",
+        "(Next)",
         "(Axel and Tadashi’s yells became more and more infuriated and teachers were starting to spot the crowd.)",
         "(Somebody had to do something before they got in trouble.)",//495 
         "(From across the crowd, Karolina seemed to sense my intention and gave me a warning look.)",
@@ -578,8 +579,8 @@ function Chapter()
         "...That’s pretty impressive.",//550 
         "…",
         "Tadashi, I-",
-        "I don’t know what it was you said, but you took care of it somehow.",
-        "Good job.",
+        "(Next)",
+        "(Next)",
         "(I pushed my way into the center where Tadashi and Axel stood.)",//555 
         "This is ridiculous! You’re going to get each other in trouble because of some stupid paparazzi. ",
         "Tadashi, you’re obviously stressed out and being in your position sucks, but that’s no reason to talk to him like that. ",
@@ -639,7 +640,7 @@ function Chapter()
         "Teenage prodigies from rich families…",
         "(I thought about Axel.)",
         "...And celebrities.",
-        "Oh my god, what am I even doing going to this party?!",
+        "Oh my god, what am I even <em>doing</em> going to this party?!",
         "(I better choose my outfit well!)",//615 
         "[player clicks on the episode’s outfit.]",//616 player clicks on the episode’s outfit.
         "(I spent hours anxiously piecing together the perfect outfit. I was so focused that I had not noticed the music coming from the hallway.)",
@@ -756,7 +757,7 @@ function Chapter()
         "(Next)",
         "(During this whole conversation, Raquel and I stood there staring.)",
         "(She seemed bored out of her mind.)",//730 
-        "null",
+        "(Next)",
         "(Next)",
         "(Axel joined a little crowd of students that were still dancing to his song. Raquel didn’t waste time in doing the same.)",
         "(Even with Neha and Karolina still here, I felt strangely abandoned.)",
@@ -769,7 +770,7 @@ function Chapter()
         "(Next)",
         "(Next)",
         "(Next)",
-        "(Next)",
+        "(They both left towards Raquel’s dorm, where I assumed the drinks were. Neha turned around to give me a worried look.)",
         "(She seemed to need my help...)",//745 
         "(...But Karolina clearly doesn’t want me to help.)",
         "(What should I do?)",
@@ -807,7 +808,7 @@ function Chapter()
         "It looks like she’s only passed out. ",
         "(Next)",//780 
         "(Next)",
-        "How is she <em>that</em> drunk?",
+        "(NexT)",
         "(People around us started looking at Karolina funny, thinking she passed out due to alcohol)",//783 POPUP
         "(But she only had water in her cup. Neha and I saw her.)",
         "(What was going on? Why did she faint?!)",//785 
@@ -824,7 +825,7 @@ function Chapter()
         "(Next)",
         "(She stopped when she spotted me, her face losing all emotions from her face in a split second.)",
         "(Next)",
-        "" + user.scholarname + " helped get you here-",
+        "(Next)",
         "(Next)",//800 
         "(Neha looked at me, wondering if she should give an answer right away.)",
         "A couple of people at the party-",
@@ -854,7 +855,7 @@ function Chapter()
         "null",//5 
         "null",
         "null",
-        "null",
+        "*Rumble Rumble*",//8 POPUP
         "null",
         "null",//10 
         "null",
@@ -868,10 +869,10 @@ function Chapter()
         "null",
         "null",//20 
         "null",
-        "I keep telling you people, no more damn autographs! Give me a break will ya? I just came back to Arlington!",
+        "I keep telling you people, <em>no more damn autographs</em>! Give me a break will ya? I <em>just</em> came back to Arlington!",
         "null",
         "null",
-        "Uh sure! No problem… But are you positive you’re not going to ask me for an autograph first? I mean, I am Axel, you know.",//25 
+        "Uh sure! No problem… But are you positive you’re not going to ask me for an autograph first? I mean, I <em>am</em> Axel, you know.",//25 
         "null",
         "Nice to meet you. Your classroom’s not far away, fortunately for you. ",
         "null",
@@ -882,7 +883,7 @@ function Chapter()
         "null",
         "Alright new kid, let’s get you to class before you blow up.",
         "null",//35 
-        "There we are! Your class is in Classroom #1, right on your right. ",
+        "There we are! Your class is in Classroom #1, on your left. ",
         "Glad I could help, now if you’ll excuse me, I have some sleep to catch up on. That world tour really drained my energy…",
         "null",
         "null",
@@ -892,12 +893,12 @@ function Chapter()
         "null",
         "null",
         "I don’t recall seeing you around the school. ",//45 
-        "Ah, you must be " + user.genderpronoun + " " + user.scholarname + ", our new scholarship student. ",
+        "Ah, you must be " + user.scholarname + ", our new scholarship student. ",
         "SILENCE!",
         "What is your excuse for being late?",
         "null",
         "null",//50 
-        "You’re lucky it’s your first day here Ms./Mr./Mx. [Scholar’s name], or else this excuse would’ve sent you straight to detention. Lateness is not tolerated in my class. ",
+        "You’re lucky it’s your first day here, or else this excuse would’ve sent you straight to detention. Lateness is <em>not</em> tolerated in my class. ",
         "Take a seat. There is an empty one next to Mr. Nakano and Ms. Nováková. ",
         "null",
         "null",
@@ -923,8 +924,8 @@ function Chapter()
         "null",
         "Indeed, and you should be grateful.",//75 
         "You’ve got to be realistic if you want to convince someone. Instead of showing excess motivation, you should’ve told her that you were asking Alistair what the homework was. ",
-        "That way, when you answer Ms./Mr. Teacher’s name when she calls you out, she would’ve believed you and been somewhat satisfied that you’re actually caring about the homework.",
-        "It’s all about knowing what the person wants and reconciling that with what YOU want.",
+        "That way, when you answer Ms. Rodriguez when she calls you out, she would’ve believed you and been somewhat satisfied that you’re actually caring about the homework.",
+        "It’s all about knowing what the person wants and reconciling that with what <emyou</em> want.",
         "null",
         "That’s already knowing a lot more than you do. ",//80 
         "null",
@@ -957,7 +958,7 @@ function Chapter()
         "null",
         "Dude, where were you yesterday? Ellie and I searched the entire school for you.",
         "null",//110 
-        "Why?! You’ve missed picture day. You’re gonna have to go ask Tadashi to arrange something for you and let me tell you, he’s not happy today.",
+        "Why?! You’ve missed picture day. You’re gonna have to go ask Tadashi to arrange something for you and let me tell you, he’s <em>not</em> happy today.",
         "null",
         "Most likely. ",
         "null",
@@ -980,9 +981,9 @@ function Chapter()
         "B-But if I ever get another, I’ll invite you.",
         "See Tyler? " + user.scholarname + " knows where the real fun is.",
         "null",
-        "null",
+        "Come on man, I covered your ass for not showing up to class this morning.",
         "null",//135 
-        "Told them you were sick.",
+        "Told them your great-grandmother died.",
         "I’m surprised you haven’t met her yet. She makes sure people know her.",
         "Tall, red hair like mine, always looks like she’s ready to strike a pose? Her name is Karolina.",
         "null",
@@ -1019,13 +1020,13 @@ function Chapter()
         "null",//170 
         "null",
         "null",
-        "null",
+        "You don’t even know the title and you expect to read hundreds of pages just like that?",
         "null",
         "You’re insane. Come on, I’ll lend you my copy. ",//175 
         "null",
         "null",
-        "(Alistair is in the back of the gym, lifting weights.)",
-        "(Once he saw me, he put his dumbell down and waved at me.)",
+        "null",
+        "null",
         "null",//180 
         "Working the same muscle intensely two days in a row can be dangerous, so I switch it up. But I do train every day!",
         "That’s what you need to be to make it to the Olympics.",
@@ -1039,7 +1040,7 @@ function Chapter()
         "What do you mean?",//190 
         "...",
         "null",
-        "(Alistair’s phone vibrated. He took it out, read his text, and broke into a huge smile.)",
+        "*Brrr*",
         "Haha!",
         "It’s my little sister. She just got a cellphone and now she can’t stop texting me about my family’s daily lives. ",//195 
         "Back home, we’re a full house! Five children.",
@@ -1061,7 +1062,7 @@ function Chapter()
         "Of course! Especially when you’re the oldest one. ",
         "But I wouldn’t change it for the world.",
         "It was really hard leaving them. I call them every night but it just isn’t the same. ",
-        "But what can you do? One doesn’t just refuse a scholarship from Arlington. ",//215 
+        "But what can you do? One doesn’t just <em>refuse</em> a scholarship from Arlington Academy. ",//215 
         "null",
         "Yeah!",
         "Seeing you earlier in class reminded me of how I felt when I first came here. The people here are nothing like back home. ",
@@ -1090,7 +1091,7 @@ function Chapter()
         "Look " + user.scholarname + ", I can spot a liar from miles away. ",
         "I don’t think you understand the situation he’s in… and even more importantly, the situation <em>I’m</em> in. ",
         "Axel has been breaking too many rules, and he’s attracting too much outside attention. Paparazzi is everywhere. The only thing keeping them from entering school grounds are the guards near the gate. ",
-        "The school doesn’t like that and they’re putting all the pressure on me to find Axel and make him deal with his paparazzi. It’s absolute hell for me, and, as you can probably tell, I have better, more interesting things to do. ",
+        "The school doesn’t like that and they’re putting all the pressure on me to find Axel and make him deal with his paparazzi. It’s absolute <em>hell</em> for me, and, as you can probably tell, I have better, more interesting things to do. ",
         "Therefore, I would really appreciate it if you could cut the crap, and tell me where you saw Axel last. ",//245 
         "null",
         "null",
@@ -1103,15 +1104,15 @@ function Chapter()
         "null",
         "null",//255 
         "null",
-        "Hey! If it isn’t for Mr./Ms. [Teacher’s name]’s favorite newbie! ",
+        "Hey! If it isn’t for Ms. Rodriguez’s favorite newbie! ",
         "You’re really lucky you know? She’s usually ruthless when it comes to new students. Especially when it comes to scholarship students. ",
         "Probably the face you made. I don’t think I’ve ever seen someone blush so hard, haha! ",
         "Hey, no sweat. These things happen.",//260 
         "Also, if you feel like saving your reputation and making friends around here, you could come to our homecoming dorm party tonight",
         "null",
-        "Of course not! ",
+        "Of course not! Haha!",
         "Don’t make this face, haha! ",
-        "There’s a homecoming cocktail the school is throwing tonight… But it’s lame as hell. A bunch of teachers reminding students of the rules, Tadashi pulling out a perfectly crafted speech out of his ass five minutes before facing the audience, Lady A putting on some classical music and getting way too excited over Mozart…",//265 
+        "There’s a homecoming cocktail the school is throwing tonight… But it’s lame as hell. A bunch of teachers reminding students of the rules, Tadashi pulling out a perfectly crafted speech out of his ass five minutes before facing the audience, Lady A putting on some classical music and getting <em>way</em> too excited over Mozart…",//265 
         "You know, all that <em>fun</em>, academically approved stuff. ",
         "So, what usually happens is that we throw a better homecoming party in the dorms while the teachers are busy supervising the school’s official cocktail in the gym.",
         "We’ve never been caught so far!",
@@ -1137,7 +1138,7 @@ function Chapter()
         "Ha! I knew I saw a party animal inside you, newbie. ",
         "Well, if ever you decide to come, the party is near my dorm and it starts right when Arlington’s homecoming cocktail starts. ",
         "When in doubt, follow the music and it should lead you straight there!",//290 
-        "(Raquel took a quick look at her phone before gasping.)",
+        "null",
         "Oh shit! Afternoon training starts soon. Coach will kill me if I’m late again.",
         "null",
         "See you later, " + user.scholarname + "!",
@@ -1148,7 +1149,7 @@ function Chapter()
         "…",
         "It’s okay, we’ll figure it out. I’m going to-",//300 
         "I-I have to go. I’ll call you tonight.",
-        "H-Hey [Scholar’s name]. Do you need anything?",
+        "H-Hey "+ user.scholarname + ". Do you need anything?",
         "I’m not exactly the outgoing type. ",
         "Well you’re off to a great start.",
         "Y-Yeah…",//305 
@@ -1180,7 +1181,7 @@ function Chapter()
         "Let’s get something clear.",
         "I don’t hang out with just anybody. The people I want as friends? I want them to be the best. I <em>need</em> them to be the best.",
         "I need friends that will be able to handle it when I <em>dominate</em> the fashion industry in a couple of years. I want a crew of competent people I can depend on.",
-        "So a <em>scholarship</em. student with no distinctive background or talent like you? Not interested. ",
+        "So a <em>scholarship</em> student with no distinctive background or talent like you? Not interested. ",
         "Stay out of my way.",//335 
         "null",
         "null",
@@ -1210,7 +1211,7 @@ function Chapter()
         "null",
         "null",
         "null",
-        "Oh hey. Sorry, I’m kind of busy at the moment.",
+        "Oh, hey. Sorry, I’m kind of busy at the moment.",
         "null",//365 
         "null",
         "null",
@@ -1352,7 +1353,7 @@ function Chapter()
         "null",
         "null",
         "null",//505 
-        "" + user.scholarname + " has been here for literally 2 days and he/she/they know(s) better than you.",
+        "" + user.scholarname + " has been here for literally 2 days and already demonstrated more brain power than you ever have.",
         "So while you may hate my guts, listen to " + user.genderpronoun + ". ",
         "null",
         "null",
@@ -1362,7 +1363,7 @@ function Chapter()
         "null",
         "null",
         "null",//515 
-        "How surprising. ",
+        "Typical.",
         "null",
         "null",
         "…",
@@ -1381,7 +1382,7 @@ function Chapter()
         "null",
         "null",
         "Well " + user.scholarname + ", if you’re so set on sheltering this guy as if he was your goddamn <em>child</em>…",
-        "Why don’t you propose a solution to this mess?",//535 
+        "Why don’t <em>you</em> propose a solution to this mess?",//535 
         "Or was your game plan to just pat him on the back and hope everything turned out fine?",
         "null",
         "null",
@@ -1399,8 +1400,8 @@ function Chapter()
         "null",//550 
         "null",
         "null",
-        "null",
-        "null",
+        "I don’t know what it was you said, but you took care of it somehow.",
+        "Good job.",
         "null",//555 
         "null",
         "null",
@@ -1486,7 +1487,7 @@ function Chapter()
         "null",
         "Yeah! It’s been forever since I’ve gone to an Arlington dorm party! And I know Tadashi’s too busy entertaining Lady A and the rest of this school’s staff to come here.",
         "(...)",
-        "Holy <em>shit</em> Raquel, how did <em>you</em> manage to sneak alcohol here?!",//640 
+        "Holy <em>shit</em> Raquel, how did <em>you</em> manage to sneak alcohol in here?!",//640 
         "null",
         "You’re crazy, you know that?",
         "null",
@@ -1675,7 +1676,7 @@ function Chapter()
         "null",//5 
         "null",
         "null",
-        "null",
+        "null",//8 POPUP
         "null",
         "null",//10 
         "null",
@@ -1683,12 +1684,12 @@ function Chapter()
         personnages.axel[3],
         "null",
         "null",//15 
+        personnages.axel[3],
+        personnages.axel[3],
         "null",
         "null",
-        "null",
-        "null",
-        "null",//20 
-        "null",
+        personnages.axel[3],//20 
+        personnages.axel[3],
         personnages.axel[4],
         personnages.axel[3],
         personnages.axel[3],
@@ -1714,7 +1715,7 @@ function Chapter()
         "null",
         personnages.teacher[0],//45 
         personnages.teacher[0],
-        personnages.teacher[0],
+        personnages.teacher[4],
         personnages.teacher[0],
         personnages.teacher[0],
         personnages.teacher[0],//50 
@@ -1722,18 +1723,18 @@ function Chapter()
         personnages.teacher[0],
         personnages.tadashi[0],
         "null",
-        "null",//55 
-        "null",
+        personnages.tadashi[0],//55 
         personnages.tadashi[0],
+        personnages.tadashi[1],
         personnages.tadashi[0],
         personnages.tadashi[0],
         personnages.tadashi[0],//60 
-        personnages.tadashi[0],
+        personnages.tadashi[3],
         personnages.tadashi[0],
         "null",
         personnages.tadashi[1],
         "null",//65 
-        personnages.alistair[0],
+        personnages.alistair[5],
         "null",
         personnages.raquel[1],
         "null",
@@ -1763,7 +1764,7 @@ function Chapter()
         personnages.tadashi[0],
         "null",
         "null",//95 
-        "null",
+        personnages.tadashi[0],
         "null",
         "null",
         "null",
@@ -1814,7 +1815,7 @@ function Chapter()
         personnages.tegan[0],
         personnages.tegan[2],//145 
         personnages.tegan[1],
-        personnages.tegan[0],
+        "null",
         personnages.tegan[0],
         personnages.tegan[0],
         personnages.tegan[0],//150 
@@ -1824,26 +1825,26 @@ function Chapter()
         personnages.tegan[0],
         personnages.tegan[0],//155 
         personnages.tegan[0],
+        "null",
+        "null",
         personnages.tegan[0],
+        "null",//160 
+        "null",
         personnages.tegan[0],
+        "null",
+        "null",
+        "null",//165 
         personnages.tegan[0],
-        personnages.tegan[0],//160 
+        "null",
         personnages.tegan[0],
+        "null",
+        "null",//170 
+        "null",
+        "null",
         personnages.tegan[0],
-        personnages.tegan[0],
-        personnages.tegan[0],
-        personnages.tegan[0],//165 
-        personnages.tegan[0],
-        personnages.tegan[0],
-        personnages.tegan[0],
-        personnages.tegan[0],
-        personnages.tegan[0],//170 
-        personnages.tegan[0],
-        personnages.tegan[0],
-        personnages.tegan[0],
-        personnages.tegan[0],
+        "null",
         personnages.tegan[1],//175 
-        personnages.tegan[0],
+        "null",
         "null",
         personnages.alistair[0],
         personnages.alistair[1],
@@ -1854,23 +1855,23 @@ function Chapter()
         personnages.alistair[0],
         personnages.alistair[0],//185 
         personnages.alistair[1],
-        personnages.alistair[0],
         personnages.alistair[1],
+        personnages.alistair[0],
         personnages.alistair[0],
         personnages.alistair[0],//190 
         personnages.alistair[0],
         personnages.alistair[0],
-        "null",
+        personnages.alistair[0],
         personnages.alistair[1],
         personnages.alistair[0],//195 
         personnages.alistair[0],
-        "null",
-        "null",
+        personnages.alistair[0],
+        personnages.alistair[0],
         personnages.alistair[1],
-        personnages.alistair[0],//200 
+        personnages.alistair[3],//200 
         personnages.alistair[1],
         personnages.alistair[0],
-        "null",
+        personnages.alistair[0],
         personnages.alistair[1],
         personnages.alistair[0],//205 
         personnages.alistair[0],
@@ -1891,7 +1892,7 @@ function Chapter()
         personnages.alistair[0],
         personnages.alistair[0],
         "null",
-        "null",
+        personnages.tadashi[0],
         personnages.tadashi[0],//225 
         personnages.tadashi[0],
         personnages.tadashi[5],
@@ -1913,8 +1914,8 @@ function Chapter()
         personnages.tadashi[3],
         personnages.tadashi[3],
         personnages.tadashi[4],//245 
-        personnages.tadashi[0],
-        personnages.tadashi[0],
+        personnages.tadashi[3],
+        personnages.tadashi[3],
         personnages.tadashi[0],
         personnages.tadashi[0],
         "null",//250 
@@ -1926,12 +1927,12 @@ function Chapter()
         "null",
         personnages.raquel[0],
         personnages.raquel[0],
-        personnages.raquel[0],
+        personnages.raquel[1],
         personnages.raquel[0],//260 
         personnages.raquel[0],
         personnages.raquel[0],
         personnages.raquel[0],
-        personnages.raquel[0],
+        personnages.raquel[1],
         personnages.raquel[0],//265 
         personnages.raquel[0],
         personnages.raquel[0],
@@ -1942,20 +1943,20 @@ function Chapter()
         personnages.raquel[0],
         personnages.raquel[0],
         personnages.raquel[1],
-        personnages.raquel[3],//275 
-        personnages.raquel[0],
+        personnages.raquel[4],//275 
+        personnages.raquel[4],
         personnages.raquel[0],
         personnages.raquel[0],
         personnages.raquel[1],
         personnages.raquel[1],//280 
-        personnages.raquel[3],
+        personnages.raquel[4],
+        personnages.raquel[4],
         personnages.raquel[0],
         personnages.raquel[0],
+        personnages.raquel[1],//285 
+        personnages.raquel[4],
         personnages.raquel[0],
-        personnages.raquel[0],//285 
-        personnages.raquel[0],
-        personnages.raquel[0],
-        personnages.raquel[0],
+        personnages.raquel[1],
         personnages.raquel[0],
         personnages.raquel[0],//290 
         personnages.raquel[0],
@@ -1975,17 +1976,17 @@ function Chapter()
         personnages.claire[0],//305 
         personnages.claire[5],
         personnages.claire[1],
-        "null",
+        personnages.claire[0],
         personnages.claire[0],
         personnages.claire[0],//310 
         personnages.claire[1],
         personnages.claire[0],
-        "null",
-        "null",
+        personnages.claire[0],
+        personnages.claire[1],
         personnages.claire[0],//315 
-        "null",
-        "null",
-        "null",
+        personnages.claire[0],
+        personnages.claire[0],
+        personnages.claire[0],
         "null",
         "null",//320 
         "null",
@@ -2000,23 +2001,23 @@ function Chapter()
         personnages.karolina[4],//330 
         personnages.karolina[4],
         personnages.karolina[0],
+        personnages.karolina[3],
+        personnages.karolina[3],
+        personnages.karolina[4],//335 
+        personnages.karolina[3],
+        personnages.karolina[3],
+        personnages.karolina[3],
+        personnages.karolina[3],
+        personnages.karolina[3],//340 
+        personnages.karolina[3],
         personnages.karolina[0],
-        personnages.karolina[0],
-        personnages.karolina[0],//335 
-        personnages.karolina[0],
-        personnages.karolina[0],
-        personnages.karolina[0],
-        personnages.karolina[0],
-        personnages.karolina[0],//340 
-        personnages.karolina[0],
-        personnages.karolina[0],
-        personnages.karolina[0],
-        personnages.karolina[0],
+        personnages.karolina[3],
+        personnages.karolina[3],
         personnages.karolina[4],//345 
-        "null",
-        "null",
-        "null",
-        "null",
+        personnages.karolina[4],
+        personnages.karolina[4],
+        personnages.karolina[3],
+        personnages.karolina[3],
         "null",//350 
         "null",
         "null",
@@ -2024,13 +2025,13 @@ function Chapter()
         "null",
         "null",//355 
         "null",
-        "null",
+        personnages.neha[0],
         "null",
         "null",
         "null",//360 
         "null",
-        "null",
-        "null",
+        personnages.neha[0],
+        personnages.neha[5],
         personnages.neha[0],
         personnages.neha[0],//365 
         personnages.neha[0],
@@ -2038,11 +2039,11 @@ function Chapter()
         personnages.neha[0],
         personnages.neha[0],
         personnages.neha[0],//370 
+        personnages.neha[5],
         personnages.neha[0],
         personnages.neha[0],
         personnages.neha[0],
-        personnages.neha[0],
-        personnages.neha[0],//375 
+        personnages.neha[4],//375 
         personnages.neha[0],
         personnages.neha[0],
         personnages.neha[0],
@@ -2052,7 +2053,7 @@ function Chapter()
         personnages.neha[0],
         personnages.neha[0],
         personnages.neha[0],
-        personnages.neha[0],//385 
+        personnages.neha[4],//385 
         personnages.neha[0],
         personnages.neha[0],
         personnages.neha[0],
@@ -2074,19 +2075,19 @@ function Chapter()
         personnages.neha[4],
         "null",//405 
         "null",
-        "null",
-        "null",
-        "null",
-        "null",//410 
-        "null",
-        "null",
-        "null",
+        personnages.neha[0],
+        personnages.neha[0],
+        personnages.neha[0],
+        personnages.neha[0],//410 
+        personnages.neha[0],
+        personnages.neha[0],
+        personnages.neha[0],
         personnages.neha[1],
-        personnages.neha[1],//415 
+        personnages.neha[0],//415 
         personnages.neha[0],
         personnages.neha[3],
         personnages.neha[3],
-        "null",
+        personnages.neha[0],
         "null",//420 
         "null",
         "null",
@@ -2096,12 +2097,12 @@ function Chapter()
         personnages.ellie[1],
         personnages.ellie[0],
         personnages.ellie[0],
-        personnages.ellie[0],
+        personnages.ellie[1],
         personnages.ellie[0],//430 
-        personnages.ellie[0],
-        personnages.ellie[0],
+        personnages.ellie[1],
+        personnages.ellie[1],
         "null",
-        "null",
+        personnages.ellie[0],
         personnages.ellie[1],//435 
         personnages.ellie[0],
         personnages.ellie[0],
@@ -2109,7 +2110,7 @@ function Chapter()
         personnages.ellie[0],
         personnages.ellie[1],//440 
         personnages.ellie[0],
-        personnages.ellie[4],
+        personnages.ellie[3],
         personnages.ellie[0],
         personnages.ellie[0],
         personnages.ellie[0],//445 
@@ -2140,27 +2141,27 @@ function Chapter()
         "null",//470 
         "null",
         "null",
-        personnages.tadashi[0],
-        "null",
-        personnages.tadashi[4],//475 
         personnages.tadashi[4],
         "null",
+        personnages.tadashi[3],//475 
+        personnages.tadashi[3],
         "null",
-        personnages.tadashi[0],
-        personnages.tadashi[0],//480 
-        personnages.tadashi[0],
-        personnages.tadashi[0],
+        "null",
+        personnages.tadashi[3],
+        personnages.tadashi[3],//480 
+        personnages.tadashi[3],
+        personnages.tadashi[4],
         "null",//483 Special Background
         "null",
         "null",//485 
-        personnages.tadashi[0],
+        personnages.tadashi[4],
         "null",
         "null",
         "null",
         "null",//490 
         personnages.tadashi[0],
-        personnages.tadashi[0],
-        personnages.tadashi[0],
+        personnages.tadashi[3],
+        personnages.tadashi[4],
         "null",
         "null",//495 
         "null",
@@ -2173,41 +2174,41 @@ function Chapter()
         "null",
         "null",
         "null",//505 
-        personnages.tadashi[0],
+        personnages.tadashi[3],
         personnages.tadashi[0],
         "null",
         "null",
         "null",//510 
         personnages.tadashi[0],
         "null",
-        "null",
+        personnages.tadashi[3],
         "null",
         "null",//515 
+        personnages.tadashi[3],
+        "null",
+        personnages.tadashi[3],
         personnages.tadashi[0],
-        "null",
-        "null",
-        "null",
-        "null",//520 
-        "null",
-        "null",
+        personnages.tadashi[0],//520 
+        personnages.tadashi[1],
+        personnages.tadashi[1],
         "null",
         "null",
         "null",//525 
         "null",
-        "null",
-        "null",
+        personnages.tadashi[3],
+        personnages.tadashi[3],
         "null",
         personnages.tadashi[4],//530 
-        "null",
-        "null",
-        "null",
+        personnages.tadashi[3],
+        personnages.tadashi[3],
+        personnages.tadashi[3],
         personnages.tadashi[3],
         personnages.tadashi[3],//535 
         personnages.tadashi[3],
         "null",
-        "null",
         personnages.tadashi[3],
-        personnages.tadashi[3],//540 
+        personnages.tadashi[3],
+        personnages.tadashi[4],//540 
         "null",
         "null",
         "null",
@@ -2215,13 +2216,13 @@ function Chapter()
         personnages.tadashi[4],//545 
         "null",
         "null",
+        personnages.tadashi[3],
         "null",
-        "null",
-        "null",//550 
-        "null",
-        "null",
-        "null",
-        "null",
+        personnages.tadashi[3],//550 
+        personnages.tadashi[3],
+        personnages.tadashi[3],
+        personnages.tadashi[0],
+        personnages.tadashi[0],
         "null",//555 
         "null",
         "null",
@@ -2305,26 +2306,26 @@ function Chapter()
         "null",//635 
         personnages.axel[0],
         "null",
-        personnages.axel[0],
+        personnages.axel[1],
         personnages.axel[0],
         personnages.axel[5],//640 
         "null",
         personnages.axel[0],
         "null",
         "null",
-        personnages.axel[0],//645 
-        "null",
+        personnages.axel[1],//645 
         personnages.axel[0],
         personnages.axel[0],
+        personnages.axel[0],
         "null",
-        "null",//650 
+        personnages.axel[0],//650 
         "null",
         "null",
         "null",
         personnages.axel[1],
         personnages.axel[0],//655 
         personnages.axel[2],
-        "null",
+        personnages.axel[0],
         personnages.axel[3],
         personnages.axel[0],
         personnages.axel[0],//660 
@@ -2337,7 +2338,7 @@ function Chapter()
         "null",
         personnages.axel[1],
         personnages.axel[1],
-        "null",//670 
+        personnages.axel[0],//670 
         personnages.axel[1],
         personnages.axel[0],
         personnages.axel[0],//673 GHOST SLIDE
@@ -2359,18 +2360,18 @@ function Chapter()
         personnages.axel[1],
         personnages.axel[1],//690 
         "null",
+        personnages.axel[0],
+        personnages.axel[0],
+        personnages.axel[0],
+        personnages.axel[0],//695 
+        personnages.axel[0],
+        personnages.axel[0],
+        personnages.axel[0],
+        personnages.axel[0],
+        personnages.axel[0],//700 
         personnages.axel[1],
         personnages.axel[0],
-        "null",
-        "null",//695 
-        "null",
-        "null",
-        "null",
-        "null",
-        personnages.axel[0],//700 
         personnages.axel[0],
-        "null",
-        "null",
         personnages.axel[0],
         personnages.axel[0],//705 
         personnages.axel[0],
@@ -2388,18 +2389,18 @@ function Chapter()
         "null",
         personnages.axel[0],
         "null",//720 
-        personnages.axel[0],
+        personnages.axel[3],
         personnages.axel[0],
         personnages.axel[0],
         "null",
         personnages.neha[0],//725 
         personnages.neha[0],
         "null",
-        personnages.karolina[0],
+        personnages.karolina[1],
         "null",
         "null",//730 
         "null",
-        personnages.axel[0],
+        personnages.axel[1],
         "null",
         personnages.karolina[0],
         personnages.karolina[0],//735 
@@ -2408,7 +2409,7 @@ function Chapter()
         personnages.karolina[0],
         personnages.karolina[0],
         "null",//740 
-        personnages.karolina[0],
+        personnages.karolina[3],
         personnages.karolina[0],
         "null",
         "null",
@@ -2462,16 +2463,16 @@ function Chapter()
         "null",
         "null",
         "null",
-        personnages.karolina[0],//795 
+        personnages.karolina[3],//795 
         "null",
         personnages.karolina[0],
-        personnages.karolina[0],
+        personnages.karolina[3],
         "null",
-        personnages.karolina[0],//800 
-        personnages.karolina[0],
-        "null",
+        personnages.karolina[3],//800 
         personnages.karolina[0],
         personnages.karolina[0],
+        personnages.karolina[3],
+        personnages.karolina[4],
         "null",//805 
         "null",
         "null",
@@ -2496,7 +2497,7 @@ function Chapter()
         "null",//5 
         "null",
         "null",
-        "null",
+        "null",//8 POPUP
         "null",
         "null",//10 
         "null",
@@ -2575,7 +2576,7 @@ function Chapter()
         "null",
         "Oh shit! Axel’s back from his tour? Man, he must be practicing his camouflage skills right now, haha! ",//85 
         "null",
-        "That’s the only thing that idiot’s good that. Can’t he just follow the dress code and come to class on time for one day? It would save me so much work…",
+        "That’s the only thing that idiot’s good that. Can’t he just follow the dress code and come to class on time for <em>one</em> day? It would save me so much work…",
         "null",
         "null",
         "null",//90 
@@ -2622,7 +2623,7 @@ function Chapter()
         "null",
         "null",
         "I like your problem solving skills, new kid. ",
-        "Come on man, I covered your ass for not showing up to class this morning.",
+        "null",
         "What did you say?",//135 
         "null",
         "null",
@@ -2661,7 +2662,7 @@ function Chapter()
         "Getting a job as an artist is hard you know! ",//170 
         "Oh shoot, I just remembered!",
         "We had this book to read for the summer… What was it called again? I need to read that before 4th period.",
-        "You don’t even know the title and you expect to read hundreds of pages just like that?",
+        "null",
         "You don’t know if you don’t try! Photographic memory, remember?",
         "null",//175 
         "Haha! See you later " + user.scholarname + ". ",
@@ -2681,7 +2682,7 @@ function Chapter()
         "null",//190 
         "null",
         "null",
-        "*Brrr*",
+        "null",
         "null",
         "null",//195 
         "null",
@@ -2965,7 +2966,7 @@ function Chapter()
         "Aw man, and I was so close to getting through the day without seeing you. ",
         "null",//475 
         "null",
-        "Or else what, Tadashi? You’re gonna give me… <em>detention</em>? ",
+        "Or else <em>what</em>, Tadashi? You’re gonna give me… <em>detention</em>? ",
         "My life is <em>ruined</em>!",
         "null",
         "null",//480 
@@ -3002,8 +3003,8 @@ function Chapter()
         "null",
         "You’re so bitter when you’re jealous, Tadashi. ",
         "null",
-        "Oh shit, that’s Mr./Mrs. Math/history/other teacher. ",
-        "Well, I’m going to bounce. I haven’t handed in an assignment in months and I know they’re not going to be happy with me. ",//515 
+        "Oh shit, that’s Ms. Rodriguez. ",
+        "Well, I’m going to bounce. I haven’t handed in an assignment in months and I know she's not going to be happy with me. ",//515 
         "null",
         "null",
         "null",
@@ -3025,7 +3026,7 @@ function Chapter()
         "null",
         "null",//535 
         "null",
-        "Hey! Chill! At least give him/her/them a chance to propose something. ",
+        "Hey! Chill! At least give " + user.scholarname + "a chance to propose something. ",
         "null",
         "null",
         "null",//540 
@@ -3034,7 +3035,7 @@ function Chapter()
         "Whatever. I’ll take care of them for now. I’m going to call my agent and make sure those idiots don’t show up on school grounds.",
         "But don’t get used to it, <em>Tadashit</em>.",
         "null",//545 
-        "Oh shit, that’s Mr./Mrs. Math/history/other teacher.",
+        "Oh shit, that’s Ms. Rodriguez.",
         "Well, I’m going to bounce. I haven’t handed in an assignment in months and I know they’re not going to be happy with me. ",
         "null",
         "null",
@@ -3129,7 +3130,7 @@ function Chapter()
         "null",
         "null",
         "null",//640 
-        "I have my ways",
+        "I have my ways.",
         "null",
         "Don’t worry, I didn’t bring in enough to get people drunk. Just a little tipsy, that’s all. There’s no way I’m cleaning up vomit and taking care of passed out people.",
         "The punchbowl is in my dorm. ",
@@ -3199,7 +3200,7 @@ function Chapter()
         "You’re definitely right about that. ",
         "There’s not much you can do about it. The only way to change things is to become an authority in said industry.",
         "And nobody takes you seriously if you don’t live up to the standards. You’ve got to know the rules before breaking them.",//710 
-        "Until then, you have to mind your own business and stay out of people’s lives. ",
+        "Until then, you have to mind your own business and <em>stay out of people’s lives</em>. ",
         "null",
         "null",
         "null",
@@ -3232,7 +3233,7 @@ function Chapter()
         "null",
         "null",
         "Oh…",
-        "(They both left towards Raquel’s dorm, where I assumed the drinks were. Neha turned around to give me a worried look.)",
+        "null",
         "null",//745 
         "null",
         "null",
@@ -3270,7 +3271,7 @@ function Chapter()
         "null",
         "I knew this would happen! She’s exhausted…",//780 
         "" + user.scholarname + ", should we move her? Get her to her bed?",
-        "null",
+        "How is she <em>that</em> drunk?",
         "null",//783 POPUP
         "null",
         "null",//785 
@@ -3287,7 +3288,7 @@ function Chapter()
         "Karol! What happened?",
         "null",
         "null",
-        "null",
+        "" + user.scholarname + " helped get you here-",
         "null",//800 
         "null",
         "null",
@@ -3317,7 +3318,7 @@ function Chapter()
         "null",//5 
         "null",
         "null",
-        "null",
+        "null",//8 POPUP
         "null",
         "null",//10 
         "null",
@@ -3372,7 +3373,7 @@ function Chapter()
         "null",//60 
         "null",
         "null",
-        personnages.alistair[0],
+        personnages.alistair[3],
         "null",
         personnages.raquel[0],//65 
         "null",
@@ -3383,15 +3384,15 @@ function Chapter()
         personnages.teacher[4],
         "null",
         "null",
-        personnages.raquel[3],
+        personnages.raquel[4],
         "null",//75 
         "null",
         "null",
         "null",
-        personnages.alistair[3],
+        personnages.alistair[4],
         "null",//80 
         personnages.tadashi[3],
-        personnages.tadashi[0],
+        personnages.tadashi[3],
         "null",
         "null",
         personnages.raquel[1],//85 
@@ -3401,7 +3402,7 @@ function Chapter()
         "null",
         "null",//90 
         "null",//91 TODO: Special Background Required
-        personnages.alistair[0],
+        personnages.alistair[5],
         "null",
         personnages.raquel[0],
         "null",//95 
@@ -3419,9 +3420,9 @@ function Chapter()
         "null",//107 TODO: Objectives
         "null",
         "null",
-        personnages.tyler[0],//110 
+        personnages.tyler[1],//110 
         "null",
-        personnages.tyler[3],
+        personnages.tyler[4],
         "null",
         personnages.tyler[1],
         "null",//115 
@@ -3446,8 +3447,8 @@ function Chapter()
         personnages.tyler[0],
         personnages.tyler[1],//135 
         personnages.tyler[0],
-        personnages.tyler[0],
-        personnages.tyler[0],
+        "null",
+        "null",
         "null",
         personnages.tyler[0],//140 
         personnages.tyler[0],
@@ -3456,7 +3457,7 @@ function Chapter()
         personnages.tyler[0],
         personnages.tyler[0],//145 
         personnages.tyler[0],
-        personnages.tyler[3],
+        personnages.tyler[4],
         personnages.tyler[0],
         personnages.tyler[0],
         personnages.tyler[0],//150 
@@ -3468,7 +3469,7 @@ function Chapter()
         personnages.tyler[0],
         personnages.tyler[0],
         personnages.tyler[0],
-        personnages.tyler[0],
+        "null",
         personnages.tyler[0],//160 
         personnages.tyler[0],
         personnages.tyler[0],
@@ -3482,9 +3483,9 @@ function Chapter()
         personnages.tyler[0],//170 
         personnages.tyler[5],
         personnages.tyler[0],
-        personnages.tyler[0],
-        personnages.tyler[0],
-        personnages.tyler[0],//175 
+        "null",
+        personnages.tyler[1],
+        "null",//175 
         personnages.tyler[1],
         "null",
         "null",
@@ -3783,7 +3784,7 @@ function Chapter()
         "null",
         "null",
         "null",
-        personnages.axel[0],
+        personnages.axel[3],
         "null",//475 
         "null",
         personnages.axel[0],
@@ -3793,32 +3794,32 @@ function Chapter()
         "null",
         "null",
         "null",//483 Special Background
+        personnages.axel[3],
+        personnages.axel[3],//485 
         "null",
-        personnages.axel[0],//485 
-        "null",
-        personnages.axel[0],
-        personnages.axel[0],
-        personnages.axel[0],
-        personnages.axel[0],//490 
+        personnages.axel[3],
+        personnages.axel[3],
+        personnages.axel[3],
+        personnages.axel[4],//490 
         "null",
         "null",
         "null",
         "null",
         "null",//495 
+        personnages.karolina[3],
         "null",
         "null",
         "null",
-        "null",
-        "null",//500 
-        "null",
-        "null",
+        personnages.axel[3],//500 
+        personnages.axel[3],
+        personnages.axel[3],
         personnages.axel[4],
+        personnages.axel[3],
+        personnages.axel[3],//505 
         "null",
-        personnages.axel[0],//505 
         "null",
-        "null",
-        "null",
-        personnages.axel[0],
+        personnages.axel[3],
+        personnages.axel[3],
         personnages.axel[0],//510 
         "null",
         personnages.axel[1],
@@ -3832,7 +3833,7 @@ function Chapter()
         "null",//520 
         "null",
         "null",
-        "null",
+        personnages.karolina[3],
         personnages.karolina[3],
         "null",//525 
         "null",
@@ -3840,9 +3841,9 @@ function Chapter()
         "null",
         personnages.axel[1],
         "null",//530 
-        "null",
-        "null",
-        "null",
+        personnages.axel[0],
+        personnages.axel[0],
+        personnages.axel[0],
         "null",
         "null",//535 
         "null",
@@ -3851,12 +3852,12 @@ function Chapter()
         "null",
         "null",//540 
         personnages.axel[0],
-        "null",
         personnages.axel[0],
-        "null",
+        personnages.axel[0],
+        personnages.axel[4],
         "null",//545 
         personnages.axel[5],
-        "null",
+        personnages.axel[0],
         "null",
         "null",
         "null",//550 
@@ -3933,27 +3934,27 @@ function Chapter()
         "null",
         "null",
         "null",
-        "null",
+        personnages.raquel[0],
         "null",//625 
-        "null",
+        personnages.raquel[0],
+        personnages.raquel[1],
         personnages.raquel[0],
         personnages.raquel[0],
-        "null",
-        "null",//630 
-        "null",
-        "null",
+        personnages.raquel[0],//630 
         personnages.raquel[0],
+        personnages.raquel[0],
+        personnages.raquel[1],
         "null",
         personnages.raquel[1],//635 
         personnages.raquel[0],
-        personnages.raquel[0],
+        personnages.raquel[1],
         "null",
         "null",
         "null",//640 
         personnages.raquel[0],
         "null",
         personnages.raquel[0],
-        "null",
+        personnages.raquel[0],
         "null",//645 
         "null",
         "null",
@@ -4020,26 +4021,26 @@ function Chapter()
         personnages.karolina[0],
         personnages.karolina[0],
         personnages.karolina[0],//710 
-        personnages.karolina[0],
+        personnages.karolina[3],
         "null",
         "null",
         "null",
         personnages.karolina[2],//715 
+        personnages.karolina[2],
+        personnages.karolina[2],
+        personnages.karolina[3],
         "null",
-        "null",
-        personnages.karolina[0],
-        "null",
-        personnages.karolina[0],//720 
+        personnages.karolina[3],//720 
         "null",
         "null",
         "null",
         personnages.karolina[0],
         "null",//725 
         "null",
-        personnages.axel[0],
+        personnages.axel[3],
         "null",
-        "null",
-        personnages.raquel[3],//730 
+        personnages.raquel[4],
+        personnages.raquel[4],//730 
         personnages.raquel[0],
         "null",
         "null",
@@ -4087,9 +4088,9 @@ function Chapter()
         "null",//775 
         "null",
         personnages.neha[5],
-        "null",
-        "null",
-        personnages.neha[5],//780 
+        personnages.neha[5],
+        personnages.neha[5],
+        personnages.neha[4],//780 
         personnages.neha[5],
         "null",
         "null",//783 POPUP
@@ -4105,16 +4106,16 @@ function Chapter()
         "null",
         "null",
         "null",//795 
+        personnages.neha[5],
+        "null",
+        "null",
         personnages.neha[0],
-        "null",
-        "null",
-        "null",
         "null",//800 
         "null",
         "null",
         "null",
         "null",
-        "null",//805 
+        personnages.neha[0],//805 
         "null",
         "null",
         "null",
@@ -4138,7 +4139,7 @@ function Chapter()
         locations.hall1,//5 
         locations.hall1,
         locations.hall1,
-        locations.hall1,
+        locations.hall1,//8 POPUP
         locations.hall1,
         locations.hall1,//10 
         locations.cafeteria,
@@ -4935,9 +4936,9 @@ function Chapter()
         locations.dorm,
         locations.dorm,
         locations.dorm,
-        locations.dormhall,//805 
-        locations.dormhall,
-        locations.dormhall,
+        locations.dorm,//805 
+        locations.dormHall,
+        locations.dormHall,
         locations.dorm,
         locations.dorm,
         locations.dorm,//810 
@@ -4959,7 +4960,7 @@ function Chapter()
         -1,//5 
         -1,
         -1,
-        -1,
+        -1,//8 POPUP
         -1,
         -2,//10 
         -1,
@@ -5780,7 +5781,7 @@ function Chapter()
         0,//5 
         0,
         0,
-        0,
+        0,//8 POPUP
         0,
         6,//10 
         0,
@@ -6025,7 +6026,7 @@ function Chapter()
         0,//250 
         0,
         0,
-        0,
+        6,
         0,
         0,//255 
         0,
@@ -6601,7 +6602,7 @@ function Chapter()
         -1,//5 
         -1,
         -1,
-        -1,
+        -1,//8 POPUP
         -1,
         -1,//10 
         -1,
@@ -7422,7 +7423,7 @@ function Chapter()
         -1,//5 
         -1,
         -1,
-        -1,
+        -1,//8 POPUP
         -1,
         -1,//10 
         -1,
@@ -8243,7 +8244,7 @@ function Chapter()
         -1,//5 
         -1,
         -1,
-        -1,
+        -1,//8 POPUP
         -1,
         -1,//10 
         -1,
@@ -9064,7 +9065,7 @@ function Chapter()
         -1,//5 
         -1,
         -1,
-        -1,
+        -1,//8 POPUP
         -1,
         -1,//10 
         -1,
@@ -9885,7 +9886,7 @@ function Chapter()
         -1,//5 
         -1,
         -1,
-        -1,
+        -1,//8 POPUP
         -1,
         -1,//10 
         -1,
@@ -10706,7 +10707,7 @@ function Chapter()
         "null",//5 
         "null",
         "null",
-        "null",
+        "null",//8 POPUP
         "null",
         "New Objective: Get some breakfast at the Cafeteria!",//10 
         "null",
@@ -10724,7 +10725,7 @@ function Chapter()
         "null",
         "null",
         "null",//25 
-        "I’ll pass, thank you. Let’s get moving, I’m [Scholar’s name] by the way.",
+        "I’ll pass, thank you. Let’s get moving, I’m " + user.scholarname + " by the way.",
         "null",
         "null",
         "null",
@@ -11527,7 +11528,7 @@ function Chapter()
         "null",//5 
         "null",
         "null",
-        "null",
+        "null",//8 POPUP
         "null",
         "null",//10 
         "null",
@@ -11545,7 +11546,7 @@ function Chapter()
         "null",
         "null",
         "null",//25 
-        "I’m [Scholar’s name], thank you so much! I can’t believe I’m late to class on my first day here… I feel so stupid.",
+        "I’m " + user.scholarname + ", thank you so much! I can’t believe I’m late to class on my first day here… I feel so stupid.",
         "null",
         "null",
         "null",
@@ -12348,7 +12349,7 @@ function Chapter()
         "null",//5 
         "null",
         "null",
-        "null",
+        "null",//8 POPUP
         "null",
         "null",//10 
         "null",
@@ -13169,7 +13170,7 @@ function Chapter()
         0,//5 
         0,
         0,
-        0,
+        0,//8 POPUP
         0,
         0,//10 
         0,
@@ -13990,7 +13991,7 @@ function Chapter()
         0,//5 
         0,
         0,
-        0,
+        0,//8 POPUP
         0,
         0,//10 
         0,
@@ -14811,7 +14812,7 @@ function Chapter()
         false,//5 
         false,
         false,
-        false,
+        false,//8 POPUP
         false,
         false,//10 
         false,
@@ -15632,7 +15633,7 @@ function Chapter()
         -1,//5 
         -1,
         -1,
-        -1,
+        -1,//8 POPUP
         -1,
         -1,//10 
         -1,
@@ -16453,7 +16454,7 @@ function Chapter()
         -1,//5 
         -1,
         -1,
-        -1,
+        -1,//8 POPUP
         -1,
         -1,//10 
         -1,
@@ -17264,6 +17265,7 @@ function Chapter()
         -1,
         -1,
         ];
+
 }
 
 Chapter();//the simple act of appending the .js file will load the chapter into memory
