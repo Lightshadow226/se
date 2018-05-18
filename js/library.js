@@ -19,6 +19,22 @@ Object.size = function(object)//returns the size of an object
     return size;
 };
 
+Element.prototype.remove = function()//get element by id
+{
+    this.parentElement.removeChild(this);
+}
+
+NodeList.prototype.remove = HTMLCollection.prototype.remove = function()//get element by class name
+{
+    for(var i = this.length - 1; i >= 0; i--)
+    {
+        if(this[i] && this[i].parentElement)
+        {
+            this[i].parentElement.removeChild(this[i]);
+        }
+    }
+}
+
 //*****PURPLE GAME BAR*****
 function updateGameBar()
 {
@@ -141,7 +157,6 @@ function getPersonnage(char)//returns the character from a sprite "char"
         else if(char == personnages.l_arlington[i])
         {
             char_pointer = lady_arlington;
-            // alert("karolina");
         }
         else
         {
@@ -362,49 +377,14 @@ function getHighestAffinity()//returns the character with the highest affinity
 }
 
 //*****OBJECTIVES*****
-function findLatestObjective(objective_container)//returns the last time there was a new objective
+function refreshBottomGameContainer()
 {
-    var x = -1;
+    refreshObjectiveContainer();
 
-    for(var i = 0; i < user.storyLocation; i++)
-    {
-        if(story[6][i] == -2)
-        {
-            x = i;
-        }
-    }
+    refreshProgressBar();
 
-    if(story[choiceA_text][x + 1].includes("Complete"))//if there is something after
-    {
-        // alert(story[choiceA_text][x + 1]);
-        objective_container.innerHTML += story[choiceA_text][x + 1];
-    }
-    else//if the objective i
-    {
-        if(story[13][x] != "null")//if there is a new objective in choice A
-        {
-            objective_container.innerHTML = story[13][x];
-        }
-        else
-        {
-            x = -1;
-        }
-
-        if(story[14][x] != "null")//if there is a new objective in choice B
-        {
-            objective_container.innerHTML += "<br>" + story[14][x];
-        }
-
-        if(story[15][x] != "null")//if there is a new objective in choice C
-        {
-            objective_container.innerHTML += "<br>" + story[15][x];
-        }
-    }
-
-    if(x == -1)
-    {
-        objective_container.innerHTML = "You have no objectives for now.";   
-    }
+    //We need to show all characters as a round image
+    refreshCharacters();
 }
 
 /* à améliorer en fonction de l'histoire parcourue (seulement s'il est possible de faire 1-2-3-4-5-12-6-7-30-15-16-17) */
@@ -412,51 +392,126 @@ function findLatestObjective(objective_container)//returns the last time there w
 function refreshObjectiveContainer()
 {
     var objective_container = document.getElementById('objectiveContainer');
-        objective_container.style.borderRadius = "10px";
-        objective_container.style.marginBottom = "300px";
-        objective_container.innerHTML = "";
+
+    var newObjectives = new Array();
+    var completedObjectives = new Array();
     
-    if(story[6][user.storyLocation] == -2)
+    //1. cycle through all slides
+    for(var i = 0; i < story[0].length; i++)
     {
-        if(story[13][user.storyLocation] != "null")//if there is a new objective in choice A
+        // console.log("Slide " + i + " is visited: " + story[isVisited][i] + "\n");
+
+        if(story[isVisited][i])
         {
-            objective_container.innerHTML = story[13][user.storyLocation];
+            //2. if slide was visited, did it have a new objective?
+            
+            if(story[special_option][i] == -8)//if there's a new objective
+            {
+                console.log("(Slide " + i + ") New Objective: " + story[new_objective_pointer][i]);
+                
+                newObjectives.push(story[new_objective_pointer][i]);
+                // objective_container.innerHTML += "New Objective: " + story[new_objective_pointer][i] + "<br>";
+            }
+        
+            //3. if slide was visited, did it have a completed objective?
+            
+            else if(story[special_option][i] == -9)//if there's a completed objective
+            {
+                var relevant_slide = story[completed_objective_pointer][i];
+                console.log("(Slide " + i + ") Objective Completed: " + story[new_objective_pointer][relevant_slide] + " \n -> Points to slide " + relevant_slide);
+
+                completedObjectives.push(story[new_objective_pointer][relevant_slide]);
+            }
         }
-        else
+    }
+
+    var netObjectives = new Array();
+
+    for(var i = 0; i < newObjectives.length; i++)
+    {
+        var isNew = true;
+
+        // console.log("testing for: \"" + newObjectives[i] + "\"")
+        
+        for(var j = 0; j < completedObjectives.length; j++)
         {
-            findLatestObjective(objective_container);//if there's nothing in choice A, then there is no new objective
+            if(newObjectives[i] == completedObjectives[j])
+            {
+                isNew = false;
+            }
         }
-    
-        if(story[14][user.storyLocation] != "null")//if there is a new objective in choice B
+
+        if(isNew)
         {
-            objective_container.innerHTML += "<br>" + story[14][user.storyLocation];
+            netObjectives.push(newObjectives[i]);
         }
-    
-        if(story[15][user.storyLocation] != "null")//if there is a new objective in choice C
-        {
-            objective_container.innerHTML += "<br>" + story[15][user.storyLocation];
-        }
+    }
+
+    //4. display the sum of all net new objectives
+    // console.log(netObjectives.length +" Final Results: \n");
+
+    if(netObjectives.length == 0)//if there are no objectives
+    {
+        objective_container.innerHTML = "You have no objectives for now.";
+        console.log("You have no objectives for now.");
     }
     else
     {
-        findLatestObjective(objective_container);
+        objective_container.innerHTML = "";
+
+        for(var i = 0; i < netObjectives.length; i++)
+        {
+            // console.log(netObjectives[i] + "\n");
+            objective_container.innerHTML += (netObjectives[i] + "<br>");
+        }
     }
+}
 
-    refreshProgressBar();
+function refreshProgressBar()
+{
+    var progressBarContainer = document.getElementById('progressBarContainer');
 
-    //We need to show all characters as a round image
-    objective_container.innerHTML += "<br>";
+    var logo = document.getElementById('progress_bar_logo');
+        logo.src = "images/favicon_outline.png";
+
+    var progressBar = document.getElementById('progress_bar');
     
+    var progress = user.storyLocation/chapterSize(user.last_chapter_played)*100;
+    console.log(progress);
+
+    if(progress > 10 && progress < 100)
+    {
+        progressBar.innerHTML = Math.round(progress) + "% <br>";
+        progressBar.style.color = "white";
+    }
+    else
+    {
+        progressBar.innerHTML = "<br>";
+    }
+    // progressBar.innerHTML = /*"Chapter progress: " +*/ Math.round(progress * 10) / 10 + "% <br>";//pour avoir 1 décimale
+
+    if(progress > 100)
+    {
+        progressBar.innerHTML = "100% Complete <br>";
+        progressBar.style.color = "white";
+        progressBar.style.width = "calc(100% - 10px)";
+    }
+    else
+    {
+        progressBar.style.width = "calc(" + progress + "% - 10px)";
+    }
+}
+
+function refreshCharacters()
+{
     var round_img_path = "images/game_images/sprites/round_portraits/";
     
-    var char_container = document.createElement('div');//contains all 10 portraits
-        char_container.id = "char_container";
+    var char_container = document.getElementById('char_container');//contains all 10 portraits
+        char_container.innerHTML = "";
 
-    objective_container.appendChild(char_container);
-    
     for(var i = 0; i < charList.length; i++)//on affiche tous les characters, et on mets un Event Listener pour quand on hover dessus
     {
-        var character = document.createElement('div');
+        var character = document.createElement('span');
             character.className = "char-container";
 
         var char = getPersonnageFromName(charList[i]);
@@ -479,46 +534,6 @@ function refreshObjectiveContainer()
         img.onmouseover = function (){document.getElementById("char" + this.id).className = "char_info_container"};
         img.onmouseout = function(){document.getElementById("char" + this.id).className = "char_info_container char_info_container_invisible"};
     }
-}
-
-function refreshProgressBar()
-{
-    var objective_container = document.getElementById('objectiveContainer');
-
-    var logo = document.createElement('img');
-
-        logo.id= "progress_bar_logo";
-        logo.src = "images/favicon_outline.png";
-        logo.style.width = "80px";
-        logo.style.height = "80px";
-        logo.style.marginTop = "-32px";
-        logo.style.marginLeft = "-15px";
-
-    var progressBarContainer = document.createElement('div');
-        progressBarContainer.id = "progress_bar_container";
-
-        var progressBar = document.createElement('div');
-            progressBar.id = "progress_bar";
-            progressBar.style.color = "white";
-
-    objective_container.appendChild(progressBarContainer);
-        progressBarContainer.appendChild(logo);
-        progressBarContainer.appendChild(progressBar);
-    
-    var progress = user.storyLocation/chapterSize(user.last_chapter_played)*100;
-    
-    // progressBar.innerHTML = "";
-    if(progress > 10)
-    {
-        progressBar.innerHTML = Math.round(progress) + "% <br>";
-    }
-    else
-    {
-        progressBar.innerHTML = "<br>";
-    }
-    // progressBar.innerHTML = /*"Chapter progress: " +*/ Math.round(progress * 10) / 10 + "% <br>";//pour avoir 1 décimale
-
-    progressBar.style.width = progress + "%";
 }
 
 //*****DESIGN*****
@@ -697,7 +712,7 @@ function toggle_pronouns(clicked, one, two)
 
 function wipeCurrentChapter()
 {
-    var chapterSize = story[isVisited].length;
+    var chapterSize = story[0].length;
 
     console.log("chapter size: " + chapterSize);
                     
@@ -711,21 +726,23 @@ function wipeCurrentChapter()
             //Left infinity meter
             if(story[4][j] != "null")//if there is a character 2 in this slide
             {
+                console.log(j + " story[4][j]: " + story[4][j]);
+
                 var relevant_char = getPersonnage(story[4][j]);
-                    relevant_char.affinity = Number(relevant_char.affinity);
-                    relevant_char.affinity -= Number(story[infinityConsequence2][j]);//on doit s'assurer que la valeur est un nombre, parce que sinon, parfois, ça fait juste carrément rajouter un zéro
+                relevant_char.affinity = Number(relevant_char.affinity);
+                relevant_char.affinity -= Number(story[infinityConsequence2][j]);//on doit s'assurer que la valeur est un nombre, parce que sinon, parfois, ça fait juste carrément rajouter un zéro
                 
                 if(Number(relevant_char.affinity) < 0)
                 {
                     relevant_char.affinity = 0;
                 }
-            
-                console.log(j + " story[4][j]: " + story[4][j]);
             }
-
+            
             //Right infinity meter
             if(story[2][j] != "null")//if there is a character 1 in this slide
             {
+                console.log(j + " story[2][j]: " + story[2][j]);
+
                 relevant_char = getPersonnage(story[2][j]);
                 relevant_char.affinity = Number(relevant_char.affinity);
                 relevant_char.affinity -= Number(story[infinityConsequence1][j]);
@@ -734,8 +751,6 @@ function wipeCurrentChapter()
                 {
                     relevant_char.affinity = 0;
                 }
-
-                console.log(j + " story[2][j]: " + story[2][j]);
             }
         }
 

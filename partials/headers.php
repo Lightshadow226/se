@@ -6,6 +6,9 @@
 
 ?>
 
+<head>
+<script src = "js/jquery_3.2.1.js"></script>
+</head>
 <header>
 
 	<div id="loader-wrapper">
@@ -20,7 +23,7 @@
 
 	<i style="display: none;"><?php echo guard(); ?></i>
 
-	<?php if((isset($_SESSION['username']) || isCookieValid($db))): ?><!-- If the username is specified (the user is logged on) -->
+	<?php if(isset($_SESSION['username'])):?><!-- If the username is specified (the user is logged on) -->
 
 		<div id="user_info">
 			<span style="position: absolute; left: 10px;">Welcome Back <?php if(isset($_SESSION['username'])) echo $_SESSION['username']; ?>!</span>
@@ -78,12 +81,13 @@
 
 </header>
 
-<script src = "js/jquery_3.2.1.js"></script>
 <!-- TODO: remove included files from most pages and add them here instead for them to always be loaded (variables.js, library.js) -->
 <!--
 <script src = "js/variables.js"></script>
 <script src = "js/library.js"></script>
 -->
+
+<!-- TODO: Put those scripts in a new JS file (headers.js)-->
 <script>
 
 	// highlights the current page in the header
@@ -104,7 +108,7 @@
 			var last3 = page.substr(page.length - 3);//to verify if the folder is simply "se/"
 			var last9 = pageName.substr(pageName.length - 9);//to verify if the page leads to "index.php"
 
-			if (page.indexOf(pageName) > -1)//returns the position of the word  || (pageName == "index"))
+			if (page.indexOf(pageName) > -1)//returns the position of the word in the URL || (pageName == "index", page == "http://localhost/se/index.php"))
 			{
 				$(this).addClass('menu-item-activated');
 			}

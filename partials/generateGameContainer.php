@@ -66,9 +66,31 @@
         </div>
     </div>
 
-    <!-- Objective Container -->
-    <div id = "objectiveContainer">
-        You have no objectives for now.
+    <!-- Objectives, Progress & Characters Container -->
+    <div id="opcContainer">
+
+        <!-- Objective Container -->
+        <h3>Objectives</h3>
+        <div id = "objectiveContainer">
+            
+        </div>
+
+        <!-- Progress Container -->
+        <br>
+        <h3>Progress</h3>
+        <div id = "progressBarContainer">
+            <img id="progress_bar_logo"/>
+            <div id="progress_bar"></div>
+
+        </div>
+
+        <!-- Characters Container -->
+        <br>
+        <br>
+        <h3>Characters</h3>
+        <div id = "char_container">
+
+        </div>
     </div>
 
     <!-- Test Container -->

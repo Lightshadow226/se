@@ -593,7 +593,7 @@ function Chapter()
         "(I heard the crowd boo at me for stopping the fight. People started to leave.)",
         "(Next)",//565 
         "(Next)",
-        "Getting in trouble because of paparazzi certainly isn’t worth it. Even if it could really screw up Tadashi’s file.",
+        "(Next)",
         "(Next)",
         "(He waved his cellphone in front of Tadashi’s face.)",
         "(Next)",//570 
@@ -1424,7 +1424,7 @@ function Chapter()
         "null",
         "null",//575 
         "null",
-        "How surprising.",
+        "Typical.",
         "null",
         "null",//579 Special Background
         "null",//580 
@@ -2224,25 +2224,25 @@ function Chapter()
         personnages.tadashi[0],
         personnages.tadashi[0],
         "null",//555 
-        "null",
-        "null",
-        "null",
+        personnages.tadashi[3],
+        personnages.tadashi[3],
+        personnages.tadashi[3],
         "null",
         "null",//560 
         "null",
         "null",
-        "null",
+        personnages.tadashi[5],
         "null",
         "null",//565 
         "null",
         "null",
-        personnages.tadashi[4],
+        personnages.tadashi[3],
         "null",
         "null",//570 
-        personnages.tadashi[0],
+        personnages.tadashi[3],
         "null",
-        "null",
-        "null",
+        personnages.tadashi[4],
+        personnages.tadashi[3],
         "null",//575 
         "null",
         personnages.tadashi[0],
@@ -2346,7 +2346,7 @@ function Chapter()
         "null",//675 
         personnages.axel[0],
         personnages.axel[0],
-        "null",
+        personnages.axel[0],
         "null",
         personnages.axel[0],//680 
         personnages.axel[0],
@@ -3056,7 +3056,7 @@ function Chapter()
         "null",
         "…",//565 
         "Well new kid, you’re certainly right about one thing.",
-        "null",
+        "Getting in trouble because of paparazzi certainly isn’t worth it. Even if it could really screw up Tadashi’s file.",
         "null",
         "Unfortunately, Tadashi, your assumption is wrong.",
         "My <em>agent</em> is going to take care of the situation. He’ll make sure those idiots don’t show up on school grounds anymore.",//570 
@@ -3064,7 +3064,7 @@ function Chapter()
         "No, but he could make sure you don’t show up on school grounds anymore as well.",
         "null",
         "null",
-        "Oh shit, that’s Mr./Mrs. Math/history/other teacher.",//575 
+        "Oh shit, that’s Ms. Rodriguez.",//575 
         "Well, I’m going to bounce. I haven’t handed in an assignment in months and I know they’re not going to be happy with me. ",
         "null",
         "null",
@@ -3866,27 +3866,27 @@ function Chapter()
         "null",
         "null",
         "null",//555 
+        personnages.axel[3],
         "null",
         "null",
+        personnages.axel[3],
+        personnages.axel[3],//560 
+        personnages.axel[3],
+        personnages.axel[3],
+        personnages.axel[5],
         "null",
-        "null",
-        "null",//560 
-        "null",
-        "null",
-        "null",
-        "null",
-        personnages.axel[0],//565 
+        personnages.axel[3],//565 
+        personnages.axel[0],
         personnages.axel[0],
         "null",
-        "null",
-        personnages.axel[0],
+        personnages.axel[3],
         personnages.axel[0],//570 
         "null",
-        personnages.axel[0],
+        personnages.axel[3],
         "null",
         "null",
         personnages.axel[5],//575 
-        "null",
+        personnages.axel[0],
         "null",
         "null",
         "null",//579 Special Background
@@ -17265,7 +17265,6 @@ function Chapter()
         -1,
         -1,
         ];
-
 }
 
 Chapter();//the simple act of appending the .js file will load the chapter into memory

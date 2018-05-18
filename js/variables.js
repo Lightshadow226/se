@@ -752,6 +752,10 @@ var oldUser = user;
     const POI = 19;
     const LP = 20;
 
+    //Objectives
+    const new_objective_pointer = 13;
+    const completed_objective_pointer = 19;
+    
 
 function loadIsVisited(chapter)
 {

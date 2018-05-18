@@ -26,31 +26,38 @@
         padding: 10px;
     }
 
-    #objectiveContainer
+    #opcContainer
     {
         color: black;
-        /* border: 2px solid #ff4956; */
-        /* border-radius: 20px; */
         background-color: white;
-        padding: 10px;
+        position: relative;
+
+        border-radius: 10px;
+        
         margin-top: 5px;
-        margin-bottom: 5px;
+        margin-bottom: 300px;
+
+        padding: 10px;
         font-weight: 400;
-        /* padding-bottom: 50px; */
+    }
+
+    #progressBarContainer
+    {
+        /* position: relative; */
+        height: 20px;
+        margin-top: 30px;
+        margin-bottom: 10px;
+        position: static;
     }
 
     #progress_bar_logo
     {
         position: absolute;
-        margin-top: -23px;
-    }
+        margin-top: -32px;
+        margin-left: -15px;
 
-    #progress_bar_container
-    {
-        height: 20px;
-        margin-top: 30px;
-        margin-bottom: 10px;
-        position: static;
+        width: 80px;
+        height: 80px;
     }
 
     #progress_bar
@@ -203,23 +210,21 @@
         background-color: #EFEEEA;
         /*padding: 20px; on met le padding dans le file JS plutôt que dans le CSS parce qu'on veut que le bubble disparaisse quand elle n'est pas utilisée*/
         padding: 20px;
+
+        max-width: 30%;
+        position: absolute;
+        top: 20%;
     }
 
     
     .bubble-right-character
     {
-        max-width: 40%;
-        position: absolute;
-        top: 20%;
         right: 40%;
     }
 
     .bubble-left-character
     {
-        max-width: 40%;
-        position: absolute;
-        top: 20%;
-        left: 60%;
+        left: 40%;
     }
 
     #game_overlay

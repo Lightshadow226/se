@@ -1,6 +1,26 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
 
+# Version 1.7.7 (Ch. 1 Objectives)
+## Fixed
+- `headers.php`
+    - placed the jquery in the <head> tag so that profile can load 
+- `chapter1.js`  `chapter1.xlsx`
+    - added objectives to Ch. 1
+    - TODO: the same for the other 2 chapters
+- `chapter2.js`  `chapter2.xlsx`
+    - Minor fixes to chapter 2 (in excel)
+- `sprite proportions`
+    - fixed the proportions for Lady Arlington (she only has 1 expression: base)
+    - TODO: get more expressions for all characters
+- `se-game.css`
+    - placed the text bubbles in a more natural way
+- `library.js`  `generateGameContainer.php`
+    - remade the objectives, progress and characters in the game
+    - The objectives work as intended for ch. 1
+    - ch. 0 and 2 are not adjusted yet in their excel files
+
+
 # Version 1.7.6 (Chapter 1 Issues, Sprite Proportions)
 ## Fixed
 - `gameengine.js`

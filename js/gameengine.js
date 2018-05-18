@@ -184,7 +184,6 @@ function refreshInterface()//REFRESHES the interface
         document.getElementById('romance_button').style.visibility = "hidden";
         document.getElementById('friendship_button').style.visibility = "hidden";
 
-
         var choiceA = document.getElementById('choiceA');
         var choiceB = document.getElementById('choiceB');
         var choiceC = document.getElementById('choiceC');
@@ -781,9 +780,35 @@ function refreshInterface()//REFRESHES the interface
 
             refreshInterface();
         }
-        else if(story[special_option][user.storyLocation] == -8)// -8 === affect the affinity of a character without displaying it -> then goto next slide ***** GHOST SLIDE
+        else if(story[special_option][user.storyLocation] == -8)// -8 === NEW OBJECTIVE ***** GHOST SLIDE
         {
-            
+            //Show a new objective
+            //1. get the objective
+
+            //2. display it (Make a popup)
+            refreshObjectiveContainer();
+
+            //3. goto next slide
+            story[isVisited][user.storyLocation] = true;
+            user.storyLocation++;//go to the next slide
+            refreshInterface();
+        }
+        else if(story[special_option][user.storyLocation] == -9)// -9 === OBJECTIVE COMPLETE ***** GHOST SLIDE
+        {
+            //Marks an objective as complete
+            //1. get the slide where the objective was created
+            var relevant_slide = story[completed_objective_pointer][user.storyLocation];
+            console.log("Objective Completed: " + story[new_objective_pointer][relevant_slide]);
+
+            //2. TODO: write that the objective is complete somewhere on the screen (Make a popup)
+
+            //3. remove the said objective from the objective section
+            refreshObjectiveContainer();
+
+            //4. goto next slide
+            story[isVisited][user.storyLocation] = true;
+            user.storyLocation++;//go to the next slide
+            refreshInterface();
         }
         else if(story[special_option][user.storyLocation] == -10)// -10 === the end of the chapter ***** GHOST SLIDE
         {
@@ -791,6 +816,10 @@ function refreshInterface()//REFRESHES the interface
             refreshInterface();
         }
         else if(story[special_option][user.storyLocation] == -11)// -11 === same as -7, but look at a slide from a previous chapter and then go to current chapter slide ***** GHOST SLIDE
+        {
+            
+        }
+        else if(story[special_option][user.storyLocation] == -12)// -12 === affect the affinity of a character without displaying it -> then goto next slide ***** GHOST SLIDE
         {
 
         }
@@ -808,7 +837,7 @@ function refreshInterface()//REFRESHES the interface
 
     story[isVisited][user.storyLocation] = true;
     
-    refreshObjectiveContainer();
+    refreshBottomGameContainer();
     refreshTestContainer();
 
     saveIsVisited();
@@ -1108,7 +1137,21 @@ function endOfChapter()
     document.getElementById('objectiveContainer').style.display = "none";
 
     // $.get('partials/replay.php');
-    $("#replay_handler").load("partials/replay.php");
+    $("#replay_handler").load("partials/replay.php", function (response, status, xhr)
+    {
+        // console.log(response);
+        document.getElementById("current-chapter-img").src = "images/general/chapter_images/chapter" + user.last_chapter_played + ".png";
+
+        var lastChapterAvailable = availableChapters - 1;
+
+        if(user.last_chapter_played == lastChapterAvailable)//if we just finished playing the latest chapter
+        {
+            document.getElementById("next-chapter-button").remove();
+        }
+    });
+
+    
+    // console.log(user.last_chapter_played);
 }
 
 function restartChapter()
@@ -1123,6 +1166,7 @@ function restartChapter()
     //hide the replay handler
     document.getElementById('replay_handler').style.display = "none";
 
+    refreshBottomGameContainer();
     refreshInterface();
 }
 
