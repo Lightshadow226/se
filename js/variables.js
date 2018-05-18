@@ -764,6 +764,7 @@ function loadIsVisited(chapter)
     {
         // TODO: encode the response in JSON directly in the php file
         // that way, there is no need to append to the DOM
+        // console.log(response);
         
         //we print the response in #DB_handle:
         $('#DB_handle').html(response);
@@ -779,7 +780,7 @@ function loadIsVisited(chapter)
             var new_variable = "c" + i;
             // console.log(new_variable);
             var isVisitedValue = document.getElementById(new_variable).value;
-            
+
             //convert from int to boolean 1 -> true
             var actualValue = false;
             if(isVisitedValue == 1) actualValue = true;
@@ -812,6 +813,7 @@ function saveIsVisited(chapter)
         jsonData[JSONpropertyName] = value;
     }
 
+    console.log("Saving isVisited: ");
     console.log(jsonData);
     
     //send the JSON data to the server

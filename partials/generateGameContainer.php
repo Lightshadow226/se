@@ -12,19 +12,19 @@
             <div id = "game_overlay">
                 
                 <!-- left content (contains the left character, A.K.A. Character 2) -->
-                <div id = "left_content" class = "left_content"></div>
+                <img id = "left_content" class = "left_content"></img>
 
                 <!-- middle content (Contains the two bubbles) -->
-                <div id = "middle_content" class = "middle_content">
-                    <div id = "bubble1" class="bubble"></div>
-                    <div id = "bubble2" class="bubble"></div>
+                <div id = "middle_content">
+                    <div id = "bubble1" class="bubble bubble-right-character"></div>
+                    <div id = "bubble2" class="bubble bubble-left-character"></div>
 
                     <!-- contains the navigation (buttons) -->
                     <div id = "navigation-container"></div>
                 </div>
                 
                 <!-- right content (contains the right character, A.K.A. Character 1) -->
-                <div id = "right_content" class = "right_content"></div>
+                <img id = "right_content" class = "right_content"></img>
                 
                 <!-- text container -->
                 <div id = "textContainer"></div>

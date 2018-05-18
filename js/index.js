@@ -131,14 +131,11 @@ function update_current_chapter(index, type)
             var left_wing = document.createElement('div');
                 left_wing.className = "flex-panel";
 
-            var play_episode_button = document.createElement('div');
+            var play_episode_button = document.createElement('a');
                 play_episode_button.id = currentChapter.number;//user.last_chapter_played;
                 play_episode_button.className = "button yellow_button";
                 play_episode_button.innerHTML = "Continue Playing";
-                play_episode_button.addEventListener( "click", function (e)
-                {
-                    window.open(get_button_ID(play_episode_button.id), "_self");
-                }, true);
+                play_episode_button.href = get_button_href(currentChapter.number);
 
             var right_wing = document.createElement('div');
                 right_wing.className = "flex-panel";
@@ -167,4 +164,31 @@ function get_button_ID(index)
     // {
     //     return "chapter2.php";
     // }
+}
+
+var slideIndex = 0;
+
+function showSlides()
+{
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    
+    for (i = 0; i < slides.length; i++)
+    {
+    slides[i].style.display = "none";  
+    }
+    
+    slideIndex++;
+    
+    if (slideIndex > slides.length) {slideIndex = 1}
+
+    for (i = 0; i < dots.length; i++)
+    {
+        dots[i].className = dots[i].className.replace(" dot-active", "");
+    }
+    
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " dot-active";
+    setTimeout(showSlides, 3000); // Change image every 3 seconds
 }

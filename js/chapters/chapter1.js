@@ -5844,5 +5844,3 @@ function Chapter()
 }
 
 Chapter();//the simple act of appending the .js file will load the chapter into memory
-
-loadIsVisited(user.last_chapter_played);

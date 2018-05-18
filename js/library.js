@@ -72,11 +72,11 @@ function chapterSize(chapter)//returns the size of a chapter (HAS TO BE MANUALLY
         }
         else if (chapter == 1)
         {
-            return 230;
+            return 273;
         }
         else if (chapter == 2)
         {
-            return 300;
+            return 817;
         }
     }
 }
@@ -478,36 +478,7 @@ function refreshObjectiveContainer()
 
         img.onmouseover = function (){document.getElementById("char" + this.id).className = "char_info_container"};
         img.onmouseout = function(){document.getElementById("char" + this.id).className = "char_info_container char_info_container_invisible"};
-
-        /*
-        img.addEventListener("mouseout",
-        function (e)
-        {
-            var char = getPersonnageFromName(x);
-            
-            // alert(char.name + "'s Affinity: " + char.affinity);
-
-            char_info_container.innerHTML = "";
-
-            char_info_container.className = "char_info_container_invisible";
-        },
-        true);*/
     }
-
-    /*  pour pouvoir afficher le character qui est à l'écran
-        var char_1 = getPersonnage(story[2][storyLocation]);
-        var char_2 = getPersonnage(story[4][storyLocation]);
-
-
-        if(char_1 + "" == "undefined")//if it is undefined, do nothing
-        {
-        }
-        else
-        {
-            objective_container.innerHTML += "<br>Character on page: " + char_1.name;
-        }
-    */
-
 }
 
 function refreshProgressBar()
@@ -575,16 +546,6 @@ function createLoader()//returns a loader as an HTMLElement
     loaderWrapper.appendChild(img_loader);
 
     return loaderWrapper;
-
-    // <div id="loader-wrapper">
-	// 	<div id="loader">
-	// 	</div>
-
-	// 	<img id="img_loader" src="logo.png"/>
-		
-	// 	<div class="loader-section section-left"></div>
-	// 	<div class="loader-section section-right"></div>
-    // </div>
 }
 
 //*****GAME ENGINE UTILITIES*****
@@ -790,6 +751,20 @@ function wipeCurrentChapter()
     pushVariablesToDB();
 
     console.log("Successfully wiped the memory for chapter " + user.last_chapter_played);
+}
+
+//used to get the reference to a chapter
+//ex.: the button on the index page uses get_button_href(current chapter) to get a link to the current chapter in the button
+function get_button_href(index)
+{
+    if(index <= user.last_chapter_played)//if we create a link to a past or current chapter
+    {
+        return "chapter" + index + ".php";
+    }
+    else//if we selected future chapters
+    {
+        return "#";//alert("Finish previous chapters first!");
+    }
 }
 
 // *********************************

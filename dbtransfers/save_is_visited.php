@@ -21,10 +21,27 @@ while($rs = $statement->fetch())//"rs" = "row statements"
 
 //Then, modify the correct table: chapterX_story
 $table = "chapter" . $last_chapter ."_story";
-$table_size = 102;
+
+//Get the size of the table (how many columns to save)
+
+//SOLUTION 1: $columnCount = (int) $_SERVER['CONTENT_LENGTH'];//also works
+
+//SOLUTION 2:
+$sqlQuery = "SELECT * FROM " . $table . " WHERE id = '$id'";
+$statement = $db->prepare($sqlQuery);
+$statement->execute(array(':id' => $id));
+
+$isVisited = array();
+
+while($rs = $statement->fetch())//"rs" = "row statements"
+{
+    $isVisited = $rs;//the variable username will contain the username of the last item of the array parsed
+}
+
+$columnCount = (sizeof($isVisited) / 2) - 1;
 
 //second, the correct variable to modify
-for($i = 0; $i < $table_size + 1; $i++)
+for($i = 0; $i < $columnCount + 1; $i++)
 {
     $column = "c" . $i;
     $columnValue = $_POST[$column];

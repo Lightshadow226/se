@@ -197,12 +197,29 @@
 
     .bubble
     {
-        margin-top: 100px;
+        /* margin-top: 100px; */
         border-radius: 10px;
         opacity: 0.85;
         background-color: #EFEEEA;
         /*padding: 20px; on met le padding dans le file JS plutôt que dans le CSS parce qu'on veut que le bubble disparaisse quand elle n'est pas utilisée*/
         padding: 20px;
+    }
+
+    
+    .bubble-right-character
+    {
+        max-width: 40%;
+        position: absolute;
+        top: 20%;
+        right: 40%;
+    }
+
+    .bubble-left-character
+    {
+        max-width: 40%;
+        position: absolute;
+        top: 20%;
+        left: 60%;
     }
 
     #game_overlay
@@ -231,23 +248,18 @@
 
     .left_content
     {
-        flex: 40;
         background-size: cover;
         height: 100%;
         width: auto;
+        margin-left: 100px;/*the affinity meter is 100px wide*/
     }
     
-    .middle_content
-    {
-        flex: 20;
-    } 
-
     .right_content
     {
-        flex: 40;
         background-size: cover;
         height: 100%;
         width: auto;
+        margin-right: 100px;/*the affinity meter is 100px wide*/
     }
 
     #textContainer

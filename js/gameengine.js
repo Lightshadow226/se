@@ -10,15 +10,151 @@ All rights reserved.
 September 02, 2017
 */
 
+loadIsVisited(user.last_chapter_played);
+
 $(function initializeInterface()//CREATES the entire interface once the document is $(document).READY()
 {
     refreshInterface();//Start the first instance of the game
 })
 
+function refreshBackgroundImage()
+{
+    document.getElementById('background_img').src = story[5][user.storyLocation];//l'image de background du jeu
+}
+
+function refreshLeftCharacter()
+{
+    var left_content = document.getElementById('left_content');//character 2
+
+    if(story[4][user.storyLocation] != "null")//if there is a character 2 in this slide
+    {
+        // left_content.style.backgroundImage = 'url(' + story[4][user.storyLocation] + ')';
+        left_content.src = story[4][user.storyLocation];
+        left_content.style.visibility = "visible";
+    }
+    else
+    {
+        left_content.src = '';
+        left_content.style.visibility = "hidden";
+    }
+
+    refreshBubble("left");//if there is something in bubble 2
+    refreshAffinity("left");
+}
+
+function refreshRightCharacter()
+{
+    var right_content = document.getElementById('right_content');//Contains Character 1
+    if(story[2][user.storyLocation] != "null")//if there is a character 1 in this slide
+    {
+        // right_content.style.backgroundImage = 'url(' + story[2][user.storyLocation] + ')';
+        right_content.src = story[2][user.storyLocation];
+        right_content.style.visibility = "visible";
+    }
+    else
+    {
+        right_content.src = '';
+        right_content.style.visibility = "hidden";
+    }
+    
+    refreshBubble("right");//if there is something in bubble 1
+    refreshAffinity("right");
+}
+
+function refreshBubble(side)
+{
+    var bubble;
+    
+    if(side ==  "right")//Right infinity meter
+    {
+        bubble = document.getElementById('bubble1');//bubble 1
+        pointer = 1;
+    }
+    else//Left infinity meter
+    {
+        bubble = document.getElementById('bubble2');//bubble 2
+        pointer = 3;
+    }
+
+    if(story[pointer][user.storyLocation] != "null")
+    {
+        bubble.innerHTML = story[pointer][user.storyLocation];//we display it in the correct bubble
+        bubble.style.visibility = "visible";
+    }
+    else
+    {
+        bubble.style.visibility = "hidden";
+        bubble.innerHTML = "";
+    }
+}
+
+function refreshAffinity(side)
+{
+    var affinity_meter;
+    var pointer = 0;
+    
+    if(side ==  "right")//Right infinity meter
+    {
+        affinity_meter = document.getElementById('infinity-meter-1');
+        pointer = 2;
+        infinityConsequencePointer = infinityConsequence1;
+    }
+    else//Left infinity meter
+    {
+        affinity_meter = document.getElementById('infinity-meter-2');
+        pointer = 4;
+        infinityConsequencePointer = infinityConsequence2;
+    }
+    
+    if(story[pointer][user.storyLocation] != "null")//if there is a character 1 in this slide, we append the infinity meter to the right
+    {
+        var relevant_char = getPersonnage(story[pointer][user.storyLocation]);
+            relevant_char.affinity = Number(relevant_char.affinity);
+            
+            if(!story[isVisited][user.storyLocation])
+            {
+                relevant_char.affinity += Number(story[infinityConsequencePointer][user.storyLocation]);
+            }
+            else
+            {
+                console.log("You've already visited this slide!");
+            }
+        
+        if(Number(relevant_char.affinity) < 0)
+        {
+            relevant_char.affinity = 0;
+        }
+        
+        affinity_meter.src = browseAffinity(relevant_char.affinity);//character 1 (right)
+
+        if(affinity_meter.style.visibility != "visible") affinity_meter.style.visibility = "visible";
+    }
+    else
+    {
+        affinity_meter.style.visibility = "hidden";
+    }
+}
+
+function refreshTextContainer()
+{
+    //Text Container: la bande de texte en bas du canvas, où on raconte l'histoire. (on peut cliquer dessus pour faire avancer l'histoire)
+    var textContainer = document.getElementById('textContainer');
+        textContainer.innerHTML = story[main_text][user.storyLocation]//on affiche le texte
+    
+    if(story[main_text][user.storyLocation] == "null")//if there is there is text to be displayed
+    {
+        textContainer.style.visibility = "hidden";
+    }
+    else
+    {
+        textContainer.style.visibility = "visible";
+    }
+
+}
+
 function refreshInterface()//REFRESHES the interface
 {
-    refreshTestContainer();
-    refreshObjectiveContainer();
+    // console.log("Current Affinity (beg): " + tadashi.affinity);
     
     if(user.storyLocation >= story[main_text].length)//si le chapitre ("story") est terminé
     {
@@ -32,120 +168,18 @@ function refreshInterface()//REFRESHES the interface
         var game_frame = document.getElementById('game_frame');
 
         //Background image
-        var background_img = document.getElementById('background_img');
-            background_img.src = story[5][user.storyLocation];//l'image de background du jeu
+        refreshBackgroundImage();
         
-        //Left Content
-        var left_content = document.getElementById('left_content');//character 2
-        if(story[4][user.storyLocation] != "null")//if there is a character 2 in this slide
-        {
-            left_content.style.backgroundImage = 'url(' + story[4][user.storyLocation] + ')';
-        }
-        else
-        {
-            left_content.style.backgroundImage = '';
-        }
+        //Left character (character, affinity, bubble)
+        refreshLeftCharacter();
 
-        //Middle Content
-        var middle_content = document.getElementById('middle_content');//bubbles & navigation container
-        var bubble1 = document.getElementById('bubble1');//bubble 1
-        var bubble2 = document.getElementById('bubble2');//bubble 2
-
-        //if there is something in bubble 1
-        if(story[1][user.storyLocation] != "null")
-        {
-            bubble1.innerHTML = story[1][user.storyLocation];//we display the text in bubble 1
-            bubble1.style.visibility = "visible";
-        }
-        else
-        {
-            bubble1.style.visibility = "hidden";
-            bubble1.innerHTML = "";
-        }
-
-        //if there is something in bubble 2
-        if(story[3][user.storyLocation] != "null")
-        {
-            bubble2.innerHTML = story[3][user.storyLocation];//we display it in bubble 2
-            bubble2.style.visibility = "visible";
-        }
-        else
-        {
-            bubble2.style.visibility = "hidden";
-            bubble2.innerHTML = "";
-        }
+        //Right Content (character, affinity, bubble)
+        refreshRightCharacter();
         
-        //Right Content
-        var right_content = document.getElementById('right_content');//Contains Character 1
-        if(story[2][user.storyLocation] != "null")//if there is a character 1 in this slide
-        {
-            right_content.style.backgroundImage = 'url(' + story[2][user.storyLocation] + ')';
-        }
-        else
-        {
-            right_content.style.backgroundImage = '';
-        }
+        //Text Container
+        refreshTextContainer();
         
-        //Text Container: la bande de texte en bas du canvas, où on raconte l'histoire. (on peut cliquer dessus pour faire avancer l'histoire)
-        var textContainer = document.getElementById('textContainer');
-            textContainer.innerHTML = story[main_text][user.storyLocation]//on affiche le texte
-            
-            if(story[main_text][user.storyLocation] == "null")//if there is there is text to be displayed
-            {
-                textContainer.style.visibility = "hidden";
-            }
-            else
-            {
-                textContainer.style.visibility = "visible";
-            }
-        
-        //Infinity Meters
-        var affinity_meter1 = document.getElementById('infinity-meter-1');
-        var affinity_meter2 = document.getElementById('infinity-meter-2');
-
         //TODO: on doit seulement ajouter le affinity si on n'a jamais visité la page
-
-        //Left infinity meter
-        if(story[4][user.storyLocation] != "null")//if there is a character 2 in this slide, we append the infinity meter to the left
-        {
-            var relevant_char = getPersonnage(story[4][user.storyLocation]);
-                relevant_char.affinity = Number(relevant_char.affinity);
-                relevant_char.affinity += Number(story[infinityConsequence2][user.storyLocation]);//on doit s'assurer que la valeur est un nombre, parce que sinon, parfois, ça fait juste carrément rajouter un zéro
-
-            if(Number(relevant_char.affinity) < 0)
-            {
-                relevant_char.affinity = 0;
-            }
-
-            affinity_meter2.src = browseAffinity(relevant_char.affinity);//character 2 (left)
-
-            affinity_meter2.style.visibility = "visible";
-        }
-        else
-        {
-            affinity_meter2.style.visibility = "hidden";
-        }
-            
-        //Right infinity meter
-        if(story[2][user.storyLocation] != "null")//if there is a character 1 in this slide, we append the infinity meter to the right
-        {
-            var relevant_char = getPersonnage(story[2][user.storyLocation]);
-                relevant_char.affinity = Number(relevant_char.affinity);
-                relevant_char.affinity += Number(story[infinityConsequence1][user.storyLocation]);
-            
-            if(Number(relevant_char.affinity) < 0)
-            {
-                relevant_char.affinity = 0;
-            }
-            
-            affinity_meter1.src = browseAffinity(relevant_char.affinity);//character 1 (right)
-
-            affinity_meter1.style.visibility = "visible";
-        }
-        else
-        {
-            affinity_meter1.style.visibility = "hidden";
-        }
 
         document.getElementById('romance_button').style.visibility = "hidden";
         document.getElementById('friendship_button').style.visibility = "hidden";
@@ -696,13 +730,14 @@ function refreshInterface()//REFRESHES the interface
 
             if(story[choiceC_text][user.storyLocation] == "null")//2 choix
             {
-                choiceC.style.visibility = "hidden";
+                choiceC.style.display = "none";
                 //choiceB.style.transform = "translateY(-" + 0 + "px)";//choice B needs to be at the bottom
                 $(choiceB).addClass("bottomChoice");
                 choiceA.style.transform = "translateY(-" + (choiceB.clientHeight) + "px)";//choice A needs to be above choice B only
             }
             else//3 choix
             {
+                choiceC.style.display = "block";
                 $(choiceC).addClass("bottomChoice");
                 choiceB.style.transform = "translateY(-" + choiceC.clientHeight + "px)";//choice B needs to be above choice C
                 choiceA.style.transform = "translateY(-" + (choiceB.clientHeight + choiceC.clientHeight) + "px)";//choice A needs to be above both choice B and C
@@ -748,7 +783,7 @@ function refreshInterface()//REFRESHES the interface
         }
         else if(story[special_option][user.storyLocation] == -8)// -8 === affect the affinity of a character without displaying it -> then goto next slide ***** GHOST SLIDE
         {
-
+            
         }
         else if(story[special_option][user.storyLocation] == -10)// -10 === the end of the chapter ***** GHOST SLIDE
         {
@@ -770,21 +805,21 @@ function refreshInterface()//REFRESHES the interface
                 browseLink(story[special_option][user.storyLocation], textContainer);
             };
     }
+
+    story[isVisited][user.storyLocation] = true;
     
-    
-    // console.log("oldUser: " + oldUser.storyLocation);
-    // console.log("User: " + user.storyLocation);
-    
+    refreshObjectiveContainer();
+    refreshTestContainer();
+
     saveIsVisited();
     pushVariablesToDB();
     updateGameBar();
+    // console.log("Current Affinity (end): " + tadashi.affinity);
 }
 
 //This function is to affect what happens when we click on the text container depending on the link
 function browseLink(link, element)//link is the link of the story (story[special_option][storyLocation]), element is the ID of the button on which the user clicked (which should be the location where the button is going)
 {
-    story[isVisited][user.storyLocation] = true;
-
     user.physicalLocation = story[5][user.storyLocation];
     user.physicalLocationInt = getLocationIndex(user.physicalLocation);
 

@@ -140,18 +140,6 @@ function create_line(index, type)
         // if(type == "finished"){line_middle_content.appendChild(replay_episode_button);}
 }
         
-function get_button_href(index)
-{
-    if(index <= current_chapter)//if we create a link to a past or current chapter
-    {
-        return "chapter" + index + ".php";
-    }
-    else//if we selected future chapters
-    {
-        return "#";//alert("Finish previous chapters first!");
-    }
-}
-
 /*
     A) Open a chapter through game.php
         1. if we click the current chapter, resume where it is

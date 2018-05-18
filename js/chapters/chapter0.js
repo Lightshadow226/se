@@ -2276,5 +2276,3 @@ function Chapter()
 Chapter();//the simple act of appending the .js file will load the chapter into memory
 
 // alert("ASDF");
-
-try{loadIsVisited();}catch(e){};//TODO: only if logged in
