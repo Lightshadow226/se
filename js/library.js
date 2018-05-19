@@ -158,6 +158,10 @@ function getPersonnage(char)//returns the character from a sprite "char"
         {
             char_pointer = lady_arlington;
         }
+        else if(char == personnages.teacher[i])
+        {
+            char_pointer = teacher;
+        }
         else
         {
             //char_pointer = tadashi;
@@ -225,9 +229,9 @@ function getPersonnageFromName(name)//returns a character from a string "name"
     {
         return cecile;
     }
-    else if(name == "Teacher 2")
+    else if(name == "Mrs. Rodriguez")
     {
-        return teacher_chapter_2;
+        return teacher;
     }
 }
 
@@ -461,7 +465,7 @@ function refreshObjectiveContainer()
 
         for(var i = 0; i < netObjectives.length; i++)
         {
-            // console.log(netObjectives[i] + "\n");
+            console.log(netObjectives[i] + "\n");
             objective_container.innerHTML += (netObjectives[i] + "<br>");
         }
     }
@@ -477,7 +481,7 @@ function refreshProgressBar()
     var progressBar = document.getElementById('progress_bar');
     
     var progress = user.storyLocation/chapterSize(user.last_chapter_played)*100;
-    console.log(progress);
+    // console.log(progress);
 
     if(progress > 10 && progress < 100)
     {

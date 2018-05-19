@@ -454,8 +454,8 @@ var genders = ["She/Her", "He/Him", "They/Them"];
         isDatable: false,//const
         affinity: 0,
         isCrush: false,
-        name: "Teacher",//const
-        fullName: "Teacher",//const
+        name: "Mrs. Rodriguez",//const
+        fullName: "Mrs. Rodriguez",//const
         path: "",//const, no caps
         birthday: "",//const
         likes: "",//const
@@ -618,11 +618,11 @@ var personnages =
                     ],
     charaY:         [
         characters_path + "../other/cecile/base.png",       // 0: base
-        characters_path + "../other/serena/happy.png",      // 1: happy
-        characters_path + "../other/serena/blush.png",      // 2: blush
-        characters_path + "../other/serena/annoyed.png",    // 3: annoyed
-        characters_path + "../other/serena/angry.png",      // 4: angry
-        characters_path + "../other/serena/surprise.png",   // 5: surprise
+        characters_path + "../other/cecile/happy.png",      // 1: happy
+        characters_path + "../other/cecile/blush.png",      // 2: blush
+        characters_path + "../other/cecile/annoyed.png",    // 3: annoyed
+        characters_path + "../other/cecile/angry.png",      // 4: angry
+        characters_path + "../other/cecile/surprise.png",   // 5: surprise
                     ],
     l_arlington:    [
                         characters_path + "../teachers/LadyArlington/base.png",    // 0 : Neutral expresion
@@ -633,12 +633,12 @@ var personnages =
                         characters_path + "../teachers/LadyArlington/surprise.png",// 5 : Neutral expresion
                     ],
     teacher:    [
-                        characters_path + "../teachers/LadyArlington/base.png",    // 0 : Neutral expresion
-                        characters_path + "../teachers/LadyArlington/happy.png",   // 1 : Neutral expresion
-                        characters_path + "../teachers/LadyArlington/blush.png",   // 2 : Neutral expresion
-                        characters_path + "../teachers/LadyArlington/annoyed.png", // 3 : Neutral expresion
-                        characters_path + "../teachers/LadyArlington/angry.png",   // 4 : Neutral expresion
-                        characters_path + "../teachers/LadyArlington/surprise.png",// 5 : Neutral expresion
+                        characters_path + "../teachers/math/base.png",    // 0 : Neutral expresion
+                        characters_path + "../teachers/math/happy.png",   // 1 : Neutral expresion
+                        characters_path + "../teachers/math/blush.png",   // 2 : Neutral expresion
+                        characters_path + "../teachers/math/annoyed.png", // 3 : Neutral expresion
+                        characters_path + "../teachers/math/angry.png",   // 4 : Neutral expresion
+                        characters_path + "../teachers/math/surprise.png",// 5 : Neutral expresion
                     ]
 };
 

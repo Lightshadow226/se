@@ -23,7 +23,6 @@ function Chapter()
     {
         story[i]= new Array();//il faut créer des arrays pour chaque array. Donc pour x[0], il faut créer des arrays, mais pour x[1] aussi, les deux sont indépendents. Il peut y avoir x[0][1][1][10] et x[1][2] qui coexistent
     }
-    
     //story[0] === Story Text
     story[0] = [
         "(I brushed my teeth and put on my clothes in record time. Clumsily grabbing my schoolbag, I rushed out of the dorms and made my way into the school, running.)",//0 
@@ -37,811 +36,827 @@ function Chapter()
         "Err…(My stomach was rumbling really loudly.)",//8 POPUP
         "I’m already late, might as well get breakfast and avoid starvation.",
         "null",//10 
+        "null",
         "(I made my way to the counter and ordered some food.)",
         "(As the lunch lady handed me my breakfast sandwich, I noticed someone taking a nap on one of the cafeteria tables, at the very back of the room.)",
         "(It was a boy with colored hair and a couple of piercings. He looked a little intimidating. I was reluctant to wake him up… he seemed to be having a nice nap.)",
-        "Well " + user.scholarname + ", he’s the only one who can help you since he isn’t in class like everyone else…",
-        "(Hesitantly, I made my way to the boy’s table and shook him gently.)",//15 
+        "Well " + user.scholarname + ", he’s the only one who can help you since he isn’t in class like everyone else…",//15 
+        "(Hesitantly, I made my way to the boy’s table and shook him gently.)",
         "Hey um, I’m sorry to wake you up but… I kind of need to ask you something?",
         "(The boy moved slightly, but only to reposition himself and fall back asleep.)",
         "(Awkward.)",
-        "(I shook him a little harder and raised my voice.)",
-        "I know you’re tired, but please? This is my first day of school here and I could really use some help right now.",//20 
+        "(I shook him a little harder and raised my voice.)",//20 
+        "I know you’re tired, but please? This is my first day of school here and I could really use some help right now.",
         "(The boy grunted before opening his eyes and giving me a death stare. I gulped.)",
         "(I had no idea why he would assume I wanted his autograph, but the sense of urgency that came with being late to class took over his intimidating words.)",
         "E-Excuse me, can you show me where this classroom is? (I showed him my schedule on my phone.)",
-        "(He took a quick look, then raised his eyebrow at me.)",
-        "(The name sounded familiar, but there was no time for guessing.)",//25 
+        "(He took a quick look, then raised his eyebrow at me.)",//25 
+        "(The name sounded familiar, but there was no time for guessing.)",
         "null",
         "(I followed him out of the cafeteria.)",
         "(Axel chuckled.)",
-        "H-How did you know?!",
-        "(He rolled his eyes, genuinely sounding exasperated. Then, he gave me a small grin.) ",//30 
+        "H-How did you know?!",//30 
+        "(He rolled his eyes, genuinely sounding exasperated. Then, he gave me a small grin.) ",
         "(I wonder what he meant by that.)",
         "(I followed him out of the cafeteria.)",
         "(Axel looked a little ticked off at my words, but shrugged nonetheless.)",
-        "(I followed him out of the cafeteria.)",
-        "null",//35 
+        "(I followed him out of the cafeteria.)",//35 
+        "null",//36 Objective Complete: Get some breakfast at the Cafeteria! 
+        "null",
+        "null",
         "Thank you so much!",
-        "(He left, waving his hand, heading back to the cafeteria.)",
+        "(He left, waving his hand, heading back to the cafeteria.)",//40 
         "World tour?",
         "(I shook my head.)",
-        "No time for that " + user.scholarname + ", you’re already over 20 minutes late…",//40 
+        "No time for that " + user.scholarname + ", you’re already over 20 minutes late…",
+        "null",//44 Objective Complete: Follow Axel and go back to the Main Hallway! 
+        "null",//45 
         "null",
         "(My heart beat wildly against my chest as I tried to sneak in as quietly as I could.)",
         "(But the room was so large that every single sound I made echoed. It only took a few seconds to be noticed by everybody.)",
         "(I wished I could go back to my dorm and crawl back into bed…)",
-        "(She went through the attendance list before her finger stopped at one name.)",//45 
+        "(She went through the attendance list before her finger stopped at one name.)",//50 
         "(Murmurs and whispers travelled around the room at the mention of my scholarship. I felt my cheeks burn.)",
         "(The whispers died.)",
         "(I could barely talk with all those eyes on me, my voice came out weakly.)",
         "I-I couldn’t find this classroom…",
-        "(I heard a couple of giggles. The teacher gave me a stern, but understanding look.)",//50 
+        "(I heard a couple of giggles. The teacher gave me a stern, but understanding look.)",//55 
         "(I let out a little sigh.)",
         "(Next)",
         "(I looked at the back of the class where Tadashi gave me a small wave. Karolina was busy putting on lipgloss.) ",
         "Alright ma’am. (I made my way to the empty seat.)",
-        "(I felt myself blush.) ",//55 
+        "(I felt myself blush.) ",//60 
         "null",
         "(Next)",
         "Well to be fair, yesterday’s photo fiasco really wore me out. I think I would’ve slept through my alarm anyway.",
         "(Next)",
-        "Hey! I tried to wake up, but I was so exhausted from yesterday’s picture day that I couldn’t have gotten up even if I tried.",//60 
+        "Hey! I tried to wake up, but I was so exhausted from yesterday’s picture day that I couldn’t have gotten up even if I tried.",//65 
         "Yes well, I’ve always been hard to wake up.",
         "(Alistair, who was sitting in front of Tadashi, turned around.)",
         "(Next)",
         "(I heard a scoff from behind us.)",
-        "(Next)",//65 
+        "(Next)",//70 
         "(Next)",
         "(Next)",
         "(It was hilariously sarcastic, yet innocent, and I couldn’t help but stifle a laugh. The teacher narrowed his eyes at both Raquel and me. My amusement died and I put on a straight face.)",
         "(Next)",
-        "(Next)",//70 
+        "(Next)",//75 
         "(Raquel promptly nodded and the teacher returned to the blackboard.)",
         "(Karolina rolled her eyes at all of us before putting down her lip gloss and smacking her lips.)",
         "(Next)",
         "(Next)",
-        "(Next)",//75 
+        "(Next)",//80 
         "(Next)",
         "(Next)",
         "(Next)",
         "(Next)",
-        "(It suddenly felt like the class’ temperature dropped several degrees.)",//80 
+        "(It suddenly felt like the class’ temperature dropped several degrees.)",//85 
         "(Tadashi narrowed his eyes at them.)",
         "(Next)",
         "(I have never seen Karolina blush before…She looks pretty embarrassed.)",
         "(She firmly clutched her makeup case, looking a little weak, and avoided his gaze. Why did Tadashi’s words hit her like that?)",
-        "(Next)",//85 
+        "(Next)",//90 
         "(Tadashi groaned.)",
         "(My mind darted back to earlier, to the boy I met in the cafeteria.)",
         "Wait, does he have dark hair with blonde tips, brown eyes, and piercings?",
         "(I stared at Raquel, perplexed.)",
-        "You mean, he’s actually famous?!",//90 
-        "(They all looked at me funny.)",//91 TODO: Special Background Required
+        "You mean, he’s actually famous?!",//95 
+        "(They all looked at me funny.)",//96 TODO: Special Background Required
         "(Next)",
         "(Next)",
         "(She handed me her cell phone. There was a picture of Axel, holding a guitar and performing on a stage in front of what seemed like thousands of people.)",
-        "Woah… (I knew Arlington was going to be filled with rich, upper class teenagers… but celebrities?!)",//95 
+        "Woah… (I knew Arlington was going to be filled with rich, upper class teenagers… but celebrities?!)",//100 
         "(I couldn’t believe it.)",
         "(I had actually spoken to a celebrity! And I might have classes with him!)",
         "(And this is only my first day at Arlington…)",
         "(Next)",
-        "(Next)",//100 
+        "(Next)",//105 
         "(The bell rang, and the others gathered their things. Raquel was the first to dart out of the classroom.)",
         "(Now that I think about it, I should’ve totally seen it coming.)",
         "(Axel was talking about a world tour, assumed I was going to ask for an autograph, and seemed very tired. I really should’ve pieced it all together.)",
         "(And I’m supposed to be a scholarship student...)",
-        "(This guy probably has a lot to deal with right now, but he seemed happy to talk to someone other than a fangirl.)",//105 
+        "(This guy probably has a lot to deal with right now, but he seemed happy to talk to someone other than a fangirl.)",//110 
         "(Maybe I should try to find him and see if he’s alright.)",
-        "(I should also try to talk to the people I met yesterday. I could use some friends around here.)",//107 TODO: Objectives
+        "(I should also try to talk to the people I met yesterday. I could use some friends around here.)",//112 TODO: Objectives
+        "null",//113 Objective Complete: Quick! Get into Classroom 1!  
+        "null",
+        "null",//115 
         "null",
         "(Tegan was speaking to a guy I hadn’t seen before.)",
-        "(Next)",//110 
         "(Next)",
         "(Next)",
+        "(Next)",//120 
         "(Next)",
         "Um, hey Tegan!",
-        "(Tegan gave me a small smile.)",//115 
+        "(Tegan gave me a small smile.)",
         "(Next)",
-        "I’m new here! My name is " + user.scholarname + ".",
+        "I’m new here! My name is " + user.scholarname + ".",//125 
         "(Next)",
         "(Next)",
-        "So, what are you guys up to?",//120 
+        "So, what are you guys up to?",
         "Party?",
-        "(Next)",
-        "(Next)",
-        "(Next)",
-        "(Next)",//125 
-        "(Next)",
-        "(Next)",
-        "null",
-        "null",
         "(Next)",//130 
         "(Next)",
         "(Next)",
         "(Next)",
         "(Next)",
         "(Next)",//135 
+        "null",
+        "null",
         "(Next)",
         "(Next)",
-        "Oh! I <em>have</em> met her! She’s the first person I met here.",
-        "You know, I really should’ve put two and two together. You look alike!",
         "(Next)",//140 
         "(Next)",
         "(Next)",
         "(Next)",
-        "null",
+        "(Next)",
         "(Next)",//145 
-        "(Next)",
-        "(Next)",
+        "Oh! I <em>have</em> met her! She’s the first person I met here.",
+        "You know, I really should’ve put two and two together. You look alike!",
         "(Next)",
         "(Next)",
         "(Next)",//150 
-        "Oh! I <em>have</em> met her! She’s the first person I met here.",
-        "You know, I really should’ve put two and two together. You look alike!",
+        "(Next)",
+        "null",
         "(Next)",
         "(Next)",
         "(Next)",//155 
         "(Next)",
         "(Next)",
-        "(Is Raquel hosting that party?)",
         "(Next)",
-        "(Next)",//160 
+        "Oh! I <em>have</em> met her! She’s the first person I met here.",
+        "You know, I really should’ve put two and two together. You look alike!",//160 
         "(Next)",
-        "Tadashi may be busy but I doubt he’ll bite. ",
-        "Oh come on, it can’t be <em>that</em> bad!",
+        "(Next)",
+        "(Next)",
         "(Next)",
         "(Next)",//165 
-        "You’ve got to trust your instincts sometimes, right?",
+        "(Is Raquel hosting that party?)",
         "(Next)",
+        "(Next)",
+        "(Next)",
+        "Tadashi may be busy but I doubt he’ll bite. ",//170 
+        "Oh come on, it can’t be <em>that</em> bad!",
+        "(Next)",
+        "(Next)",
+        "You’ve got to trust your instincts sometimes, right?",
+        "(Next)",//175 
         "Don’t rush it, the picture is probably not that important right?",
         "(Next)",
-        "Oh, right. I haven’t thought about it that way.",//170 
+        "Oh, right. I haven’t thought about it that way.",
+        "(Next)",
+        "(Next)",//180 
         "(Next)",
         "(Next)",
         "(Next)",
-        "(Next)",
-        "(Next)",//175 
         "Later, you guys!",
-        "null",
+        "null",//185 
         "(Alistair is in the back of the gym, lifting weights.)",
         "(Once he saw me, he put his dumbell down and waved at me.)",
-        "Do you do this everyday?",//180 
+        "Do you do this everyday?",
         "You must be passionate!",
-        "(Next)",
+        "(Next)",//190 
         "Yes, I know what the Olympic games are, haha!",
         "I’m just surprised that you can train for that, here at Arlington. I mean, isn’t that ambitious for a high school student?",
-        "(Next)",//185 
         "(Next)",
-        "Wow! Do you have a professional boxing name?",
+        "(Next)",
+        "Wow! Do you have a professional boxing name?",//195 
         "I’ll try to pitch in some ideas, then!",
         "(Next)",
-        "It’s just, you have to train really really hard for that. Only the best make it in. Could you handle rejection?",//190 
+        "It’s just, you have to train really really hard for that. Only the best make it in. Could you handle rejection?",
         "(Alistair’s eyes were glued to the floor. I couldn’t help but feel bad for bringing it up.)",
-        "I’m sure you can make it though!",
+        "I’m sure you can make it though!",//200 
         "(Alistair’s phone vibrated. He took it out, read his text, and broke into a huge smile.)",
         "Woah, I’ve never seen someone become so happy because of a text!",
-        "(Next)",//195 
-        "(Next)",
-        "null",
-        "null",
-        "(Next)",
-        "(Next)",//200 
         "(Next)",
         "(Next)",
+        "null",//205 
         "null",
         "(Next)",
-        "I’m an only child, and since it’s just me and my dad, I kind of grew up alone.",//205 
+        "(Next)",
+        "(Next)",
+        "(Next)",//210 
+        "null",
+        "(Next)",
+        "I’m an only child, and since it’s just me and my dad, I kind of grew up alone.",
         "So I think you’re really lucky!",
-        "(Next)",
+        "(Next)",//215 
         "Haha! I’d be happy to meet them!",
         "I’ll be ready. ",
-        "(Next)",//210 
         "(Next)",
         "(Next)",
+        "(Next)",//220 
         "(Next)",
         "(Next)",
-        "(Wait, what?)",//215 
+        "(Wait, what?)",
         "You’re a scholarship student too?!",
-        "(Somehow, this made me really happy. I wasn’t the only one in my class!)",
+        "(Somehow, this made me really happy. I wasn’t the only one in my class!)",//225 
         "Tell me about it…",
         "(I really hope he’s right.)",
-        "(Next)",//220 
+        "(Next)",
         "I guess so…",
-        "Later Alistair!",
+        "Later Alistair!",//230 
         "null",
         "Hey Tadashi! ",
-        "null",//225 
+        "null",
         "I saw him in the cafeteria. He’s the one that showed me where my class was this morning. I probably wouldn’t have made it otherwise. ",
-        "(Next)",
+        "(Next)",//235 
         "He actually did snap at me. He was taking a nap and I woke him up to ask for directions. I think he thought I was going to ask him for an autograph.",
         "(Next)",
-        "No problem! But why is it so important for you to find him?",//230 
+        "No problem! But why is it so important for you to find him?",
         "(Tadashi sighed.)",
-        "(Next)",
+        "(Next)",//240 
         "(Next)",
         "Oh, I understand.",
-        "But how come the school isn’t taking action against the paparazzi?",//235 
+        "But how come the school isn’t taking action against the paparazzi?",
         "(Next)",
-        "(Next)",
+        "(Next)",//245 
         "(Next)",
         "Later!",
-        "Nope. ",//240 
+        "Nope. ",
         "(Next)",
-        "(Next)",
+        "(Next)",//250 
         "(Next)",
         "(Tadashi gave me menacing eyes.)",
-        "(Seeing Tadashi so mad made me shudder.)",//245 
+        "(Seeing Tadashi so mad made me shudder.)",
         "(He seemed to have a good reason to search for Axel too…)",
-        "He was in the cafeteria this morning. ",
+        "He was in the cafeteria this morning. ",//255 
         "(Tadashi took a step back, the anger in his eyes slowly fading away to make place for satisfaction.)",
         "(He left quickly, walking straight towards the cafeteria.)",
-        "(Great thinking " + user.scholarname + ", you try to make friends, but you only end up making the number one ranked kid of the Academy mad at you.)",//250 
+        "(Great thinking " + user.scholarname + ", you try to make friends, but you only end up making the number one ranked kid of the Academy mad at you.)",
         "*Sigh*",
-        "(I should try talking to someone else.) ",
+        "(I should try talking to someone else.) ",//260 
         "null",
         "(I entered the cafeteria, which was already full of people.)",
-        "(I looked around, hoping to spot Axel in the crowd, but he was nowhere to be found.)",//255 
+        "(I looked around, hoping to spot Axel in the crowd, but he was nowhere to be found.)",
         "(Raquel wasn’t kidding when she said he was a pro at hiding.)",
-        "(Speak of the devil!)",
+        "(Speak of the devil!)",//265 
         "Really? I wonder why I didn’t get detention. ",
         "Oh man, I hate my alarm so much for not ringing. ",
-        "(Next)",//260 
+        "(Next)",
         "(That’s the party Tyler was talking about earlier!)",
-        "Arlington Academy allows us to throw dorm parties?!",
+        "Arlington Academy allows us to throw dorm parties?!",//270 
         "...What?",
         "(Next)",
-        "(Next)",//265 
         "(Next)",
-        "(Next)",
-        "Wow. I always imagined Arlington Academy students to be more…",
-        "Well...uh…",
-        "Oh.",//270 
-        "(She winked at me.)",
-        "null",
-        "null",
         "(Next)",
         "(Next)",//275 
-        "Well you can’t blame me for thinking of the possibilities. ",
+        "Wow. I always imagined Arlington Academy students to be more…",
+        "Well...uh…",
+        "Oh.",
+        "(She winked at me.)",
+        "null",//280 
+        "null",
         "(Next)",
+        "(Next)",
+        "Well you can’t blame me for thinking of the possibilities. ",
+        "(Next)",//285 
         "null",
         "Hey, it’s true! I’d definitely want to hang out with you more. Especially outside of class.",
-        "(Next)",//280 
         "(Next)",
-        "Well you can’t blame me for thinking of the possibilities. ",
+        "(Next)",
+        "Well you can’t blame me for thinking of the possibilities. ",//290 
         "(Next)",
         "null",
-        "Haha! You’re tempting me!",//285 
+        "Haha! You’re tempting me!",
         "(Next)",
-        "Oh, wow. Then I’ll definitely consider.",
+        "Oh, wow. Then I’ll definitely consider.",//295 
         "Nah, it’s only because you make it sound so fun.",
         "(Next)",
-        "Okay!",//290 
+        "Okay!",
         "(Raquel took a quick look at her phone before gasping.)",
-        "(She gobbled up her sandwich in a record time.)",
+        "(She gobbled up her sandwich in a record time.)",//300 
         "(I doubt that’s good for you before playing sports… She could get a cramp.)",
         "See ya!",
-        "null",//295 
+        "null",
         "(I entered the classroom and immediately spotted Claire at the back.)",
-        "(She was on the phone and looked pretty upset.)",
+        "(She was on the phone and looked pretty upset.)",//305 
         "(Next)",
         "(Next)",
-        "(She stopped when she saw me.)",//300 
+        "(She stopped when she saw me.)",
         "(Next)",
-        "Oh, no actually. I was just wandering around, looking for someone to talk to.",
+        "Oh, no actually. I was just wandering around, looking for someone to talk to.",//310 
         "null",
         "(Next)",
-        "(Next)",//305 
         "(Next)",
-        "(Next)",
-        "So...What’s up?",
-        "(Next)",
-        "null",//310 
-        "Woah, that’s awesome! ",
-        "(Next)",
-        "I’m sure you will.",
         "(Next)",
         "(Next)",//315 
-        "Oh, it’s okay. I hope things work out in the end!",
+        "So...What’s up?",
         "(Next)",
+        "null",
+        "Woah, that’s awesome! ",
+        "(Next)",//320 
+        "I’m sure you will.",
+        "(Next)",
+        "(Next)",
+        "Oh, it’s okay. I hope things work out in the end!",
+        "(Next)",//325 
         "Talk to you later, Claire!",
         "null",
-        "(When I entered the dorms, I heard a few sobs coming from the bathrooms.)",//320 
+        "(When I entered the dorms, I heard a few sobs coming from the bathrooms.)",
         "(Curious, I walked over to the door.)",
-        "(That’s when I heard a familiar voice....)",
+        "(That’s when I heard a familiar voice....)",//330 
         "(Were those...tears in her eyes?)",
         "(She looked very distressed, and it was making me a little concerned. Karolina didn’t seem like the type of person that could be easily shaken.)",
-        "(I decided to make my presence known.)",//325 
+        "(I decided to make my presence known.)",
         "Hey, Karolina? Are you okay?",
-        "(The moment she saw me, Karolina’s eyes went cold and all traces of emotions on her face were gone.)",
+        "(The moment she saw me, Karolina’s eyes went cold and all traces of emotions on her face were gone.)",//335 
         "(I was speechless.)",
         "I-I… I was just wondering if you-",
-        "(She narrowed her eyes at me and walked over me, slowly.)",//330 
+        "(She narrowed her eyes at me and walked over me, slowly.)",
+        "(Next)",
+        "(Next)",//340 
         "(Next)",
         "(Next)",
-        "(Next)",
-        "(Next)",
-        "(Her words struck me like little ice shards.)",//335 
+        "(Her words struck me like little ice shards.)",
         "(I couldn’t believe it...Was I really being treated this way because of my scholarship?)",
-        "(Was this why she and Alistair clashed earlier during class?)",
+        "(Was this why she and Alistair clashed earlier during class?)",//345 
         "null",
         "You’re judging me without even getting to know me. ",
-        "So yeah, I <em>will</em> stay out of your way. I’d rather die than to have friends as closed-minded and stuck up as you. ",//340 
+        "So yeah, I <em>will</em> stay out of your way. I’d rather die than to have friends as closed-minded and stuck up as you. ",
         "Good luck \"dominating\" the Fashion industry with that crappy attitude. ",
-        "(Next)",
+        "(Next)",//350 
         "(I was getting more and more upset.)",
         "Look, I just wanted to know if you were alright. I heard you crying and-",
-        "(She instantly flared up, her cold demeanor vanishing.)",//345 
+        "(She instantly flared up, her cold demeanor vanishing.)",
         "(Next)",
-        "(I was getting more and more upset.)",
+        "(I was getting more and more upset.)",//355 
         "(Karolina cleared her throat and took her makeup bag with her.)",
         "(She left the bathroom without saying anything else.)",
-        "Ugh! (I felt so enraged...and hurt.)",//350 
+        "Ugh! (I felt so enraged...and hurt.)",
         "(I can’t believe how quickly her opinion about me changed...just yesterday, she was being civil and now, I’m not good enough to even <em>speak</em> to her?!)",
-        "(How many students were like Karolina? How many of them would treat me this way because of my scholarship?)",
+        "(How many students were like Karolina? How many of them would treat me this way because of my scholarship?)",//360 
         "(Would I even be able to make some friends at Arlington? Especially considering I have someone like Karolina as my dorm neighbor...)",
         "*Sigh*",
-        "null",//355 
+        "null",
         "(I made my way to the second hallway, where I spotted Neha sitting on one of the couches.)",
-        "(She was scribbling what looked like clothes in a sketchbook.)",
+        "(She was scribbling what looked like clothes in a sketchbook.)",//365 
         "(Karolina’s warning echoed in my head…)",
         "(But from what I’ve seen from Tadashi and Neha, they don’t seem to care about my scholarship.)",
-        "(...)",//360 
+        "(...)",
         "(I can’t let Karolina intimidate me like this. If Neha and I get along, there’s nothing she can do about it.)",
-        "Hey Neha!",
+        "Hey Neha!",//370 
         "(She jumped slightly out of surprise, she must have been very focused on her designs.)",
         "Oh, okay. (She was much more aloof now compared to yesterday.)",
-        "(Was it because she heard about my scholarship?)",//365 
+        "(Was it because she heard about my scholarship?)",
         "…",
-        "(No, I can’t assume these things. It’s best for me to judge her behaviour without being influenced by my feelings.)",
+        "(No, I can’t assume these things. It’s best for me to judge her behaviour without being influenced by my feelings.)",//375 
         "Actually Neha, can I ask you a question?",
         "(She didn’t bother looking up from her sketchpad.)",
-        "I saw Karolina in the dorm bathrooms… She didn’t look too good.",//370 
+        "I saw Karolina in the dorm bathrooms… She didn’t look too good.",
         "(THAT, however, made her eyes shoot up.)",
-        "I think she was crying. She kept repeating that she should work harder for something. ",
+        "I think she was crying. She kept repeating that she should work harder for something. ",//380 
         "Do you know what’s up?",
         "(Neha paused for a second, soaking in my words, then let out a heavy sigh.)",
-        "(Next)",//375 
         "(Next)",
         "(Next)",
-        "null",
-        "(Next)",
-        "Well…",//380 
-        "(I debated whether or not I should tell her about my confrontation with Karolina, but maybe it would help Neha find out what’s going on.)",
-        "When I saw Karolina in the bathroom, I tried to ask her if she was okay. ",
-        "She completely shut me out and told me that I should stay away from both you and Tadashi.",
-        "She....She said it was because of my scholarship.",
         "(Next)",//385 
-        "(It’s pretty sad to be this closed off to people. Is Karolina this hard to befriend? Should I even bother?)",
-        "Yeah...After seeing her so distressed I tried to ask her if she was alright, but…",
-        "*Sigh*",
-        "She told me to stay away from you and Tadashi. She told me you guys didn’t need a 'useless scholarship student' as a friend.",
-        "(Next)",//390 
+        "null",
         "(Next)",
         "Well…",
         "(I debated whether or not I should tell her about my confrontation with Karolina, but maybe it would help Neha find out what’s going on.)",
-        "When I saw Karolina in the bathroom, I tried to ask her if she was okay. ",
-        "She completely shut me out and told me that I should stay away from both you and Tadashi.",//395 
-        "She… She said it was because of my scholarship.",
+        "When I saw Karolina in the bathroom, I tried to ask her if she was okay. ",//390 
+        "She completely shut me out and told me that I should stay away from both you and Tadashi.",
+        "She....She said it was because of my scholarship.",
         "(Next)",
+        "(It’s pretty sad to be this closed off to people. Is Karolina this hard to befriend? Should I even bother?)",
+        "Yeah...After seeing her so distressed I tried to ask her if she was alright, but…",//395 
+        "*Sigh*",
+        "She told me to stay away from you and Tadashi. She told me you guys didn’t need a 'useless scholarship student' as a friend.",
+        "(Next)",
+        "(Next)",
+        "Well…",//400 
+        "(I debated whether or not I should tell her about my confrontation with Karolina, but maybe it would help Neha find out what’s going on.)",
+        "When I saw Karolina in the bathroom, I tried to ask her if she was okay. ",
+        "She completely shut me out and told me that I should stay away from both you and Tadashi.",
+        "She… She said it was because of my scholarship.",
+        "(Next)",//405 
         "(Next)",
         "null",
-        "(Next)",//400 
+        "null",
         "(Next)",
+        "(Next)",//410 
         "(Next)",
         "But that’s crazy! You can’t judge someone without knowing them. She cannot know whether or not someone will be a ‘worthy addition’ to her life right away.",
         "(There was something about the way she said it that almost made me shiver.)",
-        "(The more I spend time with Arlington Academy students, the more I feel like I’m not in the same league as them.)",//405 
-        "(I don’t think I’ll ever get close.)",
+        "(The more I spend time with Arlington Academy students, the more I feel like I’m not in the same league as them.)",
+        "(I don’t think I’ll ever get close.)",//415 
         "Hey… Neha?",
         "Do you care about my scholarship? I mean, despite Karolina hating me now, you don’t seem to mind.",
         "(It took a couple of moments for her to answer me. Her eyes stared at the floor and she seemed to be fighting her thoughts.)",
-        "(Next)",//410 
         "(Next)",
+        "(Next)",//420 
         "I understand. (Still, ouch.)",
         "...We can still be friends though, right?",
         "I’ll try to help in any way I can!",
-        "(Next)",//415 
-        "You sell the clothes you make?",
+        "(Next)",
+        "You sell the clothes you make?",//425 
         "(Next)",
         "Woah, alright! (It’s almost scary how Neha went from smiling, normal teenager to fashion tycoon in less than 10 seconds.)",
         "See you later, Neha!",
-        "null",//420 
-        "(Lunchtime was almost over, so I checked my schedule to make sure I knew where my classes where.)",
+        "null",
+        "(Lunchtime was almost over, so I checked my schedule to make sure I knew where my classes where.)",//430 
         "(My next class is in this classroom.)",
         "(I hadn’t noticed the small group of people in the back of the class.)",
         "H-Hi! What are you guys up to?",
-        "Oh! No, take your time! I was just exploring.",//425 
-        "(Next)",
+        "Oh! No, take your time! I was just exploring.",
+        "(Next)",//435 
         "(Next)",
         "(Next)",
         "(The rest of the group started to leave the class. Ellie stayed around, writing down a few things on a notepad.)",
-        "I’ve never seen someone so excited about starting school, haha!",//430 
-        "(Next)",
+        "I’ve never seen someone so excited about starting school, haha!",
+        "(Next)",//440 
         "(Next)",
         "null",
         "null",
-        "Name your price.",//435 
-        "(Next)",
+        "Name your price.",
+        "(Next)",//445 
         "(Next)",
         "(Next)",
         "Aw, that’s too bad. (The amount of talent in this school still astounds me.)",
-        "And how exactly can you be so sure?",//440 
-        "(Next)",
+        "And how exactly can you be so sure?",
+        "(Next)",//450 
         "(Next)",
         "<em>50,000 dollars?! </em>",
         "(Next)",
-        "(Next)",//445 
-        "You guys seemed very determined!",
+        "(Next)",
+        "You guys seemed very determined!",//455 
         "(Next)",
         "(Next)",
         "(Next)",
-        "...I can give you my eternal gratitude and pay you a lunch!",//450 
-        "Shoot!",
+        "...I can give you my eternal gratitude and pay you a lunch!",
+        "Shoot!",//460 
         "(Next)",
         "(Next)",
         "(Next)",
-        "Aw, that’s too bad. (The amount of talent in this school still astounds me.) ",//455 
-        "And how exactly can you be so sure?",
+        "Aw, that’s too bad. (The amount of talent in this school still astounds me.) ",
+        "And how exactly can you be so sure?",//465 
         "(Next)",
         "(Next)",
         "Yeah...I guess you’re right.",
-        "(Next)",//460 
-        "You guys seemed very determined!",
+        "(Next)",
+        "You guys seemed very determined!",//470 
         "(Next)",
         "(Next)",
         "(That’s right! I had forgot about Raquel’s party.)",
-        "(I wonder who’s going to go tonight.)",//465 
-        "As long as you have fun!",
+        "(I wonder who’s going to go tonight.)",
+        "As long as you have fun!",//475 
         "(Next)",
         "(Next)",
         "null",
-        "(After searching all over the school, I ended up meeting pretty much everyone except Axel.)",//470 
-        "(I sighed, dejected. I would’ve really wanted to talk to him more. It was really cool of him to show me to my class this morning.)",
+        "(After searching all over the school, I ended up meeting pretty much everyone except Axel.)",
+        "(I sighed, dejected. I would’ve really wanted to talk to him more. It was really cool of him to show me to my class this morning.)",//480 
         "(The bell was about to ring, so I gathered my things from my locker and headed to my classroom when...)",
         "(I swiftly turned around to see Tadashi grabbing Axel by the sleeve.)",
         "(Tadashi did not look very happy.)",
-        "(Next)",//475 
         "(Next)",
+        "(Next)",//485 
         "(Next)",
         "(This is not going to end well.)",
         "(Next)",
-        "(Next)",//480 
-        "(Next)",
-        "(A small crowd was beginning to form, most of them excited to see Axel.)",
-        "(I spotted Raquel, Alistair, and Karolina in the crowd looking pretty concerned.)",//483 Special Background
-        "(Axel, who looked mostly nonchalant before, now had a piercing glare on his face.)",
-        "(Next)",//485 
-        "(Next)",
-        "(Next)",
-        "(Next)",
         "(Next)",
         "(Next)",//490 
+        "(A small crowd was beginning to form, most of them excited to see Axel.)",
+        "(I spotted Raquel, Alistair, and Karolina in the crowd looking pretty concerned.)",//492 Special Background
+        "(Axel, who looked mostly nonchalant before, now had a piercing glare on his face.)",
         "(Next)",
+        "(Next)",//495 
+        "(Next)",
+        "(Next)",
+        "(Next)",
+        "(Next)",
+        "(Next)",//500 
         "(Next)",
         "(Next)",
         "(Axel and Tadashi’s yells became more and more infuriated and teachers were starting to spot the crowd.)",
-        "(Somebody had to do something before they got in trouble.)",//495 
-        "(From across the crowd, Karolina seemed to sense my intention and gave me a warning look.)",
+        "(Somebody had to do something before they got in trouble.)",
+        "(From across the crowd, Karolina seemed to sense my intention and gave me a warning look.)",//505 
         "(I’m going to deal with her later, for now...)",
         "null",
         "(I pushed my way into the center where Tadashi and Axel stood.)",
-        "It sucks to be followed around by all those cameras, but Tadashi’s right. ",//500 
-        "They’re here because of you and the school is having a lot of problems managing the situation. ",
+        "It sucks to be followed around by all those cameras, but Tadashi’s right. ",
+        "They’re here because of you and the school is having a lot of problems managing the situation. ",//510 
         "Couldn’t you at least try to help?",
         "(Axel looked at me as if he was planning my murder.)",
         "(As much as I understood the position he was in, this problem had to be solved and he was the only one who could do something about it.)",
-        "(Next)",//505 
-        "(Next)",
-        "(Next)",
-        "(Axel stared us both down, before groaning and taking out his cellphone.)",
-        "(Next)",
-        "(Next)",//510 
-        "(Next)",
-        "(Tadashi was about to lose his temper again, I stepped in before the fight could escalate even more.)",
-        "Come on, Tadashi, teachers are coming this way. ",
         "(Next)",
         "(Next)",//515 
         "(Next)",
+        "(Axel stared us both down, before groaning and taking out his cellphone.)",
+        "(Next)",
+        "(Next)",
+        "(Next)",//520 
+        "(Tadashi was about to lose his temper again, I stepped in before the fight could escalate even more.)",
+        "Come on, Tadashi, teachers are coming this way. ",
+        "(Next)",
+        "(Next)",
+        "(Next)",//525 
         "(Axel sneaked out of the crowd so stealthily that I lost sight of him in a matter of seconds.)",
         "...That’s pretty impressive.",
         "(Next)",
-        "(Next)",//520 
         "(Next)",
+        "(Next)",//530 
         "(Tadashi gave me a grateful smile, It felt nice to know that I had a friend here, especially after all I went through today.)",
         " (I glanced at Karolina. She was still there despite the crowd beginning to disperse.)",
         "(She didn’t look too pleased with my actions.)",
-        "(But after a few moment, she gave me a scoff and left for her class.)",//525 
-        "(I pushed my way into the center where Tadashi and Axel stood.)",
+        "(But after a few moment, she gave me a scoff and left for her class.)",
+        "(I pushed my way into the center where Tadashi and Axel stood.)",//535 
         "Tadashi, he’s got a lot to deal with already with his career. He didn’t ask for the paparazzi.",
         "Can’t the school do anything to help him? He’s here to learn, not to take unwanted photoshoots. ",
         "(Next)",
-        "(As much as I understood the position he was in, Axel seemed very tired and upset.)",//530 
-        "It must be hard dealing with hundreds of people treating you like an object everyday. I wouldn’t want my privacy to be thrown around like that.",
+        "(As much as I understood the position he was in, Axel seemed very tired and upset.)",
+        "It must be hard dealing with hundreds of people treating you like an object everyday. I wouldn’t want my privacy to be thrown around like that.",//540 
         "So, seriously, just leave him alone. ",
         "It’s clear that he won’t budge. The school’s just going to have to deal with It.",
         "(Next)",
-        "(Next)",//535 
         "(Next)",
+        "(Next)",//545 
         "(Next)",
         "Did you try calling the police? They could take care of it.",
         "(Next)",
-        "(Next)",//540 
-        "(Axel seemed to scrutinize me, his eyes not leaving mine.)",
+        "(Next)",
+        "(Axel seemed to scrutinize me, his eyes not leaving mine.)",//550 
         "(He seemed to be internally debating something when finally, he gave a long, exhausted sigh.)",
         "(Next)",
         "(Next)",
-        "Come on, Tadashi, teachers are coming this way.",//545 
-        "(Next)",
+        "Come on, Tadashi, teachers are coming this way.",
+        "(Next)",//555 
         "(Next)",
         "(Next)",
         "(Axel sneaked out of the crowd so stealthily that I lost sight of him in a matter of seconds.)",
-        "...That’s pretty impressive.",//550 
-        "…",
+        "...That’s pretty impressive.",
+        "…",//560 
         "Tadashi, I-",
         "(Next)",
         "(Next)",
-        "(I pushed my way into the center where Tadashi and Axel stood.)",//555 
-        "This is ridiculous! You’re going to get each other in trouble because of some stupid paparazzi. ",
+        "(I pushed my way into the center where Tadashi and Axel stood.)",
+        "This is ridiculous! You’re going to get each other in trouble because of some stupid paparazzi. ",//565 
         "Tadashi, you’re obviously stressed out and being in your position sucks, but that’s no reason to talk to him like that. ",
         "Get it together, you’re not the only one who has to work hard because of their job.",
         "(I pointed at Axel.) ",
-        "Axel, whether you like it or not, these people are here because of you. ",//560 
-        "And Tadashi’s right, when you’re at Arlington, you’re a student just like anybody else. It’s only fair that you at least try to help us out. ",
+        "Axel, whether you like it or not, these people are here because of you. ",
+        "And Tadashi’s right, when you’re at Arlington, you’re a student just like anybody else. It’s only fair that you at least try to help us out. ",//570 
         "So… please? ",
         "(Both guys stared at me with wide eyes. I think they were mentally debating whether or not they should thank me or plan my murder.)",
         "(I heard the crowd boo at me for stopping the fight. People started to leave.)",
-        "(Next)",//565 
         "(Next)",
-        "(Next)",
-        "(Next)",
-        "(He waved his cellphone in front of Tadashi’s face.)",
-        "(Next)",//570 
-        "(Next)",
-        "(Next)",
-        "(Tadashi was about to lose his temper again, I stepped in before the fight could escalate even more.)",
-        "Come on, Tadashi, teachers are coming this way. ",
         "(Next)",//575 
         "(Next)",
         "(Next)",
+        "(He waved his cellphone in front of Tadashi’s face.)",
+        "(Next)",
+        "(Next)",//580 
+        "(Next)",
+        "(Tadashi was about to lose his temper again, I stepped in before the fight could escalate even more.)",
+        "Come on, Tadashi, teachers are coming this way. ",
+        "(Next)",
+        "(Next)",//585 
+        "(Next)",
         "(Axel sneaked out of the crowd so stealthily that I lost sight of him in a matter of seconds.)",
-        "Scholar: (As the crowd scattered, I spotted Alistair and Raquel.)",//579 Special Background
-        "(They smiled at me and nodded approvingly.)",//580 
-        " (Karolina, however, seemed to be trying to kill me with her glare.)",
+        "Scholar: (As the crowd scattered, I spotted Alistair and Raquel.)",//588 Special Background
+        "(They smiled at me and nodded approvingly.)",
+        " (Karolina, however, seemed to be trying to kill me with her glare.)",//590 
         "(The bell rang and I quickly grabbed by stuff and headed towards my next class.)",
         "null",
+        "null",//593 Try to find Axel!
+        "null",//594 Explore the school and talk to your classmates!
+        "null",//595 
         "(I tried hard to focus and take notes in class, but my mind kept drifting off.)",
-        "(I’ve been at Arlington for less than two days and I already feel like I need a vacation.)",//585 
+        "(I’ve been at Arlington for less than two days and I already feel like I need a vacation.)",
         "(Dad warned me about this school, he told me that students here are not like back home. He heard stories.)",
         "(I thought he was exaggerating, and of course, I know that not here everyone is like that, but… can I really be one of them?)",
-        "*Sigh*",
+        "*Sigh*",//600 
         "(I can’t give up now. Sure, there are some people that are going to judge me like Karolina did, but maybe I can be friends with those who don’t? Like Raquel and Alistair?)",
-        "(I should at least try to get to know some people better.)",//590 
+        "(I should at least try to get to know some people better.)",
         "(I got invited to Raquel’s party, that’s already a good start!)",
         "(From what she’s told me, people there sound really fun.)",
-        "(And if I don’t like it, I can just go back to my dorm since it’s literally a thirty second walk.)",
+        "(And if I don’t like it, I can just go back to my dorm since it’s literally a thirty second walk.)",//605 
         "(...)",
-        "(Okay, I’ve made up my mind. I’m going to Raquel’s party!)",//595 
-        "(Next)",//596 POPUP
+        "(Okay, I’ve made up my mind. I’m going to Raquel’s party!)",
+        "(Next)",//608 POPUP
         "(The bell rang and the teacher quickly assigned us our homework before the class emptied itself.)",
-        "(I made my way to the dorms.)",
+        "(I made my way to the dorms.)",//610 
+        "null",//611 Objective Complete: Go to Classroom 2
         "null",
-        "(Once in my dorm, I let myself crash on my bed.)",//600 
-        "(Raquel told me the party starts when Arlington’s cocktail starts, so I still have a couple more hours.)",
+        "null",
+        "(Once in my dorm, I let myself crash on my bed.)",
+        "(Raquel told me the party starts when Arlington’s cocktail starts, so I still have a couple more hours.)",//615 
         "(The music’s probably going to be loud, so I’ll know when to leave.)",
         "*Sigh*",
         "(I looked around my dorm and groaned. Everything was so messy due to me rushing out this morning.)",
-        "(But somehow, I couldn’t bring myself to clean up. I was anxious and exhausted, and the combination of both felt very weird.)",//605 
-        "(...)",
+        "(But somehow, I couldn’t bring myself to clean up. I was anxious and exhausted, and the combination of both felt very weird.)",
+        "(...)",//620 
         "Come on " + user.scholarname + ", might as well pick out your outfit for the party.",
         "(Somehow, this made me even more anxious.)",
         "Ugh, why is my brain like this? I’m just going to a party. There’s nothing to be anxious about.",
-        "…",//610 
-        "Teenage prodigies from rich families…",
+        "…",
+        "Teenage prodigies from rich families…",//625 
         "(I thought about Axel.)",
         "...And celebrities.",
         "Oh my god, what am I even <em>doing</em> going to this party?!",
-        "(I better choose my outfit well!)",//615 
-        "[player clicks on the episode’s outfit.]",//616 player clicks on the episode’s outfit.
+        "(I better choose my outfit well!)",
+        "[player clicks on the episode’s outfit.]",//630 player clicks on the episode’s outfit.
         "(I spent hours anxiously piecing together the perfect outfit. I was so focused that I had not noticed the music coming from the hallway.)",
         "(When I looked at the time, I realized the party had already started a long time ago.)",
         "(I gasped before grabbing my cell phone and making my way out of my dorm.)",
-        "Follow the music, " + user.scholarname + "...",//620 
+        "Follow the music, " + user.scholarname + "...",
+        "null",//635 Objective Complete:  Go to your dorm and prepare for the party!
+        "null",
         "null",
         "Woah…",
         "(There were at least fifty people in the hallway, and that was only because they couldn’t all fit inside Raquel’s dorm.)",
-        "(I saw Raquel banging her head to the music, a drink in hand.)",
-        "(I quickly walked to her.)",//625 
+        "(I saw Raquel banging her head to the music, a drink in hand.)",//640 
+        "(I quickly walked to her.)",
         "Hey!",
         "Yeah! I didn’t expect it to be so… huge!",
         "(This is insane! How did they manage not to get caught?!)",
-        "(...)",
-        "(I caught a familiar smell from Raquel’s drink. My eyes widened as I realized what it was.)",//630 
+        "(...)",//645 
+        "(I caught a familiar smell from Raquel’s drink. My eyes widened as I realized what it was.)",
         "Raquel… are you serving alcohol?!",
         "(She put her finger against her lips.)",
         "(Oh my god...)",
-        "(Suddenly, everyone around me started cheering loudly.)",
-        "(I quickly looked around…)",//635 
+        "(Suddenly, everyone around me started cheering loudly.)",//650 
+        "(I quickly looked around…)",
         "(And I immediately understood what was happening.)",
         "(Next)",
         "(Next)",
-        "(Next)",
-        "(Next)",//640 
-        "(Next)",
+        "(Next)",//655 
         "(Next)",
         "(Next)",
         "(Next)",
-        "(Next)",//645 
+        "(Next)",
+        "(Next)",//660 
+        "(Next)",
         "(Axel seemed to notice my presence, and the focus of the conversation quickly shifted to me.)",
         "(Next)",
         "(People seemed to glare at me for talking to Axel.)",
-        "null",
-        "null",//650 
-        "null",
+        "null",//665 
         "null",
         "null",
-        "(I felt my cheeks redden a little) Nah, I just owed you one for helping me find my class.",
-        "(Next)",//655 
+        "null",
+        "null",
+        "(I felt my cheeks redden a little) Nah, I just owed you one for helping me find my class.",//670 
+        "(Next)",
         "(I may have made Tadashi mad at me for a while, but somehow I feel that gaining Axel’s gratitude is pretty worth it.)",
         "You’re welcome!",
         "(Woah, was it something I said?!)",
-        "What is that supposed to mean?",
-        "(...)",//660 
+        "What is that supposed to mean?",//675 
+        "(...)",
         "Hey! I needed you back there. ",
         "(Next)",
         "(Next)",
-        "(Next)",
-        "(I don’t think I would ever get used to having classes with celebrities.) ",//665 
+        "(Next)",//680 
+        "(I don’t think I would ever get used to having classes with celebrities.) ",
         "I can’t skip class!",
         "Especially not on the first day!",
         "Haha, that’s not what I meant! ",
-        "Noted.",
-        "null",//670 
-        "(Next)",
-        "(Next)",
-        "null",//673 GHOST SLIDE
+        "Noted.",//685 
         "null",
-        "null",//675 
+        "(Next)",
+        "(Next)",
+        "null",//689 GHOST SLIDE
+        "null",//690 
+        "null",
         "(Next)",
         "What is that supposed to mean?",
         "(...)",
-        "(Good job " + user.scholarname + ", you’ve pissed off a celebrity on your first day.)",
-        "(Next)",//680 
+        "(Good job " + user.scholarname + ", you’ve pissed off a celebrity on your first day.)",//695 
+        "(Next)",
         "(Next)",
         "(Next)",
         "(I may have made Tadashi mad at me for a while, but somehow I feel that gaining Axel’s gratitude is pretty worth it.)",
-        "You’re welcome!",
-        "(Next)",//685 
+        "You’re welcome!",//700 
+        "(Next)",
         "Glad to be of service!",
         "I can’t skip class!",
         "Especially not on the first day!",
-        "Haha, that’s not what I meant! ",
-        "Noted.",//690 
+        "Haha, that’s not what I meant! ",//705 
+        "Noted.",
         "(The music suddenly changed and the cheering got even louder, with people around chanting Axel’s name.)",
         "(Holy crap! The song playing was one of Axel’s song!) I, uh, that’s awesome!",
         "(The song wasn’t inherently bad, but in my opinion, it lacked something unique.)",
-        "(But should I really critique Axel’s work? I mean, considering he’s a genuine celebrity and I’m just a regular teenager… would it be smart for me to do that?)",
-        "(...)",//695 
+        "(But should I really critique Axel’s work? I mean, considering he’s a genuine celebrity and I’m just a regular teenager… would it be smart for me to do that?)",//710 
+        "(...)",
         "(I thought about the fight between Tadashi and Axel earlier.)",
         "(Tadashi mentioned how it didn’t matter who Axel was, he was still an Arlington student and had to be treated as any other.)",
         "(And Axel had seemed so exhausted, so… emotionally drained by the paparazzi.)",
-        "(He clearly doesn’t want to be dehumanized like that anymore. He deserves to be treated like a normal guy.) ",
-        "(Next)",//700 
+        "(He clearly doesn’t want to be dehumanized like that anymore. He deserves to be treated like a normal guy.) ",//715 
+        "(Next)",
         "Sorry! (I didn’t realize how lost in thought I was.)",
         "Well, personally, I find your song to be too… generic?",
         "I mean, don’t get me wrong, it’s not bad. But you seem like a guy that can do more than just ‘not bad’.",
-        "(Please don’t be mad. Please don’t be mad. Please don’t be mad.)",
-        "(Oh thank god.)",//705 
+        "(Please don’t be mad. Please don’t be mad. Please don’t be mad.)",//720 
+        "(Oh thank god.)",
         "But success comes with a price that’s very… superficial.",
         "(Next)",
         "(I nearly had a heart attack as Karolina snuck up on our conversation.)",
+        "(Next)",//725 
         "(Next)",
-        "(Next)",//710 
         "(Her eyes pierced through me at those last words and I felt shivers going down my spine.)",
         "(But there’s no way I’m going to let her ruin my chances of being friends with Axel.)",
         "(Next)",
-        "(Next)",
-        "(Karolina’s cheeks turned red, but I wasn’t sure if it was because of anger or embarrassment.)",//715 
+        "(Next)",//730 
+        "(Karolina’s cheeks turned red, but I wasn’t sure if it was because of anger or embarrassment.)",
         "(Does Karolina… <em>like</em> Tadashi?!)",
         "(That would explain a lot.)",
         "(Next)",
-        "(Next)",
-        "(Next)",//720 
-        "(Next)",
+        "(Next)",//735 
         "(Next)",
         "(Next)",
         "(Next)",
-        "(Are all fashion department students secretly ninjas?!)",//725 
+        "(Next)",
+        "(Next)",//740 
+        "(Are all fashion department students secretly ninjas?!)",
         "(Next)",
         "(Next)",
         "(Next)",
-        "(During this whole conversation, Raquel and I stood there staring.)",
-        "(She seemed bored out of her mind.)",//730 
+        "(During this whole conversation, Raquel and I stood there staring.)",//745 
+        "(She seemed bored out of her mind.)",
         "(Next)",
         "(Next)",
         "(Axel joined a little crowd of students that were still dancing to his song. Raquel didn’t waste time in doing the same.)",
-        "(Even with Neha and Karolina still here, I felt strangely abandoned.)",
-        "(Karolina looked at me for a moment, then her eyes wandered to my outfit.)",//735 
+        "(Even with Neha and Karolina still here, I felt strangely abandoned.)",//750 
+        "(Karolina looked at me for a moment, then her eyes wandered to my outfit.)",
         "(Her skin seemed paler than earlier and she had bags under her eyes.)",
         "Is there something wrong?",
         "(She completely ignored me.)",
-        "(Next)",
-        "(Next)",//740 
-        "(Next)",
+        "(Next)",//755 
         "(Next)",
         "(Next)",
-        "(They both left towards Raquel’s dorm, where I assumed the drinks were. Neha turned around to give me a worried look.)",
-        "(She seemed to need my help...)",//745 
+        "(Next)",
+        "(Next)",
+        "(They both left towards Raquel’s dorm, where I assumed the drinks were. Neha turned around to give me a worried look.)",//760 
+        "(She seemed to need my help...)",
         "(...But Karolina clearly doesn’t want me to help.)",
         "(What should I do?)",
         "null",
-        "(Karolina may be the worst person I’ve met at Arlington so far, but she and Neha could use some help.)",
-        "(I made my way to Raquel’s dorm.)",//750 
+        "(Karolina may be the worst person I’ve met at Arlington so far, but she and Neha could use some help.)",//765 
+        "(I made my way to Raquel’s dorm.)",
         "(Karolina took a bottle of water from the table and poured the contents into her red cup.)",
         "(Once she saw me, her eyes narrowed sharply.)",
         "If you’re referring to the ‘you have to mind your own business and stay out of people’s lives’ speech you gave to Axel, then no, that message wasn’t hidden.",
-        "And even if it was, I don’t feel very inclined to take advice from you.",
-        "(Her condescending tone was driving me insane.)",//755 
-        "(Next)",//756 POPUP
+        "And even if it was, I don’t feel very inclined to take advice from you.",//770 
+        "(Her condescending tone was driving me insane.)",
+        "(Next)",//772 POPUP
         "I don’t want any of your work. You just seem like you’re seconds away from passing out, and it’s not okay to leave Neha alone when she clearly-",
         "(Next)",
-        "(Next)",
-        "(I took a look at Karolina’s cup. Her hands were shaking almost violently.) ",//760 
+        "(Next)",//775 
+        "(I took a look at Karolina’s cup. Her hands were shaking almost violently.) ",
         "(Neha noticed immediately.)",
         "(Next)",
         "(Karolina’s scream somehow didn’t come out as strong as she wanted to. Her voice seemed to slowly diminish in volume.)",
-        "(Suddenly, Karolina’s eyes rolled up and her legs gave up on her.)",
-        "(I made my way to Raquel’s dorm, where I found her and Axel dancing in the middle of a crowd.)",//765 
+        "(Suddenly, Karolina’s eyes rolled up and her legs gave up on her.)",//780 
+        "(I made my way to Raquel’s dorm, where I found her and Axel dancing in the middle of a crowd.)",
         "(Raquel gestured for me to come join them. I didn’t waste any time.)",
         "(Axel and Raquel had this intoxicating energy around them, like you couldn’t help but be happy!)",
         "(I laughed as I moved my body to the music.)",
-        "(Next)",//769 POPUP
-        "(Suddenly, I heard a scream.)",//770 
+        "(Next)",//785 POPUP
+        "(Suddenly, I heard a scream.)",
         "(I whip my head around and saw Karolina’s legs give up on her and her eyes roll upwards.)",
         "(I darted towards them.)",
         "(Next)",
-        "(Neha quickly caught Karolina’s body before her head hit the ground.)",
-        "(Karolina’s cup fell out of her hand and the water spilled everywhere.)",//775 
+        "(Neha quickly caught Karolina’s body before her head hit the ground.)",//790 
+        "(Karolina’s cup fell out of her hand and the water spilled everywhere.)",
         "(People started gasping around us.)",
         "(I tried hard not to panic and followed my first rational instinct. I went close to Karolina’s face and checked if she was breathing.)",
         "*Sigh*",
-        "It looks like she’s only passed out. ",
-        "(Next)",//780 
+        "It looks like she’s only passed out. ",//795 
         "(Next)",
-        "(NexT)",
-        "(People around us started looking at Karolina funny, thinking she passed out due to alcohol)",//783 POPUP
-        "(But she only had water in her cup. Neha and I saw her.)",
-        "(What was going on? Why did she faint?!)",//785 
+        "(Next)",
+        "(Next)",
+        "(People around us started looking at Karolina funny, thinking she passed out due to alcohol)",//799 POPUP
+        "(But she only had water in her cup. Neha and I saw her.)",//800 
+        "(What was going on? Why did she faint?!)",
         "...Yeah, let’s get her to her dorm. People are going to stare.",
         "(We made sure Karolina’s body was secure in our arms. Thankfully, her dorm was right next to Raquel’s)",
-        "(Neha and I carefully placed Karolina on her bed.)",//788 Different Dorm…
-        "null",
-        "(Only yesterday, all three of us were peacefully decorating this room. Now, look at where we’re at...)",//790 
+        "(Neha and I carefully placed Karolina on her bed.)",//804 Different Dorm…
+        "null",//805 
+        "(Only yesterday, all three of us were peacefully decorating this room. Now, look at where we’re at...)",
         "She probably didn’t realize it herself. Karolina doesn’t seem like the type. ",
         "(I didn’t want to go back to the party, and neither did Neha.)",
         "(We stayed in Karolina’s dorm, in silence for a couple of minutes, occasionally glancing at Karolina to see if she was okay.)",
-        "(I was about to call an ambulance when Karolina groaned and slowly opened her eyes.)",
-        "(Neha jumped out of her chair.)",//795 
+        "(I was about to call an ambulance when Karolina groaned and slowly opened her eyes.)",//810 
+        "(Neha jumped out of her chair.)",
         "(Next)",
         "(She stopped when she spotted me, her face losing all emotions from her face in a split second.)",
         "(Next)",
+        "(Next)",//815 
         "(Next)",
-        "(Next)",//800 
         "(Neha looked at me, wondering if she should give an answer right away.)",
         "A couple of people at the party-",
         "(Next)",
-        "(I knew there wasn’t anything Neha could have said to reason with Karolina at the moment.)",
-        "(I gave her an understanding look and made my way out of their dorm.)",//805 
+        "(I knew there wasn’t anything Neha could have said to reason with Karolina at the moment.)",//820 
+        "(I gave her an understanding look and made my way out of their dorm.)",
         "(The music started to die out in the hallway and Raquel kicked out several people from her dorm. The party was coming to an end.)",
         "(I made my way back to my own dorm and closed the door behind me.)",
         "(I kept thinking back at everything that has happened today.)",
-        "(I don’t think I’ve ever felt so emotionally exhausted in my entire life.)",
-        "(I wish I could go back home, where things were easier and simple.)",//810 
+        "(I don’t think I’ve ever felt so emotionally exhausted in my entire life.)",//825 
+        "(I wish I could go back home, where things were easier and simple.)",
         "…",
         "(But easy and simple won’t make you succeed.)",
         "(You knew things were going to be hard, get it together " + user.scholarname + "!)",
-        "*Yawn*",
-        "For now, sleep will do…",//815 
+        "*Yawn*",//830 
+        "For now, sleep will do…",
         "(Though something tells me that things will only get crazier from now on.)",
         "(END OF CHAPTER 2)",
         ];
@@ -869,581 +884,581 @@ function Chapter()
         "null",
         "null",//20 
         "null",
+        "null",
         "I keep telling you people, <em>no more damn autographs</em>! Give me a break will ya? I <em>just</em> came back to Arlington!",
         "null",
-        "null",
-        "Uh sure! No problem… But are you positive you’re not going to ask me for an autograph first? I mean, I <em>am</em> Axel, you know.",//25 
+        "null",//25 
+        "Uh sure! No problem… But are you positive you’re not going to ask me for an autograph first? I mean, I <em>am</em> Axel, you know.",
         "null",
         "Nice to meet you. Your classroom’s not far away, fortunately for you. ",
         "null",
-        "Let me guess, scholarship student? ",
-        "You don’t pretend to know everything, unlike the other kids here. ",//30 
+        "Let me guess, scholarship student? ",//30 
+        "You don’t pretend to know everything, unlike the other kids here. ",
         "null",
         "Come on, follow me!",
         "null",
-        "Alright new kid, let’s get you to class before you blow up.",
-        "null",//35 
+        "Alright new kid, let’s get you to class before you blow up.",//35 
+        "null",//36 Objective Complete: Get some breakfast at the Cafeteria! 
+        "null",
+        "null",
         "There we are! Your class is in Classroom #1, on your left. ",
-        "Glad I could help, now if you’ll excuse me, I have some sleep to catch up on. That world tour really drained my energy…",
-        "null",
-        "null",
-        "null",//40 
+        "Glad I could help, now if you’ll excuse me, I have some sleep to catch up on. That world tour really drained my energy…",//40 
         "null",
         "null",
         "null",
+        "null",//44 Objective Complete: Follow Axel and go back to the Main Hallway! 
+        "null",//45 
         "null",
-        "I don’t recall seeing you around the school. ",//45 
+        "null",
+        "null",
+        "null",
+        "I don’t recall seeing you around the school. ",//50 
         "Ah, you must be " + user.scholarname + ", our new scholarship student. ",
         "SILENCE!",
         "What is your excuse for being late?",
         "null",
-        "null",//50 
+        "null",//55 
         "You’re lucky it’s your first day here, or else this excuse would’ve sent you straight to detention. Lateness is <em>not</em> tolerated in my class. ",
         "Take a seat. There is an empty one next to Mr. Nakano and Ms. Nováková. ",
         "null",
         "null",
-        "You’re struggling way too hard, newbie.",//55 
+        "You’re struggling way too hard, newbie.",//60 
         "null",
         "Haha! Don’t worry, it happens to the best of us.",
         "But on the first day of school? Now that’s bad luck.",
         "Yes, I can see that.",
-        "You picked the wrong day to do that though.",//60 
+        "You picked the wrong day to do that though.",//65 
         "I’m just pointing out the facts. You’re off to a bad start.",
         "Alistair’s also like that in the morning whenever he doesn’t have a training session. I have to kick his ass. ",
         "null",
         "It takes energy to run this school.",
-        "null",//65 
+        "null",//70 
         "Man, I’d give anything for a couple more hours…",
         "null",
         "Actually, yes ma’am. I’d like to say that your class is my favorite and I can’t wait until I start learning all about how calculus will have a deep impact on my life.",
         "null",
-        "Gotcha!",//70 
+        "Gotcha!",//75 
         "null",
         "null",
         "Amateurs. ",
         "null",
-        "Indeed, and you should be grateful.",//75 
+        "Indeed, and you should be grateful.",//80 
         "You’ve got to be realistic if you want to convince someone. Instead of showing excess motivation, you should’ve told her that you were asking Alistair what the homework was. ",
         "That way, when you answer Ms. Rodriguez when she calls you out, she would’ve believed you and been somewhat satisfied that you’re actually caring about the homework.",
         "It’s all about knowing what the person wants and reconciling that with what <emyou</em> want.",
         "null",
-        "That’s already knowing a lot more than you do. ",//80 
+        "That’s already knowing a lot more than you do. ",//85 
         "null",
         "null",
         "null",
         "null",
-        "null",//85 
+        "null",//90 
         "Yeah. He gets better at hiding from screaming fangirls and Tadashi every time he comes back. ",
         "null",
         "null",
         "Yup, that’s Mr. Rockstar alright. ",
-        "null",//90 
-        "null",//91 TODO: Special Background Required
+        "null",//95 
+        "null",//96 TODO: Special Background Required
         "null",
         "He’s very popular, I’m surprised you haven’t heard of him. He’s all over social media. Takes off his shirt on stage and throws it for an unlucky girl to catch and all. ",
         "null",
-        "null",//95 
+        "null",//100 
         "He may be famous, but he needs to get his high school diploma. Unfortunately for us, that means dealing with the crazy fangirls in the hallway and trying to locate him in this goddamn school.",
         "null",
         "null",
         "null",
-        "I know.",//100 
+        "I know.",//105 
         "null",
         "null",
         "null",
         "null",
-        "null",//105 
-        "null",
-        "null",//107 TODO: Objectives
-        "null",
-        "Dude, where were you yesterday? Ellie and I searched the entire school for you.",
         "null",//110 
-        "Why?! You’ve missed picture day. You’re gonna have to go ask Tadashi to arrange something for you and let me tell you, he’s <em>not</em> happy today.",
         "null",
-        "Most likely. ",
+        "null",//112 TODO: Objectives
+        "null",//113 Objective Complete: Quick! Get into Classroom 1!  
         "null",
         "null",//115 
-        "Hey " + user.scholarname + ".",
         "null",
+        "Dude, where were you yesterday? Ellie and I searched the entire school for you.",
+        "null",
+        "Why?! You’ve missed picture day. You’re gonna have to go ask Tadashi to arrange something for you and let me tell you, he’s <em>not</em> happy today.",
+        "null",//120 
+        "Most likely. ",
+        "null",
+        "null",
+        "Hey " + user.scholarname + ".",
+        "null",//125 
         "null",
         "And he’s modest too.",
-        "null",//120 
+        "null",
         "Well, Tyler missed picture day, but all he cares about is partying. ",
+        "null",//130 
+        "Yeah, well, I just received my copy of <em>Fortday</em>. ",
         "null",
-        "Yeah, well, I just received my copy of (cool video game here). ",
-        "null",
-        "Hell no.",//125 
+        "Hell no.",
         "Plus, my sister’s going to be there. ",
+        "null",//135 
         "null",
         "null",
-        "null",
-        "Unfortunately, we only have two controllers. ",//130 
+        "Unfortunately, we only have two controllers. ",
         "B-But if I ever get another, I’ll invite you.",
-        "See Tyler? " + user.scholarname + " knows where the real fun is.",
+        "See Tyler? " + user.scholarname + " knows where the real fun is.",//140 
         "null",
         "Come on man, I covered your ass for not showing up to class this morning.",
-        "null",//135 
+        "null",
         "Told them your great-grandmother died.",
-        "I’m surprised you haven’t met her yet. She makes sure people know her.",
-        "Tall, red hair like mine, always looks like she’s ready to strike a pose? Her name is Karolina.",
-        "null",
-        "Ha! We are twins, but we’re not exactly alike.",//140 
-        "null",
-        "Or… you can stay in and get utterly destroyed by me at (cool video game name here). ",
-        "null",
-        "null",
-        "S-Sure!",//145 
-        "I kind of wanted to play with him though, since I know he has no real chance of winning against me. ",
-        "null",
-        "I procrastinate on a lot of things, but playing games isn’t one of them. ",
-        "And I covered Tyler for not showing up to class this morning. He owes me.",
-        "I’m surprised you haven’t met her yet. She makes sure people know her.",//150 
+        "I’m surprised you haven’t met her yet. She makes sure people know her.",//145 
         "Tall, red hair like mine, always looks like she’s ready to strike a pose? Her name is Karolina.",
         "null",
         "Ha! We are twins, but we’re not exactly alike.",
         "null",
-        "Or… you can stay in and get utterly destroyed by me at (cool video game name here). ",//155 
+        "Or… you can stay in and get utterly destroyed by me at <em>Fortday</em>. ",//150 
         "null",
         "null",
-        "null",
-        "And text Tadashi to tell him you need to take your picture.",
+        "S-Sure!",
+        "I kind of wanted to play with him though, since I know he has no real chance of winning against me. ",
+        "null",//155 
+        "I procrastinate on a lot of things, but playing games isn’t one of them. ",
+        "And I covered Tyler for not showing up to class this morning. He owes me.",
+        "I’m surprised you haven’t met her yet. She makes sure people know her.",
+        "Tall, red hair like mine, always looks like she’s ready to strike a pose? Her name is Karolina.",
         "null",//160 
+        "Ha! We are twins, but we’re not exactly alike.",
         "null",
-        "null",
-        "null",
+        "Or… you can stay in and get utterly destroyed by me at <em>Fortday</em>. ",
         "null",
         "null",//165 
         "null",
-        "null",
+        "And text Tadashi to tell him you need to take your picture.",
         "null",
         "null",
         "null",//170 
         "null",
         "null",
-        "You don’t even know the title and you expect to read hundreds of pages just like that?",
         "null",
-        "You’re insane. Come on, I’ll lend you my copy. ",//175 
+        "null",
+        "null",//175 
         "null",
         "null",
         "null",
         "null",
         "null",//180 
+        "You don’t even know the title and you expect to read hundreds of pages just like that?",
+        "null",
+        "You’re insane. Come on, I’ll lend you my copy. ",
+        "null",
+        "null",//185 
+        "null",
+        "null",
+        "null",
         "Working the same muscle intensely two days in a row can be dangerous, so I switch it up. But I do train every day!",
-        "That’s what you need to be to make it to the Olympics.",
+        "That’s what you need to be to make it to the Olympics.",//190 
         "You know, this international competition where athletes compete in their disciplines every four years?",
         "null",
-        "Maybe, but what’s life without a little ambition?",//185 
+        "Maybe, but what’s life without a little ambition?",
         "I’m going to get a medal in boxing. ",
-        "Boxing! But I pretty much train in martial arts in general.",
+        "Boxing! But I pretty much train in martial arts in general.",//195 
         "Not yet! ",
         "And I’ll be sure to note them down.",
-        "What do you mean?",//190 
+        "What do you mean?",
         "...",
-        "null",
+        "null",//200 
         "*Brrr*",
         "Haha!",
-        "It’s my little sister. She just got a cellphone and now she can’t stop texting me about my family’s daily lives. ",//195 
+        "It’s my little sister. She just got a cellphone and now she can’t stop texting me about my family’s daily lives. ",
         "Back home, we’re a full house! Five children.",
-        "null",
-        "null",
-        "You can say that again!",
-        "Of course…",//200 
-        "Ha! All the time, even when I go back back home for the holidays and during the summer. ",
-        "But I wouldn’t change it for the world. ",
-        "null",
-        "I couldn’t get a minute of peace and quiet!",
         "null",//205 
         "null",
-        "Tell you what, next time my family visits, I’ll invite you over.",
+        "You can say that again!",
+        "Of course…",
+        "Ha! All the time, even when I go back back home for the holidays and during the summer. ",
+        "But I wouldn’t change it for the world. ",//210 
+        "null",
+        "I couldn’t get a minute of peace and quiet!",
+        "null",
+        "null",
+        "Tell you what, next time my family visits, I’ll invite you over.",//215 
         "The younger ones always go nuts for this school. They want to meet everyone, haha!",
         "Just a heads up, they will ask you thousands of questions about you and your life and won’t let you go until you answer them all. ",
-        "Hopefully! Or else you don’t stand a chance.",//210 
+        "Hopefully! Or else you don’t stand a chance.",
         "*Sigh*",
-        "Of course! Especially when you’re the oldest one. ",
+        "Of course! Especially when you’re the oldest one. ",//220 
         "But I wouldn’t change it for the world.",
         "It was really hard leaving them. I call them every night but it just isn’t the same. ",
-        "But what can you do? One doesn’t just <em>refuse</em> a scholarship from Arlington Academy. ",//215 
+        "But what can you do? One doesn’t just <em>refuse</em> a scholarship from Arlington Academy. ",
         "null",
-        "Yeah!",
+        "Yeah!",//225 
         "Seeing you earlier in class reminded me of how I felt when I first came here. The people here are nothing like back home. ",
         "But you’ll get the hang of it. I already had Tadashi when I came here, but it’s not as hard as you think to make friends.",
-        "I know it’s hard to believe but...some of the people here have been through a lot. ",//220 
+        "I know it’s hard to believe but...some of the people here have been through a lot. ",
         "They might seem closed off to you at first, but despite their social background, they really aren’t as intimidating as you think. ",
-        "Anyways, I’ve got to finish my reps. See you around school!",
+        "Anyways, I’ve got to finish my reps. See you around school!",//230 
         "null",
         "null",
-        "Hey " + user.scholarname + ", I meant to ask you. Have you seen Axel anywhere? I really need to talk to that jerk or the school’s staff will be chasing us both down. ",//225 
+        "Hey " + user.scholarname + ", I meant to ask you. Have you seen Axel anywhere? I really need to talk to that jerk or the school’s staff will be chasing us both down. ",
         "null",
-        "Seriously? I’m surprised he hasn’t snapped at you.",
+        "Seriously? I’m surprised he hasn’t snapped at you.",//235 
         "How did you tame the dragon?",
         "Of <em>course</em> he did.",
-        "In any case, thanks " + user.scholarname + ". I’ll go check if he’s still in the cafeteria. ",//230 
+        "In any case, thanks " + user.scholarname + ". I’ll go check if he’s still in the cafeteria. ",
         "null",
-        "Axel is kind of… infamous for breaking rules. Whether it’s at school or him pulling a publicity stunt. ",
+        "Axel is kind of… infamous for breaking rules. Whether it’s at school or him pulling a publicity stunt. ",//240 
         "So, as you can imagine, there are hordes of paparazzi currently outside the school’s gate trying to get a shot. I’ve tried everything in the past, but they simply won’t budge unless they see Axel. ",
         "This guy loves attention, but this is private Arlington Academy property; it’s his responsibility to deal with his ‘outside visitors’. Lady Arlington is up my ass about ‘stressing the importance of responsibility to my fellow students.",
-        "null",//235 
+        "null",
         "Ha! They’ve tried everything! Calling the cops, threats... Nothing works. ",
-        "Only Axel can get rid of them.",
+        "Only Axel can get rid of them.",//245 
         "Yeah, that’s why I’ve really got to find him before they demolish our gate. ",
         "Thanks for the intel, I owe you one. ",
-        "null",//240 
+        "null",
         "Look " + user.scholarname + ", I can spot a liar from miles away. ",
-        "I don’t think you understand the situation he’s in… and even more importantly, the situation <em>I’m</em> in. ",
+        "I don’t think you understand the situation he’s in… and even more importantly, the situation <em>I’m</em> in. ",//250 
         "Axel has been breaking too many rules, and he’s attracting too much outside attention. Paparazzi is everywhere. The only thing keeping them from entering school grounds are the guards near the gate. ",
         "The school doesn’t like that and they’re putting all the pressure on me to find Axel and make him deal with his paparazzi. It’s absolute <em>hell</em> for me, and, as you can probably tell, I have better, more interesting things to do. ",
-        "Therefore, I would really appreciate it if you could cut the crap, and tell me where you saw Axel last. ",//245 
-        "null",
-        "null",
-        "null",
-        "Thank you.",
-        "null",//250 
-        "null",
-        "null",
-        "null",
+        "Therefore, I would really appreciate it if you could cut the crap, and tell me where you saw Axel last. ",
         "null",
         "null",//255 
         "null",
-        "Hey! If it isn’t for Ms. Rodriguez’s favorite newbie! ",
+        "Thank you.",
+        "null",
+        "null",
+        "null",//260 
+        "null",
+        "null",
+        "null",
+        "null",
+        "Hey! If it isn’t for Ms. Rodriguez’s favorite newbie! ",//265 
         "You’re really lucky you know? She’s usually ruthless when it comes to new students. Especially when it comes to scholarship students. ",
         "Probably the face you made. I don’t think I’ve ever seen someone blush so hard, haha! ",
-        "Hey, no sweat. These things happen.",//260 
+        "Hey, no sweat. These things happen.",
         "Also, if you feel like saving your reputation and making friends around here, you could come to our homecoming dorm party tonight",
-        "null",
+        "null",//270 
         "Of course not! Haha!",
         "Don’t make this face, haha! ",
-        "There’s a homecoming cocktail the school is throwing tonight… But it’s lame as hell. A bunch of teachers reminding students of the rules, Tadashi pulling out a perfectly crafted speech out of his ass five minutes before facing the audience, Lady A putting on some classical music and getting <em>way</em> too excited over Mozart…",//265 
+        "There’s a homecoming cocktail the school is throwing tonight… But it’s lame as hell. A bunch of teachers reminding students of the rules, Tadashi pulling out a perfectly crafted speech out of his ass five minutes before facing the audience, Lady A putting on some classical music and getting <em>way</em> too excited over Mozart…",
         "You know, all that <em>fun</em>, academically approved stuff. ",
-        "So, what usually happens is that we throw a better homecoming party in the dorms while the teachers are busy supervising the school’s official cocktail in the gym.",
+        "So, what usually happens is that we throw a better homecoming party in the dorms while the teachers are busy supervising the school’s official cocktail in the gym.",//275 
         "We’ve never been caught so far!",
         "Rich, snob, and a stickler for rules? ",
-        "Yeah we have plenty of those too. ",//270 
+        "Yeah we have plenty of those too. ",
         "They’re not invited to the party. ",
-        "null",
+        "null",//280 
         "null",
         "That’s easy, you just have to come to my party! I’ll introduce you.",
-        "Didn’t you just say that you didn’t like students who are stickler for rules?",//275 
-        "You’re kind of acting like one. ",
-        "I guess not…",
-        "null",
-        "Woah, I’m touched!",
-        "Straightforward and honest. I already like you newbie!",//280 
         "Didn’t you just say that you didn’t like students who are stickler for rules?",
         "You’re kind of acting like one. ",
+        "I guess not…",//285 
+        "null",
+        "Woah, I’m touched!",
+        "Straightforward and honest. I already like you newbie!",
+        "Didn’t you just say that you didn’t like students who are stickler for rules?",
+        "You’re kind of acting like one. ",//290 
         "I guess not…",
         "In any case, you’re free to come if you want to! If we’re lucky, Axel might even show up! This guy is great at parties. ",
-        "Yeah, think about all the fun we’re gonna have!",//285 
+        "Yeah, think about all the fun we’re gonna have!",
         "The only way that could happen is if we get caught. And we make sure that doesn’t happen.",
-        "Nobody has snitched yet, not even Tadashi. I think it’s because he’s scared he’ll be associated with the party. ",
+        "Nobody has snitched yet, not even Tadashi. I think it’s because he’s scared he’ll be associated with the party. ",//295 
         "Ha! I knew I saw a party animal inside you, newbie. ",
         "Well, if ever you decide to come, the party is near my dorm and it starts right when Arlington’s homecoming cocktail starts. ",
-        "When in doubt, follow the music and it should lead you straight there!",//290 
+        "When in doubt, follow the music and it should lead you straight there!",
         "null",
-        "Oh shit! Afternoon training starts soon. Coach will kill me if I’m late again.",
+        "Oh shit! Afternoon training starts soon. Coach will kill me if I’m late again.",//300 
         "null",
         "See you later, " + user.scholarname + "!",
-        "null",//295 
         "null",
         "null",
+        "null",//305 
         "What do you mean it’s not working? I thought it was the best they could offer. ",
         "…",
-        "It’s okay, we’ll figure it out. I’m going to-",//300 
+        "It’s okay, we’ll figure it out. I’m going to-",
         "I-I have to go. I’ll call you tonight.",
-        "H-Hey "+ user.scholarname + ". Do you need anything?",
+        "H-Hey "+ user.scholarname + ". Do you need anything?",//310 
         "I’m not exactly the outgoing type. ",
         "Well you’re off to a great start.",
-        "Y-Yeah…",//305 
+        "Y-Yeah…",
         "I-I…",
-        "Me too!",
+        "Me too!",//315 
         "null",
         "My life is pretty boring, I don’t think you’d want to hear much of it.",
-        "But ask me a question and I’ll do my best to answer!",//310 
+        "But ask me a question and I’ll do my best to answer!",
         "I want to be a neurosurgeon one day. The human brain fascinates me.",
-        "I actually volunteer at the city’s hospital every weekend. I love to help patients get better.",
+        "I actually volunteer at the city’s hospital every weekend. I love to help patients get better.",//320 
         "I… I hope that someday, I’ll be able to save lives. ",
         "(Claire blushed slightly as she smiled.)",
-        "O-Oh um…",//315 
+        "O-Oh um…",
         "I was talking to someone… but if you don’t mind, I’d rather not talk about it.",
-        "Y-Yeah, me too.",
+        "Y-Yeah, me too.",//325 
         "I-In any case, I have some homework to finish. It was nice talking to you!",
         "null",
-        "null",//320 
         "null",
-        "null",
-        "Useless, useless, USELESS!",
-        "I need to work harder… It needs to be better.",
-        "null",//325 
-        "null",
-        "null",
-        "Who gave you the right to speak to me?",
         "null",
         "null",//330 
+        "Useless, useless, USELESS!",
+        "I need to work harder… It needs to be better.",
+        "null",
+        "null",
+        "null",//335 
+        "Who gave you the right to speak to me?",
+        "null",
+        "null",
         "Let’s get something clear.",
-        "I don’t hang out with just anybody. The people I want as friends? I want them to be the best. I <em>need</em> them to be the best.",
+        "I don’t hang out with just anybody. The people I want as friends? I want them to be the best. I <em>need</em> them to be the best.",//340 
         "I need friends that will be able to handle it when I <em>dominate</em> the fashion industry in a couple of years. I want a crew of competent people I can depend on.",
         "So a <em>scholarship</em> student with no distinctive background or talent like you? Not interested. ",
-        "Stay out of my way.",//335 
-        "null",
-        "null",
-        "null",
-        "null",
-        "null",//340 
-        "null",
-        "Ha! You’ve got quite an attitude yourself. If you weren’t you, I’d probably admire that.",
-        "Want my advice though? Tone it down when you’re speaking to someone clearly better than you.",
+        "Stay out of my way.",
         "null",
         "null",//345 
+        "null",
+        "null",
+        "null",
+        "null",
+        "Ha! You’ve got quite an attitude yourself. If you weren’t you, I’d probably admire that.",//350 
+        "Want my advice though? Tone it down when you’re speaking to someone clearly better than you.",
+        "null",
+        "null",
         "I don’t need someone as useless as you to worry about me.",
-        "Also, I. Do. <em>Not.</em> Cry.",
+        "Also, I. Do. <em>Not.</em> Cry.",//355 
         "null",
         "Oh and stay away from Neha and Tadashi. They deserve better than you.",
-        "null",//350 
-        "null",
-        "null",
-        "null",
-        "null",
-        "null",//355 
-        "null",
-        "null",
         "null",
         "null",
         "null",//360 
         "null",
         "null",
         "null",
-        "Oh, hey. Sorry, I’m kind of busy at the moment.",
+        "null",
         "null",//365 
         "null",
         "null",
         "null",
-        "Sure.",
+        "null",
         "null",//370 
         "null",
-        "What do you mean by that?",
+        "Oh, hey. Sorry, I’m kind of busy at the moment.",
         "null",
         "null",
-        "She’s been acting weird lately. I’ve been trying to talk to her but nothing works.",//375 
+        "null",//375 
+        "null",
+        "Sure.",
+        "null",
+        "null",
+        "What do you mean by that?",//380 
+        "null",
+        "null",
+        "She’s been acting weird lately. I’ve been trying to talk to her but nothing works.",
         "On top of that, she’s in bad physical shape. She doesn’t want to admit it, but I’ve seen her tremble and struggle to keep her eyes open.",
-        "She keeps talking about how she’s got massive photoshoots coming up. Maybe it’s the stress?",
+        "She keeps talking about how she’s got massive photoshoots coming up. Maybe it’s the stress?",//385 
         "I’m really worried about her…",
         "I think, a couple of weeks?",
-        "At first, she was just really stressed, but then she got more and more weak and started to distance herself more.",//380 
+        "At first, she was just really stressed, but then she got more and more weak and started to distance herself more.",
+        "null",
+        "null",//390 
         "null",
         "null",
-        "null",
-        "null",
-        "I doubt it, you’ve known her for a day and a half.",//385 
+        "I doubt it, you’ve known her for a day and a half.",
         "She would not take you seriously if you showed some concern about her.",
-        "null",
-        "null",
-        "null",
-        "Yeah, she won’t tell me anything… and I’m her best friend.",//390 
-        "She might have found out about-",
-        "Er, sorry, I’m rambling. Did she say anything to you?",
-        "null",
-        "null",
         "null",//395 
         "null",
-        "O-Oh…",
+        "null",
+        "Yeah, she won’t tell me anything… and I’m her best friend.",
+        "She might have found out about-",
+        "Er, sorry, I’m rambling. Did she say anything to you?",//400 
+        "null",
+        "null",
+        "null",
+        "null",
+        "O-Oh…",//405 
         "I-I see…",
         "null",
-        "You know, when we were hanging out yesterday… I had a feeling you were a scholarship student, but I didn’t want to tell her about it.",//400 
-        "She seemed really happy compared to the last couple of weeks. ",
+        "null",
+        "You know, when we were hanging out yesterday… I had a feeling you were a scholarship student, but I didn’t want to tell her about it.",
+        "She seemed really happy compared to the last couple of weeks. ",//410 
         "Karolina, she… she has this thing against scholarship students.",
         "Well, it’s more like a thing against people she doesn’t consider a worthy addition to her life.",
         "When you’ve been through the things she’s been through, you can’t afford mistakes. You need people you are sure you can count on. ",
-        "null",//405 
+        "null",
+        "null",//415 
         "null",
         "null",
         "null",
-        "null",
-        "No… I don’t care. Karolina might not like it, but I think we get along decently.",//410 
-        "But she means a lot to me, and when I’m hanging out with her, I’d rather you not being there. I hate seeing her upset, especially with whatever is bothering her right now…",
+        "No… I don’t care. Karolina might not like it, but I think we get along decently.",
+        "But she means a lot to me, and when I’m hanging out with her, I’d rather you not being there. I hate seeing her upset, especially with whatever is bothering her right now…",//420 
         "It’s nothing personal.",
         "null",
         "Maybe. I mean, I’ve only known you for a day and a half. But if you’re willing to help me find out what’s upsetting Karolina, then I’m definitely going to consider.",
-        "Be subtle about it, though.",//415 
-        "I have to go. I’m supposed to be launching my new collection in two weeks and I’m already filled with pre-orders.",
+        "Be subtle about it, though.",
+        "I have to go. I’m supposed to be launching my new collection in two weeks and I’m already filled with pre-orders.",//425 
         "<em>Clothes?</em> They are more than just <em>clothes</em>. ",
         "And yes, they usually sell out pretty quickly so place an order as soon as you can if you’re interested. Please contact me via any of my social media accounts. I do <em>not</em> negotiate prices and I do not customize my pieces. No returns or refunds accepted, only exchanges. Thank you for your interest.",
         "null",
-        "null",//420 
         "null",
+        "null",//430 
         "null",
         "Hi " + user.scholarname + "! Want to join us?",
         "null",
-        "It’s just a weekly robotics club meeting. We’re almost done, so you can use the classroom soon.",//425 
-        "Okay!",
+        "It’s just a weekly robotics club meeting. We’re almost done, so you can use the classroom soon.",
+        "Okay!",//435 
         "So remember guys, the competition is in two months and Arlington has not lost in five years. ",
         "Let’s give it our best shot! First designs are due next week and we start building in two. ",
         "Alright, see you guys on Friday!",
-        "First meeting of the year? Check!",//430 
-        "Hey, I love learning! And I love crushing the competition even more!",
+        "First meeting of the year? Check!",
+        "Hey, I love learning! And I love crushing the competition even more!",//440 
         "The annual robotics competition is right around the corner and Arlington’s team will be participating in the high school division. I’m so excited, I can’t wait to start building!",
         "null",
         "null",
-        "Only if you pay me enough!",//435 
-        "Haha!",
+        "Only if you pay me enough!",
+        "Haha!",//445 
         "Unfortunately, I couldn’t do that even if I wanted to.",
         "For a robot to be able to to do your homework, it would require me to program a software for it, and I’m not the best person for that. Tegan is.",
         "Generally, I’m in charge of setting up the hardware around here. I try my best to get him to join the club to help the software team but he always refuses. We could be unbeatable with his skills!",
-        "Try not to despair too much. There’s always a way to get away with not doing your homework.",//440 
-        "Experience!",
+        "Try not to despair too much. There’s always a way to get away with not doing your homework.",
+        "Experience!",//450 
         "Now <em>that</em> is a really constructive comment!",
         "But no, I will not chill. I want the $50,000 prize money for the club. ",
         "Yup.",
-        "I <em>know</em> we’re going to win.",//445 
-        "The robotics club has really talented members this year, and I’m going to make sure they exploit those skills. ",
+        "I <em>know</em> we’re going to win.",
+        "The robotics club has really talented members this year, and I’m going to make sure they exploit those skills. ",//455 
         "That’s an understatement.",
         "null",
         "Well I don’t do it for the money, but…",
-        "I’ll take a couple hundreds of thousands of dollars.",//450 
-        "As much as I’d appreciate that, I’m going to have to refuse. ",
+        "I’ll take a couple hundreds of thousands of dollars.",
+        "As much as I’d appreciate that, I’m going to have to refuse. ",//460 
         "Haha!",
         "Unfortunately, I couldn’t do that even if I wanted to.",
         "For a robot to be able to to do your homework, it would require me to program a software for it, and I’m not the best person for that. Tegan is. ",
-        "Generally, I’m in charge of setting up the hardware around here. I try my best to get him to join the club to help the software team but he always refuses. We could be unbeatable with his skills! ",//455 
-        "Try not to despair too much. There’s always a way to get away with not doing your homework.",
+        "Generally, I’m in charge of setting up the hardware around here. I try my best to get him to join the club to help the software team but he always refuses. We could be unbeatable with his skills! ",
+        "Try not to despair too much. There’s always a way to get away with not doing your homework.",//465 
         "Experience!",
         "I don’t agree. It’s never too early to start working on something you love.",
         "And you can never be too prepared.",
-        "I <em>know</em> we’re going to win.",//460 
-        "We’ve been preparing for this since last year!",
+        "I <em>know</em> we’re going to win.",
+        "We’ve been preparing for this since last year!",//470 
         "Understatement of the century.",
         "But anyway, I’ve got our second meeting to prepare and lunchtime is almost over. ",
         "I wanted to go to Raquel’s party tonight, but something tells me I’m going to get a little too invested in my robot’s designs.",
-        "null",//465 
         "null",
+        "null",//475 
         "Exactly. ",
         "See you later, " + user.scholarname + "!",
         "null",
-        "null",//470 
         "null",
+        "null",//480 
         "null",
         "THERE YOU ARE!",
         "null",
-        "Trust me, I would’ve done anything to avoid seeing your face if this wasn’t a necessity. ",//475 
-        "You’re gonna do something about your stupid paparazzi outside or else-",
+        "Trust me, I would’ve done anything to avoid seeing your face if this wasn’t a necessity. ",
+        "You’re gonna do something about your stupid paparazzi outside or else-",//485 
         "null",
         "null",
         "Look here you useless jerk, this isn’t about you. I know it’s hard for you to understand when things aren’t about you, but this is about the school. Those reporters are on private school grounds and can greatly hurt the reputation of Arlington.",
-        "Furthermore, you’re wasting the time of everyone trying to deal with your shit when you could’ve easily dealt with them this morning.",//480 
-        "And lastly, to add to all the bullshit you’ve put me through, you’ve skipped more than 25% of your classes, most of them unjustified, and so, you should’ve reported to Lady Arlington’s office months ago. ",
+        "Furthermore, you’re wasting the time of everyone trying to deal with your shit when you could’ve easily dealt with them this morning.",
+        "And lastly, to add to all the bullshit you’ve put me through, you’ve skipped more than 25% of your classes, most of them unjustified, and so, you should’ve reported to Lady Arlington’s office months ago. ",//490 
         "So do me a favor and go to the front gate, let them get that stupid shot of you, and then take your sorry ass to the principal’s office. ",
-        "null",//483 Special Background
-        "null",
-        "null",//485 
-        "You’ve got to be ki-",
+        "null",//492 Special Background
         "null",
         "null",
+        "You’ve got to be ki-",//495 
         "null",
-        "null",//490 
-        "You’re <em>not</em> the only celebrity at this school. When you’re here, you’re the same as every single student here.",
+        "null",
+        "null",
+        "null",
+        "You’re <em>not</em> the only celebrity at this school. When you’re here, you’re the same as every single student here.",//500 
         "I don’t care how many fans you have or how much money you have in your bank account.",
         "So shut up and take care of your shit. ",
         "null",
-        "null",//495 
-        "null",
-        "null",
-        "null",
-        "null",
-        "null",//500 
-        "null",
-        "null",
-        "null",
         "null",
         "null",//505 
-        "" + user.scholarname + " has been here for literally 2 days and already demonstrated more brain power than you ever have.",
-        "So while you may hate my guts, listen to " + user.genderpronoun + ". ",
+        "null",
+        "null",
         "null",
         "null",
         "null",//510 
-        "Yeah, travelling the world when you’re working and skipping classes when you’re at school. It must be <em>so</em> hard. ",
         "null",
         "null",
         "null",
-        "null",//515 
-        "Typical.",
+        "null",
+        "" + user.scholarname + " has been here for literally 2 days and already demonstrated more brain power than you ever have.",//515 
+        "So while you may hate my guts, listen to " + user.genderpronoun + ". ",
+        "null",
+        "null",
+        "null",
+        "Yeah, travelling the world when you’re working and skipping classes when you’re at school. It must be <em>so</em> hard. ",//520 
+        "null",
+        "null",
+        "null",
+        "null",
+        "Typical.",//525 
         "null",
         "null",
         "…",
-        "Hey " + user.scholarname + "...",//520 
-        "Thanks for having my back. ",
+        "Hey " + user.scholarname + "...",
+        "Thanks for having my back. ",//530 
         "I’m happy someone understands how stressful things can get for me. ",
         "null",
         "null",
-        "null",//525 
+        "null",
+        "null",//535 
         "null",
         "null",
         "null",
-        "null",
-        "I don’t think I’ve ever heard as much bullshit in my life as I just did from both of you just now.",//530 
-        "null",
+        "I don’t think I’ve ever heard as much bullshit in my life as I just did from both of you just now.",
+        "null",//540 
         "null",
         "null",
         "Well " + user.scholarname + ", if you’re so set on sheltering this guy as if he was your goddamn <em>child</em>…",
-        "Why don’t <em>you</em> propose a solution to this mess?",//535 
-        "Or was your game plan to just pat him on the back and hope everything turned out fine?",
+        "Why don’t <em>you</em> propose a solution to this mess?",
+        "Or was your game plan to just pat him on the back and hope everything turned out fine?",//545 
         "null",
         "null",
         "Oh yeah, brilliant. And then be responsible for getting Arlington Academy in the city’s newspaper for having to call the cops?",
-        "These things aren’t that simple!",//540 
-        "null",
-        "null",
-        "null",
-        "null",
-        "What the <em>hell</em> did you just call me",//545 
-        "null",
-        "null",
-        "How surprising. ",
-        "null",
+        "These things aren’t that simple!",
         "null",//550 
         "null",
         "null",
-        "I don’t know what it was you said, but you took care of it somehow.",
-        "Good job.",
+        "null",
+        "What the <em>hell</em> did you just call me",
         "null",//555 
         "null",
-        "null",
+        "How surprising. ",
         "null",
         "null",
         "null",//560 
         "null",
-        "null",
-        "null",
+        "I don’t know what it was you said, but you took care of it somehow.",
+        "Good job.",
         "null",
         "null",//565 
         "null",
         "null",
-        "I’m going to ignore that last comment and assume you’re going to take care of the situation.",
+        "null",
         "null",
         "null",//570 
-        "Does he also feed you with a baby spoon?",
+        "null",
         "null",
         "null",
         "null",
         "null",//575 
         "null",
-        "Typical.",
+        "I’m going to ignore that last comment and assume you’re going to take care of the situation.",
         "null",
-        "null",//579 Special Background
-        "null",//580 
+        "null",
+        "Does he also feed you with a baby spoon?",//580 
         "null",
         "null",
         "null",
         "null",
         "null",//585 
+        "Typical.",
         "null",
-        "null",
-        "null",
+        "null",//588 Special Background
         "null",
         "null",//590 
         "null",
         "null",
-        "null",
-        "null",
+        "null",//593 Try to find Axel!
+        "null",//594 Explore the school and talk to your classmates!
         "null",//595 
-        "DRING!",//596 POPUP
+        "null",
         "null",
         "null",
         "null",
@@ -1455,15 +1470,15 @@ function Chapter()
         "null",//605 
         "null",
         "null",
-        "null",
+        "DRING!",//608 POPUP
         "null",
         "null",//610 
-        "null",
+        "null",//611 Objective Complete: Go to Classroom 2
         "null",
         "null",
         "null",
         "null",//615 
-        "null",//616 player clicks on the episode’s outfit.
+        "null",
         "null",
         "null",
         "null",
@@ -1477,192 +1492,208 @@ function Chapter()
         "null",
         "null",
         "null",
-        "null",//630 
+        "null",//630 player clicks on the episode’s outfit.
         "null",
         "null",
         "null",
         "null",
-        "null",//635 
+        "null",//635 Objective Complete:  Go to your dorm and prepare for the party!
         "null",
         "null",
-        "Yeah! It’s been forever since I’ve gone to an Arlington dorm party! And I know Tadashi’s too busy entertaining Lady A and the rest of this school’s staff to come here.",
-        "(...)",
-        "Holy <em>shit</em> Raquel, how did <em>you</em> manage to sneak alcohol in here?!",//640 
-        "null",
-        "You’re crazy, you know that?",
         "null",
         "null",
-        "I’ll pass, thank you. ",//645 
+        "null",//640 
         "null",
-        "I didn’t expect to see you here, newbie.",
-        "You looked so lost this morning, and now look at you! Blending in perfectly.",
+        "null",
+        "null",
+        "null",
+        "null",//645 
+        "null",
+        "null",
+        "null",
         "null",
         "null",//650 
         "null",
         "null",
         "null",
-        "Almost? From what I gathered by how you faced Tadashi earlier, I’d say you were totally worried about me.",
-        "Well, in any case…",//655 
+        "Yeah! It’s been forever since I’ve gone to an Arlington dorm party! And I know Tadashi’s too busy entertaining Lady A and the rest of this school’s staff to come here.",
+        "(...)",//655 
+        "Holy <em>shit</em> Raquel, how did <em>you</em> manage to sneak alcohol in here?!",
+        "null",
+        "You’re crazy, you know that?",
+        "null",
+        "null",//660 
+        "I’ll pass, thank you. ",
+        "null",
+        "I didn’t expect to see you here, newbie.",
+        "You looked so lost this morning, and now look at you! Blending in perfectly.",
+        "null",//665 
+        "null",
+        "null",
+        "null",
+        "null",
+        "Almost? From what I gathered by how you faced Tadashi earlier, I’d say you were totally worried about me.",//670 
+        "Well, in any case…",
         "Thanks for defending my back there.",
         "null",
         "Yeah, sure. <em>Worried</em>.",
-        "But hey, I’m used to dealing with people like you and Tadashi.",
-        "You’ll figure it out one day, maybe.",//660 
+        "But hey, I’m used to dealing with people like you and Tadashi.",//675 
+        "You’ll figure it out one day, maybe.",
         "Next time you’ll know to let me sleep!",
         "Haha! ",
         "It really gets on my nerves.",
-        "You’d think they would get used to me by now. Especially since I have classes with like, half of the people here. ",
-        "null",//665 
+        "You’d think they would get used to me by now. Especially since I have classes with like, half of the people here. ",//680 
+        "null",
         "Ha! You seemed like you were about burst! You know, people usually tend to avoid going to class. I don’t know why you seemed so eager to get there.",
         "null",
         "So I can expect you to skip <em>after</em> the first day of class?",
-        "Hey, I get it. Don’t be like me. Trust me, having Tadashi chase you for hours just because you skipped a class isn’t worth it. ",
-        "null",//670 
+        "Hey, I get it. Don’t be like me. Trust me, having Tadashi chase you for hours just because you skipped a class isn’t worth it. ",//685 
+        "null",
         "This wasn’t my first world tour you know.",
         "I’ve went days without sleep because of work. So you can bet I can do that for a party!",
-        "null",//673 GHOST SLIDE
+        "null",//689 GHOST SLIDE
+        "null",//690 
         "null",
-        "null",//675 
         "Well, no thanks to you. ",
         "But hey, I’m used to dealing with people like you and Tadashi.",
         "You’ll figure it out one day, maybe. ",
-        "null",
-        "… About that.",//680 
+        "null",//695 
+        "… About that.",
         "People usually don’t defend me like that, it was a pleasant surprise to truly have someone on my side.",
         "Even if I did end up giving in to Tadashit, I did so because I didn’t want you to take any more shit for me.",
         "So, um… thanks. ",
-        "null",
-        "Well, you made the situation much easier for me to handle. ",//685 
+        "null",//700 
+        "Well, you made the situation much easier for me to handle. ",
         "Tadashi would’ve been on my ass forever if you hadn’t come!",
         "Ha! You seemed like you were about burst! You know, people usually tend to avoid going to class. I don’t know why you seemed so eager to get there.",
         "null",
-        "So I can expect you to skip after the first day of class?",
-        ", I get it. Don’t be like me. Trust me, having Tadashi chase you for hours just because you skipped a class isn’t worth it. ",//690 
+        "So I can expect you to skip after the first day of class?",//705 
+        ", I get it. Don’t be like me. Trust me, having Tadashi chase you for hours just because you skipped a class isn’t worth it. ",
         "null",
         "I remember writing this song back when I was thirteen. Now, I’ve performed it in front of thousands of people in more than twenty different cities. ",
         "So...what do you think about it?",
-        "null",
-        "null",//695 
-        "null",
-        "null",
-        "null",
-        "null",
-        "…",//700 
-        "You don’t have to prepare a grand critique, haha! A simple yes or no would be fine. ",
-        "null",
-        "null",
-        "…",
-        "Well, you do have a point. ",//705 
-        "Sometimes, music seems too much like a business to me. I mean, it is an industry, so it’s understandable.",
-        "But success comes with a price that’s very… superficial.",
-        "null",
-        "null",
         "null",//710 
         "null",
         "null",
-        "You’re looking gorgeous Karolina, as always. ",
-        "It’s a shame that Tadashi barely notices.",
+        "null",
+        "null",
         "null",//715 
+        "…",
+        "You don’t have to prepare a grand critique, haha! A simple yes or no would be fine. ",
+        "null",
+        "null",
+        "…",//720 
+        "Well, you do have a point. ",
+        "Sometimes, music seems too much like a business to me. I mean, it is an industry, so it’s understandable.",
+        "But success comes with a price that’s very… superficial.",
+        "null",
+        "null",//725 
         "null",
         "null",
         "null",
-        "Yeah, okay. ",
-        "null",//720 
+        "You’re looking gorgeous Karolina, as always. ",
+        "It’s a shame that Tadashi barely notices.",//730 
+        "null",
+        "null",
+        "null",
+        "null",
+        "Yeah, okay. ",//735 
+        "null",
         "Look Karolina, I don’t care.",
         "All I care about is keeping our relationship strictly professional.",
         "Speaking of that, where’s Neha? I wanted to talk to her about my next magazine shoot.",
-        "null",
-        "Actually, with all the noise the party is making, I’d rather call them tomorrow.",//725 
+        "null",//740 
+        "Actually, with all the noise the party is making, I’d rather call them tomorrow.",
         "I’m going to be busy for the next week, Axel. Book an appointment with me and I’ll get back to you.",
         "null",
         "She’s very in-demand. ",
-        "null",
-        "null",//730 
-        "null",
-        "That’s exactly what I was wondering. Come on guys!",
-        "null",
-        "null",
-        "…",//735 
-        "null",
-        "null",
-        "null",
-        "Come on, Neha. Let’s get something to drink. ",
-        "null",//740 
-        "Water.",
-        "I’m only going to get some water.",
-        "null",
-        "null",
         "null",//745 
         "null",
         "null",
-        "null",
+        "That’s exactly what I was wondering. Come on guys!",
         "null",
         "null",//750 
+        "…",
         "null",
         "null",
-        "Looks like someone can’t understand a hidden message. ",
         "null",
-        "Then why are you here? You want my picture? Sorry, but I’m a professional,",//755 
-        "Congratulations! You’ve unlocked an illustration! Go to your dorm and click on the book on your desk to check it out.",//756 POPUP
+        "Come on, Neha. Let’s get something to drink. ",//755 
         "null",
-        "I don’t recall hearing Neha ask for you.",
+        "Water.",
+        "I’m only going to get some water.",
         "null",
         "null",//760 
         "null",
         "null",
-        "I-I’m FINE!",
+        "null",
         "null",
         "null",//765 
-        "Come on!",
         "null",
         "null",
-        "Congratulations! You’ve unlocked an illustration! Go to your dorm and click on the book on your desk to check it out.",//769 POPUP
+        "null",
+        "Looks like someone can’t understand a hidden message. ",
         "null",//770 
+        "Then why are you here? You want my picture? Sorry, but I’m a professional.",
+        "Congratulations! You’ve unlocked an illustration! Go to your dorm and click on the book on your desk to check it out.",//772 POPUP
         "null",
-        "null",
-        "null",
-        "null",
+        "I don’t recall hearing Neha ask for you.",
         "null",//775 
         "null",
         "null",
         "null",
-        "null",
+        "I-I’m FINE!",
         "null",//780 
         "null",
-        "null",
-        " Damn, how much did she drink?",//783 POPUP
-        "null",
-        "null",//785 
+        "Come on!",
         "null",
         "null",
-        "null",//788 Different Dorm…
+        "Congratulations! You’ve unlocked an illustration! Go to your dorm and click on the book on your desk to check it out.",//785 POPUP
+        "null",
+        "null",
+        "null",
         "null",
         "null",//790 
         "null",
         "null",
         "null",
         "null",
-        "N-Neha? ",//795 
+        "null",//795 
         "null",
-        "You tell me, one second I was at the party and-",
-        "You. Out. ",
         "null",
-        "I don’t care. I don’t need this right now. ",//800 
-        "Did anybody else see me faint?",
         "null",
-        "I wasn’t talking to you.",
-        "Leave. ",
+        " Damn, how much did she drink?",//799 POPUP
+        "null",//800 
+        "null",
+        "null",
+        "null",
+        "null",//804 Different Dorm…
         "null",//805 
         "null",
         "null",
         "null",
         "null",
         "null",//810 
+        "N-Neha? ",
         "null",
-        "null",
-        "null",
-        "null",
+        "You tell me, one second I was at the party and-",
+        "You. Out. ",
         "null",//815 
+        "I don’t care. I don’t need this right now. ",
+        "Did anybody else see me faint?",
+        "null",
+        "I wasn’t talking to you.",
+        "Leave. ",//820 
+        "null",
+        "null",
+        "null",
+        "null",
+        "null",//825 
+        "null",
+        "null",
+        "null",
+        "null",
+        "null",//830 
+        "null",
         "null",
         "null",
         ];
@@ -1681,180 +1712,180 @@ function Chapter()
         "null",//10 
         "null",
         "null",
-        personnages.axel[3],
         "null",
+        personnages.axel[3],
         "null",//15 
+        "null",
         personnages.axel[3],
         personnages.axel[3],
         "null",
-        "null",
-        personnages.axel[3],//20 
+        "null",//20 
+        personnages.axel[3],
         personnages.axel[3],
         personnages.axel[4],
         personnages.axel[3],
+        personnages.axel[3],//25 
+        personnages.axel[0],
+        personnages.axel[0],
+        personnages.axel[0],
+        personnages.axel[0],
+        personnages.axel[0],//30 
         personnages.axel[3],
-        personnages.axel[0],//25 
-        personnages.axel[0],
-        personnages.axel[0],
-        personnages.axel[0],
-        personnages.axel[0],
-        personnages.axel[3],//30 
-        personnages.axel[3],
-        personnages.axel[0],
         personnages.axel[3],
         personnages.axel[0],
-        "null",//35 
+        personnages.axel[3],
+        personnages.axel[0],//35 
+        "null",//36 Objective Complete: Get some breakfast at the Cafeteria! 
+        "null",
+        "null",
         personnages.axel[0],
-        personnages.axel[1],
-        "null",
-        "null",
-        "null",//40 
+        personnages.axel[1],//40 
         "null",
         "null",
         "null",
+        "null",//44 Objective Complete: Follow Axel and go back to the Main Hallway! 
+        "null",//45 
         "null",
-        personnages.teacher[0],//45 
+        "null",
+        "null",
+        "null",
+        personnages.teacher[0],//50 
         personnages.teacher[0],
         personnages.teacher[4],
         personnages.teacher[0],
         personnages.teacher[0],
-        personnages.teacher[0],//50 
+        personnages.teacher[0],//55 
         personnages.teacher[0],
         personnages.teacher[0],
         personnages.tadashi[0],
         "null",
-        personnages.tadashi[0],//55 
+        personnages.tadashi[0],//60 
         personnages.tadashi[0],
         personnages.tadashi[1],
         personnages.tadashi[0],
         personnages.tadashi[0],
-        personnages.tadashi[0],//60 
+        personnages.tadashi[0],//65 
         personnages.tadashi[3],
         personnages.tadashi[0],
         "null",
         personnages.tadashi[1],
-        "null",//65 
+        "null",//70 
         personnages.alistair[5],
         "null",
         personnages.raquel[1],
         "null",
-        personnages.raquel[0],//70 
+        personnages.raquel[0],//75 
         "null",
         personnages.karolina[0],
         personnages.karolina[0],
         "null",
-        personnages.karolina[0],//75 
+        personnages.karolina[0],//80 
         personnages.karolina[0],
         personnages.karolina[0],
         personnages.karolina[0],
         "null",
-        personnages.karolina[3],//80 
+        personnages.karolina[3],//85 
         "null",
         "null",
         personnages.karolina[2],
         "null",
-        "null",//85 
+        "null",//90 
         personnages.alistair[0],
         "null",
         personnages.raquel[0],
         personnages.raquel[0],
-        personnages.raquel[0],//90 
-        "null",//91 TODO: Special Background Required
+        personnages.raquel[0],//95 
+        "null",//96 TODO: Special Background Required
         "null",
         personnages.tadashi[0],
         "null",
-        "null",//95 
+        "null",//100 
         personnages.tadashi[0],
         "null",
         "null",
         "null",
-        personnages.tadashi[0],//100 
+        personnages.tadashi[0],//105 
         "null",
         "null",
         "null",
         "null",
-        "null",//105 
-        "null",
-        "null",//107 TODO: Objectives
-        "null",
-        personnages.tegan[0],
         "null",//110 
-        personnages.tegan[0],
+        "null",
+        "null",//112 TODO: Objectives
+        "null",//113 Objective Complete: Quick! Get into Classroom 1!  
+        "null",
+        "null",//115 
         "null",
         personnages.tegan[0],
         "null",
-        personnages.tegan[1],//115 
         personnages.tegan[0],
-        "null",
-        "null",
-        personnages.tegan[1],
         "null",//120 
         personnages.tegan[0],
         "null",
-        personnages.tegan[0],
-        "null",
-        personnages.tegan[3],//125 
-        personnages.tegan[0],
-        "null",
-        personnages.tegan[0],
-        personnages.tegan[0],
-        personnages.tegan[1],//130 
         personnages.tegan[1],
         personnages.tegan[0],
+        "null",//125 
+        "null",
+        personnages.tegan[1],
+        "null",
         personnages.tegan[0],
-        personnages.tegan[0],
-        personnages.tegan[0],//135 
-        personnages.tegan[0],
-        personnages.tegan[0],
+        "null",//130 
         personnages.tegan[0],
         "null",
+        personnages.tegan[3],
+        personnages.tegan[0],
+        "null",//135 
+        personnages.tegan[0],
+        personnages.tegan[0],
+        personnages.tegan[1],
+        personnages.tegan[1],
         personnages.tegan[0],//140 
         personnages.tegan[0],
         personnages.tegan[0],
         personnages.tegan[0],
         personnages.tegan[0],
-        personnages.tegan[2],//145 
-        personnages.tegan[1],
+        personnages.tegan[0],//145 
+        personnages.tegan[0],
         "null",
         personnages.tegan[0],
         personnages.tegan[0],
         personnages.tegan[0],//150 
         personnages.tegan[0],
-        "null",
+        personnages.tegan[0],
+        personnages.tegan[2],
+        personnages.tegan[1],
+        "null",//155 
         personnages.tegan[0],
         personnages.tegan[0],
-        personnages.tegan[0],//155 
         personnages.tegan[0],
-        "null",
-        "null",
         personnages.tegan[0],
         "null",//160 
-        "null",
         personnages.tegan[0],
-        "null",
+        personnages.tegan[0],
+        personnages.tegan[0],
         "null",
         "null",//165 
-        personnages.tegan[0],
         "null",
         personnages.tegan[0],
         "null",
-        "null",//170 
+        "null",
+        personnages.tegan[0],//170 
+        "null",
         "null",
         "null",
         personnages.tegan[0],
+        "null",//175 
+        personnages.tegan[0],
         "null",
-        personnages.tegan[1],//175 
         "null",
         "null",
+        "null",//180 
+        personnages.tegan[0],
+        "null",
+        personnages.tegan[1],
+        "null",
+        "null",//185 
         personnages.alistair[0],
-        personnages.alistair[1],
-        personnages.alistair[0],//180 
-        personnages.alistair[0],
-        personnages.alistair[0],
-        personnages.alistair[0],
-        personnages.alistair[0],
-        personnages.alistair[0],//185 
-        personnages.alistair[1],
         personnages.alistair[1],
         personnages.alistair[0],
         personnages.alistair[0],
@@ -1863,22 +1894,22 @@ function Chapter()
         personnages.alistair[0],
         personnages.alistair[0],
         personnages.alistair[1],
-        personnages.alistair[0],//195 
+        personnages.alistair[1],//195 
         personnages.alistair[0],
         personnages.alistair[0],
         personnages.alistair[0],
-        personnages.alistair[1],
-        personnages.alistair[3],//200 
-        personnages.alistair[1],
         personnages.alistair[0],
+        personnages.alistair[0],//200 
         personnages.alistair[0],
         personnages.alistair[1],
+        personnages.alistair[0],
+        personnages.alistair[0],
         personnages.alistair[0],//205 
         personnages.alistair[0],
-        personnages.alistair[0],
-        personnages.alistair[0],
-        personnages.alistair[0],
-        personnages.alistair[1],//210 
+        personnages.alistair[1],
+        personnages.alistair[3],
+        personnages.alistair[1],
+        personnages.alistair[0],//210 
         personnages.alistair[0],
         personnages.alistair[1],
         personnages.alistair[0],
@@ -1886,174 +1917,174 @@ function Chapter()
         personnages.alistair[0],//215 
         personnages.alistair[0],
         personnages.alistair[0],
+        personnages.alistair[1],
+        personnages.alistair[0],
+        personnages.alistair[1],//220 
         personnages.alistair[0],
         personnages.alistair[0],
-        personnages.alistair[0],//220 
         personnages.alistair[0],
         personnages.alistair[0],
+        personnages.alistair[0],//225 
+        personnages.alistair[0],
+        personnages.alistair[0],
+        personnages.alistair[0],
+        personnages.alistair[0],
+        personnages.alistair[0],//230 
         "null",
         personnages.tadashi[0],
-        personnages.tadashi[0],//225 
         personnages.tadashi[0],
-        personnages.tadashi[5],
+        personnages.tadashi[0],
+        personnages.tadashi[5],//235 
         personnages.tadashi[1],
         personnages.tadashi[0],
-        personnages.tadashi[0],//230 
         personnages.tadashi[0],
+        personnages.tadashi[0],
+        personnages.tadashi[3],//240 
         personnages.tadashi[3],
         personnages.tadashi[3],
-        personnages.tadashi[3],
-        personnages.tadashi[0],//235 
+        personnages.tadashi[0],
         personnages.tadashi[1],
-        personnages.tadashi[3],
+        personnages.tadashi[3],//245 
         personnages.tadashi[0],
         personnages.tadashi[0],
-        personnages.tadashi[0],//240 
+        personnages.tadashi[0],
+        personnages.tadashi[3],
+        personnages.tadashi[3],//250 
         personnages.tadashi[3],
         personnages.tadashi[3],
+        personnages.tadashi[4],
         personnages.tadashi[3],
-        personnages.tadashi[3],
-        personnages.tadashi[4],//245 
-        personnages.tadashi[3],
-        personnages.tadashi[3],
+        personnages.tadashi[3],//255 
         personnages.tadashi[0],
         personnages.tadashi[0],
-        "null",//250 
+        "null",
+        "null",
+        "null",//260 
         "null",
         "null",
         "null",
         "null",
-        "null",//255 
-        "null",
-        personnages.raquel[0],
-        personnages.raquel[0],
-        personnages.raquel[1],
-        personnages.raquel[0],//260 
-        personnages.raquel[0],
-        personnages.raquel[0],
-        personnages.raquel[0],
-        personnages.raquel[1],
         personnages.raquel[0],//265 
         personnages.raquel[0],
-        personnages.raquel[0],
         personnages.raquel[1],
+        personnages.raquel[0],
         personnages.raquel[0],
         personnages.raquel[0],//270 
+        personnages.raquel[0],
+        personnages.raquel[1],
+        personnages.raquel[0],
+        personnages.raquel[0],
+        personnages.raquel[0],//275 
         personnages.raquel[1],
         personnages.raquel[0],
         personnages.raquel[0],
         personnages.raquel[1],
-        personnages.raquel[4],//275 
+        personnages.raquel[0],//280 
+        personnages.raquel[0],
+        personnages.raquel[1],
         personnages.raquel[4],
+        personnages.raquel[4],
+        personnages.raquel[0],//285 
+        personnages.raquel[0],
+        personnages.raquel[1],
+        personnages.raquel[1],
+        personnages.raquel[4],
+        personnages.raquel[4],//290 
         personnages.raquel[0],
         personnages.raquel[0],
         personnages.raquel[1],
-        personnages.raquel[1],//280 
         personnages.raquel[4],
-        personnages.raquel[4],
-        personnages.raquel[0],
-        personnages.raquel[0],
-        personnages.raquel[1],//285 
-        personnages.raquel[4],
-        personnages.raquel[0],
+        personnages.raquel[0],//295 
         personnages.raquel[1],
         personnages.raquel[0],
-        personnages.raquel[0],//290 
-        personnages.raquel[0],
-        personnages.raquel[5],
         personnages.raquel[0],
         personnages.raquel[0],
-        "null",//295 
+        personnages.raquel[5],//300 
+        personnages.raquel[0],
+        personnages.raquel[0],
+        "null",
         personnages.claire[4],
-        personnages.claire[4],
+        personnages.claire[4],//305 
         personnages.claire[5],
         personnages.claire[0],
-        personnages.claire[0],//300 
+        personnages.claire[0],
         personnages.claire[5],
-        personnages.claire[0],
-        personnages.claire[1],
-        personnages.claire[1],
-        personnages.claire[0],//305 
-        personnages.claire[5],
-        personnages.claire[1],
-        personnages.claire[0],
-        personnages.claire[0],
         personnages.claire[0],//310 
         personnages.claire[1],
+        personnages.claire[1],
+        personnages.claire[0],
+        personnages.claire[5],
+        personnages.claire[1],//315 
+        personnages.claire[0],
         personnages.claire[0],
         personnages.claire[0],
         personnages.claire[1],
-        personnages.claire[0],//315 
+        personnages.claire[0],//320 
+        personnages.claire[0],
+        personnages.claire[1],
         personnages.claire[0],
         personnages.claire[0],
+        personnages.claire[0],//325 
         personnages.claire[0],
         "null",
-        "null",//320 
         "null",
         "null",
+        "null",//330 
         personnages.karolina[4],
         personnages.karolina[4],
-        personnages.karolina[4],//325 
         personnages.karolina[4],
+        personnages.karolina[4],
+        personnages.karolina[0],//335 
         personnages.karolina[0],
         personnages.karolina[0],
-        personnages.karolina[0],
-        personnages.karolina[4],//330 
-        personnages.karolina[4],
-        personnages.karolina[0],
-        personnages.karolina[3],
-        personnages.karolina[3],
-        personnages.karolina[4],//335 
-        personnages.karolina[3],
-        personnages.karolina[3],
-        personnages.karolina[3],
-        personnages.karolina[3],
-        personnages.karolina[3],//340 
-        personnages.karolina[3],
-        personnages.karolina[0],
-        personnages.karolina[3],
-        personnages.karolina[3],
-        personnages.karolina[4],//345 
         personnages.karolina[4],
         personnages.karolina[4],
+        personnages.karolina[0],//340 
         personnages.karolina[3],
         personnages.karolina[3],
-        "null",//350 
-        "null",
-        "null",
-        "null",
-        "null",
-        "null",//355 
-        "null",
-        personnages.neha[0],
+        personnages.karolina[4],
+        personnages.karolina[3],
+        personnages.karolina[3],//345 
+        personnages.karolina[3],
+        personnages.karolina[3],
+        personnages.karolina[3],
+        personnages.karolina[3],
+        personnages.karolina[0],//350 
+        personnages.karolina[3],
+        personnages.karolina[3],
+        personnages.karolina[4],
+        personnages.karolina[4],
+        personnages.karolina[4],//355 
+        personnages.karolina[3],
+        personnages.karolina[3],
         "null",
         "null",
         "null",//360 
         "null",
-        personnages.neha[0],
-        personnages.neha[5],
-        personnages.neha[0],
+        "null",
+        "null",
+        "null",
         personnages.neha[0],//365 
-        personnages.neha[0],
-        personnages.neha[0],
-        personnages.neha[0],
-        personnages.neha[0],
+        "null",
+        "null",
+        "null",
+        "null",
         personnages.neha[0],//370 
         personnages.neha[5],
         personnages.neha[0],
         personnages.neha[0],
         personnages.neha[0],
-        personnages.neha[4],//375 
+        personnages.neha[0],//375 
         personnages.neha[0],
         personnages.neha[0],
         personnages.neha[0],
-        personnages.neha[0],
+        personnages.neha[5],
         personnages.neha[0],//380 
         personnages.neha[0],
         personnages.neha[0],
+        personnages.neha[4],
         personnages.neha[0],
-        personnages.neha[0],
-        personnages.neha[4],//385 
+        personnages.neha[0],//385 
         personnages.neha[0],
         personnages.neha[0],
         personnages.neha[0],
@@ -2061,210 +2092,210 @@ function Chapter()
         personnages.neha[0],//390 
         personnages.neha[0],
         personnages.neha[0],
-        personnages.neha[0],
+        personnages.neha[4],
         personnages.neha[0],
         personnages.neha[0],//395 
         personnages.neha[0],
-        personnages.neha[5],
+        personnages.neha[0],
+        personnages.neha[0],
+        personnages.neha[0],
+        personnages.neha[0],//400 
+        personnages.neha[0],
+        personnages.neha[0],
+        personnages.neha[0],
+        personnages.neha[0],
+        personnages.neha[5],//405 
         personnages.neha[0],
         "null",
-        personnages.neha[0],//400 
-        personnages.neha[1],
+        "null",
+        personnages.neha[0],
+        personnages.neha[1],//410 
         personnages.neha[0],
         personnages.neha[0],
         personnages.neha[4],
-        "null",//405 
         "null",
+        "null",//415 
         personnages.neha[0],
         personnages.neha[0],
         personnages.neha[0],
-        personnages.neha[0],//410 
         personnages.neha[0],
+        personnages.neha[0],//420 
         personnages.neha[0],
         personnages.neha[0],
         personnages.neha[1],
-        personnages.neha[0],//415 
         personnages.neha[0],
+        personnages.neha[0],//425 
         personnages.neha[3],
         personnages.neha[3],
         personnages.neha[0],
-        "null",//420 
         "null",
+        "null",//430 
         "null",
         personnages.ellie[0],
         personnages.ellie[0],
-        personnages.ellie[0],//425 
-        personnages.ellie[1],
-        personnages.ellie[0],
-        personnages.ellie[0],
-        personnages.ellie[1],
-        personnages.ellie[0],//430 
-        personnages.ellie[1],
-        personnages.ellie[1],
-        "null",
         personnages.ellie[0],
         personnages.ellie[1],//435 
         personnages.ellie[0],
         personnages.ellie[0],
-        personnages.ellie[0],
+        personnages.ellie[1],
         personnages.ellie[0],
         personnages.ellie[1],//440 
+        personnages.ellie[1],
+        "null",
         personnages.ellie[0],
-        personnages.ellie[3],
-        personnages.ellie[0],
-        personnages.ellie[0],
+        personnages.ellie[1],
         personnages.ellie[0],//445 
         personnages.ellie[0],
         personnages.ellie[0],
         personnages.ellie[0],
+        personnages.ellie[1],
+        personnages.ellie[0],//450 
+        personnages.ellie[3],
         personnages.ellie[0],
-        personnages.ellie[1],//450 
-        personnages.ellie[1],
-        personnages.ellie[1],
         personnages.ellie[0],
         personnages.ellie[0],
         personnages.ellie[0],//455 
+        personnages.ellie[0],
+        personnages.ellie[0],
+        personnages.ellie[0],
         personnages.ellie[1],
+        personnages.ellie[1],//460 
+        personnages.ellie[1],
+        personnages.ellie[0],
+        personnages.ellie[0],
+        personnages.ellie[0],
+        personnages.ellie[1],//465 
         personnages.ellie[0],
         personnages.ellie[3],
         personnages.ellie[0],
-        personnages.ellie[0],//460 
+        personnages.ellie[0],
+        personnages.ellie[0],//470 
         personnages.ellie[0],
         personnages.ellie[0],
         personnages.ellie[0],
         personnages.ellie[0],
-        personnages.ellie[0],//465 
-        personnages.ellie[0],
+        personnages.ellie[0],//475 
         personnages.ellie[1],
         personnages.ellie[0],
         "null",
-        "null",//470 
         "null",
+        "null",//480 
         "null",
         personnages.tadashi[4],
         "null",
-        personnages.tadashi[3],//475 
         personnages.tadashi[3],
+        personnages.tadashi[3],//485 
         "null",
         "null",
         personnages.tadashi[3],
-        personnages.tadashi[3],//480 
+        personnages.tadashi[3],
+        personnages.tadashi[3],//490 
+        personnages.tadashi[4],
+        "null",//492 Special Background
+        "null",
+        "null",
+        personnages.tadashi[4],//495 
+        "null",
+        "null",
+        "null",
+        "null",
+        personnages.tadashi[0],//500 
         personnages.tadashi[3],
         personnages.tadashi[4],
-        "null",//483 Special Background
-        "null",
-        "null",//485 
-        personnages.tadashi[4],
-        "null",
-        "null",
-        "null",
-        "null",//490 
-        personnages.tadashi[0],
-        personnages.tadashi[3],
-        personnages.tadashi[4],
-        "null",
-        "null",//495 
-        "null",
-        "null",
-        "null",
-        "null",
-        "null",//500 
-        "null",
-        "null",
         "null",
         "null",
         "null",//505 
-        personnages.tadashi[3],
-        personnages.tadashi[0],
+        "null",
+        "null",
         "null",
         "null",
         "null",//510 
+        "null",
+        "null",
+        "null",
+        "null",
+        personnages.tadashi[3],//515 
         personnages.tadashi[0],
         "null",
-        personnages.tadashi[3],
         "null",
-        "null",//515 
-        personnages.tadashi[3],
         "null",
-        personnages.tadashi[3],
-        personnages.tadashi[0],
         personnages.tadashi[0],//520 
-        personnages.tadashi[1],
-        personnages.tadashi[1],
-        "null",
-        "null",
-        "null",//525 
-        "null",
-        personnages.tadashi[3],
-        personnages.tadashi[3],
-        "null",
-        personnages.tadashi[4],//530 
-        personnages.tadashi[3],
-        personnages.tadashi[3],
-        personnages.tadashi[3],
-        personnages.tadashi[3],
-        personnages.tadashi[3],//535 
-        personnages.tadashi[3],
-        "null",
-        personnages.tadashi[3],
-        personnages.tadashi[3],
-        personnages.tadashi[4],//540 
-        "null",
-        "null",
-        "null",
-        "null",
-        personnages.tadashi[4],//545 
-        "null",
         "null",
         personnages.tadashi[3],
         "null",
-        personnages.tadashi[3],//550 
-        personnages.tadashi[3],
+        "null",
+        personnages.tadashi[3],//525 
+        "null",
         personnages.tadashi[3],
         personnages.tadashi[0],
         personnages.tadashi[0],
-        "null",//555 
+        personnages.tadashi[1],//530 
+        personnages.tadashi[1],
+        "null",
+        "null",
+        "null",
+        "null",//535 
         personnages.tadashi[3],
-        personnages.tadashi[3],
-        personnages.tadashi[3],
-        "null",
-        "null",//560 
-        "null",
-        "null",
-        personnages.tadashi[5],
-        "null",
-        "null",//565 
-        "null",
-        "null",
-        personnages.tadashi[3],
-        "null",
-        "null",//570 
         personnages.tadashi[3],
         "null",
         personnages.tadashi[4],
+        personnages.tadashi[3],//540 
         personnages.tadashi[3],
-        "null",//575 
+        personnages.tadashi[3],
+        personnages.tadashi[3],
+        personnages.tadashi[3],
+        personnages.tadashi[3],//545 
         "null",
+        personnages.tadashi[3],
+        personnages.tadashi[3],
+        personnages.tadashi[4],
+        "null",//550 
+        "null",
+        "null",
+        "null",
+        personnages.tadashi[4],
+        "null",//555 
+        "null",
+        personnages.tadashi[3],
+        "null",
+        personnages.tadashi[3],
+        personnages.tadashi[3],//560 
+        personnages.tadashi[3],
+        personnages.tadashi[0],
         personnages.tadashi[0],
         "null",
-        "null",//579 Special Background
-        personnages.alistair[0],//580 
-        personnages.karolina[0],
+        personnages.tadashi[3],//565 
+        personnages.tadashi[3],
+        personnages.tadashi[3],
         "null",
         "null",
+        "null",//570 
+        "null",
+        personnages.tadashi[5],
+        "null",
+        "null",
+        "null",//575 
+        "null",
+        personnages.tadashi[3],
+        "null",
+        "null",
+        personnages.tadashi[3],//580 
+        "null",
+        personnages.tadashi[4],
+        personnages.tadashi[3],
         "null",
         "null",//585 
+        personnages.tadashi[0],
+        "null",
+        "null",//588 Special Background
+        personnages.alistair[0],
+        personnages.karolina[0],//590 
         "null",
         "null",
-        "null",
-        "null",
-        "null",//590 
-        "null",
-        "null",
-        "null",
-        "null",
+        "null",//593 Try to find Axel!
+        "null",//594 Explore the school and talk to your classmates!
         "null",//595 
-        "null",//596 POPUP
+        "null",
         "null",
         "null",
         "null",
@@ -2276,15 +2307,15 @@ function Chapter()
         "null",//605 
         "null",
         "null",
-        "null",
+        "null",//608 POPUP
         "null",
         "null",//610 
-        "null",
+        "null",//611 Objective Complete: Go to Classroom 2
         "null",
         "null",
         "null",
         "null",//615 
-        "null",//616 player clicks on the episode’s outfit.
+        "null",
         "null",
         "null",
         "null",
@@ -2298,192 +2329,208 @@ function Chapter()
         "null",
         "null",
         "null",
-        "null",//630 
+        "null",//630 player clicks on the episode’s outfit.
         "null",
         "null",
         "null",
         "null",
-        "null",//635 
+        "null",//635 Objective Complete:  Go to your dorm and prepare for the party!
+        "null",
+        "null",
+        "null",
+        "null",
+        "null",//640 
+        "null",
+        "null",
+        "null",
+        "null",
+        "null",//645 
+        "null",
+        "null",
+        "null",
+        "null",
+        "null",//650 
+        "null",
         personnages.axel[0],
-        "null",
-        personnages.axel[1],
-        personnages.axel[0],
-        personnages.axel[5],//640 
-        "null",
-        personnages.axel[0],
-        "null",
-        "null",
-        personnages.axel[1],//645 
-        personnages.axel[0],
-        personnages.axel[0],
-        personnages.axel[0],
-        "null",
-        personnages.axel[0],//650 
-        "null",
-        "null",
         "null",
         personnages.axel[1],
         personnages.axel[0],//655 
-        personnages.axel[2],
+        personnages.axel[5],
+        "null",
         personnages.axel[0],
-        personnages.axel[3],
+        "null",
+        "null",//660 
+        personnages.axel[1],
         personnages.axel[0],
-        personnages.axel[0],//660 
-        personnages.axel[1],
-        personnages.axel[1],
-        personnages.axel[3],
-        personnages.axel[3],
+        personnages.axel[0],
+        personnages.axel[0],
         "null",//665 
         personnages.axel[0],
         "null",
+        "null",
+        "null",
+        personnages.axel[1],//670 
+        personnages.axel[0],
+        personnages.axel[2],
+        personnages.axel[0],
+        personnages.axel[3],
+        personnages.axel[0],//675 
+        personnages.axel[0],
         personnages.axel[1],
         personnages.axel[1],
-        personnages.axel[0],//670 
-        personnages.axel[1],
-        personnages.axel[0],
-        personnages.axel[0],//673 GHOST SLIDE
+        personnages.axel[3],
+        personnages.axel[3],//680 
         "null",
-        "null",//675 
-        personnages.axel[0],
-        personnages.axel[0],
-        personnages.axel[0],
-        "null",
-        personnages.axel[0],//680 
-        personnages.axel[0],
-        personnages.axel[0],
-        personnages.axel[0],
-        "null",
-        personnages.axel[0],//685 
-        personnages.axel[0],
         personnages.axel[0],
         "null",
         personnages.axel[1],
-        personnages.axel[1],//690 
+        personnages.axel[1],//685 
+        personnages.axel[0],
+        personnages.axel[1],
+        personnages.axel[0],
+        personnages.axel[0],//689 GHOST SLIDE
+        "null",//690 
         "null",
         personnages.axel[0],
         personnages.axel[0],
         personnages.axel[0],
-        personnages.axel[0],//695 
+        "null",//695 
         personnages.axel[0],
         personnages.axel[0],
         personnages.axel[0],
         personnages.axel[0],
-        personnages.axel[0],//700 
+        "null",//700 
+        personnages.axel[0],
+        personnages.axel[0],
+        personnages.axel[0],
+        "null",
+        personnages.axel[1],//705 
+        personnages.axel[1],
+        "null",
+        personnages.axel[0],
+        personnages.axel[0],
+        personnages.axel[0],//710 
+        personnages.axel[0],
+        personnages.axel[0],
+        personnages.axel[0],
+        personnages.axel[0],
+        personnages.axel[0],//715 
+        personnages.axel[0],
         personnages.axel[1],
         personnages.axel[0],
         personnages.axel[0],
+        personnages.axel[0],//720 
         personnages.axel[0],
-        personnages.axel[0],//705 
         personnages.axel[0],
         personnages.axel[0],
         "null",
-        "null",
-        "null",//710 
-        "null",
-        "null",
-        personnages.axel[0],
-        personnages.axel[1],
-        "null",//715 
+        "null",//725 
         "null",
         "null",
         "null",
         personnages.axel[0],
-        "null",//720 
+        personnages.axel[1],//730 
+        "null",
+        "null",
+        "null",
+        "null",
+        personnages.axel[0],//735 
+        "null",
         personnages.axel[3],
         personnages.axel[0],
         personnages.axel[0],
-        "null",
-        personnages.neha[0],//725 
+        "null",//740 
+        personnages.neha[0],
         personnages.neha[0],
         "null",
         personnages.karolina[1],
-        "null",
-        "null",//730 
-        "null",
-        personnages.axel[1],
-        "null",
-        personnages.karolina[0],
-        personnages.karolina[0],//735 
-        personnages.karolina[0],
-        personnages.karolina[0],
-        personnages.karolina[0],
-        personnages.karolina[0],
-        "null",//740 
-        personnages.karolina[3],
-        personnages.karolina[0],
-        "null",
-        "null",
         "null",//745 
         "null",
         "null",
+        personnages.axel[1],
         "null",
-        "null",
-        "null",//750 
+        personnages.karolina[0],//750 
         personnages.karolina[0],
         personnages.karolina[0],
         personnages.karolina[0],
         personnages.karolina[0],
         personnages.karolina[0],//755 
-        "null",//756 POPUP
-        personnages.karolina[0],
+        "null",
+        personnages.karolina[3],
         personnages.karolina[0],
         "null",
         "null",//760 
         "null",
         "null",
-        personnages.karolina[4],
+        "null",
         "null",
         "null",//765 
-        personnages.raquel[0],
         "null",
-        "null",
-        "null",//769 POPUP
-        "null",//770 
-        "null",
-        "null",
-        "null",
-        "null",
+        personnages.karolina[0],
+        personnages.karolina[0],
+        personnages.karolina[0],
+        personnages.karolina[0],//770 
+        personnages.karolina[0],
+        "null",//772 POPUP
+        personnages.karolina[0],
+        personnages.karolina[0],
         "null",//775 
         "null",
         "null",
         "null",
-        "null",
+        personnages.karolina[4],
         "null",//780 
         "null",
-        "null",
-        "null",//783 POPUP
-        "null",
-        "null",//785 
+        personnages.raquel[0],
         "null",
         "null",
-        "null",//788 Different Dorm…
+        "null",//785 POPUP
+        "null",
+        "null",
+        "null",
         "null",
         "null",//790 
         "null",
         "null",
         "null",
         "null",
-        personnages.karolina[3],//795 
+        "null",//795 
         "null",
-        personnages.karolina[0],
-        personnages.karolina[3],
         "null",
-        personnages.karolina[3],//800 
-        personnages.karolina[0],
-        personnages.karolina[0],
-        personnages.karolina[3],
-        personnages.karolina[4],
+        "null",
+        "null",//799 POPUP
+        "null",//800 
+        "null",
+        "null",
+        "null",
+        "null",//804 Different Dorm…
         "null",//805 
         "null",
         "null",
         "null",
         "null",
         "null",//810 
+        personnages.karolina[3],
         "null",
-        "null",
-        "null",
-        "null",
+        personnages.karolina[0],
+        personnages.karolina[3],
         "null",//815 
+        personnages.karolina[3],
+        personnages.karolina[0],
+        personnages.karolina[0],
+        personnages.karolina[3],
+        personnages.karolina[4],//820 
+        "null",
+        "null",
+        "null",
+        "null",
+        "null",//825 
+        "null",
+        "null",
+        "null",
+        "null",
+        "null",//830 
+        "null",
         "null",
         "null",
         ];
@@ -2525,7 +2572,7 @@ function Chapter()
         "null",
         "null",
         "null",//35 
-        "null",
+        "null",//36 Objective Complete: Get some breakfast at the Cafeteria! 
         "null",
         "null",
         "null",
@@ -2533,7 +2580,7 @@ function Chapter()
         "null",
         "null",
         "null",
-        "null",
+        "null",//44 Objective Complete: Follow Axel and go back to the Main Hallway! 
         "null",//45 
         "null",
         "null",
@@ -2552,128 +2599,128 @@ function Chapter()
         "null",//60 
         "null",
         "null",
+        "null",
+        "null",
+        "null",//65 
+        "null",
+        "null",
         "Dude, you sleep until 2 P.M. during weekends.",
         "null",
-        "Try waking up at 5 A.M on each school day because of Athletics Department mandatory morning training, Tadashi. You learn to cherish sleep like it’s gold. Right, Alistair?",//65 
+        "Try waking up at 5 A.M on each school day because of Athletics Department mandatory morning training, Tadashi. You learn to cherish sleep like it’s gold. Right, Alistair?",//70 
         "null",
         "Ms. Pereira Camargo and Mr. Drew, do you have anything you’d like to say to the rest of class? ",
         "null",
         "Well I’d sure hope so, judging by your lack of motivation and poor performances in my class last year. I expect some improvement. ",
-        "null",//70 
+        "null",//75 
         "One more word and it’s detention for you, Ms. Pereira Camargo. ",
         "null",
         "null",
         "Oh, look at that, the great Karolina Nováková decides to grace us with her words.",
-        "null",//75 
+        "null",//80 
         "null",
         "null",
         "null",
         "You’d know all about manipulating people, wouldn’t you?",
-        "null",//80 
+        "null",//85 
         "null",
         "Shut up. I already have to deal with Axel’s return today, I don’t need extra stress. ",
         "null",
         "null",
-        "Oh shit! Axel’s back from his tour? Man, he must be practicing his camouflage skills right now, haha! ",//85 
+        "Oh shit! Axel’s back from his tour? Man, he must be practicing his camouflage skills right now, haha! ",//90 
         "null",
         "That’s the only thing that idiot’s good that. Can’t he just follow the dress code and come to class on time for <em>one</em> day? It would save me so much work…",
         "null",
         "null",
-        "null",//90 
-        "null",//91 TODO: Special Background Required
+        "null",//95 
+        "null",//96 TODO: Special Background Required
         "You didn’t know? This guy’s a legit rockstar. ",
         "null",
         "Here.",
-        "null",//95 
-        "null",
-        "null",
-        "null",
-        "He’s still no match for you, Tadashi. ",
         "null",//100 
         "null",
         "null",
         "null",
-        "null",
+        "He’s still no match for you, Tadashi. ",
         "null",//105 
         "null",
-        "null",//107 TODO: Objectives
         "null",
         "null",
-        "I wasn’t even back at Arlington, haha! Just came back this morning. ",//110 
         "null",
-        "Godammit, is it Axel again?",
+        "null",//110 
         "null",
-        "Well, remind me to bring some popcorn for their daily fight! ",
+        "null",//112 TODO: Objectives
+        "null",//113 Objective Complete: Quick! Get into Classroom 1!  
+        "null",
         "null",//115 
         "null",
-        "Hey! How come I haven’t seen you around before?",
+        "null",
+        "I wasn’t even back at Arlington, haha! Just came back this morning. ",
+        "null",
+        "Godammit, is it Axel again?",//120 
+        "null",
+        "Well, remind me to bring some popcorn for their daily fight! ",
+        "null",
+        "null",
+        "Hey! How come I haven’t seen you around before?",//125 
         "Nice to meet you! I’m Tyler, your resident artistic genius here at Arlington. ",
         "null",
-        "What can I say, I’m perfect. ",//120 
+        "What can I say, I’m perfect. ",
         "null",
-        "This afternoon, at the dorms. You’ll hear about it, trust me. ",
+        "This afternoon, at the dorms. You’ll hear about it, trust me. ",//130 
         "null",
         "Come on, man!",
-        "null",//125 
-        "null",
-        "Yeah...I must admit I’m not too keen on talking to her. ",
         "null",
         "null",
-        "null",//130 
-        "null",
-        "null",
-        "I like your problem solving skills, new kid. ",
-        "null",
-        "What did you say?",//135 
+        "Yeah...I must admit I’m not too keen on talking to her. ",//135 
         "null",
         "null",
         "null",
         "null",
         "null",//140 
-        "Thus, why I’m going to try to avoid her at Raquel’s party.",
+        "I like your problem solving skills, new kid. ",
         "null",
-        "Ha! You wish!",
+        "What did you say?",
         "null",
         "null",//145 
         "null",
-        "Say what now?!",
-        "null",
-        "null",
-        "null",//150 
-        "null",
         "null",
         "null",
         "Thus, why I’m going to try to avoid her at Raquel’s party.",
-        "null",//155 
-        "..",
-        "Dammit, fine. But you better let me be player one.",
+        "null",//150 
+        "Ha! You wish!",
+        "null",
+        "null",
+        "null",
+        "Say what now?!",//155 
+        "null",
+        "null",
+        "null",
+        "null",
+        "null",//160 
+        "null",
+        "Thus, why I’m going to try to avoid her at Raquel’s party.",
+        "null",
+        "...",
+        "Dammit, fine. But you better let me be player one.",//165 
         "I’ll text Raquel and tell her I can’t come. ",
         "null",
-        "No way man, he has so much to do already today. First day of classes is always killer for him.",//160 
+        "No way man, he has so much to do already today. First day of classes is always killer for him.",
         "I’ll do it tomorrow.",
-        "null",
+        "null",//170 
         "Ha! This guy turns into a monster when he’s stressed.",
         "You’ve still got a lot to learn, new kid. ",
-        "But you’re right, I might as well do it today. ",//165 
+        "But you’re right, I might as well do it today. ",
         "null",
-        "Definitely! But I’m acting mostly out of fear of our charming President, haha!",
+        "Definitely! But I’m acting mostly out of fear of our charming President, haha!",//175 
         "null",
         "Tell that to the recruiters who want to have your complete file in their hands. ",
-        "Getting a job as an artist is hard you know! ",//170 
+        "Getting a job as an artist is hard you know! ",
         "Oh shoot, I just remembered!",
-        "We had this book to read for the summer… What was it called again? I need to read that before 4th period.",
+        "We had this book to read for the summer… What was it called again? I need to read that before 4th period.",//180 
         "null",
         "You don’t know if you don’t try! Photographic memory, remember?",
-        "null",//175 
+        "null",
         "Haha! See you later " + user.scholarname + ". ",
-        "null",
-        "null",
-        "null",
-        "null",//180 
-        "null",
-        "null",
-        "null",
-        "null",
         "null",//185 
         "null",
         "null",
@@ -2963,62 +3010,62 @@ function Chapter()
         "null",
         "null",
         "null",
-        "Aw man, and I was so close to getting through the day without seeing you. ",
+        "null",
         "null",//475 
         "null",
-        "Or else <em>what</em>, Tadashi? You’re gonna give me… <em>detention</em>? ",
-        "My life is <em>ruined</em>!",
+        "null",
+        "null",
         "null",
         "null",//480 
         "null",
         "null",
-        "null",//483 Special Background
+        "Aw man, and I was so close to getting through the day without seeing you. ",
         "null",
-        "I’m going to have to deny your request. ",//485 
+        "null",//485 
+        "Or else <em>what</em>, Tadashi? You’re gonna give me… <em>detention</em>? ",
+        "My life is <em>ruined</em>!",
         "null",
+        "null",
+        "null",//490 
+        "null",
+        "null",//492 Special Background
+        "null",
+        "I’m going to have to deny your request. ",
+        "null",//495 
         "I don’t care what you or this school wants. My whole freaking life is about dealing with shit the media throws on me. ",
         "I’m not going to listen to some stuck up guy who think he’s important just because he won some oh-so-prestigious student council presidency.",
         "I’ve literally slept four hours in the last three days because unlike you, I’m making some real money thanks to my <em>real</em> fans.",
-        "So <em>I</em> have a favour to ask you: LEAVE ME ALONE!",//490 
-        "null",
-        "null",
-        "null",
-        "null",
-        "null",//495 
-        "null",
-        "null",
-        "null",
-        "null",
+        "So <em>I</em> have a favour to ask you: LEAVE ME ALONE!",
         "null",//500 
         "null",
         "null",
         "null",
         "null",
-        "Watch out newbie, next thing you know Tadashi’s going to make you his minion.",//505 
+        "null",//505 
         "null",
+        "null",
+        "null",
+        "null",
+        "null",//510 
+        "null",
+        "null",
+        "null",
+        "Watch out newbie, next thing you know Tadashi’s going to make you his minion.",
+        "null",//515 
         "null",
         "null",
         "Whatever. I’ll take care of them for now. I’m going to call my agent and make sure those idiots don’t show up on school grounds. ",
-        "But this is the last time I’m doing that. I have enough daily shit to deal with.",//510 
-        "null",
+        "But this is the last time I’m doing that. I have enough daily shit to deal with.",
+        "null",//520 
         "You’re so bitter when you’re jealous, Tadashi. ",
         "null",
         "Oh shit, that’s Ms. Rodriguez. ",
-        "Well, I’m going to bounce. I haven’t handed in an assignment in months and I know she's not going to be happy with me. ",//515 
-        "null",
-        "null",
-        "null",
-        "null",
-        "null",//520 
-        "null",
-        "null",
-        "null",
-        "null",
+        "Well, I’m going to bounce. I haven’t handed in an assignment in months and I know she's not going to be happy with me. ",
         "null",//525 
         "null",
         "null",
         "null",
-        "Yeah, Tadashi. I’m here to <em>learn.</em>",
+        "null",
         "null",//530 
         "null",
         "null",
@@ -3026,26 +3073,26 @@ function Chapter()
         "null",
         "null",//535 
         "null",
+        "null",
+        "Yeah, Tadashi. I’m here to <em>learn.</em>",
+        "null",
+        "null",//540 
+        "null",
+        "null",
+        "null",
+        "null",
+        "null",//545 
         "Hey! Chill! At least give " + user.scholarname + "a chance to propose something. ",
         "null",
         "null",
-        "null",//540 
-        "…",
+        "null",
+        "…",//550 
         "null",
         "Whatever. I’ll take care of them for now. I’m going to call my agent and make sure those idiots don’t show up on school grounds.",
         "But don’t get used to it, <em>Tadashit</em>.",
-        "null",//545 
-        "Oh shit, that’s Ms. Rodriguez.",
+        "null",
+        "Oh shit, that’s Ms. Rodriguez.",//555 
         "Well, I’m going to bounce. I haven’t handed in an assignment in months and I know they’re not going to be happy with me. ",
-        "null",
-        "null",
-        "null",//550 
-        "null",
-        "null",
-        "null",
-        "null",
-        "null",//555 
-        "null",
         "null",
         "null",
         "null",
@@ -3054,38 +3101,38 @@ function Chapter()
         "null",
         "null",
         "null",
-        "…",//565 
-        "Well new kid, you’re certainly right about one thing.",
+        "null",//565 
+        "null",
+        "null",
+        "null",
+        "null",
+        "null",//570 
+        "null",
+        "null",
+        "null",
+        "…",
+        "Well new kid, you’re certainly right about one thing.",//575 
         "Getting in trouble because of paparazzi certainly isn’t worth it. Even if it could really screw up Tadashi’s file.",
         "null",
         "Unfortunately, Tadashi, your assumption is wrong.",
-        "My <em>agent</em> is going to take care of the situation. He’ll make sure those idiots don’t show up on school grounds anymore.",//570 
-        "null",
+        "My <em>agent</em> is going to take care of the situation. He’ll make sure those idiots don’t show up on school grounds anymore.",
+        "null",//580 
         "No, but he could make sure you don’t show up on school grounds anymore as well.",
         "null",
         "null",
-        "Oh shit, that’s Ms. Rodriguez.",//575 
-        "Well, I’m going to bounce. I haven’t handed in an assignment in months and I know they’re not going to be happy with me. ",
+        "Oh shit, that’s Ms. Rodriguez.",
+        "Well, I’m going to bounce. I haven’t handed in an assignment in months and I know they’re not going to be happy with me. ",//585 
         "null",
         "null",
-        "null",//579 Special Background
-        "null",//580 
-        "null",
-        "null",
-        "null",
-        "null",
-        "null",//585 
-        "null",
-        "null",
-        "null",
+        "null",//588 Special Background
         "null",
         "null",//590 
         "null",
         "null",
-        "null",
-        "null",
+        "null",//593 Try to find Axel!
+        "null",//594 Explore the school and talk to your classmates!
         "null",//595 
-        "null",//596 POPUP
+        "null",
         "null",
         "null",
         "null",
@@ -3097,15 +3144,15 @@ function Chapter()
         "null",//605 
         "null",
         "null",
-        "null",
+        "null",//608 POPUP
         "null",
         "null",//610 
-        "null",
+        "null",//611 Objective Complete: Go to Classroom 2
         "null",
         "null",
         "null",
         "null",//615 
-        "null",//616 player clicks on the episode’s outfit.
+        "null",
         "null",
         "null",
         "null",
@@ -3116,40 +3163,40 @@ function Chapter()
         "null",
         "null",//625 
         "null",
-        "" + user.scholarname + "! You came!",
-        "Haha! We actually have less people than last year!",
-        "null",
-        "null",//630 
         "null",
         "null",
-        "Shhh! It’s fruit juice!",
         "null",
-        "null",//635 
+        "null",//630 player clicks on the episode’s outfit.
         "null",
-        "Axel, my man! It’s nice to see you again! I was scared you wouldn’t show up. Now the party can <em>really</em> start.",
+        "null",
+        "null",
+        "null",
+        "null",//635 Objective Complete:  Go to your dorm and prepare for the party!
+        "null",
+        "null",
         "null",
         "null",
         "null",//640 
-        "I have my ways.",
         "null",
-        "Don’t worry, I didn’t bring in enough to get people drunk. Just a little tipsy, that’s all. There’s no way I’m cleaning up vomit and taking care of passed out people.",
-        "The punchbowl is in my dorm. ",
+        "null",
+        "" + user.scholarname + "! You came!",
+        "Haha! We actually have less people than last year!",
         "null",//645 
         "null",
         "null",
         "null",
-        "null",
+        "Shhh! It’s fruit juice!",
         "null",//650 
         "null",
         "null",
-        "null",
+        "Axel, my man! It’s nice to see you again! I was scared you wouldn’t show up. Now the party can <em>really</em> start.",
         "null",
         "null",//655 
         "null",
+        "I have my ways.",
         "null",
-        "null",
-        "null",
-        "null",//660 
+        "Don’t worry, I didn’t bring in enough to get people drunk. Just a little tipsy, that’s all. There’s no way I’m cleaning up vomit and taking care of passed out people.",
+        "The punchbowl is in my dorm. ",//660 
         "null",
         "null",
         "null",
@@ -3162,7 +3209,7 @@ function Chapter()
         "null",//670 
         "null",
         "null",
-        "null",//673 GHOST SLIDE
+        "null",
         "null",
         "null",//675 
         "null",
@@ -3178,7 +3225,7 @@ function Chapter()
         "null",
         "null",
         "null",
-        "null",
+        "null",//689 GHOST SLIDE
         "null",//690 
         "null",
         "null",
@@ -3197,46 +3244,46 @@ function Chapter()
         "null",//705 
         "null",
         "null",
-        "You’re definitely right about that. ",
-        "There’s not much you can do about it. The only way to change things is to become an authority in said industry.",
-        "And nobody takes you seriously if you don’t live up to the standards. You’ve got to know the rules before breaking them.",//710 
-        "Until then, you have to mind your own business and <em>stay out of people’s lives</em>. ",
+        "null",
+        "null",
+        "null",//710 
+        "null",
         "null",
         "null",
         "null",
         "null",//715 
         "null",
         "null",
-        "T-Tadashi is a very busy guy. I know he wants to hang out with me, he just doesn’t have the time. ",
-        "null",
-        "And I don’t have time either! I’m very busy in-between photoshoots. We only talk to each other in class and-",//720 
         "null",
         "null",
+        "null",//720 
         "null",
-        "She’s coming. She wanted to call her parents before going to the party. Different time zones and all. ",
-        "null",//725 
         "null",
-        "Since when do I need to do that?",
+        "null",
+        "You’re definitely right about that. ",
+        "There’s not much you can do about it. The only way to change things is to become an authority in said industry.",//725 
+        "And nobody takes you seriously if you don’t live up to the standards. You’ve got to know the rules before breaking them.",
+        "Until then, you have to mind your own business and <em>stay out of people’s lives</em>. ",
         "null",
         "null",
         "null",//730 
-        "<em>People!</em> Is this a party or a freaking business meeting?!",
         "null",
         "null",
         "null",
+        "T-Tadashi is a very busy guy. I know he wants to hang out with me, he just doesn’t have the time. ",
         "null",//735 
+        "And I don’t have time either! I’m very busy in-between photoshoots. We only talk to each other in class and-",
         "null",
         "null",
         "null",
+        "She’s coming. She wanted to call her parents before going to the party. Different time zones and all. ",//740 
         "null",
-        "What?! But you’ve been feeling so weak recently, do you think it’s a good idea for you to-",//740 
         "null",
-        "null",
-        "Oh…",
+        "Since when do I need to do that?",
         "null",
         "null",//745 
         "null",
-        "null",
+        "<em>People!</em> Is this a party or a freaking business meeting?!",
         "null",
         "null",
         "null",//750 
@@ -3245,66 +3292,82 @@ function Chapter()
         "null",
         "null",
         "null",//755 
-        "null",//756 POPUP
+        "What?! But you’ve been feeling so weak recently, do you think it’s a good idea for you to-",
         "null",
         "null",
-        "Karol, it’s fine. Let’s just go somewhere else. ",
+        "Oh…",
         "null",//760 
         "null",
-        "Karol, you need to sit down!",
+        "null",
         "null",
         "null",
         "null",//765 
         "null",
         "null",
         "null",
-        "null",//769 POPUP
+        "null",
         "null",//770 
+        "null",
+        "null",//772 POPUP
+        "null",
+        "null",
+        "Karol, it’s fine. Let’s just go somewhere else. ",//775 
+        "null",
+        "null",
+        "Karol, you need to sit down!",
+        "null",
+        "null",//780 
+        "null",
+        "null",
+        "null",
+        "null",
+        "null",//785 POPUP
+        "null",
         "null",
         "null",
         "KAROL! ",
+        "null",//790 
         "null",
-        "null",//775 
         "null",
         "Oh my gosh… What happened? What should we do?!",
         "null",
-        "null",
-        "I knew this would happen! She’s exhausted…",//780 
+        "null",//795 
+        "I knew this would happen! She’s exhausted…",
         "" + user.scholarname + ", should we move her? Get her to her bed?",
         "How is she <em>that</em> drunk?",
-        "null",//783 POPUP
-        "null",
-        "null",//785 
-        "" + user.scholarname + "?",
-        "Alright. ",
-        "null",//788 Different Dorm…
-        "null",
-        "null",//790 
-        "I wish she would’ve told me how weak she felt.",
-        "null",
-        "null",
-        "null",
-        "null",//795 
-        "Karol! What happened?",
-        "null",
-        "null",
-        "" + user.scholarname + " helped get you here-",
+        "null",//799 POPUP
         "null",//800 
         "null",
-        "null",
-        "null",
-        "null",
+        "" + user.scholarname + "?",
+        "Alright. ",
+        "null",//804 Different Dorm…
         "null",//805 
         "null",
-        "null",
+        "I wish she would’ve told me how weak she felt.",
         "null",
         "null",
         "null",//810 
         "null",
+        "Karol! What happened?",
+        "null",
+        "null",
+        "" + user.scholarname + " helped get you here-",//815 
         "null",
         "null",
         "null",
-        "null",//815 
+        "null",
+        "null",//820 
+        "null",
+        "null",
+        "null",
+        "null",
+        "null",//825 
+        "null",
+        "null",
+        "null",
+        "null",
+        "null",//830 
+        "null",
         "null",
         "null",
         ];
@@ -3346,7 +3409,7 @@ function Chapter()
         "null",
         "null",
         "null",//35 
-        "null",
+        "null",//36 Objective Complete: Get some breakfast at the Cafeteria! 
         "null",
         "null",
         "null",
@@ -3354,7 +3417,7 @@ function Chapter()
         "null",
         "null",
         "null",
-        "null",
+        "null",//44 Objective Complete: Follow Axel and go back to the Main Hallway! 
         "null",//45 
         "null",
         "null",
@@ -3363,138 +3426,138 @@ function Chapter()
         "null",//50 
         "null",
         "null",
-        personnages.karolina[0],
+        "null",
         "null",
         "null",//55 
         "null",
         "null",
-        "null",
+        personnages.karolina[0],
         "null",
         "null",//60 
         "null",
         "null",
+        "null",
+        "null",
+        "null",//65 
+        "null",
+        "null",
         personnages.alistair[3],
         "null",
-        personnages.raquel[0],//65 
+        personnages.raquel[0],//70 
         "null",
         personnages.teacher[4],
         "null",
         personnages.teacher[4],
-        "null",//70 
+        "null",//75 
         personnages.teacher[4],
         "null",
         "null",
         personnages.raquel[4],
-        "null",//75 
+        "null",//80 
         "null",
         "null",
         "null",
         personnages.alistair[4],
-        "null",//80 
+        "null",//85 
         personnages.tadashi[3],
         personnages.tadashi[3],
         "null",
         "null",
-        personnages.raquel[1],//85 
+        personnages.raquel[1],//90 
         "null",
         personnages.tadashi[3],
         personnages.tadashi[0],
         "null",
-        "null",//90 
-        "null",//91 TODO: Special Background Required
+        "null",//95 
+        "null",//96 TODO: Special Background Required
         personnages.alistair[5],
         "null",
         personnages.raquel[0],
-        "null",//95 
+        "null",//100 
         "null",
         "null",
         "null",
         personnages.karolina[1],
-        "null",//100 
+        "null",//105 
         personnages.raquel[1],
         "null",
         "null",
         "null",
-        "null",//105 
+        "null",//110 
         "null",
-        "null",//107 TODO: Objectives
+        "null",//112 TODO: Objectives
+        "null",//113 Objective Complete: Quick! Get into Classroom 1!  
         "null",
-        "null",
-        personnages.tyler[1],//110 
-        "null",
-        personnages.tyler[4],
-        "null",
-        personnages.tyler[1],
         "null",//115 
         "null",
-        personnages.tyler[0],
+        "null",
+        personnages.tyler[1],
+        "null",
+        personnages.tyler[4],//120 
+        "null",
+        personnages.tyler[1],
+        "null",
+        "null",
+        personnages.tyler[0],//125 
         personnages.tyler[0],
         "null",
-        personnages.tyler[0],//120 
-        "null",
         personnages.tyler[0],
         "null",
-        personnages.tyler[4],
-        "null",//125 
-        "null",
-        personnages.tyler[0],
-        personnages.tyler[0],
-        personnages.tyler[0],
         personnages.tyler[0],//130 
-        personnages.tyler[0],
-        personnages.tyler[0],
-        personnages.tyler[1],
-        personnages.tyler[0],
-        personnages.tyler[1],//135 
-        personnages.tyler[0],
         "null",
-        "null",
-        "null",
-        personnages.tyler[0],//140 
-        personnages.tyler[0],
-        personnages.tyler[0],
-        personnages.tyler[1],
-        personnages.tyler[0],
-        personnages.tyler[0],//145 
-        personnages.tyler[0],
         personnages.tyler[4],
+        "null",
+        "null",
+        personnages.tyler[0],//135 
+        personnages.tyler[0],
+        personnages.tyler[0],
+        personnages.tyler[0],
+        personnages.tyler[0],
+        personnages.tyler[0],//140 
+        personnages.tyler[1],
+        personnages.tyler[0],
+        personnages.tyler[1],
+        personnages.tyler[0],
+        "null",//145 
+        "null",
+        "null",
         personnages.tyler[0],
         personnages.tyler[0],
         personnages.tyler[0],//150 
-        personnages.tyler[0],
-        "null",
-        personnages.tyler[0],
-        personnages.tyler[0],
-        personnages.tyler[0],//155 
+        personnages.tyler[1],
         personnages.tyler[0],
         personnages.tyler[0],
         personnages.tyler[0],
-        "null",
-        personnages.tyler[0],//160 
+        personnages.tyler[4],//155 
+        personnages.tyler[0],
+        personnages.tyler[0],
+        personnages.tyler[0],
+        personnages.tyler[0],
+        "null",//160 
         personnages.tyler[0],
         personnages.tyler[0],
         personnages.tyler[0],
         personnages.tyler[0],
         personnages.tyler[0],//165 
         personnages.tyler[0],
-        personnages.tyler[0],
+        "null",
         personnages.tyler[0],
         personnages.tyler[0],
         personnages.tyler[0],//170 
-        personnages.tyler[5],
         personnages.tyler[0],
+        personnages.tyler[0],
+        personnages.tyler[0],
+        personnages.tyler[0],
+        personnages.tyler[0],//175 
+        personnages.tyler[0],
+        personnages.tyler[0],
+        personnages.tyler[0],
+        personnages.tyler[5],
+        personnages.tyler[0],//180 
         "null",
         personnages.tyler[1],
-        "null",//175 
+        "null",
         personnages.tyler[1],
-        "null",
-        "null",
-        "null",
-        "null",//180 
-        "null",
-        "null",
-        "null",
-        "null",
         "null",//185 
         "null",
         "null",
@@ -3784,129 +3847,129 @@ function Chapter()
         "null",
         "null",
         "null",
-        personnages.axel[3],
+        "null",
         "null",//475 
         "null",
-        personnages.axel[0],
-        personnages.axel[0],
+        "null",
+        "null",
         "null",
         "null",//480 
         "null",
         "null",
-        "null",//483 Special Background
         personnages.axel[3],
-        personnages.axel[3],//485 
         "null",
+        "null",//485 
+        personnages.axel[0],
+        personnages.axel[0],
+        "null",
+        "null",
+        "null",//490 
+        "null",
+        "null",//492 Special Background
         personnages.axel[3],
         personnages.axel[3],
-        personnages.axel[3],
-        personnages.axel[4],//490 
-        "null",
-        "null",
-        "null",
-        "null",
         "null",//495 
-        personnages.karolina[3],
-        "null",
-        "null",
-        "null",
-        personnages.axel[3],//500 
+        personnages.axel[3],
         personnages.axel[3],
         personnages.axel[3],
         personnages.axel[4],
-        personnages.axel[3],
-        personnages.axel[3],//505 
+        "null",//500 
         "null",
         "null",
-        personnages.axel[3],
-        personnages.axel[3],
-        personnages.axel[0],//510 
         "null",
+        "null",
+        personnages.karolina[3],//505 
+        "null",
+        "null",
+        "null",
+        personnages.axel[3],
+        personnages.axel[3],//510 
+        personnages.axel[3],
+        personnages.axel[4],
+        personnages.axel[3],
+        personnages.axel[3],
+        "null",//515 
+        "null",
+        personnages.axel[3],
+        personnages.axel[3],
+        personnages.axel[0],
+        "null",//520 
         personnages.axel[1],
         "null",
         personnages.axel[5],
-        personnages.axel[0],//515 
-        "null",
-        "null",
-        "null",
-        "null",
-        "null",//520 
-        "null",
-        "null",
-        personnages.karolina[3],
-        personnages.karolina[3],
+        personnages.axel[0],
         "null",//525 
         "null",
         "null",
         "null",
-        personnages.axel[1],
+        "null",
         "null",//530 
-        personnages.axel[0],
-        personnages.axel[0],
-        personnages.axel[0],
+        "null",
+        personnages.karolina[3],
+        personnages.karolina[3],
         "null",
         "null",//535 
         "null",
-        personnages.axel[4],
+        "null",
+        personnages.axel[1],
+        "null",
+        personnages.axel[0],//540 
+        personnages.axel[0],
+        personnages.axel[0],
         "null",
         "null",
-        "null",//540 
-        personnages.axel[0],
-        personnages.axel[0],
-        personnages.axel[0],
-        personnages.axel[4],
         "null",//545 
-        personnages.axel[5],
+        personnages.axel[4],
+        "null",
+        "null",
+        "null",
+        personnages.axel[0],//550 
+        personnages.axel[0],
+        personnages.axel[0],
+        personnages.axel[4],
+        "null",
+        personnages.axel[5],//555 
         personnages.axel[0],
         "null",
         "null",
-        "null",//550 
+        "null",
+        "null",//560 
         "null",
         "null",
         "null",
-        "null",
-        "null",//555 
-        personnages.axel[3],
-        "null",
-        "null",
-        personnages.axel[3],
-        personnages.axel[3],//560 
-        personnages.axel[3],
-        personnages.axel[3],
-        personnages.axel[5],
         "null",
         personnages.axel[3],//565 
-        personnages.axel[0],
+        "null",
+        "null",
+        personnages.axel[3],
+        personnages.axel[3],
+        personnages.axel[3],//570 
+        personnages.axel[3],
+        personnages.axel[5],
+        "null",
+        personnages.axel[3],
+        personnages.axel[0],//575 
         personnages.axel[0],
         "null",
         personnages.axel[3],
-        personnages.axel[0],//570 
-        "null",
+        personnages.axel[0],
+        "null",//580 
         personnages.axel[3],
         "null",
         "null",
-        personnages.axel[5],//575 
-        personnages.axel[0],
+        personnages.axel[5],
+        personnages.axel[0],//585 
         "null",
         "null",
-        "null",//579 Special Background
-        personnages.raquel[0],//580 
-        "null",
-        "null",
-        "null",
-        "null",
-        "null",//585 
-        "null",
-        "null",
-        "null",
-        "null",
+        "null",//588 Special Background
+        personnages.raquel[0],
         "null",//590 
         "null",
         "null",
-        "null",
-        "null",
+        "null",//593 Try to find Axel!
+        "null",//594 Explore the school and talk to your classmates!
         "null",//595 
-        "null",//596 POPUP
+        "null",
         "null",
         "null",
         "null",
@@ -3918,15 +3981,15 @@ function Chapter()
         "null",//605 
         "null",
         "null",
-        "null",
+        "null",//608 POPUP
         "null",
         "null",//610 
-        "null",
+        "null",//611 Objective Complete: Go to Classroom 2
         "null",
         "null",
         "null",
         "null",//615 
-        "null",//616 player clicks on the episode’s outfit.
+        "null",
         "null",
         "null",
         "null",
@@ -3934,43 +3997,43 @@ function Chapter()
         "null",
         "null",
         "null",
-        personnages.raquel[0],
+        "null",
         "null",//625 
+        "null",
+        "null",
+        "null",
+        "null",
+        "null",//630 player clicks on the episode’s outfit.
+        "null",
+        "null",
+        "null",
+        "null",
+        "null",//635 Objective Complete:  Go to your dorm and prepare for the party!
+        "null",
+        "null",
+        "null",
+        "null",
+        personnages.raquel[0],//640 
+        "null",
         personnages.raquel[0],
         personnages.raquel[1],
         personnages.raquel[0],
+        personnages.raquel[0],//645 
         personnages.raquel[0],
-        personnages.raquel[0],//630 
         personnages.raquel[0],
-        personnages.raquel[0],
-        personnages.raquel[1],
-        "null",
-        personnages.raquel[1],//635 
         personnages.raquel[0],
         personnages.raquel[1],
-        "null",
-        "null",
-        "null",//640 
-        personnages.raquel[0],
-        "null",
-        personnages.raquel[0],
-        personnages.raquel[0],
-        "null",//645 
-        "null",
-        "null",
-        "null",
-        "null",
         "null",//650 
-        "null",
-        "null",
-        "null",
+        personnages.raquel[1],
+        personnages.raquel[0],
+        personnages.raquel[1],
         "null",
         "null",//655 
         "null",
+        personnages.raquel[0],
         "null",
-        "null",
-        "null",
-        "null",//660 
+        personnages.raquel[0],
+        personnages.raquel[0],//660 
         "null",
         "null",
         "null",
@@ -3983,7 +4046,7 @@ function Chapter()
         "null",//670 
         "null",
         "null",
-        "null",//673 GHOST SLIDE
+        "null",
         "null",
         "null",//675 
         "null",
@@ -3999,7 +4062,7 @@ function Chapter()
         "null",
         "null",
         "null",
-        "null",
+        "null",//689 GHOST SLIDE
         "null",//690 
         "null",
         "null",
@@ -4018,114 +4081,130 @@ function Chapter()
         "null",//705 
         "null",
         "null",
+        "null",
+        "null",
+        "null",//710 
+        "null",
+        "null",
+        "null",
+        "null",
+        "null",//715 
+        "null",
+        "null",
+        "null",
+        "null",
+        "null",//720 
+        "null",
+        "null",
+        "null",
         personnages.karolina[0],
+        personnages.karolina[0],//725 
         personnages.karolina[0],
-        personnages.karolina[0],//710 
+        personnages.karolina[3],
+        "null",
+        "null",
+        "null",//730 
+        personnages.karolina[2],
+        personnages.karolina[2],
+        personnages.karolina[2],
+        personnages.karolina[3],
+        "null",//735 
         personnages.karolina[3],
         "null",
         "null",
         "null",
-        personnages.karolina[2],//715 
-        personnages.karolina[2],
-        personnages.karolina[2],
-        personnages.karolina[3],
+        personnages.karolina[0],//740 
         "null",
-        personnages.karolina[3],//720 
-        "null",
-        "null",
-        "null",
-        personnages.karolina[0],
-        "null",//725 
         "null",
         personnages.axel[3],
         "null",
+        personnages.raquel[4],//745 
         personnages.raquel[4],
-        personnages.raquel[4],//730 
         personnages.raquel[0],
         "null",
         "null",
-        personnages.neha[0],
-        "null",//735 
-        "null",
-        "null",
-        "null",
-        "null",
-        personnages.neha[5],//740 
-        "null",
-        "null",
-        personnages.neha[0],
-        personnages.neha[0],
-        "null",//745 
-        "null",
-        "null",
-        "null",
-        "null",
-        "null",//750 
+        personnages.neha[0],//750 
         "null",
         "null",
         "null",
         "null",
         "null",//755 
-        "null",//756 POPUP
-        "null",
-        "null",
-        personnages.neha[0],
-        "null",//760 
         personnages.neha[5],
+        "null",
+        "null",
         personnages.neha[0],
+        personnages.neha[0],//760 
+        "null",
+        "null",
         "null",
         "null",
         "null",//765 
         "null",
         "null",
         "null",
-        "null",//769 POPUP
+        "null",
         "null",//770 
         "null",
+        "null",//772 POPUP
+        "null",
+        "null",
+        personnages.neha[0],//775 
         "null",
         personnages.neha[5],
+        personnages.neha[0],
         "null",
-        "null",//775 
+        "null",//780 
+        "null",
+        "null",
+        "null",
+        "null",
+        "null",//785 POPUP
+        "null",
+        "null",
         "null",
         personnages.neha[5],
-        personnages.neha[5],
-        personnages.neha[5],
-        personnages.neha[4],//780 
-        personnages.neha[5],
-        "null",
-        "null",//783 POPUP
-        "null",
-        "null",//785 
-        personnages.neha[5],
-        personnages.neha[4],
-        "null",//788 Different Dorm…
-        "null",
         "null",//790 
-        personnages.neha[0],
         "null",
         "null",
-        "null",
-        "null",//795 
+        personnages.neha[5],
+        personnages.neha[5],
+        personnages.neha[5],//795 
+        personnages.neha[4],
         personnages.neha[5],
         "null",
-        "null",
-        personnages.neha[0],
+        "null",//799 POPUP
         "null",//800 
         "null",
+        personnages.neha[5],
+        personnages.neha[4],
+        "null",//804 Different Dorm…
+        "null",//805 
         "null",
-        "null",
-        "null",
-        personnages.neha[0],//805 
-        "null",
-        "null",
+        personnages.neha[0],
         "null",
         "null",
         "null",//810 
         "null",
+        personnages.neha[5],
+        "null",
+        "null",
+        personnages.neha[0],//815 
         "null",
         "null",
         "null",
-        "null",//815 
+        "null",
+        "null",//820 
+        personnages.neha[0],
+        "null",
+        "null",
+        "null",
+        "null",//825 
+        "null",
+        "null",
+        "null",
+        "null",
+        "null",//830 
+        "null",
         "null",
         "null",
         ];
@@ -4142,7 +4221,7 @@ function Chapter()
         locations.hall1,//8 POPUP
         locations.hall1,
         locations.hall1,//10 
-        locations.cafeteria,
+        locations.hall1,
         locations.cafeteria,
         locations.cafeteria,
         locations.cafeteria,
@@ -4167,17 +4246,17 @@ function Chapter()
         locations.cafeteria,
         locations.cafeteria,
         locations.cafeteria,//35 
-        locations.hall1,
-        locations.hall1,
-        locations.hall1,
+        locations.cafeteria,//36 Objective Complete: Get some breakfast at the Cafeteria! 
+        locations.cafeteria,
+        locations.cafeteria,
         locations.hall1,
         locations.hall1,//40 
         locations.hall1,
-        locations.class1,
-        locations.class1,
-        locations.class1,
-        locations.class1,//45 
-        locations.class1,
+        locations.hall1,
+        locations.hall1,
+        locations.hall1,//44 Objective Complete: Follow Axel and go back to the Main Hallway! 
+        locations.hall1,//45 
+        locations.hall1,
         locations.class1,
         locations.class1,
         locations.class1,
@@ -4222,12 +4301,12 @@ function Chapter()
         locations.class1,
         locations.class1,
         locations.class1,//90 
-        locations.class1,//91 TODO: Special Background Required
+        locations.class1,
         locations.class1,
         locations.class1,
         locations.class1,
         locations.class1,//95 
-        locations.class1,
+        locations.class1,//96 TODO: Special Background Required
         locations.class1,
         locations.class1,
         locations.class1,
@@ -4238,16 +4317,16 @@ function Chapter()
         locations.class1,
         locations.class1,//105 
         locations.class1,
-        locations.class1,//107 TODO: Objectives
         locations.class1,
-        locations.entrance,
-        locations.entrance,//110 
-        locations.entrance,
-        locations.entrance,
-        locations.entrance,
-        locations.entrance,
-        locations.entrance,//115 
-        locations.entrance,
+        locations.class1,
+        locations.class1,
+        locations.class1,//110 
+        locations.class1,
+        locations.class1,//112 TODO: Objectives
+        locations.class1,//113 Objective Complete: Quick! Get into Classroom 1!  
+        locations.class1,
+        locations.class1,//115 
+        locations.class1,
         locations.entrance,
         locations.entrance,
         locations.entrance,
@@ -4309,14 +4388,14 @@ function Chapter()
         locations.entrance,//175 
         locations.entrance,
         locations.entrance,
-        locations.gym,
-        locations.gym,
-        locations.gym,//180 
-        locations.gym,
-        locations.gym,
-        locations.gym,
-        locations.gym,
-        locations.gym,//185 
+        locations.entrance,
+        locations.entrance,
+        locations.entrance,//180 
+        locations.entrance,
+        locations.entrance,
+        locations.entrance,
+        locations.entrance,
+        locations.entrance,//185 
         locations.gym,
         locations.gym,
         locations.gym,
@@ -4355,14 +4434,14 @@ function Chapter()
         locations.gym,
         locations.gym,
         locations.gym,
-        locations.hall1,
-        locations.hall1,//225 
-        locations.hall1,
-        locations.hall1,
-        locations.hall1,
-        locations.hall1,
-        locations.hall1,//230 
-        locations.hall1,
+        locations.gym,
+        locations.gym,//225 
+        locations.gym,
+        locations.gym,
+        locations.gym,
+        locations.gym,
+        locations.gym,//230 
+        locations.gym,
         locations.hall1,
         locations.hall1,
         locations.hall1,
@@ -4385,14 +4464,14 @@ function Chapter()
         locations.hall1,
         locations.hall1,
         locations.hall1,
-        locations.cafeteria,
-        locations.cafeteria,//255 
-        locations.cafeteria,
-        locations.cafeteria,
-        locations.cafeteria,
-        locations.cafeteria,
-        locations.cafeteria,//260 
-        locations.cafeteria,
+        locations.hall1,
+        locations.hall1,//255 
+        locations.hall1,
+        locations.hall1,
+        locations.hall1,
+        locations.hall1,
+        locations.hall1,//260 
+        locations.hall1,
         locations.cafeteria,
         locations.cafeteria,
         locations.cafeteria,
@@ -4427,14 +4506,14 @@ function Chapter()
         locations.cafeteria,
         locations.cafeteria,
         locations.cafeteria,//295 
-        locations.class1,
-        locations.class1,
-        locations.class1,
-        locations.class1,
-        locations.class1,//300 
-        locations.class1,
-        locations.class1,
-        locations.class1,
+        locations.cafeteria,
+        locations.cafeteria,
+        locations.cafeteria,
+        locations.cafeteria,
+        locations.cafeteria,//300 
+        locations.cafeteria,
+        locations.cafeteria,
+        locations.cafeteria,
         locations.class1,
         locations.class1,//305 
         locations.class1,
@@ -4451,14 +4530,14 @@ function Chapter()
         locations.class1,
         locations.class1,
         locations.class1,
-        locations.dormBathroom,//320 
-        locations.dormBathroom,
-        locations.dormBathroom,
-        locations.dormBathroom,
-        locations.dormBathroom,
-        locations.dormBathroom,//325 
-        locations.dormBathroom,
-        locations.dormBathroom,
+        locations.class1,//320 
+        locations.class1,
+        locations.class1,
+        locations.class1,
+        locations.class1,
+        locations.class1,//325 
+        locations.class1,
+        locations.class1,
         locations.dormBathroom,
         locations.dormBathroom,
         locations.dormBathroom,//330 
@@ -4487,14 +4566,14 @@ function Chapter()
         locations.dormBathroom,
         locations.dormBathroom,
         locations.dormBathroom,//355 
-        locations.hall2,
-        locations.hall2,
-        locations.hall2,
-        locations.hall2,
-        locations.hall2,//360 
-        locations.hall2,
-        locations.hall2,
-        locations.hall2,
+        locations.dormBathroom,
+        locations.dormBathroom,
+        locations.dormBathroom,
+        locations.dormBathroom,
+        locations.dormBathroom,//360 
+        locations.dormBathroom,
+        locations.dormBathroom,
+        locations.dormBathroom,
         locations.hall2,
         locations.hall2,//365 
         locations.hall2,
@@ -4552,15 +4631,15 @@ function Chapter()
         locations.hall2,
         locations.hall2,
         locations.hall2,//420 
-        locations.class2,
-        locations.class2,
-        locations.class2,
-        locations.class2,
-        locations.class2,//425 
-        locations.class2,
-        locations.class2,
-        locations.class2,
-        locations.class2,
+        locations.hall2,
+        locations.hall2,
+        locations.hall2,
+        locations.hall2,
+        locations.hall2,//425 
+        locations.hall2,
+        locations.hall2,
+        locations.hall2,
+        locations.hall2,
         locations.class2,//430 
         locations.class2,
         locations.class2,
@@ -4601,20 +4680,20 @@ function Chapter()
         locations.class2,
         locations.class2,
         locations.class2,
-        locations.hall1,//470 
-        locations.hall1,
-        locations.hall1,
-        locations.hall1,
-        locations.hall1,
-        locations.hall1,//475 
-        locations.hall1,
-        locations.hall1,
-        locations.hall1,
+        locations.class2,//470 
+        locations.class2,
+        locations.class2,
+        locations.class2,
+        locations.class2,
+        locations.class2,//475 
+        locations.class2,
+        locations.class2,
+        locations.class2,
         locations.hall1,
         locations.hall1,//480 
         locations.hall1,
         locations.hall1,
-        locations.hall1,//483 Special Background
+        locations.hall1,
         locations.hall1,
         locations.hall1,//485 
         locations.hall1,
@@ -4623,7 +4702,7 @@ function Chapter()
         locations.hall1,
         locations.hall1,//490 
         locations.hall1,
-        locations.hall1,
+        locations.hall1,//492 Special Background
         locations.hall1,
         locations.hall1,
         locations.hall1,//495 
@@ -4710,65 +4789,65 @@ function Chapter()
         locations.hall1,
         locations.hall1,
         locations.hall1,
-        locations.hall1,//579 Special Background
+        locations.hall1,
         locations.hall1,//580 
         locations.hall1,
         locations.hall1,
         locations.hall1,
-        locations.class2,
-        locations.class2,//585 
-        locations.class2,
-        locations.class2,
-        locations.class2,
-        locations.class2,
-        locations.class2,//590 
-        locations.class2,
-        locations.class2,
-        locations.class2,
-        locations.class2,
-        locations.class2,//595 
-        locations.class2,//596 POPUP
-        locations.class2,
+        locations.hall1,
+        locations.hall1,//585 
+        locations.hall1,
+        locations.hall1,
+        locations.hall1,//588 Special Background
+        locations.hall1,
+        locations.hall1,//590 
+        locations.hall1,
+        locations.hall1,
+        locations.hall1,//593 Try to find Axel!
+        locations.hall1,//594 Explore the school and talk to your classmates!
+        locations.hall1,//595 
         locations.class2,
         locations.class2,
-        locations.dorm,//600 
-        locations.dorm,
-        locations.dorm,
-        locations.dorm,
-        locations.dorm,
-        locations.dorm,//605 
-        locations.dorm,
-        locations.dorm,
-        locations.dorm,
-        locations.dorm,
-        locations.dorm,//610 
-        locations.dorm,
-        locations.dorm,
-        locations.dorm,
+        locations.class2,
+        locations.class2,
+        locations.class2,//600 
+        locations.class2,
+        locations.class2,
+        locations.class2,
+        locations.class2,
+        locations.class2,//605 
+        locations.class2,
+        locations.class2,
+        locations.class2,//608 POPUP
+        locations.class2,
+        locations.class2,//610 
+        locations.class2,//611 Objective Complete: Go to Classroom 2
+        locations.class2,
+        locations.class2,
         locations.dorm,
         locations.dorm,//615 
-        locations.dorm,//616 player clicks on the episode’s outfit.
+        locations.dorm,
         locations.dorm,
         locations.dorm,
         locations.dorm,
         locations.dorm,//620 
         locations.dorm,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,//625 
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,//630 
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,//635 
-        locations.dormHall,
-        locations.dormHall,
+        locations.dorm,
+        locations.dorm,
+        locations.dorm,
+        locations.dorm,//625 
+        locations.dorm,
+        locations.dorm,
+        locations.dorm,
+        locations.dorm,
+        locations.dorm,//630 player clicks on the episode’s outfit.
+        locations.dorm,
+        locations.dorm,
+        locations.dorm,
+        locations.dorm,
+        locations.dorm,//635 Objective Complete:  Go to your dorm and prepare for the party!
+        locations.dorm,
+        locations.dorm,
         locations.dormHall,
         locations.dormHall,
         locations.dormHall,//640 
@@ -4804,7 +4883,7 @@ function Chapter()
         locations.dormHall,//670 
         locations.dormHall,
         locations.dormHall,
-        locations.dormHall,//673 GHOST SLIDE
+        locations.dormHall,
         locations.dormHall,
         locations.dormHall,//675 
         locations.dormHall,
@@ -4820,7 +4899,7 @@ function Chapter()
         locations.dormHall,
         locations.dormHall,
         locations.dormHall,
-        locations.dormHall,
+        locations.dormHall,//689 GHOST SLIDE
         locations.dormHall,//690 
         locations.dormHall,
         locations.dormHall,
@@ -4882,28 +4961,28 @@ function Chapter()
         locations.dormHall,
         locations.dormHall,
         locations.dormHall,//750 
-        locations.dorm,
-        locations.dorm,
-        locations.dorm,
-        locations.dorm,
-        locations.dorm,//755 
-        locations.dorm,//756 POPUP
-        locations.dorm,
-        locations.dorm,
-        locations.dorm,
-        locations.dorm,//760 
-        locations.dorm,
-        locations.dorm,
-        locations.dorm,
-        locations.dorm,
+        locations.dormHall,
+        locations.dormHall,
+        locations.dormHall,
+        locations.dormHall,
+        locations.dormHall,//755 
+        locations.dormHall,
+        locations.dormHall,
+        locations.dormHall,
+        locations.dormHall,
+        locations.dormHall,//760 
+        locations.dormHall,
+        locations.dormHall,
+        locations.dormHall,
+        locations.dormHall,
         locations.dormHall,//765 
         locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,//769 POPUP
-        locations.dormHall,//770 
-        locations.dormHall,
         locations.dorm,
+        locations.dorm,
+        locations.dorm,
+        locations.dorm,//770 
+        locations.dorm,
+        locations.dorm,//772 POPUP
         locations.dorm,
         locations.dorm,
         locations.dorm,//775 
@@ -4912,14 +4991,14 @@ function Chapter()
         locations.dorm,
         locations.dorm,
         locations.dorm,//780 
+        locations.dormHall,
+        locations.dormHall,
+        locations.dormHall,
+        locations.dormHall,
+        locations.dormHall,//785 POPUP
+        locations.dormHall,
+        locations.dormHall,
         locations.dorm,
-        locations.dorm,
-        locations.dorm,//783 POPUP
-        locations.dorm,
-        locations.dorm,//785 
-        locations.dorm,
-        locations.dorm,
-        locations.dorm,//788 Different Dorm…
         locations.dorm,
         locations.dorm,//790 
         locations.dorm,
@@ -4930,15 +5009,15 @@ function Chapter()
         locations.dorm,
         locations.dorm,
         locations.dorm,
-        locations.dorm,
+        locations.dorm,//799 POPUP
         locations.dorm,//800 
         locations.dorm,
         locations.dorm,
         locations.dorm,
-        locations.dorm,
+        locations.dorm,//804 Different Dorm…
         locations.dorm,//805 
-        locations.dormHall,
-        locations.dormHall,
+        locations.dorm,
+        locations.dorm,
         locations.dorm,
         locations.dorm,
         locations.dorm,//810 
@@ -4947,6 +5026,22 @@ function Chapter()
         locations.dorm,
         locations.dorm,
         locations.dorm,//815 
+        locations.dorm,
+        locations.dorm,
+        locations.dorm,
+        locations.dorm,
+        locations.dorm,//820 
+        locations.dorm,
+        locations.dormHall,
+        locations.dormHall,
+        locations.dorm,
+        locations.dorm,//825 
+        locations.dorm,
+        locations.dorm,
+        locations.dorm,
+        locations.dorm,
+        locations.dorm,//830 
+        locations.dorm,
         locations.dorm,
         locations.dorm,
         ];
@@ -4962,8 +5057,8 @@ function Chapter()
         -1,
         -1,//8 POPUP
         -1,
-        -2,//10 
-        -1,
+        -8,//10 
+        -2,
         -1,
         -1,
         -1,
@@ -4978,27 +5073,27 @@ function Chapter()
         -1,
         -1,
         -1,//25 
-        -5,
-        35,
         -1,
+        -5,
+        36,
         -1,
         -1,//30 
         -1,
-        35,
         -1,
-        35,
-        -2,//35 
+        36,
         -1,
-        -1,
-        -1,
-        -1,
-        -1,//40 
+        36,//35 
+        -9,//36 Objective Complete: Get some breakfast at the Cafeteria! 
+        -8,
         -2,
         -1,
+        -1,//40 
         -1,
         -1,
-        -1,//45 
         -1,
+        -9,//44 Objective Complete: Follow Axel and go back to the Main Hallway! 
+        -8,//45 
+        -2,
         -1,
         -1,
         -1,
@@ -5008,17 +5103,17 @@ function Chapter()
         -1,
         -1,
         -1,//55 
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,//60 
         -5,
         -1,
-        62,
+        67,
         -1,
-        62,//60 
-        62,
-        -1,
-        -1,
-        -1,
-        -1,//65 
-        -1,
+        67,//65 
+        67,
         -1,
         -1,
         -1,
@@ -5043,12 +5138,12 @@ function Chapter()
         -1,
         -1,
         -1,//90 
-        -1,//91 TODO: Special Background Required
+        -1,
         -1,
         -1,
         -1,
         -1,//95 
-        -1,
+        -1,//96 TODO: Special Background Required
         -1,
         -1,
         -1,
@@ -5059,16 +5154,16 @@ function Chapter()
         -1,
         -1,//105 
         -1,
-        -1,//107 TODO: Objectives
-        -2,
+        -1,
+        -1,
         -1,
         -1,//110 
         -1,
-        -1,
-        -1,
-        -1,
-        -1,//115 
-        -1,
+        -1,//112 TODO: Objectives
+        -9,//113 Objective Complete: Quick! Get into Classroom 1!  
+        -8,
+        -8,//115 
+        -2,
         -1,
         -1,
         -1,
@@ -5080,48 +5175,48 @@ function Chapter()
         -1,//125 
         -1,
         -1,
-        -4,
-        -5,
+        -1,
+        -1,
         -1,//130 
         -1,
-        156,
+        -1,
         -1,
         -1,
         -1,//135 
-        156,
-        -1,
-        -1,
-        -1,
-        -1,//140 
-        -1,
-        -1,
-        156,
+        -4,
         -5,
+        -1,
+        -1,
+        164,//140 
+        -1,
+        -1,
+        -1,
+        164,
         -1,//145 
         -1,
-        156,
         -1,
-        156,
+        -1,
+        -1,
         -1,//150 
+        164,
+        -5,
         -1,
         -1,
+        164,//155 
         -1,
-        -1,
-        156,//155 
-        -1,
-        -1,
+        164,
         -1,
         -1,
         -1,//160 
-        -5,
         -1,
         -1,
+        164,
         -1,
         -1,//165 
         -1,
         -1,
         -1,
-        -1,
+        -5,
         -1,//170 
         -1,
         -1,
@@ -5129,69 +5224,69 @@ function Chapter()
         -1,
         -1,//175 
         -1,
-        -2,
+        -1,
         -1,
         -1,
         -1,//180 
         -1,
-        -5,
         -1,
         -1,
-        -1,//185 
-        193,
+        -1,
+        -2,//185 
         -1,
         -1,
-        193,
-        -1,//190 
-        -1,
-        193,
         -1,
         -1,
+        -5,//190 
+        -1,
+        -1,
+        -1,
+        201,
         -1,//195 
         -1,
-        -4,
+        201,
+        -1,
+        -1,
+        201,//200 
+        -1,
+        -1,
+        -1,
+        -1,
+        -4,//205 
         -5,
-        214,
-        214,//200 
+        222,
+        222,
         -1,
-        214,
+        222,//210 
         -5,
-        214,
-        -1,//205 
+        222,
         -1,
-        -1,
-        -1,
-        -1,
-        -1,//210 
-        214,
-        -1,
-        214,
         -1,
         -1,//215 
         -1,
         -1,
         -1,
-        -1,
+        222,
         -1,//220 
+        222,
         -1,
         -1,
-        -2,
         -1,
-        -5,//225 
+        -1,//225 
         -1,
         -1,
         -1,
         -1,
         -1,//230 
+        -2,
         -1,
-        -1,
-        -1,
+        -5,
         -1,
         -1,//235 
         -1,
         -1,
         -1,
-        253,
+        -1,
         -1,//240 
         -1,
         -1,
@@ -5199,21 +5294,21 @@ function Chapter()
         -1,
         -1,//245 
         -1,
-        -1,
+        261,
         -1,
         -1,
         -1,//250 
         -1,
-        253,
-        -2,
+        -1,
+        -1,
         -1,
         -1,//255 
         -1,
         -1,
         -1,
         -1,
-        -1,//260 
-        -1,
+        261,//260 
+        -2,
         -1,
         -1,
         -1,
@@ -5224,62 +5319,62 @@ function Chapter()
         -1,
         -1,//270 
         -1,
-        -4,
-        -5,
-        284,
+        -1,
+        -1,
+        -1,
         -1,//275 
         -1,
-        284,
+        -1,
+        -1,
+        -1,
+        -4,//280 
+        -5,
+        292,
+        -1,
+        -1,
+        292,//285 
         -5,
         -1,
-        284,//280 
-        -1,
-        -1,
-        284,
-        -5,
-        289,//285 
-        -1,
-        289,
-        289,
+        292,
         -1,
         -1,//290 
+        292,
+        -5,
+        297,
         -1,
-        -1,
-        -1,
-        -1,
-        -2,//295 
-        -1,
+        297,//295 
+        297,
         -1,
         -1,
         -1,
         -1,//300 
         -1,
         -1,
-        -5,
-        308,
-        308,//305 
-        -1,
-        308,
-        -1,
-        -1,
-        -5,//310 
-        -1,
-        -1,
-        -1,
-        318,
-        -1,//315 
-        -1,
-        318,
-        -1,
         -2,
+        -1,
+        -1,//305 
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,//310 
+        -5,
+        316,
+        316,
+        -1,
+        316,//315 
+        -1,
+        -1,
+        -5,
+        -1,
         -1,//320 
         -1,
+        326,
         -1,
         -1,
+        326,//325 
         -1,
-        -1,//325 
-        -1,
-        -1,
+        -2,
         -1,
         -1,
         -1,//330 
@@ -5290,24 +5385,24 @@ function Chapter()
         -1,//335 
         -1,
         -1,
-        -5,
+        -1,
         -1,
         -1,//340 
         -1,
         -1,
-        348,
+        -1,
         -1,
         -1,//345 
+        -5,
         -1,
-        348,
         -1,
         -1,
         -1,//350 
+        356,
         -1,
         -1,
         -1,
-        -1,
-        -2,//355 
+        356,//355 
         -1,
         -1,
         -1,
@@ -5315,7 +5410,7 @@ function Chapter()
         -1,//360 
         -1,
         -1,
-        -1,
+        -2,
         -1,
         -1,//365 
         -1,
@@ -5330,37 +5425,37 @@ function Chapter()
         -1,//375 
         -1,
         -1,
-        -5,
+        -1,
         -1,
         -1,//380 
         -1,
         -1,
         -1,
-        397,
+        -1,
         -1,//385 
+        -5,
         -1,
         -1,
         -1,
-        397,
         -1,//390 
         -1,
-        -1,
+        405,
         -1,
         -1,
         -1,//395 
-        397,
+        -1,
+        405,
         -1,
         -1,
-        -11,
         -1,//400 
         -1,
         -1,
         -1,
-        -1,
+        405,
         -1,//405 
         -1,
-        -1,
-        -1,
+        -11,
+        -13,
         -1,
         -1,//410 
         -1,
@@ -5372,7 +5467,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        -2,//420 
+        -1,//420 
         -1,
         -1,
         -1,
@@ -5381,61 +5476,61 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,
+        -2,
         -1,//430 
         -1,
         -1,
-        -4,
-        -5,
+        -1,
+        -1,
         -1,//435 
         -1,
         -1,
         -1,
         -1,
         -1,//440 
-        463,
         -1,
-        -1,
-        463,
-        -1,//445 
-        -1,
-        463,
+        -4,
         -5,
         -1,
-        -1,//450 
+        -1,//445 
         -1,
         -1,
         -1,
+        -1,
+        472,//450 
+        -1,
+        -1,
+        472,
         -1,
         -1,//455 
+        472,
+        -5,
         -1,
-        463,
         -1,
-        463,
         -1,//460 
         -1,
-        463,
+        -1,
         -1,
         -1,
         -1,//465 
+        472,
         -1,
+        472,
         -1,
-        -1,
-        -2,
         -1,//470 
-        -1,
+        472,
         -1,
         -1,
         -1,
         -1,//475 
         -1,
         -1,
-        -1,
+        -2,
         -1,
         -1,//480 
         -1,
         -1,
-        -1,//483 Special Background
+        -1,
         -1,
         -1,//485 
         -1,
@@ -5444,13 +5539,13 @@ function Chapter()
         -1,
         -1,//490 
         -1,
-        -1,
+        -1,//492 Special Background
         -1,
         -1,
         -1,//495 
         -1,
         -1,
-        -5,
+        -1,
         -1,
         -1,//500 
         -1,
@@ -5459,7 +5554,7 @@ function Chapter()
         -1,
         -1,//505 
         -1,
-        -1,
+        -5,
         -1,
         -1,
         -1,//510 
@@ -5477,7 +5572,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        582,//525 
+        -1,//525 
         -1,
         -1,
         -1,
@@ -5486,7 +5581,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,
+        591,
         -1,//535 
         -1,
         -1,
@@ -5506,7 +5601,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        582,
+        -1,
         -1,//555 
         -1,
         -1,
@@ -5515,7 +5610,7 @@ function Chapter()
         -1,//560 
         -1,
         -1,
-        -1,
+        591,
         -1,
         -1,//565 
         -1,
@@ -5531,27 +5626,27 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,//579 Special Background
-        -1,//580 
-        582,
         -1,
-        -2,
+        -1,//580 
+        -1,
+        -1,
+        -1,
         -1,
         -1,//585 
         -1,
         -1,
+        -1,//588 Special Background
+        -1,
+        591,//590 
+        -1,
+        -8,
+        -9,//593 Try to find Axel!
+        -9,//594 Explore the school and talk to your classmates!
+        -2,//595 
         -1,
         -1,
-        -1,//590 
         -1,
         -1,
-        -1,
-        -1,
-        -1,//595 
-        -1,//596 POPUP
-        -1,
-        -1,
-        -2,
         -1,//600 
         -1,
         -1,
@@ -5560,20 +5655,20 @@ function Chapter()
         -1,//605 
         -1,
         -1,
-        -1,
+        -1,//608 POPUP
         -1,
         -1,//610 
-        -1,
-        -1,
-        -1,
+        -9,//611 Objective Complete: Go to Classroom 2
+        -8,
+        -2,
         -1,
         -1,//615 
-        -1,//616 player clicks on the episode’s outfit.
+        -1,
         -1,
         -1,
         -1,
         -1,//620 
-        -2,
+        -1,
         -1,
         -1,
         -1,
@@ -5582,14 +5677,14 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,//630 
+        -1,//630 player clicks on the episode’s outfit.
         -1,
         -1,
         -1,
         -1,
-        -1,//635 
-        -1,
-        -1,
+        -9,//635 Objective Complete:  Go to your dorm and prepare for the party!
+        -8,
+        -2,
         -1,
         -1,
         -1,//640 
@@ -5601,11 +5696,11 @@ function Chapter()
         -1,
         -1,
         -1,
-        -4,
-        -5,//650 
-        -7,
-        -7,
-        -7,
+        -1,
+        -1,//650 
+        -1,
+        -1,
+        -1,
         -1,
         -1,//655 
         -1,
@@ -5614,51 +5709,51 @@ function Chapter()
         -1,
         -1,//660 
         -1,
-        691,
-        -1,
-        -1,
-        691,//665 
         -1,
         -1,
         -1,
-        691,
-        -5,//670 
-        -1,
-        691,
-        -7,//673 GHOST SLIDE
+        -4,//665 
+        -5,
         -7,
-        -7,//675 
+        -7,
+        -7,
+        -1,//670 
         -1,
         -1,
         -1,
+        -1,
+        -1,//675 
+        -1,
+        -1,
+        707,
         -1,
         -1,//680 
+        707,
+        -1,
+        -1,
+        -1,
+        707,//685 
+        -5,
+        -1,
+        707,
+        -7,//689 GHOST SLIDE
+        -7,//690 
+        -7,
+        -1,
+        -1,
+        -1,
+        707,//695 
         -1,
         -1,
         -1,
         -1,
-        -1,//685 
-        691,
+        707,//700 
         -1,
-        -1,
-        -1,
-        691,//690 
-        -1,
-        -1,
-        -1,
-        -1,
-        -1,//695 
-        -1,
-        -1,
-        -1,
-        -1,
-        -1,//700 
-        -1,
-        -1,
+        707,
         -1,
         -1,
         -1,//705 
-        -1,
+        707,
         -1,
         -1,
         -1,
@@ -5700,7 +5795,7 @@ function Chapter()
         -1,//745 
         -1,
         -1,
-        -5,
+        -1,
         -1,
         -1,//750 
         -1,
@@ -5708,7 +5803,7 @@ function Chapter()
         -1,
         -1,
         -1,//755 
-        -1,//756 POPUP
+        -1,
         -1,
         -1,
         -1,
@@ -5716,15 +5811,15 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,
+        -5,
         -1,//765 
         -1,
         -1,
         -1,
-        -1,//769 POPUP
+        -1,
         -1,//770 
         -1,
-        -1,
+        -1,//772 POPUP
         -1,
         -1,
         -1,//775 
@@ -5732,16 +5827,16 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,//780 
+        788,//780 
         -1,
         -1,
-        -1,//783 POPUP
-        -1,
-        -1,//785 
         -1,
         -1,
-        -1,//788 Different Dorm…
-        -11,
+        -1,//785 POPUP
+        -1,
+        788,
+        -1,
+        -1,
         -1,//790 
         -1,
         -1,
@@ -5751,13 +5846,13 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,
+        -1,//799 POPUP
         -1,//800 
         -1,
         -1,
         -1,
-        -1,
-        -1,//805 
+        -1,//804 Different Dorm…
+        -11,//805 
         -1,
         -1,
         -1,
@@ -5768,6 +5863,22 @@ function Chapter()
         -1,
         -1,
         -1,//815 
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,//820 
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,//825 
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,//830 
+        -1,
         -1,
         -1,
         ];
@@ -5783,8 +5894,8 @@ function Chapter()
         0,
         0,//8 POPUP
         0,
-        6,//10 
-        0,
+        0,//10 
+        6,
         0,
         0,
         0,
@@ -5808,18 +5919,18 @@ function Chapter()
         0,
         0,
         0,
-        2,//35 
+        0,//35 
+        0,//36 Objective Complete: Get some breakfast at the Cafeteria! 
         0,
-        0,
-        0,
+        2,
         0,
         0,//40 
-        3,
         0,
         0,
         0,
+        0,//44 Objective Complete: Follow Axel and go back to the Main Hallway! 
         0,//45 
-        0,
+        3,
         0,
         0,
         0,
@@ -5864,12 +5975,12 @@ function Chapter()
         0,
         0,
         0,//90 
-        0,//91 TODO: Special Background Required
+        0,
         0,
         0,
         0,
         0,//95 
-        0,
+        0,//96 TODO: Special Background Required
         0,
         0,
         0,
@@ -5880,16 +5991,16 @@ function Chapter()
         0,
         0,//105 
         0,
-        0,//107 TODO: Objectives
-        1,
+        0,
+        0,
         0,
         0,//110 
         0,
-        0,
-        0,
+        0,//112 TODO: Objectives
+        0,//113 Objective Complete: Quick! Get into Classroom 1!  
         0,
         0,//115 
-        0,
+        1,
         0,
         0,
         0,
@@ -5950,7 +6061,7 @@ function Chapter()
         0,
         0,//175 
         0,
-        10,
+        0,
         0,
         0,
         0,//180 
@@ -5958,7 +6069,7 @@ function Chapter()
         0,
         0,
         0,
-        0,//185 
+        10,//185 
         0,
         0,
         0,
@@ -5996,7 +6107,7 @@ function Chapter()
         0,//220 
         0,
         0,
-        2,
+        0,
         0,
         0,//225 
         0,
@@ -6004,7 +6115,7 @@ function Chapter()
         0,
         0,
         0,//230 
-        0,
+        2,
         0,
         0,
         0,
@@ -6026,7 +6137,7 @@ function Chapter()
         0,//250 
         0,
         0,
-        6,
+        0,
         0,
         0,//255 
         0,
@@ -6034,7 +6145,7 @@ function Chapter()
         0,
         0,
         0,//260 
-        0,
+        6,
         0,
         0,
         0,
@@ -6068,7 +6179,7 @@ function Chapter()
         0,
         0,
         0,
-        3,//295 
+        0,//295 
         0,
         0,
         0,
@@ -6076,7 +6187,7 @@ function Chapter()
         0,//300 
         0,
         0,
-        0,
+        3,
         0,
         0,//305 
         0,
@@ -6092,7 +6203,7 @@ function Chapter()
         0,
         0,
         0,
-        13,
+        0,
         0,//320 
         0,
         0,
@@ -6100,7 +6211,7 @@ function Chapter()
         0,
         0,//325 
         0,
-        0,
+        13,
         0,
         0,
         0,//330 
@@ -6128,7 +6239,7 @@ function Chapter()
         0,
         0,
         0,
-        5,//355 
+        0,//355 
         0,
         0,
         0,
@@ -6136,7 +6247,7 @@ function Chapter()
         0,//360 
         0,
         0,
-        0,
+        5,
         0,
         0,//365 
         0,
@@ -6193,7 +6304,7 @@ function Chapter()
         0,
         0,
         0,
-        4,//420 
+        0,//420 
         0,
         0,
         0,
@@ -6202,7 +6313,7 @@ function Chapter()
         0,
         0,
         0,
-        0,
+        4,
         0,//430 
         0,
         0,
@@ -6242,7 +6353,7 @@ function Chapter()
         0,
         0,
         0,
-        2,
+        0,
         0,//470 
         0,
         0,
@@ -6251,12 +6362,12 @@ function Chapter()
         0,//475 
         0,
         0,
-        0,
+        2,
         0,
         0,//480 
         0,
         0,
-        0,//483 Special Background
+        0,
         0,
         0,//485 
         0,
@@ -6265,7 +6376,7 @@ function Chapter()
         0,
         0,//490 
         0,
-        0,
+        0,//492 Special Background
         0,
         0,
         0,//495 
@@ -6352,27 +6463,27 @@ function Chapter()
         0,
         0,
         0,
-        0,//579 Special Background
+        0,
         0,//580 
         0,
         0,
-        4,
+        0,
         0,
         0,//585 
         0,
         0,
-        0,
+        0,//588 Special Background
         0,
         0,//590 
         0,
         0,
+        0,//593 Try to find Axel!
+        0,//594 Explore the school and talk to your classmates!
+        4,//595 
         0,
         0,
-        0,//595 
-        0,//596 POPUP
         0,
         0,
-        12,
         0,//600 
         0,
         0,
@@ -6381,20 +6492,20 @@ function Chapter()
         0,//605 
         0,
         0,
-        0,
+        0,//608 POPUP
         0,
         0,//610 
+        0,//611 Objective Complete: Go to Classroom 2
         0,
-        0,
-        0,
+        12,
         0,
         0,//615 
-        0,//616 player clicks on the episode’s outfit.
+        0,
         0,
         0,
         0,
         0,//620 
-        11,
+        0,
         0,
         0,
         0,
@@ -6403,14 +6514,14 @@ function Chapter()
         0,
         0,
         0,
-        0,//630 
+        0,//630 player clicks on the episode’s outfit.
         0,
         0,
         0,
         0,
-        0,//635 
+        0,//635 Objective Complete:  Go to your dorm and prepare for the party!
         0,
-        0,
+        11,
         0,
         0,
         0,//640 
@@ -6446,7 +6557,7 @@ function Chapter()
         0,//670 
         0,
         0,
-        0,//673 GHOST SLIDE
+        0,
         0,
         0,//675 
         0,
@@ -6462,7 +6573,7 @@ function Chapter()
         0,
         0,
         0,
-        0,
+        0,//689 GHOST SLIDE
         0,//690 
         0,
         0,
@@ -6529,7 +6640,7 @@ function Chapter()
         0,
         0,
         0,//755 
-        0,//756 POPUP
+        0,
         0,
         0,
         0,
@@ -6542,10 +6653,10 @@ function Chapter()
         0,
         0,
         0,
-        0,//769 POPUP
+        0,
         0,//770 
         0,
-        0,
+        0,//772 POPUP
         0,
         0,
         0,//775 
@@ -6556,12 +6667,12 @@ function Chapter()
         0,//780 
         0,
         0,
-        0,//783 POPUP
-        0,
-        0,//785 
         0,
         0,
-        0,//788 Different Dorm…
+        0,//785 POPUP
+        0,
+        0,
+        0,
         0,
         0,//790 
         0,
@@ -6572,12 +6683,12 @@ function Chapter()
         0,
         0,
         0,
-        0,
+        0,//799 POPUP
         0,//800 
         0,
         0,
         0,
-        0,
+        0,//804 Different Dorm…
         0,//805 
         0,
         0,
@@ -6589,6 +6700,22 @@ function Chapter()
         0,
         0,
         0,//815 
+        0,
+        0,
+        0,
+        0,
+        0,//820 
+        0,
+        0,
+        0,
+        0,
+        0,//825 
+        0,
+        0,
+        0,
+        0,
+        0,//830 
+        0,
         0,
         0,
         ];
@@ -6630,7 +6757,7 @@ function Chapter()
         -1,
         -1,
         -1,//35 
-        -1,
+        -1,//36 Objective Complete: Get some breakfast at the Cafeteria! 
         -1,
         -1,
         -1,
@@ -6638,7 +6765,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,
+        -1,//44 Objective Complete: Follow Axel and go back to the Main Hallway! 
         -1,//45 
         -1,
         -1,
@@ -6685,12 +6812,12 @@ function Chapter()
         -1,
         -1,
         -1,//90 
-        -1,//91 TODO: Special Background Required
+        -1,
         -1,
         -1,
         -1,
         -1,//95 
-        -1,
+        -1,//96 TODO: Special Background Required
         -1,
         -1,
         -1,
@@ -6701,13 +6828,13 @@ function Chapter()
         -1,
         -1,//105 
         -1,
-        -1,//107 TODO: Objectives
+        -1,
         -1,
         -1,
         -1,//110 
         -1,
-        -1,
-        -1,
+        -1,//112 TODO: Objectives
+        -1,//113 Objective Complete: Quick! Get into Classroom 1!  
         -1,
         -1,//115 
         -1,
@@ -6722,7 +6849,7 @@ function Chapter()
         -1,//125 
         -1,
         -1,
-        129,
+        -1,
         -1,
         -1,//130 
         -1,
@@ -6730,7 +6857,7 @@ function Chapter()
         -1,
         -1,
         -1,//135 
-        -1,
+        137,
         -1,
         -1,
         -1,
@@ -6791,7 +6918,7 @@ function Chapter()
         -1,
         -1,//195 
         -1,
-        198,
+        -1,
         -1,
         -1,
         -1,//200 
@@ -6799,7 +6926,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,//205 
+        206,//205 
         -1,
         -1,
         -1,
@@ -6866,7 +6993,7 @@ function Chapter()
         -1,
         -1,//270 
         -1,
-        273,
+        -1,
         -1,
         -1,
         -1,//275 
@@ -6874,7 +7001,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,//280 
+        281,//280 
         -1,
         -1,
         -1,
@@ -7027,7 +7154,7 @@ function Chapter()
         -1,//430 
         -1,
         -1,
-        434,
+        -1,
         -1,
         -1,//435 
         -1,
@@ -7036,7 +7163,7 @@ function Chapter()
         -1,
         -1,//440 
         -1,
-        -1,
+        443,
         -1,
         -1,
         -1,//445 
@@ -7077,7 +7204,7 @@ function Chapter()
         -1,//480 
         -1,
         -1,
-        -1,//483 Special Background
+        -1,
         -1,
         -1,//485 
         -1,
@@ -7086,7 +7213,7 @@ function Chapter()
         -1,
         -1,//490 
         -1,
-        -1,
+        -1,//492 Special Background
         -1,
         -1,
         -1,//495 
@@ -7173,7 +7300,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,//579 Special Background
+        -1,
         -1,//580 
         -1,
         -1,
@@ -7182,15 +7309,15 @@ function Chapter()
         -1,//585 
         -1,
         -1,
-        -1,
+        -1,//588 Special Background
         -1,
         -1,//590 
         -1,
         -1,
-        -1,
-        -1,
+        -1,//593 Try to find Axel!
+        -1,//594 Explore the school and talk to your classmates!
         -1,//595 
-        -1,//596 POPUP
+        -1,
         -1,
         -1,
         -1,
@@ -7202,15 +7329,15 @@ function Chapter()
         -1,//605 
         -1,
         -1,
-        -1,
+        -1,//608 POPUP
         -1,
         -1,//610 
-        -1,
+        -1,//611 Objective Complete: Go to Classroom 2
         -1,
         -1,
         -1,
         -1,//615 
-        -1,//616 player clicks on the episode’s outfit.
+        -1,
         -1,
         -1,
         -1,
@@ -7224,12 +7351,12 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,//630 
+        -1,//630 player clicks on the episode’s outfit.
         -1,
         -1,
         -1,
         -1,
-        -1,//635 
+        -1,//635 Objective Complete:  Go to your dorm and prepare for the party!
         -1,
         -1,
         -1,
@@ -7243,7 +7370,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        650,
+        -1,
         -1,//650 
         -1,
         -1,
@@ -7259,7 +7386,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,//665 
+        666,//665 
         -1,
         -1,
         -1,
@@ -7267,7 +7394,7 @@ function Chapter()
         -1,//670 
         -1,
         -1,
-        -1,//673 GHOST SLIDE
+        -1,
         -1,
         -1,//675 
         -1,
@@ -7283,7 +7410,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,
+        -1,//689 GHOST SLIDE
         -1,//690 
         -1,
         -1,
@@ -7350,7 +7477,7 @@ function Chapter()
         -1,
         -1,
         -1,//755 
-        -1,//756 POPUP
+        -1,
         -1,
         -1,
         -1,
@@ -7363,10 +7490,10 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,//769 POPUP
+        -1,
         -1,//770 
         -1,
-        -1,
+        -1,//772 POPUP
         -1,
         -1,
         -1,//775 
@@ -7377,12 +7504,12 @@ function Chapter()
         -1,//780 
         -1,
         -1,
-        -1,//783 POPUP
-        -1,
-        -1,//785 
         -1,
         -1,
-        -1,//788 Different Dorm…
+        -1,//785 POPUP
+        -1,
+        -1,
+        -1,
         -1,
         -1,//790 
         -1,
@@ -7393,12 +7520,12 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,
+        -1,//799 POPUP
         -1,//800 
         -1,
         -1,
         -1,
-        -1,
+        -1,//804 Different Dorm…
         -1,//805 
         -1,
         -1,
@@ -7410,6 +7537,22 @@ function Chapter()
         -1,
         -1,
         -1,//815 
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,//820 
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,//825 
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,//830 
+        -1,
         -1,
         -1,
         ];
@@ -7451,7 +7594,7 @@ function Chapter()
         -1,
         -1,
         -1,//35 
-        -1,
+        -1,//36 Objective Complete: Get some breakfast at the Cafeteria! 
         -1,
         -1,
         -1,
@@ -7459,7 +7602,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,
+        -1,//44 Objective Complete: Follow Axel and go back to the Main Hallway! 
         -1,//45 
         -1,
         -1,
@@ -7506,12 +7649,12 @@ function Chapter()
         -1,
         -1,
         -1,//90 
-        -1,//91 TODO: Special Background Required
+        -1,
         -1,
         -1,
         -1,
         -1,//95 
-        -1,
+        -1,//96 TODO: Special Background Required
         -1,
         -1,
         -1,
@@ -7522,13 +7665,13 @@ function Chapter()
         -1,
         -1,//105 
         -1,
-        -1,//107 TODO: Objectives
+        -1,
         -1,
         -1,
         -1,//110 
         -1,
-        -1,
-        -1,
+        -1,//112 TODO: Objectives
+        -1,//113 Objective Complete: Quick! Get into Classroom 1!  
         -1,
         -1,//115 
         -1,
@@ -7543,7 +7686,7 @@ function Chapter()
         -1,//125 
         -1,
         -1,
-        144,
+        -1,
         -1,
         -1,//130 
         -1,
@@ -7551,7 +7694,7 @@ function Chapter()
         -1,
         -1,
         -1,//135 
-        -1,
+        152,
         -1,
         -1,
         -1,
@@ -7612,7 +7755,7 @@ function Chapter()
         -1,
         -1,//195 
         -1,
-        203,
+        -1,
         -1,
         -1,
         -1,//200 
@@ -7620,7 +7763,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,//205 
+        211,//205 
         -1,
         -1,
         -1,
@@ -7687,7 +7830,7 @@ function Chapter()
         -1,
         -1,//270 
         -1,
-        278,
+        -1,
         -1,
         -1,
         -1,//275 
@@ -7695,7 +7838,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,//280 
+        286,//280 
         -1,
         -1,
         -1,
@@ -7848,7 +7991,7 @@ function Chapter()
         -1,//430 
         -1,
         -1,
-        448,
+        -1,
         -1,
         -1,//435 
         -1,
@@ -7857,7 +8000,7 @@ function Chapter()
         -1,
         -1,//440 
         -1,
-        -1,
+        457,
         -1,
         -1,
         -1,//445 
@@ -7898,7 +8041,7 @@ function Chapter()
         -1,//480 
         -1,
         -1,
-        -1,//483 Special Background
+        -1,
         -1,
         -1,//485 
         -1,
@@ -7907,7 +8050,7 @@ function Chapter()
         -1,
         -1,//490 
         -1,
-        -1,
+        -1,//492 Special Background
         -1,
         -1,
         -1,//495 
@@ -7994,7 +8137,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,//579 Special Background
+        -1,
         -1,//580 
         -1,
         -1,
@@ -8003,15 +8146,15 @@ function Chapter()
         -1,//585 
         -1,
         -1,
-        -1,
+        -1,//588 Special Background
         -1,
         -1,//590 
         -1,
         -1,
-        -1,
-        -1,
+        -1,//593 Try to find Axel!
+        -1,//594 Explore the school and talk to your classmates!
         -1,//595 
-        -1,//596 POPUP
+        -1,
         -1,
         -1,
         -1,
@@ -8023,15 +8166,15 @@ function Chapter()
         -1,//605 
         -1,
         -1,
-        -1,
+        -1,//608 POPUP
         -1,
         -1,//610 
-        -1,
+        -1,//611 Objective Complete: Go to Classroom 2
         -1,
         -1,
         -1,
         -1,//615 
-        -1,//616 player clicks on the episode’s outfit.
+        -1,
         -1,
         -1,
         -1,
@@ -8045,12 +8188,12 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,//630 
+        -1,//630 player clicks on the episode’s outfit.
         -1,
         -1,
         -1,
         -1,
-        -1,//635 
+        -1,//635 Objective Complete:  Go to your dorm and prepare for the party!
         -1,
         -1,
         -1,
@@ -8064,7 +8207,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        670,
+        -1,
         -1,//650 
         -1,
         -1,
@@ -8080,7 +8223,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,//665 
+        686,//665 
         -1,
         -1,
         -1,
@@ -8088,7 +8231,7 @@ function Chapter()
         -1,//670 
         -1,
         -1,
-        -1,//673 GHOST SLIDE
+        -1,
         -1,
         -1,//675 
         -1,
@@ -8104,7 +8247,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,
+        -1,//689 GHOST SLIDE
         -1,//690 
         -1,
         -1,
@@ -8171,7 +8314,7 @@ function Chapter()
         -1,
         -1,
         -1,//755 
-        -1,//756 POPUP
+        -1,
         -1,
         -1,
         -1,
@@ -8184,10 +8327,10 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,//769 POPUP
+        -1,
         -1,//770 
         -1,
-        -1,
+        -1,//772 POPUP
         -1,
         -1,
         -1,//775 
@@ -8198,12 +8341,12 @@ function Chapter()
         -1,//780 
         -1,
         -1,
-        -1,//783 POPUP
-        -1,
-        -1,//785 
         -1,
         -1,
-        -1,//788 Different Dorm…
+        -1,//785 POPUP
+        -1,
+        -1,
+        -1,
         -1,
         -1,//790 
         -1,
@@ -8214,12 +8357,12 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,
+        -1,//799 POPUP
         -1,//800 
         -1,
         -1,
         -1,
-        -1,
+        -1,//804 Different Dorm…
         -1,//805 
         -1,
         -1,
@@ -8231,6 +8374,22 @@ function Chapter()
         -1,
         -1,
         -1,//815 
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,//820 
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,//825 
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,//830 
+        -1,
         -1,
         -1,
         ];
@@ -8262,8 +8421,8 @@ function Chapter()
         -1,
         -1,
         -1,//25 
-        27,
         -1,
+        27,
         -1,
         -1,
         -1,//30 
@@ -8272,7 +8431,7 @@ function Chapter()
         -1,
         -1,
         -1,//35 
-        -1,
+        -1,//36 Objective Complete: Get some breakfast at the Cafeteria! 
         -1,
         -1,
         -1,
@@ -8280,7 +8439,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,
+        -1,//44 Objective Complete: Follow Axel and go back to the Main Hallway! 
         -1,//45 
         -1,
         -1,
@@ -8292,12 +8451,12 @@ function Chapter()
         -1,
         -1,
         -1,//55 
-        57,
+        -1,
         -1,
         -1,
         -1,
         -1,//60 
-        -1,
+        62,
         -1,
         -1,
         -1,
@@ -8327,12 +8486,12 @@ function Chapter()
         -1,
         -1,
         -1,//90 
-        -1,//91 TODO: Special Background Required
+        -1,
         -1,
         -1,
         -1,
         -1,//95 
-        -1,
+        -1,//96 TODO: Special Background Required
         -1,
         -1,
         -1,
@@ -8343,13 +8502,13 @@ function Chapter()
         -1,
         -1,//105 
         -1,
-        -1,//107 TODO: Objectives
+        -1,
         -1,
         -1,
         -1,//110 
         -1,
-        -1,
-        -1,
+        -1,//112 TODO: Objectives
+        -1,//113 Objective Complete: Quick! Get into Classroom 1!  
         -1,
         -1,//115 
         -1,
@@ -8365,7 +8524,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        130,
+        -1,
         -1,//130 
         -1,
         -1,
@@ -8373,14 +8532,14 @@ function Chapter()
         -1,
         -1,//135 
         -1,
-        -1,
+        138,
         -1,
         -1,
         -1,//140 
         -1,
         -1,
         -1,
-        145,
+        -1,
         -1,//145 
         -1,
         -1,
@@ -8388,7 +8547,7 @@ function Chapter()
         -1,
         -1,//150 
         -1,
-        -1,
+        153,
         -1,
         -1,
         -1,//155 
@@ -8397,7 +8556,7 @@ function Chapter()
         -1,
         -1,
         -1,//160 
-        162,
+        -1,
         -1,
         -1,
         -1,
@@ -8405,7 +8564,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,
+        170,
         -1,//170 
         -1,
         -1,
@@ -8418,7 +8577,7 @@ function Chapter()
         -1,
         -1,//180 
         -1,
-        183,
+        -1,
         -1,
         -1,
         -1,//185 
@@ -8426,7 +8585,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,//190 
+        191,//190 
         -1,
         -1,
         -1,
@@ -8434,20 +8593,20 @@ function Chapter()
         -1,//195 
         -1,
         -1,
-        199,
+        -1,
         -1,
         -1,//200 
         -1,
         -1,
-        204,
+        -1,
         -1,
         -1,//205 
-        -1,
+        207,
         -1,
         -1,
         -1,
         -1,//210 
-        -1,
+        212,
         -1,
         -1,
         -1,
@@ -8461,7 +8620,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        226,//225 
+        -1,//225 
         -1,
         -1,
         -1,
@@ -8469,7 +8628,7 @@ function Chapter()
         -1,//230 
         -1,
         -1,
-        -1,
+        234,
         -1,
         -1,//235 
         -1,
@@ -8509,26 +8668,26 @@ function Chapter()
         -1,//270 
         -1,
         -1,
-        274,
+        -1,
         -1,
         -1,//275 
         -1,
         -1,
-        279,
+        -1,
         -1,
         -1,//280 
+        282,
         -1,
         -1,
         -1,
-        285,
         -1,//285 
-        -1,
+        287,
         -1,
         -1,
         -1,
         -1,//290 
         -1,
-        -1,
+        293,
         -1,
         -1,
         -1,//295 
@@ -8539,22 +8698,22 @@ function Chapter()
         -1,//300 
         -1,
         -1,
-        304,
+        -1,
         -1,
         -1,//305 
         -1,
         -1,
         -1,
         -1,
-        311,//310 
-        -1,
+        -1,//310 
+        312,
         -1,
         -1,
         -1,
         -1,//315 
         -1,
         -1,
-        -1,
+        319,
         -1,
         -1,//320 
         -1,
@@ -8574,7 +8733,7 @@ function Chapter()
         -1,//335 
         -1,
         -1,
-        339,
+        -1,
         -1,
         -1,//340 
         -1,
@@ -8582,7 +8741,7 @@ function Chapter()
         -1,
         -1,
         -1,//345 
-        -1,
+        347,
         -1,
         -1,
         -1,
@@ -8614,7 +8773,7 @@ function Chapter()
         -1,//375 
         -1,
         -1,
-        379,
+        -1,
         -1,
         -1,//380 
         -1,
@@ -8622,7 +8781,7 @@ function Chapter()
         -1,
         -1,
         -1,//385 
-        -1,
+        387,
         -1,
         -1,
         -1,
@@ -8635,7 +8794,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        1,
+        -1,
         -1,//400 
         -1,
         -1,
@@ -8643,7 +8802,7 @@ function Chapter()
         -1,
         -1,//405 
         -1,
-        -1,
+        1,
         -1,
         -1,
         -1,//410 
@@ -8670,7 +8829,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        435,
+        -1,
         -1,//435 
         -1,
         -1,
@@ -8679,12 +8838,12 @@ function Chapter()
         -1,//440 
         -1,
         -1,
-        -1,
+        444,
         -1,
         -1,//445 
         -1,
         -1,
-        449,
+        -1,
         -1,
         -1,//450 
         -1,
@@ -8693,7 +8852,7 @@ function Chapter()
         -1,
         -1,//455 
         -1,
-        -1,
+        458,
         -1,
         -1,
         -1,//460 
@@ -8719,7 +8878,7 @@ function Chapter()
         -1,//480 
         -1,
         -1,
-        -1,//483 Special Background
+        -1,
         -1,
         -1,//485 
         -1,
@@ -8728,13 +8887,13 @@ function Chapter()
         -1,
         -1,//490 
         -1,
-        -1,
+        -1,//492 Special Background
         -1,
         -1,
         -1,//495 
         -1,
         -1,
-        499,
+        -1,
         -1,
         -1,//500 
         -1,
@@ -8743,7 +8902,7 @@ function Chapter()
         -1,
         -1,//505 
         -1,
-        -1,
+        508,
         -1,
         -1,
         -1,//510 
@@ -8815,7 +8974,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,//579 Special Background
+        -1,
         -1,//580 
         -1,
         -1,
@@ -8824,15 +8983,15 @@ function Chapter()
         -1,//585 
         -1,
         -1,
-        -1,
+        -1,//588 Special Background
         -1,
         -1,//590 
         -1,
         -1,
-        -1,
-        -1,
+        -1,//593 Try to find Axel!
+        -1,//594 Explore the school and talk to your classmates!
         -1,//595 
-        -1,//596 POPUP
+        -1,
         -1,
         -1,
         -1,
@@ -8844,15 +9003,15 @@ function Chapter()
         -1,//605 
         -1,
         -1,
-        -1,
+        -1,//608 POPUP
         -1,
         -1,//610 
-        -1,
+        -1,//611 Objective Complete: Go to Classroom 2
         -1,
         -1,
         -1,
         -1,//615 
-        -1,//616 player clicks on the episode’s outfit.
+        -1,
         -1,
         -1,
         -1,
@@ -8866,12 +9025,12 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,//630 
+        -1,//630 player clicks on the episode’s outfit.
         -1,
         -1,
         -1,
         -1,
-        -1,//635 
+        -1,//635 Objective Complete:  Go to your dorm and prepare for the party!
         -1,
         -1,
         -1,
@@ -8886,7 +9045,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        651,//650 
+        -1,//650 
         -1,
         -1,
         -1,
@@ -8902,14 +9061,14 @@ function Chapter()
         -1,
         -1,
         -1,//665 
+        667,
         -1,
         -1,
         -1,
+        -1,//670 
         -1,
-        671,//670 
         -1,
         -1,
-        -1,//673 GHOST SLIDE
         -1,
         -1,//675 
         -1,
@@ -8922,10 +9081,10 @@ function Chapter()
         -1,
         -1,
         -1,//685 
+        687,
         -1,
         -1,
-        -1,
-        -1,
+        -1,//689 GHOST SLIDE
         -1,//690 
         -1,
         -1,
@@ -8984,7 +9143,7 @@ function Chapter()
         -1,//745 
         -1,
         -1,
-        749,
+        -1,
         -1,
         -1,//750 
         -1,
@@ -8992,7 +9151,7 @@ function Chapter()
         -1,
         -1,
         -1,//755 
-        -1,//756 POPUP
+        -1,
         -1,
         -1,
         -1,
@@ -9000,15 +9159,15 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,
+        765,
         -1,//765 
         -1,
         -1,
         -1,
-        -1,//769 POPUP
+        -1,
         -1,//770 
         -1,
-        -1,
+        -1,//772 POPUP
         -1,
         -1,
         -1,//775 
@@ -9019,13 +9178,13 @@ function Chapter()
         -1,//780 
         -1,
         -1,
-        -1,//783 POPUP
-        -1,
-        -1,//785 
         -1,
         -1,
-        -1,//788 Different Dorm…
-        1,
+        -1,//785 POPUP
+        -1,
+        -1,
+        -1,
+        -1,
         -1,//790 
         -1,
         -1,
@@ -9035,13 +9194,13 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,
+        -1,//799 POPUP
         -1,//800 
         -1,
         -1,
         -1,
-        -1,
-        -1,//805 
+        -1,//804 Different Dorm…
+        1,//805 
         -1,
         -1,
         -1,
@@ -9052,6 +9211,22 @@ function Chapter()
         -1,
         -1,
         -1,//815 
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,//820 
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,//825 
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,//830 
+        -1,
         -1,
         -1,
         ];
@@ -9083,8 +9258,8 @@ function Chapter()
         -1,
         -1,
         -1,//25 
-        28,
         -1,
+        28,
         -1,
         -1,
         -1,//30 
@@ -9093,7 +9268,7 @@ function Chapter()
         -1,
         -1,
         -1,//35 
-        -1,
+        -1,//36 Objective Complete: Get some breakfast at the Cafeteria! 
         -1,
         -1,
         -1,
@@ -9101,7 +9276,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,
+        -1,//44 Objective Complete: Follow Axel and go back to the Main Hallway! 
         -1,//45 
         -1,
         -1,
@@ -9113,12 +9288,12 @@ function Chapter()
         -1,
         -1,
         -1,//55 
-        59,
+        -1,
         -1,
         -1,
         -1,
         -1,//60 
-        -1,
+        64,
         -1,
         -1,
         -1,
@@ -9148,12 +9323,12 @@ function Chapter()
         -1,
         -1,
         -1,//90 
-        -1,//91 TODO: Special Background Required
+        -1,
         -1,
         -1,
         -1,
         -1,//95 
-        -1,
+        -1,//96 TODO: Special Background Required
         -1,
         -1,
         -1,
@@ -9164,13 +9339,13 @@ function Chapter()
         -1,
         -1,//105 
         -1,
-        -1,//107 TODO: Objectives
+        -1,
         -1,
         -1,
         -1,//110 
         -1,
-        -1,
-        -1,
+        -1,//112 TODO: Objectives
+        -1,//113 Objective Complete: Quick! Get into Classroom 1!  
         -1,
         -1,//115 
         -1,
@@ -9186,7 +9361,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        133,
+        -1,
         -1,//130 
         -1,
         -1,
@@ -9194,14 +9369,14 @@ function Chapter()
         -1,
         -1,//135 
         -1,
-        -1,
+        141,
         -1,
         -1,
         -1,//140 
         -1,
         -1,
         -1,
-        148,
+        -1,
         -1,//145 
         -1,
         -1,
@@ -9209,7 +9384,7 @@ function Chapter()
         -1,
         -1,//150 
         -1,
-        -1,
+        156,
         -1,
         -1,
         -1,//155 
@@ -9218,7 +9393,7 @@ function Chapter()
         -1,
         -1,
         -1,//160 
-        166,
+        -1,
         -1,
         -1,
         -1,
@@ -9226,7 +9401,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,
+        174,
         -1,//170 
         -1,
         -1,
@@ -9239,7 +9414,7 @@ function Chapter()
         -1,
         -1,//180 
         -1,
-        187,
+        -1,
         -1,
         -1,
         -1,//185 
@@ -9247,7 +9422,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,//190 
+        195,//190 
         -1,
         -1,
         -1,
@@ -9255,20 +9430,20 @@ function Chapter()
         -1,//195 
         -1,
         -1,
-        200,
+        -1,
         -1,
         -1,//200 
         -1,
         -1,
-        205,
+        -1,
         -1,
         -1,//205 
-        -1,
+        208,
         -1,
         -1,
         -1,
         -1,//210 
-        -1,
+        213,
         -1,
         -1,
         -1,
@@ -9282,7 +9457,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        240,//225 
+        -1,//225 
         -1,
         -1,
         -1,
@@ -9290,7 +9465,7 @@ function Chapter()
         -1,//230 
         -1,
         -1,
-        -1,
+        248,
         -1,
         -1,//235 
         -1,
@@ -9330,26 +9505,26 @@ function Chapter()
         -1,//270 
         -1,
         -1,
-        275,
+        -1,
         -1,
         -1,//275 
         -1,
         -1,
-        281,
+        -1,
         -1,
         -1,//280 
+        283,
         -1,
         -1,
         -1,
-        286,
         -1,//285 
-        -1,
+        289,
         -1,
         -1,
         -1,
         -1,//290 
         -1,
-        -1,
+        294,
         -1,
         -1,
         -1,//295 
@@ -9360,22 +9535,22 @@ function Chapter()
         -1,//300 
         -1,
         -1,
-        305,
+        -1,
         -1,
         -1,//305 
         -1,
         -1,
         -1,
         -1,
-        315,//310 
-        -1,
+        -1,//310 
+        313,
         -1,
         -1,
         -1,
         -1,//315 
         -1,
         -1,
-        -1,
+        323,
         -1,
         -1,//320 
         -1,
@@ -9395,7 +9570,7 @@ function Chapter()
         -1,//335 
         -1,
         -1,
-        344,
+        -1,
         -1,
         -1,//340 
         -1,
@@ -9403,7 +9578,7 @@ function Chapter()
         -1,
         -1,
         -1,//345 
-        -1,
+        352,
         -1,
         -1,
         -1,
@@ -9435,7 +9610,7 @@ function Chapter()
         -1,//375 
         -1,
         -1,
-        385,
+        -1,
         -1,
         -1,//380 
         -1,
@@ -9443,7 +9618,7 @@ function Chapter()
         -1,
         -1,
         -1,//385 
-        -1,
+        393,
         -1,
         -1,
         -1,
@@ -9491,7 +9666,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        442,
+        -1,
         -1,//435 
         -1,
         -1,
@@ -9500,12 +9675,12 @@ function Chapter()
         -1,//440 
         -1,
         -1,
-        -1,
+        451,
         -1,
         -1,//445 
         -1,
         -1,
-        458,
+        -1,
         -1,
         -1,//450 
         -1,
@@ -9514,7 +9689,7 @@ function Chapter()
         -1,
         -1,//455 
         -1,
-        -1,
+        467,
         -1,
         -1,
         -1,//460 
@@ -9540,7 +9715,7 @@ function Chapter()
         -1,//480 
         -1,
         -1,
-        -1,//483 Special Background
+        -1,
         -1,
         -1,//485 
         -1,
@@ -9549,13 +9724,13 @@ function Chapter()
         -1,
         -1,//490 
         -1,
-        -1,
+        -1,//492 Special Background
         -1,
         -1,
         -1,//495 
         -1,
         -1,
-        526,
+        -1,
         -1,
         -1,//500 
         -1,
@@ -9564,7 +9739,7 @@ function Chapter()
         -1,
         -1,//505 
         -1,
-        -1,
+        535,
         -1,
         -1,
         -1,//510 
@@ -9636,7 +9811,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,//579 Special Background
+        -1,
         -1,//580 
         -1,
         -1,
@@ -9645,15 +9820,15 @@ function Chapter()
         -1,//585 
         -1,
         -1,
-        -1,
+        -1,//588 Special Background
         -1,
         -1,//590 
         -1,
         -1,
-        -1,
-        -1,
+        -1,//593 Try to find Axel!
+        -1,//594 Explore the school and talk to your classmates!
         -1,//595 
-        -1,//596 POPUP
+        -1,
         -1,
         -1,
         -1,
@@ -9665,15 +9840,15 @@ function Chapter()
         -1,//605 
         -1,
         -1,
-        -1,
+        -1,//608 POPUP
         -1,
         -1,//610 
-        -1,
+        -1,//611 Objective Complete: Go to Classroom 2
         -1,
         -1,
         -1,
         -1,//615 
-        -1,//616 player clicks on the episode’s outfit.
+        -1,
         -1,
         -1,
         -1,
@@ -9687,12 +9862,12 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,//630 
+        -1,//630 player clicks on the episode’s outfit.
         -1,
         -1,
         -1,
         -1,
-        -1,//635 
+        -1,//635 Objective Complete:  Go to your dorm and prepare for the party!
         -1,
         -1,
         -1,
@@ -9707,7 +9882,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        663,//650 
+        -1,//650 
         -1,
         -1,
         -1,
@@ -9723,14 +9898,14 @@ function Chapter()
         -1,
         -1,
         -1,//665 
+        679,
         -1,
         -1,
         -1,
+        -1,//670 
         -1,
-        673,//670 
         -1,
         -1,
-        -1,//673 GHOST SLIDE
         -1,
         -1,//675 
         -1,
@@ -9743,10 +9918,10 @@ function Chapter()
         -1,
         -1,
         -1,//685 
+        689,
         -1,
         -1,
-        -1,
-        -1,
+        -1,//689 GHOST SLIDE
         -1,//690 
         -1,
         -1,
@@ -9805,7 +9980,7 @@ function Chapter()
         -1,//745 
         -1,
         -1,
-        765,
+        -1,
         -1,
         -1,//750 
         -1,
@@ -9813,7 +9988,7 @@ function Chapter()
         -1,
         -1,
         -1,//755 
-        -1,//756 POPUP
+        -1,
         -1,
         -1,
         -1,
@@ -9821,15 +9996,15 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,
+        781,
         -1,//765 
         -1,
         -1,
         -1,
-        -1,//769 POPUP
+        -1,
         -1,//770 
         -1,
-        -1,
+        -1,//772 POPUP
         -1,
         -1,
         -1,//775 
@@ -9840,12 +10015,12 @@ function Chapter()
         -1,//780 
         -1,
         -1,
-        -1,//783 POPUP
-        -1,
-        -1,//785 
         -1,
         -1,
-        -1,//788 Different Dorm…
+        -1,//785 POPUP
+        -1,
+        -1,
+        -1,
         -1,
         -1,//790 
         -1,
@@ -9856,12 +10031,12 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,
+        -1,//799 POPUP
         -1,//800 
         -1,
         -1,
         -1,
-        -1,
+        -1,//804 Different Dorm…
         -1,//805 
         -1,
         -1,
@@ -9873,6 +10048,22 @@ function Chapter()
         -1,
         -1,
         -1,//815 
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,//820 
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,//825 
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,//830 
+        -1,
         -1,
         -1,
         ];
@@ -9904,8 +10095,8 @@ function Chapter()
         -1,
         -1,
         -1,//25 
-        33,
         -1,
+        33,
         -1,
         -1,
         -1,//30 
@@ -9914,7 +10105,7 @@ function Chapter()
         -1,
         -1,
         -1,//35 
-        -1,
+        -1,//36 Objective Complete: Get some breakfast at the Cafeteria! 
         -1,
         -1,
         -1,
@@ -9922,7 +10113,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,
+        -1,//44 Objective Complete: Follow Axel and go back to the Main Hallway! 
         -1,//45 
         -1,
         -1,
@@ -9934,12 +10125,12 @@ function Chapter()
         -1,
         -1,
         -1,//55 
-        61,
+        -1,
         -1,
         -1,
         -1,
         -1,//60 
-        -1,
+        66,
         -1,
         -1,
         -1,
@@ -9969,12 +10160,12 @@ function Chapter()
         -1,
         -1,
         -1,//90 
-        -1,//91 TODO: Special Background Required
+        -1,
         -1,
         -1,
         -1,
         -1,//95 
-        -1,
+        -1,//96 TODO: Special Background Required
         -1,
         -1,
         -1,
@@ -9985,13 +10176,13 @@ function Chapter()
         -1,
         -1,//105 
         -1,
-        -1,//107 TODO: Objectives
+        -1,
         -1,
         -1,
         -1,//110 
         -1,
-        -1,
-        -1,
+        -1,//112 TODO: Objectives
+        -1,//113 Objective Complete: Quick! Get into Classroom 1!  
         -1,
         -1,//115 
         -1,
@@ -10007,7 +10198,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        137,
+        -1,
         -1,//130 
         -1,
         -1,
@@ -10015,14 +10206,14 @@ function Chapter()
         -1,
         -1,//135 
         -1,
-        -1,
+        145,
         -1,
         -1,
         -1,//140 
         -1,
         -1,
         -1,
-        150,
+        -1,
         -1,//145 
         -1,
         -1,
@@ -10030,7 +10221,7 @@ function Chapter()
         -1,
         -1,//150 
         -1,
-        -1,
+        158,
         -1,
         -1,
         -1,//155 
@@ -10039,7 +10230,7 @@ function Chapter()
         -1,
         -1,
         -1,//160 
-        168,
+        -1,
         -1,
         -1,
         -1,
@@ -10047,7 +10238,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,
+        176,
         -1,//170 
         -1,
         -1,
@@ -10060,7 +10251,7 @@ function Chapter()
         -1,
         -1,//180 
         -1,
-        190,
+        -1,
         -1,
         -1,
         -1,//185 
@@ -10068,7 +10259,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,//190 
+        198,//190 
         -1,
         -1,
         -1,
@@ -10076,20 +10267,20 @@ function Chapter()
         -1,//195 
         -1,
         -1,
-        201,
+        -1,
         -1,
         -1,//200 
         -1,
         -1,
-        212,
+        -1,
         -1,
         -1,//205 
-        -1,
+        209,
         -1,
         -1,
         -1,
         -1,//210 
-        -1,
+        220,
         -1,
         -1,
         -1,
@@ -10162,7 +10353,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        288,
+        -1,
         -1,//285 
         -1,
         -1,
@@ -10170,7 +10361,7 @@ function Chapter()
         -1,
         -1,//290 
         -1,
-        -1,
+        296,
         -1,
         -1,
         -1,//295 
@@ -10181,7 +10372,7 @@ function Chapter()
         -1,//300 
         -1,
         -1,
-        306,
+        -1,
         -1,
         -1,//305 
         -1,
@@ -10189,7 +10380,7 @@ function Chapter()
         -1,
         -1,
         -1,//310 
-        -1,
+        314,
         -1,
         -1,
         -1,
@@ -10256,7 +10447,7 @@ function Chapter()
         -1,//375 
         -1,
         -1,
-        390,
+        -1,
         -1,
         -1,//380 
         -1,
@@ -10264,7 +10455,7 @@ function Chapter()
         -1,
         -1,
         -1,//385 
-        -1,
+        398,
         -1,
         -1,
         -1,
@@ -10312,7 +10503,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        445,
+        -1,
         -1,//435 
         -1,
         -1,
@@ -10321,12 +10512,12 @@ function Chapter()
         -1,//440 
         -1,
         -1,
-        -1,
+        454,
         -1,
         -1,//445 
         -1,
         -1,
-        460,
+        -1,
         -1,
         -1,//450 
         -1,
@@ -10335,7 +10526,7 @@ function Chapter()
         -1,
         -1,//455 
         -1,
-        -1,
+        469,
         -1,
         -1,
         -1,//460 
@@ -10361,7 +10552,7 @@ function Chapter()
         -1,//480 
         -1,
         -1,
-        -1,//483 Special Background
+        -1,
         -1,
         -1,//485 
         -1,
@@ -10370,13 +10561,13 @@ function Chapter()
         -1,
         -1,//490 
         -1,
-        -1,
+        -1,//492 Special Background
         -1,
         -1,
         -1,//495 
         -1,
         -1,
-        555,
+        -1,
         -1,
         -1,//500 
         -1,
@@ -10385,7 +10576,7 @@ function Chapter()
         -1,
         -1,//505 
         -1,
-        -1,
+        564,
         -1,
         -1,
         -1,//510 
@@ -10457,7 +10648,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,//579 Special Background
+        -1,
         -1,//580 
         -1,
         -1,
@@ -10466,15 +10657,15 @@ function Chapter()
         -1,//585 
         -1,
         -1,
-        -1,
+        -1,//588 Special Background
         -1,
         -1,//590 
         -1,
         -1,
-        -1,
-        -1,
+        -1,//593 Try to find Axel!
+        -1,//594 Explore the school and talk to your classmates!
         -1,//595 
-        -1,//596 POPUP
+        -1,
         -1,
         -1,
         -1,
@@ -10486,15 +10677,15 @@ function Chapter()
         -1,//605 
         -1,
         -1,
-        -1,
+        -1,//608 POPUP
         -1,
         -1,//610 
-        -1,
+        -1,//611 Objective Complete: Go to Classroom 2
         -1,
         -1,
         -1,
         -1,//615 
-        -1,//616 player clicks on the episode’s outfit.
+        -1,
         -1,
         -1,
         -1,
@@ -10508,12 +10699,12 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,//630 
+        -1,//630 player clicks on the episode’s outfit.
         -1,
         -1,
         -1,
         -1,
-        -1,//635 
+        -1,//635 Objective Complete:  Go to your dorm and prepare for the party!
         -1,
         -1,
         -1,
@@ -10528,7 +10719,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        666,//650 
+        -1,//650 
         -1,
         -1,
         -1,
@@ -10544,14 +10735,14 @@ function Chapter()
         -1,
         -1,
         -1,//665 
+        682,
         -1,
         -1,
         -1,
+        -1,//670 
         -1,
-        687,//670 
         -1,
         -1,
-        -1,//673 GHOST SLIDE
         -1,
         -1,//675 
         -1,
@@ -10564,10 +10755,10 @@ function Chapter()
         -1,
         -1,
         -1,//685 
+        703,
         -1,
         -1,
-        -1,
-        -1,
+        -1,//689 GHOST SLIDE
         -1,//690 
         -1,
         -1,
@@ -10634,7 +10825,7 @@ function Chapter()
         -1,
         -1,
         -1,//755 
-        -1,//756 POPUP
+        -1,
         -1,
         -1,
         -1,
@@ -10647,10 +10838,10 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,//769 POPUP
+        -1,
         -1,//770 
         -1,
-        -1,
+        -1,//772 POPUP
         -1,
         -1,
         -1,//775 
@@ -10661,12 +10852,12 @@ function Chapter()
         -1,//780 
         -1,
         -1,
-        -1,//783 POPUP
-        -1,
-        -1,//785 
         -1,
         -1,
-        -1,//788 Different Dorm…
+        -1,//785 POPUP
+        -1,
+        -1,
+        -1,
         -1,
         -1,//790 
         -1,
@@ -10677,12 +10868,12 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,
+        -1,//799 POPUP
         -1,//800 
         -1,
         -1,
         -1,
-        -1,
+        -1,//804 Different Dorm…
         -1,//805 
         -1,
         -1,
@@ -10694,6 +10885,22 @@ function Chapter()
         -1,
         -1,
         -1,//815 
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,//820 
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,//825 
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,//830 
+        -1,
         -1,
         -1,
         ];
@@ -10709,7 +10916,7 @@ function Chapter()
         "null",
         "null",//8 POPUP
         "null",
-        "New Objective: Get some breakfast at the Cafeteria!",//10 
+        "Get some breakfast at the Cafeteria!",//10 
         "null",
         "null",
         "null",
@@ -10725,8 +10932,8 @@ function Chapter()
         "null",
         "null",
         "null",//25 
-        "I’ll pass, thank you. Let’s get moving, I’m " + user.scholarname + " by the way.",
         "null",
+        "I’ll pass, thank you. Let’s get moving, I’m " + user.scholarname + " by the way.",
         "null",
         "null",
         "null",//30 
@@ -10734,17 +10941,17 @@ function Chapter()
         "null",
         "null",
         "null",
-        "Objective Complete: Get some breakfast at the Cafeteria! ",//35 
-        "null",
-        "null",
+        "null",//35 
+        "null",//36 Objective Complete: Get some breakfast at the Cafeteria! 
+        "Follow Axel and go back to the Main Hallway!",
         "null",
         "null",
         "null",//40 
-        "Objective Complete: Follow Axel and go back to the Main Hallway! ",
         "null",
         "null",
         "null",
-        "null",//45 
+        "null",//44 Objective Complete: Follow Axel and go back to the Main Hallway! 
+        "Quick! Get into Classroom 1!",//45 
         "null",
         "null",
         "null",
@@ -10755,12 +10962,12 @@ function Chapter()
         "null",
         "null",
         "null",//55 
-        "I had my schedule ready and I was sure I set my alarm yesterday!",
+        "null",
         "null",
         "null",
         "null",
         "null",//60 
-        "null",
+        "I had my schedule ready and I was sure I set my alarm yesterday!",
         "null",
         "null",
         "null",
@@ -10790,12 +10997,12 @@ function Chapter()
         "null",
         "null",
         "null",//90 
-        "null",//91 TODO: Special Background Required
+        "null",
         "null",
         "null",
         "null",
         "null",//95 
-        "null",
+        "null",//96 TODO: Special Background Required
         "null",
         "null",
         "null",
@@ -10806,15 +11013,15 @@ function Chapter()
         "null",
         "null",//105 
         "null",
-        "Objective Complete: Quick! Get into Classroom 1!  ",//107 TODO: Objectives
-        "New Objective: Explore the school and talk to your classmates!",
+        "null",
+        "null",
         "null",
         "null",//110 
         "null",
-        "null",
-        "null",
-        "null",
-        "null",//115 
+        "null",//112 TODO: Objectives
+        "null",//113 Objective Complete: Quick! Get into Classroom 1!  
+        "Try to find Axel!",
+        "Explore the school and talk to your classmates!",//115 
         "null",
         "null",
         "null",
@@ -10828,7 +11035,7 @@ function Chapter()
         "null",
         "null",
         "null",
-        "(cool video game name here) ?! Do you think I can join you guys?",
+        "null",
         "null",//130 
         "null",
         "null",
@@ -10836,14 +11043,14 @@ function Chapter()
         "null",
         "null",//135 
         "null",
-        "null",
+        "<em>Fortday</em> ?! Do you think I can join you guys?",
         "null",
         "null",
         "null",//140 
         "null",
         "null",
         "null",
-        "(cool video game name here)?! Hey Tegan, if Tyler goes to the party, do you think we could play together?",
+        "null",
         "null",//145 
         "null",
         "null",
@@ -10851,7 +11058,7 @@ function Chapter()
         "null",
         "null",//150 
         "null",
-        "null",
+        "<em>Fortday</em>?! Hey Tegan, if Tyler goes to the party, do you think we could play together?",
         "null",
         "null",
         "null",//155 
@@ -10860,7 +11067,7 @@ function Chapter()
         "null",
         "null",
         "null",//160 
-        "I think you should do it today.",
+        "null",
         "null",
         "null",
         "null",
@@ -10868,7 +11075,7 @@ function Chapter()
         "null",
         "null",
         "null",
-        "null",
+        "I think you should do it today.",
         "null",//170 
         "null",
         "null",
@@ -10881,7 +11088,7 @@ function Chapter()
         "null",
         "null",//180 
         "null",
-        "The Olympics?",
+        "null",
         "null",
         "null",
         "null",//185 
@@ -10889,7 +11096,7 @@ function Chapter()
         "null",
         "null",
         "null",
-        "null",//190 
+        "The Olympics?",//190 
         "null",
         "null",
         "null",
@@ -10897,20 +11104,20 @@ function Chapter()
         "null",//195 
         "null",
         "null",
-        "F-Five? Sounds like you were never bored!",
+        "null",
         "null",
         "null",//200 
         "null",
         "null",
-        "F-Five? Sounds like you were never bored!",
+        "null",
         "null",
         "null",//205 
-        "null",
+        "F-Five? Sounds like you were never bored!",
         "null",
         "null",
         "null",
         "null",//210 
-        "null",
+        "F-Five? Sounds like you were never bored!",
         "null",
         "null",
         "null",
@@ -10924,7 +11131,7 @@ function Chapter()
         "null",
         "null",
         "null",
-        "(Tell the truth.)",//225 
+        "null",//225 
         "null",
         "null",
         "null",
@@ -10932,7 +11139,7 @@ function Chapter()
         "null",//230 
         "null",
         "null",
-        "null",
+        "(Tell the truth.)",
         "null",
         "null",//235 
         "null",
@@ -10972,26 +11179,26 @@ function Chapter()
         "null",//270 
         "null",
         "null",
-        "I’m really glad! I hope I make more friends like you here.",
+        "null",
         "null",
         "null",//275 
         "null",
         "null",
-        "I’m really glad you aren’t like that, you seem really cool!",
+        "null",
         "null",
         "null",//280 
+        "I’m really glad! I hope I make more friends like you here.",
         "null",
         "null",
         "null",
-        "I’ll think about it.",
         "null",//285 
-        "null",
+        "I’m really glad you aren’t like that, you seem really cool!",
         "null",
         "null",
         "null",
         "null",//290 
         "null",
-        "null",
+        "I’ll think about it.",
         "null",
         "null",
         "null",//295 
@@ -11002,22 +11209,22 @@ function Chapter()
         "null",//300 
         "null",
         "null",
-        "It’s alright, I adapt!",
+        "null",
         "null",
         "null",//305 
         "null",
         "null",
         "null",
         "null",
-        "Well, I was wondering, why were you so interested in the school’s medical herbs yesterday?",//310 
-        "null",
+        "null",//310 
+        "It’s alright, I adapt!",
         "null",
         "null",
         "null",
         "null",//315 
         "null",
         "null",
-        "null",
+        "Well, I was wondering, why were you so interested in the school’s medical herbs yesterday?",
         "null",
         "null",//320 
         "null",
@@ -11037,7 +11244,7 @@ function Chapter()
         "null",//335 
         "null",
         "null",
-        "(Still, I didn’t want to let myself be intimidated by her.)",
+        "null",
         "null",
         "null",//340 
         "null",
@@ -11045,7 +11252,7 @@ function Chapter()
         "null",
         "null",
         "null",//345 
-        "null",
+        "(Still, I didn’t want to let myself be intimidated by her.)",
         "null",
         "null",
         "null",
@@ -11077,7 +11284,7 @@ function Chapter()
         "null",//375 
         "null",
         "null",
-        "For how long has she been acting like this?",
+        "null",
         "null",
         "null",//380 
         "null",
@@ -11085,7 +11292,7 @@ function Chapter()
         "null",
         "null",
         "null",//385 
-        "null",
+        "For how long has she been acting like this?",
         "null",
         "null",
         "null",
@@ -11133,7 +11340,7 @@ function Chapter()
         "null",
         "null",
         "null",
-        "Can you build me a robot that can do my homework, instead?",
+        "null",
         "null",//435 
         "null",
         "null",
@@ -11142,12 +11349,12 @@ function Chapter()
         "null",//440 
         "null",
         "null",
-        "null",
+        "Can you build me a robot that can do my homework, instead?",
         "null",
         "null",//445 
         "null",
         "null",
-        "How much do I have to pay you for a robot that can do my homework?",
+        "null",
         "null",
         "null",//450 
         "null",
@@ -11156,7 +11363,7 @@ function Chapter()
         "null",
         "null",//455 
         "null",
-        "null",
+        "How much do I have to pay you for a robot that can do my homework?",
         "null",
         "null",
         "null",//460 
@@ -11182,7 +11389,7 @@ function Chapter()
         "null",//480 
         "null",
         "null",
-        "null",//483 Special Background
+        "null",
         "null",
         "null",//485 
         "null",
@@ -11191,13 +11398,13 @@ function Chapter()
         "null",
         "null",//490 
         "null",
-        "null",
+        "null",//492 Special Background
         "null",
         "null",
         "null",//495 
         "null",
         "null",
-        "(I’m going to help Tadashi)",
+        "null",
         "null",
         "null",//500 
         "null",
@@ -11206,7 +11413,7 @@ function Chapter()
         "null",
         "null",//505 
         "null",
-        "null",
+        "(I’m going to help Tadashi)",
         "null",
         "null",
         "null",//510 
@@ -11278,7 +11485,7 @@ function Chapter()
         "null",
         "null",
         "null",
-        "null",//579 Special Background
+        "null",
         "null",//580 
         "null",
         "null",
@@ -11287,18 +11494,18 @@ function Chapter()
         "null",//585 
         "null",
         "null",
-        "null",
+        "null",//588 Special Background
         "null",
         "null",//590 
         "null",
-        "null",
-        "null",
-        "null",
+        "Go to Classroom 2",
+        "null",//593 Try to find Axel!
+        "null",//594 Explore the school and talk to your classmates!
         "null",//595 
-        "null",//596 POPUP
         "null",
         "null",
-        "Objective Complete: Go to Classroom 2",
+        "null",
+        "null",
         "null",//600 
         "null",
         "null",
@@ -11307,20 +11514,20 @@ function Chapter()
         "null",//605 
         "null",
         "null",
-        "null",
+        "null",//608 POPUP
         "null",
         "null",//610 
-        "null",
-        "null",
+        "null",//611 Objective Complete: Go to Classroom 2
+        "Go to your dorm and prepare for the party!",
         "null",
         "null",
         "null",//615 
-        "null",//616 player clicks on the episode’s outfit.
+        "null",
         "null",
         "null",
         "null",
         "null",//620 
-        "Objective Complete:  Go to your dorm and prepare for the party!",
+        "null",
         "null",
         "null",
         "null",
@@ -11329,13 +11536,13 @@ function Chapter()
         "null",
         "null",
         "null",
-        "null",//630 
+        "null",//630 player clicks on the episode’s outfit.
         "null",
         "null",
         "null",
         "null",
-        "null",//635 
-        "null",
+        "null",//635 Objective Complete:  Go to your dorm and prepare for the party!
+        "Go to Raquel’s Party!",
         "null",
         "null",
         "null",
@@ -11349,7 +11556,7 @@ function Chapter()
         "null",
         "null",
         "null",
-        "Weren’t you the one that was passed out on the cafeteria table this morning? I was almost worried about you!",//650 
+        "null",//650 
         "null",
         "null",
         "null",
@@ -11365,14 +11572,14 @@ function Chapter()
         "null",
         "null",
         "null",//665 
+        "Weren’t you the one that was passed out on the cafeteria table this morning? I was almost worried about you!",
         "null",
         "null",
         "null",
+        "null",//670 
         "null",
-        "I didn’t expect to see <em>you</em> here. Weren’t you passed out of exhaustion this morning?",//670 
         "null",
         "null",
-        "null",//673 GHOST SLIDE
         "null",
         "null",//675 
         "null",
@@ -11385,10 +11592,10 @@ function Chapter()
         "null",
         "null",
         "null",//685 
+        "I didn’t expect to see <em>you</em> here. Weren’t you passed out of exhaustion this morning?",
         "null",
         "null",
-        "null",
-        "null",
+        "null",//689 GHOST SLIDE
         "null",//690 
         "null",
         "null",
@@ -11447,7 +11654,7 @@ function Chapter()
         "null",//745 
         "null",
         "null",
-        "I should keep an eye on them anyway.",
+        "null",
         "null",
         "null",//750 
         "null",
@@ -11455,7 +11662,7 @@ function Chapter()
         "null",
         "null",
         "null",//755 
-        "null",//756 POPUP
+        "null",
         "null",
         "null",
         "null",
@@ -11463,15 +11670,15 @@ function Chapter()
         "null",
         "null",
         "null",
-        "null",
+        "I should keep an eye on them anyway.",
         "null",//765 
         "null",
         "null",
         "null",
-        "null",//769 POPUP
+        "null",
         "null",//770 
         "null",
-        "null",
+        "null",//772 POPUP
         "null",
         "null",
         "null",//775 
@@ -11482,12 +11689,12 @@ function Chapter()
         "null",//780 
         "null",
         "null",
-        "null",//783 POPUP
-        "null",
-        "null",//785 
         "null",
         "null",
-        "null",//788 Different Dorm…
+        "null",//785 POPUP
+        "null",
+        "null",
+        "null",
         "null",
         "null",//790 
         "null",
@@ -11498,12 +11705,12 @@ function Chapter()
         "null",
         "null",
         "null",
-        "null",
+        "null",//799 POPUP
         "null",//800 
         "null",
         "null",
         "null",
-        "null",
+        "null",//804 Different Dorm…
         "null",//805 
         "null",
         "null",
@@ -11515,6 +11722,22 @@ function Chapter()
         "null",
         "null",
         "null",//815 
+        "null",
+        "null",
+        "null",
+        "null",
+        "null",//820 
+        "null",
+        "null",
+        "null",
+        "null",
+        "null",//825 
+        "null",
+        "null",
+        "null",
+        "null",
+        "null",//830 
+        "null",
         "null",
         "null",
         ];
@@ -11546,8 +11769,8 @@ function Chapter()
         "null",
         "null",
         "null",//25 
-        "I’m " + user.scholarname + ", thank you so much! I can’t believe I’m late to class on my first day here… I feel so stupid.",
         "null",
+        "I’m " + user.scholarname + ", thank you so much! I can’t believe I’m late to class on my first day here… I feel so stupid.",
         "null",
         "null",
         "null",//30 
@@ -11555,16 +11778,16 @@ function Chapter()
         "null",
         "null",
         "null",
-        "New Objective: Follow Axel and go back to the Main Hallway! ",//35 
-        "null",
+        "null",//35 
+        "null",//36 Objective Complete: Get some breakfast at the Cafeteria! 
         "null",
         "null",
         "null",
         "null",//40 
-        "New Objective: Quick! Get into Classroom 1!",
         "null",
         "null",
         "null",
+        "null",//44 Objective Complete: Follow Axel and go back to the Main Hallway! 
         "null",//45 
         "null",
         "null",
@@ -11576,12 +11799,12 @@ function Chapter()
         "null",
         "null",
         "null",//55 
-        "I overslept.",
+        "null",
         "null",
         "null",
         "null",
         "null",//60 
-        "null",
+        "I overslept.",
         "null",
         "null",
         "null",
@@ -11611,12 +11834,12 @@ function Chapter()
         "null",
         "null",
         "null",//90 
-        "null",//91 TODO: Special Background Required
+        "null",
         "null",
         "null",
         "null",
         "null",//95 
-        "null",
+        "null",//96 TODO: Special Background Required
         "null",
         "null",
         "null",
@@ -11627,13 +11850,13 @@ function Chapter()
         "null",
         "null",//105 
         "null",
-        "New Objective: Try to find Axel!",//107 TODO: Objectives
-        "New Objective: Try to find Axel!",
+        "null",
+        "null",
         "null",
         "null",//110 
         "null",
-        "null",
-        "null",
+        "null",//112 TODO: Objectives
+        "null",//113 Objective Complete: Quick! Get into Classroom 1!  
         "null",
         "null",//115 
         "null",
@@ -11649,7 +11872,7 @@ function Chapter()
         "null",
         "null",
         "null",
-        "You guys could also play after the party, right? That way, Tyler gets to go and you get to play.",
+        "null",
         "null",//130 
         "null",
         "null",
@@ -11657,14 +11880,14 @@ function Chapter()
         "null",
         "null",//135 
         "null",
-        "null",
+        "You guys could also play after the party, right? That way, Tyler gets to go and you get to play.",
         "null",
         "null",
         "null",//140 
         "null",
         "null",
         "null",
-        "I mean, the party only happens tonight, you can play this game after.",
+        "null",
         "null",//145 
         "null",
         "null",
@@ -11672,7 +11895,7 @@ function Chapter()
         "null",
         "null",//150 
         "null",
-        "null",
+        "I mean, the party only happens tonight, you can play this game after.",
         "null",
         "null",
         "null",//155 
@@ -11681,7 +11904,7 @@ function Chapter()
         "null",
         "null",
         "null",//160 
-        "Do what feels right to you!",
+        "null",
         "null",
         "null",
         "null",
@@ -11689,7 +11912,7 @@ function Chapter()
         "null",
         "null",
         "null",
-        "null",
+        "Do what feels right to you!",
         "null",//170 
         "null",
         "null",
@@ -11702,7 +11925,7 @@ function Chapter()
         "null",
         "null",//180 
         "null",
-        "Oh cool! What’s your sport?",
+        "null",
         "null",
         "null",
         "null",//185 
@@ -11710,7 +11933,7 @@ function Chapter()
         "null",
         "null",
         "null",
-        "null",//190 
+        "Oh cool! What’s your sport?",//190 
         "null",
         "null",
         "null",
@@ -11718,20 +11941,20 @@ function Chapter()
         "null",//195 
         "null",
         "null",
-        "Was it hard leaving them to come here?",
+        "null",
         "null",
         "null",//200 
         "null",
         "null",
-        "You know, I’ve always wanted siblings...",
+        "null",
         "null",
         "null",//205 
-        "null",
+        "Was it hard leaving them to come here?",
         "null",
         "null",
         "null",
         "null",//210 
-        "null",
+        "You know, I’ve always wanted siblings...",
         "null",
         "null",
         "null",
@@ -11745,7 +11968,7 @@ function Chapter()
         "null",
         "null",
         "null",
-        "(Lie to him)",//225 
+        "null",//225 
         "null",
         "null",
         "null",
@@ -11753,7 +11976,7 @@ function Chapter()
         "null",//230 
         "null",
         "null",
-        "null",
+        "(Lie to him)",
         "null",
         "null",//235 
         "null",
@@ -11793,26 +12016,26 @@ function Chapter()
         "null",//270 
         "null",
         "null",
-        "I don’t know...I’m a little scared of getting caught.",
+        "null",
         "null",
         "null",//275 
         "null",
         "null",
-        "I don’t know...I’m a little scared of getting caught.",
+        "null",
         "null",
         "null",//280 
+        "I don’t know...I’m a little scared of getting caught.",
         "null",
         "null",
         "null",
-        "I don’t know...what if things get out of control?",
         "null",//285 
-        "null",
+        "I don’t know...I’m a little scared of getting caught.",
         "null",
         "null",
         "null",
         "null",//290 
         "null",
-        "null",
+        "I don’t know...what if things get out of control?",
         "null",
         "null",
         "null",//295 
@@ -11823,22 +12046,22 @@ function Chapter()
         "null",//300 
         "null",
         "null",
-        "That’s an understatement! Haha!",
+        "null",
         "null",
         "null",//305 
         "null",
         "null",
         "null",
         "null",
-        "Well, you looked pretty upset earlier...on the phone...",//310 
-        "null",
+        "null",//310 
+        "That’s an understatement! Haha!",
         "null",
         "null",
         "null",
         "null",//315 
         "null",
         "null",
-        "null",
+        "Well, you looked pretty upset earlier...on the phone...",
         "null",
         "null",//320 
         "null",
@@ -11858,7 +12081,7 @@ function Chapter()
         "null",//335 
         "null",
         "null",
-        "(Still, I couldn’t help but ask her why she was so upset.)",
+        "null",
         "null",
         "null",//340 
         "null",
@@ -11866,7 +12089,7 @@ function Chapter()
         "null",
         "null",
         "null",//345 
-        "null",
+        "(Still, I couldn’t help but ask her why she was so upset.)",
         "null",
         "null",
         "null",
@@ -11898,7 +12121,7 @@ function Chapter()
         "null",//375 
         "null",
         "null",
-        "I am too...",
+        "null",
         "null",
         "null",//380 
         "null",
@@ -11906,7 +12129,7 @@ function Chapter()
         "null",
         "null",
         "null",//385 
-        "null",
+        "I am too...",
         "null",
         "null",
         "null",
@@ -11954,7 +12177,7 @@ function Chapter()
         "null",
         "null",
         "null",
-        "Already so involved in club activities? Chill.",
+        "null",
         "null",//435 
         "null",
         "null",
@@ -11963,12 +12186,12 @@ function Chapter()
         "null",//440 
         "null",
         "null",
-        "null",
+        "Already so involved in club activities? Chill.",
         "null",
         "null",//445 
         "null",
         "null",
-        "It’s way too early to start working this hard, haha!",
+        "null",
         "null",
         "null",//450 
         "null",
@@ -11977,7 +12200,7 @@ function Chapter()
         "null",
         "null",//455 
         "null",
-        "null",
+        "It’s way too early to start working this hard, haha!",
         "null",
         "null",
         "null",//460 
@@ -12003,7 +12226,7 @@ function Chapter()
         "null",//480 
         "null",
         "null",
-        "null",//483 Special Background
+        "null",
         "null",
         "null",//485 
         "null",
@@ -12012,13 +12235,13 @@ function Chapter()
         "null",
         "null",//490 
         "null",
-        "null",
+        "null",//492 Special Background
         "null",
         "null",
         "null",//495 
         "null",
         "null",
-        "(I’m going to help Axel.)",
+        "null",
         "null",
         "null",//500 
         "null",
@@ -12027,7 +12250,7 @@ function Chapter()
         "null",
         "null",//505 
         "null",
-        "null",
+        "(I’m going to help Axel.)",
         "null",
         "null",
         "null",//510 
@@ -12099,7 +12322,7 @@ function Chapter()
         "null",
         "null",
         "null",
-        "null",//579 Special Background
+        "null",
         "null",//580 
         "null",
         "null",
@@ -12108,18 +12331,18 @@ function Chapter()
         "null",//585 
         "null",
         "null",
-        "null",
+        "null",//588 Special Background
         "null",
         "null",//590 
         "null",
         "null",
-        "null",
-        "null",
+        "null",//593 Try to find Axel!
+        "null",//594 Explore the school and talk to your classmates!
         "null",//595 
-        "null",//596 POPUP
         "null",
         "null",
-        "New Objective: Go to your dorm and prepare for the party!",
+        "null",
+        "null",
         "null",//600 
         "null",
         "null",
@@ -12128,20 +12351,20 @@ function Chapter()
         "null",//605 
         "null",
         "null",
-        "null",
+        "null",//608 POPUP
         "null",
         "null",//610 
-        "null",
+        "null",//611 Objective Complete: Go to Classroom 2
         "null",
         "null",
         "null",
         "null",//615 
-        "null",//616 player clicks on the episode’s outfit.
+        "null",
         "null",
         "null",
         "null",
         "null",//620 
-        "New Objective: Go to Raquel’s Party!",
+        "null",
         "null",
         "null",
         "null",
@@ -12150,12 +12373,12 @@ function Chapter()
         "null",
         "null",
         "null",
-        "null",//630 
+        "null",//630 player clicks on the episode’s outfit.
         "null",
         "null",
         "null",
         "null",
-        "null",//635 
+        "null",//635 Objective Complete:  Go to your dorm and prepare for the party!
         "null",
         "null",
         "null",
@@ -12170,7 +12393,7 @@ function Chapter()
         "null",
         "null",
         "null",
-        "I can’t exactly say the same about you, people can’t stop looking.",//650 
+        "null",//650 
         "null",
         "null",
         "null",
@@ -12186,14 +12409,14 @@ function Chapter()
         "null",
         "null",
         "null",//665 
+        "I can’t exactly say the same about you, people can’t stop looking.",
         "null",
         "null",
         "null",
+        "null",//670 
         "null",
-        "You’re <em>still</em> down to party after all this paparazzi thing?!",//670 
         "null",
         "null",
-        "null",//673 GHOST SLIDE
         "null",
         "null",//675 
         "null",
@@ -12206,10 +12429,10 @@ function Chapter()
         "null",
         "null",
         "null",//685 
+        "You’re <em>still</em> down to party after all this paparazzi thing?!",
         "null",
         "null",
-        "null",
-        "null",
+        "null",//689 GHOST SLIDE
         "null",//690 
         "null",
         "null",
@@ -12268,7 +12491,7 @@ function Chapter()
         "null",//745 
         "null",
         "null",
-        "It’s best to leave it to Neha, I’m going to dance with Raquel and Axel!",
+        "null",
         "null",
         "null",//750 
         "null",
@@ -12276,7 +12499,7 @@ function Chapter()
         "null",
         "null",
         "null",//755 
-        "null",//756 POPUP
+        "null",
         "null",
         "null",
         "null",
@@ -12284,15 +12507,15 @@ function Chapter()
         "null",
         "null",
         "null",
-        "null",
+        "It’s best to leave it to Neha, I’m going to dance with Raquel and Axel!",
         "null",//765 
         "null",
         "null",
         "null",
-        "null",//769 POPUP
+        "null",
         "null",//770 
         "null",
-        "null",
+        "null",//772 POPUP
         "null",
         "null",
         "null",//775 
@@ -12303,12 +12526,12 @@ function Chapter()
         "null",//780 
         "null",
         "null",
-        "null",//783 POPUP
-        "null",
-        "null",//785 
         "null",
         "null",
-        "null",//788 Different Dorm…
+        "null",//785 POPUP
+        "null",
+        "null",
+        "null",
         "null",
         "null",//790 
         "null",
@@ -12319,12 +12542,12 @@ function Chapter()
         "null",
         "null",
         "null",
-        "null",
+        "null",//799 POPUP
         "null",//800 
         "null",
         "null",
         "null",
-        "null",
+        "null",//804 Different Dorm…
         "null",//805 
         "null",
         "null",
@@ -12336,6 +12559,22 @@ function Chapter()
         "null",
         "null",
         "null",//815 
+        "null",
+        "null",
+        "null",
+        "null",
+        "null",//820 
+        "null",
+        "null",
+        "null",
+        "null",
+        "null",//825 
+        "null",
+        "null",
+        "null",
+        "null",
+        "null",//830 
+        "null",
         "null",
         "null",
         ];
@@ -12367,8 +12606,8 @@ function Chapter()
         "null",
         "null",
         "null",//25 
-        "I’m really not interested, can we please just hurry?",
         "null",
+        "I’m really not interested, can we please just hurry?",
         "null",
         "null",
         "null",//30 
@@ -12377,7 +12616,7 @@ function Chapter()
         "null",
         "null",
         "null",//35 
-        "null",
+        "null",//36 Objective Complete: Get some breakfast at the Cafeteria! 
         "null",
         "null",
         "null",
@@ -12385,7 +12624,7 @@ function Chapter()
         "null",
         "null",
         "null",
-        "null",
+        "null",//44 Objective Complete: Follow Axel and go back to the Main Hallway! 
         "null",//45 
         "null",
         "null",
@@ -12397,12 +12636,12 @@ function Chapter()
         "null",
         "null",
         "null",//55 
-        "I get it okay? You don’t have to rub it in.",
+        "null",
         "null",
         "null",
         "null",
         "null",//60 
-        "null",
+        "I get it okay? You don’t have to rub it in.",
         "null",
         "null",
         "null",
@@ -12432,12 +12671,12 @@ function Chapter()
         "null",
         "null",
         "null",//90 
-        "null",//91 TODO: Special Background Required
+        "null",
         "null",
         "null",
         "null",
         "null",//95 
-        "null",
+        "null",//96 TODO: Special Background Required
         "null",
         "null",
         "null",
@@ -12448,13 +12687,13 @@ function Chapter()
         "null",
         "null",//105 
         "null",
-        "null",//107 TODO: Objectives
+        "null",
         "null",
         "null",
         "null",//110 
         "null",
-        "null",
-        "null",
+        "null",//112 TODO: Objectives
+        "null",//113 Objective Complete: Quick! Get into Classroom 1!  
         "null",
         "null",//115 
         "null",
@@ -12470,7 +12709,7 @@ function Chapter()
         "null",
         "null",
         "null",
-        "Your sister?",
+        "null",
         "null",//130 
         "null",
         "null",
@@ -12478,14 +12717,14 @@ function Chapter()
         "null",
         "null",//135 
         "null",
-        "null",
+        "Your sister?",
         "null",
         "null",
         "null",//140 
         "null",
         "null",
         "null",
-        "You have a sister?",
+        "null",
         "null",//145 
         "null",
         "null",
@@ -12493,7 +12732,7 @@ function Chapter()
         "null",
         "null",//150 
         "null",
-        "null",
+        "You have a sister?",
         "null",
         "null",
         "null",//155 
@@ -12502,7 +12741,7 @@ function Chapter()
         "null",
         "null",
         "null",//160 
-        "Yeah, you should do it tomorrow",
+        "null",
         "null",
         "null",
         "null",
@@ -12510,7 +12749,7 @@ function Chapter()
         "null",
         "null",
         "null",
-        "null",
+        "Yeah, you should do it tomorrow",
         "null",//170 
         "null",
         "null",
@@ -12523,7 +12762,7 @@ function Chapter()
         "null",
         "null",//180 
         "null",
-        "...Are you sure you’re going to make it there?",
+        "null",
         "null",
         "null",
         "null",//185 
@@ -12531,7 +12770,7 @@ function Chapter()
         "null",
         "null",
         "null",
-        "null",//190 
+        "...Are you sure you’re going to make it there?",//190 
         "null",
         "null",
         "null",
@@ -12539,20 +12778,20 @@ function Chapter()
         "null",//195 
         "null",
         "null",
-        "Don’t they get on your nerves sometimes?",
+        "null",
         "null",
         "null",//200 
         "null",
         "null",
-        "Doesn’t it get a little overwhelming?",
+        "null",
         "null",
         "null",//205 
-        "null",
+        "Don’t they get on your nerves sometimes?",
         "null",
         "null",
         "null",
         "null",//210 
-        "null",
+        "Doesn’t it get a little overwhelming?",
         "null",
         "null",
         "null",
@@ -12625,7 +12864,7 @@ function Chapter()
         "null",
         "null",
         "null",
-        "That sounds awesome!",
+        "null",
         "null",//285 
         "null",
         "null",
@@ -12633,7 +12872,7 @@ function Chapter()
         "null",
         "null",//290 
         "null",
-        "null",
+        "That sounds awesome!",
         "null",
         "null",
         "null",//295 
@@ -12644,7 +12883,7 @@ function Chapter()
         "null",//300 
         "null",
         "null",
-        "I don’t mind that, I’d really like to be your friend.",
+        "null",
         "null",
         "null",//305 
         "null",
@@ -12652,7 +12891,7 @@ function Chapter()
         "null",
         "null",
         "null",//310 
-        "null",
+        "I don’t mind that, I’d really like to be your friend.",
         "null",
         "null",
         "null",
@@ -12719,7 +12958,7 @@ function Chapter()
         "null",//375 
         "null",
         "null",
-        "It still doesn’t explain her behaviour.",
+        "null",
         "null",
         "null",//380 
         "null",
@@ -12727,7 +12966,7 @@ function Chapter()
         "null",
         "null",
         "null",//385 
-        "null",
+        "It still doesn’t explain her behaviour.",
         "null",
         "null",
         "null",
@@ -12775,7 +13014,7 @@ function Chapter()
         "null",
         "null",
         "null",
-        "Do you think you’re going to win?",
+        "null",
         "null",//435 
         "null",
         "null",
@@ -12784,12 +13023,12 @@ function Chapter()
         "null",//440 
         "null",
         "null",
-        "null",
+        "Do you think you’re going to win?",
         "null",
         "null",//445 
         "null",
         "null",
-        "Do you think you’re going to win?",
+        "null",
         "null",
         "null",//450 
         "null",
@@ -12798,7 +13037,7 @@ function Chapter()
         "null",
         "null",//455 
         "null",
-        "null",
+        "Do you think you’re going to win?",
         "null",
         "null",
         "null",//460 
@@ -12824,7 +13063,7 @@ function Chapter()
         "null",//480 
         "null",
         "null",
-        "null",//483 Special Background
+        "null",
         "null",
         "null",//485 
         "null",
@@ -12833,13 +13072,13 @@ function Chapter()
         "null",
         "null",//490 
         "null",
-        "null",
+        "null",//492 Special Background
         "null",
         "null",
         "null",//495 
         "null",
         "null",
-        "(I’m going to knock some sense into both of them)",
+        "null",
         "null",
         "null",//500 
         "null",
@@ -12848,7 +13087,7 @@ function Chapter()
         "null",
         "null",//505 
         "null",
-        "null",
+        "(I’m going to knock some sense into both of them)",
         "null",
         "null",
         "null",//510 
@@ -12920,7 +13159,7 @@ function Chapter()
         "null",
         "null",
         "null",
-        "null",//579 Special Background
+        "null",
         "null",//580 
         "null",
         "null",
@@ -12929,15 +13168,15 @@ function Chapter()
         "null",//585 
         "null",
         "null",
-        "null",
+        "null",//588 Special Background
         "null",
         "null",//590 
         "null",
         "null",
-        "null",
-        "null",
+        "null",//593 Try to find Axel!
+        "null",//594 Explore the school and talk to your classmates!
         "null",//595 
-        "null",//596 POPUP
+        "null",
         "null",
         "null",
         "null",
@@ -12949,15 +13188,15 @@ function Chapter()
         "null",//605 
         "null",
         "null",
-        "null",
+        "null",//608 POPUP
         "null",
         "null",//610 
-        "null",
+        "null",//611 Objective Complete: Go to Classroom 2
         "null",
         "null",
         "null",
         "null",//615 
-        "null",//616 player clicks on the episode’s outfit.
+        "null",
         "null",
         "null",
         "null",
@@ -12971,12 +13210,12 @@ function Chapter()
         "null",
         "null",
         "null",
-        "null",//630 
+        "null",//630 player clicks on the episode’s outfit.
         "null",
         "null",
         "null",
         "null",
-        "null",//635 
+        "null",//635 Objective Complete:  Go to your dorm and prepare for the party!
         "null",
         "null",
         "null",
@@ -12991,7 +13230,7 @@ function Chapter()
         "null",
         "null",
         "null",
-        "Did I look <em>that</em> lost?",//650 
+        "null",//650 
         "null",
         "null",
         "null",
@@ -13007,14 +13246,14 @@ function Chapter()
         "null",
         "null",
         "null",//665 
+        "Did I look <em>that</em> lost?",
         "null",
         "null",
         "null",
+        "null",//670 
         "null",
-        "Did I look <em>that</em> lost?",//670 
         "null",
         "null",
-        "null",//673 GHOST SLIDE
         "null",
         "null",//675 
         "null",
@@ -13027,10 +13266,10 @@ function Chapter()
         "null",
         "null",
         "null",//685 
+        "Did I look <em>that</em> lost?",
         "null",
         "null",
-        "null",
-        "null",
+        "null",//689 GHOST SLIDE
         "null",//690 
         "null",
         "null",
@@ -13097,7 +13336,7 @@ function Chapter()
         "null",
         "null",
         "null",//755 
-        "null",//756 POPUP
+        "null",
         "null",
         "null",
         "null",
@@ -13110,10 +13349,10 @@ function Chapter()
         "null",
         "null",
         "null",
-        "null",//769 POPUP
+        "null",
         "null",//770 
         "null",
-        "null",
+        "null",//772 POPUP
         "null",
         "null",
         "null",//775 
@@ -13124,12 +13363,12 @@ function Chapter()
         "null",//780 
         "null",
         "null",
-        "null",//783 POPUP
-        "null",
-        "null",//785 
         "null",
         "null",
-        "null",//788 Different Dorm…
+        "null",//785 POPUP
+        "null",
+        "null",
+        "null",
         "null",
         "null",//790 
         "null",
@@ -13140,12 +13379,12 @@ function Chapter()
         "null",
         "null",
         "null",
-        "null",
+        "null",//799 POPUP
         "null",//800 
         "null",
         "null",
         "null",
-        "null",
+        "null",//804 Different Dorm…
         "null",//805 
         "null",
         "null",
@@ -13157,6 +13396,22 @@ function Chapter()
         "null",
         "null",
         "null",//815 
+        "null",
+        "null",
+        "null",
+        "null",
+        "null",//820 
+        "null",
+        "null",
+        "null",
+        "null",
+        "null",//825 
+        "null",
+        "null",
+        "null",
+        "null",
+        "null",//830 
+        "null",
         "null",
         "null",
         ];
@@ -13190,15 +13445,15 @@ function Chapter()
         0,//25 
         0,
         0,
-        5,
         0,
+        5,
         0,//30 
         0,
         0,
+        0,
         -5,
-        0,
         0,//35 
-        0,
+        0,//36 Objective Complete: Get some breakfast at the Cafeteria! 
         0,
         0,
         0,
@@ -13206,7 +13461,7 @@ function Chapter()
         0,
         0,
         0,
-        0,
+        0,//44 Objective Complete: Follow Axel and go back to the Main Hallway! 
         0,//45 
         0,
         0,
@@ -13219,16 +13474,16 @@ function Chapter()
         0,
         0,//55 
         0,
-        5,
+        0,
         0,
         0,
         0,//60 
-        -5,
         0,
+        5,
         0,
         0,
         0,//65 
-        0,
+        -5,
         0,
         0,
         0,
@@ -13253,12 +13508,12 @@ function Chapter()
         0,
         0,
         0,//90 
-        0,//91 TODO: Special Background Required
+        0,
         0,
         0,
         0,
         0,//95 
-        0,
+        0,//96 TODO: Special Background Required
         0,
         0,
         0,
@@ -13269,13 +13524,13 @@ function Chapter()
         0,
         0,//105 
         0,
-        0,//107 TODO: Objectives
+        0,
         0,
         0,
         0,//110 
         0,
-        0,
-        0,
+        0,//112 TODO: Objectives
+        0,//113 Objective Complete: Quick! Get into Classroom 1!  
         0,
         0,//115 
         0,
@@ -13292,33 +13547,33 @@ function Chapter()
         0,
         0,
         0,
-        5,//130 
+        0,//130 
         0,
         0,
-        -5,
+        0,
         0,
         0,//135 
         0,
         0,
-        0,
+        5,
         0,
         0,//140 
-        0,
-        0,
-        0,
-        0,
-        5,//145 
-        0,
-        0,
         -5,
+        0,
+        0,
+        0,
+        0,//145 
+        0,
+        0,
+        0,
         0,
         0,//150 
         0,
         0,
-        0,
+        5,
         0,
         0,//155 
-        0,
+        -5,
         0,
         0,
         0,
@@ -13349,33 +13604,33 @@ function Chapter()
         0,
         0,//185 
         0,
+        0,
+        0,
+        0,
+        0,//190 
+        0,
+        0,
+        0,
+        0,
+        5,//195 
+        0,
+        0,
+        -5,
+        0,
+        0,//200 
+        0,
+        0,
+        0,
+        0,
+        0,//205 
+        0,
         5,
-        0,
-        0,
-        -5,//190 
-        0,
-        0,
-        0,
-        0,
-        0,//195 
-        0,
-        0,
-        0,
-        5,
-        -5,//200 
-        0,
-        0,
-        0,
-        0,
-        5,//205 
-        0,
-        0,
-        0,
+        -5,
         0,
         0,//210 
         0,
         0,
-        0,
+        5,
         0,
         0,//215 
         0,
@@ -13388,7 +13643,7 @@ function Chapter()
         0,
         0,
         0,//225 
-        5,
+        0,
         0,
         0,
         0,
@@ -13396,13 +13651,13 @@ function Chapter()
         0,
         0,
         0,
-        0,
+        5,
         0,//235 
         0,
         0,
         0,
         0,
-        -5,//240 
+        0,//240 
         0,
         0,
         0,
@@ -13410,7 +13665,7 @@ function Chapter()
         0,//245 
         0,
         0,
-        0,
+        -5,
         0,
         0,//250 
         0,
@@ -13436,29 +13691,29 @@ function Chapter()
         0,
         0,
         0,
-        5,
-        -5,//275 
+        0,
+        0,//275 
         0,
         0,
         0,
-        5,
+        0,
         0,//280 
+        0,
+        5,
         -5,
-        0,
-        0,
         0,
         0,//285 
-        -5,
         0,
         5,
         0,
+        -5,
         0,//290 
         0,
         0,
         0,
-        0,
+        -5,
         0,//295 
-        0,
+        5,
         0,
         0,
         0,
@@ -13467,21 +13722,21 @@ function Chapter()
         0,
         0,
         0,
-        -5,//305 
-        5,
+        0,//305 
+        0,
         0,
         0,
         0,
         0,//310 
+        0,
+        0,
+        -5,
         5,
-        0,
-        0,
-        0,
         0,//315 
         0,
         0,
         0,
-        0,
+        5,
         0,//320 
         0,
         0,
@@ -13501,20 +13756,20 @@ function Chapter()
         0,
         0,
         0,
-        2,
+        0,
         0,//340 
         0,
         0,
         0,
-        -2,
+        0,
         0,//345 
         0,
-        0,
+        2,
         0,
         0,
         0,//350 
         0,
-        0,
+        -2,
         0,
         0,
         0,//355 
@@ -13547,20 +13802,20 @@ function Chapter()
         0,
         0,
         0,
-        -3,//385 
+        0,//385 
         0,
         0,
         0,
         0,
-        3,//390 
+        0,//390 
         0,
         0,
-        0,
+        -3,
         0,
         0,//395 
         0,
         0,
-        0,
+        3,
         0,
         0,//400 
         0,
@@ -13597,30 +13852,30 @@ function Chapter()
         0,
         0,
         0,
-        5,//435 
+        0,//435 
         0,
         0,
         0,
         0,
         0,//440 
         0,
-        -5,
         0,
         0,
+        5,
         0,//445 
         0,
         0,
         0,
-        5,
-        0,//450 
         0,
+        0,//450 
+        -5,
         0,
         0,
         0,
         0,//455 
         0,
         0,
-        -5,
+        5,
         0,
         0,//460 
         0,
@@ -13629,7 +13884,7 @@ function Chapter()
         0,
         0,//465 
         0,
-        0,
+        -5,
         0,
         0,
         0,//470 
@@ -13645,7 +13900,7 @@ function Chapter()
         0,//480 
         0,
         0,
-        0,//483 Special Background
+        0,
         0,
         0,//485 
         0,
@@ -13654,7 +13909,7 @@ function Chapter()
         0,
         0,//490 
         0,
-        0,
+        0,//492 Special Background
         0,
         0,
         0,//495 
@@ -13668,7 +13923,7 @@ function Chapter()
         0,
         0,
         0,//505 
-        5,
+        0,
         0,
         0,
         0,
@@ -13677,7 +13932,7 @@ function Chapter()
         0,
         0,
         0,
-        0,//515 
+        5,//515 
         0,
         0,
         0,
@@ -13692,7 +13947,7 @@ function Chapter()
         0,
         0,
         0,
-        -5,//530 
+        0,//530 
         0,
         0,
         0,
@@ -13701,7 +13956,7 @@ function Chapter()
         0,
         0,
         0,
-        0,
+        -5,
         0,//540 
         0,
         0,
@@ -13741,24 +13996,24 @@ function Chapter()
         0,
         0,
         0,
-        0,//579 Special Background
-        5,//580 
-        -5,
+        0,
+        0,//580 
+        0,
         0,
         0,
         0,
         0,//585 
         0,
         0,
+        0,//588 Special Background
+        5,
+        -5,//590 
         0,
         0,
-        0,//590 
-        0,
-        0,
-        0,
-        0,
+        0,//593 Try to find Axel!
+        0,//594 Explore the school and talk to your classmates!
         0,//595 
-        0,//596 POPUP
+        0,
         0,
         0,
         0,
@@ -13770,15 +14025,15 @@ function Chapter()
         0,//605 
         0,
         0,
-        0,
+        0,//608 POPUP
         0,
         0,//610 
-        0,
+        0,//611 Objective Complete: Go to Classroom 2
         0,
         0,
         0,
         0,//615 
-        0,//616 player clicks on the episode’s outfit.
+        0,
         0,
         0,
         0,
@@ -13792,12 +14047,12 @@ function Chapter()
         0,
         0,
         0,
-        0,//630 
+        0,//630 player clicks on the episode’s outfit.
         0,
         0,
         0,
         0,
-        0,//635 
+        0,//635 Objective Complete:  Go to your dorm and prepare for the party!
         0,
         0,
         0,
@@ -13816,56 +14071,56 @@ function Chapter()
         0,
         0,
         0,
-        7,
+        0,
         0,//655 
         0,
         0,
-        -7,
+        0,
         0,
         0,//660 
         0,
         0,
-        -3,
+        0,
         0,
         0,//665 
-        3,
         0,
         0,
         0,
-        0,//670 
-        5,
         0,
-        -5,//673 GHOST SLIDE
+        7,//670 
         0,
+        0,
+        0,
+        -7,
         0,//675 
-        -5,
         0,
         0,
         0,
-        7,//680 
+        -3,
+        0,//680 
         0,
-        0,
+        3,
         0,
         0,
         0,//685 
         0,
-        3,
+        5,
         0,
-        0,
+        -5,//689 GHOST SLIDE
         0,//690 
         0,
-        0,
+        -5,
         0,
         0,
         0,//695 
-        0,
+        7,
         0,
         0,
         0,
         0,//700 
         0,
         0,
-        0,
+        3,
         0,
         0,//705 
         0,
@@ -13918,7 +14173,7 @@ function Chapter()
         0,
         0,
         0,//755 
-        0,//756 POPUP
+        0,
         0,
         0,
         0,
@@ -13931,10 +14186,10 @@ function Chapter()
         0,
         0,
         0,
-        0,//769 POPUP
+        0,
         0,//770 
         0,
-        0,
+        0,//772 POPUP
         0,
         0,
         0,//775 
@@ -13945,12 +14200,12 @@ function Chapter()
         0,//780 
         0,
         0,
-        0,//783 POPUP
-        0,
-        0,//785 
         0,
         0,
-        0,//788 Different Dorm…
+        0,//785 POPUP
+        0,
+        0,
+        0,
         0,
         0,//790 
         0,
@@ -13961,12 +14216,12 @@ function Chapter()
         0,
         0,
         0,
-        0,
+        0,//799 POPUP
         0,//800 
         0,
         0,
         0,
-        0,
+        0,//804 Different Dorm…
         0,//805 
         0,
         0,
@@ -13978,6 +14233,22 @@ function Chapter()
         0,
         0,
         0,//815 
+        0,
+        0,
+        0,
+        0,
+        0,//820 
+        0,
+        0,
+        0,
+        0,
+        0,//825 
+        0,
+        0,
+        0,
+        0,
+        0,//830 
+        0,
         0,
         0,
         ];
@@ -14019,7 +14290,7 @@ function Chapter()
         0,
         0,
         0,//35 
-        0,
+        0,//36 Objective Complete: Get some breakfast at the Cafeteria! 
         0,
         0,
         0,
@@ -14027,7 +14298,7 @@ function Chapter()
         0,
         0,
         0,
-        0,
+        0,//44 Objective Complete: Follow Axel and go back to the Main Hallway! 
         0,//45 
         0,
         0,
@@ -14074,12 +14345,12 @@ function Chapter()
         0,
         0,
         0,//90 
-        0,//91 TODO: Special Background Required
+        0,
         0,
         0,
         0,
         0,//95 
-        0,
+        0,//96 TODO: Special Background Required
         0,
         0,
         0,
@@ -14090,13 +14361,13 @@ function Chapter()
         0,
         0,//105 
         0,
-        0,//107 TODO: Objectives
+        0,
         0,
         0,
         0,//110 
         0,
-        0,
-        0,
+        0,//112 TODO: Objectives
+        0,//113 Objective Complete: Quick! Get into Classroom 1!  
         0,
         0,//115 
         0,
@@ -14116,7 +14387,7 @@ function Chapter()
         0,//130 
         0,
         0,
-        5,
+        0,
         0,
         0,//135 
         0,
@@ -14124,7 +14395,7 @@ function Chapter()
         0,
         0,
         0,//140 
-        0,
+        5,
         0,
         0,
         0,
@@ -14145,21 +14416,21 @@ function Chapter()
         0,
         0,//160 
         0,
-        5,
+        0,
         0,
         0,
         0,//165 
         0,
         0,
-        -5,
         0,
-        0,//170 
+        0,
+        5,//170 
         0,
         0,
         0,
         0,
         0,//175 
-        0,
+        -5,
         0,
         0,
         0,
@@ -14466,7 +14737,7 @@ function Chapter()
         0,//480 
         0,
         0,
-        0,//483 Special Background
+        0,
         0,
         0,//485 
         0,
@@ -14475,7 +14746,7 @@ function Chapter()
         0,
         0,//490 
         0,
-        0,
+        0,//492 Special Background
         0,
         0,
         0,//495 
@@ -14486,7 +14757,7 @@ function Chapter()
         0,//500 
         0,
         0,
-        -5,
+        0,
         0,
         0,//505 
         0,
@@ -14495,7 +14766,7 @@ function Chapter()
         0,
         0,//510 
         0,
-        0,
+        -5,
         0,
         0,
         0,//515 
@@ -14507,21 +14778,21 @@ function Chapter()
         0,
         0,
         0,
-        -5,
+        0,
         0,//525 
         0,
         0,
         0,
-        5,
+        0,
         0,//530 
         0,
         0,
-        0,
+        -5,
         0,
         0,//535 
         0,
         0,
-        0,
+        5,
         0,
         0,//540 
         0,
@@ -14562,8 +14833,8 @@ function Chapter()
         0,
         0,
         0,
-        0,//579 Special Background
-        5,//580 
+        0,
+        0,//580 
         0,
         0,
         0,
@@ -14571,15 +14842,15 @@ function Chapter()
         0,//585 
         0,
         0,
-        0,
-        0,
+        0,//588 Special Background
+        5,
         0,//590 
         0,
         0,
-        0,
-        0,
+        0,//593 Try to find Axel!
+        0,//594 Explore the school and talk to your classmates!
         0,//595 
-        0,//596 POPUP
+        0,
         0,
         0,
         0,
@@ -14591,15 +14862,15 @@ function Chapter()
         0,//605 
         0,
         0,
-        0,
+        0,//608 POPUP
         0,
         0,//610 
-        0,
+        0,//611 Objective Complete: Go to Classroom 2
         0,
         0,
         0,
         0,//615 
-        0,//616 player clicks on the episode’s outfit.
+        0,
         0,
         0,
         0,
@@ -14613,12 +14884,12 @@ function Chapter()
         0,
         0,
         0,
-        0,//630 
+        0,//630 player clicks on the episode’s outfit.
         0,
         0,
         0,
         0,
-        0,//635 
+        0,//635 Objective Complete:  Go to your dorm and prepare for the party!
         0,
         0,
         0,
@@ -14656,7 +14927,7 @@ function Chapter()
         0,//670 
         0,
         0,
-        0,//673 GHOST SLIDE
+        0,
         0,
         0,//675 
         0,
@@ -14672,7 +14943,7 @@ function Chapter()
         0,
         0,
         0,
-        0,
+        0,//689 GHOST SLIDE
         0,//690 
         0,
         0,
@@ -14739,7 +15010,7 @@ function Chapter()
         0,
         0,
         0,//755 
-        0,//756 POPUP
+        0,
         0,
         0,
         0,
@@ -14752,10 +15023,10 @@ function Chapter()
         0,
         0,
         0,
-        0,//769 POPUP
+        0,
         0,//770 
         0,
-        0,
+        0,//772 POPUP
         0,
         0,
         0,//775 
@@ -14766,12 +15037,12 @@ function Chapter()
         0,//780 
         0,
         0,
-        0,//783 POPUP
-        0,
-        0,//785 
         0,
         0,
-        0,//788 Different Dorm…
+        0,//785 POPUP
+        0,
+        0,
+        0,
         0,
         0,//790 
         0,
@@ -14782,12 +15053,12 @@ function Chapter()
         0,
         0,
         0,
-        0,
+        0,//799 POPUP
         0,//800 
         0,
         0,
         0,
-        0,
+        0,//804 Different Dorm…
         0,//805 
         0,
         0,
@@ -14799,6 +15070,22 @@ function Chapter()
         0,
         0,
         0,//815 
+        0,
+        0,
+        0,
+        0,
+        0,//820 
+        0,
+        0,
+        0,
+        0,
+        0,//825 
+        0,
+        0,
+        0,
+        0,
+        0,//830 
+        0,
         0,
         0,
         ];
@@ -14840,7 +15127,7 @@ function Chapter()
         false,
         false,
         false,//35 
-        false,
+        false,//36 Objective Complete: Get some breakfast at the Cafeteria! 
         false,
         false,
         false,
@@ -14848,7 +15135,7 @@ function Chapter()
         false,
         false,
         false,
-        false,
+        false,//44 Objective Complete: Follow Axel and go back to the Main Hallway! 
         false,//45 
         false,
         false,
@@ -14895,12 +15182,12 @@ function Chapter()
         false,
         false,
         false,//90 
-        false,//91 TODO: Special Background Required
+        false,
         false,
         false,
         false,
         false,//95 
-        false,
+        false,//96 TODO: Special Background Required
         false,
         false,
         false,
@@ -14911,13 +15198,13 @@ function Chapter()
         false,
         false,//105 
         false,
-        false,//107 TODO: Objectives
+        false,
         false,
         false,
         false,//110 
         false,
-        false,
-        false,
+        false,//112 TODO: Objectives
+        false,//113 Objective Complete: Quick! Get into Classroom 1!  
         false,
         false,//115 
         false,
@@ -15287,7 +15574,7 @@ function Chapter()
         false,//480 
         false,
         false,
-        false,//483 Special Background
+        false,
         false,
         false,//485 
         false,
@@ -15296,7 +15583,7 @@ function Chapter()
         false,
         false,//490 
         false,
-        false,
+        false,//492 Special Background
         false,
         false,
         false,//495 
@@ -15383,7 +15670,7 @@ function Chapter()
         false,
         false,
         false,
-        false,//579 Special Background
+        false,
         false,//580 
         false,
         false,
@@ -15392,15 +15679,15 @@ function Chapter()
         false,//585 
         false,
         false,
-        false,
+        false,//588 Special Background
         false,
         false,//590 
         false,
         false,
-        false,
-        false,
+        false,//593 Try to find Axel!
+        false,//594 Explore the school and talk to your classmates!
         false,//595 
-        false,//596 POPUP
+        false,
         false,
         false,
         false,
@@ -15412,15 +15699,15 @@ function Chapter()
         false,//605 
         false,
         false,
-        false,
+        false,//608 POPUP
         false,
         false,//610 
-        false,
+        false,//611 Objective Complete: Go to Classroom 2
         false,
         false,
         false,
         false,//615 
-        false,//616 player clicks on the episode’s outfit.
+        false,
         false,
         false,
         false,
@@ -15434,12 +15721,12 @@ function Chapter()
         false,
         false,
         false,
-        false,//630 
+        false,//630 player clicks on the episode’s outfit.
         false,
         false,
         false,
         false,
-        false,//635 
+        false,//635 Objective Complete:  Go to your dorm and prepare for the party!
         false,
         false,
         false,
@@ -15477,7 +15764,7 @@ function Chapter()
         false,//670 
         false,
         false,
-        false,//673 GHOST SLIDE
+        false,
         false,
         false,//675 
         false,
@@ -15493,7 +15780,7 @@ function Chapter()
         false,
         false,
         false,
-        false,
+        false,//689 GHOST SLIDE
         false,//690 
         false,
         false,
@@ -15560,7 +15847,7 @@ function Chapter()
         false,
         false,
         false,//755 
-        false,//756 POPUP
+        false,
         false,
         false,
         false,
@@ -15573,10 +15860,10 @@ function Chapter()
         false,
         false,
         false,
-        false,//769 POPUP
+        false,
         false,//770 
         false,
-        false,
+        false,//772 POPUP
         false,
         false,
         false,//775 
@@ -15587,12 +15874,12 @@ function Chapter()
         false,//780 
         false,
         false,
-        false,//783 POPUP
-        false,
-        false,//785 
         false,
         false,
-        false,//788 Different Dorm…
+        false,//785 POPUP
+        false,
+        false,
+        false,
         false,
         false,//790 
         false,
@@ -15603,12 +15890,12 @@ function Chapter()
         false,
         false,
         false,
-        false,
+        false,//799 POPUP
         false,//800 
         false,
         false,
         false,
-        false,
+        false,//804 Different Dorm…
         false,//805 
         false,
         false,
@@ -15620,6 +15907,22 @@ function Chapter()
         false,
         false,
         false,//815 
+        false,
+        false,
+        false,
+        false,
+        false,//820 
+        false,
+        false,
+        false,
+        false,
+        false,//825 
+        false,
+        false,
+        false,
+        false,
+        false,//830 
+        false,
         false,
         false,
         ];
@@ -15661,7 +15964,7 @@ function Chapter()
         -1,
         -1,
         -1,//35 
-        -1,
+        10,//36 Objective Complete: Get some breakfast at the Cafeteria! 
         -1,
         -1,
         -1,
@@ -15669,7 +15972,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,
+        37,//44 Objective Complete: Follow Axel and go back to the Main Hallway! 
         -1,//45 
         -1,
         -1,
@@ -15716,12 +16019,12 @@ function Chapter()
         -1,
         -1,
         -1,//90 
-        -1,//91 TODO: Special Background Required
+        -1,
         -1,
         -1,
         -1,
         -1,//95 
-        -1,
+        -1,//96 TODO: Special Background Required
         -1,
         -1,
         -1,
@@ -15732,13 +16035,13 @@ function Chapter()
         -1,
         -1,//105 
         -1,
-        -1,//107 TODO: Objectives
+        -1,
         -1,
         -1,
         -1,//110 
         -1,
-        -1,
-        -1,
+        -1,//112 TODO: Objectives
+        45,//113 Objective Complete: Quick! Get into Classroom 1!  
         -1,
         -1,//115 
         -1,
@@ -16024,7 +16327,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        209,
+        -1,
         -1,//400 
         -1,
         -1,
@@ -16032,7 +16335,7 @@ function Chapter()
         -1,
         -1,//405 
         -1,
-        -1,
+        209,
         -1,
         -1,
         -1,//410 
@@ -16108,7 +16411,7 @@ function Chapter()
         -1,//480 
         -1,
         -1,
-        -1,//483 Special Background
+        -1,
         -1,
         -1,//485 
         -1,
@@ -16117,7 +16420,7 @@ function Chapter()
         -1,
         -1,//490 
         -1,
-        -1,
+        -1,//492 Special Background
         -1,
         -1,
         -1,//495 
@@ -16204,7 +16507,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,//579 Special Background
+        -1,
         -1,//580 
         -1,
         -1,
@@ -16213,15 +16516,15 @@ function Chapter()
         -1,//585 
         -1,
         -1,
-        -1,
+        -1,//588 Special Background
         -1,
         -1,//590 
         -1,
         -1,
-        -1,
-        -1,
+        114,//593 Try to find Axel!
+        115,//594 Explore the school and talk to your classmates!
         -1,//595 
-        -1,//596 POPUP
+        -1,
         -1,
         -1,
         -1,
@@ -16233,15 +16536,15 @@ function Chapter()
         -1,//605 
         -1,
         -1,
-        -1,
+        -1,//608 POPUP
         -1,
         -1,//610 
-        -1,
+        592,//611 Objective Complete: Go to Classroom 2
         -1,
         -1,
         -1,
         -1,//615 
-        -1,//616 player clicks on the episode’s outfit.
+        -1,
         -1,
         -1,
         -1,
@@ -16255,12 +16558,12 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,//630 
+        -1,//630 player clicks on the episode’s outfit.
         -1,
         -1,
         -1,
         -1,
-        -1,//635 
+        612,//635 Objective Complete:  Go to your dorm and prepare for the party!
         -1,
         -1,
         -1,
@@ -16276,9 +16579,9 @@ function Chapter()
         -1,
         -1,
         -1,//650 
-        499,
-        526,
-        555,
+        -1,
+        -1,
+        -1,
         -1,
         -1,//655 
         -1,
@@ -16292,15 +16595,15 @@ function Chapter()
         -1,
         -1,//665 
         -1,
-        -1,
-        -1,
-        -1,
+        508,
+        535,
+        564,
         -1,//670 
         -1,
         -1,
-        499,//673 GHOST SLIDE
-        526,
-        555,//675 
+        -1,
+        -1,
+        -1,//675 
         -1,
         -1,
         -1,
@@ -16314,9 +16617,9 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,
-        -1,//690 
-        -1,
+        508,//689 GHOST SLIDE
+        535,//690 
+        564,
         -1,
         -1,
         -1,
@@ -16381,7 +16684,7 @@ function Chapter()
         -1,
         -1,
         -1,//755 
-        -1,//756 POPUP
+        -1,
         -1,
         -1,
         -1,
@@ -16394,10 +16697,10 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,//769 POPUP
+        -1,
         -1,//770 
         -1,
-        -1,
+        -1,//772 POPUP
         -1,
         -1,
         -1,//775 
@@ -16408,13 +16711,13 @@ function Chapter()
         -1,//780 
         -1,
         -1,
-        -1,//783 POPUP
-        -1,
-        -1,//785 
         -1,
         -1,
-        -1,//788 Different Dorm…
-        209,
+        -1,//785 POPUP
+        -1,
+        -1,
+        -1,
+        -1,
         -1,//790 
         -1,
         -1,
@@ -16424,13 +16727,13 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,
+        -1,//799 POPUP
         -1,//800 
         -1,
         -1,
         -1,
-        -1,
-        -1,//805 
+        -1,//804 Different Dorm…
+        209,//805 
         -1,
         -1,
         -1,
@@ -16441,6 +16744,22 @@ function Chapter()
         -1,
         -1,
         -1,//815 
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,//820 
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,//825 
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,//830 
+        -1,
         -1,
         -1,
         ];
@@ -16482,7 +16801,7 @@ function Chapter()
         -1,
         -1,
         -1,//35 
-        -1,
+        -1,//36 Objective Complete: Get some breakfast at the Cafeteria! 
         -1,
         -1,
         -1,
@@ -16490,7 +16809,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,
+        -1,//44 Objective Complete: Follow Axel and go back to the Main Hallway! 
         -1,//45 
         -1,
         -1,
@@ -16537,12 +16856,12 @@ function Chapter()
         -1,
         -1,
         -1,//90 
-        -1,//91 TODO: Special Background Required
+        -1,
         -1,
         -1,
         -1,
         -1,//95 
-        -1,
+        -1,//96 TODO: Special Background Required
         -1,
         -1,
         -1,
@@ -16553,13 +16872,13 @@ function Chapter()
         -1,
         -1,//105 
         -1,
-        -1,//107 TODO: Objectives
+        -1,
         -1,
         -1,
         -1,//110 
         -1,
-        -1,
-        -1,
+        -1,//112 TODO: Objectives
+        -1,//113 Objective Complete: Quick! Get into Classroom 1!  
         -1,
         -1,//115 
         -1,
@@ -16845,7 +17164,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        401,
+        -1,
         -1,//400 
         -1,
         -1,
@@ -16853,8 +17172,8 @@ function Chapter()
         -1,
         -1,//405 
         -1,
-        -1,
-        -1,
+        409,
+        411,
         -1,
         -1,//410 
         -1,
@@ -16929,7 +17248,7 @@ function Chapter()
         -1,//480 
         -1,
         -1,
-        -1,//483 Special Background
+        -1,
         -1,
         -1,//485 
         -1,
@@ -16938,7 +17257,7 @@ function Chapter()
         -1,
         -1,//490 
         -1,
-        -1,
+        -1,//492 Special Background
         -1,
         -1,
         -1,//495 
@@ -17025,7 +17344,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,//579 Special Background
+        -1,
         -1,//580 
         -1,
         -1,
@@ -17034,15 +17353,15 @@ function Chapter()
         -1,//585 
         -1,
         -1,
-        -1,
+        -1,//588 Special Background
         -1,
         -1,//590 
         -1,
         -1,
-        -1,
-        -1,
+        -1,//593 Try to find Axel!
+        -1,//594 Explore the school and talk to your classmates!
         -1,//595 
-        -1,//596 POPUP
+        -1,
         -1,
         -1,
         -1,
@@ -17054,15 +17373,15 @@ function Chapter()
         -1,//605 
         -1,
         -1,
-        -1,
+        -1,//608 POPUP
         -1,
         -1,//610 
-        -1,
+        -1,//611 Objective Complete: Go to Classroom 2
         -1,
         -1,
         -1,
         -1,//615 
-        -1,//616 player clicks on the episode’s outfit.
+        -1,
         -1,
         -1,
         -1,
@@ -17076,12 +17395,12 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,//630 
+        -1,//630 player clicks on the episode’s outfit.
         -1,
         -1,
         -1,
         -1,
-        -1,//635 
+        -1,//635 Objective Complete:  Go to your dorm and prepare for the party!
         -1,
         -1,
         -1,
@@ -17097,9 +17416,9 @@ function Chapter()
         -1,
         -1,
         -1,//650 
-        654,
-        658,
-        661,
+        -1,
+        -1,
+        -1,
         -1,
         -1,//655 
         -1,
@@ -17113,15 +17432,15 @@ function Chapter()
         -1,
         -1,//665 
         -1,
-        -1,
-        -1,
-        -1,
+        670,
+        674,
+        677,
         -1,//670 
         -1,
         -1,
-        676,//673 GHOST SLIDE
-        680,
-        685,//675 
+        -1,
+        -1,
+        -1,//675 
         -1,
         -1,
         -1,
@@ -17135,9 +17454,9 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,
-        -1,//690 
-        -1,
+        692,//689 GHOST SLIDE
+        696,//690 
+        701,
         -1,
         -1,
         -1,
@@ -17202,7 +17521,7 @@ function Chapter()
         -1,
         -1,
         -1,//755 
-        -1,//756 POPUP
+        -1,
         -1,
         -1,
         -1,
@@ -17215,10 +17534,10 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,//769 POPUP
+        -1,
         -1,//770 
         -1,
-        -1,
+        -1,//772 POPUP
         -1,
         -1,
         -1,//775 
@@ -17229,13 +17548,13 @@ function Chapter()
         -1,//780 
         -1,
         -1,
-        -1,//783 POPUP
-        -1,
-        -1,//785 
         -1,
         -1,
-        -1,//788 Different Dorm…
-        790,
+        -1,//785 POPUP
+        -1,
+        -1,
+        -1,
+        -1,
         -1,//790 
         -1,
         -1,
@@ -17245,13 +17564,13 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,
+        -1,//799 POPUP
         -1,//800 
         -1,
         -1,
         -1,
-        -1,
-        -1,//805 
+        -1,//804 Different Dorm…
+        806,//805 
         -1,
         -1,
         -1,
@@ -17264,7 +17583,24 @@ function Chapter()
         -1,//815 
         -1,
         -1,
+        -1,
+        -1,
+        -1,//820 
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,//825 
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,//830 
+        -1,
+        -1,
+        -1,
         ];
+
 }
 
 Chapter();//the simple act of appending the .js file will load the chapter into memory

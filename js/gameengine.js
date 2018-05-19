@@ -179,6 +179,10 @@ function refreshInterface()//REFRESHES the interface
         //Text Container
         refreshTextContainer();
         
+        story[isVisited][user.storyLocation] = true;
+
+        refreshBottomGameContainer();
+        
         //TODO: on doit seulement ajouter le affinity si on n'a jamais visité la page
 
         document.getElementById('romance_button').style.visibility = "hidden";
@@ -789,7 +793,6 @@ function refreshInterface()//REFRESHES the interface
             refreshObjectiveContainer();
 
             //3. goto next slide
-            story[isVisited][user.storyLocation] = true;
             user.storyLocation++;//go to the next slide
             refreshInterface();
         }
@@ -806,7 +809,6 @@ function refreshInterface()//REFRESHES the interface
             refreshObjectiveContainer();
 
             //4. goto next slide
-            story[isVisited][user.storyLocation] = true;
             user.storyLocation++;//go to the next slide
             refreshInterface();
         }
@@ -820,6 +822,10 @@ function refreshInterface()//REFRESHES the interface
             
         }
         else if(story[special_option][user.storyLocation] == -12)// -12 === affect the affinity of a character without displaying it -> then goto next slide ***** GHOST SLIDE
+        {
+
+        }
+        else if(story[special_option][user.storyLocation] == -13)// -13 === directly goto landing slide ***** GHOST SLIDE
         {
 
         }
@@ -837,7 +843,6 @@ function refreshInterface()//REFRESHES the interface
 
     story[isVisited][user.storyLocation] = true;
     
-    refreshBottomGameContainer();
     refreshTestContainer();
 
     saveIsVisited();
@@ -1089,8 +1094,7 @@ function browseLink(link, element)//link is the link of the story (story[special
         var landingpoint = story[LP][user.storyLocation];
 
 
-        // alert("we are looking if you visited: " + pointofinterest + " (" + story[isVisited][pointofinterest] + ")");
-        console.log("slide: " + pointofinterest + " = " + story[isVisited][pointofinterest]);
+        // console.log("slide: " + pointofinterest + " = " + story[isVisited][pointofinterest]);
         
         //TODO: make a switch case
         if(story[isVisited][pointofinterest]) // if we visited the slide that is the "point of interest".

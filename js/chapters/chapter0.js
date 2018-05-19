@@ -100,54 +100,60 @@ function Chapter()
         "(That was the weirdest medical form I have ever filled out...)",//50 
         "(Next)",
         "Alright!",
+        "null",
         "(Once you are done exploring, click here to proceed)",
+        "null",//55 Objective Complete: Explore the school!
         "*Pant* Why do I feel so tired?",
-        "(Next)",//55 
+        "(Next)",
         "(Next)",
         "(That sounds awesome!)",
-        "null",
+        "null",//60 
         "(Next)",
-        "(Next)",//60 
+        "(Next)",
         "Wait, how will I be able to tell the difference?",
         "Got it!",
-        "(Next)",
-        "(Next)",
         "(Next)",//65 
+        "(Next)",
+        "(Next)",
         "null",
         "(I remembered how nobody was smiling at the entrance of the school earlier. I hope I can make some friends!)",
-        "(…Gas mask?)",
-        "null",
-        "(Next)",//70 
+        "(…Gas mask?)",//70 
         "null",
         "null",
-        "O-kay! (Shoot, they looked a little mad.)",
-        "See you later! (I think that went okay.)",
-        "Later! (That went pretty well!)",//75 
+        "null",//73 Objective Complete: Go Talk to the Person inside Classroom 1
+        "(Next)",
+        "null",//75 
         "null",
         "O-kay! (Shoot, they looked a little mad.)",
         "See you later! (I think that went okay.)",
         "Later! (That went pretty well!)",
         "null",//80 
-        "null",//81 ghost slide
-        "null",//82 ghost slide
-        "null",//83 ghost slide
-        "null",//84 ghost slide
-        "null",//85 ghost slide
-        "null",//86 ghost slide
+        "O-kay! (Shoot, they looked a little mad.)",
+        "See you later! (I think that went okay.)",
+        "Later! (That went pretty well!)",
+        "null",
+        "null",//85 
+        "null",//86 Objective Complete: Go Talk to the Person inside Hallway 1
+        "null",//87 ghost slide
+        "null",//88 ghost slide
+        "null",//89 ghost slide
+        "null",//90 ghost slide
+        "null",//91 ghost slide
+        "null",//92 ghost slide
         "Okay, I’ll have to brush up on my social skills.",
         "I’ll get better, you’ll see! There’s no way I’m missing the opportunity to make new friends!",
-        "Told you it would be easy!",
-        "Sweet!",//90 
+        "Told you it would be easy!",//95 
+        "Sweet!",
         "That’s pretty nice of her.",
         "Oh, I see. (I suddenly felt a little nervous.)",
         "(We walked until we met a beautiful lady in the hallway.)",
-        "(Lady Arlington was probably in her forties, considering her position in the school, but she looked much younger.)",
-        "(She had an aura of power and mystery… I felt intimidated and amazed at the same time. " + CharaX_username + " handed her the paperwork I filled out.)",//95 
+        "(Lady Arlington was probably in her forties, considering her position in the school, but she looked much younger.)",//100 
+        "(She had an aura of power and mystery… I felt intimidated and amazed at the same time. " + CharaX_username + " handed her the paperwork I filled out.)",
         "(Lady Arlington turned to look at us.)",
         "(Hey eyes met mine and...)",
         "(She dropped my paperwork on the ground.)",
-        "(The principal looked at me as if she saw a ghost. It felt very awkward and I didn’t know where to look.)",
-        "W-Wait! (But " + CharaX_username + " just left the hallway, leaving me alone with the principal.)",//100 
+        "(The principal looked at me as if she saw a ghost. It felt very awkward and I didn’t know where to look.)",//105 
+        "W-Wait! (But " + CharaX_username + " just left the hallway, leaving me alone with the principal.)",
         "(Her look lingered for a couple of seconds. I could feel myself beginning to sweat a little as her eyes pierced my soul.)",
         "(END OF CHAPTER 0)",
         ];
@@ -207,53 +213,59 @@ function Chapter()
         "Now that you know where your dorm is, try exploring the school a little.",
         "I’ll be waiting for you right here.",
         "null",
+        "null",
+        "null",//55 Objective Complete: Explore the school!
         "Hi again!",
-        "Oh! I forgot to tell you about energy.",//55 
+        "Oh! I forgot to tell you about energy.",
         "Each day you log in, you’ll be able to receive energy points.",
         "The more days you log into the game, the more energy points you will be able to get! Of course, for the sake of this demo, you will have infinite energy. Consider this a small welcome gift from the Academy.",
-        "You can check how much energy you currently have on the purple bar at the top of this page. After a certain point in your adventures at Arlington, you will begin to use up your energy. At that point, when the full version of the game is released, I promise I’ll be back to explain how you get can more energy!",
+        "You can check how much energy you currently have on the purple bar at the top of this page. After a certain point in your adventures at Arlington, you will begin to use up your energy. At that point, when the full version of the game is released, I promise I’ll be back to explain how you get can more energy!",//60 
         "You’ll need your energy to fulfill your destiny here at Arlington Academy. You will also meet a lot of characters that will be with you until the very end.",
-        "Some people will be relatively easy to get along with, others… not so much.",//60 
+        "Some people will be relatively easy to get along with, others… not so much.",
         "All the characters you’re going to meet will have an “infinity meter”. You will have several dialogue choices. You’re going to have to choose whether you want your choices to build on your friendship with them, or your romance.",
         "Friendship dialogue options will be indicated with a handshake button while romance dialogue options will be indicated with a heart button!",
-        "Furthermore, if you choose to just stay friends with a character and only pick friendship dialogue options, your infinity meter will only go up to 50%, not one percent more.",
+        "Furthermore, if you choose to just stay friends with a character and only pick friendship dialogue options, your infinity meter will only go up to 50%, not one percent more.",//65 
         "Only romance dialogue options will make your infinity meter with a character reach its max.",
-        "Once you choose, you’ll have to make yet another choice of dialogues that will either raise, drop, or leave your infinity meter as it is.",//65 
+        "Once you choose, you’ll have to make yet another choice of dialogues that will either raise, drop, or leave your infinity meter as it is.",
         "Choose wisely! If your infinity meter is too low, you will not get the date you want with your favorite character at the end of each chapter.",
         "Haha! You’ll find that the students at Arlington Academy aren’t as simple to figure out.",
-        "Go ahead and give it a try. I know some of my friends are in Classroom 1. Why don't you pay them a visit? Oh and also… Don’t mind the gas mask, it's for aesthetic purposes.",
+        "Go ahead and give it a try. I know some of my friends are in Classroom 1. Why don't you pay them a visit? Oh and also… Don’t mind the gas mask, it's for aesthetic purposes.",//70 
         "null",
-        "Hi! You must be a new scholarship student. Welcome to Arlington!",//70 
         "null",
+        "null",//73 Objective Complete: Go Talk to the Person inside Classroom 1
+        "Hi! You must be a new scholarship student. Welcome to Arlington!",
+        "null",//75 
         "null",
         "It is for us to know and for you to never find out. ",
         "It’s nice to meet you. I bet you still have tons of things to unpack, so I’ll see you later!",
-        "That’s the spirit! I’ll let Serena guide you through the rest of this introduction, you’re almost done. See you around!",//75 
-        "null",
+        "That’s the spirit! I’ll let Serena guide you through the rest of this introduction, you’re almost done. See you around!",
+        "null",//80 
         "It is for us to know and for you to never find out. ",
         "It’s nice to meet you. I bet you still have tons of things to unpack, so I’ll see you later!",
         "Aw, it’s no biggie. I’m glad to meet a new player! I’ll let Serena guide you through the rest of this introduction, you’re almost done. See you around!",
-        "null",//80 
-        "null",//81 ghost slide
-        "null",//82 ghost slide
-        "null",//83 ghost slide
-        "null",//84 ghost slide
-        "null",//85 ghost slide
-        "null",//86 ghost slide
+        "null",
+        "null",//85 
+        "null",//86 Objective Complete: Go Talk to the Person inside Hallway 1
+        "null",//87 ghost slide
+        "null",//88 ghost slide
+        "null",//89 ghost slide
+        "null",//90 ghost slide
+        "null",//91 ghost slide
+        "null",//92 ghost slide
         "“Easy” you said?",
         "Not bad, but not perfect either.",
-        "It looks like I underestimated you. That interaction was pretty smooth.",
-        "Haha! Well it seems like you’re ready to start your adventure here at Arlington.",//90 
+        "It looks like I underestimated you. That interaction was pretty smooth.",//95 
+        "Haha! Well it seems like you’re ready to start your adventure here at Arlington.",
         "I’ll take you to the principal, Lady Arlington. She insists on welcoming all new students at the beginning of each year.",
         "HA! She’s nice alright… until you start breaking any rules.",
         "null",
+        "null",//100 
         "null",
-        "null",//95 
         "Here’s one of the new scholarship students Ms. Arlington!",
         "null",
         "null",
-        "null",
-        "Well, this feels a bit awkward...so I’m going to head out. I’ve got a game to develop. Good luck and have fun at Arlington!",//100 
+        "null",//105 
+        "Well, this feels a bit awkward...so I’m going to head out. I’ve got a game to develop. Good luck and have fun at Arlington!",
         "null",
         "null",
         ];
@@ -313,53 +325,59 @@ function Chapter()
         personnages.charaX[0],
         personnages.charaX[0],
         "null",
-        personnages.charaX[1],
-        personnages.charaX[0],//55 
-        personnages.charaX[0],
-        personnages.charaX[0],
-        personnages.charaX[0],
-        personnages.charaX[1],
-        personnages.charaX[1],//60 
-        personnages.charaX[0],
+        "null",
+        "null",//55 Objective Complete: Explore the school!
         personnages.charaX[1],
         personnages.charaX[0],
         personnages.charaX[0],
+        personnages.charaX[0],
+        personnages.charaX[0],//60 
+        personnages.charaX[1],
+        personnages.charaX[1],
+        personnages.charaX[0],
+        personnages.charaX[1],
         personnages.charaX[0],//65 
         personnages.charaX[0],
+        personnages.charaX[0],
+        personnages.charaX[0],
         personnages.charaX[1],
-        personnages.charaX[1],
+        personnages.charaX[1],//70 
         "null",
-        personnages.charaY[0],//70 
-        personnages.charaY[0],
-        personnages.charaY[0],
-        personnages.charaY[4],
+        "null",
+        "null",//73 Objective Complete: Go Talk to the Person inside Classroom 1
         personnages.charaY[0],
         personnages.charaY[0],//75 
         personnages.charaY[0],
         personnages.charaY[4],
         personnages.charaY[0],
         personnages.charaY[0],
-        "null",//80 
-        "null",//81 ghost slide
-        "null",//82 ghost slide
-        "null",//83 ghost slide
-        "null",//84 ghost slide
-        "null",//85 ghost slide
-        "null",//86 ghost slide
-        personnages.charaX[0],
-        personnages.charaX[0],
-        personnages.charaX[0],
-        personnages.charaX[0],//90 
-        personnages.charaX[0],
-        personnages.charaX[0],
+        personnages.charaY[0],//80 
+        personnages.charaY[4],
+        personnages.charaY[0],
+        personnages.charaY[0],
+        "null",
+        "null",//85 
+        "null",//86 Objective Complete: Go Talk to the Person inside Hallway 1
+        "null",//87 ghost slide
+        "null",//88 ghost slide
+        "null",//89 ghost slide
+        "null",//90 ghost slide
+        "null",//91 ghost slide
+        "null",//92 ghost slide
         personnages.charaX[0],
         personnages.charaX[0],
         personnages.charaX[0],//95 
         personnages.charaX[0],
-        "null",
-        "null",
-        "null",
+        personnages.charaX[0],
+        personnages.charaX[0],
+        personnages.charaX[0],
         personnages.charaX[0],//100 
+        personnages.charaX[0],
+        personnages.charaX[0],
+        "null",
+        "null",
+        "null",//105 
+        personnages.charaX[0],
         personnages.l_arlington[5],
         personnages.l_arlington[5],
         ];
@@ -420,7 +438,7 @@ function Chapter()
         "null",
         "null",
         "null",
-        "null",//55 
+        "null",//55 Objective Complete: Explore the school!
         "null",
         "null",
         "null",
@@ -438,7 +456,7 @@ function Chapter()
         "null",//70 
         "null",
         "null",
-        "null",
+        "null",//73 Objective Complete: Go Talk to the Person inside Classroom 1
         "null",
         "null",//75 
         "null",
@@ -446,26 +464,32 @@ function Chapter()
         "null",
         "null",
         "null",//80 
-        "null",//81 ghost slide
-        "null",//82 ghost slide
-        "null",//83 ghost slide
-        "null",//84 ghost slide
-        "null",//85 ghost slide
-        "null",//86 ghost slide
         "null",
         "null",
         "null",
-        "null",//90 
         "null",
-        "null",
+        "null",//85 
+        "null",//86 Objective Complete: Go Talk to the Person inside Hallway 1
+        "null",//87 ghost slide
+        "null",//88 ghost slide
+        "null",//89 ghost slide
+        "null",//90 ghost slide
+        "null",//91 ghost slide
+        "null",//92 ghost slide
         "null",
         "null",
         "null",//95 
         "null",
-        "Thank you, I’ll be handling it from no-",
-        "*GASP*",
+        "null",
+        "null",
         "null",
         "null",//100 
+        "null",
+        "null",
+        "Thank you, I’ll be handling it from no-",
+        "*GASP*",
+        "null",//105 
+        "null",
         "null",
         "null",
         ];
@@ -526,7 +550,7 @@ function Chapter()
         "null",
         "null",
         "null",
-        "null",//55 
+        "null",//55 Objective Complete: Explore the school!
         "null",
         "null",
         "null",
@@ -544,7 +568,7 @@ function Chapter()
         "null",//70 
         "null",
         "null",
-        "null",
+        "null",//73 Objective Complete: Go Talk to the Person inside Classroom 1
         "null",
         "null",//75 
         "null",
@@ -552,26 +576,32 @@ function Chapter()
         "null",
         "null",
         "null",//80 
-        "null",//81 ghost slide
-        "null",//82 ghost slide
-        "null",//83 ghost slide
-        "null",//84 ghost slide
-        "null",//85 ghost slide
-        "null",//86 ghost slide
         "null",
         "null",
         "null",
-        "null",//90 
+        "null",
+        "null",//85 
+        "null",//86 Objective Complete: Go Talk to the Person inside Hallway 1
+        "null",//87 ghost slide
+        "null",//88 ghost slide
+        "null",//89 ghost slide
+        "null",//90 ghost slide
+        "null",//91 ghost slide
+        "null",//92 ghost slide
+        "null",
+        "null",
+        "null",//95 
         "null",
         "null",
         "null",
+        "null",
+        personnages.l_arlington[0],//100 
         personnages.l_arlington[0],
-        personnages.l_arlington[0],//95 
         "null",
         personnages.l_arlington[0],
         personnages.l_arlington[5],
-        personnages.l_arlington[5],
-        "null",//100 
+        personnages.l_arlington[5],//105 
+        "null",
         "null",
         "null",
         ];
@@ -632,7 +662,7 @@ function Chapter()
         locations.dorm,
         locations.dorm,
         locations.dorm,
-        locations.dorm,//55 
+        locations.dorm,//55 Objective Complete: Explore the school!
         locations.dorm,
         locations.dorm,
         locations.dorm,
@@ -647,10 +677,10 @@ function Chapter()
         locations.dorm,
         locations.dorm,
         locations.dorm,
-        locations.class1,//70 
-        locations.class1,
-        locations.class1,
-        locations.class1,
+        locations.dorm,//70 
+        locations.dorm,
+        locations.dorm,
+        locations.dorm,//73 Objective Complete: Go Talk to the Person inside Classroom 1
         locations.class1,
         locations.class1,//75 
         locations.class1,
@@ -658,18 +688,18 @@ function Chapter()
         locations.class1,
         locations.class1,
         locations.class1,//80 
-        "null",//81 ghost slide
-        "null",//82 ghost slide
-        "null",//83 ghost slide
-        "null",//84 ghost slide
-        "null",//85 ghost slide
-        "null",//86 ghost slide
-        locations.hall1,
-        locations.hall1,
-        locations.hall1,
-        locations.hall1,//90 
-        locations.hall1,
-        locations.hall1,
+        locations.class1,
+        locations.class1,
+        locations.class1,
+        locations.class1,
+        locations.class1,//85 
+        locations.class1,//86 Objective Complete: Go Talk to the Person inside Hallway 1
+        locations.class1,//87 ghost slide
+        locations.class1,//88 ghost slide
+        locations.class1,//89 ghost slide
+        locations.class1,//90 ghost slide
+        locations.class1,//91 ghost slide
+        locations.class1,//92 ghost slide
         locations.hall1,
         locations.hall1,
         locations.hall1,//95 
@@ -678,6 +708,12 @@ function Chapter()
         locations.hall1,
         locations.hall1,
         locations.hall1,//100 
+        locations.hall1,
+        locations.hall1,
+        locations.hall1,
+        locations.hall1,
+        locations.hall1,//105 
+        locations.hall1,
         locations.hall1,
         locations.hall1,
         ];
@@ -736,54 +772,60 @@ function Chapter()
         -1,//50 
         -1,
         -1,
+        -8,
         -2,
+        -9,//55 Objective Complete: Explore the school!
         -1,
-        -1,//55 
         -1,
         -1,
-        -5,
         -1,
-        -1,//60 
+        -5,//60 
         -1,
         -1,
         -1,
         -1,
         -1,//65 
+        -1,
+        -1,
         -5,
         -1,
-        -1,
-        -2,
         -1,//70 
-        -4,
+        -8,
+        -2,
+        -9,//73 Objective Complete: Go Talk to the Person inside Classroom 1
+        -1,
+        -4,//75 
         -5,
-        80,
-        80,
-        80,//75 
-        -5,
-        80,
-        80,
-        80,
-        -2,//80 
-        -6,//81 ghost slide
-        -6,//82 ghost slide
-        -6,//83 ghost slide
-        -6,//84 ghost slide
-        -6,//85 ghost slide
-        -6,//86 ghost slide
-        90,
-        90,
-        90,
-        -1,//90 
-        -1,
-        -1,
-        -1,
-        -1,
-        -1,//95 
+        85,
+        85,
+        85,
+        -5,//80 
+        85,
+        85,
+        85,
+        -8,
+        -2,//85 
+        -9,//86 Objective Complete: Go Talk to the Person inside Hallway 1
+        -6,//87 ghost slide
+        -6,//88 ghost slide
+        -6,//89 ghost slide
+        -6,//90 ghost slide
+        -6,//91 ghost slide
+        -6,//92 ghost slide
+        96,
+        96,
+        96,//95 
         -1,
         -1,
         -1,
         -1,
         -1,//100 
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,//105 
+        -1,
         -1,
         -1,
         ];
@@ -844,7 +886,7 @@ function Chapter()
         0,
         0,
         0,
-        0,//55 
+        0,//55 Objective Complete: Explore the school!
         0,
         0,
         0,
@@ -858,30 +900,30 @@ function Chapter()
         0,
         0,
         0,
-        3,
+        0,
         0,//70 
         0,
-        0,
-        0,
+        3,
+        0,//73 Objective Complete: Go Talk to the Person inside Classroom 1
         0,
         0,//75 
         0,
         0,
         0,
         0,
-        2,//80 
-        0,//81 ghost slide
-        0,//82 ghost slide
-        0,//83 ghost slide
-        0,//84 ghost slide
-        0,//85 ghost slide
-        0,//86 ghost slide
+        0,//80 
         0,
         0,
         0,
-        0,//90 
         0,
-        0,
+        2,//85 
+        0,//86 Objective Complete: Go Talk to the Person inside Hallway 1
+        0,//87 ghost slide
+        0,//88 ghost slide
+        0,//89 ghost slide
+        0,//90 ghost slide
+        0,//91 ghost slide
+        0,//92 ghost slide
         0,
         0,
         0,//95 
@@ -890,6 +932,12 @@ function Chapter()
         0,
         0,
         0,//100 
+        0,
+        0,
+        0,
+        0,
+        0,//105 
+        0,
         0,
         0,
         ];
@@ -950,7 +998,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,//55 
+        -1,//55 Objective Complete: Explore the school!
         -1,
         -1,
         -1,
@@ -966,28 +1014,28 @@ function Chapter()
         -1,
         -1,
         -1,//70 
-        72,
         -1,
         -1,
+        -1,//73 Objective Complete: Go Talk to the Person inside Classroom 1
         -1,
-        -1,//75 
+        76,//75 
         -1,
         -1,
         -1,
         -1,
         -1,//80 
-        -1,//81 ghost slide
-        -1,//82 ghost slide
-        -1,//83 ghost slide
-        -1,//84 ghost slide
-        -1,//85 ghost slide
-        -1,//86 ghost slide
         -1,
         -1,
         -1,
-        -1,//90 
         -1,
-        -1,
+        -1,//85 
+        -1,//86 Objective Complete: Go Talk to the Person inside Hallway 1
+        -1,//87 ghost slide
+        -1,//88 ghost slide
+        -1,//89 ghost slide
+        -1,//90 ghost slide
+        -1,//91 ghost slide
+        -1,//92 ghost slide
         -1,
         -1,
         -1,//95 
@@ -996,6 +1044,12 @@ function Chapter()
         -1,
         -1,
         -1,//100 
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,//105 
+        -1,
         -1,
         -1,
         ];
@@ -1056,7 +1110,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,//55 
+        -1,//55 Objective Complete: Explore the school!
         -1,
         -1,
         -1,
@@ -1072,28 +1126,28 @@ function Chapter()
         -1,
         -1,
         -1,//70 
-        76,
         -1,
         -1,
+        -1,//73 Objective Complete: Go Talk to the Person inside Classroom 1
         -1,
-        -1,//75 
+        80,//75 
         -1,
         -1,
         -1,
         -1,
         -1,//80 
-        -1,//81 ghost slide
-        -1,//82 ghost slide
-        -1,//83 ghost slide
-        -1,//84 ghost slide
-        -1,//85 ghost slide
-        -1,//86 ghost slide
         -1,
         -1,
         -1,
-        -1,//90 
         -1,
-        -1,
+        -1,//85 
+        -1,//86 Objective Complete: Go Talk to the Person inside Hallway 1
+        -1,//87 ghost slide
+        -1,//88 ghost slide
+        -1,//89 ghost slide
+        -1,//90 ghost slide
+        -1,//91 ghost slide
+        -1,//92 ghost slide
         -1,
         -1,
         -1,//95 
@@ -1102,6 +1156,12 @@ function Chapter()
         -1,
         -1,
         -1,//100 
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,//105 
+        -1,
         -1,
         -1,
         ];
@@ -1162,44 +1222,44 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,//55 
+        -1,//55 Objective Complete: Explore the school!
         -1,
         -1,
-        56,
         -1,
-        -1,//60 
+        -1,
+        58,//60 
         -1,
         -1,
         -1,
         -1,
         -1,//65 
-        61,
         -1,
         -1,
+        63,
         -1,
         -1,//70 
         -1,
-        73,
         -1,
+        -1,//73 Objective Complete: Go Talk to the Person inside Classroom 1
         -1,
         -1,//75 
         77,
         -1,
         -1,
         -1,
-        -1,//80 
-        -1,//81 ghost slide
-        -1,//82 ghost slide
-        -1,//83 ghost slide
-        -1,//84 ghost slide
-        -1,//85 ghost slide
-        -1,//86 ghost slide
+        81,//80 
         -1,
         -1,
         -1,
-        -1,//90 
         -1,
-        -1,
+        -1,//85 
+        -1,//86 Objective Complete: Go Talk to the Person inside Hallway 1
+        -1,//87 ghost slide
+        -1,//88 ghost slide
+        -1,//89 ghost slide
+        -1,//90 ghost slide
+        -1,//91 ghost slide
+        -1,//92 ghost slide
         -1,
         -1,
         -1,//95 
@@ -1208,6 +1268,12 @@ function Chapter()
         -1,
         -1,
         -1,//100 
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,//105 
+        -1,
         -1,
         -1,
         ];
@@ -1268,44 +1334,44 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,//55 
+        -1,//55 Objective Complete: Explore the school!
         -1,
         -1,
-        59,
         -1,
-        -1,//60 
+        -1,
+        61,//60 
         -1,
         -1,
         -1,
         -1,
         -1,//65 
-        67,
         -1,
         -1,
+        69,
         -1,
         -1,//70 
         -1,
-        74,
         -1,
+        -1,//73 Objective Complete: Go Talk to the Person inside Classroom 1
         -1,
         -1,//75 
         78,
         -1,
         -1,
         -1,
-        -1,//80 
-        -1,//81 ghost slide
-        -1,//82 ghost slide
-        -1,//83 ghost slide
-        -1,//84 ghost slide
-        -1,//85 ghost slide
-        -1,//86 ghost slide
+        82,//80 
         -1,
         -1,
         -1,
-        -1,//90 
         -1,
-        -1,
+        -1,//85 
+        -1,//86 Objective Complete: Go Talk to the Person inside Hallway 1
+        -1,//87 ghost slide
+        -1,//88 ghost slide
+        -1,//89 ghost slide
+        -1,//90 ghost slide
+        -1,//91 ghost slide
+        -1,//92 ghost slide
         -1,
         -1,
         -1,//95 
@@ -1314,6 +1380,12 @@ function Chapter()
         -1,
         -1,
         -1,//100 
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,//105 
+        -1,
         -1,
         -1,
         ];
@@ -1374,7 +1446,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,//55 
+        -1,//55 Objective Complete: Explore the school!
         -1,
         -1,
         -1,
@@ -1391,27 +1463,27 @@ function Chapter()
         -1,
         -1,//70 
         -1,
-        75,
         -1,
+        -1,//73 Objective Complete: Go Talk to the Person inside Classroom 1
         -1,
         -1,//75 
         79,
         -1,
         -1,
         -1,
-        -1,//80 
-        -1,//81 ghost slide
-        -1,//82 ghost slide
-        -1,//83 ghost slide
-        -1,//84 ghost slide
-        -1,//85 ghost slide
-        -1,//86 ghost slide
+        83,//80 
         -1,
         -1,
         -1,
-        -1,//90 
         -1,
-        -1,
+        -1,//85 
+        -1,//86 Objective Complete: Go Talk to the Person inside Hallway 1
+        -1,//87 ghost slide
+        -1,//88 ghost slide
+        -1,//89 ghost slide
+        -1,//90 ghost slide
+        -1,//91 ghost slide
+        -1,//92 ghost slide
         -1,
         -1,
         -1,//95 
@@ -1420,6 +1492,12 @@ function Chapter()
         -1,
         -1,
         -1,//100 
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,//105 
+        -1,
         -1,
         -1,
         ];
@@ -1478,46 +1556,46 @@ function Chapter()
         "null",//50 
         "null",
         "null",
-        "New Objective: Explore the School!",
-        "Objective Complete: Explore the school!",
-        "null",//55 
+        "Explore the School!",
+        "null",
+        "null",//55 Objective Complete: Explore the school!
         "null",
         "null",
-        "Can you repeat that please?",
         "null",
-        "null",//60 
+        "null",
+        "Can you repeat that please?",//60 
         "null",
         "null",
         "null",
         "null",
         "null",//65 
+        "null",
+        "null",
         "Can you repeat that please?",
         "null",
+        "null",//70 
+        "Go Talk to the Person inside Classroom 1",
         "null",
-        "New Objective: Go Talk to the Person inside Classroom 1",
-        "Objective Complete: Go Talk to the Person inside Classroom 1",//70 
+        "null",//73 Objective Complete: Go Talk to the Person inside Classroom 1
         "null",
+        "null",//75 
         "Um, what’s with the gas mask?",
         "null",
         "null",
-        "null",//75 
-        "What’s with the lame radioactive suit?",
+        "null",
+        "What’s with the lame radioactive suit?",//80 
         "null",
         "null",
         "null",
-        "New Objective: Go Talk to the Person inside Hallway 1",//80 
-        "Objective Complete: Go Talk to the Person inside Hallway 1",//81 ghost slide
-        "null",//82 ghost slide
-        "null",//83 ghost slide
-        "null",//84 ghost slide
-        "null",//85 ghost slide
-        "null",//86 ghost slide
-        "null",
-        "null",
-        "null",
-        "null",//90 
-        "null",
-        "null",
+        "New Objective: Go Talk to the Person inside Hallway 1",
+        "null",//85 
+        "null",//86 Objective Complete: Go Talk to the Person inside Hallway 1
+        "null",//87 ghost slide
+        "null",//88 ghost slide
+        "null",//89 ghost slide
+        "null",//90 ghost slide
+        "null",//91 ghost slide
+        "null",//92 ghost slide
         "null",
         "null",
         "null",//95 
@@ -1526,6 +1604,12 @@ function Chapter()
         "null",
         "null",
         "null",//100 
+        "null",
+        "null",
+        "null",
+        "null",
+        "null",//105 
+        "null",
         "null",
         "null",
         ];
@@ -1586,44 +1670,44 @@ function Chapter()
         "null",
         "null",
         "null",
-        "null",//55 
+        "null",//55 Objective Complete: Explore the school!
         "null",
         "null",
-        "I’ll make sure to remember that, thanks!",
         "null",
-        "null",//60 
+        "null",
+        "I’ll make sure to remember that, thanks!",//60 
         "null",
         "null",
         "null",
         "null",
         "null",//65 
+        "null",
+        "null",
         "Pfff. That sounds easy enough. How hard can it be to make friends?",
-        "null",
-        "null",
         "null",
         "null",//70 
         "null",
-        "Hi! Yes, that’s me, I just arrived a few minutes ago.",
         "null",
+        "null",//73 Objective Complete: Go Talk to the Person inside Classroom 1
         "null",
         "null",//75 
         "Hi! Yes, that’s me, I just arrived a few minutes ago.",
         "null",
         "null",
         "null",
-        "null",//80 
-        "null",//81 ghost slide
-        "null",//82 ghost slide
-        "null",//83 ghost slide
-        "null",//84 ghost slide
-        "null",//85 ghost slide
-        "null",//86 ghost slide
+        "Hi! Yes, that’s me, I just arrived a few minutes ago.",//80 
         "null",
         "null",
         "null",
-        "null",//90 
         "null",
-        "null",
+        "null",//85 
+        "null",//86 Objective Complete: Go Talk to the Person inside Hallway 1
+        "null",//87 ghost slide
+        "null",//88 ghost slide
+        "null",//89 ghost slide
+        "null",//90 ghost slide
+        "null",//91 ghost slide
+        "null",//92 ghost slide
         "null",
         "null",
         "null",//95 
@@ -1632,6 +1716,12 @@ function Chapter()
         "null",
         "null",
         "null",//100 
+        "null",
+        "null",
+        "null",
+        "null",
+        "null",//105 
+        "null",
         "null",
         "null",
         ];
@@ -1692,7 +1782,7 @@ function Chapter()
         "null",
         "null",
         "null",
-        "null",//55 
+        "null",//55 Objective Complete: Explore the school!
         "null",
         "null",
         "null",
@@ -1709,27 +1799,27 @@ function Chapter()
         "null",
         "null",//70 
         "null",
+        "null",
+        "null",//73 Objective Complete: Go Talk to the Person inside Classroom 1
+        "null",
+        "null",//75 
         "Thank you! I’m so excited to start",
         "null",
         "null",
-        "null",//75 
-        "Thank you! It feels really nice to be so warmly welcomed!",
+        "null",
+        "Thank you! It feels really nice to be so warmly welcomed!",//80 
         "null",
         "null",
         "null",
-        "null",//80 
-        "null",//81 ghost slide
-        "null",//82 ghost slide
-        "null",//83 ghost slide
-        "null",//84 ghost slide
-        "null",//85 ghost slide
-        "null",//86 ghost slide
         "null",
-        "null",
-        "null",
-        "null",//90 
-        "null",
-        "null",
+        "null",//85 
+        "null",//86 Objective Complete: Go Talk to the Person inside Hallway 1
+        "null",//87 ghost slide
+        "null",//88 ghost slide
+        "null",//89 ghost slide
+        "null",//90 ghost slide
+        "null",//91 ghost slide
+        "null",//92 ghost slide
         "null",
         "null",
         "null",//95 
@@ -1738,6 +1828,12 @@ function Chapter()
         "null",
         "null",
         "null",//100 
+        "null",
+        "null",
+        "null",
+        "null",
+        "null",//105 
+        "null",
         "null",
         "null",
         ];
@@ -1798,7 +1894,7 @@ function Chapter()
         0,
         0,
         0,
-        0,//55 
+        0,//55 Objective Complete: Explore the school!
         0,
         0,
         0,
@@ -1816,26 +1912,26 @@ function Chapter()
         0,//70 
         0,
         0,
-        -5,
+        0,//73 Objective Complete: Go Talk to the Person inside Classroom 1
         0,
-        5,//75 
+        0,//75 
         0,
         -5,
         0,
         5,
         0,//80 
-        0,//81 ghost slide
-        0,//82 ghost slide
-        0,//83 ghost slide
-        0,//84 ghost slide
-        0,//85 ghost slide
-        0,//86 ghost slide
+        -5,
         0,
+        5,
         0,
-        0,
-        0,//90 
-        0,
-        0,
+        0,//85 
+        0,//86 Objective Complete: Go Talk to the Person inside Hallway 1
+        0,//87 ghost slide
+        0,//88 ghost slide
+        0,//89 ghost slide
+        0,//90 ghost slide
+        0,//91 ghost slide
+        0,//92 ghost slide
         0,
         0,
         0,//95 
@@ -1844,6 +1940,12 @@ function Chapter()
         0,
         0,
         0,//100 
+        0,
+        0,
+        0,
+        0,
+        0,//105 
+        0,
         0,
         0,
         ];
@@ -1904,7 +2006,7 @@ function Chapter()
         0,
         0,
         0,
-        0,//55 
+        0,//55 Objective Complete: Explore the school!
         0,
         0,
         0,
@@ -1922,7 +2024,7 @@ function Chapter()
         0,//70 
         0,
         0,
-        0,
+        0,//73 Objective Complete: Go Talk to the Person inside Classroom 1
         0,
         0,//75 
         0,
@@ -1930,18 +2032,18 @@ function Chapter()
         0,
         0,
         0,//80 
-        0,//81 ghost slide
-        0,//82 ghost slide
-        0,//83 ghost slide
-        0,//84 ghost slide
-        0,//85 ghost slide
-        0,//86 ghost slide
         0,
         0,
         0,
-        0,//90 
         0,
-        0,
+        0,//85 
+        0,//86 Objective Complete: Go Talk to the Person inside Hallway 1
+        0,//87 ghost slide
+        0,//88 ghost slide
+        0,//89 ghost slide
+        0,//90 ghost slide
+        0,//91 ghost slide
+        0,//92 ghost slide
         0,
         0,
         0,//95 
@@ -1950,6 +2052,12 @@ function Chapter()
         0,
         0,
         0,//100 
+        0,
+        0,
+        0,
+        0,
+        0,//105 
+        0,
         0,
         0,
         ];
@@ -2010,7 +2118,7 @@ function Chapter()
         false,
         false,
         false,
-        false,//55 
+        false,//55 Objective Complete: Explore the school!
         false,
         false,
         false,
@@ -2028,7 +2136,7 @@ function Chapter()
         false,//70 
         false,
         false,
-        false,
+        false,//73 Objective Complete: Go Talk to the Person inside Classroom 1
         false,
         false,//75 
         false,
@@ -2036,18 +2144,18 @@ function Chapter()
         false,
         false,
         false,//80 
-        false,//81 ghost slide
-        false,//82 ghost slide
-        false,//83 ghost slide
-        false,//84 ghost slide
-        false,//85 ghost slide
-        false,//86 ghost slide
         false,
         false,
         false,
-        false,//90 
         false,
-        false,
+        false,//85 
+        false,//86 Objective Complete: Go Talk to the Person inside Hallway 1
+        false,//87 ghost slide
+        false,//88 ghost slide
+        false,//89 ghost slide
+        false,//90 ghost slide
+        false,//91 ghost slide
+        false,//92 ghost slide
         false,
         false,
         false,//95 
@@ -2056,6 +2164,12 @@ function Chapter()
         false,
         false,
         false,//100 
+        false,
+        false,
+        false,
+        false,
+        false,//105 
+        false,
         false,
         false,
         ];
@@ -2116,7 +2230,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,//55 
+        53,//55 Objective Complete: Explore the school!
         -1,
         -1,
         -1,
@@ -2134,7 +2248,7 @@ function Chapter()
         -1,//70 
         -1,
         -1,
-        -1,
+        71,//73 Objective Complete: Go Talk to the Person inside Classroom 1
         -1,
         -1,//75 
         -1,
@@ -2142,18 +2256,18 @@ function Chapter()
         -1,
         -1,
         -1,//80 
-        73,//81 ghost slide
-        74,//82 ghost slide
-        75,//83 ghost slide
-        77,//84 ghost slide
-        78,//85 ghost slide
-        79,//86 ghost slide
         -1,
         -1,
         -1,
-        -1,//90 
         -1,
-        -1,
+        -1,//85 
+        84,//86 Objective Complete: Go Talk to the Person inside Hallway 1
+        77,//87 ghost slide
+        78,//88 ghost slide
+        79,//89 ghost slide
+        81,//90 ghost slide
+        82,//91 ghost slide
+        83,//92 ghost slide
         -1,
         -1,
         -1,//95 
@@ -2162,6 +2276,12 @@ function Chapter()
         -1,
         -1,
         -1,//100 
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,//105 
+        -1,
         -1,
         -1,
         ];
@@ -2222,7 +2342,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,//55 
+        -1,//55 Objective Complete: Explore the school!
         -1,
         -1,
         -1,
@@ -2240,7 +2360,7 @@ function Chapter()
         -1,//70 
         -1,
         -1,
-        -1,
+        -1,//73 Objective Complete: Go Talk to the Person inside Classroom 1
         -1,
         -1,//75 
         -1,
@@ -2248,18 +2368,18 @@ function Chapter()
         -1,
         -1,
         -1,//80 
-        87,//81 ghost slide
-        88,//82 ghost slide
-        89,//83 ghost slide
-        87,//84 ghost slide
-        88,//85 ghost slide
-        89,//86 ghost slide
         -1,
         -1,
         -1,
-        -1,//90 
         -1,
-        -1,
+        -1,//85 
+        -1,//86 Objective Complete: Go Talk to the Person inside Hallway 1
+        93,//87 ghost slide
+        94,//88 ghost slide
+        95,//89 ghost slide
+        93,//90 ghost slide
+        94,//91 ghost slide
+        95,//92 ghost slide
         -1,
         -1,
         -1,//95 
@@ -2270,7 +2390,14 @@ function Chapter()
         -1,//100 
         -1,
         -1,
+        -1,
+        -1,
+        -1,//105 
+        -1,
+        -1,
+        -1,
         ];
+
 }
 
 Chapter();//the simple act of appending the .js file will load the chapter into memory

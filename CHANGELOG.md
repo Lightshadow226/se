@@ -1,6 +1,20 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
 
+# Version 1.8.0 (Ch. 0 & 2 Objectives)
+## Fixed
+- `chapter0.js`  `chapter0.xlsx`
+    - added objectives to Ch. 0
+- `chapter2.js`  `chapter2.xlsx`
+    - added objectives to Ch. 2
+
+## Added
+- `sprite proportions`      `library.js`        `variables.js`
+    - added the proportions for Mrs. Rodriguez (Math Teacher)
+    - added the teacher's variables
+    - TODO: get more expressions for all characters
+
+
 # Version 1.7.7 (Ch. 1 Objectives)
 ## Fixed
 - `headers.php`
