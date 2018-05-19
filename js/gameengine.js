@@ -152,10 +152,9 @@ function refreshTextContainer()
 
 }
 
-function refreshInterface()//REFRESHES the interface
+//REFRESHES the entire interface
+function refreshInterface()
 {
-    // console.log("Current Affinity (beg): " + tadashi.affinity);
-    
     if(user.storyLocation >= story[main_text].length)//si le chapitre ("story") est terminé
     {
         endOfChapter();
@@ -734,7 +733,7 @@ function refreshInterface()//REFRESHES the interface
             if(story[choiceC_text][user.storyLocation] == "null")//2 choix
             {
                 choiceC.style.display = "none";
-                //choiceB.style.transform = "translateY(-" + 0 + "px)";//choice B needs to be at the bottom
+                choiceB.style.transform = "translateY(-" + 0 + "px)";//choice B needs to be at the bottom
                 $(choiceB).addClass("bottomChoice");
                 choiceA.style.transform = "translateY(-" + (choiceB.clientHeight) + "px)";//choice A needs to be above choice B only
             }
@@ -848,7 +847,6 @@ function refreshInterface()//REFRESHES the interface
     saveIsVisited();
     pushVariablesToDB();
     updateGameBar();
-    // console.log("Current Affinity (end): " + tadashi.affinity);
 }
 
 //This function is to affect what happens when we click on the text container depending on the link
@@ -1152,6 +1150,9 @@ function endOfChapter()
         {
             document.getElementById("next-chapter-button").remove();
         }
+
+        //hide the bottom objective, progress and characters container
+        hideBottomGameContainer(true);
     });
 
     

@@ -883,21 +883,21 @@ function pullVariablesFromDB()//we load the data from the database, and put it i
         /********************
         AFFINITY table
         *********************/
-        user.karolina = document.getElementById("db_handle_a1").value;
-        user.ellie = document.getElementById("db_handle_a2").value;
-        user.neha = document.getElementById("db_handle_a3").value;
-        user.raquel = document.getElementById("db_handle_a4").value;
-        user.claire = document.getElementById("db_handle_a5").value;
-        user.alistair = document.getElementById("db_handle_a6").value;
-        user.tadashi = document.getElementById("db_handle_a7").value;
-        user.tegan = document.getElementById("db_handle_a8").value;
-        user.tyler = document.getElementById("db_handle_a9").value;
-        user.axel = document.getElementById("db_handle_a10").value;
-        user.lady_arlington = document.getElementById("db_handle_a11").value;
-        user.coach_davis = document.getElementById("db_handle_a12").value;
-        user.serena = document.getElementById("db_handle_a13").value;
-        user.cecile = document.getElementById("db_handle_a14").value;
-        user.teacherChapter2 = document.getElementById("db_handle_a15").value;
+        karolina.affinity = document.getElementById("db_handle_a1").value;
+        ellie.affinity = document.getElementById("db_handle_a2").value;
+        neha.affinity = document.getElementById("db_handle_a3").value;
+        raquel.affinity = document.getElementById("db_handle_a4").value;
+        claire.affinity = document.getElementById("db_handle_a5").value;
+        alistair.affinity = document.getElementById("db_handle_a6").value;
+        tadashi.affinity = document.getElementById("db_handle_a7").value;
+        tegan.affinity = document.getElementById("db_handle_a8").value;
+        tyler.affinity = document.getElementById("db_handle_a9").value;
+        axel.affinity = document.getElementById("db_handle_a10").value;
+        lady_arlington.affinity = document.getElementById("db_handle_a11").value;
+        coach_davis.affinity = document.getElementById("db_handle_a12").value;
+        serena.affinity = document.getElementById("db_handle_a13").value;
+        cecile.affinity = document.getElementById("db_handle_a14").value;
+        teacher.affinity = document.getElementById("db_handle_a15").value;
 
         // $(document).ready(function(){try{refreshInterface();}catch(e){}});
         $(document).ready(function(){try{update_highest_affinity(); update_current_chapter();}catch(e){}});
@@ -958,22 +958,22 @@ function resetOldUserValues()
     oldUser.cecile = user.cecile
     oldUser.teacherChapter2 = user.teacherChapter2
 
-    karolina.affinity = oldUser.karolina;
-    ellie.affinity = oldUser.ellie;
-    neha.affinity = oldUser.neha;
-    raquel.affinity = oldUser.raquel;
-    claire.affinity = oldUser.claire;
-    alistair.affinity = oldUser.alistair;
-    tadashi.affinity = oldUser.tadashi;
-    tegan.affinity = oldUser.tegan;
-    tyler.affinity = oldUser.tyler;
-    axel.affinity = oldUser.axel;
+    oldUser.karolina = karolina.affinity;
+    oldUser.ellie = ellie.affinity;
+    oldUser.neha = neha.affinity;
+    oldUser.raquel = raquel.affinity;
+    oldUser.claire = claire.affinity;
+    oldUser.alistair = alistair.affinity;
+    oldUser.tadashi = tadashi.affinity;
+    oldUser.tegan = tegan.affinity;
+    oldUser.tyler = tyler.affinity;
+    oldUser.axel = axel.affinity;
 
-    lady_arlington.affinity = oldUser.lady_arlington;
-    coach_davis.affinity = oldUser.coach_davis;
-    serena.affinity = oldUser.serena;
-    cecile.affinity = oldUser.cecile;
-    teacher.affinity = oldUser.teacher;
+    oldUser.lady_arlington = lady_arlington.affinity;
+    oldUser.coach_davis = coach_davis.affinity;
+    oldUser.serena = serena.affinity;
+    oldUser.cecile = cecile.affinity;
+    oldUser.teacher = teacher.affinity;
 }
 
 pullVariablesFromDB();

@@ -13,6 +13,11 @@ var button_container = document.getElementById("button_container_horizontal");
 
 const character_portraits_path = "images/general/characters/characters_portraits/";
 
+// for(var index = 0; index < 10; index++)
+// {
+//     console.log(getPersonnageFromName(characters[index]).name + ": " + getPersonnageFromName(characters[index]).affinity);
+// }
+
 /**********Variables**********/
     /*Index Value
     0: Alistair
@@ -30,6 +35,7 @@ const character_portraits_path = "images/general/characters/characters_portraits
 /*****NE PAS METTRE LES ARRAYS DANS VARIABLES.JS*****/
 $(function create_interface()
 {
+    // pullVariablesFromDB();
     const qty_main_10 = 10;//de 0 à 9 
     const qty_classmates = 2;//de 9 à 9 (parce qu'il n'y en a pas encore)
     const qty_others = 1;//de 9 à 9 (parce qu'il n'y en a pas encore)
@@ -95,6 +101,7 @@ function create_line(index)
         var desc_dislikes = '<p><b>Dislikes: </b>' + dislikes[index] + '</p><br>';
         var desc_description = '<p class="chara_long_desc">' + fulldescription[index] + '</p>';
 
+        // console.log(getPersonnageFromName(characters[index]).name + ": " + getPersonnageFromName(characters[index]).affinity);
         var percentage = getPersonnageFromName(characters[index]).affinity;
 
     //create the divs
@@ -145,5 +152,3 @@ function create_line(index)
     
     // alert(line.clientHeight);
 }
-
-pullVariablesFromDB();

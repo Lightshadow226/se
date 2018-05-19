@@ -183,7 +183,7 @@
 
 	.main_content
 	{
-		width: 80%;
+		width: 61%;
 		min-width: 1000px;
 	}
 
@@ -250,7 +250,7 @@
 		text-align: center;
 	}
 
-	.center_div/*UNUSED*/
+	.center_div/*UNUSED ? */
 	{
 		margin: 0 auto;
 

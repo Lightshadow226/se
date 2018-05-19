@@ -221,7 +221,7 @@ function getPersonnageFromName(name)//returns a character from a string "name"
     {
         return coach_davis;
     }
-    else if(name == "Serena")
+    else if(name == "serena")
     {
         return serena;
     }
@@ -383,12 +383,26 @@ function getHighestAffinity()//returns the character with the highest affinity
 //*****OBJECTIVES*****
 function refreshBottomGameContainer()
 {
+    hideBottomGameContainer(false);
+
     refreshObjectiveContainer();
 
     refreshProgressBar();
 
     //We need to show all characters as a round image
     refreshCharacters();
+}
+
+function hideBottomGameContainer(hide)
+{
+    if(hide)
+    {
+        document.getElementById('opcContainer').style.display = "none";
+    }
+    else
+    {
+        document.getElementById('opcContainer').style.display = "block";
+    }
 }
 
 /* à améliorer en fonction de l'histoire parcourue (seulement s'il est possible de faire 1-2-3-4-5-12-6-7-30-15-16-17) */

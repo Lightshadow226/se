@@ -1,6 +1,27 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
 
+# Version 1.8.1 (Ch. 1 & 2 fixes)
+## Fixed
+- `gameengine.js`
+    - issue: when there are 2 choices and there were 3 choices previously in the game, choice A and B are overlapping
+    - (choice A was at the right place, but choice B didn't move)
+    - fix: put choice B at the bottom
+- `variables.js`
+    - issue: when the affinity went up/down, the affinity was saved in the DB, but in the next slide, the affinity went back down/up as if nothing happened
+    - fix: the function resetOldUserValues() inverted the variables (typo)
+- `CSS`
+    - changed the width of the page
+    - was 80%, now 71%
+    - the website looks better when it's more narrow
+    - the game plays better as well
+    - a search with 71% will only produce 3 results, thus it's easier to find
+- `chapter2.js`  `chapter2.xlsx`
+    - small fixes
+- `users.sql`
+    - Updated Database
+
+
 # Version 1.8.0 (Ch. 0 & 2 Objectives)
 ## Fixed
 - `chapter0.js`  `chapter0.xlsx`
