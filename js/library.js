@@ -425,10 +425,8 @@ function refreshObjectiveContainer()
             
             if(story[special_option][i] == -8)//if there's a new objective
             {
-                console.log("(Slide " + i + ") New Objective: " + story[new_objective_pointer][i]);
-                
+                // console.log("(Slide " + i + ") New Objective: " + story[new_objective_pointer][i]);
                 newObjectives.push(story[new_objective_pointer][i]);
-                // objective_container.innerHTML += "New Objective: " + story[new_objective_pointer][i] + "<br>";
             }
         
             //3. if slide was visited, did it have a completed objective?
@@ -436,7 +434,7 @@ function refreshObjectiveContainer()
             else if(story[special_option][i] == -9)//if there's a completed objective
             {
                 var relevant_slide = story[completed_objective_pointer][i];
-                console.log("(Slide " + i + ") Objective Completed: " + story[new_objective_pointer][relevant_slide] + " \n -> Points to slide " + relevant_slide);
+                // console.log("(Slide " + i + ") Objective Completed: " + story[new_objective_pointer][relevant_slide] + " \n -> Points to slide " + relevant_slide);
 
                 completedObjectives.push(story[new_objective_pointer][relevant_slide]);
             }
@@ -471,7 +469,7 @@ function refreshObjectiveContainer()
     if(netObjectives.length == 0)//if there are no objectives
     {
         objective_container.innerHTML = "You have no objectives for now.";
-        console.log("You have no objectives for now.");
+        // console.log("You have no objectives for now.");
     }
     else
     {
@@ -479,7 +477,7 @@ function refreshObjectiveContainer()
 
         for(var i = 0; i < netObjectives.length; i++)
         {
-            console.log(netObjectives[i] + "\n");
+            // console.log(netObjectives[i] + "\n");
             objective_container.innerHTML += (netObjectives[i] + "<br>");
         }
     }
@@ -741,34 +739,46 @@ function wipeCurrentChapter()
         
         if(story[isVisited][j])
         {
-            //Left infinity meter
-            if(story[4][j] != "null")//if there is a character 2 in this slide
-            {
-                console.log(j + " story[4][j]: " + story[4][j]);
-
-                var relevant_char = getPersonnage(story[4][j]);
-                relevant_char.affinity = Number(relevant_char.affinity);
-                relevant_char.affinity -= Number(story[infinityConsequence2][j]);//on doit s'assurer que la valeur est un nombre, parce que sinon, parfois, ça fait juste carrément rajouter un zéro
-                
-                if(Number(relevant_char.affinity) < 0)
-                {
-                    relevant_char.affinity = 0;
-                }
-            }
-            
             //Right infinity meter
-            if(story[2][j] != "null")//if there is a character 1 in this slide
+            if(story[CHARACTER1][j] != "null" && story[infinityConsequence1][j] != 0)//if there is a character 1 in this slide
             {
-                console.log(j + " story[2][j]: " + story[2][j]);
+                // console.log("Reverted: " + j + " story[2][j]: " + story[2][j]);
+                var relevant_char = getPersonnage(story[CHARACTER1][j]);
+                    relevant_char.affinity = Number(relevant_char.affinity);
+                
+                var oldAffinity = relevant_char.affinity;
+                
+                    relevant_char.affinity -= Number(story[infinityConsequence1][j]);
 
-                relevant_char = getPersonnage(story[2][j]);
-                relevant_char.affinity = Number(relevant_char.affinity);
-                relevant_char.affinity -= Number(story[infinityConsequence1][j]);
+                var newAffinity = relevant_char.affinity;
                 
                 if(Number(relevant_char.affinity) < 0)
                 {
                     relevant_char.affinity = 0;
                 }
+
+                console.log("Reverteds slide " + j + "\n" + relevant_char.name + " was " + oldAffinity + " is now " + newAffinity + "\n");
+            }
+
+            //Left infinity meter
+            if(story[CHARACTER2][j] != "null" && story[infinityConsequence2][j] != 0)//if there is a character 2 in this slide
+            {
+                
+                var relevant_char = getPersonnage(story[CHARACTER2][j]);
+                    relevant_char.affinity = Number(relevant_char.affinity);
+                
+                var oldAffinity = relevant_char.affinity;
+                
+                    relevant_char.affinity -= Number(story[infinityConsequence2][j]);//on doit s'assurer que la valeur est un nombre, parce que sinon, parfois, ça fait juste carrément rajouter un zéro
+                
+                var newAffinity = relevant_char.affinity;
+
+                if(Number(relevant_char.affinity) < 0)
+                {
+                    relevant_char.affinity = 0;
+                }
+
+                console.log("Reverteds slide " + j + "\n" + relevant_char.name + " was " + oldAffinity + " is now " + newAffinity + "\n");
             }
         }
 

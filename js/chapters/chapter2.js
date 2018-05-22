@@ -122,7 +122,7 @@ function Chapter()
         "Wait, does he have dark hair with blonde tips, brown eyes, and piercings?",
         "(I stared at Raquel, perplexed.)",
         "You mean, he’s actually famous?!",//95 
-        "(They all looked at me funny.)",//96 TODO: Special Background Required
+        "(They all looked at me funny.)",//96 Special Background Class 1
         "(Next)",
         "(Next)",
         "(She handed me her cell phone. There was a picture of Axel, holding a guitar and performing on a stage in front of what seemed like thousands of people.)",
@@ -138,7 +138,7 @@ function Chapter()
         "(And I’m supposed to be a scholarship student...)",
         "(This guy probably has a lot to deal with right now, but he seemed happy to talk to someone other than a fangirl.)",//110 
         "(Maybe I should try to find him and see if he’s alright.)",
-        "(I should also try to talk to the people I met yesterday. I could use some friends around here.)",//112 TODO: Objectives
+        "(I should also try to talk to the people I met yesterday. I could use some friends around here.)",
         "null",//113 Objective Complete: Quick! Get into Classroom 1!  
         "null",
         "null",//115 
@@ -614,7 +614,7 @@ function Chapter()
         "(Next)",//585 
         "(Next)",
         "(Axel sneaked out of the crowd so stealthily that I lost sight of him in a matter of seconds.)",
-        "Scholar: (As the crowd scattered, I spotted Alistair and Raquel.)",//588 Special Background
+        "(As the crowd scattered, I spotted Alistair and Raquel.)",
         "(They smiled at me and nodded approvingly.)",
         " (Karolina, however, seemed to be trying to kill me with her glare.)",//590 
         "(The bell rang and I quickly grabbed by stuff and headed towards my next class.)",
@@ -656,7 +656,7 @@ function Chapter()
         "...And celebrities.",
         "Oh my god, what am I even <em>doing</em> going to this party?!",
         "(I better choose my outfit well!)",
-        "[player clicks on the episode’s outfit.]",//630 player clicks on the episode’s outfit.
+        "(Click to put on your uniform)",//630 TODO: player clicks on the episode’s outfit.
         "(I spent hours anxiously piecing together the perfect outfit. I was so focused that I had not noticed the music coming from the hallway.)",
         "(When I looked at the time, I realized the party had already started a long time ago.)",
         "(I gasped before grabbing my cell phone and making my way out of my dorm.)",
@@ -959,7 +959,7 @@ function Chapter()
         "null",
         "Yup, that’s Mr. Rockstar alright. ",
         "null",//95 
-        "null",//96 TODO: Special Background Required
+        "null",//96 Special Background Class 1
         "null",
         "He’s very popular, I’m surprised you haven’t heard of him. He’s all over social media. Takes off his shirt on stage and throws it for an unlucky girl to catch and all. ",
         "null",
@@ -975,7 +975,7 @@ function Chapter()
         "null",
         "null",//110 
         "null",
-        "null",//112 TODO: Objectives
+        "null",
         "null",//113 Objective Complete: Quick! Get into Classroom 1!  
         "null",
         "null",//115 
@@ -1451,7 +1451,7 @@ function Chapter()
         "null",//585 
         "Typical.",
         "null",
-        "null",//588 Special Background
+        "null",
         "null",
         "null",//590 
         "null",
@@ -1493,7 +1493,7 @@ function Chapter()
         "null",
         "null",
         "null",
-        "null",//630 player clicks on the episode’s outfit.
+        "null",//630 TODO: player clicks on the episode’s outfit.
         "null",
         "null",
         "null",
@@ -1796,7 +1796,7 @@ function Chapter()
         personnages.raquel[0],
         personnages.raquel[0],
         personnages.raquel[0],//95 
-        "null",//96 TODO: Special Background Required
+        "null",//96 Special Background Class 1
         "null",
         personnages.tadashi[0],
         "null",
@@ -1812,7 +1812,7 @@ function Chapter()
         "null",
         "null",//110 
         "null",
-        "null",//112 TODO: Objectives
+        "null",
         "null",//113 Objective Complete: Quick! Get into Classroom 1!  
         "null",
         "null",//115 
@@ -2288,7 +2288,7 @@ function Chapter()
         "null",//585 
         personnages.tadashi[0],
         "null",
-        "null",//588 Special Background
+        personnages.alistair[0],
         personnages.alistair[0],
         personnages.karolina[0],//590 
         "null",
@@ -2330,7 +2330,7 @@ function Chapter()
         "null",
         "null",
         "null",
-        "null",//630 player clicks on the episode’s outfit.
+        "null",//630 TODO: player clicks on the episode’s outfit.
         "null",
         "null",
         "null",
@@ -2633,7 +2633,7 @@ function Chapter()
         "null",
         "null",
         "null",//95 
-        "null",//96 TODO: Special Background Required
+        "null",//96 Special Background Class 1
         "You didn’t know? This guy’s a legit rockstar. ",
         "null",
         "Here.",
@@ -2649,7 +2649,7 @@ function Chapter()
         "null",
         "null",//110 
         "null",
-        "null",//112 TODO: Objectives
+        "null",
         "null",//113 Objective Complete: Quick! Get into Classroom 1!  
         "null",
         "null",//115 
@@ -3125,7 +3125,7 @@ function Chapter()
         "Well, I’m going to bounce. I haven’t handed in an assignment in months and I know they’re not going to be happy with me. ",//585 
         "null",
         "null",
-        "null",//588 Special Background
+        "null",
         "null",
         "null",//590 
         "null",
@@ -3167,7 +3167,7 @@ function Chapter()
         "null",
         "null",
         "null",
-        "null",//630 player clicks on the episode’s outfit.
+        "null",//630 TODO: player clicks on the episode’s outfit.
         "null",
         "null",
         "null",
@@ -3470,7 +3470,7 @@ function Chapter()
         personnages.tadashi[0],
         "null",
         "null",//95 
-        "null",//96 TODO: Special Background Required
+        "null",//96 Special Background Class 1
         personnages.alistair[5],
         "null",
         personnages.raquel[0],
@@ -3486,7 +3486,7 @@ function Chapter()
         "null",
         "null",//110 
         "null",
-        "null",//112 TODO: Objectives
+        "null",
         "null",//113 Objective Complete: Quick! Get into Classroom 1!  
         "null",
         "null",//115 
@@ -3962,7 +3962,7 @@ function Chapter()
         personnages.axel[0],//585 
         "null",
         "null",
-        "null",//588 Special Background
+        personnages.raquel[0],
         personnages.raquel[0],
         "null",//590 
         "null",
@@ -4004,7 +4004,7 @@ function Chapter()
         "null",
         "null",
         "null",
-        "null",//630 player clicks on the episode’s outfit.
+        "null",//630 TODO: player clicks on the episode’s outfit.
         "null",
         "null",
         "null",
@@ -4307,7 +4307,7 @@ function Chapter()
         locations.class1,
         locations.class1,
         locations.class1,//95 
-        locations.class1,//96 TODO: Special Background Required
+        locations.specialclass1,//96 Special Background Class 1
         locations.class1,
         locations.class1,
         locations.class1,
@@ -4323,7 +4323,7 @@ function Chapter()
         locations.class1,
         locations.class1,//110 
         locations.class1,
-        locations.class1,//112 TODO: Objectives
+        locations.class1,
         locations.class1,//113 Objective Complete: Quick! Get into Classroom 1!  
         locations.class1,
         locations.class1,//115 
@@ -4703,7 +4703,7 @@ function Chapter()
         locations.hall1,
         locations.hall1,//490 
         locations.hall1,
-        locations.hall1,//492 Special Background
+        locations.specialhall1,//492 Special Background
         locations.hall1,
         locations.hall1,
         locations.hall1,//495 
@@ -4799,7 +4799,7 @@ function Chapter()
         locations.hall1,//585 
         locations.hall1,
         locations.hall1,
-        locations.hall1,//588 Special Background
+        locations.hall1,
         locations.hall1,
         locations.hall1,//590 
         locations.hall1,
@@ -4841,7 +4841,7 @@ function Chapter()
         locations.dorm,
         locations.dorm,
         locations.dorm,
-        locations.dorm,//630 player clicks on the episode’s outfit.
+        locations.dorm,//630 TODO: player clicks on the episode’s outfit.
         locations.dorm,
         locations.dorm,
         locations.dorm,
@@ -4849,192 +4849,192 @@ function Chapter()
         locations.dorm,//635 Objective Complete:  Go to your dorm and prepare for the party!
         locations.dorm,
         locations.dorm,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,//640 
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,//645 
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,//650 
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,//655 
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,//660 
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,//665 
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,//670 
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,//675 
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,//680 
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,//685 
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,//689 GHOST SLIDE
-        locations.dormHall,//690 
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,//695 
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,//700 
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,//705 
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,//710 
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,//715 
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,//720 
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,//725 
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,//730 
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,//735 
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,//740 
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,//745 
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,//750 
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,//755 
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,//760 
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,//765 
-        locations.dormHall,
-        locations.dorm,
-        locations.dorm,
-        locations.dorm,
-        locations.dorm,//770 
-        locations.dorm,
-        locations.dorm,//772 POPUP
-        locations.dorm,
-        locations.dorm,
-        locations.dorm,//775 
-        locations.dorm,
-        locations.dorm,
-        locations.dorm,
-        locations.dorm,
-        locations.dorm,//780 
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,
-        locations.dormHall,//785 POPUP
-        locations.dormHall,
-        locations.dormHall,
-        locations.dorm,
-        locations.dorm,
-        locations.dorm,//790 
-        locations.dorm,
-        locations.dorm,
-        locations.dorm,
-        locations.dorm,
-        locations.dorm,//795 
-        locations.dorm,
-        locations.dorm,
-        locations.dorm,
-        locations.dorm,//799 POPUP
-        locations.dorm,//800 
-        locations.dorm,
-        locations.dorm,
-        locations.dorm,
-        locations.dorm,//804 Different Dorm…
-        locations.dorm,//805 
-        locations.dorm,
-        locations.dorm,
-        locations.dorm,
-        locations.dorm,
-        locations.dorm,//810 
-        locations.dorm,
-        locations.dorm,
-        locations.dorm,
-        locations.dorm,
-        locations.dorm,//815 
-        locations.dorm,
-        locations.dorm,
-        locations.dorm,
-        locations.dorm,
-        locations.dorm,//820 
-        locations.dorm,
-        locations.dormHall,
-        locations.dormHall,
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,//640 
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,//645 
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,//650 
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,//655 
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,//660 
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,//665 
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,//670 
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,//675 
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,//680 
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,//685 
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,//689 GHOST SLIDE
+        locations.dormHallParty,//690 
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,//695 
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,//700 
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,//705 
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,//710 
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,//715 
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,//720 
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,//725 
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,//730 
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,//735 
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,//740 
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,//745 
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,//750 
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,//755 
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,//760 
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,
+        locations.dormHallParty,//765 
+        locations.dormHallParty,
+        locations.claireDormParty,
+        locations.claireDormParty,
+        locations.claireDormParty,
+        locations.claireDormParty,//770 
+        locations.claireDormParty,
+        locations.claireDormParty,//772 POPUP
+        locations.claireDormParty,
+        locations.claireDormParty,
+        locations.claireDormParty,//775 
+        locations.claireDormParty,
+        locations.claireDormParty,
+        locations.claireDormParty,
+        locations.claireDormParty,
+        locations.claireDormParty,//780 
+        locations.claireDormParty,
+        locations.claireDormParty,
+        locations.claireDormParty,
+        locations.claireDormParty,
+        locations.claireDormParty,//785 POPUP
+        locations.claireDormParty,
+        locations.claireDormParty,
+        locations.claireDormParty,
+        locations.claireDormParty,
+        locations.claireDormParty,//790 
+        locations.claireDormParty,
+        locations.claireDormParty,
+        locations.claireDormParty,
+        locations.claireDormParty,
+        locations.claireDormParty,//795 
+        locations.claireDormParty,
+        locations.claireDormParty,
+        locations.claireDormParty,
+        locations.claireDormParty,//799 POPUP
+        locations.claireDormParty,//800 
+        locations.claireDormParty,
+        locations.claireDormParty,
+        locations.claireDormParty,
+        locations.nehadorm,//804 Different Dorm…
+        locations.nehadorm,//805 
+        locations.nehadorm,
+        locations.nehadorm,
+        locations.nehadorm,
+        locations.nehadorm,
+        locations.nehadorm,//810 
+        locations.nehadorm,
+        locations.nehadorm,
+        locations.nehadorm,
+        locations.nehadorm,
+        locations.nehadorm,//815 
+        locations.nehadorm,
+        locations.nehadorm,
+        locations.nehadorm,
+        locations.nehadorm,
+        locations.nehadorm,//820 
+        locations.nehadorm,
+        locations.dormHallParty,
+        locations.dormHallParty,
         locations.dorm,
         locations.dorm,//825 
         locations.dorm,
@@ -5144,7 +5144,7 @@ function Chapter()
         -1,
         -1,
         -1,//95 
-        -1,//96 TODO: Special Background Required
+        -1,//96 Special Background Class 1
         -1,
         -1,
         -1,
@@ -5160,7 +5160,7 @@ function Chapter()
         -1,
         -1,//110 
         -1,
-        -1,//112 TODO: Objectives
+        -1,
         -9,//113 Objective Complete: Quick! Get into Classroom 1!  
         -8,
         -8,//115 
@@ -5636,7 +5636,7 @@ function Chapter()
         -1,//585 
         -1,
         -1,
-        -1,//588 Special Background
+        -1,
         -1,
         591,//590 
         -1,
@@ -5678,7 +5678,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,//630 player clicks on the episode’s outfit.
+        -14,//630 TODO: player clicks on the episode’s outfit.
         -1,
         -1,
         -1,
@@ -5981,7 +5981,7 @@ function Chapter()
         0,
         0,
         0,//95 
-        0,//96 TODO: Special Background Required
+        0,//96 Special Background Class 1
         0,
         0,
         0,
@@ -5997,7 +5997,7 @@ function Chapter()
         0,
         0,//110 
         0,
-        0,//112 TODO: Objectives
+        0,
         0,//113 Objective Complete: Quick! Get into Classroom 1!  
         0,
         0,//115 
@@ -6473,7 +6473,7 @@ function Chapter()
         0,//585 
         0,
         0,
-        0,//588 Special Background
+        0,
         0,
         0,//590 
         0,
@@ -6515,7 +6515,7 @@ function Chapter()
         0,
         0,
         0,
-        0,//630 player clicks on the episode’s outfit.
+        0,//630 TODO: player clicks on the episode’s outfit.
         0,
         0,
         0,
@@ -6818,7 +6818,7 @@ function Chapter()
         -1,
         -1,
         -1,//95 
-        -1,//96 TODO: Special Background Required
+        -1,//96 Special Background Class 1
         -1,
         -1,
         -1,
@@ -6834,7 +6834,7 @@ function Chapter()
         -1,
         -1,//110 
         -1,
-        -1,//112 TODO: Objectives
+        -1,
         -1,//113 Objective Complete: Quick! Get into Classroom 1!  
         -1,
         -1,//115 
@@ -7310,7 +7310,7 @@ function Chapter()
         -1,//585 
         -1,
         -1,
-        -1,//588 Special Background
+        -1,
         -1,
         -1,//590 
         -1,
@@ -7352,7 +7352,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,//630 player clicks on the episode’s outfit.
+        -1,//630 TODO: player clicks on the episode’s outfit.
         -1,
         -1,
         -1,
@@ -7655,7 +7655,7 @@ function Chapter()
         -1,
         -1,
         -1,//95 
-        -1,//96 TODO: Special Background Required
+        -1,//96 Special Background Class 1
         -1,
         -1,
         -1,
@@ -7671,7 +7671,7 @@ function Chapter()
         -1,
         -1,//110 
         -1,
-        -1,//112 TODO: Objectives
+        -1,
         -1,//113 Objective Complete: Quick! Get into Classroom 1!  
         -1,
         -1,//115 
@@ -8147,7 +8147,7 @@ function Chapter()
         -1,//585 
         -1,
         -1,
-        -1,//588 Special Background
+        -1,
         -1,
         -1,//590 
         -1,
@@ -8189,7 +8189,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,//630 player clicks on the episode’s outfit.
+        -1,//630 TODO: player clicks on the episode’s outfit.
         -1,
         -1,
         -1,
@@ -8492,7 +8492,7 @@ function Chapter()
         -1,
         -1,
         -1,//95 
-        -1,//96 TODO: Special Background Required
+        -1,//96 Special Background Class 1
         -1,
         -1,
         -1,
@@ -8508,7 +8508,7 @@ function Chapter()
         -1,
         -1,//110 
         -1,
-        -1,//112 TODO: Objectives
+        -1,
         -1,//113 Objective Complete: Quick! Get into Classroom 1!  
         -1,
         -1,//115 
@@ -8984,7 +8984,7 @@ function Chapter()
         -1,//585 
         -1,
         -1,
-        -1,//588 Special Background
+        -1,
         -1,
         -1,//590 
         -1,
@@ -9026,7 +9026,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,//630 player clicks on the episode’s outfit.
+        -1,//630 TODO: player clicks on the episode’s outfit.
         -1,
         -1,
         -1,
@@ -9329,7 +9329,7 @@ function Chapter()
         -1,
         -1,
         -1,//95 
-        -1,//96 TODO: Special Background Required
+        -1,//96 Special Background Class 1
         -1,
         -1,
         -1,
@@ -9345,7 +9345,7 @@ function Chapter()
         -1,
         -1,//110 
         -1,
-        -1,//112 TODO: Objectives
+        -1,
         -1,//113 Objective Complete: Quick! Get into Classroom 1!  
         -1,
         -1,//115 
@@ -9821,7 +9821,7 @@ function Chapter()
         -1,//585 
         -1,
         -1,
-        -1,//588 Special Background
+        -1,
         -1,
         -1,//590 
         -1,
@@ -9863,7 +9863,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,//630 player clicks on the episode’s outfit.
+        -1,//630 TODO: player clicks on the episode’s outfit.
         -1,
         -1,
         -1,
@@ -10166,7 +10166,7 @@ function Chapter()
         -1,
         -1,
         -1,//95 
-        -1,//96 TODO: Special Background Required
+        -1,//96 Special Background Class 1
         -1,
         -1,
         -1,
@@ -10182,7 +10182,7 @@ function Chapter()
         -1,
         -1,//110 
         -1,
-        -1,//112 TODO: Objectives
+        -1,
         -1,//113 Objective Complete: Quick! Get into Classroom 1!  
         -1,
         -1,//115 
@@ -10658,7 +10658,7 @@ function Chapter()
         -1,//585 
         -1,
         -1,
-        -1,//588 Special Background
+        -1,
         -1,
         -1,//590 
         -1,
@@ -10700,7 +10700,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,//630 player clicks on the episode’s outfit.
+        -1,//630 TODO: player clicks on the episode’s outfit.
         -1,
         -1,
         -1,
@@ -11003,7 +11003,7 @@ function Chapter()
         "null",
         "null",
         "null",//95 
-        "null",//96 TODO: Special Background Required
+        "null",//96 Special Background Class 1
         "null",
         "null",
         "null",
@@ -11019,7 +11019,7 @@ function Chapter()
         "null",
         "null",//110 
         "null",
-        "null",//112 TODO: Objectives
+        "null",
         "null",//113 Objective Complete: Quick! Get into Classroom 1!  
         "Try to find Axel!",
         "Explore the school and talk to your classmates!",//115 
@@ -11495,7 +11495,7 @@ function Chapter()
         "null",//585 
         "null",
         "null",
-        "null",//588 Special Background
+        "null",
         "null",
         "null",//590 
         "null",
@@ -11537,7 +11537,7 @@ function Chapter()
         "null",
         "null",
         "null",
-        "null",//630 player clicks on the episode’s outfit.
+        "null",//630 TODO: player clicks on the episode’s outfit.
         "null",
         "null",
         "null",
@@ -11840,7 +11840,7 @@ function Chapter()
         "null",
         "null",
         "null",//95 
-        "null",//96 TODO: Special Background Required
+        "null",//96 Special Background Class 1
         "null",
         "null",
         "null",
@@ -11856,7 +11856,7 @@ function Chapter()
         "null",
         "null",//110 
         "null",
-        "null",//112 TODO: Objectives
+        "null",
         "null",//113 Objective Complete: Quick! Get into Classroom 1!  
         "null",
         "null",//115 
@@ -12332,7 +12332,7 @@ function Chapter()
         "null",//585 
         "null",
         "null",
-        "null",//588 Special Background
+        "null",
         "null",
         "null",//590 
         "null",
@@ -12374,7 +12374,7 @@ function Chapter()
         "null",
         "null",
         "null",
-        "null",//630 player clicks on the episode’s outfit.
+        "null",//630 TODO: player clicks on the episode’s outfit.
         "null",
         "null",
         "null",
@@ -12677,7 +12677,7 @@ function Chapter()
         "null",
         "null",
         "null",//95 
-        "null",//96 TODO: Special Background Required
+        "null",//96 Special Background Class 1
         "null",
         "null",
         "null",
@@ -12693,7 +12693,7 @@ function Chapter()
         "null",
         "null",//110 
         "null",
-        "null",//112 TODO: Objectives
+        "null",
         "null",//113 Objective Complete: Quick! Get into Classroom 1!  
         "null",
         "null",//115 
@@ -13169,7 +13169,7 @@ function Chapter()
         "null",//585 
         "null",
         "null",
-        "null",//588 Special Background
+        "null",
         "null",
         "null",//590 
         "null",
@@ -13211,7 +13211,7 @@ function Chapter()
         "null",
         "null",
         "null",
-        "null",//630 player clicks on the episode’s outfit.
+        "null",//630 TODO: player clicks on the episode’s outfit.
         "null",
         "null",
         "null",
@@ -13514,7 +13514,7 @@ function Chapter()
         0,
         0,
         0,//95 
-        0,//96 TODO: Special Background Required
+        0,//96 Special Background Class 1
         0,
         0,
         0,
@@ -13530,7 +13530,7 @@ function Chapter()
         0,
         0,//110 
         0,
-        0,//112 TODO: Objectives
+        0,
         0,//113 Objective Complete: Quick! Get into Classroom 1!  
         0,
         0,//115 
@@ -14006,7 +14006,7 @@ function Chapter()
         0,//585 
         0,
         0,
-        0,//588 Special Background
+        0,
         5,
         -5,//590 
         0,
@@ -14048,7 +14048,7 @@ function Chapter()
         0,
         0,
         0,
-        0,//630 player clicks on the episode’s outfit.
+        0,//630 TODO: player clicks on the episode’s outfit.
         0,
         0,
         0,
@@ -14351,7 +14351,7 @@ function Chapter()
         0,
         0,
         0,//95 
-        0,//96 TODO: Special Background Required
+        0,//96 Special Background Class 1
         0,
         0,
         0,
@@ -14367,7 +14367,7 @@ function Chapter()
         0,
         0,//110 
         0,
-        0,//112 TODO: Objectives
+        0,
         0,//113 Objective Complete: Quick! Get into Classroom 1!  
         0,
         0,//115 
@@ -14843,7 +14843,7 @@ function Chapter()
         0,//585 
         0,
         0,
-        0,//588 Special Background
+        0,
         5,
         0,//590 
         0,
@@ -14885,7 +14885,7 @@ function Chapter()
         0,
         0,
         0,
-        0,//630 player clicks on the episode’s outfit.
+        0,//630 TODO: player clicks on the episode’s outfit.
         0,
         0,
         0,
@@ -15188,7 +15188,7 @@ function Chapter()
         false,
         false,
         false,//95 
-        false,//96 TODO: Special Background Required
+        false,//96 Special Background Class 1
         false,
         false,
         false,
@@ -15204,7 +15204,7 @@ function Chapter()
         false,
         false,//110 
         false,
-        false,//112 TODO: Objectives
+        false,
         false,//113 Objective Complete: Quick! Get into Classroom 1!  
         false,
         false,//115 
@@ -15680,7 +15680,7 @@ function Chapter()
         false,//585 
         false,
         false,
-        false,//588 Special Background
+        false,
         false,
         false,//590 
         false,
@@ -15722,7 +15722,7 @@ function Chapter()
         false,
         false,
         false,
-        false,//630 player clicks on the episode’s outfit.
+        false,//630 TODO: player clicks on the episode’s outfit.
         false,
         false,
         false,
@@ -16025,7 +16025,7 @@ function Chapter()
         -1,
         -1,
         -1,//95 
-        -1,//96 TODO: Special Background Required
+        -1,//96 Special Background Class 1
         -1,
         -1,
         -1,
@@ -16041,7 +16041,7 @@ function Chapter()
         -1,
         -1,//110 
         -1,
-        -1,//112 TODO: Objectives
+        -1,
         45,//113 Objective Complete: Quick! Get into Classroom 1!  
         -1,
         -1,//115 
@@ -16517,7 +16517,7 @@ function Chapter()
         -1,//585 
         -1,
         -1,
-        -1,//588 Special Background
+        -1,
         -1,
         -1,//590 
         -1,
@@ -16559,7 +16559,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,//630 player clicks on the episode’s outfit.
+        -1,//630 TODO: player clicks on the episode’s outfit.
         -1,
         -1,
         -1,
@@ -16862,7 +16862,7 @@ function Chapter()
         -1,
         -1,
         -1,//95 
-        -1,//96 TODO: Special Background Required
+        -1,//96 Special Background Class 1
         -1,
         -1,
         -1,
@@ -16878,7 +16878,7 @@ function Chapter()
         -1,
         -1,//110 
         -1,
-        -1,//112 TODO: Objectives
+        -1,
         -1,//113 Objective Complete: Quick! Get into Classroom 1!  
         -1,
         -1,//115 
@@ -17354,7 +17354,7 @@ function Chapter()
         -1,//585 
         -1,
         -1,
-        -1,//588 Special Background
+        -1,
         -1,
         -1,//590 
         -1,
@@ -17396,7 +17396,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,//630 player clicks on the episode’s outfit.
+        -1,//630 TODO: player clicks on the episode’s outfit.
         -1,
         -1,
         -1,
@@ -17601,7 +17601,6 @@ function Chapter()
         -1,
         -1,
         ];
-
 }
 
 Chapter();//the simple act of appending the .js file will load the chapter into memory

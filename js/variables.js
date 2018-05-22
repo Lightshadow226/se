@@ -61,6 +61,15 @@ var locations =
         dormHall: backgrounds_path + "dormhall.jpg",
             dorm: backgrounds_path + "dorm.jpg",
             dormBathroom: backgrounds_path + "dormbathroom.jpg",
+
+    teganDorm: backgrounds_path + "tegandorm.jpg",
+    nehaDorm: backgrounds_path + "nehadorm.jpg",
+    claireDorm: backgrounds_path + "clairedorm.jpg",
+
+    dormHallParty: backgrounds_path + "special/dormhallparty.jpg",
+    claireDormParty: backgrounds_path + "special/clairedormparty.jpg",
+    specialclass1: backgrounds_path + "special/ch2slide91.jpg",
+    specialhall1: backgrounds_path + "special/ch2slide483.jpg",
 };
 
 var genders = ["She/Her", "He/Him", "They/Them"];
@@ -734,6 +743,8 @@ var oldUser = user;
 
 //a few pointers to constant references in the chapter variables files
     const main_text = 0;
+    const CHARACTER1 = 2;
+    const CHARACTER2 = 4;
 
     const special_option = 6;
 

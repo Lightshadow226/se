@@ -23,6 +23,7 @@ function Chapter()
     {
         story[i]= new Array();//il faut créer des arrays pour chaque array. Donc pour x[0], il faut créer des arrays, mais pour x[1] aussi, les deux sont indépendents. Il peut y avoir x[0][1][1][10] et x[1][2] qui coexistent
     }
+    
     //story[0] === Story Text
     story[0] = [
         "(Lady Arlington stands there for a couple of seconds, a look of utter shock in her face, before quickly composing herself and extending her hand for me to shake.)",//0 
@@ -180,8 +181,8 @@ function Chapter()
         "null",//152 Objective Complete: Talk to some students.
         "null",
         "null",
-        "(Next)",//155 Go finish exploring
-        "null",
+        "null",//155 Go finish exploring
+        "(Next)",
         "T-Tadashi? Wh-?",
         "My-my what?",
         "(Next)",
@@ -218,13 +219,13 @@ function Chapter()
         "(But I better go back to my dorm and put my uniform on and freshen up.)",//190 
         "null",
         "null",
-        "(Change Uniform, Options = -10)",//193 -10
-        "Scholar: (I took a glance at myself in the mirror and groaned.)",
+        "(Click to put on your uniform)",//193 -10
+        "(I took a glance at myself in the mirror and groaned.)",
         "It’ll have to do.",//195 
         "null",//196 Objective Complete: Quick! Go back to your dorm and put on your uniform!
         "null",
         "null",
-        "Scholar: (As I entered the gym, I saw two others in line to take their picture.)",
+        "(As I entered the gym, I saw two others in line to take their picture.)",
         "null",//200 Karolina
         "null",//201 Neha
         "null",//202 Ellie
@@ -469,8 +470,8 @@ function Chapter()
         "null",//152 Objective Complete: Talk to some students.
         "null",
         "null",
-        "Hey! " + user.scholarname + "!",//155 Go finish exploring
-        "null",
+        "null",//155 Go finish exploring
+        "Hey! " + user.scholarname + "!",
         "null",
         "How long have you been wandering through the halls? Why haven’t you taken your student ID picture at the gymnasium yet?",
         "…",
@@ -546,7 +547,7 @@ function Chapter()
         "Look at that! I thought I’d have to ask " + user.gender + " myself.",
         "null",//230 
         "null",//231 Tegan & Tyler's dorm
-        "Pop up: Congratulations! You’ve unlocked an illustration! Go to your dorm and click on the book on your desk to check it out.",//232 TODO: popup
+        "Congratulations! You’ve unlocked an illustration! Go to your dorm and click on the book on your desk to check it out.",//232 TODO: popup
         "null",
         "Hey, look who it is! You taking your picture too, new kid?",//234 CHOICE 4: Claire + Raquel
         "null",//235 
@@ -1691,9 +1692,9 @@ function Chapter()
         locations.gym,
         locations.gym,
         locations.gym,//220 No Sprites
-        locations.dorm,//221 Karolina and Neha's Dorm
-        locations.dorm,//222 TODO: popup
-        locations.dorm,
+        locations.nehaDorm,//221 Karolina and Neha's Dorm
+        locations.nehaDorm,//222 TODO: popup
+        locations.nehaDorm,
         locations.gym,//224 CHOICE 2: Ellie + Tegan
         locations.gym,//225 
         locations.gym,
@@ -1701,9 +1702,9 @@ function Chapter()
         locations.gym,
         locations.gym,
         locations.gym,//230 
-        locations.dorm,//231 Tegan & Tyler's dorm
-        locations.dorm,//232 TODO: popup
-        locations.dorm,
+        locations.teganDorm,//231 Tegan & Tyler's dorm
+        locations.teganDorm,//232 TODO: popup
+        locations.teganDorm,
         locations.gym,//234 CHOICE 4: Claire + Raquel
         locations.gym,//235 
         locations.gym,
@@ -1732,7 +1733,7 @@ function Chapter()
         locations.class2,
         locations.class2,//260 
         locations.dorm,
-        "null",//262 Objective Copmlete: Go to they gym and take your picture!
+        locations.dorm,//262 Objective Copmlete: Go to they gym and take your picture!
         locations.dorm,
         locations.dorm,
         locations.dorm,//265 
@@ -1952,7 +1953,7 @@ function Chapter()
         -1,//190 
         -8,
         -2,
-        -1,//193 -10
+        -14,//193 -10
         -1,
         -1,//195 
         -9,//196 Objective Complete: Quick! Go back to your dorm and put on your uniform!
@@ -6092,7 +6093,6 @@ function Chapter()
         -1,
         -1,//285 
         ];
-
 }
 
 Chapter();//the simple act of appending the .js file will load the chapter into memory

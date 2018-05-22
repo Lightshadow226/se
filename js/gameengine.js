@@ -596,20 +596,21 @@ function refreshInterface()
                     text_container.appendChild(div2);
                     text_container.appendChild(div3);
             
-                line.addEventListener( "click",
-                                        function (e)
-                                        {
-                                            choice = index - 1;//form_names[index-1];
-                                            
-                                            for(var id_index = 0; id_index < 7; id_index++)
-                                            {
-                                                document.getElementById("line_" + id_index).className = "form_line_unselected form_line";
-                                                selected[index] = false;
-                                            }
-            
-                                            line.className = "form_line_selected form_line";//we select the line that we clicked on
-                                        },
-                                        true);
+                line.onclick = function click()
+                {
+                    choice = index - 1;//form_names[index-1];
+                    
+                    for(var id_index = 0; id_index < 7; id_index++)//unselect all form lines
+                    {
+                        var lineID = "line_" + id_index;
+
+                        document.getElementById(lineID).className = "form_line_unselected form_line";
+                        selected[id_index] = false;
+                    }
+
+                    line.className = "form_line_selected form_line";//we select the line that we clicked on
+                    selected[index] = true;
+                };
             
                 parent.appendChild(line);
             }
@@ -694,7 +695,6 @@ function refreshInterface()
                 };
             
             //Romance button
-
             var romance_button = document.getElementById('romance_button');
                 romance_button.style.visibility = "visible";
                 romance_button.onclick = function()
@@ -826,6 +826,46 @@ function refreshInterface()
         }
         else if(story[special_option][user.storyLocation] == -13)// -13 === directly goto landing slide ***** GHOST SLIDE
         {
+            
+        }
+        else if(story[special_option][user.storyLocation] == -14)// -14 === Put on your uniform form
+        {
+            //Uniform button
+            var uniformButton = document.createElement('div');
+                uniformButton.id = "uniformButton";
+                uniformButton.className = "friendship_romance_buttons x-center-y-center";
+
+            var uniformButtonImg = document.createElement('img');
+                uniformButtonImg.className = "friendship_romance_buttons_img";
+                
+                //female
+                uniformButtonImg.src = "_new_images_folder/game/dorm/dollmaker/sex/female.png";
+
+                switch(user.gender)
+                {
+                    //male
+                    case 1:
+                        uniformButtonImg.src = "_new_images_folder/game/dorm/dollmaker/sex/male.png";
+                        break;
+                }
+            
+            var uniformButtonOverlay = document.createElement('div');
+                uniformButtonOverlay.className = "friendship_romance_buttons_overlay";
+                uniformButtonOverlay.onclick = function()
+                {
+                    browseLink(story[special_option][user.storyLocation], uniformButton);
+                };
+
+            var formContainer = document.getElementById("formContainer");
+                formContainer.innerHTML = "";
+                formContainer.appendChild(uniformButton);
+                    uniformButton.appendChild(uniformButtonImg);
+                    uniformButton.appendChild(uniformButtonOverlay);
+
+            // <div id = "romance_button" class="friendship_romance_buttons y-center-q">
+            //     <img id = "romance_button_img" class="friendship_romance_buttons_img" src="images/game_images/romance_option.jpg"></img>
+            //     <div id = "romance_overlay" class="friendship_romance_buttons_overlay"></div>         
+            // </div>
 
         }
         else//if location or anything else is not enabled
@@ -1114,6 +1154,11 @@ function browseLink(link, element)//link is the link of the story (story[special
             user.storyLocation++;
         }
     }
+    else if(link == -14)//Put on your uniform form
+    {
+        user.storyLocation++;
+        HideForms();
+    }
     else//otherwise, it's just a direct link to somewhere else in the story
     {
         user.storyLocation = story[special_option][user.storyLocation];//on fait que la location devienne le numéro du link
@@ -1124,12 +1169,15 @@ function browseLink(link, element)//link is the link of the story (story[special
 
 function HideForms()
 {
-    var forms = document.getElementsByClassName('form_container');
+    var forms = document.getElementsByClassName('form_container');//created dynamically
     
     for (var i = 0; i < forms.length; i++)
     {
         forms[i].style.visibility = "hidden";
     }
+
+    var formContainer = document.getElementById("formContainer");//in the DOM
+        formContainer.innerHTML = "";
 }
 
 function endOfChapter()
@@ -1142,7 +1190,7 @@ function endOfChapter()
     $("#replay_handler").load("partials/replay.php", function (response, status, xhr)
     {
         // console.log(response);
-        document.getElementById("current-chapter-img").src = "images/general/chapter_images/chapter" + user.last_chapter_played + ".png";
+        document.getElementById("current-chapter-img").src = "_new_images_folder/game/chapter_images/chapter" + user.last_chapter_played + ".jpg";
 
         var lastChapterAvailable = availableChapters - 1;
 

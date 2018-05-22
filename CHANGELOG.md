@@ -1,6 +1,27 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
 
+# Version 1.8.2 (Ch. 0, 1 & 2 fixes)
+## Fixed
+- `gameengine.js`
+    - issue fixed: department form didn't work as intended
+- `library.js`
+    - made better console.log of affinity reversion (in wipe chapter)
+- `chapter1.js`  `chapter1.xlsx`
+    - small fixes
+    - changed formulas in the excel
+- `chapter2.js`  `chapter2.xlsx`
+    - small fixes
+    - changed formulas in the excel
+    - changed the conditional formatting
+
+## Added
+- `gameengine.js`
+    - added option -14: choose your uniform
+- `images`
+    - added the special backgrounds
+
+
 # Version 1.8.1 (Ch. 1 & 2 fixes)
 ## Fixed
 - `gameengine.js`

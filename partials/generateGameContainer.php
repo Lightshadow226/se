@@ -54,6 +54,8 @@
                 <div id = "choiceA" class="choiceContainer"></div>
                 <div id = "choiceB" class="choiceContainer"></div>
                 <div id = "choiceC" class="choiceContainer"></div>
+
+                <div id = "formContainer"></div>
             </div>
 
             <!-- Game Background -->
@@ -81,7 +83,6 @@
         <div id = "progressBarContainer">
             <img id="progress_bar_logo"/>
             <div id="progress_bar"></div>
-
         </div>
 
         <!-- Characters Container -->

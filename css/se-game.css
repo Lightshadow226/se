@@ -88,8 +88,9 @@
     .char-container/*will contain the image and the tooltip*/
     {
         /* flex: 1; */
-        width: 100px;
-        height: 100px;
+        width: 9%;
+        /* width: 100px;
+        height: 100px; */
         position: relative;
         border-radius: 50%;
     }
@@ -97,8 +98,10 @@
     .game_char_portraits
     {
         position: relative;
-        width: 100px;
-        height: 100px;
+        /* width: 100px;
+        height: 100px; */
+        width: 100%;
+        height: auto;
         
         border: 2px solid #f3def2;
         box-shadow: 0 0 10px #f3def2;

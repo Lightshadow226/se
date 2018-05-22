@@ -12,7 +12,7 @@ var currentEpisode_lines_container = document.getElementById("currentEpisode");
 var finishedChapters_lines_container = document.getElementById("finishedChapters");
 var nextChapters_lines_container = document.getElementById("nextChapters");
 
-const character_portraits_path = "images/general/chapter_images/";
+const chapterImagesPath = "_new_images_folder/game/chapter_images/";
 
 var current_chapter = parseInt(user.last_chapter_played);
 var next_chapter = current_chapter + 1;
@@ -25,7 +25,6 @@ $(function create_interface()
 
 function refresh_lines(beg, end)
 {
-
     //current chapter
     create_line(current_chapter, "current");
 
@@ -53,7 +52,7 @@ function create_line(index, type)
         line_left_content.className = "line_left_content";
     
         var char_img = document.createElement('img');
-            char_img.src = character_portraits_path + chapter_images[index] + ".png";
+            char_img.src = chapterImagesPath + chapter_images[index] + ".jpg";
             char_img.className = "character_img";
     
     var line_middle_content = document.createElement('div');
@@ -88,6 +87,7 @@ function create_line(index, type)
         play_episode_button.onclick = function (e){console.log("Continue story")};
 
         currentEpisode_lines_container.appendChild(line);
+        // refreshProgressBar();
     }
     else if(type == "next")
     {
@@ -137,6 +137,7 @@ function create_line(index, type)
         line_middle_content.appendChild(chara_desc);
         line_middle_content.appendChild(objectiveContainer);
         line_middle_content.appendChild(play_episode_button);
+        if(type == "current"){line_middle_content.innerHTML += '<div id = "progressBarContainer"><img id="progress_bar_logo"/><div id="progress_bar"></div></div>';}//TODO: very bad code
         // if(type == "finished"){line_middle_content.appendChild(replay_episode_button);}
 }
         
