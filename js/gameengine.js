@@ -816,9 +816,9 @@ function refreshInterface()
             user.storyLocation = story[main_text].length;//the story is over
             refreshInterface();
         }
-        else if(story[special_option][user.storyLocation] == -11)// -11 === same as -7, but look at a slide from a previous chapter and then go to current chapter slide ***** GHOST SLIDE
+        else if(story[special_option][user.storyLocation] == -11)// -11 === same as -6, but look at a slide from a previous chapter and then go to current chapter slide ***** GHOST SLIDE
         {
-            
+            browseLink(story[special_option][user.storyLocation], textContainer);
         }
         else if(story[special_option][user.storyLocation] == -12)// -12 === affect the affinity of a character without displaying it -> then goto next slide ***** GHOST SLIDE
         {
@@ -861,12 +861,16 @@ function refreshInterface()
                 formContainer.appendChild(uniformButton);
                     uniformButton.appendChild(uniformButtonImg);
                     uniformButton.appendChild(uniformButtonOverlay);
+        }
+        else if(story[special_option][user.storyLocation] == -15)// -15 === Popups ("Congratulations")
+        {
+            var popup = document.createElement('div');
+                popup.className = "popup";
+                popup.innerHTML = story[choiceA_text][user.storyLocation];
 
-            // <div id = "romance_button" class="friendship_romance_buttons y-center-q">
-            //     <img id = "romance_button_img" class="friendship_romance_buttons_img" src="images/game_images/romance_option.jpg"></img>
-            //     <div id = "romance_overlay" class="friendship_romance_buttons_overlay"></div>         
-            // </div>
-
+            var formContainer = document.getElementById("formContainer");
+                formContainer.innerHTML = "";
+                formContainer.appendChild(popup);
         }
         else//if location or anything else is not enabled
         {
@@ -1131,7 +1135,6 @@ function browseLink(link, element)//link is the link of the story (story[special
         var pointofinterest = story[POI][user.storyLocation];
         var landingpoint = story[LP][user.storyLocation];
 
-
         // console.log("slide: " + pointofinterest + " = " + story[isVisited][pointofinterest]);
         
         //TODO: make a switch case
@@ -1154,16 +1157,51 @@ function browseLink(link, element)//link is the link of the story (story[special
             user.storyLocation++;
         }
     }
+    else if(link == -11)//Looks at links in past CHAPTERS to dermine where to go next
+    {
+        var relevantChapter = story[choiceA_link][user.storyLocation];
+        var pointofinterest = story[POI][user.storyLocation];
+        var landingpoint = story[LP][user.storyLocation];
+
+        console.log("Looking at slide: " + pointofinterest + " of chapter " + relevantChapter + " = " + alternateIsVisited[pointofinterest]);
+        
+        loadIsVisited(relevantChapter);
+        // isVisitedChapterX
+        
+        if(alternateIsVisited[pointofinterest]) // if we visited the slide that is the "point of interest".
+        {
+            console.log("you have visited " + pointofinterest);
+            console.log("therefore, you are going to " + landingpoint);
+            //alert("storylocation was " + storyLocation);
+            user.storyLocation = landingpoint;
+            //alert("storylocation is now " + storyLocation);
+        }
+        else if(pointofinterest == -1)//TODO: ...this is useless and will likely result in bugs
+        {
+            console.log(user.storyLocation + " going to : " + pointofinterest);
+            user.storyLocation = landingpoint;
+            refreshInterface();
+        }
+        else//if not, we go to the next slide
+        {
+            user.storyLocation++;
+        }
+    }
     else if(link == -14)//Put on your uniform form
     {
         user.storyLocation++;
         HideForms();
     }
-    else//otherwise, it's just a direct link to somewhere else in the story
+    else if(link >= 0)
     {
         user.storyLocation = story[special_option][user.storyLocation];//on fait que la location devienne le numéro du link
     }
+    else//otherwise, it's just a direct link to somewhere else in the story
+    {
+        user.storyLocation++;
+    }
 
+    HideForms();
     refreshInterface();
 }
 

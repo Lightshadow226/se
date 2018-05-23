@@ -23,7 +23,6 @@ function Chapter()
     {
         story[i]= new Array();//il faut créer des arrays pour chaque array. Donc pour x[0], il faut créer des arrays, mais pour x[1] aussi, les deux sont indépendents. Il peut y avoir x[0][1][1][10] et x[1][2] qui coexistent
     }
-
     //story[0] === Story Text
     story[0] = [
         "(I brushed my teeth and put on my clothes in record time. Clumsily grabbing my schoolbag, I rushed out of the dorms and made my way into the school, running.)",//0 
@@ -871,7 +870,7 @@ function Chapter()
         "null",//5 
         "null",
         "null",
-        "*Rumble Rumble*",//8 POPUP
+        "null",//8 POPUP
         "null",
         "null",//10 
         "null",
@@ -1635,7 +1634,7 @@ function Chapter()
         "Looks like someone can’t understand a hidden message. ",
         "null",//770 
         "Then why are you here? You want my picture? Sorry, but I’m a professional.",
-        "Congratulations! You’ve unlocked an illustration! Go to your dorm and click on the book on your desk to check it out.",//772 POPUP
+        "null",//772 POPUP
         "null",
         "I don’t recall hearing Neha ask for you.",
         "null",//775 
@@ -1648,7 +1647,7 @@ function Chapter()
         "Come on!",
         "null",
         "null",
-        "Congratulations! You’ve unlocked an illustration! Go to your dorm and click on the book on your desk to check it out.",//785 POPUP
+        "null",//785 POPUP
         "null",
         "null",
         "null",
@@ -1662,7 +1661,7 @@ function Chapter()
         "null",
         "null",
         "null",
-        " Damn, how much did she drink?",//799 POPUP
+        "null",//799 POPUP
         "null",//800 
         "null",
         "null",
@@ -5056,7 +5055,7 @@ function Chapter()
         -1,//5 
         -1,
         -1,
-        -1,//8 POPUP
+        -15,//8 POPUP
         -1,
         -8,//10 
         -2,
@@ -5820,7 +5819,7 @@ function Chapter()
         -1,
         -1,//770 
         -1,
-        -1,//772 POPUP
+        -15,//772 POPUP
         -1,
         -1,
         -1,//775 
@@ -5833,7 +5832,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,//785 POPUP
+        -15,//785 POPUP
         -1,
         788,
         -1,
@@ -5847,7 +5846,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,//799 POPUP
+        -15,//799 POPUP
         -1,//800 
         -1,
         -1,
@@ -10915,7 +10914,7 @@ function Chapter()
         "null",//5 
         "null",
         "null",
-        "null",//8 POPUP
+        "*Rumble Rumble*",//8 POPUP
         "null",
         "Get some breakfast at the Cafeteria!",//10 
         "null",
@@ -11679,7 +11678,7 @@ function Chapter()
         "null",
         "null",//770 
         "null",
-        "null",//772 POPUP
+        "Congratulations, you’ve unlocked an illustration!<br>Go to your dorm and click on the book on your desk to check it out.",//772 POPUP
         "null",
         "null",
         "null",//775 
@@ -11692,7 +11691,7 @@ function Chapter()
         "null",
         "null",
         "null",
-        "null",//785 POPUP
+        "Congratulations, you’ve unlocked an illustration!<br>Go to your dorm and click on the book on your desk to check it out.",//785 POPUP
         "null",
         "null",
         "null",
@@ -11706,7 +11705,7 @@ function Chapter()
         "null",
         "null",
         "null",
-        "null",//799 POPUP
+        "Damn, how much did she drink?",//799 POPUP
         "null",//800 
         "null",
         "null",
@@ -17601,6 +17600,7 @@ function Chapter()
         -1,
         -1,
         ];
+
 }
 
 Chapter();//the simple act of appending the .js file will load the chapter into memory

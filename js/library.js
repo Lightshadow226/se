@@ -395,11 +395,11 @@ function refreshBottomGameContainer()
 
 function hideBottomGameContainer(hide)
 {
-    if(hide)
+    if(hide)//if we want it hidden
     {
         document.getElementById('opcContainer').style.display = "none";
     }
-    else
+    else//if we want it visble
     {
         document.getElementById('opcContainer').style.display = "block";
     }
@@ -1102,7 +1102,6 @@ function hasToBeSaved(propertyName)//returns either true or false (has to be sav
 
     return false;
 }
-
 
 // -----START DEBUGGING TOOLS-----
 function refreshTestContainer()// affiche des données par rapport à la prev/current/next slide

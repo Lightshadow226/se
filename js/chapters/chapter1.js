@@ -23,7 +23,6 @@ function Chapter()
     {
         story[i]= new Array();//il faut créer des arrays pour chaque array. Donc pour x[0], il faut créer des arrays, mais pour x[1] aussi, les deux sont indépendents. Il peut y avoir x[0][1][1][10] et x[1][2] qui coexistent
     }
-    
     //story[0] === Story Text
     story[0] = [
         "(Lady Arlington stands there for a couple of seconds, a look of utter shock in her face, before quickly composing herself and extending her hand for me to shake.)",//0 
@@ -537,7 +536,7 @@ function Chapter()
         "null",
         "null",//220 No Sprites
         "null",//221 Karolina and Neha's Dorm
-        "Congratulations! You’ve unlocked an illustration! Go to your dorm and click on the book on your desk to check it out.",//222 TODO: popup
+        "null",//222 TODO: popup
         "null",
         "Hey! " + user.scholarname + "!",//224 CHOICE 2: Ellie + Tegan
         "null",//225 
@@ -547,7 +546,7 @@ function Chapter()
         "Look at that! I thought I’d have to ask " + user.gender + " myself.",
         "null",//230 
         "null",//231 Tegan & Tyler's dorm
-        "Congratulations! You’ve unlocked an illustration! Go to your dorm and click on the book on your desk to check it out.",//232 TODO: popup
+        "null",//232 TODO: popup
         "null",
         "Hey, look who it is! You taking your picture too, new kid?",//234 CHOICE 4: Claire + Raquel
         "null",//235 
@@ -558,7 +557,7 @@ function Chapter()
         "Exactly.",//240 
         "null",//241 No Sprites
         "null",
-        "Congratulations! You’ve unlocked an illustration! Go to your dorm and click on the book on your desk to check it out.",//243 TODO: popup
+        "null",//243 TODO: popup
         "null",
         "" + user.scholarname + "! Over here!",//245 CHOICE 4: Alistair + Tadashi
         "null",//246 go to 237
@@ -574,7 +573,7 @@ function Chapter()
         "null",
         "null",
         "null",
-        "Congratulations! You’ve unlocked an illustration! Go to your dorm and click on the book on your desk to check it out.",
+        "null",
         "null",//260 
         "null",
         "null",//262 Objective Copmlete: Go to they gym and take your picture!
@@ -1982,7 +1981,7 @@ function Chapter()
         -1,
         -1,//220 No Sprites
         -1,//221 Karolina and Neha's Dorm
-        -1,//222 TODO: popup
+        -15,//222 TODO: popup
         261,
         -1,//224 CHOICE 2: Ellie + Tegan
         -1,//225 
@@ -1992,7 +1991,7 @@ function Chapter()
         -1,
         -1,//230 
         -1,//231 Tegan & Tyler's dorm
-        -1,//232 TODO: popup
+        -15,//232 TODO: popup
         261,
         -1,//234 CHOICE 4: Claire + Raquel
         -1,//235 
@@ -2003,7 +2002,7 @@ function Chapter()
         -1,//240 
         -1,//241 No Sprites
         -1,
-        -1,//243 TODO: popup
+        -15,//243 TODO: popup
         261,
         -1,//245 CHOICE 4: Alistair + Tadashi
         -6,//246 go to 237
@@ -2019,7 +2018,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,
+        -15,
         261,//260 
         -1,
         -9,//262 Objective Copmlete: Go to they gym and take your picture!
@@ -4005,7 +4004,7 @@ function Chapter()
         "null",
         "null",//220 No Sprites
         "null",//221 Karolina and Neha's Dorm
-        "null",//222 TODO: popup
+        "Congratulations, you’ve unlocked an illustration!<br><br>Go to your dorm and click on the book on your desk to check it out.",//222 TODO: popup
         "null",
         "null",//224 CHOICE 2: Ellie + Tegan
         "null",//225 
@@ -4015,7 +4014,7 @@ function Chapter()
         "null",
         "null",//230 
         "null",//231 Tegan & Tyler's dorm
-        "null",//232 TODO: popup
+        "Congratulations, you’ve unlocked an illustration!<br>Go to your dorm and click on the book on your desk to check it out.",//232 TODO: popup
         "null",
         "null",//234 CHOICE 4: Claire + Raquel
         "null",//235 
@@ -4026,7 +4025,7 @@ function Chapter()
         "null",//240 
         "null",//241 No Sprites
         "null",
-        "null",//243 TODO: popup
+        "Congratulations, you’ve unlocked an illustration!<br>Go to your dorm and click on the book on your desk to check it out.",//243 TODO: popup
         "null",
         "null",//245 CHOICE 4: Alistair + Tadashi
         "null",//246 go to 237
@@ -4042,7 +4041,7 @@ function Chapter()
         "null",
         "null",
         "null",
-        "null",
+        "Congratulations, you’ve unlocked an illustration!<br>Go to your dorm and click on the book on your desk to check it out.",
         "null",//260 
         "null",
         "null",//262 Objective Copmlete: Go to they gym and take your picture!

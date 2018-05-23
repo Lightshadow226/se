@@ -741,6 +741,8 @@ var user =
 
 var oldUser = user;
 
+var alternateIsVisited = new Array();
+
 //a few pointers to constant references in the chapter variables files
     const main_text = 0;
     const CHARACTER1 = 2;
@@ -770,39 +772,92 @@ var oldUser = user;
 
 function loadIsVisited(chapter)
 {
-    $.ajax('dbtransfers/load_is_visited.php',
+    //if we're loading the current chapter
+    if(chapter == user.last_chapter_played)
     {
-        type: 'GET',
-        async: false,
-        dataType: 'html',
-    }).done(function (response)//when the request is done, we execute the following code:
-    {
-        // TODO: encode the response in JSON directly in the php file
-        // that way, there is no need to append to the DOM
-        // console.log(response);
-        
-        //we print the response in #DB_handle:
-        $('#DB_handle').html(response);
-        
-        var chapter_size = parseInt(document.getElementById("chapter_size").value);
-        console.log("Loaded isVisited for " + chapter_size + " slides.");
-        
-        //chapter_size is actually one more (+1)
+        console.log("loading is visited for the current chapter");
 
-        //then we save them as JS variables:
-        for(var i = 0; i < chapter_size; i++)
+        $.ajax('dbtransfers/load_is_visited.php',
         {
-            var new_variable = "c" + i;
-            // console.log(new_variable);
-            var isVisitedValue = document.getElementById(new_variable).value;
+            type: 'GET',
+            async: false,
+            dataType: 'html',
+        }).done(function (response)//when the request is done, we execute the following code:
+        {
+            // TODO: encode the response in JSON directly in the php file
+            // that way, there is no need to append to the DOM
+            // console.log(response);
+            
+            //we print the response in #DB_handle:
+            $('#DB_handle').html(response);
+            
+            var chapter_size = parseInt(document.getElementById("chapter_size").value);
+            //chapter_size is actually one more (+1)
 
-            //convert from int to boolean 1 -> true
-            var actualValue = false;
-            if(isVisitedValue == 1) actualValue = true;
+            //then we save them as JS variables:
+            for(var i = 0; i < chapter_size; i++)
+            {
+                var new_variable = "c" + i;
+                // console.log(new_variable);
+                var isVisitedValue = document.getElementById(new_variable).value;
 
-            story[isVisited][i] = actualValue;
-        }
-    });
+                //convert from int to boolean 1 -> true
+                var actualValue = false;
+                if(isVisitedValue == 1) actualValue = true;
+                
+                story[isVisited][i] = actualValue;
+            }
+
+            console.log("Loaded isVisited for " + chapter_size + " slides.");
+        });
+    }
+    //if we're NOT loading the current chapter
+    else
+    {
+        console.log("loading is visited for chapter " + chapter);
+        
+        //we store the actual chapter
+        alternateIsVisited = new Array();
+        var actualChapter = user.last_chapter_played;
+
+        //we save the desired chapter in the database
+        user.last_chapter_played = chapter;
+        saveVariables(x.lastChapterPlayed);
+
+        $.ajax('dbtransfers/load_is_visited.php',
+        {
+            type: 'GET',
+            async: false,
+            dataType: 'html',
+        }).done(function (response)//when the request is done, we execute the following code:
+        {
+            //we print the response in #DB_handle:
+            $('#DB_handle').html(response);
+            
+            var chapter_size = parseInt(document.getElementById("chapter_size").value);
+            //chapter_size is actually one more (+1)
+
+            //then we save them as JS variables:
+            for(var i = 0; i < chapter_size; i++)
+            {
+                var new_variable = "c" + i;
+                var isVisitedValue = document.getElementById(new_variable).value;
+
+                //convert from int to boolean 1 -> true
+                var actualValue = false;
+                if(isVisitedValue == 1) actualValue = true;
+
+                console.log("slide" + new_variable + ": " + actualValue);
+                alternateIsVisited.push(actualValue);
+            }
+
+            console.log("Loaded isVisited for " + chapter_size + " slides in alternateIsVisited.");
+        });
+
+        //we save (back) the actual chapter in the database
+        user.last_chapter_played = actualChapter;
+        saveVariables(x.lastChapterPlayed);
+    }
 }
 
 function saveIsVisited(chapter)

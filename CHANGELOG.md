@@ -1,6 +1,20 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
 
+# Version 1.8.3 (popups, different chapter isVisited)
+# Added
+- `variables.js`
+    - isVisited of a different chapter
+- `gameengine.js`
+    - choice -11: isVisited of a different chapter
+    - choice -15: popups ("Congratulations")
+
+## Fixed
+- `chapter1.js`  `chapter1.xlsx`
+    - small fixes
+- `chapter2.js`  `chapter2.xlsx`
+    - small fixes
+
 # Version 1.8.2 (Ch. 0, 1 & 2 fixes)
 ## Fixed
 - `gameengine.js`
