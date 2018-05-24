@@ -31,6 +31,7 @@ include_once 'partials/parseSignup.php';
         <div class="card-nomargin add_padding">
 		
 			<h1>Registration</h1>
+			<p style="font-size:0.65em;text-transform:uppercase;width:75%;">*By Signing Up, you are agreeing to our <a href="terms.php">Terms</a> and declaring that you are <em>at least 13 years old</em></p>
 
 			</br>
 			

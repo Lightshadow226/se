@@ -28,7 +28,7 @@
 		<div id="user_info">
 			<span style="position: absolute; left: 10px;">Welcome Back <?php if(isset($_SESSION['username'])) echo $_SESSION['username']; ?>!</span>
 			<strong>Episode: </strong> <span id="barEpisode"></span>
-			<strong> | Highest Affinity: </strong> <span id="barAffinity"></span>
+			<strong> | Highest Infinity: </strong> <span id="barAffinity"></span>
 			<strong> | Money: </strong> <span id="barMoney"></span>
 			<strong> | Energy: </strong> <span id="barEnergy"></span>
 			<strong> | Replays: </strong> <span id="barReplays"></span>

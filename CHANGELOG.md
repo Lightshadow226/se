@@ -1,6 +1,22 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
 
+# Version 1.8.4 (Achievements & Wardrobe Images + Small Fixes)
+# Added
+- `_new_images_folder`
+    - new achievement images
+    - new wardrobe images
+    - some outfit images (still need to do the chapter 2 outfits)
+
+## Fixed
+- `index.php`
+    - Changed the chapter thumbnails to the new ones
+- `registration_successful.php`
+    - Added cute message
+- `signup.php`
+    - Added message + cosmetic fix
+
+
 # Version 1.8.3 (popups, different chapter isVisited)
 # Added
 - `variables.js`
@@ -14,6 +30,7 @@
     - small fixes
 - `chapter2.js`  `chapter2.xlsx`
     - small fixes
+
 
 # Version 1.8.2 (Ch. 0, 1 & 2 fixes)
 ## Fixed
