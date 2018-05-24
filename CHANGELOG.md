@@ -1,8 +1,27 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
 
+# Version 1.8.5 (All Achievements)
+## Added
+- `illustrations_achievements.php`      `illustrations_achievements.js`     `se-illustrations_achievements.css`
+    - better buttons
+    - added DB_Handle
+    - changed the appearance of the achievements
+    - added the code to determine whether the achievement is unlocked or not
+
+## Fixed
+- `library.js`
+    - issue: saveVariables() did not change the values of oldUser
+- `relationships.js`
+    - better buttons
+- `variables.js`
+    - optimized loadIsVisited()
+- `parents.php`
+    - aligned the text to the left
+
+
 # Version 1.8.4 (Achievements & Wardrobe Images + Small Fixes)
-# Added
+## Added
 - `_new_images_folder`
     - new achievement images
     - new wardrobe images
@@ -18,7 +37,7 @@
 
 
 # Version 1.8.3 (popups, different chapter isVisited)
-# Added
+## Added
 - `variables.js`
     - isVisited of a different chapter
 - `gameengine.js`

@@ -84,7 +84,10 @@
 /*X-CARDS -> very fashionable*/
 .x-card-purple, .x-card-pink, .x-card-yellow
 {
-	margin: 10px;
+	background-color: white;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	
 	padding: 10px;
 	border-radius: 10px;		
 }

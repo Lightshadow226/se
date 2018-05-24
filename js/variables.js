@@ -741,8 +741,6 @@ var user =
 
 var oldUser = user;
 
-var alternateIsVisited = new Array();
-
 //a few pointers to constant references in the chapter variables files
     const main_text = 0;
     const CHARACTER1 = 2;
@@ -768,15 +766,80 @@ var alternateIsVisited = new Array();
     //Objectives
     const new_objective_pointer = 13;
     const completed_objective_pointer = 19;
-    
+
+var playingTheGame = true;
+var alternateIsVisited = new Array();
 
 function loadIsVisited(chapter)
 {
+    //we store the actual chapter
+    alternateIsVisited = null;
+    alternateIsVisited = new Array();
+
+    // console.log("loading is visited for chapter " + chapter + " (Current chapter is " + user.last_chapter_played + ")");
+
+    var actualChapter = user.last_chapter_played;
+
+    //if we're not loading the current chapter
+    if(chapter != actualChapter)
+    {
+        //we save the desired chapter in the database
+        console.log("Swaping chapter " + actualChapter + " for chapter " + chapter);
+        user.last_chapter_played = chapter;
+        saveVariables(x.lastChapterPlayed);
+    }
+
+    //save it all in alternate is visited no matter what
+    $.ajax('dbtransfers/load_is_visited.php',
+    {
+        type: 'GET',
+        async: false,
+        dataType: 'html',
+    }).done(function (response)//when the request is done, we execute the following code:
+    {
+        //we print the response in #DB_handle:
+        $('#DB_handle').html(response);
+        
+        var chapter_size = parseInt(document.getElementById("chapter_size").value);
+        //chapter_size is actually one more (+1)
+
+        //then we save them as JS variables:
+        for(var i = 0; i < chapter_size; i++)
+        {
+            var new_variable = "c" + i;
+            var isVisitedValue = document.getElementById(new_variable).value;
+
+            //convert from int to boolean 1 -> true
+            var actualValue = false;
+            if(isVisitedValue == 1) actualValue = true;
+
+            // console.log("slide " + new_variable + ": " + actualValue);
+            alternateIsVisited.push(actualValue);
+        }
+
+        console.log("Loaded isVisited for " + chapter_size + " slides.");
+    });
+
+    //if we're not loading the current chapter
+    if(chapter != actualChapter)
+    {
+        //we save the actual chapter back in the database
+        console.log("Swaping back chapter " + chapter + " for chapter " + actualChapter);
+        user.last_chapter_played = actualChapter;
+        saveVariables(x.lastChapterPlayed);
+    }
+
+    if(playingTheGame)
+    {
+        for(var i = 0; i < alternateIsVisited.length; i++)
+        {
+            story[isVisited][i] = alternateIsVisited[i];
+        }
+    }
+/*
     //if we're loading the current chapter
     if(chapter == user.last_chapter_played)
     {
-        console.log("loading is visited for the current chapter");
-
         $.ajax('dbtransfers/load_is_visited.php',
         {
             type: 'GET',
@@ -805,7 +868,14 @@ function loadIsVisited(chapter)
                 var actualValue = false;
                 if(isVisitedValue == 1) actualValue = true;
                 
-                story[isVisited][i] = actualValue;
+                if(notPlayingTheGame)
+                {
+                    alternateIsVisited.push(actualValue);
+                }
+                else
+                {
+                    story[isVisited][i] = actualValue;
+                }
             }
 
             console.log("Loaded isVisited for " + chapter_size + " slides.");
@@ -814,50 +884,9 @@ function loadIsVisited(chapter)
     //if we're NOT loading the current chapter
     else
     {
-        console.log("loading is visited for chapter " + chapter);
         
-        //we store the actual chapter
-        alternateIsVisited = new Array();
-        var actualChapter = user.last_chapter_played;
-
-        //we save the desired chapter in the database
-        user.last_chapter_played = chapter;
-        saveVariables(x.lastChapterPlayed);
-
-        $.ajax('dbtransfers/load_is_visited.php',
-        {
-            type: 'GET',
-            async: false,
-            dataType: 'html',
-        }).done(function (response)//when the request is done, we execute the following code:
-        {
-            //we print the response in #DB_handle:
-            $('#DB_handle').html(response);
-            
-            var chapter_size = parseInt(document.getElementById("chapter_size").value);
-            //chapter_size is actually one more (+1)
-
-            //then we save them as JS variables:
-            for(var i = 0; i < chapter_size; i++)
-            {
-                var new_variable = "c" + i;
-                var isVisitedValue = document.getElementById(new_variable).value;
-
-                //convert from int to boolean 1 -> true
-                var actualValue = false;
-                if(isVisitedValue == 1) actualValue = true;
-
-                console.log("slide" + new_variable + ": " + actualValue);
-                alternateIsVisited.push(actualValue);
-            }
-
-            console.log("Loaded isVisited for " + chapter_size + " slides in alternateIsVisited.");
-        });
-
-        //we save (back) the actual chapter in the database
-        user.last_chapter_played = actualChapter;
-        saveVariables(x.lastChapterPlayed);
     }
+*/
 }
 
 function saveIsVisited(chapter)
@@ -971,7 +1000,7 @@ function pullVariablesFromDB()//we load the data from the database, and put it i
         console.log("Loaded data from database.")
 
         oldUser = Object.create(user);
-        resetOldUserValues();
+        resetOldUserValues();//initialize oldUser
     });
 }
 

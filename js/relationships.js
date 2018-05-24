@@ -69,7 +69,7 @@ $(function create_interface()
 
 function activate(activatedButton, button2, button3)//highlights the "activatedButton" in pink and dehighlights the other buttons in yellow
 {
-    activatedButton.className = "button yellow_button yellow_button_activated";
+    activatedButton.className = "button pink_button";
     button2.className = "button yellow_button";
     button3.className = "button yellow_button";
 }

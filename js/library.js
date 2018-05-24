@@ -982,6 +982,8 @@ function saveVariables()
         {
             console.log("\'" + response + "\'");
         }
+        
+        resetOldUserValues();
     });
 }
 

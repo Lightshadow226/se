@@ -9,28 +9,31 @@ var lines_container = document.getElementById("achievements");
 const locked_achievement_path = "_new_images_folder/game/achievements/locked/";
 const unlocked_achievement_path = "_new_images_folder/game/achievements/unlocked/";
 
+const lockImg = "_new_images_folder/game/achievements/lock.jpg";
+const unlockImg = "_new_images_folder/game/achievements/unlock.jpg";
+
 var unlocked_achievements_list = 
 [
-    "Unlocked - Alignment: True Neutral",
-    "Unlocked - Bookworm - Unocked",
-    "Unlocked - Newbie Attitude",
-    "Unlocked - Party Animal"
+    "Alignment: True Neutral",
+    "Bookworm",
+    "Newbie Attitude",
+    "Party Animal"
 ];
 
 var unlocked_achievements_list_description = 
 [
-    "Unlocked - Alignment: True Neutral",
-    "Unlocked - Bookworm - Unocked",
-    "Unlocked - Newbie Attitude",
-    "Unlocked - Party Animal"
+    "Do not take either Tadashi or Axel’s side during their fight in Chapter 2 (they were both obnoxious anyway.)",
+    "End your first day at Arlington studying with Tadashi and Alistair instead of having fun with the other students.",
+    "Stand up to Karolina in the dorm bathroom in Chapter 2 and have her comment on that fiery attitude of yours.",
+    "Go dance with Axel and Raquel at the dorm party in Chapter 2!",
 ];
 
 var locked_achievements_list = 
 [
-    "Locked - Alignment: True Neutral",
-    "Locked - Bookworm",
-    "Locked - Newbie Attitude",
-    "Locked - Party Animal"
+    "Alignment: True Neutral",
+    "Bookworm",
+    "Newbie Attitude",
+    "Party Animal"
 ];
 
 var locked_achievements_list_description = 
@@ -57,46 +60,116 @@ function refresh_lines(type)//refresh the lines that are displayed on screen
 {
     if(type == 0)//if we're making illustrations
     {
+        //activate illustrations
         document.getElementById("illustrations").style.display = "block";
-        document.getElementById("illustrations-button").style.backgroundColor = yellow_dark;
+        document.getElementById("illustrations-button").className = "button pink_button";
         
+        //deactivate achievements
         document.getElementById("achievements").style.display = "none";
-        document.getElementById("achievements-button").style.backgroundColor = yellow;
+        document.getElementById("achievements-button").className = "button yellow_button";
     }
     else if(type == 1)//if we're making achivements
     {
-        document.getElementById("achievements").style.display = "block";
-        document.getElementById("achievements-button").style.backgroundColor = yellow_dark;
-        
+        //deactivate illustrations
         document.getElementById("illustrations").style.display = "none";
-        document.getElementById("illustrations-button").style.backgroundColor = yellow;
+        document.getElementById("illustrations-button").className = "button yellow_button";
+        
+        //activate achievements
+        document.getElementById("achievements").style.display = "block";
+        document.getElementById("achievements-button").className = "button pink_button";
     }
 }
 
 function create_achievement_line(index)
 {
-    var desc_header = '<h4 class="" style="text-transform: uppercase; color: #EE4C5E">' + locked_achievements_list[index] + '</h4>';
-    var desc_description = '<p class="chara_long_desc">' + locked_achievements_list_description[index] + '</p>';
-
+    var desc_header = document.createElement('h2');
+    var desc_description = document.createElement('p');
+    
     var line = document.createElement('div');
         line.className = "line_achievement";
-        
-    var achievement_img = document.createElement('img');
-        achievement_img.src = locked_achievement_path + "achievement" + index + ".png";
-        achievement_img.className = "achievement_img";
 
+    var achievement_img = document.createElement('img');
+        achievement_img.className = "achievement_img";
+        
     var line_description = document.createElement('div');
         line_description.className = "flex-panel";
         line_description.style.padding = "10px";
 
-        var achievement_description = document.createElement('div');
+    var lock_img = document.createElement('img');
+        lock_img.className = "lock_img";
+    
+    console.log("\nStarting Line " + index + "\n");
 
-        achievement_description.innerHTML = desc_header + desc_description;// + /*desc_fullname + */desc_birthday + desc_likes + desc_dislikes + desc_description;
+    if(verifyAchievement(index))//if unlocked
+    {
+        // console.log(index + ": you have unlocked achievement \"" + unlocked_achievements_list[index] + "\"");
+        
+        desc_header.innerHTML = unlocked_achievements_list[index];
+        desc_description.innerHTML = unlocked_achievements_list_description[index];
 
+        achievement_img.src = unlocked_achievement_path + "achievement" + index + ".png";
+        lock_img.src = unlockImg;
+    }
+    else//if locked
+    {
+        // console.log(index + ": you did not unlock achievement \"" + unlocked_achievements_list[index] + "\"");
+        
+        desc_header.innerHTML = locked_achievements_list[index];
+        desc_description.innerHTML = locked_achievements_list_description[index];
+        
+        achievement_img.src = locked_achievement_path + "achievement" + index + ".png";
+        lock_img.src = lockImg;
+    }
+    
     lines_container.appendChild(line);
         line.appendChild(achievement_img);
         line.appendChild(line_description);
-            line_description.appendChild(achievement_description);
+            line_description.appendChild(desc_header);
+            line_description.appendChild(desc_description);
+        line.appendChild(lock_img);
 }
 
+function verifyAchievement(achievementIndex)
+{
+    switch(achievementIndex)
+    {
+        case 0://achievement 0
+            if(visited(566, 2)) return true;
+        
+        case 1:
+            if(visited(258, 1)) return true;
+            break;
+        
+        case 2:
+            if(visited(350, 2)) return true;
+            break;
+
+        case 3:
+            if(visited(783, 2)) return true;
+            break;
+
+        default:
+            break;
+    }
+
+    return false;
+}
+
+function visited(slide, chapter)
+{
+    loadIsVisited(chapter);
+
+    console.log("Looking at slide: " + slide + " of chapter " + chapter + " = " + alternateIsVisited[slide]);
+
+    if(alternateIsVisited[slide]) // if we visited the slide that is the "point of interest".
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+playingTheGame = false;
 createAchievements();

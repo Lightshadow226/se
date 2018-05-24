@@ -1176,12 +1176,6 @@ function browseLink(link, element)//link is the link of the story (story[special
             user.storyLocation = landingpoint;
             //alert("storylocation is now " + storyLocation);
         }
-        else if(pointofinterest == -1)//TODO: ...this is useless and will likely result in bugs
-        {
-            console.log(user.storyLocation + " going to : " + pointofinterest);
-            user.storyLocation = landingpoint;
-            refreshInterface();
-        }
         else//if not, we go to the next slide
         {
             user.storyLocation++;
