@@ -1,6 +1,14 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
 
+# Version 1.9.1 (Achievement Images and Excel Files)
+## Modified
+- `chapter0.xlsx`  `chapter1.xlsx`
+    - Small changes to excel files
+- `Achievement images`
+    - Small tweaks to achievement images
+
+
 # Version 1.8.5 (All Achievements)
 ## Added
 - `illustrations_achievements.php`      `illustrations_achievements.js`     `se-illustrations_achievements.css`
