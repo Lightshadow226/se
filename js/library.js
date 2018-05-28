@@ -973,9 +973,9 @@ function saveVariables()
 
     $.ajax('dbtransfers/push_variables.php',
     {
-            type: 'POST',
-            async: false,
-            data: jsonData
+        type: 'POST',
+        async: false,
+        data: jsonData
     }).done(function (response)
     {
         if(response != '')

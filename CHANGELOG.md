@@ -8,6 +8,31 @@
 - `Achievement images`
     - Small tweaks to achievement images
 
+    
+# Version 1.9.0 (Illustration Generator)
+## Added
+- `illustration_achivements.php`    `illustration_achivements.js`
+    - replaced the old images by actual generated images
+    - TODO: make the images have the same width (as if there's always 4 images)
+- `illustrationGenerator.php`
+    - created a file to generate an image based on the chapter and the illustration number
+- `illustrationX.php`
+    - chapter 1:
+        - illustration 1
+        - illustration 2
+        - illustration 3
+        - illustration 4
+    - chapter 2:
+        - illustration 1
+        - illustration 2
+- `images`
+    - added all the images for the illustration generator
+    - made sure all the names were correct
+
+## Changed
+- `dorm.css`
+    - added some box-shadow to the choices in the customize your character form
+
 
 # Version 1.8.5 (All Achievements)
 ## Added

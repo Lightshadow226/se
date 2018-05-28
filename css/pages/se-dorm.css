@@ -172,6 +172,12 @@
 	cursor: pointer;
 }
 
+.choices:hover
+{
+	/* box-shadow: 0 0 7px 0px #ff4956; */
+	box-shadow: 0 0 10px 0px #682666;
+}
+
 .choices-button-container
 {
 	margin: 10px;
