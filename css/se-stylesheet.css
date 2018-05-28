@@ -3,23 +3,33 @@
 	PROPERTY OF DULCET GAMES INC.
 
 	Official Colors:
-	#ff4956 - ROSE	(64%)
-    #682666 - MAUVE	(28%)
-    #F7B334 - JAUNE	(59%)
-    #EFEEEA - GREY rgb(239, 238, 234) - GREY
-
+	#ff4956 - ROSE	(64%)	rgb(255, 73, 86)
+    #682666 - MAUVE	(28%)	rgb(104, 38, 102)
+    #F7B334 - JAUNE	(59%)	rgb(247, 179, 52)
+    #EFEEEA - GREY			rgb(239, 238, 234)
+	
 	Light Colors:
-	#ffe2e4 - ROSE	(94%)
-    #f3def2 - MAUVE	(91%)
-	#fdeac7 - JAUNE	(89%)
+	#ffe2e4 - ROSE	(94%)	rgb(255, 226, 228)
+    #f3def2 - MAUVE	(91%)	rgb(243, 222, 242)
+	#fdeac7 - JAUNE	(89%)	rgb(253, 234, 199)
 	
 	Dark Colors:
-	#c0000e - ROSE	(38%)
-    #4f1d4e - MAUVE	(21%)
-	#de9409 - JAUNE	(45%)
+	#c0000e - ROSE	(38%)	rgb(192, 0, 14)
+    #4f1d4e - MAUVE	(21%)	rgb(79, 29, 78)
+	#de9409 - JAUNE	(45%)	rgb(222, 148, 9)
 
-	#e42371 - Fun Pink (progress bar)
+	Progress Bar:
+	#e42371 - Fun Pink 		rgb(228, 35, 113)
 	
+	Department Colors:
+	Business, Commerce and Politics		#274689		rgb(39, 70, 137)
+	Health Sciences						#1E793A		rgb(30, 121, 58)
+	Pure and Applied Sciences			#565E5E		rgb(86, 94, 94)
+	Performing Arts						#EBB623		rgb(235, 182, 35)
+	Fine Arts							#A4529A		rgb(164, 82, 154)
+	Athletics							#A41C13		rgb(164, 28, 19)
+	Fashion								#000000		rgb(0, 0, 0)
+
 	color shades:
 	http://www.0to255.com/682666
 
@@ -88,6 +98,12 @@
 	input
 	{
 		border: 1px solid #CCCCCC;
+	}
+
+	input:focus
+	{
+		outline-color: #682666;
+		/* border-color: #ff4956; */
 	}
 
 	/*faire une nomenclature officielle pour tous les headers*/

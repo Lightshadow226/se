@@ -53,7 +53,7 @@ function createAchievements()
         create_achievement_line(i);
     }
 
-    refresh_lines(1);
+    refresh_lines(0);
 }
 
 function refresh_lines(type)//refresh the lines that are displayed on screen
@@ -173,3 +173,62 @@ function visited(slide, chapter)
 
 playingTheGame = false;
 createAchievements();
+
+var chapterIllustrations = 
+[
+    0,
+    4,//chapter 1
+    2,//chapter 2
+]
+
+var cardColors = ["yellow", "purple", "pink"];
+
+function createIllustrations()
+{
+    var illustrationContainer = document.getElementById("illustrations");
+
+    //create all chapter lines
+    for(var i = 1; i < chapterIllustrations.length; i++)//start at chapter 1 (which is going to be purple)
+    {
+        var currentColor = cardColors[i % 3];
+
+        var line = document.createElement('div');
+            line.id = "chapter" + i;
+            line.className = "x-card-" + currentColor;
+
+            var headerContainer = document.createElement('div')
+                headerContainer.className = "x-card-" + currentColor + "-header";
+
+                var header = document.createElement('h4');
+                    header.innerHTML = "Chapter " + i;
+
+        var imageContainer = document.createElement('div');
+        imageContainer.className = "x-card-content flex-container";
+
+        illustrationContainer.appendChild(line);
+            line.appendChild(headerContainer);
+                headerContainer.appendChild(header);
+            line.appendChild(imageContainer);
+
+        //for every chapter, create all illustrations
+        for(var j = 0; j < chapterIllustrations[i]; j++)
+        {
+            illustrationNumber = j + 1;
+            var path = "_new_images_folder/game/illustrations/chapter" + i + "/illustration" + illustrationNumber + "/illustration" + illustrationNumber + ".php";
+
+            var imageDiv = document.createElement('div');
+                imageDiv.className = "card-middle-content";
+
+                var image = document.createElement('img');
+                    image.className = "x-card-img-" + currentColor;
+                    image.src = path;
+                    
+                    // console.log("_new_images_folder/game/illustrations/chapter" + i + "/illustration" + illustrationNumber  + "/illustration" + illustrationNumber  + ".jpg");
+                    
+            imageContainer.appendChild(imageDiv);
+                imageDiv.appendChild(image);
+        }
+    }
+}
+
+createIllustrations();

@@ -2,23 +2,23 @@
 
 function getSkinColor($skin)//Get the skin color
 {
-	if($skin == 0)
+	if($skin == 0)//white
 	{
 		$rgb = array(30, -20, -45, 0);
 	}
-	elseif($skin == 1)
+	elseif($skin == 1)//olive
 	{
 		$rgb = array(-15, -60, -100, 0);
 	}
-	elseif($skin == 2)
+	elseif($skin == 2)//asian
 	{	
 		$rgb = array(70, -25, -85, 0);
 	}
-	elseif($skin == 3)
+	elseif($skin == 3)//brown
 	{
 		$rgb = array(-40, -100, -140, 0);
 	}
-	elseif($skin == 4)
+	elseif($skin == 4)//black
 	{
 		$rgb = array(-105, -160, -190, 0);
 	}
@@ -32,19 +32,19 @@ function getSkinColor($skin)//Get the skin color
 
 function getHairColor($haircolor)//Hair color assignment of variables
 {
-	if($haircolor == 0)
+	if($haircolor == 0)//blonde
 	{
 		$rgb = array(80, 15, -200, 0);
 	}
-	elseif($haircolor == 1)
+	elseif($haircolor == 1)//brown
 	{
 		$rgb = array(-40, -80, -150, 0);
 	}
-	elseif($haircolor == 2)
+	elseif($haircolor == 2)//black
 	{
 		$rgb = array(-120, -120, -110, 0);
 	}
-	elseif($haircolor == 3)
+	elseif($haircolor == 3)//red
 	{
 		$rgb = array(80, -90, -200, 0);
 	}
@@ -58,19 +58,19 @@ function getHairColor($haircolor)//Hair color assignment of variables
 
 function getEyeColor($eyecolor)//Eye Color assignment of variables
 {
-	if($eyecolor == 0)
+	if($eyecolor == 0)//blue
 	{
 		$rgb = array(-10, -10, 290, 0);
 	}
-	elseif($eyecolor == 1)
+	elseif($eyecolor == 1)//green
 	{
 		$rgb = array(-130, -30, -90, 0);
 	}
-	elseif($eyecolor == 2)
+	elseif($eyecolor == 2)//grey
 	{
 		$rgb = array(-50, -50, -50, 0);
 	}
-	elseif($eyecolor == 3)
+	elseif($eyecolor == 3)//brown
 	{
 		$rgb = array(-30, -90, -110, 0);
 	}
@@ -90,19 +90,19 @@ function getHairStyle($sex, $hairstyle, $type)//Hairstyle assignment of variable
 	{
 		if($sex == 0) //If a female has been generated
 		{
-			if($hairstyle == "0")
+			if($hairstyle == "0")//straight short
 			{
 				$hair_s="studentid/female/f_hair1.png";
 			}
-			elseif($hairstyle == "1")
+			elseif($hairstyle == "1")//curly short
 			{
 				$hair_s="studentid/female/f_hair2.png";
 			}
-			elseif($hairstyle == "2")
+			elseif($hairstyle == "2")//straight long
 			{
 				$hair_s="studentid/female/f_hair3.png";
 			}
-			elseif($hairstyle == "3")
+			elseif($hairstyle == "3")//curly long
 			{
 				$hair_s="studentid/female/f_hair4.png";
 			}
@@ -113,19 +113,19 @@ function getHairStyle($sex, $hairstyle, $type)//Hairstyle assignment of variable
 		}
 		else
 		{
-			if($hairstyle == "0")
+			if($hairstyle == "0")//straight short
 			{
 				$hair_s="studentid/male/m_hair1.png";
 			}
-			elseif($hairstyle == "1")
+			elseif($hairstyle == "1")//curly medium
 			{
 				$hair_s="studentid/male/m_hair2.png";
 			}
-			elseif($hairstyle == "2")
+			elseif($hairstyle == "2")//short but long...
 			{
 				$hair_s="studentid/male/m_hair3.png";
 			}
-			elseif($hairstyle == "3")
+			elseif($hairstyle == "3")//long
 			{
 				$hair_s="studentid/male/m_hair4.png";
 			}

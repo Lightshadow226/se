@@ -48,16 +48,16 @@
         </div>
 
         <div id="illustrations">
-            <div class="x-card-purple">
+            <!-- <div class="x-card-purple">
                 <div class="x-card-purple-header">
                     <h4>Chapter 1</h4>
                 </div>
 
                 <div class="x-card-content flex-container">
-                    <div class="card-left-content"><img class="x-card-img-purple" src="images/game_images/illustrations/chapter1/illustration1.jpg" onclick="showPopup(this.src)"></img></div>
-                    <div class="card-middle-content"><img class="x-card-img-purple" src="images/game_images/illustrations/chapter1/illustration2.jpg" onclick="showPopup(this.src)"></img></div>
-                    <div class="card-middle-content"><img class="x-card-img-purple" src="images/game_images/illustrations/chapter1/illustration3.jpg" onclick="showPopup(this.src)"></img></div>
-                    <div class="card-right-content"><img class="x-card-img-purple" src="images/game_images/illustrations/chapter1/illustration4.jpg" onclick="showPopup(this.src)"></img></div>
+                    <div class="card-middle-content"><img class="x-card-img-purple" src="_new_images_folder/game/illustrations/chapter1/illustration1/illustration1.php" onclick="showPopup(this.src)"></img></div>
+                    <div class="card-middle-content"><img class="x-card-img-purple" src="_new_images_folder/game/illustrations/chapter1/illustration2/illustration2.php" onclick="showPopup(this.src)"></img></div>
+                    <div class="card-middle-content"><img class="x-card-img-purple" src="_new_images_folder/game/illustrations/chapter1/illustration3/illustration3.php" onclick="showPopup(this.src)"></img></div>
+                    <div class="card-middle-content"><img class="x-card-img-purple" src="_new_images_folder/game/illustrations/chapter1/illustration4/illustration4.php" onclick="showPopup(this.src)"></img></div>
                 </div>
             </div>		
 
@@ -72,7 +72,7 @@
                     <div class="card-middle-content"></div>
                     <div class="card-right-content"></div>
                 </div>
-            </div>		
+            </div>		 -->
         </div>
         
         <div id="achievements">
