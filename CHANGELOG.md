@@ -1,6 +1,18 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
 
+# Version 1.10.1 (Affinity Fix)
+## Modified
+- `gameengine.js`   `library.js`
+    - fixed the affinity bug
+    - now, we can save negative affinities in the DB, but the lowest that can be seen is 0
+    - we might have to force a value of 0 in the future, when say:
+        - we have been mean to Karolina
+        - thus we're at -50 at chapter 6
+        - we decide to be nice to her
+        - it will take a fuckton of time to win her back and to even see a change
+
+
 # Version 1.10.0 (Illustrations and Achievement DB Tables)
 ## Added
 - `illustrations_achievements.php`

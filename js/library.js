@@ -781,10 +781,10 @@ function wipeCurrentChapter()
 
                 var newAffinity = relevant_char.affinity;
                 
-                if(Number(relevant_char.affinity) < 0)
-                {
-                    relevant_char.affinity = 0;
-                }
+                // if(Number(relevant_char.affinity) < 0)
+                // {
+                //     relevant_char.affinity = 0;
+                // }
 
                 console.log("Reverteds slide " + j + "\n" + relevant_char.name + " was " + oldAffinity + " is now " + newAffinity + "\n");
             }
@@ -802,10 +802,10 @@ function wipeCurrentChapter()
                 
                 var newAffinity = relevant_char.affinity;
 
-                if(Number(relevant_char.affinity) < 0)
-                {
-                    relevant_char.affinity = 0;
-                }
+                // if(Number(relevant_char.affinity) < 0)
+                // {
+                //     relevant_char.affinity = 0;
+                // }
 
                 console.log("Reverteds slide " + j + "\n" + relevant_char.name + " was " + oldAffinity + " is now " + newAffinity + "\n");
             }
