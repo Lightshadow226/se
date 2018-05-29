@@ -32,7 +32,7 @@
     <div class="main_content">
         <div class="add_padding card-firstdiv">
             
-            <h1 id="illu_achiev_id">Illustrations</h1>
+            <h1 id="illu_achiev_id">Illustrations & Achievements</h1>
             
             <div id="button_container_horizontal" class="flex-container" style="margin-bottom: 20px;"> <!-- les boutons jaunes -->
             

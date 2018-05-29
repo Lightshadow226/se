@@ -1,6 +1,25 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
 
+# Version 1.10.0 (Illustrations and Achievement DB Tables)
+## Added
+- `illustrations_achievements.php`
+    - added a loader for all the images
+    - added locked vs unlocked functionality
+- `library.js`  `se-loaders.css`
+    - added a loader that automatically deletes itself once the parent loads
+    - (the code is a bit weird, but it works in very specific situations)
+    - (be alert when using it)
+
+## Modified
+- `saveachievements.php`    `loadachievements.js`       `library.js`
+    - wrote the scripts to load and save achievements and illustrations
+- `gameengine.js`
+    - included the script to test for achievements and illustrations on each click
+- `users.sql`
+    - Updated Database
+
+
 # Version 1.9.1 (Achievement Images and Excel Files)
 ## Modified
 - `chapter0.xlsx`  `chapter1.xlsx`

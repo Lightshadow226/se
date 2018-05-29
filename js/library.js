@@ -1,9 +1,8 @@
 /*
-Contains fonctions that are used on many different pages
+Contains fonctions that are used on multiple pages
 Written by Lightshadow
 
 Copyright Dulcet Games 2018.
-
 All rights reserved.
 
 January 28, 2018
@@ -579,6 +578,35 @@ function createLoader()//returns a loader as an HTMLElement
     return loaderWrapper;
 }
 
+function documentCreateLoader(id, loadingElement)//returns a loader as an HTMLElement
+{
+    var loaderWrapper = document.createElement('div');
+        loaderWrapper.id = "small-loader-wrapper" + id;
+    
+    var loader = document.createElement('div');
+        loader.id = "small-loader";
+    
+    var img_loader = document.createElement('img');
+        img_loader.id = "small-img_loader";
+        img_loader.src="logo.png";
+    
+    loaderWrapper.appendChild(loader);
+    loaderWrapper.appendChild(img_loader);
+
+    loadingElement.addEventListener('load', function()
+    {
+        var ID = this.id;
+        var loaderID = 'small-loader-wrapper' + ID;
+        // var containerID = "imageDiv" + ID;
+
+        document.getElementById(loaderID).remove();
+        // document.getElementById(loaderID).className = "small-loaded";
+        // document.getElementById(containerID).removeChild(document.getElementById(loaderID));
+    }, false);
+
+    return loaderWrapper;
+}
+
 //*****GAME ENGINE UTILITIES*****
 function loadAllImages(loader)//unsuccessfully tries to load all the images prior to the start of the game
 {
@@ -692,7 +720,7 @@ $(document).keyup(function(e)//when we press a key
 function clearPopup()
 {
     var popup_container = document.getElementById("popup-container");
-            popup_container.className = "invisible";
+        popup_container.className = "invisible";
 }
 
 function showPopup(img_path)
@@ -702,6 +730,7 @@ function showPopup(img_path)
     
     var popup_container = document.getElementById("popup-container");
         popup_container.className = "visible fullscreen";
+        popup_container.appendChild(documentCreateLoader("popup-img", imgElement));
 
     document.getElementById("top-right-x").onclick = function(){clearPopup()};
 
@@ -712,8 +741,8 @@ function showPopup(img_path)
 function toggle_pronouns(clicked, one, two)
 {
     clicked.classList.toggle("pronoun-button-selected");
-    one.classList.remove("pronoun-button-selected");
-    two.classList.remove("pronoun-button-selected")
+        one.classList.remove("pronoun-button-selected");
+        two.classList.remove("pronoun-button-selected")
 
     if(clicked.className.includes("pronoun-button-selected"))
     {
@@ -808,6 +837,104 @@ function get_button_href(index)
     {
         return "#";//alert("Finish previous chapters first!");
     }
+}
+
+//*****Illustrations & Achievements*****
+function verifyIllustration()
+{
+    toSave = "none";
+
+    switch(user.last_chapter_played)
+    {
+        case 0://chapter 0
+            // break;
+
+        case 1://chapter 1
+            if(visiting(222, 1)) toSave = "c1i1";
+        
+            if(visiting(232, 1)) toSave = "c1i2";
+        
+            if(visiting(243, 1)) toSave = "c1i3";
+
+            if(visiting(259, 1)) toSave = "c1i4";
+
+        case 2://chapter 2
+            if(visiting(772, 2)) toSave = "c2i1";
+            
+            if(visiting(785, 2)) toSave = "c2i2";
+
+        default:
+            break;
+    }
+
+    if(toSave != "none")
+    {
+        console.log("New illustrationL: (" + toSave + ")");
+        saveIllustrationAchievement(toSave, "illustrations");
+    };
+}
+
+function verifyAchievement()
+{
+    toSave = "none";
+
+    switch(user.last_chapter_played)
+    {
+        case 0://achievement 0
+            if(visiting(566, 2)) toSave = "a0";
+        
+        case 1:
+            if(visiting(258, 1)) toSave = "a1";
+            break;
+        
+        case 2:
+            if(visiting(350, 2)) toSave = "a2";
+            break;
+
+        case 3:
+            if(visiting(783, 2)) toSave = "a3";
+            break;
+
+        default:
+            break;
+    }
+
+    if(toSave != "none")
+    {
+        console.log("New achievement: (" + toSave + ")");
+        saveIllustrationAchievement(toSave, "achievements");
+    };
+}
+
+function visiting(slide, chapter)
+{
+    if(chapter == user.last_chapter_played)//if we're currently playing the chapter, let's verify it
+    {
+        if(slide == user.storyLocation) return true;
+    }
+}
+
+function saveIllustrationAchievement(code, type)
+{
+    var jsonData = {};
+        jsonData['type'] = type;
+        jsonData['column'] = code;
+
+    // console.log("Saving I&A\n");
+    // console.log(jsonData);
+
+    $.ajax('dbtransfers/saveachievements.php',
+    {
+        type: 'POST',
+        async: false,
+        data: jsonData
+    }).done(function (response)
+    {
+        if(response != '')
+        {
+            console.log("\'" + response + "\'");
+        }
+    });
 }
 
 // *********************************

@@ -929,6 +929,67 @@ function saveIsVisited(chapter)
     });
 }
 
+var achievements = new Array();
+var illustrations = new Array();
+
+var illustrationsQty = 
+[
+    0,
+    4,
+    2,
+];
+
+function loadIllustrationsAchievements()
+{
+    $.ajax('dbtransfers/loadachievements.php',
+    {
+        type: 'GET',
+        async: false,
+        dataType: 'html',
+    }).done(function (response)//when the request is done, we execute the following code:
+    {
+        //we print the response in #DB_handle:
+
+        // console.log(response);
+        $('#DB_handle').html(response);
+
+        var achievementsSize = parseInt(document.getElementById("achievements_size").value);
+        
+        /***** Achievements *****/
+
+        //then we save them as JS variables:
+        for(var i = 0; i < achievementsSize; i++)
+        {
+            var id = "a" + i;
+            achievements.push(parseInt(document.getElementById(id).value));
+            // console.log("i: " + i + " = " + achievements[i]);
+        }
+        
+        /***** Illustrations *****/
+        
+        //for each chapter
+        for(var i = 1; i < illustrationsQty.length; i++)
+        {
+            illustrations[i] = new Array();
+
+            //for each achievement
+            for(var j = 0; j < illustrationsQty[i]; j++)
+            {
+                var thisChapter = i;
+                var thisIllustration = j + 1;
+
+                //on identifie la nouvelle variable
+                var newVariable = "c" + thisChapter + "i" + thisIllustration;
+                
+                //on store la variable
+                illustrations[i].push(parseInt(document.getElementById(newVariable).value));
+                // console.log("[" + newVariable + "] illustration[" + i + "][" + j + "] = " + illustrations[i][j]);
+            }
+        }
+        console.log("Loaded illustrations and achievemnts from database.")
+    });
+}
+
 function pullVariablesFromDB()//we load the data from the database, and put it in the div with the ID = "#DB_handle" -> thus why we use $('#DB_handle')
 {
     // console.log("Pulling data from the database...");
@@ -1099,6 +1160,3 @@ pullVariablesFromDB();
 /**
      * https://openclassrooms.com/courses/simplifiez-vos-developpements-javascript-avec-jquery/premiers-pas-avec-ajax
      */
-
-
- 

@@ -888,7 +888,10 @@ function refreshInterface()
     
     refreshTestContainer();
 
-    saveIsVisited();
+    verifyIllustration();//Test for Illustrations
+    verifyAchievement();//Test for Achievements
+
+    saveIsVisited();//TODO: Optimize this
     pushVariablesToDB();
     updateGameBar();
 }
