@@ -780,7 +780,7 @@ function loadIsVisited(chapter)
 
     var actualChapter = user.last_chapter_played;
 
-    //if we're not loading the current chapter
+    //if we're not loading the current chapter [SWAP]
     if(chapter != actualChapter)
     {
         //we save the desired chapter in the database
@@ -817,10 +817,11 @@ function loadIsVisited(chapter)
             alternateIsVisited.push(actualValue);
         }
 
-        console.log("Loaded isVisited for " + chapter_size + " slides.");
+        console.log("Loaded isVisited.");
+        // console.log("Loaded isVisited for " + chapter_size + " slides.");
     });
 
-    //if we're not loading the current chapter
+    //if we're not loading the current chapter [SWAP BACK]
     if(chapter != actualChapter)
     {
         //we save the actual chapter back in the database
@@ -834,99 +835,71 @@ function loadIsVisited(chapter)
         for(var i = 0; i < alternateIsVisited.length; i++)
         {
             story[isVisited][i] = alternateIsVisited[i];
+            // console.log("Loading - Alternate[" + i + "]: " + alternateIsVisited[i] + "\nStory[" + i + "]: " + story[isVisited][i] + "\n");
         }
     }
-/*
-    //if we're loading the current chapter
-    if(chapter == user.last_chapter_played)
-    {
-        $.ajax('dbtransfers/load_is_visited.php',
-        {
-            type: 'GET',
-            async: false,
-            dataType: 'html',
-        }).done(function (response)//when the request is done, we execute the following code:
-        {
-            // TODO: encode the response in JSON directly in the php file
-            // that way, there is no need to append to the DOM
-            // console.log(response);
-            
-            //we print the response in #DB_handle:
-            $('#DB_handle').html(response);
-            
-            var chapter_size = parseInt(document.getElementById("chapter_size").value);
-            //chapter_size is actually one more (+1)
-
-            //then we save them as JS variables:
-            for(var i = 0; i < chapter_size; i++)
-            {
-                var new_variable = "c" + i;
-                // console.log(new_variable);
-                var isVisitedValue = document.getElementById(new_variable).value;
-
-                //convert from int to boolean 1 -> true
-                var actualValue = false;
-                if(isVisitedValue == 1) actualValue = true;
-                
-                if(notPlayingTheGame)
-                {
-                    alternateIsVisited.push(actualValue);
-                }
-                else
-                {
-                    story[isVisited][i] = actualValue;
-                }
-            }
-
-            console.log("Loaded isVisited for " + chapter_size + " slides.");
-        });
-    }
-    //if we're NOT loading the current chapter
-    else
-    {
-        
-    }
-*/
 }
 
-function saveIsVisited(chapter)
+function saveIsVisited(chapter, slide)
 {
     // solution: https://stackoverflow.com/questions/1184123/is-it-possible-to-add-dynamically-named-properties-to-javascript-object
     var jsonData = {};
-    
+    var variablesSaved = 0;
     var chapter_size = story[0].length;
     
     //convert the data into JSON (true -> 1)
     for(var i = 0; i < chapter_size; i++)
     {
-        // console.log("(saving) " + i + ": " + story[isVisited][i]);
-        
-        var JSONpropertyName = "c" + i;
-        var value = 0;
-
-        if(story[isVisited][i])
+        if(alternateIsVisited[i] != story[isVisited][i])
         {
-            value = 1;
+            // console.log("Alternate[" + i + "]: " + alternateIsVisited[i] + "\nStory[" + i + "]: " + story[isVisited][i] + "\n");
+            
+            var JSONpropertyName = "c" + i;
+            var value = 0;
+    
+            if(story[isVisited][i])
+            {
+                value = 1;
+            }
+    
+            jsonData[JSONpropertyName] = value;
+            variablesSaved ++;
         }
-
-        jsonData[JSONpropertyName] = value;
     }
 
-    console.log("Saving isVisited: ");
-    console.log(jsonData);
-    
-    //send the JSON data to the server
-    $.ajax('dbtransfers/save_is_visited.php',
+    if(variablesSaved > 0)
+    {
+        // console.log("Saving isVisited: ");
+        console.log(jsonData);
+        
+        //send the JSON data to the server
+        $.ajax('dbtransfers/save_is_visited.php',
         {
             type: 'POST',
             async: false,
             dataType: "json",
             data: jsonData
-    }).done(function (response)
+        }).done(function (response)
+        {
+            console.log("Saved isVisited.");
+            // console.log("Saved isVisited for " + chapter_size + " slides.");
+            console.log(response);
+        });
+    
+        resetOldIsVisitedValues();
+    }
+}
+
+function resetOldIsVisitedValues()
+{
+    alternateIsVisited = null;
+    alternateIsVisited = new Array();
+
+    for(var i = 0; i < story[0].length; i++)
     {
-        console.log(response);
-        console.log("Saved isVisited for " + chapter_size + " slides.");
-    });
+        alternateIsVisited.push(story[isVisited][i]);
+        // console.log("Alternate[" + i + "]: " + alternateIsVisited[i] + "\nStory[" + i + "]: " + story[isVisited][i] + "\n");
+    }
 }
 
 var achievements = new Array();
@@ -986,7 +959,7 @@ function loadIllustrationsAchievements()
                 // console.log("[" + newVariable + "] illustration[" + i + "][" + j + "] = " + illustrations[i][j]);
             }
         }
-        console.log("Loaded illustrations and achievemnts from database.")
+        console.log("Loaded I&A.");
     });
 }
 
@@ -1058,7 +1031,7 @@ function pullVariablesFromDB()//we load the data from the database, and put it i
         // $(document).ready(function(){try{refreshInterface();}catch(e){}});
         $(document).ready(function(){try{update_highest_affinity(); update_current_chapter();}catch(e){}});
         
-        console.log("Loaded data from database.")
+        console.log("Loaded Variables.")
 
         oldUser = Object.create(user);
         resetOldUserValues();//initialize oldUser

@@ -1,6 +1,21 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
 
+# Version 1.10.2 (Optimization - Saving IsVisited)
+## Modified
+- `variables.js`        `save_is_visited.php`
+    - now we're saving only slides that have to be saved
+- `library.js`
+    - removed obnoxious console logs
+- `chapter0.xlsx`  `chapter1.xlsx`
+    - Added one line in the MySQL generation code
+
+## Database
+- `users.sql`
+    - Updated Database
+    - there were slides missing in chapter 1
+
+
 # Version 1.10.1 (Affinity Fix)
 ## Modified
 - `gameengine.js`   `library.js`
@@ -36,6 +51,7 @@
 ## Modified
 - `chapter0.xlsx`  `chapter1.xlsx`
     - Small changes to excel files
+
 - `Achievement images`
     - Small tweaks to achievement images
 

@@ -114,11 +114,11 @@ function refreshAffinity(side)
             if(!story[isVisited][user.storyLocation])
             {
                 relevant_char.affinity += Number(story[infinityConsequencePointer][user.storyLocation]);
-                console.log(relevant_char.name + "'s Affinity: " + relevant_char.affinity);
+                // console.log(relevant_char.name + "'s Affinity: " + relevant_char.affinity);
             }
             else
             {
-                console.log("You've already visited this slide!");
+                // console.log("You've already visited this slide!");
             }
         
         // if(Number(relevant_char.affinity) < 0)

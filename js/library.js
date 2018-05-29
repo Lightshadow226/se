@@ -1090,28 +1090,28 @@ function saveVariables()
         var variablesString = "variables";
         if(variablesSaved == 1) variablesString = "variable";
 
-        console.log("Saving " + variablesSaved + " " + variablesString + ": ");
+        // console.log("Saving " + variablesSaved + " " + variablesString + ": ");
         console.log(jsonData);
+
+        $.ajax('dbtransfers/push_variables.php',
+        {
+            type: 'POST',
+            async: false,
+            data: jsonData
+        }).done(function (response)
+        {
+            if(response != '')
+            {
+                console.log("\'" + response + "\'");
+            }
+            
+            resetOldUserValues();
+        });
     }
     else
     {
         // console.log("No variable have to be saved.");
     }
-
-    $.ajax('dbtransfers/push_variables.php',
-    {
-        type: 'POST',
-        async: false,
-        data: jsonData
-    }).done(function (response)
-    {
-        if(response != '')
-        {
-            console.log("\'" + response + "\'");
-        }
-        
-        resetOldUserValues();
-    });
 }
 
 function hasToBeSaved(propertyName)//returns either true or false (has to be saved or not)
