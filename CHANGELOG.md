@@ -1,14 +1,15 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
 
-# Version 1.9.1 (Achievement Images and Excel Files)
+# Version 1.10.3 (Chapter 0 & 1 Beta Fixes)
 ## Modified
-- `chapter0.xlsx`  `chapter1.xlsx`
-    - Small changes to excel files
-- `Achievement images`
-    - Small tweaks to achievement images
+- `chapter1.xlsx`
+    - Grammar changes suggested by the betas
+- `gameengine.js` `variables.js` `chapter1.js3
+    - added option -13 to game engine
+    - (GHOST SLIDE - directly go to landing slide)
 
-    
+
 # Version 1.9.0 (Illustration Generator)
 ## Added
 - `illustration_achivements.php`    `illustration_achivements.js`

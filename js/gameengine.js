@@ -826,7 +826,8 @@ function refreshInterface()
         }
         else if(story[special_option][user.storyLocation] == -13)// -13 === directly goto landing slide ***** GHOST SLIDE
         {
-            
+            user.storyLocation = story[LP][user.storyLocation];
+            refreshInterface();
         }
         else if(story[special_option][user.storyLocation] == -14)// -14 === Put on your uniform form
         {
