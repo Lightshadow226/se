@@ -69,18 +69,30 @@ if(isset($_POST['signupBtn'],$_POST['token']))
 					$sqlInsert3 = "INSERT INTO affinity (id) SELECT id FROM userinfo WHERE id = $user_id";
 					$sqlInsert4 = "INSERT INTO scholarinfo (id) SELECT id FROM userinfo WHERE id = $user_id";
 					$sqlInsert5 = "INSERT INTO chapter0_story (id) SELECT id FROM userinfo WHERE id = $user_id";
+					$sqlInsert6 = "INSERT INTO chapter1_story (id) SELECT id FROM userinfo WHERE id = $user_id";
+					$sqlInsert7 = "INSERT INTO chapter2_story (id) SELECT id FROM userinfo WHERE id = $user_id";
+					$sqlInsert8 = "INSERT INTO achievements (id) SELECT id FROM userinfo WHERE id = $user_id";
+					$sqlInsert9 = "INSERT INTO illustrations (id) SELECT id FROM userinfo WHERE id = $user_id";
 					
 					//Using PDO to sanitize the data
 					$statement2 = $db->prepare($sqlInsert2);
 					$statement3 = $db->prepare($sqlInsert3);
 					$statement4 = $db->prepare($sqlInsert4);
 					$statement5 = $db->prepare($sqlInsert5);
+					$statement6 = $db->prepare($sqlInsert6);
+					$statement7 = $db->prepare($sqlInsert7);
+					$statement8 = $db->prepare($sqlInsert8);
+					$statement9 = $db->prepare($sqlInsert9);
 
 					//Adding the data into the database
 					$statement2->execute();
 					$statement3->execute();
 					$statement4->execute();
 					$statement5->execute();
+					$statement6->execute();
+					$statement7->execute();
+					$statement8->execute();
+					$statement9->execute();
 				
 					/*THE CLASS "logo_div"  DOESN'T EXIST*/
 					
@@ -131,9 +143,7 @@ if(isset($_POST['signupBtn'],$_POST['token']))
 					$mail->addAddress($email, $username);
 					$mail->Subject = "Welcome to Sweet Elite";
 					$mail->Body = $mail_body;
-	
-					header('Location: registration_successful.php');
-					exit();
+
 
 					//Error Handling for PHPMailer
 					if(!$mail->Send())
@@ -173,12 +183,11 @@ else if(isset($_GET['id']))
 	if ($statement->rowCount() == 1)
 	{
 		$result = '<h2>Email Confirmed </h2>
-		<p>Your email address has been verified, you can now <a href="login.php">login</a> with your email and password.</p>';
+		<p>Your email address has been verified, you can now <a href="login.php">login</a> with your email and password!</p>';
 	} 
 	else
 	{
-		$result = "<p class='lead'>No changes made please contact site admin,
-		if you have not confirmed your email before</p>";
+		$result = "<p class='lead'>No changes made please contact the Sweet Elite Staff to activate your account if you still can't log in.</p>";
 	}
 }
 ?>

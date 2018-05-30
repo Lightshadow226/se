@@ -1,6 +1,15 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
 
+# Version 1.10.4 (Registration System Fixes and Chapter 2 Fixes)
+## Modified
+- `chapter2.xlsx`
+    - Bug fixes suggested by the betas
+- `activate.php` `password_reset.php` `registration_succesful.php` `parseSignup.php`
+    - Fixed bug that would not let the user activate by email.
+    - Added relevant sql scripts in signup script.
+
+
 # Version 1.10.3 (Chapter 0 & 1 Beta Fixes)
 ## Modified
 - `chapter1.xlsx`

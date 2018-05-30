@@ -1,3 +1,7 @@
+<?php
+include_once 'partials/parseSignup.php';
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,10 +26,8 @@
 		<div class = "">
 			<div class="card-nomargin add_padding">
 				<h1>Email Confirmation</h1>
-				<p style="text-align:center;">Your email address has been verified, you can now <a href="login.php">Log in</a> with your email and password.</p>
+				<?php if(isset($result)) echo $result; ?>
 				<br><p style="text-align:center;"><a href="index.php">Back</a> </p> </br>
-            	<?php if(isset($result)) echo $result; ?>
-
         	</div>
 		</div>
 
