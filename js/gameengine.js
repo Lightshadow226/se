@@ -114,16 +114,17 @@ function refreshAffinity(side)
             if(!story[isVisited][user.storyLocation])
             {
                 relevant_char.affinity += Number(story[infinityConsequencePointer][user.storyLocation]);
+                // console.log(relevant_char.name + "'s Affinity: " + relevant_char.affinity);
             }
             else
             {
-                console.log("You've already visited this slide!");
+                // console.log("You've already visited this slide!");
             }
         
-        if(Number(relevant_char.affinity) < 0)
-        {
-            relevant_char.affinity = 0;
-        }
+        // if(Number(relevant_char.affinity) < 0)
+        // {
+        //     relevant_char.affinity = 0;
+        // }
         
         affinity_meter.src = browseAffinity(relevant_char.affinity);//character 1 (right)
 
@@ -889,7 +890,10 @@ function refreshInterface()
     
     refreshTestContainer();
 
-    saveIsVisited();
+    verifyIllustration();//Test for Illustrations
+    verifyAchievement();//Test for Achievements
+
+    saveIsVisited();//TODO: Optimize this
     pushVariablesToDB();
     updateGameBar();
 }

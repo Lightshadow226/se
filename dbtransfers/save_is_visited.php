@@ -44,18 +44,22 @@ $columnCount = (sizeof($isVisited) / 2) - 1;
 for($i = 0; $i < $columnCount + 1; $i++)
 {
     $column = "c" . $i;
-    $columnValue = $_POST[$column];
 
-    try
+    if(isset($_POST[$column]))
     {
-        $sqlQuery = "UPDATE " . $table . " SET " . $column . " = '$columnValue' WHERE id = '$id'";
-        $statement = $db->prepare($sqlQuery);
-        $statement->execute();
-
-        $status = "SQL Sent!";
-    }
-    catch (PDOException $ex)
-    {
-        echo $ex;
+        $columnValue = $_POST[$column];
+    
+        try
+        {
+            $sqlQuery = "UPDATE " . $table . " SET " . $column . " = '$columnValue' WHERE id = '$id'";
+            $statement = $db->prepare($sqlQuery);
+            $statement->execute();
+    
+            $status = "SQL Sent!";
+        }
+        catch (PDOException $ex)
+        {
+            echo $ex;
+        }
     }
 }

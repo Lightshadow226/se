@@ -65,9 +65,15 @@
 Target: += *--cd-to-home*
 Start in : *%HOMEDRIVE%%HOMEPATH%*
 
-`SQL tools`
+`MySQL tools`
 *Exporting and importing SQL databases between computers:* https://www.youtube.com/watch?v=ptaRO_824MU
 *Changing Root Password:* https://stackoverflow.com/questions/12224431/create-a-root-password-for-phpmyadmin
+
+*make "ID" the primary key:* ALTER TABLE achievements ADD PRIMARY KEY (id)
+*Insert rows for all users:* INSERT INTO achievements (id) SELECT id FROM userinfo
+*SET DEFAULT:* ALTER TABLE mytbl ALTER j SET DEFAULT 1000;
+
+
 
 `Useful install links`
 *WAMP:* https://sourceforge.net/projects/wampserver/files/latest/download

@@ -9,6 +9,59 @@
     - added option -13 to game engine
     - (GHOST SLIDE - directly go to landing slide)
 
+# Version 1.10.2 (Optimization - Saving IsVisited)
+## Modified
+- `variables.js`        `save_is_visited.php`
+    - now we're saving only slides that have to be saved
+- `library.js`
+    - removed obnoxious console logs
+- `chapter0.xlsx`  `chapter1.xlsx`
+    - Added one line in the MySQL generation code
+
+## Database
+- `users.sql`
+    - Updated Database
+    - there were slides missing in chapter 1
+
+
+# Version 1.10.1 (Affinity Fix)
+## Modified
+- `gameengine.js`   `library.js`
+    - fixed the affinity bug
+    - now, we can save negative affinities in the DB, but the lowest that can be seen is 0
+    - we might have to force a value of 0 in the future, when say:
+        - we have been mean to Karolina
+        - thus we're at -50 at chapter 6
+        - we decide to be nice to her
+        - it will take a fuckton of time to win her back and to even see a change
+
+
+# Version 1.10.0 (Illustrations and Achievement DB Tables)
+## Added
+- `illustrations_achievements.php`
+    - added a loader for all the images
+    - added locked vs unlocked functionality
+- `library.js`  `se-loaders.css`
+    - added a loader that automatically deletes itself once the parent loads
+    - (the code is a bit weird, but it works in very specific situations)
+    - (be alert when using it)
+
+## Modified
+- `saveachievements.php`    `loadachievements.js`       `library.js`
+    - wrote the scripts to load and save achievements and illustrations
+- `gameengine.js`
+    - included the script to test for achievements and illustrations on each click
+- `users.sql`
+    - Updated Database
+
+
+# Version 1.9.1 (Achievement Images and Excel Files)
+## Modified
+- `chapter0.xlsx`  `chapter1.xlsx`
+    - Small changes to excel files
+
+- `Achievement images`
+    - Small tweaks to achievement images
 
 # Version 1.9.0 (Illustration Generator)
 ## Added

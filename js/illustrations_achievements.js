@@ -98,9 +98,9 @@ function create_achievement_line(index)
     var lock_img = document.createElement('img');
         lock_img.className = "lock_img";
     
-    console.log("\nStarting Line " + index + "\n");
+    // console.log("\nStarting Line " + index + "\n");
 
-    if(verifyAchievement(index))//if unlocked
+    if(achievements[index])//if unlocked
     {
         // console.log(index + ": you have unlocked achievement \"" + unlocked_achievements_list[index] + "\"");
         
@@ -128,51 +128,6 @@ function create_achievement_line(index)
             line_description.appendChild(desc_description);
         line.appendChild(lock_img);
 }
-
-function verifyAchievement(achievementIndex)
-{
-    switch(achievementIndex)
-    {
-        case 0://achievement 0
-            if(visited(566, 2)) return true;
-        
-        case 1:
-            if(visited(258, 1)) return true;
-            break;
-        
-        case 2:
-            if(visited(350, 2)) return true;
-            break;
-
-        case 3:
-            if(visited(783, 2)) return true;
-            break;
-
-        default:
-            break;
-    }
-
-    return false;
-}
-
-function visited(slide, chapter)
-{
-    loadIsVisited(chapter);
-
-    console.log("Looking at slide: " + slide + " of chapter " + chapter + " = " + alternateIsVisited[slide]);
-
-    if(alternateIsVisited[slide]) // if we visited the slide that is the "point of interest".
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
-}
-
-playingTheGame = false;
-createAchievements();
 
 var chapterIllustrations = 
 [
@@ -215,20 +170,60 @@ function createIllustrations()
         {
             illustrationNumber = j + 1;
             var path = "_new_images_folder/game/illustrations/chapter" + i + "/illustration" + illustrationNumber + "/illustration" + illustrationNumber + ".php";
+            var lockedPath = "_new_images_folder/game/illustrations/locked_horizontal.jpg";
+            
+            // console.log("illustration[" + i + "][" + j + "] = " + illustrations[i][j]);
 
             var imageDiv = document.createElement('div');
+                imageDiv.id = "imageDiv" + i + "-" + j;
                 imageDiv.className = "card-middle-content";
+                imageDiv.style.position = "relative";
+                imageDiv.style.minHeight= "150px";
 
                 var image = document.createElement('img');
+                    image.id = i + "-" + j;
                     image.className = "x-card-img-" + currentColor;
-                    image.src = path;
                     
-                    // console.log("_new_images_folder/game/illustrations/chapter" + i + "/illustration" + illustrationNumber  + "/illustration" + illustrationNumber  + ".jpg");
+                    if(illustrations[i][j])
+                    {
+                        image.src = path;
+                    }
+                    else
+                    {
+                        image.src = lockedPath;
+                    }
+
+                    image.addEventListener('click', function()
+                    {
+                        var ID = this.id;
+                        showPopup(this.src);
+                    }, false);
+
+                var loader = documentCreateLoader(i + "-" + j, image);
                     
             imageContainer.appendChild(imageDiv);
                 imageDiv.appendChild(image);
+                imageDiv.appendChild(loader);
+        }
+
+        for(var j = chapterIllustrations[i]; j < 4; j++)
+        {
+            var imageDiv = document.createElement('div');
+                imageDiv.className = "card-middle-content";
+                imageDiv.style.position = "relative";
+                imageDiv.style.minHeight= "150px";
+                
+            imageContainer.appendChild(imageDiv);
         }
     }
 }
 
+loadIllustrationsAchievements();
+
+playingTheGame = false;
+
+console.log("Creating Achievements...\n");
+createAchievements();
+
+console.log("Creating Illustrations...\n");
 createIllustrations();
