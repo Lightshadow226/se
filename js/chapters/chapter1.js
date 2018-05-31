@@ -544,7 +544,7 @@ function Chapter()
         "null",
         "That sort of thing happens a lot to the both of us. No biggie! Means we get to hang out a little more with you!",
         "null",
-        "Look at that! I thought I’d have to ask " + user.gender + " myself.",
+        "Look at that! I thought I’d have to ask " + user.scholarname + " myself.",
         "null",//230 
         "null",//231 Tegan & Tyler's dorm
         "null",//232 TODO: popup

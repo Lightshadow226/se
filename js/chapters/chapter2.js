@@ -23,9 +23,8 @@ function Chapter()
     {
         story[i]= new Array();//il faut créer des arrays pour chaque array. Donc pour x[0], il faut créer des arrays, mais pour x[1] aussi, les deux sont indépendents. Il peut y avoir x[0][1][1][10] et x[1][2] qui coexistent
     }
-    
-    //story[0] === Story Text
-    story[0] = [
+     //story[0] === Story Text
+     story[0] = [
         "(I brushed my teeth and put on my clothes in record time. Clumsily grabbing my schoolbag, I rushed out of the dorms and made my way into the school, running.)",//0 
         "(As I entered the hallway, I stopped, suddenly realizing something.)",
         "... Where are my classes!?",

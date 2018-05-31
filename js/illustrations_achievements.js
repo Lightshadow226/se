@@ -169,11 +169,13 @@ function createIllustrations()
         for(var j = 0; j < chapterIllustrations[i]; j++)
         {
             illustrationNumber = j + 1;
+            // i = 2;
+            // illustrationNumber = 2;
+
             var path = "_new_images_folder/game/illustrations/chapter" + i + "/illustration" + illustrationNumber + "/illustration" + illustrationNumber + ".php";
             var lockedPath = "_new_images_folder/game/illustrations/locked_horizontal.jpg";
-            
             // console.log("illustration[" + i + "][" + j + "] = " + illustrations[i][j]);
-
+            
             var imageDiv = document.createElement('div');
                 imageDiv.id = "imageDiv" + i + "-" + j;
                 imageDiv.className = "card-middle-content";
@@ -183,6 +185,7 @@ function createIllustrations()
                 var image = document.createElement('img');
                     image.id = i + "-" + j;
                     image.className = "x-card-img-" + currentColor;
+                    image.style.display = "none";
                     
                     if(illustrations[i][j])
                     {

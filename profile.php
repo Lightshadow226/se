@@ -107,10 +107,19 @@
 					</div>
 				</div>
 			</div>
+
+			<div id = "DB_handle"></div>
+			
 		</div>
 	<?php endif ?>
 
 
 </body>
+
+<script src = "js/variables.js"></script><!--needed for the logged in functionality of "current chapter"-->
+<script src = "js/library.js"></script>
+<script>
+	// updateGameBar();
+</script>
 
 </html>

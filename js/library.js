@@ -597,6 +597,8 @@ function documentCreateLoader(id, loadingElement)//returns a loader as an HTMLEl
     {
         var ID = this.id;
         var loaderID = 'small-loader-wrapper' + ID;
+        // loadingElement.style.visibility = "visible";
+        loadingElement.style.display = "block";
         // var containerID = "imageDiv" + ID;
 
         document.getElementById(loaderID).remove();
@@ -1097,9 +1099,20 @@ function saveVariables()
         {
             type: 'POST',
             async: false,
+            dataType: "json",
             data: jsonData
-        }).done(function (response)
+            // beforeSend: showLoadingImgFunction()
+            // TODO: make a loader and show it here
+        })
+        // .fail(function (response)
+        // {
+        //     if (data.responseCode) console.log(data.responseCode);
+
+        //     saveVariables(arguments);
+        // })
+        .done(function (response)
         {
+            // TODO: Remove loader once it is complete
             if(response != '')
             {
                 console.log("\'" + response + "\'");
@@ -1107,10 +1120,6 @@ function saveVariables()
             
             resetOldUserValues();
         });
-    }
-    else
-    {
-        // console.log("No variable have to be saved.");
     }
 }
 
@@ -1236,6 +1245,7 @@ function hasToBeSaved(propertyName)//returns either true or false (has to be sav
 function refreshTestContainer()// affiche des données par rapport à la prev/current/next slide
 {
     var daInput = document.getElementById('daInput');
+    var slideCounter = document.getElementById('slideCounter');
     
     daInput.onkeypress = function(e)
     {
@@ -1252,6 +1262,7 @@ function refreshTestContainer()// affiche des données par rapport à la prev/cu
 
     $('#daInput').focus();
     daInput.placeholder = user.storyLocation;
+    slideCounter.innerHTML = user.storyLocation;
 
     var text = "";
     

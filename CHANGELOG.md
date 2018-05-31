@@ -1,6 +1,7 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
 
+<<<<<<< HEAD
 # Version 1.11.1 (Greyscale images + Chapters 1 and 2 Bug Fixes)
 ## Modified
 - `chapter2.xlsx` `chapter1.xlsx`
@@ -8,6 +9,26 @@
 - `new_images_folder`
     - Modified the illustration images to make them greyscaled
     - Added more images for the dorm dollmaker
+=======
+# Version 1.10.5 (Illustrations Optimization)
+## Optimized
+- `illustrationX.php`
+    - optimized (the memory usage...?)
+    - further optimization will be required
+
+## Added
+- `generateGameContainer.php`
+    - placed the progress and objectives side by side
+    - added a slide counter
+
+## Fixed
+- `illustration_achievements.php`   `library.js`
+    - now the images only appear when fully loaded
+- `googleAds.php`: updated
+- `chapter1.xlsx/js`: small changes
+- `chapter2.xlsx/js`: fixed critical issue (nehaDorm)
+
+>>>>>>> 0af3b0fc4b313fe096b9bba74720603817ecc5ac
 
 # Version 1.10.4 (Registration System Fixes and Chapter 2 Fixes)
 ## Modified

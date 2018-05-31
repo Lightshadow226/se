@@ -1,4 +1,23 @@
-﻿#TODO NOTES
+﻿# OPTIMIZATION (TODO)
+`Git on cPanel:` https://documentation.cpanel.net/display/CKB/How+to+Host+Git+Repositories+on+a+cPanel+Account
+`Git on cPanel:` https://documentation.cpanel.net/display/CKB/How+to+Host+Git+Repositories+on+a+cPanel+Account
+`Git on cPanel:` https://documentation.cpanel.net/display/CKB/How+to+Host+Git+Repositories+on+a+cPanel+Account
+`Git on cPanel:` https://documentation.cpanel.net/display/CKB/How+to+Host+Git+Repositories+on+a+cPanel+Account
+`Git on cPanel:` https://documentation.cpanel.net/display/CKB/How+to+Host+Git+Repositories+on+a+cPanel+Account
+`Git on cPanel:` https://documentation.cpanel.net/display/CKB/How+to+Host+Git+Repositories+on+a+cPanel+Account
+`Git on cPanel:` https://documentation.cpanel.net/display/CKB/How+to+Host+Git+Repositories+on+a+cPanel+Account
+`Git on cPanel:` https://documentation.cpanel.net/display/CKB/How+to+Host+Git+Repositories+on+a+cPanel+Account
+`Git on cPanel:` https://documentation.cpanel.net/display/CKB/How+to+Host+Git+Repositories+on+a+cPanel+Account
+`Git on cPanel:` https://documentation.cpanel.net/display/CKB/How+to+Host+Git+Repositories+on+a+cPanel+Account
+
+https://www.google.ca/search?q=ajax+how+to+detect+slow+network&oq=ajax+how+to+detect+slow+network&aqs=chrome..69i57j69i60l4j69i59.7065j0j7&sourceid=chrome&ie=UTF-8
+
+# TODO NEXT
+- `dorm.js`: outfits
+- `variables.js`: user.GENDER
+- fix the goddamn memory problem...
+
+#TODO NOTES
 
 ## Chapters
 `chapter1.js`       `chapter1.php`
