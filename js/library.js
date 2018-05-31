@@ -950,84 +950,52 @@ function getJSONPropertyValue(propertyName)
     switch(propertyName)
     {
         //USERINFO table
-        case x.username:
-            return user.username;
-
-        case x.energy:
-            return user.energy;
-
-        case x.money:
-            return user.money;
+        case x.username:    return user.username;
+        case x.energy:      return user.energy;
+        case x.money:       return user.money;
 
         //SCHOLARINFO table
-        case x.department:
-            return user.department;
-
-        case x.scholarName:
-            return user.scholarname;
-
-        case x.gender:
-            return user.gender;
+        case x.scholarname: return user.scholarname;
+        case x.dateofbirth: return user.dateofbirth;
+        case x.gender:      return user.gender;
+        case x.sex:         return user.sex;
+        case x.department:  return user.department;
+        case x.haircolor:   return user.haircolor;
+        case x.hairstyle:   return user.hairstyle;
+        case x.skincolor:   return user.skincolor;
+        case x.eyecolor:    return user.eyecolor;
+        case x.wigID:       return user.wigID;
+        case x.shirtID:     return user.shirtID;
+        case x.pantsID:     return user.pantsID;
+        case x.socksID:     return user.socksID;
+        case x.shoesID:     return user.shoesID;
+        case x.accessoryID: return user.accessoryID;
         
         //STORY table
-        case x.storyLocation:
-            return user.storyLocation;
-
-        case x.lastChapterPlayed:
-            return user.last_chapter_played;
-
-        case x.physicalLocationInt:
-            return user.physicalLocationInt;
+        case x.storyLocation: return user.storyLocation;
+        case x.lastChapterPlayed: return user.last_chapter_played;
+        case x.physicalLocationInt: return user.physicalLocationInt;
 
         //AFFINITY table (Main 10)
-        case x.karolina:
-            return karolina.affinity;
-
-        case x.ellie:
-            return ellie.affinity;
-
-        case x.neha:
-            return neha.affinity;
-
-        case x.raquel:
-            return raquel.affinity;
-
-        case x.claire:
-            return claire.affinity;
-
-        case x.alistair:
-            return alistair.affinity;
-
-        case x.tadashi:
-            return tadashi.affinity;
-
-        case x.tegan:
-            return tegan.affinity;
-
-        case x.tyler:
-            return tyler.affinity;
-
-        case x.axel:
-            return axel.affinity;
+        case x.karolina:    return karolina.affinity;
+        case x.ellie:       return ellie.affinity;
+        case x.neha:        return neha.affinity;
+        case x.raquel:      return raquel.affinity;
+        case x.claire:      return claire.affinity;
+        case x.alistair:    return alistair.affinity;
+        case x.tadashi:     return tadashi.affinity;
+        case x.tegan:       return tegan.affinity;
+        case x.tyler:       return tyler.affinity;
+        case x.axel:        return axel.affinity;
 
         //AFFINITY table (Other)
-        case x.ladyArlington:
-            return lady_arlington.affinity;
+        case x.ladyArlington: return lady_arlington.affinity;
+        case x.coachDavis:  return coach_davis.affinity;
+        case x.serena:      return serena.affinity;
+        case x.cecile:      return cecile.affinity;
+        case x.teacher:     return teacher.affinity;
 
-        case x.coachDavis:
-            return coach_davis.affinity;
-
-        case x.serena:
-            return serena.affinity;
-
-        case x.cecile:
-            return cecile.affinity;
-        
-        case x.teacher:
-            return teacher.affinity;
-
-        default:
-            return '2y10UZMJfJuMm4C5In91XP7uadWRn0ZP9so5oONeRoyVtIze1Psy';
+        default: return '2y10UZMJfJuMm4C5In91XP7uadWRn0ZP9so5oONeRoyVtIze1Psy';
     }
 }
 
@@ -1039,7 +1007,7 @@ function pushVariablesToDB()
         x.username, x.energy, x.money,
 
         //SCHOLARINFO table
-        x.department, x.scholarName, x.gender,
+        x.department, x.scholarName, x.gender, x.sex, x.haircolor, x.hairstyle, x.skincolor, x.eyecolor, x.wigID, x.shirtID, x.pantsID, x.socksID, x.shoesID, x.accessoryID,
 
         //STORY table
         x.storyLocation, x.lastChapterPlayed, x.physicalLocationInt,
@@ -1143,18 +1111,66 @@ function hasToBeSaved(propertyName)//returns either true or false (has to be sav
             break;
 
         //SCHOLARINFO table
-        case x.department:
-            if (user.department != oldUser.department) return true;
-            break;
-
         case x.scholarName:
             if (user.scholarname != oldUser.scholarname) return true;
             break;
 
+        case x.dateofbirth:
+            if (user.dateofbirth != oldUser.dateofbirth) return true;
+            break;
+        
         case x.gender:
             if (user.gender != oldUser.gender) return true;
             break;
-        
+
+        case x.sex:
+            if (user.sex != oldUser.sex) return true;
+            break;
+
+        case x.department:
+            if (user.department != oldUser.department) return true;
+            break;
+
+        case x.haircolor:
+            if (user.haircolor != oldUser.haircolor) return true;
+            break;
+
+        case x.hairstyle:
+            if (user.hairstyle != oldUser.hairstyle) return true;
+            break;
+
+        case x.skincolor:
+            if (user.skincolor != oldUser.skincolor) return true;
+            break;
+
+        case x.eyecolor:
+            if (user.eyecolor != oldUser.eyecolor) return true;
+            break;
+
+        case x.wigID:
+            if (user.wigID != oldUser.wigID) return true;
+            break;
+            
+        case x.shirtID:
+            if (user.shirtID != oldUser.shirtID) return true;
+            break;
+
+        case x.pantsID:
+            if (user.pantsID != oldUser.pantsID) return true;
+            break;
+
+        case x.socksID:
+            if (user.socksID != oldUser.socksID) return true;
+            break;
+
+        case x.shoesID:
+            if (user.shoesID != oldUser.shoesID) return true;
+            break;
+
+        case x.accessoryID:
+            if (user.accessoryID != oldUser.accessoryID) return true;
+            break;
+
         //STORY table
         case x.storyLocation:
             if (user.storyLocation != oldUser.storyLocation) return true;

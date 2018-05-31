@@ -662,19 +662,20 @@ var x =
 
     //SCHOLARINFO table
     scholarName: 'scholar_name',
-    gender: 'scholar_gender',
-    // sex: 'scholar_sex',
+    dateofbirth : "XX-XX-XXXX",
+    gender: 'scholar_gender',//0: she, 1: he, 2: they
+    sex: 'scholar_sex',//0: female, 1: male
     department: 'scholar_department',
-    // haircolor: 'scholar_haircolor',
-    // hairstyle: 'scholar_hairstyle',
-    // skincolor: 'scholar_skincolor',
-    // eyecolor: 'scholar_eyecolor',
-    // wigID: 'wig_id',
-    // shirtId: 'shirt_id',
-    // pantsID: 'pants_id',
-    // socksID: 'socks_id',
-    // shoesID: 'shoes_id',
-    // accessoryID: 'accessory_id',
+    haircolor: 'scholar_haircolor',
+    hairstyle: 'scholar_hairstyle',
+    skincolor: 'scholar_skincolor',
+    eyecolor: 'scholar_eyecolor',
+    wigID: 'wig_id',
+    shirtID: 'shirt_id',
+    pantsID: 'pants_id',
+    socksID: 'socks_id',
+    shoesID: 'shoes_id',
+    accessoryID: 'accessory_id',
     
     //STORY table
     storyLocation: 'storylocation',
@@ -703,24 +704,35 @@ var x =
 
 var user = 
 {
-    username: "None",
-    scholarname: "None",
+    //USERINFO table
+    username: 'None',
     energy: 0,
     money: 0,
-    storyLocation: 0,//VARIABLE COMMUNE À TOUS LES CHAPITRES, LA SEULE CHOSE QUI PEU BLOQUER serait de mettre un IF(last_chapter_played == this)
-    last_chapter_played: 0,
-    physicalLocation: backgrounds_path + locations.blackScreen,
-    physicalLocationInt: 0,
-    department: 0,
-    sex: 0, //0: female, 1: male
-    gender: 0,//0: she, 1: he, 2: they
-    haircolor: 0,//
-    hairstyle: 0,//
-    skincolor: 0,//
-    eyecolor: 0,//
-    wigID: 0,
-    pronoun: 0,//0: she, 1: he, 3: they
+    nbreplays: 0,
 
+    //SCHOLARINFO table
+    scholarName: 'None',
+    dateofbirth : "XX-XX-XXXX",
+    gender: 0,//0: she, 1: he, 2: they
+    sex: 'scholar_sex',//0: female, 1: male
+    department: 'scholar_department',
+    haircolor: 'scholar_haircolor',
+    hairstyle: 'scholar_hairstyle',
+    skincolor: 'scholar_skincolor',
+    eyecolor: 'scholar_eyecolor',
+    wigID: 'wig_id',
+    shirtID: 'shirt_id',
+    pantsID: 'pants_id',
+    socksID: 'socks_id',
+    shoesID: 'shoes_id',
+    accessoryID: 'accessory_id',
+    
+    //STORY table
+    storyLocation: 0,
+    lastChapterPlayed: 0,
+    physicalLocationInt: backgrounds_path + locations.blackScreen,
+
+    //AFFINITY table (Main 10)
     karolina: 0,
     ellie: 0,
     neha: 0,
@@ -731,12 +743,13 @@ var user =
     tegan: 0,
     tyler: 0,
     axel: 0,
-  
-    lady_arlington: 0,
+
+    //AFFINITY table (Other)
+    ladyArlington: 0,
     coach_davis: 0,
     serena: 0,
     cecile: 0,
-    teacher: 0,
+    teacherChapter2: 0,
 };
 
 var oldUser = user;
@@ -992,15 +1005,21 @@ function pullVariablesFromDB()//we load the data from the database, and put it i
         SCHOLARINFO table
         *********************/
         user.scholarname = document.getElementById("db_handle_scholarname").value;
-        user.department = document.getElementById("db_handle_department").value;
-        user.sex = parseInt(document.getElementById("db_handle_sex").value);
+        user.dateofbirth = document.getElementById("db_handle_dateofbirth").value;
         user.gender = parseInt(document.getElementById("db_handle_gender").value);
+        user.sex = parseInt(document.getElementById("db_handle_sex").value);
+        user.department = document.getElementById("db_handle_department").value;
         user.haircolor = parseInt(document.getElementById("db_handle_haircolor").value);
         user.hairstyle = parseInt(document.getElementById("db_handle_hairstyle").value);
         user.skincolor = parseInt(document.getElementById("db_handle_skincolor").value);
         user.eyecolor = parseInt(document.getElementById("db_handle_eyecolor").value);
         user.wigID = parseInt(document.getElementById("db_handle_wigID").value);
-        
+        user.shirtID = parseInt(document.getElementById("db_handle_shirtID").value);
+        user.pantsID = parseInt(document.getElementById("db_handle_pantsID").value);
+        user.socksID = parseInt(document.getElementById("db_handle_socksID").value);
+        user.shoesID = parseInt(document.getElementById("db_handle_shoesID").value);
+        user.accessoryID = parseInt(document.getElementById("db_handle_accessoryID").value);
+
         /********************
         STORY table
         *********************/
@@ -1040,36 +1059,34 @@ function pullVariablesFromDB()//we load the data from the database, and put it i
 
 function resetOldUserValues()
 {
-     /********************
-    USERINFO table
-    *********************/
+    /********************USERINFO table*********************/
     oldUser.username = user.username;
     oldUser.energy = user.energy; 
     oldUser.money = user.money;
 
-    /********************
-     SCHOLARINFO table
-    *********************/
+    /********************SCHOLARINFO table*********************/
     oldUser.scholarname = user.scholarname;
-    oldUser.department = user.department
-    oldUser.sex = user.sex
+    oldUser.dateofbirth = user.dateofbirth;
     oldUser.gender = user.gender
+    oldUser.sex = user.sex
+    oldUser.department = user.department
     oldUser.haircolor = user.haircolor
     oldUser.hairstyle = user.hairstyle
     oldUser.skincolor = user.skincolor
     oldUser.eyecolor = user.eyecolor
     oldUser.wigID = user.wigID
+    oldUser.shirtID = user.shirtID
+    oldUser.pantsID = user.pantsID
+    oldUser.socksID = user.socksID
+    oldUser.shoesID = user.shoesID
+    oldUser.accessoryID = user.accessoryID
     
-    /********************
-     STORY table
-    *********************/
+    /********************STORY table*********************/
     oldUser.storyLocation = user.storyLocation
     oldUser.last_chapter_played = user.last_chapter_played
     oldUser.physicalLocationInt = user.physicalLocationInt
     
-    /********************
-     AFFINITY table
-    *********************/
+    /********************AFFINITY table*********************/
     oldUser.karolina = user.karolina
     oldUser.ellie = user.ellie
     oldUser.neha = user.neha

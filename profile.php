@@ -44,7 +44,7 @@
 				<div class="flex-container">
 			
 					<div class="flex-panel add_padding">
-						<img style="width:100%" src="profile/profilesprite.php">
+						<img style="width:100%" src="profile/scholar_sprite.php">
 					</div>
 					
 					<div class="flex-panel2">

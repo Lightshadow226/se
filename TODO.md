@@ -17,6 +17,16 @@ https://www.google.ca/search?q=ajax+how+to+detect+slow+network&oq=ajax+how+to+de
 - `variables.js`: user.GENDER
 - fix the goddamn memory problem...
 
+
+`Canva vs php imagepng`
+https://gamedev.stackexchange.com/questions/32221/huge-performance-difference-when-using-drawimage-with-img-vs-canvas
+https://jsperf.com/canvas-rendering/2
+https://stackoverflow.com/questions/22771097/html-5-use-img-element-vs-canvas-drawimage
+https://www.google.ca/search?q=superpose+png+javascript&oq=superpose+png+javascript&aqs=chrome..69i57.4784j0j7&sourceid=chrome&ie=UTF-8
+https://stackoverflow.com/questions/3110833/how-to-overlay-images-in-javascript
+https://24ways.org/2007/supersleight-transparent-png-in-ie6
+
+
 #TODO NOTES
 
 ## Chapters

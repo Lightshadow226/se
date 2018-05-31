@@ -35,7 +35,7 @@
 
 #overlay_form/*the form that will pop up to customize the character*/
 {
-	background-color: #eeeeee;/*abcdef is a cool color*/
+	background-color: white;/*abcdef is a cool color*/
 	padding: 10px;
 	
 	position: absolute;
@@ -177,6 +177,15 @@
 	/* box-shadow: 0 0 7px 0px #ff4956; */
 	box-shadow: 0 0 10px 0px #682666;
 }
+
+.choices-selected
+{
+	box-sizing: border-box;
+	border: 2px solid #682666;
+	border-radius: 50%;
+	/* box-shadow: 0 0 10px 0px #c0000e; */
+}
+
 
 .choices-button-container
 {
