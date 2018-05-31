@@ -1,6 +1,14 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
 
+# Version 1.11.1 (Greyscale images + Chapters 1 and 2 Bug Fixes)
+## Modified
+- `chapter2.xlsx` `chapter1.xlsx`
+    - Bug fixes suggested by the betas, endless loops, etc.
+- `new_images_folder`
+    - Modified the illustration images to make them greyscaled
+    - Added more images for the dorm dollmaker
+
 # Version 1.10.4 (Registration System Fixes and Chapter 2 Fixes)
 ## Modified
 - `chapter2.xlsx`

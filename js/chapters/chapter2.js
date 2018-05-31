@@ -23,6 +23,7 @@ function Chapter()
     {
         story[i]= new Array();//il faut créer des arrays pour chaque array. Donc pour x[0], il faut créer des arrays, mais pour x[1] aussi, les deux sont indépendents. Il peut y avoir x[0][1][1][10] et x[1][2] qui coexistent
     }
+    
     //story[0] === Story Text
     story[0] = [
         "(I brushed my teeth and put on my clothes in record time. Clumsily grabbing my schoolbag, I rushed out of the dorms and made my way into the school, running.)",//0 
@@ -347,7 +348,7 @@ function Chapter()
         "Woah, that’s awesome! ",
         "(Next)",//320 
         "I’m sure you will.",
-        "(Next)",
+        "(Claire blushed slightly as she smiled.)",
         "(Next)",
         "Oh, it’s okay. I hope things work out in the end!",
         "(Next)",//325 
@@ -747,7 +748,7 @@ function Chapter()
         "I mean, don’t get me wrong, it’s not bad. But you seem like a guy that can do more than just ‘not bad’.",
         "(Please don’t be mad. Please don’t be mad. Please don’t be mad.)",//720 
         "(Oh thank god.)",
-        "But success comes with a price that’s very… superficial.",
+        "(Next)",
         "(Next)",
         "(I nearly had a heart attack as Karolina snuck up on our conversation.)",
         "(Next)",//725 
@@ -1184,7 +1185,7 @@ function Chapter()
         "I want to be a neurosurgeon one day. The human brain fascinates me.",
         "I actually volunteer at the city’s hospital every weekend. I love to help patients get better.",//320 
         "I… I hope that someday, I’ll be able to save lives. ",
-        "(Claire blushed slightly as she smiled.)",
+        "null",
         "O-Oh um…",
         "I was talking to someone… but if you don’t mind, I’d rather not talk about it.",
         "Y-Yeah, me too.",//325 
@@ -1517,7 +1518,7 @@ function Chapter()
         "null",
         "null",
         "Yeah! It’s been forever since I’ve gone to an Arlington dorm party! And I know Tadashi’s too busy entertaining Lady A and the rest of this school’s staff to come here.",
-        "(...)",//655 
+        "...",//655 
         "Holy <em>shit</em> Raquel, how did <em>you</em> manage to sneak alcohol in here?!",
         "null",
         "You’re crazy, you know that?",
@@ -5014,24 +5015,24 @@ function Chapter()
         locations.claireDormParty,
         locations.claireDormParty,
         locations.claireDormParty,
-        locations.nehadorm,//804 Different Dorm…
-        locations.nehadorm,//805 
-        locations.nehadorm,
-        locations.nehadorm,
-        locations.nehadorm,
-        locations.nehadorm,
-        locations.nehadorm,//810 
-        locations.nehadorm,
-        locations.nehadorm,
-        locations.nehadorm,
-        locations.nehadorm,
-        locations.nehadorm,//815 
-        locations.nehadorm,
-        locations.nehadorm,
-        locations.nehadorm,
-        locations.nehadorm,
-        locations.nehadorm,//820 
-        locations.nehadorm,
+        locations.nehaDorm,//804 Different Dorm…
+        locations.nehaDorm,//805 
+        locations.nehaDorm,
+        locations.nehaDorm,
+        locations.nehaDorm,
+        locations.nehaDorm,
+        locations.nehaDorm,//810 
+        locations.nehaDorm,
+        locations.nehaDorm,
+        locations.nehaDorm,
+        locations.nehaDorm,
+        locations.nehaDorm,//815 
+        locations.nehaDorm,
+        locations.nehaDorm,
+        locations.nehaDorm,
+        locations.nehaDorm,
+        locations.nehaDorm,//820 
+        locations.nehaDorm,
         locations.dormHallParty,
         locations.dormHallParty,
         locations.dorm,
@@ -8422,7 +8423,7 @@ function Chapter()
         -1,
         -1,//25 
         -1,
-        27,
+        28,
         -1,
         -1,
         -1,//30 
@@ -9259,7 +9260,7 @@ function Chapter()
         -1,
         -1,//25 
         -1,
-        28,
+        29,
         -1,
         -1,
         -1,//30 
@@ -10096,7 +10097,7 @@ function Chapter()
         -1,
         -1,//25 
         -1,
-        33,
+        34,
         -1,
         -1,
         -1,//30 
@@ -17600,7 +17601,6 @@ function Chapter()
         -1,
         -1,
         ];
-
 }
 
 Chapter();//the simple act of appending the .js file will load the chapter into memory

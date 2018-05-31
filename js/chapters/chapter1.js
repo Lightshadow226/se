@@ -81,9 +81,9 @@ function Chapter()
         "Yeah. His workout shouldn’t take that long anyway.",
         "(Next)",
         "(He glared at me… maybe pissing this guy off might not have been very smart.)",
-        "(He took one more look at me and scoffed before walking off.)",//55 
+        "(He took one more look at me, and scoffed before walking off.)",//55 
         "S-Sure. (I smiled.)",
-        "(He grinned back at me before heading off in the opposite direction of Tadashi. Probably to the gym.)",
+        "(He grinned back at me before heading off in the opposite direction of Tadashi, probably to the gym.)",
         "Maybe it would be best to get whatever it is that you need to do done now? That way you’d have the rest of the day free.",
         "(Next)",
         "(Next)",//60 
@@ -100,7 +100,7 @@ function Chapter()
         "(She sighed, dropping her hands from their incessant scrubbing against the fabric.)",
         "(Next)",
         "null",
-        "…Sorry, you’re right, I’m just a bit stressed today.",
+        "… Sorry, you’re right, I’m just a bit stressed today.",
         "It always does the job for me.",//75 
         "No problem!",
         "" + user.scholarname + ", I’m new here. Actually, I ran into a girl called Karolina who was looking for someone with your description. Do you know her?",
@@ -118,7 +118,7 @@ function Chapter()
         "(I felt like I was intruding and turned my heels to leave the classroom, when the boy noticed me and cleared his throat.)",
         "(His face reddened slightly, and I figured he had not expected anybody to catch him in his moment of glory.)",//90 
         "(Ugh, way to be a creep, " + user.scholarname + ".)",
-        "Hmm? Oh, ah, no. I’m just looking around the school. I’m " + user.scholarname + ". (I quickly moved forward and offered my hand to shake.)",
+        "Hmm? Oh, ah, no. I was just looking around the school. I’m " + user.scholarname + ". (I quickly moved forward and offered my hand to shake.)",
         "(He shook my hand.)",
         "(I glanced at the screen of his laptop, my curiosity getting the best of me.) What are you working on, if you don’t mind me asking?",
         "(His eyes widened slightly and he quickly minimized his window and replaced it with a generic spreadsheet.)",//95 
@@ -143,7 +143,7 @@ function Chapter()
         "(Next)",
         "" + user.scholarname + ".  Athletics department, then?",//115 
         "(She walked away without waiting for a reply, soccer ball tucked under her arm.)",
-        "…kid?",
+        "… Kid?",
         "(Everybody here seems to have things to do later today. I wonder if there’s something I don’t know about... ? )",
         "(Anyway, I should go back to exploring the school. )",
         "null",//120 
@@ -155,11 +155,11 @@ function Chapter()
         "(Next)",
         "null",
         "(I stayed around for a while longer watching Ellie transform the scraps of metal into… some sort of contraption that I honestly could not make head or tails out of.)",
-        "So...any advice for a newbie like me? (She giggled.)",
+        "So... any advice for a newbie like me? (She giggled.)",
         "(Next)",//130 
         "(Next)",
         "Haha, thanks for the advice!",
-        "I've got to get going, explore this place a little more before classes. Nice to meet you, Ellie!",
+        "I've got to get going, I'm going explore this place a little more before classes. Nice to meet you, Ellie!",
         "(Next)",
         "null",//135 
         "Holy… this place has to have every type of plant there is in the world…",
@@ -173,7 +173,7 @@ function Chapter()
         "...Well, I’m kinda new here and I was just looking around the place, sorry if I interrupted you or anything. I’m " + user.scholarname + ", by the way.",
         "(Next)",//145 
         "(A small ringing sound suddenly came from one of Claire’s pockets, startling us both.)",
-        "(She took out her phone from it and took a look at her screen before shutting the alarm off.)",
+        "(She took out her phone and looked at her screen before shutting the alarm off.)",
         "(Next)",
         "Nice meeting you too.",
         "(She stood up to dust herself off and then left the garden with a small wave in my direction.)",//150 
@@ -205,15 +205,15 @@ function Chapter()
         "(Next)",
         "(What!? I knew I had to work hard to keep my scholarship but...how in the world will I be able to compete with the top twenty best students in the entire <em>country</em>?!)",
         "(Next)",
-        "Tadashi, if you don't mind me asking, what ranking are you?",
-        "(Are you kidding me?! He says this so nonchalantly too?!) W-Wait... what do you mean I can check your school file. Isn't it private?",//180 
+        "Tadashi, if you don't mind me asking, what rank are you?",
+        "(Are you kidding me?! He says this so nonchalantly too?!) W-Wait... what do you mean I can check your school file? Isn't it private?",//180 
         "R-Reference purposes?! (What does that even mean?! Oh god, this is too much...)",
         "(Next)",
-        "(Something about this made me extremely anxious… Everything at Arlington was so meticulously planned… so serious.)",
+        "(Something about this made me extremely anxious… Everything at Arlington is so meticulously planned… so serious.)",
         "(He turned around and left without giving me a chance to ask him anything else.)",
         "Oh god…",//185 
         "(I’ve spent the whole day moving boxes and running around, and now I’m supposed to take a picture!?)",
-        "(And that picture is going to be seen by the entire school... along with nearly every single other piece of information about me.)",
+        "(And that picture is going to be seen by the entire school... along with nearly every single piece of information about me.)",
         "(...)",
         "(God, I need a nap to process all of this.)",
         "(But I better go back to my dorm and put my uniform on and freshen up.)",//190 
@@ -244,7 +244,7 @@ function Chapter()
         "You guys haven’t taken your picture either?",//215 
         "(Next)",
         "(She flipped her hair and gestured to herself with a flair of her hand)",
-        "...and you, Neha?",
+        "... and you, Neha?",
         "(Her monotonous response struck me as odd, but she was smiling at me so I didn’t think much of it.)",
         "(It only took a couple of minutes for the guy to take our picture, and before long, Neha was inviting me to come help them redecorate Karolina’s room.)",//220 No Sprites
         "(Karolina didn’t complain and I think she was glad for the extra set of hands.)",//221 Karolina and Neha's Dorm
@@ -260,7 +260,7 @@ function Chapter()
         "(It turned out to be a lot of fun. Ellie kept losing no matter how much she tried and her fake ire made both Tegan and me laugh freely.)",//231 Tegan & Tyler's dorm
         "(Next)",//232 TODO: popup
         "(I was surprised yet pleased at how relaxed the pair made me feel. Especially since I had just met them.)",
-        "Hey Raquel. Yeah, I took a little too long looking around the school. What about you and Claire?",//234 CHOICE 4: Claire + Raquel
+        "Hey, Raquel. Yeah, I took a little too long looking around the school. What about you and Claire?",//234 CHOICE 4: Claire + Raquel
         "(Next)",//235 
         "(Next)",
         "(Next)",
@@ -278,7 +278,7 @@ function Chapter()
         "Hey, Tadashi? I hope I didn’t upset you too much today…",
         "(Tadashi grinned.)",//250 
         "(Though his reply was slightly conceited, I was relieved to not have Tadashi pissed at me anymore.)",
-        "You were pestering me about being late and yet here you are.",
+        "You were pestering me about being late, and yet here you are.",
         "(I cocked my head to the side and raised an eyebrow at the two of them. Tadashi smirked.)",
         "(Next)",
         "(Next)",//255 
@@ -316,7 +316,7 @@ function Chapter()
     //story[1] === Bubble 1 === ce que le personnage 1 dit
     story[1] = [
         "null",//0 
-        "Oh, I’m so sorry, it's just been a very stressful day for me.",
+        "Oh, I’m so sorry, it's just been a very stressful day for me. I had an important phone call this morning and meetings this afternoon and-",
         "null",
         "In any case, welcome to Arlington Academy, my dear! It is, of course, an immense pleasure to have you here as part of our student body and, let me assure you, you won’t be regretting the decision of joining us.",
         "Now, I’d love to stay and chat, but there’s still a lot to do and I really must get going. It was a pleasure meeting you.",
@@ -429,16 +429,16 @@ function Chapter()
         "Haha! Well, at least you’ve got nice reflexes!",
         "Sorry ‘bout that, just trying to see if the new kid had some skills.",
         "... You could’ve at least made an attempt to catch it.",
-        "...Alright then.",
+        "... Alright then.",
         "Name’s Raquel and as you might have noticed, soccer’s what I live for.",//115 
-        "The one and only. Which reminds me, I don’t have a lot of time to practice today, something important I have to do this afternoon so I really should get going. See you, kid!",
+        "The one and only. Which reminds me, I don’t have a lot of time to practice today; somethin' important I have to do this afternoon so I really should get going. See you, kid!",
         "null",
         "null",
         "null",
         "null",//120 
         "null",
         "Hi! I don’t think I’ve seen you around before. Are you new?",
-        "Nice to meet you " + user.scholarname + "! I’m Ellie Collins, president of the robotics club.",
+        "Nice to meet you, " + user.scholarname + "! I’m Ellie Collins, president of the robotics club.",
         "Yup. I know having two science departments can be a bit confusing but you’ll get the hang of it.",
         "Haha! I think we’re at club capacity right now but I’ll be sure to let you know if we have space for next year, if you’re still interested.",//125 
         "Maybe you should give things a shot before condemning them based on how they look from the outside…",
@@ -460,7 +460,7 @@ function Chapter()
         "...Thank you.",
         "…",
         "null",
-        "I-It’s alright, I was just looking through the school’s medical herbs. Pleased to meet you, " + user.scholarname + ", I’m Claire.",//145 
+        "It-It’s alright, I was just looking through the school’s medical herbs. Pleased to meet you, " + user.scholarname + ", I’m Claire.",//145 
         "null",
         "null",
         "Oh my, it's almost time!",
@@ -476,7 +476,7 @@ function Chapter()
         "How long have you been wandering through the halls? Why haven’t you taken your student ID picture at the gymnasium yet?",
         "…",
         "No one told you, of course.",//160 
-        "I swear, I sometimes wonder how this school hasn’t gone up in flames yet!",
+        "I swear, sometimes I wonder how this school hasn’t gone up in flames yet!",
         "Right, you’re supposed to be at the gym taking your student picture right now.",
         "So run to your room, put on your uniform, then run to the gymnasium and take your picture. Otherwise it’s going to end up being more paperwork for me.",
         "Yes. ",
@@ -486,7 +486,7 @@ function Chapter()
         "It will be compared with others. It will show your official ranking, your strengths and your weaknesses as well as your academic and professional history. ",
         "It is a comprehensive guide on <em>who you are</em>.",
         "null",//170 
-        "...And of course, nobody told you about this either. ",
+        "... And of course, nobody told you about this either. ",
         "I swear to god, the senior students in charge of showing you around should really step up their game. I can't keep picking up after their sh-",
         "Oh, sorry. I'm just a little stressed out. Well, you see...",
         "At the end of each school year, Arlington Academy gives every student a ranking. This ranking is essentially your position as a student relative to everyone else. They take into account your grades, your extra-curricular activities, your professional work, your skills, the awards you've gotten and all that jazz.",
@@ -3980,7 +3980,7 @@ function Chapter()
         "null",
         "null",//195 
         "null",//196 Objective Complete: Quick! Go back to your dorm and put on your uniform!
-        "Go to they gym and take your picture!",
+        "Go to the gym and take your picture!",
         "null",
         "null",
         "null",//200 Karolina
@@ -4169,7 +4169,7 @@ function Chapter()
         "null",
         "null",//95 
         "null",
-        "...Are you wearing mismatched socks?",
+        "... Are you wearing mismatched socks?",
         "null",
         "null",
         "null",//100 
@@ -6017,7 +6017,7 @@ function Chapter()
         -1,//208 CHOICE 1: Karolina + Neha
         -1,
         212,//210 If 71, go to 201
-        204,//211 else, go to 204
+        215,//211 else, go to 204
         -1,
         -1,
         -1,
@@ -6093,6 +6093,7 @@ function Chapter()
         -1,
         -1,//285 
         ];
+
 }
 
 Chapter();//the simple act of appending the .js file will load the chapter into memory
