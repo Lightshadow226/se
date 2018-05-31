@@ -23,8 +23,8 @@ function Chapter()
     {
         story[i]= new Array();//il faut créer des arrays pour chaque array. Donc pour x[0], il faut créer des arrays, mais pour x[1] aussi, les deux sont indépendents. Il peut y avoir x[0][1][1][10] et x[1][2] qui coexistent
     }
-    //story[0] === Story Text
-    story[0] = [
+     //story[0] === Story Text
+     story[0] = [
         "(I brushed my teeth and put on my clothes in record time. Clumsily grabbing my schoolbag, I rushed out of the dorms and made my way into the school, running.)",//0 
         "(As I entered the hallway, I stopped, suddenly realizing something.)",
         "... Where are my classes!?",
@@ -5014,24 +5014,24 @@ function Chapter()
         locations.claireDormParty,
         locations.claireDormParty,
         locations.claireDormParty,
-        locations.nehadorm,//804 Different Dorm…
-        locations.nehadorm,//805 
-        locations.nehadorm,
-        locations.nehadorm,
-        locations.nehadorm,
-        locations.nehadorm,
-        locations.nehadorm,//810 
-        locations.nehadorm,
-        locations.nehadorm,
-        locations.nehadorm,
-        locations.nehadorm,
-        locations.nehadorm,//815 
-        locations.nehadorm,
-        locations.nehadorm,
-        locations.nehadorm,
-        locations.nehadorm,
-        locations.nehadorm,//820 
-        locations.nehadorm,
+        locations.nehaDorm,//804 Different Dorm…
+        locations.nehaDorm,//805 
+        locations.nehaDorm,
+        locations.nehaDorm,
+        locations.nehaDorm,
+        locations.nehaDorm,
+        locations.nehaDorm,//810 
+        locations.nehaDorm,
+        locations.nehaDorm,
+        locations.nehaDorm,
+        locations.nehaDorm,
+        locations.nehaDorm,//815 
+        locations.nehaDorm,
+        locations.nehaDorm,
+        locations.nehaDorm,
+        locations.nehaDorm,
+        locations.nehaDorm,//820 
+        locations.nehaDorm,
         locations.dormHallParty,
         locations.dormHallParty,
         locations.dorm,
@@ -17600,7 +17600,6 @@ function Chapter()
         -1,
         -1,
         ];
-
 }
 
 Chapter();//the simple act of appending the .js file will load the chapter into memory

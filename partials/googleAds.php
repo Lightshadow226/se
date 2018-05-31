@@ -1,10 +1,16 @@
 <!-- Google AdSense Script -->
+<!-- Our identity for sweetelitegame.com -->
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script>
-	window.onload = function()
-	{
-		(adsbygoogle = window.adsbygoogle || []).push({});
-	}
+  window.onload = function()
+  {
+    (adsbygoogle = window.adsbygoogle || []).push(
+      {
+          google_ad_client: "ca-pub-6851687790756963",
+          enable_page_level_ads: true
+      }
+    );
+  }  
 </script>
 
 <!-- Google Analytics Script (Global site tag (gtag.js)) -->

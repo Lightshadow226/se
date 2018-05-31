@@ -226,4 +226,9 @@ function generateIllustration($currentChapter, $currentIllustration)
     // return 0;
 }
 
+function getQuality()
+{
+    return 40;
+}
+
 ?>

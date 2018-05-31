@@ -1,6 +1,25 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
 
+# Version 1.10.5 (Illustrations Optimization)
+## Optimized
+- `illustrationX.php`
+    - optimized (the memory usage...?)
+    - further optimization will be required
+
+## Added
+- `generateGameContainer.php`
+    - placed the progress and objectives side by side
+    - added a slide counter
+
+## Fixed
+- `illustration_achievements.php`   `library.js`
+    - now the images only appear when fully loaded
+- `googleAds.php`: updated
+- `chapter1.xlsx/js`: small changes
+- `chapter2.xlsx/js`: fixed critical issue (nehaDorm)
+
+
 # Version 1.10.4 (Registration System Fixes and Chapter 2 Fixes)
 ## Modified
 - `chapter2.xlsx`

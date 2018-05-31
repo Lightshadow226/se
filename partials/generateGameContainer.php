@@ -71,23 +71,26 @@
     <!-- Objectives, Progress & Characters Container -->
     <div id="opcContainer">
 
-        <!-- Objective Container -->
-        <h3>Objectives</h3>
-        <div id = "objectiveContainer">
-            
-        </div>
+        <div id="slideCounter" style="position: absolute; right: 10px; top: 10px; -webkit-user-select: none;"></div>
 
-        <!-- Progress Container -->
-        <br>
-        <h3>Progress</h3>
-        <div id = "progressBarContainer">
-            <img id="progress_bar_logo"/>
-            <div id="progress_bar"></div>
-        </div>
+        <span class="flex-container">
+            <span class="flex-panel">
+                <!-- Objective Container -->
+                <h3>Objectives</h3>
+                <div id = "objectiveContainer"></div>
+            </span>
+                    
+            <!-- Progress Container -->
+            <span class="flex-panel">
+                <h3>Progress</h3>
+                <div id = "progressBarContainer">
+                    <img id="progress_bar_logo"/>
+                    <div id="progress_bar"></div>
+                </div>
+            </span>
+        </span>
 
         <!-- Characters Container -->
-        <br>
-        <br>
         <h3>Characters</h3>
         <div id = "char_container">
 
