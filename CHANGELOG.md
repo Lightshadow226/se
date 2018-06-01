@@ -1,6 +1,12 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
 
+# Version 1.12.2 (Aesthetic Fixes for Images for Illustration Generator)
+## Changed
+- `new_images_folder`
+    - Adjusted issues that the artists made when drawing the art (aka "Michael Jackson")
+    - Illustrations are now much more pleasing to the eye and have less artistic mistakes
+
 # Version 1.12.1 (Images for Illustration Generator)
 ## Changed
 - `new_images_folder` `imageGenerator.php`
