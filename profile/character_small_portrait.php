@@ -48,9 +48,9 @@ $sources = array();
 
 array_push($sources, imagecreatefrompng($genericVariables[0]));	//0 - body type
 array_push($sources, imagecreatefrompng($genericVariables[1]));	//1 - face image
-array_push($sources, imagecreatefrompng($genericVariables[2]));	//2 - eye image
-array_push($sources, imagecreatefrompng($genericVariables[3]));	//3 - lips image
-array_push($sources, imagecreatefrompng($hair_number));			//4 - Hairstyle
+array_push($sources, imagecreatefrompng($genericVariables[3]));	//2 - lips image
+array_push($sources, imagecreatefrompng($hair_number));			//3 - Hairstyle
+array_push($sources, imagecreatefrompng($genericVariables[2]));	//4 - eye image
 array_push($sources, imagecreatefrompng($shirtNumber));			//5 - Shirt
 
 imagealphablending($sources[0], true);
@@ -60,9 +60,9 @@ imagealphablending($sources[1], true);
 imagesavealpha($sources[1], true);
 
 imagefilter($sources[0], IMG_FILTER_COLORIZE, $skin_rgb[0], $skin_rgb[1], $skin_rgb[2], $skin_rgb[3]);//Skin color
-imagefilter($sources[2], IMG_FILTER_COLORIZE, $eye_rgb[0], $eye_rgb[1], $eye_rgb[2], $eye_rgb[3]); //Eye color
-imagefilter($sources[3], IMG_FILTER_COLORIZE, $skin_rgb[0], $skin_rgb[1], $skin_rgb[2], $skin_rgb[3]); //Lip color = skin color
-imagefilter($sources[4], IMG_FILTER_COLORIZE, $hair_rgb[0], $hair_rgb[1], $hair_rgb[2], $hair_rgb[3]); //Hair color
+imagefilter($sources[2], IMG_FILTER_COLORIZE, $skin_rgb[0], $skin_rgb[1], $skin_rgb[2], $skin_rgb[3]); //Lip color = skin color
+imagefilter($sources[3], IMG_FILTER_COLORIZE, $hair_rgb[0], $hair_rgb[1], $hair_rgb[2], $hair_rgb[3]); //Hair color
+imagefilter($sources[4], IMG_FILTER_COLORIZE, $eye_rgb[0], $eye_rgb[1], $eye_rgb[2], $eye_rgb[3]); //Eye color
 
 header('Content-Type: image/png');
 
@@ -77,9 +77,20 @@ for($i = 1; $i < sizeof($sources); $i++)
 		$multiplier = 1.1;
 		$newWidth = $width * $multiplier;
 		$newHeight = $height * $multiplier;
-
-		$translateX = -120;
+		
+		$translateX = 0;
 		$translateY = 0;
+
+		if($sex == 0)
+		{
+			$translateX = -85;
+			$translateY = -18;
+		}
+		else
+		{
+			$translateX = -120;
+			$translateY = 0;
+		}
 
 		//create a new image of the desired size
 		$newImage = imagecreatetruecolor($newWidth, $newHeight);

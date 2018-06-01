@@ -32,7 +32,7 @@
 			<strong> | Money: </strong> <span id="barMoney"></span>
 			<strong> | Energy: </strong> <span id="barEnergy"></span>
 			<strong> | Replays: </strong> <span id="barReplays"></span>
-			<span style="position: absolute; right: 10px;"><a href="logout.php" style="color:white;">Logout</a></span>
+			<span style="position: absolute; right: 10px;"><a href="logout.php" style="color:white;">Logout</a> | <a href="help.php" style="color:white;">Help?</a> </span>
 		</div>
 
 		<div id="nav_menu_container">
@@ -69,7 +69,7 @@
 			<div id="pink_menu">
 				<div class="flex-panel"></div>
 				<a class="menu_item" href="index.php">Home</a> 
-				<a class="menu_item" href="#">Shop</a>
+				<a class="menu_item" href="shop.php">Shop</a>
 				<a class="menu_item" href="about.php">About</a>
 				<a class="menu_item" href="terms.php">Terms</a>
 				<a class="menu_item" href="contact.php">Contact</a>

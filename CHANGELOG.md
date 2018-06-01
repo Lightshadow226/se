@@ -1,6 +1,12 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
 
+# Version 1.14.1 (Shop and Help/Faq Pages)
+## Added (Affinity Wiping)
+- `help.php` `shop.php` `headers.php` `footers.php` `se-faq.css`
+    - added help.php and shop.php
+    - updated footer and header to reflect those pages
+
 # Version 1.14.0 (Affinity Wiping & In-game outfits)
 ## Added (Affinity Wiping)
 - `gameboot.js`
