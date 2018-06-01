@@ -466,8 +466,31 @@
         background-color: #ff4956;
     }
 
-/*BUTTONS*/
+/*OUTFITS*/
 
+.game-outfits-left      {left: 25%; top: 50%;}
+.game-outfits-middle    {left: 50%; top: 50%;}
+.game-outfits-right     {left: 75%; top: 50%;}
+
+.game-outfits-male          {background-color: #f3def2;}
+.game-outfits-male:hover    {background-color: #682666;}
+
+.game-outfits-female        {background-color: #ffe2e4;}
+.game-outfits-female:hover  {background-color: #ff4956;}
+
+.game-outfits
+{
+    height: 75%;
+    width: auto;
+
+    border-radius: 10px;
+    position: absolute;
+    transform: translate3d(-50%, -50%, 0);
+}
+
+.game-outfits:hover{cursor: pointer;}
+
+/*BUTTONS*/
 
     .replay_episode_button
     {

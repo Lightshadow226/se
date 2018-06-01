@@ -122,7 +122,7 @@ function create_line(index, type)
         play_episode_button.innerHTML = "Restart story";//replay the story (replay type #1)
         replay_episode_button.innerHTML = "Replay for achievements";//replay for achievements (replay type #2)
         
-        play_episode_button.href = get_button_href(index);//play_episode_button.id, 1);
+        // play_episode_button.href = get_button_href(index);//play_episode_button.id, 1);
         play_episode_button.onclick = function (){get_button_consequence(index, 1)};
         
         replay_episode_button.href = get_button_href(index);//play_episode_button.id, 2);
@@ -163,14 +163,15 @@ function create_line(index, type)
         - must be included in every chapter -> we can't use the game engine because it's going to be too late (user.last_chapter_played will already be modified)
 */
 
-function get_button_consequence(index, replayType = 1)//replayType is optional, default is 1
+async function get_button_consequence(index, replayType = 1)//replayType is optional, default is 1
 {
     console.log("replay type: " + replayType);
     
     // A) Open a chapter through game.php
+    // 1. if we click the current chapter, resume where it is (so basically don't do shit)
     if(index == current_chapter)
     {
-        // 1. if we click the current chapter, resume where it is (so basically don't do shit)
+        //leave it empty
     }
     // 2. if we click a prior chapter, there are 2 choices:
     else if(index < current_chapter)
@@ -181,24 +182,13 @@ function get_button_consequence(index, replayType = 1)//replayType is optional, 
             // STEP 1: create a script to work with
             var head = document.getElementsByTagName('head')[0];
 
-            var script = document.createElement('script');
-                script.type = 'text/javascript';
-                
-            //for(var i = index; index <= current_chapter; i++)//we delete every chapter from the one we selected until the current one (wipe selected chapter and subsequent chapters)
+            for(var i = index; i < availableChapters; i++)//we delete every chapter from the one we selected until the current one (wipe selected chapter and subsequent chapters)
             {
                 //STEP 2: change the script and append it to the HTML head
-                script.src = 'js/chapters/chapter' + index + '.js';//starts with index, then goes up to current chapter
-                
-                head.appendChild(script);
+                var scriptURI = 'js/chapters/chapter' + i + '.js';
                 
                 // STEP 3: wipe the variables from the chapter
-                script.onload = function()
-                {
-                    wipeCurrentChapter();
-                }
-
-                // STEP 8: remove the script for the next loop
-                // head.removeChild(script);
+                var scriptLoaded = loadScriptAsync(scriptURI, i);
             }
         }
         // b) achievement reset (replay for achievements)
@@ -225,11 +215,45 @@ function get_button_consequence(index, replayType = 1)//replayType is optional, 
         //var popup = document.createElement('div');
         //popup.id = "alert";
         //play_episode_button.className = "popup-container";
-
-        
-
     }
+
+    window.open('chapter' + index + '.php', '_self')
 
     //TODO: il va avoir un bug, mais il va falloir détecter quand un chapitre est terminé, A.K.A. quand le isVisited pour la dernière slide d'un chapitre = true en mode story
     //TODO: once we finish a chapter, the current chapter is the next one (if there's no next one, the current one is the last one and the progress is at 100%... FUCK, this is annoying)
+}
+
+function loadScriptAsync(uri, id)
+{
+    return new Promise((resolve, reject) =>
+    {
+        var script = document.createElement('script');
+            script.id = "script" + id;
+            script.src = uri;
+            script.async = true;
+            script.onload = () =>
+            {
+                user.lastChapterPlayed = id;
+                console.log("\n\nSTARTING WIPING OF CH. " + id + " (" + user.lastChapterPlayed + ")\n\n");
+                wipeCurrentChapter();
+                destroyScriptAsync(id)
+                resolve();
+            };
+    
+        var head = document.getElementsByTagName('head')[0];
+            head.appendChild(script);
+    });
+}
+
+function destroyScriptAsync(id)
+{
+    return new Promise((resolve, reject) =>
+    {
+        var script = document.getElementById("script" + id);
+            script.onremove = () =>
+            {
+                console.log("Destroyed Ch. " + id + "/" + availableChapters);
+                resolve();
+            };
+    });
 }

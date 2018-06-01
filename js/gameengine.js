@@ -832,37 +832,49 @@ function refreshInterface()
         }
         else if(story[special_option][user.storyLocation] == -14)// -14 === Put on your uniform form
         {
-            //Uniform button
-            var uniformButton = document.createElement('div');
-                uniformButton.id = "uniformButton";
-                uniformButton.className = "friendship_romance_buttons x-center-y-center";
-
-            var uniformButtonImg = document.createElement('img');
-                uniformButtonImg.className = "friendship_romance_buttons_img";
-                
-                //female
-                uniformButtonImg.src = "_new_images_folder/game/dorm/dollmaker/sex/female.png";
-
-                switch(user.gender)
-                {
-                    //male
-                    case 1:
-                        uniformButtonImg.src = "_new_images_folder/game/dorm/dollmaker/sex/male.png";
-                        break;
-                }
+            var sexFolder = ["female", "male"];
+            var outfitsToDisplay = 0;
             
-            var uniformButtonOverlay = document.createElement('div');
-                uniformButtonOverlay.className = "friendship_romance_buttons_overlay";
-                uniformButtonOverlay.onclick = function()
-                {
-                    browseLink(story[special_option][user.storyLocation], uniformButton);
-                };
+            if(story[choiceA_link][user.storyLocation] != -1) outfitsToDisplay++;
+            if(story[choiceB_link][user.storyLocation] != -1) outfitsToDisplay++;
+            if(story[choiceC_link][user.storyLocation] != -1) outfitsToDisplay++;
+            
+            var positionClasses;
+
+            switch(outfitsToDisplay)
+            {
+                case 1:
+                    positionClasses = ["game-outfits-middle"];
+                    break;
+                case 2:
+                    positionClasses = ["game-outfits-left", "game-outfits-right"];
+                    break;
+                case 3:
+                    positionClasses = ["game-outfits-left", "game-outfits-middle", "game-outfits-right"];
+                    break;
+            }
 
             var formContainer = document.getElementById("formContainer");
                 formContainer.innerHTML = "";
-                formContainer.appendChild(uniformButton);
-                    uniformButton.appendChild(uniformButtonImg);
-                    uniformButton.appendChild(uniformButtonOverlay);
+
+            for(var i = 0; i < outfitsToDisplay; i++)
+            {
+                //Uniform button
+                var outfitButton = document.createElement('div');
+                    outfitButton.id = "outfitButton" + i;
+                    outfitButton.className = "game-outfits " + positionClasses[i] + " game-outfits-" + sexFolder[user.sex];
+                    outfitButton.onclick = function (e)
+                    {
+                        browseLink(story[special_option][user.storyLocation], this);
+                    }
+    
+                var outfitButtonImg = document.createElement('img');
+                    outfitButtonImg.className = "friendship_romance_buttons_img";
+                    outfitButtonImg.src = "_new_images_folder/outfits/" + story[choiceA_link + i][user.storyLocation] + "/" + sexFolder[user.sex] + ".png";
+                    
+                formContainer.appendChild(outfitButton);
+                    outfitButton.appendChild(outfitButtonImg);
+            }
         }
         else if(story[special_option][user.storyLocation] == -15)// -15 === Popups ("Congratulations")
         {
@@ -1188,6 +1200,17 @@ function browseLink(link, element)//link is the link of the story (story[special
     }
     else if(link == -14)//Put on your uniform form
     {
+        var index = getNumber(element, "outfitButton");
+        var outfitNumber = story[parseInt(choiceA_link) + parseInt(index)][user.storyLocation];
+
+        outfitToEquip = outfitsPointer[outfitNumber];
+
+        user.shirtID = outfitToEquip[0];
+        user.pantsID = outfitToEquip[1];
+        user.shoesID = outfitToEquip[2];
+
+        pushVariablesToDB();
+
         user.storyLocation++;
         HideForms();
     }

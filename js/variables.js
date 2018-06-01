@@ -74,6 +74,23 @@ var locations =
 
 var genders = ["She/Her", "He/Him", "They/Them"];
 
+var outfitsPointer =
+[
+    //outfit 0 = uniform
+    [
+        0,//shirt
+        0,//pants
+        0,//shoes
+    ],
+
+    //outfit 1 = default outfit
+    [
+        0,//shirt
+        1,//pants
+        0,//shoes
+    ]
+]
+
 //on va devoir écrire un code pour GET ces variables de la base de données. ces variables vont être propres à chaque utilisateur.
 
 //Info on Characters
@@ -830,7 +847,7 @@ function loadIsVisited(chapter)
             alternateIsVisited.push(actualValue);
         }
 
-        console.log("Loaded isVisited.");
+        console.log("Loaded isVisited for Ch. " + user.lastChapterPlayed);
         // console.log("Loaded isVisited for " + chapter_size + " slides.");
     });
 

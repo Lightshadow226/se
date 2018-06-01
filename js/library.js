@@ -34,6 +34,14 @@ NodeList.prototype.remove = HTMLCollection.prototype.remove = function()//get el
     }
 }
 
+//"prefix" is the the prefix of the id: say "category3", the prefix would be "category" and the function would return 3
+function getNumber(element, prefix)
+{
+    var id = element.id;
+
+    return(id.substr(id.length - (id.length - (prefix).length)));
+}
+
 //*****PURPLE GAME BAR*****
 function updateGameBar()
 {
@@ -759,36 +767,22 @@ function toggle_pronouns(clicked, one, two)
 
 function wipeCurrentChapter()
 {
+    loadIsVisited(user.lastChapterPlayed);
+
     var chapterSize = story[0].length;
 
-    console.log("chapter size: " + chapterSize);
-                    
     for(var j = 0; j < chapterSize; j++)//for every slide
     {
-        // STEP 4: wipe the infinity consequences
-        // TODO: for every slide, we have to undo the infinity consequence IF IT WAS VISITED
-        
-        if(story[isVisited][j])
+        if(story[isVisited][j])//if the slide was visited
         {
             //Right infinity meter
-            if(story[CHARACTER1][j] != "null" && story[infinityConsequence1][j] != 0)//if there is a character 1 in this slide
+            if(story[CHARACTER1][j] != "null" && story[infinityConsequence1][j] != 0)//if there is a character 1 in this slide and there is an infinity consequence
             {
-                // console.log("Reverted: " + j + " story[2][j]: " + story[2][j]);
                 var relevant_char = getPersonnage(story[CHARACTER1][j]);
                     relevant_char.affinity = Number(relevant_char.affinity);
-                
-                var oldAffinity = relevant_char.affinity;
-                
                     relevant_char.affinity -= Number(story[infinityConsequence1][j]);
-
-                var newAffinity = relevant_char.affinity;
                 
-                // if(Number(relevant_char.affinity) < 0)
-                // {
-                //     relevant_char.affinity = 0;
-                // }
-
-                console.log("Reverteds slide " + j + "\n" + relevant_char.name + " was " + oldAffinity + " is now " + newAffinity + "\n");
+                console.log("Chapter " + user.lastChapterPlayed + ", Slide " + j + ": " + relevant_char.name + " was reverted to " + relevant_char.affinity + "\n");
             }
 
             //Left infinity meter
@@ -797,19 +791,9 @@ function wipeCurrentChapter()
                 
                 var relevant_char = getPersonnage(story[CHARACTER2][j]);
                     relevant_char.affinity = Number(relevant_char.affinity);
-                
-                var oldAffinity = relevant_char.affinity;
-                
                     relevant_char.affinity -= Number(story[infinityConsequence2][j]);//on doit s'assurer que la valeur est un nombre, parce que sinon, parfois, ça fait juste carrément rajouter un zéro
                 
-                var newAffinity = relevant_char.affinity;
-
-                // if(Number(relevant_char.affinity) < 0)
-                // {
-                //     relevant_char.affinity = 0;
-                // }
-
-                console.log("Reverteds slide " + j + "\n" + relevant_char.name + " was " + oldAffinity + " is now " + newAffinity + "\n");
+                console.log("Chapter " + user.lastChapterPlayed + ", Slide " + j + ": " + relevant_char.name + " was reverted to " + relevant_char.affinity + "\n");
             }
         }
 

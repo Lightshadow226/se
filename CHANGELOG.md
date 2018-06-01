@@ -1,6 +1,30 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
 
+# Version 1.14.0 (Affinity Wiping & In-game outfits)
+## Added (Affinity Wiping)
+- `gameboot.js`
+    - added saving of affinity one the game.php page
+    - when we restart a chapter, it wipes all subsequent chapters
+
+## Added (Outfits)
+- `gameengine.js` `chapter1.js/xlsx` `chapter2.js/xlsx`
+    - added option -14: in-game outfits
+    - it works in sync with the database
+    - TODO: make the underwear *pants0.png*
+- `variables.js`
+    - added the outfit constants
+- `dorm.js`
+    - added proper highlighting
+
+## Changed
+- `chapter0.js` `chapter1.js` `chapter2.js`
+    - removed useless code
+- `library.js`
+    - modified wipeCurrentChapter to display more in the console.log
+    - removed useless code
+    - moved the function getNumber() from *dorm.js* to *library.js*, because it is now used in *gameengine.js*
+
 # Version 1.13.0 (Completed Dorm)
 ## Changed
 - `profile.php`

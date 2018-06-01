@@ -13,18 +13,11 @@ var story = new Array();
 
 user.last_chapter_played = 2;
 saveVariables(x.lastChapterPlayed);
-// pushVariablesToDB();
-
-const c = 20;
 
 function Chapter()
 {
-    for (var i = 0; i < c; i++)
-    {
-        story[i]= new Array();//il faut créer des arrays pour chaque array. Donc pour x[0], il faut créer des arrays, mais pour x[1] aussi, les deux sont indépendents. Il peut y avoir x[0][1][1][10] et x[1][2] qui coexistent
-    }
-     //story[0] === Story Text
-     story[0] = [
+    //story[0] === Story Text
+    story[0] = [
         "(I brushed my teeth and put on my clothes in record time. Clumsily grabbing my schoolbag, I rushed out of the dorms and made my way into the school, running.)",//0 
         "(As I entered the hallway, I stopped, suddenly realizing something.)",
         "... Where are my classes!?",
@@ -655,7 +648,7 @@ function Chapter()
         "...And celebrities.",
         "Oh my god, what am I even <em>doing</em> going to this party?!",
         "(I better choose my outfit well!)",
-        "(Click to put on your uniform)",//630 TODO: player clicks on the episode’s outfit.
+        "null",//630 player clicks on the episode’s outfit.
         "(I spent hours anxiously piecing together the perfect outfit. I was so focused that I had not noticed the music coming from the hallway.)",
         "(When I looked at the time, I realized the party had already started a long time ago.)",
         "(I gasped before grabbing my cell phone and making my way out of my dorm.)",
@@ -986,7 +979,7 @@ function Chapter()
         "Most likely. ",
         "null",
         "null",
-        "Hey " + user.scholarname + ".",
+        "Hey, " + user.scholarname + ".",
         "null",//125 
         "null",
         "And he’s modest too.",
@@ -1419,7 +1412,7 @@ function Chapter()
         "What the <em>hell</em> did you just call me",
         "null",//555 
         "null",
-        "How surprising. ",
+        "Typical.",
         "null",
         "null",
         "null",//560 
@@ -1492,7 +1485,7 @@ function Chapter()
         "null",
         "null",
         "null",
-        "null",//630 TODO: player clicks on the episode’s outfit.
+        "null",//630 player clicks on the episode’s outfit.
         "null",
         "null",
         "null",
@@ -1818,7 +1811,7 @@ function Chapter()
         "null",
         personnages.tegan[0],
         "null",
-        personnages.tegan[0],
+        personnages.tegan[5],
         "null",//120 
         personnages.tegan[0],
         "null",
@@ -1842,15 +1835,15 @@ function Chapter()
         personnages.tegan[0],//140 
         personnages.tegan[0],
         personnages.tegan[0],
-        personnages.tegan[0],
+        "null",
         personnages.tegan[0],
         personnages.tegan[0],//145 
         personnages.tegan[0],
         "null",
         personnages.tegan[0],
-        personnages.tegan[0],
+        "null",
         personnages.tegan[0],//150 
-        personnages.tegan[0],
+        "null",
         personnages.tegan[0],
         personnages.tegan[2],
         personnages.tegan[1],
@@ -1861,7 +1854,7 @@ function Chapter()
         personnages.tegan[0],
         "null",//160 
         personnages.tegan[0],
-        personnages.tegan[0],
+        "null",
         personnages.tegan[0],
         "null",
         "null",//165 
@@ -2329,7 +2322,7 @@ function Chapter()
         "null",
         "null",
         "null",
-        "null",//630 TODO: player clicks on the episode’s outfit.
+        "null",//630 player clicks on the episode’s outfit.
         "null",
         "null",
         "null",
@@ -2654,7 +2647,7 @@ function Chapter()
         "null",//115 
         "null",
         "null",
-        "I wasn’t even back at Arlington, haha! Just came back this morning. ",
+        "I wasn’t even back at Arlington, haha! Just came back this morning. I had, that <em>thing</em>, remember?",
         "null",
         "Godammit, is it Axel again?",//120 
         "null",
@@ -3082,7 +3075,7 @@ function Chapter()
         "null",
         "null",
         "null",//545 
-        "Hey! Chill! At least give " + user.scholarname + "a chance to propose something. ",
+        "Hey! Chill! At least give " + user.scholarname + " a chance to propose something. ",
         "null",
         "null",
         "null",
@@ -3166,7 +3159,7 @@ function Chapter()
         "null",
         "null",
         "null",
-        "null",//630 TODO: player clicks on the episode’s outfit.
+        "null",//630 player clicks on the episode’s outfit.
         "null",
         "null",
         "null",
@@ -3501,7 +3494,7 @@ function Chapter()
         personnages.tyler[0],//125 
         personnages.tyler[0],
         "null",
-        personnages.tyler[0],
+        personnages.tyler[1],
         "null",
         personnages.tyler[0],//130 
         "null",
@@ -3511,32 +3504,32 @@ function Chapter()
         personnages.tyler[0],//135 
         personnages.tyler[0],
         personnages.tyler[0],
-        personnages.tyler[0],
-        personnages.tyler[0],
-        personnages.tyler[0],//140 
+        "null",
+        "null",
+        "null",//140 
         personnages.tyler[1],
-        personnages.tyler[0],
+        "null",
         personnages.tyler[1],
-        personnages.tyler[0],
+        "null",
         "null",//145 
         "null",
         "null",
+        "null",
         personnages.tyler[0],
-        personnages.tyler[0],
-        personnages.tyler[0],//150 
+        "null",//150 
         personnages.tyler[1],
         personnages.tyler[0],
         personnages.tyler[0],
-        personnages.tyler[0],
+        "null",
         personnages.tyler[4],//155 
         personnages.tyler[0],
+        "null",
         personnages.tyler[0],
-        personnages.tyler[0],
-        personnages.tyler[0],
+        "null",
         "null",//160 
+        "null",
         personnages.tyler[0],
-        personnages.tyler[0],
-        personnages.tyler[0],
+        "null",
         personnages.tyler[0],
         personnages.tyler[0],//165 
         personnages.tyler[0],
@@ -4003,7 +3996,7 @@ function Chapter()
         "null",
         "null",
         "null",
-        "null",//630 TODO: player clicks on the episode’s outfit.
+        "null",//630 player clicks on the episode’s outfit.
         "null",
         "null",
         "null",
@@ -4840,7 +4833,7 @@ function Chapter()
         locations.dorm,
         locations.dorm,
         locations.dorm,
-        locations.dorm,//630 TODO: player clicks on the episode’s outfit.
+        locations.dorm,//630 player clicks on the episode’s outfit.
         locations.dorm,
         locations.dorm,
         locations.dorm,
@@ -5677,7 +5670,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        -14,//630 TODO: player clicks on the episode’s outfit.
+        -14,//630 player clicks on the episode’s outfit.
         -1,
         -1,
         -1,
@@ -6514,7 +6507,7 @@ function Chapter()
         0,
         0,
         0,
-        0,//630 TODO: player clicks on the episode’s outfit.
+        0,//630 player clicks on the episode’s outfit.
         0,
         0,
         0,
@@ -7351,7 +7344,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,//630 TODO: player clicks on the episode’s outfit.
+        -1,//630 player clicks on the episode’s outfit.
         -1,
         -1,
         -1,
@@ -8188,7 +8181,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,//630 TODO: player clicks on the episode’s outfit.
+        -1,//630 player clicks on the episode’s outfit.
         -1,
         -1,
         -1,
@@ -9025,7 +9018,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,//630 TODO: player clicks on the episode’s outfit.
+        1,//630 player clicks on the episode’s outfit.
         -1,
         -1,
         -1,
@@ -9862,7 +9855,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,//630 TODO: player clicks on the episode’s outfit.
+        -1,//630 player clicks on the episode’s outfit.
         -1,
         -1,
         -1,
@@ -10699,7 +10692,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,//630 TODO: player clicks on the episode’s outfit.
+        -1,//630 player clicks on the episode’s outfit.
         -1,
         -1,
         -1,
@@ -11536,7 +11529,7 @@ function Chapter()
         "null",
         "null",
         "null",
-        "null",//630 TODO: player clicks on the episode’s outfit.
+        "null",//630 player clicks on the episode’s outfit.
         "null",
         "null",
         "null",
@@ -12373,7 +12366,7 @@ function Chapter()
         "null",
         "null",
         "null",
-        "null",//630 TODO: player clicks on the episode’s outfit.
+        "null",//630 player clicks on the episode’s outfit.
         "null",
         "null",
         "null",
@@ -13210,7 +13203,7 @@ function Chapter()
         "null",
         "null",
         "null",
-        "null",//630 TODO: player clicks on the episode’s outfit.
+        "null",//630 player clicks on the episode’s outfit.
         "null",
         "null",
         "null",
@@ -14047,7 +14040,7 @@ function Chapter()
         0,
         0,
         0,
-        0,//630 TODO: player clicks on the episode’s outfit.
+        0,//630 player clicks on the episode’s outfit.
         0,
         0,
         0,
@@ -14884,7 +14877,7 @@ function Chapter()
         0,
         0,
         0,
-        0,//630 TODO: player clicks on the episode’s outfit.
+        0,//630 player clicks on the episode’s outfit.
         0,
         0,
         0,
@@ -15721,7 +15714,7 @@ function Chapter()
         false,
         false,
         false,
-        false,//630 TODO: player clicks on the episode’s outfit.
+        false,//630 player clicks on the episode’s outfit.
         false,
         false,
         false,
@@ -16558,7 +16551,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,//630 TODO: player clicks on the episode’s outfit.
+        -1,//630 player clicks on the episode’s outfit.
         -1,
         -1,
         -1,
@@ -17395,7 +17388,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        -1,//630 TODO: player clicks on the episode’s outfit.
+        -1,//630 player clicks on the episode’s outfit.
         -1,
         -1,
         -1,

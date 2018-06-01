@@ -13,38 +13,9 @@ var story = new Array();
 
 user.last_chapter_played = 0;
 saveVariables(x.lastChapterPlayed);
-// pushVariablesToDB();
-
-const c = 17;//TODO: update this because it should be 20
-/* "c" values:
-    0 -> story text (ce qui apparait dans le text container)
-    1 -> bubble 1
-    2 -> character 1
-    3 -> bubble 2
-    4 -> character 2
-    5 -> location
-    6 -> link
-    7 -> objective
-    8 -> frienship link
-    9 -> romance link
-    10 -> Choice 1 link (when multiple linking is enabled)
-    11 -> Choice 2 link
-    12 -> Choice 3 link
-    13 -> Choice 1 text
-    14 -> Choice 2 text
-    15 -> Choice 3 text
-    16 -> Infinity meter consequence of going on that slide
-    17 -> Visited (did we go on that slide or not?)
-    18 -> Point of Interest "x" (did we visit slide x? If not, skip to next slide)
-    19 -> Landing Slide "y" (if we visited slide x, go to slide y)
-*/
 
 function Chapter()
 {
-    for (var i = 0; i < c; i++)
-    {
-        story[i]= new Array();//il faut créer des arrays pour chaque array. Donc pour x[0], il faut créer des arrays, mais pour x[1] aussi, les deux sont indépendents. Il peut y avoir x[0][1][1][10] et x[1][2] qui coexistent
-    }
     //story[0] === Story Text
     story[0] = [
         "(The trip to Arlington was long, but I’m finally here!)",//0 

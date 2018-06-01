@@ -13,17 +13,9 @@ var story = new Array();
 
 user.last_chapter_played = 1;
 saveVariables(x.lastChapterPlayed);
-// pushVariablesToDB();
-
-const c = 19;//TODO: update this because it should be 20
 
 function Chapter()
 {
-    for (var i = 0; i < c; i++)
-    {
-        story[i]= new Array();//il faut créer des arrays pour chaque array. Donc pour x[0], il faut créer des arrays, mais pour x[1] aussi, les deux sont indépendents. Il peut y avoir x[0][1][1][10] et x[1][2] qui coexistent
-    }
-
     //story[0] === Story Text
     story[0] = [
         "(Lady Arlington stood there for a couple of seconds, a look of utter shock on her face, before quickly composing herself and extending her hand for me to shake.)",//0 
@@ -219,7 +211,7 @@ function Chapter()
         "(But I better go back to my dorm and put my uniform on and freshen up.)",//190 
         "null",
         "null",
-        "(Click to put on your uniform)",//193 -10
+        "null",
         "(I took a glance at myself in the mirror and groaned.)",
         "It’ll have to do.",//195 
         "null",//196 Objective Complete: Quick! Go back to your dorm and put on your uniform!
@@ -508,7 +500,7 @@ function Chapter()
         "null",//190 
         "null",
         "null",
-        "null",//193 -10
+        "null",
         "null",
         "null",//195 
         "null",//196 Objective Complete: Quick! Go back to your dorm and put on your uniform!
@@ -544,7 +536,7 @@ function Chapter()
         "null",
         "That sort of thing happens a lot to the both of us. No biggie! Means we get to hang out a little more with you!",
         "null",
-        "Look at that! I thought I’d have to ask " + user.scholarname + " myself.",
+        "Look at that! I thought I’d have to ask " + user.gender + " myself.",
         "null",//230 
         "null",//231 Tegan & Tyler's dorm
         "null",//232 TODO: popup
@@ -797,7 +789,7 @@ function Chapter()
         "null",//190 
         "null",
         "null",
-        "null",//193 -10
+        "null",
         "null",
         "null",//195 
         "null",//196 Objective Complete: Quick! Go back to your dorm and put on your uniform!
@@ -1086,7 +1078,7 @@ function Chapter()
         "null",//190 
         "null",
         "null",
-        "null",//193 -10
+        "null",
         "null",
         "null",//195 
         "null",//196 Objective Complete: Quick! Go back to your dorm and put on your uniform!
@@ -1375,7 +1367,7 @@ function Chapter()
         "null",//190 
         "null",
         "null",
-        "null",//193 -10
+        "null",
         "null",
         "null",//195 
         "null",//196 Objective Complete: Quick! Go back to your dorm and put on your uniform!
@@ -1664,7 +1656,7 @@ function Chapter()
         locations.hall1,//190 
         locations.hall1,
         locations.hall1,
-        locations.dorm,//193 -10
+        locations.dorm,
         locations.dorm,
         locations.dorm,//195 
         locations.dorm,//196 Objective Complete: Quick! Go back to your dorm and put on your uniform!
@@ -1953,7 +1945,7 @@ function Chapter()
         -1,//190 
         -8,
         -2,
-        -14,//193 -10
+        -14,
         -1,
         -1,//195 
         -9,//196 Objective Complete: Quick! Go back to your dorm and put on your uniform!
@@ -2242,7 +2234,7 @@ function Chapter()
         0,//190 
         0,
         12,
-        0,//193 -10
+        0,
         0,
         0,//195 
         0,//196 Objective Complete: Quick! Go back to your dorm and put on your uniform!
@@ -2531,7 +2523,7 @@ function Chapter()
         -1,//190 
         -1,
         -1,
-        -1,//193 -10
+        -1,
         -1,
         -1,//195 
         -1,//196 Objective Complete: Quick! Go back to your dorm and put on your uniform!
@@ -2820,7 +2812,7 @@ function Chapter()
         -1,//190 
         -1,
         -1,
-        -1,//193 -10
+        -1,
         -1,
         -1,//195 
         -1,//196 Objective Complete: Quick! Go back to your dorm and put on your uniform!
@@ -3109,7 +3101,7 @@ function Chapter()
         -1,//190 
         -1,
         -1,
-        -1,//193 -10
+        0,
         -1,
         -1,//195 
         -1,//196 Objective Complete: Quick! Go back to your dorm and put on your uniform!
@@ -3398,7 +3390,7 @@ function Chapter()
         -1,//190 
         -1,
         -1,
-        -1,//193 -10
+        -1,
         -1,
         -1,//195 
         -1,//196 Objective Complete: Quick! Go back to your dorm and put on your uniform!
@@ -3687,7 +3679,7 @@ function Chapter()
         -1,//190 
         -1,
         -1,
-        -1,//193 -10
+        -1,
         -1,
         -1,//195 
         -1,//196 Objective Complete: Quick! Go back to your dorm and put on your uniform!
@@ -3976,7 +3968,7 @@ function Chapter()
         "null",//190 
         "Quick! Go back to your dorm and put on your uniform!",
         "null",
-        "null",//193 -10
+        "null",
         "null",
         "null",//195 
         "null",//196 Objective Complete: Quick! Go back to your dorm and put on your uniform!
@@ -4265,7 +4257,7 @@ function Chapter()
         "null",//190 
         "null",
         "null",
-        "null",//193 -10
+        "null",
         "null",
         "null",//195 
         "null",//196 Objective Complete: Quick! Go back to your dorm and put on your uniform!
@@ -4554,7 +4546,7 @@ function Chapter()
         "null",//190 
         "null",
         "null",
-        "null",//193 -10
+        "null",
         "null",
         "null",//195 
         "null",//196 Objective Complete: Quick! Go back to your dorm and put on your uniform!
@@ -4843,7 +4835,7 @@ function Chapter()
         0,//190 
         0,
         0,
-        0,//193 -10
+        0,
         0,
         0,//195 
         0,//196 Objective Complete: Quick! Go back to your dorm and put on your uniform!
@@ -5132,7 +5124,7 @@ function Chapter()
         0,//190 
         0,
         0,
-        0,//193 -10
+        0,
         0,
         0,//195 
         0,//196 Objective Complete: Quick! Go back to your dorm and put on your uniform!
@@ -5421,7 +5413,7 @@ function Chapter()
         false,//190 
         false,
         false,
-        false,//193 -10
+        false,
         false,
         false,//195 
         false,//196 Objective Complete: Quick! Go back to your dorm and put on your uniform!
@@ -5710,7 +5702,7 @@ function Chapter()
         -1,//190 
         -1,
         -1,
-        -1,//193 -10
+        -1,
         -1,
         -1,//195 
         191,//196 Objective Complete: Quick! Go back to your dorm and put on your uniform!
@@ -5999,7 +5991,7 @@ function Chapter()
         -1,//190 
         -1,
         -1,
-        -1,//193 -10
+        -1,
         -1,
         -1,//195 
         -1,//196 Objective Complete: Quick! Go back to your dorm and put on your uniform!
@@ -6093,7 +6085,6 @@ function Chapter()
         -1,
         -1,//285 
         ];
-
 }
 
 Chapter();//the simple act of appending the .js file will load the chapter into memory

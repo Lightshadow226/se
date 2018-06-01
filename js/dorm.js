@@ -609,6 +609,7 @@ function itemClick(newItem, position)//determines what screen we're on, and what
     }
 
     currentItem = position;
+    highlightSelected();
 }
 
 function pushToDB(SQLname, value)//saves to the database
@@ -682,14 +683,6 @@ function verifyChange(SQLname, value)//verify that the change has been made in t
     {
         pushToDB(SQLname, value);
     }
-}
-
-//"prefix" is the the prefix of the id: say "category3", the prefix would be "category" and the function would return 3
-function getNumber(element, prefix)
-{
-    var id = element.id;
-
-    return(id.substr(id.length - (id.length - (prefix).length)));
 }
 
 raz();
