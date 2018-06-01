@@ -27,8 +27,6 @@ const extension = ".png";
  * 
  */
 
-
-
 //*****Category ICONS*****
     const iconsPATH = "_new_images_folder/game/dorm/dollmaker/icons/";
     //LES CHOIX (eyes, hair, etc.)
@@ -45,6 +43,7 @@ const extension = ".png";
     ];
 
     const shirtScreen = 4;//points to screen[shirtScreen]
+    const pantsScreen = 5;
 
     //LES CHOIX (HOVER)
     var screens_hover =
@@ -66,7 +65,6 @@ var temp_sex = ["f", "m"];
 var categoriesQty = 0;
 var choiceQty = 0;// TODO: make this better
 
-
 //*****Choice ICONS***** (THE IMAGES THAT APPEAR FOR EVERY ITEM)
     const itemsPATH = "_new_images_folder/game/dorm/dollmaker/";
 
@@ -74,7 +72,8 @@ var choiceQty = 0;// TODO: make this better
 
 const outfits = 
 [
-    itemsPATH + "shirts/" + temp_sex[user.sex] + "/shirt3" + extension,//OUTFIT 1 -> If equipped shirt == shirt 3, unequip pants
+    2
+    // itemsPATH + "shirts/" + temp_sex[user.sex] + "/shirt3" + extension,//OUTFIT 1 -> If equipped shirt == shirt 3, unequip pants
 ]
 
 /*
@@ -186,6 +185,18 @@ function refreshImg()
     };
 }
 
+var categorySelected = 
+[
+    true,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+]
+
 //wardrobe: 
 function wardrobe()
 {
@@ -253,10 +264,26 @@ function wardrobe()
         const prefix = "category";
             
         //Events
-        category.onclick = function(e){refreshItems(screens[getNumber(this, prefix)])};
+        category.onclick = function(e)
+        {
+            var index = getNumber(this, prefix)
+
+            refreshItems(screens[index]);
+            this.src = screens_hover[index];
+
+            highlightSelected();
+        };
+
         category.onmouseenter = function(e){this.src = screens_hover[getNumber(this, prefix)]};
-        category.onmouseleave = function(e){this.src = screens[getNumber(this, prefix)]};
-    }
+        category.onmouseleave = function(e)
+        {
+            var index = getNumber(this, prefix)
+            
+            if(!categorySelected[index])
+            {
+                this.src = screens[index]};
+            }
+        }
 
     //4. Create the *****CHOICE***** icons
     for(var i = 0; i < choiceQty; i++)
@@ -317,6 +344,7 @@ function wardrobe()
     var right_container = document.createElement('div');//the character image container
         right_container.id = "right_container";
         right_container.style.position = "relative";
+        right_container.style.minWidth = "200px";
         right_container.style.height = "100%";//initially 346
 
         var img_character = document.createElement('img');
@@ -326,6 +354,7 @@ function wardrobe()
 
     overlay_form.appendChild(right_container);
         right_container.appendChild(img_character);
+
         
     document.getElementById('right_container').appendChild(createLoader());
     // document.getElementById('right_container').removeChild(document.getElementById('small-loader-wrapper'));//to remove the loader
@@ -374,17 +403,85 @@ function refreshItems(newScreen)//refreshes the labels of the choices
     highlightSelected();
 }
 
+//refreshes the icons to display the correct sex (ex.: when you switch to a girl, only male haircuts are displayed)
+function refreshIcons()
+{
+    allQuantities =
+    [
+        // Sex
+        [
+            itemsPATH + "sex/female" + extension,
+            itemsPATH + "sex/male" + extension
+        ],
+        // Eyes
+        [
+            itemsPATH + "eyes/blue" + extension,
+            itemsPATH + "eyes/green" + extension,
+            itemsPATH + "eyes/grey" + extension,
+            itemsPATH + "eyes/brown" + extension
+        ],
+        // Hair Color
+        [
+            itemsPATH + "haircolor/blonde" + extension,
+            itemsPATH + "haircolor/brown" + extension,
+            itemsPATH + "haircolor/black" + extension,
+            itemsPATH + "haircolor/red" + extension
+        ],
+        // Hair Style
+        [
+            itemsPATH + "hairstyles/" + temp_sex[user.sex] + "1" + extension,
+            itemsPATH + "hairstyles/" + temp_sex[user.sex] + "2" + extension,
+            itemsPATH + "hairstyles/" + temp_sex[user.sex] + "3" + extension,
+            itemsPATH + "hairstyles/" + temp_sex[user.sex] + "4" + extension
+        ],
+        // Shirt
+        [
+            itemsPATH + "shirts/" + temp_sex[user.sex] + "/shirt1" + extension,
+            itemsPATH + "shirts/" + temp_sex[user.sex] + "/shirt2" + extension,
+            itemsPATH + "shirts/" + temp_sex[user.sex] + "/shirt3" + extension,
+        ],
+        // Pants
+        [
+            itemsPATH + "pants/" + temp_sex[user.sex] + "/pants0" + extension,
+            itemsPATH + "pants/" + temp_sex[user.sex] + "/pants1" + extension,
+            itemsPATH + "pants/" + temp_sex[user.sex] + "/pants2" + extension,
+        ],
+        // Shoes
+        [
+            itemsPATH + "shoes/" + temp_sex[user.sex] + "/shoes1" + extension,
+            itemsPATH + "shoes/" + temp_sex[user.sex] + "/shoes2" + extension,
+        ],
+        // Skin Color
+        [
+            itemsPATH + "skin/white" + extension,
+            itemsPATH + "skin/olive" + extension,
+            itemsPATH + "skin/asian" + extension,
+            itemsPATH + "skin/brown" + extension,
+            itemsPATH + "skin/black" + extension
+        ]//WITH SCREEN UPDATE
+    ]
+
+    categoriesQty = allQuantities.length;
+    choiceQty = 8;// TODO: make this better
+}
+
 function highlightSelected()
 {
     for(var i = 0; i < screens.length; i++)//scan all screens
     {
         if(currentScreen == screens[i])
         {
-            $("#categoryFLEX" + i).addClass("choices-selected")//highlight it
+            $("#category" + i).addClass("category-selected")//highlight it
+
+            categorySelected[i] = true;
+            document.getElementById("category" + i).src = screens_hover[i];
         }
         else
         {
-            $("#categoryFLEX" + i).removeClass("choices-selected")//dehighlight all the others
+            $("#category" + i).removeClass("category-selected")//dehighlight all the others
+
+            categorySelected[i] = false;
+            document.getElementById("category" + i).src = screens[i];
         }
     }
 
@@ -403,7 +500,30 @@ function highlightSelected()
     }
 }
 
-function getCurrentItem(screen)
+function getEquippedItem(screenNumber)
+{
+    var actualValues =
+    [
+        user.sex,
+        user.eyecolor,
+        user.haircolor,
+        user.hairstyle,
+        user.shirtID,
+        user.pantsID,
+        user.shoesID,
+        user.skincolor//WITH SCREEN UPDATE
+    ];
+    for(var j = 0; j < actualValues.length; j++)//we browse the position
+    {
+        if(actualValues[screenNumber] == j)
+        {
+            console.log("On screen " + screenNumber + " = " + actualValues[screenNumber]);
+            return j;
+        }
+    }
+}
+
+function getCurrentItem()
 {
     var actualValues =
     [
@@ -430,7 +550,6 @@ function getCurrentItem(screen)
             }
         }
     }    
-
 }
 
 function itemClick(newItem, position)//determines what screen we're on, and what we clicked
@@ -449,30 +568,47 @@ function itemClick(newItem, position)//determines what screen we're on, and what
         "skin_color"//WITH SCREEN UPDATE
     ];
 
+    var hasSaved = false;
+
     //if we clicked on an outfit (in the SHIRT screen)
     if(currentScreen == screens[shirtScreen])
     {
         for(var i = 0; i < outfits.length; i++)//we scan through all the outfits
         {
-            if(outfits[i] == allQuantities[4][position])//if the outfit is the same as the item we just clicked
+            if(outfits[i] == position)//if the outfit is the same as the item we just clicked
             {
-                console.log("You clicked on an outfit! Unequiping pants");
-                //unequip pants
+                // console.log("You clicked on an outfit! Unequiping pants...");
+                pushToDB(screens_SQL[pantsScreen], 0);//unequip pants
+                pushToDB(screens_SQL[shirtScreen], position);//save the outfit
+                hasSaved = true;
+            }
+        }
+    }
+    else if(currentScreen == screens[pantsScreen])
+    {
+        for(var i = 0; i < outfits.length; i++)//we scan through all the outfits
+        {
+            if(outfits[i] == getEquippedItem(shirtScreen))//if the outfit is the same as the item we just clicked
+            {
+                // console.log("You are wearing an outfit! You cannot equip pants");
+                pushToDB(screens_SQL[pantsScreen], 0);//unequip pants
+                hasSaved = true;
             }
         }
     }
 
-    for(var i = 0; i < screens.length; i++)
+    if(!hasSaved)
     {
-        if(currentScreen == screens[i])
+        for(var i = 0; i < screens.length; i++)
         {
-            pushToDB(screens_SQL[i], position);
+            if(currentScreen == screens[i])
+            {
+                pushToDB(screens_SQL[i], position);
+            }
         }
     }
 
     currentItem = position;
-
-    highlightSelected();
 }
 
 function pushToDB(SQLname, value)//saves to the database
@@ -516,67 +652,6 @@ function pushToDB(SQLname, value)//saves to the database
     verifyChange(SQLname, value);
 }
 
-//refreshes the icons to display the correct sex (ex.: when you switch to a girl, only male haircuts are displayed)
-function refreshIcons()
-{
-    allQuantities =
-    [
-        // var sex_img =
-        [
-            itemsPATH + "sex/female" + extension,
-            itemsPATH + "sex/male" + extension
-        ],
-        // var eyes_img =
-        [
-            itemsPATH + "eyes/blue" + extension,
-            itemsPATH + "eyes/green" + extension,
-            itemsPATH + "eyes/grey" + extension,
-            itemsPATH + "eyes/brown" + extension
-        ],
-        // var hair_color =
-        [
-            itemsPATH + "haircolor/blonde" + extension,
-            itemsPATH + "haircolor/brown" + extension,
-            itemsPATH + "haircolor/black" + extension,
-            itemsPATH + "haircolor/red" + extension
-        ],
-        // var hair_style =
-        [
-            itemsPATH + "hairstyles/" + temp_sex[user.sex] + "1" + extension,
-            itemsPATH + "hairstyles/" + temp_sex[user.sex] + "2" + extension,
-            itemsPATH + "hairstyles/" + temp_sex[user.sex] + "3" + extension,
-            itemsPATH + "hairstyles/" + temp_sex[user.sex] + "4" + extension
-        ],
-        // var shirt_img =
-        [
-            itemsPATH + "shirts/" + temp_sex[user.sex] + "/shirt1" + extension,
-            itemsPATH + "shirts/" + temp_sex[user.sex] + "/shirt2" + extension,
-            itemsPATH + "shirts/" + temp_sex[user.sex] + "/shirt3" + extension,
-        ],
-        // var pants_img =
-        [
-            itemsPATH + "pants/" + temp_sex[user.sex] + "/pants1" + extension,
-            itemsPATH + "pants/" + temp_sex[user.sex] + "/pants2" + extension,
-        ],
-        // var shoes_img =
-        [
-            itemsPATH + "shoes/" + temp_sex[user.sex] + "/shoes1" + extension,
-            itemsPATH + "shoes/" + temp_sex[user.sex] + "/shoes2" + extension,
-        ],
-        // var skin_color =
-        [
-            itemsPATH + "skin/white" + extension,
-            itemsPATH + "skin/olive" + extension,
-            itemsPATH + "skin/asian" + extension,
-            itemsPATH + "skin/brown" + extension,
-            itemsPATH + "skin/black" + extension
-        ]//WITH SCREEN UPDATE
-    ]
-
-    categoriesQty = allQuantities.length;
-    choiceQty = 8;// TODO: make this better
-}
-
 function verifyChange(SQLname, value)//verify that the change has been made in the DB
 {
     if(SQLname == 'sex' && user.sex == value)//if we're changing the sex, and it has the right value, DO NOTHING
@@ -618,4 +693,4 @@ function getNumber(element, prefix)
 }
 
 raz();
-//wardrobe();
+// wardrobe();

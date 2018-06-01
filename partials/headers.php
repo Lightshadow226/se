@@ -42,7 +42,7 @@
 			<div id="pink_menu">
 				<div class="flex-panel"></div>
 				<a class="menu_item" href="index.php">Dashboard</a>	
-				<a class="menu_item" href="dorm.php">My Dorm</a>
+				<a id="dorm_link" class="menu_item" href="dorm.php">My Dorm</a>
 				<a class="menu_item" href="map.php">City Map</a>
 				<a id="game_link" class="menu_item" href="game.php">My Game</a>
 				<a class="menu_item" href="relationships.php">Relationships</a>
@@ -127,6 +127,11 @@
 				$('#game_link').addClass('menu-item-activated');
 			}
 		}
+
+		if(document.location.pathname.toLowerCase() == "/se/illustrations_achievements" + extension)
+			{
+				$('#dorm_link').addClass('menu-item-activated');
+			}
 
 		updateGameBar();
 	});

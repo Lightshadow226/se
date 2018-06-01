@@ -1,6 +1,28 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
 
+# Version 1.13.0 (Completed Dorm)
+## Changed
+- `profile.php`
+    - put back updateGameBar()
+- `headers.php`
+    - highlighted "My Dorm" when we are on the illustration/achievements page
+- `dorm.js` `se-dorm.css`
+    - selecting an outfit now unequips pants
+    - we cannot equip pants when an outfit is equipped
+    - now the category is highlighted when we click on it
+    - the sprite has a minimum width so that the transition is more smooth
+- `character_small_portrait.php`
+    - the image now takes the same pictures as the normal sprite
+    - it resizes the clothes to fit the image
+    - **TODO: HOLY SHIT we can actually specify a width and height and use EXACTLY the same images!!!**
+- `scholar_sprite.php`
+    - added shirt, pants and shoes
+    - optimized the file
+- `imageGenerator.php`
+    - optimized THE SHIT out of the page
+
+
 # Version 1.12.2 (Aesthetic Fixes for Images for Illustration Generator)
 ## Changed
 - `new_images_folder`
@@ -16,7 +38,7 @@
 
 # Version 1.12.0 (Dorm Customize your appearance)
 ## Changed
-- `dorm.js` `dorm.css`
+- `dorm.js` `se-dorm.css`
     - optimized the dorm engine
     - added shirts and pants
     - improved design

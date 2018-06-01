@@ -1,30 +1,26 @@
 <?php 
 
-function getSkinColor($skin)//Get the skin color
+function getEyeColor($eyecolor)//Eye Color assignment of variables
 {
-	if($skin == 0)//white
+	if($eyecolor == 0)//blue
 	{
-		$rgb = array(65, 0, -50, 0);
+		$rgb = array(-100, 50, 100, 0);
 	}
-	elseif($skin == 1)//tan
+	elseif($eyecolor == 1)//green
 	{
-		$rgb = array(10, -70, -150, 0);
+		$rgb = array(-40, 0, -40, 0);
 	}
-	elseif($skin == 2)//asian-ish
-	{	
-		$rgb = array(60, -20, -95, 0);
-	}
-	elseif($skin == 3)//brown
+	elseif($eyecolor == 2)//grey
 	{
-		$rgb = array(-20, -110, -160, 0);
+		$rgb = array(-50, -50, -50, 0);
 	}
-	elseif($skin == 4)//black
+	elseif($eyecolor == 3)//brown
 	{
-		$rgb = array(-60, -120, -150, 0);
+		$rgb = array(5, -40, -50, 0);
 	}
-	else //Default is going to be skin color 0 in case the randomizer fucks up. Defaults will be given for all characteristics.
+	else
 	{
-		$rgb = array(30, -20, -45, 0);
+		$rgb = array(-30, -90, -110, 0);
 	}
 
 	return $rgb;
@@ -56,298 +52,103 @@ function getHairColor($haircolor)//Hair color assignment of variables
 	return $rgb;
 }
 
-function getEyeColor($eyecolor)//Eye Color assignment of variables
+function getHairStyle($sex, $hairstyle, $type)//Hairstyle assignment of variables
 {
-	if($eyecolor == 0)//blue
+	$sexFolder = ["female", "male"];
+	$rootFolder = "";
+	
+	if($type == "studentid")
 	{
-		$rgb = array(-100, 50, 100, 0);
+		$rootFolder = "studentid/";
 	}
-	elseif($eyecolor == 1)//green
+	else if($type == "fullsprite")
 	{
-		$rgb = array(-40, 0, -40, 0);
+		$rootFolder = "images/";
 	}
-	elseif($eyecolor == 2)//grey
+	else if($type == "mediumsprite")
 	{
-		$rgb = array(-50, -50, -50, 0);
+		$rootFolder = "images/index/";
 	}
-	elseif($eyecolor == 3)//brown
+
+	return $rootFolder . $sexFolder[$sex] . "/hair/hair" .$hairstyle . ".png";;
+}
+
+function getShirt($sex, $shirtIndex)
+{
+	$folder = ["female", "male"];
+	return "images/" . $folder[$sex] . "/shirts/shirt" . $shirtIndex . ".png";
+}
+
+function getPants($sex, $pantsIndex)
+{
+	$folder = ["female", "male"];
+	return "images/" . $folder[$sex] . "/pants/pant" . $pantsIndex . ".png";
+}
+
+function getShoes($sex, $shoesIndex)
+{
+	$folder = ["female", "male"];
+	return "images/" . $folder[$sex] . "/shoes/shoe" . $shoesIndex . ".png";
+}
+
+function getSkinColor($skin)//Get the skin color
+{
+	if($skin == 0)//white
 	{
-		$rgb = array(5, -40, -50, 0);
+		$rgb = array(65, 0, -50, 0);
 	}
-	else
+	elseif($skin == 1)//tan
 	{
-		$rgb = array(-30, -90, -110, 0);
+		$rgb = array(10, -70, -150, 0);
+	}
+	elseif($skin == 2)//asian-ish
+	{	
+		$rgb = array(60, -20, -95, 0);
+	}
+	elseif($skin == 3)//brown
+	{
+		$rgb = array(-20, -110, -160, 0);
+	}
+	elseif($skin == 4)//black
+	{
+		$rgb = array(-60, -120, -150, 0);
+	}
+	else //Default is going to be skin color 0 in case the randomizer fucks up. Defaults will be given for all characteristics.
+	{
+		$rgb = array(30, -20, -45, 0);
 	}
 
 	return $rgb;
 }
 
-function getHairStyle($sex, $hairstyle, $type)//Hairstyle assignment of variables
-{
-	$path = "";//FAIRE FONCTIONNER ÇA ÉVENTUELLEMENT
-	
-	if($type == "studentid")
-	{
-		if($sex == 0) //If a female has been generated
-		{
-			if($hairstyle == "0")//straight short
-			{
-				$hair_s="studentid/female/f_hair1.png";
-			}
-			elseif($hairstyle == "1")//curly short
-			{
-				$hair_s="studentid/female/f_hair2.png";
-			}
-			elseif($hairstyle == "2")//straight long
-			{
-				$hair_s="studentid/female/f_hair3.png";
-			}
-			elseif($hairstyle == "3")//curly long
-			{
-				$hair_s="studentid/female/f_hair4.png";
-			}
-			else
-			{
-				$hair_s="studentid/female/f_hair1.png";
-			}
-		}
-		else
-		{
-			if($hairstyle == "0")//straight short
-			{
-				$hair_s="studentid/male/m_hair1.png";
-			}
-			elseif($hairstyle == "1")//curly medium
-			{
-				$hair_s="studentid/male/m_hair2.png";
-			}
-			elseif($hairstyle == "2")//short but long...
-			{
-				$hair_s="studentid/male/m_hair3.png";
-			}
-			elseif($hairstyle == "3")//long
-			{
-				$hair_s="studentid/male/m_hair4.png";
-			}
-			else
-			{
-				$hair_s="studentid/male/m_hair1.png";
-			}
-		}
-	}
-	else if($type == "fullsprite")
-	{
-		if($sex == 0) //If a female has been generated
-		{
-			if($hairstyle == 0)
-			{
-				$hair_s = "images/female/f_hair1.png";
-			}
-			elseif($hairstyle == 1)
-			{
-				$hair_s = "images/female/f_hair2.png";
-			}
-			elseif($hairstyle == 2)
-			{
-				$hair_s = "images/female/f_hair3.png";
-			}
-			elseif($hairstyle == 3)
-			{
-				$hair_s = "images/female/f_hair4.png";
-			}
-			else
-			{
-				$hair_s = "images/female/f_hair1.png";
-			}
-		}
-		else//if we want to generate a male
-		{
-			if($hairstyle == 0)
-			{
-				$hair_s="images/male/m_hair1.png";
-			}
-			elseif($hairstyle == 1)
-			{
-				$hair_s="images/male/m_hair2.png";
-			}
-			elseif($hairstyle == 2)
-			{
-				$hair_s="images/male/m_hair3.png";
-			}
-			elseif($hairstyle == 3)
-			{
-				$hair_s="images/male/m_hair4.png";
-			}
-			else
-			{
-				$hair_s="images/male/m_hair1.png";
-			}
-		}
-	}
-	else if($type == "mediumsprite")
-	{
-		if($sex == 0) //If a female has been generated
-		{
-			if($hairstyle == 0)
-			{
-				$hair_s = "images/index/female/f_hair1.png";
-			}
-			elseif($hairstyle == 1)
-			{
-				$hair_s = "images/index/female/f_hair2.png";
-			}
-			elseif($hairstyle == 2)
-			{
-				$hair_s = "images/index/female/f_hair3.png";
-			}
-			elseif($hairstyle == 3)
-			{
-				$hair_s = "images/index/female/f_hair4.png";
-			}
-			else
-			{
-				$hair_s = "images/index/female/f_hair1.png";
-			}
-		}
-		else//if we want to generate a male
-		{
-			if($hairstyle == 0)
-			{
-				$hair_s="images/index/male/m_hair1.png";
-			}
-			elseif($hairstyle == 1)
-			{
-				$hair_s="images/index/male/m_hair2.png";
-			}
-			elseif($hairstyle == 2)
-			{
-				$hair_s="images/index/male/m_hair3.png";
-			}
-			elseif($hairstyle == 3)
-			{
-				$hair_s="images/index/male/m_hair4.png";
-			}
-			else
-			{
-				$hair_s="images/index/male/m_hair1.png";
-			}
-		}
-	}
-	else if($type == "profilesprite") //sprite on the profile page only
-	{
-		if($sex == 0) //If a female has been generated
-		{
-			if($hairstyle == 0)
-			{
-				$hair_s = "profile/female/f_hair1.png";
-			}
-			elseif($hairstyle == 1)
-			{
-				$hair_s = "profile/female/f_hair2.png";
-			}
-			elseif($hairstyle == 2)
-			{
-				$hair_s = "profile/female/f_hair3.png";
-			}
-			elseif($hairstyle == 3)
-			{
-				$hair_s = "profile/female/f_hair4.png";
-			}
-			else
-			{
-				$hair_s = "profile/female/f_hair1.png";
-			}
-		}
-		else//if we want to generate a male
-		{
-			if($hairstyle == 0)
-			{
-				$hair_s="profile/male/m_hair1.png";
-			}
-			elseif($hairstyle == 1)
-			{
-				$hair_s="profile/male/m_hair2.png";
-			}
-			elseif($hairstyle == 2)
-			{
-				$hair_s="profile/male/m_hair3.png";
-			}
-			elseif($hairstyle == 3)
-			{
-				$hair_s="profile/male/m_hair4.png";
-			}
-			else
-			{
-				$hair_s="profile/male/m_hair1.png";
-			}
-		}
-	}
-
-	return $hair_s;
-}
-
 function getGenericVariables($sex, $type)
 {
-	$path = "";
-	
-	//simplifier en mettant path + "body.png"
-	//path va s'initialiser avec le sexe
+	$sexFolder = ["female/", "male/"];
 
 	if($type == "studentid")//si on fait le student ID
 	{
-		$path = "studentid/";
-
-		if($sex == 0) //If a female has been generated
-		{
-			$generic = array( "studentid/female/f_body.png", "studentid/female/f_face.png", "studentid/female/f_eyes.png", "studentid/female/f_lips.png", "studentid/female/f_uniform.png", "studentid/female/f_shoes.png");
-			//body type, face image, eye image, lips image, shirt, shoes
-		}
-		elseif($sex == 1) //If a male has been generated
-		{
-			$generic = array( "studentid/male/m_body.png", "studentid/male/m_face.png", "studentid/male/m_eyes.png", "studentid/male/m_lips.png", "studentid/male/m_uniform.png", "studentid/male/m_shoes.png");
-		}
+		$rootFolder = "studentid/";
 	}
 	else if($type == "fullsprite")//si on génère une image standard (sprite)
 	{
-		$path = "images/";
-
-		if($sex == 0) //If a female has been generated
-		{
-			$generic = array( "images/female/f_body.png", "images/female/f_face.png", "images/female/f_eyes.png", "images/female/f_lips.png", "images/female/f_uniform.png", "images/female/f_shoes.png");
-			//body type, face image, eye image, lips image, shirt, shoes
-		}
-		elseif($sex == 1) //If a male has been generated
-		{
-			$generic = array( "images/male/m_body.png", "images/male/m_face.png", "images/male/m_eyes.png", "images/male/m_lips.png", "images/male/m_uniform.png", "images/male/m_shoes.png");
-		}
+		$rootFolder = "images/";
 	}
 	else if($type == "mediumsprite")//si on génère une image standard, mais en plus petit format (small sprite)
 	{
-		$path = "images/index/";
-
-		if($sex == 0) //If a female has been generated
-		{
-			$generic = array( "images/index/female/f_body.png", "images/index/female/f_face.png", "images/index/female/f_eyes.png", "images/index/female/f_lips.png", "images/index/female/f_uniform.png", "images/index/female/f_shoes.png");
-			//body type, face image, eye image, lips image, shirt, shoes
-		}
-		elseif($sex == 1) //If a male has been generated
-		{
-			$generic = array( "images/index/male/m_body.png", "images/index/male/m_face.png", "images/index/male/m_eyes.png", "images/index/male/m_lips.png", "images/index/male/m_uniform.png", "images/index/male/m_shoes.png");
-		}
+		$rootFolder = "images/index/";
 	}
-	else if($type == "profilesprite")//generating the profile page sprite only
-	{
-		$path = "images/index/";
 
-		if($sex == 0) //If a female has been generated
-		{
-			$generic = array( "profile/female/f_body.png", "profile/female/f_face.png", "profile/female/f_eyes.png", "profile/female/f_lips.png", "profile/female/f_uniform.png", "profile/female/f_shoes.png");
-			//body type, face image, eye image, lips image, shirt, shoes
-		}
-		elseif($sex == 1) //If a male has been generated
-		{
-			$generic = array( "profile/male/m_body.png", "profile/male/m_face.png", "profile/male/m_eyes.png", "profile/male/m_lips.png", "profile/male/m_uniform.png", "profile/male/m_shoes.png");
-		}
+	$generic = array
+	(
+		$rootFolder . $sexFolder[$sex] . "body.png",
+		$rootFolder . $sexFolder[$sex] . "face.png",
+		$rootFolder . $sexFolder[$sex] . "eyes.png",
+		$rootFolder . $sexFolder[$sex] . "lips.png",
+	);
+
+	if($type != "fullsprite")
+	{
+		array_push($generic, $rootFolder . $sexFolder[$sex] . "uniform.png");//only add the uniform if we're doing the student ID
 	}
 
 	return $generic;

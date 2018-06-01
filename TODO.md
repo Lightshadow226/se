@@ -16,7 +16,7 @@ https://www.google.ca/search?q=ajax+how+to+detect+slow+network&oq=ajax+how+to+de
 - `dorm.js`: outfits
 - `variables.js`: user.GENDER
 - fix the goddamn memory problem...
-
+- `character_small_portrait.php`: **HOLY SHIT we can actually specify a width and height and use EXACTLY the same images**
 
 `Canva vs php imagepng`
 https://gamedev.stackexchange.com/questions/32221/huge-performance-difference-when-using-drawimage-with-img-vs-canvas
