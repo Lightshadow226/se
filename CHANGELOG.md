@@ -1,6 +1,13 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
 
+# Version 1.12.1 (Images for Illustration Generator)
+## Changed
+- `new_images_folder` `imageGenerator.php`
+    -Added all modifications for images for the illustrations
+    -Tweaked colors in imageGenerator.php so that it looks pretty no matter which combination the player chooses
+
+
 # Version 1.12.0 (Dorm Customize your appearance)
 ## Changed
 - `dorm.js` `dorm.css`

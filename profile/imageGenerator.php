@@ -4,23 +4,23 @@ function getSkinColor($skin)//Get the skin color
 {
 	if($skin == 0)//white
 	{
-		$rgb = array(30, -20, -45, 0);
+		$rgb = array(65, 0, -50, 0);
 	}
-	elseif($skin == 1)//olive
+	elseif($skin == 1)//tan
 	{
-		$rgb = array(-15, -60, -100, 0);
+		$rgb = array(10, -70, -150, 0);
 	}
-	elseif($skin == 2)//asian
+	elseif($skin == 2)//asian-ish
 	{	
-		$rgb = array(70, -25, -85, 0);
+		$rgb = array(60, -20, -95, 0);
 	}
 	elseif($skin == 3)//brown
 	{
-		$rgb = array(-40, -100, -140, 0);
+		$rgb = array(-20, -110, -160, 0);
 	}
 	elseif($skin == 4)//black
 	{
-		$rgb = array(-105, -160, -190, 0);
+		$rgb = array(-60, -120, -150, 0);
 	}
 	else //Default is going to be skin color 0 in case the randomizer fucks up. Defaults will be given for all characteristics.
 	{
@@ -34,11 +34,11 @@ function getHairColor($haircolor)//Hair color assignment of variables
 {
 	if($haircolor == 0)//blonde
 	{
-		$rgb = array(80, 15, -200, 0);
+		$rgb = array(85, 10, -80, 0);
 	}
 	elseif($haircolor == 1)//brown
 	{
-		$rgb = array(-40, -80, -150, 0);
+		$rgb = array(-100, -130, -150, 0);
 	}
 	elseif($haircolor == 2)//black
 	{
@@ -46,7 +46,7 @@ function getHairColor($haircolor)//Hair color assignment of variables
 	}
 	elseif($haircolor == 3)//red
 	{
-		$rgb = array(80, -90, -200, 0);
+		$rgb = array(50, -100, -160, 0);
 	}
 	else
 	{
@@ -60,11 +60,11 @@ function getEyeColor($eyecolor)//Eye Color assignment of variables
 {
 	if($eyecolor == 0)//blue
 	{
-		$rgb = array(-10, -10, 290, 0);
+		$rgb = array(-100, 50, 100, 0);
 	}
 	elseif($eyecolor == 1)//green
 	{
-		$rgb = array(-130, -30, -90, 0);
+		$rgb = array(-40, 0, -40, 0);
 	}
 	elseif($eyecolor == 2)//grey
 	{
@@ -72,7 +72,7 @@ function getEyeColor($eyecolor)//Eye Color assignment of variables
 	}
 	elseif($eyecolor == 3)//brown
 	{
-		$rgb = array(-30, -90, -110, 0);
+		$rgb = array(5, -40, -50, 0);
 	}
 	else
 	{
