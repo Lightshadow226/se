@@ -1,12 +1,30 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
 
+# Version 1.14.6 (Bug fixes)
+## Added
+- `chapter0.php` `chapter1.php` `chapter2.php`
+    - added the popupHandler in the DOM
+- `se-game.css` `se-popups.css` `library.js`
+    - added the popups
+- `headers.php`
+    - the page automatically refreshes the cache
+
+## Fixed
+- `index.js`
+    - put the random character on top of the arrows (for mobile)
+- `library.js`
+    - fixed the achivement lookup
+- `chapter2.js/xlsx`: Bug fixes
+
+
 # Version 1.14.5 (Bug Fixes in Excel & Start of Dept Quiz)
 ## Changed
 - `chapter2.js/xlsx`  `chapter1.xlsx`
     - Bug fixes and grammar
 ## Added
-    - deptquiz.php for implementation of department quiz
+- `deptquiz.php`
+    - added the file for implementation of department quiz
 
 # Version 1.14.4 (Mobile Adaptation & Google Ads)
 ## Changed

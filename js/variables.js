@@ -83,11 +83,11 @@ var outfitsPointer =
         0,//shoes
     ],
 
-    //outfit 1 = default outfit
+    //outfit 1 = chapter 2 outfit
     [
-        0,//shirt
-        1,//pants
-        0,//shoes
+        1,//shirt
+        2,//pants
+        1,//shoes
     ]
 ]
 

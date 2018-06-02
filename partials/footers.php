@@ -1,5 +1,5 @@
 <!-- SE Google Ads-->
-<ins class="adsbygoogle card googleAds"
+<ins class="adsbygoogle googleAds"
     style="background-color: white;"
     data-ad-client="ca-pub-5215030892730474"
     data-adtest="on"

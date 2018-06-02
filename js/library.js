@@ -91,15 +91,15 @@ function chapterSize(chapter)//returns the size of a chapter (HAS TO BE MANUALLY
     {
         if(chapter == 0)
         {
-            return 103;
+            return 109;
         }
         else if (chapter == 1)
         {
-            return 273;
+            return 285;
         }
         else if (chapter == 2)
         {
-            return 817;
+            return 837;
         }
     }
 }
@@ -865,16 +865,12 @@ function verifyIllustration()
 
         case 1://chapter 1
             if(visiting(222, 1)) toSave = "c1i1";
-        
             if(visiting(232, 1)) toSave = "c1i2";
-        
             if(visiting(243, 1)) toSave = "c1i3";
-
             if(visiting(259, 1)) toSave = "c1i4";
 
         case 2://chapter 2
             if(visiting(772, 2)) toSave = "c2i1";
-            
             if(visiting(785, 2)) toSave = "c2i2";
 
         default:

@@ -23,6 +23,8 @@
 
 <body>
 
+	<div id="popupHandler"></div>
+
 	<?php if(!isset($_SESSION['username'])):?>
 	<body class = "center-screen">
 		<a href="index.php"><img id="logo" class="" src="images/general/se-logo.png"></a>

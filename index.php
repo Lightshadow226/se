@@ -162,7 +162,7 @@
 					<div class = "flex-panel flex-container">
 						<div class="desktop-flex-panel"></div>
 						<div id="left_wing" class="chevron-container" style="position: relative;"></div>
-						<div id="random_character_panel" class="flex-panel"></div>
+						<div id="random_character_panel" class="flex-panel" style="z-index: 10;"></div>
 						<div id="right_wing" class="chevron-container" style="position: relative; width: 100px;"></div>
 						<div class="desktop-flex-panel"></div>
 					

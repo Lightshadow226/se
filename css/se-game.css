@@ -330,28 +330,6 @@
 
 /* #endregion STRUCTURE*/
 
-/*in-game popups ("Congratulations)*/
-.popup
-{
-    position: absolute;
-    text-align: center;
-    letter-spacing: 0.1em;
-    
-    width: 20%;
-    height: auto;
-    left: 50%;
-    top: 50%;
-    transform: translate3d(-50%, -50%, 0);
-
-    opacity: 0.9;
-    /* border: 1px solid #ff4956; */
-    box-shadow: 0 0 5px #682666;
-    border-radius: 10px;
-    padding: 20px;
-
-    background-color: #f3def2;
-
-}
 /*CHAPTER 0 - CHOOSE YOUR DEPARMENT FORM*/
 
     .form_container

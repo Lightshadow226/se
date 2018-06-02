@@ -105,7 +105,7 @@ function create_line(index, type)
             play_episode_button.className = "play_episode_button_disabled";//we can't play the story
         }
 
-        play_episode_button.href = get_button_href(index);// play_episode_button.id);
+        //play_episode_button.href = get_button_href(index);// play_episode_button.id);
         play_episode_button.onclick = function (){get_button_consequence(index, 1)};
         // get_button_consequence(0, 1);
         
