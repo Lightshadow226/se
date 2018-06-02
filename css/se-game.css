@@ -547,6 +547,7 @@
         text-decoration: none;/*enlever le underline -> ne va plus être nécessaire quand on va rendre le bouton un actual Button*/
         border-radius: 5px;
         text-align: center;
+        cursor: not-allowed;
 
         min-width: 75px;
         max-width: 300px;

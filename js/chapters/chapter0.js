@@ -11,7 +11,7 @@ August 19, 2017
 */
 var story = new Array();
 
-user.last_chapter_played = 0;
+user.lastChapterPlayed = 0;
 saveVariables(x.lastChapterPlayed);
 
 function Chapter()

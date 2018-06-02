@@ -11,11 +11,11 @@ September 02, 2017
 */
 var story = new Array();
 
-user.last_chapter_played = 2;
+user.lastChapterPlayed = 2;
 saveVariables(x.lastChapterPlayed);
 
 function Chapter()
-{
+{    
     //story[0] === Story Text
     story[0] = [
         "(I brushed my teeth and put on my clothes in record time. Clumsily grabbing my schoolbag, I rushed out of the dorms and made my way into the school, running.)",//0 
@@ -882,7 +882,7 @@ function Chapter()
         "null",
         "null",//25 
         "Uh sure! No problem… But are you positive you’re not going to ask me for an autograph first? I mean, I <em>am</em> Axel, you know.",
-        "null",
+        "51",
         "Nice to meet you. Your classroom’s not far away, fortunately for you. ",
         "null",
         "Let me guess, scholarship student? ",//30 
@@ -1654,7 +1654,7 @@ function Chapter()
         "null",
         "null",
         "null",
-        "null",//799 POPUP
+        "Damn, how much did she drink?",//799 POPUP
         "null",//800 
         "null",
         "null",
@@ -5213,12 +5213,12 @@ function Chapter()
         -1,//170 
         -1,
         -1,
+        179,
+        -1,
+        179,//175 
         -1,
         -1,
-        -1,//175 
-        -1,
-        -1,
-        -1,
+        179,
         -1,
         -1,//180 
         -1,
@@ -5713,10 +5713,10 @@ function Chapter()
         -1,//670 
         -1,
         -1,
-        -1,
+        707,
         -1,
         -1,//675 
-        -1,
+        707,
         -1,
         707,
         -1,
@@ -5839,7 +5839,7 @@ function Chapter()
         -1,
         -1,
         -1,
-        -15,//799 POPUP
+        -1,//799 POPUP
         -1,//800 
         -1,
         -1,
@@ -11698,7 +11698,7 @@ function Chapter()
         "null",
         "null",
         "null",
-        "Damn, how much did she drink?",//799 POPUP
+        "null",//799 POPUP
         "null",//800 
         "null",
         "null",

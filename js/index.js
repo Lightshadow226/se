@@ -13,7 +13,7 @@ $(function create_interface()
 {
     //logged in
     update_highest_affinity();
-    update_current_chapter(user.last_chapter_played, "currentIndex");
+    update_current_chapter(user.lastChapterPlayed, "currentIndex");
 });
 
 //LOGGED OUT
@@ -132,7 +132,7 @@ function update_current_chapter(index, type)
                 left_wing.className = "flex-panel";
 
             var play_episode_button = document.createElement('a');
-                play_episode_button.id = currentChapter.number;//user.last_chapter_played;
+                play_episode_button.id = currentChapter.number;//user.lastChapterPlayed;
                 play_episode_button.className = "button yellow_button";
                 play_episode_button.innerHTML = "Continue Playing";
                 play_episode_button.href = get_button_href(currentChapter.number);
@@ -150,7 +150,7 @@ function get_button_ID(index)
 {
     if(index == -1)
     {
-        get_button_ID(user.last_chapter_played);
+        get_button_ID(user.lastChapterPlayed);
     }
     else if(index == 0)
     {

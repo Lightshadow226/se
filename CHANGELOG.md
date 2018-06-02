@@ -1,11 +1,23 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
 
+# Version 1.14.2 (Major Bug Fix - Saving & Loading)
+## Fixed
+- `gameengine.js` `variables.js`
+    - fixed the -11 option (look at past chapters)
+    - it was saving the wrong chapter
+    - it weas never swapping back
+- `variables.js`    `library.js`    `chapter0.js`   `chapter1.js`   `chapter2.js`
+    - Minor changes (renamed to user.lastChapterPlayed)
+- `chapter2.js/xlsx`: minor changes
+
+
 # Version 1.14.1 (Shop and Help/Faq Pages)
 ## Added (Affinity Wiping)
 - `help.php` `shop.php` `headers.php` `footers.php` `se-faq.css`
     - added help.php and shop.php
     - updated footer and header to reflect those pages
+
 
 # Version 1.14.0 (Affinity Wiping & In-game outfits)
 ## Added (Affinity Wiping)
@@ -535,7 +547,7 @@
     - all numbers were removed because they are all independently isolated in their own try/catch loops
 
 - `chapter0.js`         `chapter1.js`
-    - changed pushVariablesToDB() for saveVariables(user.last_chapter_played);
+    - changed pushVariablesToDB() for saveVariables(user.lastChapterPlayed);
     - much more efficient
     - it saves one variable instead of all of them
 

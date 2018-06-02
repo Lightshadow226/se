@@ -14,7 +14,7 @@ var nextChapters_lines_container = document.getElementById("nextChapters");
 
 const chapterImagesPath = "_new_images_folder/game/chapter_images/";
 
-var current_chapter = parseInt(user.last_chapter_played);
+var current_chapter = parseInt(user.lastChapterPlayed);
 var next_chapter = current_chapter + 1;
 
 $(function create_interface()
@@ -76,7 +76,7 @@ function create_line(index, type)
     if(type == "current")//if we're doing the unique "current chapter" div
     {
         objectiveContainer.id = "objectiveContainer";//used to display the progress bar
-        play_episode_button.id = user.last_chapter_played;
+        play_episode_button.id = user.lastChapterPlayed;
         line.className += " line-big";
         char_img.style.maxHeight = "350px";
         chara_desc.innerHTML += "</br> <b>Progress: </b>";
@@ -89,7 +89,7 @@ function create_line(index, type)
         currentEpisode_lines_container.appendChild(line);
         // refreshProgressBar();
     }
-    else if(type == "next")
+    else if(type == "next")//continue playing
     {
         line.className += " line-small";
         line_left_content.className += " line-small";
@@ -160,7 +160,7 @@ function create_line(index, type)
         3. if we click on a next chapter, we have to play the previous ones before
     B) open a chapter page not normally (type chapter1.php to access it "illegally")
         - redirect to game.php (write a script that reads the current chapter and compares it to the database)
-        - must be included in every chapter -> we can't use the game engine because it's going to be too late (user.last_chapter_played will already be modified)
+        - must be included in every chapter -> we can't use the game engine because it's going to be too late (user.lastChapterPlayed will already be modified)
 */
 
 async function get_button_consequence(index, replayType = 1)//replayType is optional, default is 1
@@ -172,6 +172,7 @@ async function get_button_consequence(index, replayType = 1)//replayType is opti
     if(index == current_chapter)
     {
         //leave it empty
+        window.open('chapter' + index + '.php', '_self')
     }
     // 2. if we click a prior chapter, there are 2 choices:
     else if(index < current_chapter)
@@ -206,18 +207,18 @@ async function get_button_consequence(index, replayType = 1)//replayType is opti
         {
             // this should never happen
         }
+
+        window.open('chapter' + index + '.php', '_self')
     }
     // 3. if we click on a next chapter, we have to play the previous ones before
     else
     {
         //if we're clicking on a future chapter, we need to tell the user that he has to wait until being able to play it.
-        alert("You cannot play this chapter yet!");
+        // alert("You cannot play this chapter yet!");
         //var popup = document.createElement('div');
         //popup.id = "alert";
         //play_episode_button.className = "popup-container";
     }
-
-    window.open('chapter' + index + '.php', '_self')
 
     //TODO: il va avoir un bug, mais il va falloir détecter quand un chapitre est terminé, A.K.A. quand le isVisited pour la dernière slide d'un chapitre = true en mode story
     //TODO: once we finish a chapter, the current chapter is the next one (if there's no next one, the current one is the last one and the progress is at 100%... FUCK, this is annoying)

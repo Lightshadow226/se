@@ -678,7 +678,7 @@ var x =
     nbreplays: 'nbreplays',
 
     //SCHOLARINFO table
-    scholarName: 'scholar_name',
+    scholarname: 'scholar_name',
     dateofbirth : "XX-XX-XXXX",
     gender: 'scholar_gender',//0: she, 1: he, 2: they
     sex: 'scholar_sex',//0: female, 1: male
@@ -728,7 +728,7 @@ var user =
     nbreplays: 0,
 
     //SCHOLARINFO table
-    scholarName: 'None',
+    scholarname: 'None',
     dateofbirth : "XX-XX-XXXX",
     gender: 0,//0: she, 1: he, 2: they
     sex: 'scholar_sex',//0: female, 1: male
@@ -800,22 +800,18 @@ var oldUser = user;
 var playingTheGame = true;
 var alternateIsVisited = new Array();
 
-function loadIsVisited(chapter)
+function loadIsVisited(chapter)//operating normally
 {
-    //we store the actual chapter
-    alternateIsVisited = null;
-    alternateIsVisited = new Array();
+    // console.log("\n\nLoading is visited for chapter " + chapter + " (Current chapter is " + user.lastChapterPlayed + ")");
 
-    // console.log("loading is visited for chapter " + chapter + " (Current chapter is " + user.last_chapter_played + ")");
-
-    var actualChapter = user.last_chapter_played;
+    const actualChapter = user.lastChapterPlayed;
 
     //if we're not loading the current chapter [SWAP]
     if(chapter != actualChapter)
     {
         //we save the desired chapter in the database
         console.log("Swaping chapter " + actualChapter + " for chapter " + chapter);
-        user.last_chapter_played = chapter;
+        user.lastChapterPlayed = chapter;
         saveVariables(x.lastChapterPlayed);
     }
 
@@ -833,6 +829,9 @@ function loadIsVisited(chapter)
         var chapter_size = parseInt(document.getElementById("chapter_size").value);
         //chapter_size is actually one more (+1)
 
+        alternateIsVisited = null;
+        alternateIsVisited = new Array();
+
         //then we save them as JS variables:
         for(var i = 0; i < chapter_size; i++)
         {
@@ -845,38 +844,36 @@ function loadIsVisited(chapter)
 
             // console.log("slide " + new_variable + ": " + actualValue);
             alternateIsVisited.push(actualValue);
+
+            if(playingTheGame)
+            {
+                story[isVisited][i] = actualValue;
+            }
         }
 
         console.log("Loaded isVisited for Ch. " + user.lastChapterPlayed);
-        // console.log("Loaded isVisited for " + chapter_size + " slides.");
+
+        resetOldIsVisitedValues();
     });
 
     //if we're not loading the current chapter [SWAP BACK]
-    if(chapter != actualChapter)
+    if(user.lastChapterPlayed != actualChapter)
     {
-        //we save the actual chapter back in the database
         console.log("Swaping back chapter " + chapter + " for chapter " + actualChapter);
-        user.last_chapter_played = actualChapter;
+        user.lastChapterPlayed = actualChapter;//we save the actual chapter back in the database
         saveVariables(x.lastChapterPlayed);
     }
 
-    if(playingTheGame)
-    {
-        for(var i = 0; i < alternateIsVisited.length; i++)
-        {
-            story[isVisited][i] = alternateIsVisited[i];
-            // console.log("Loading - Alternate[" + i + "]: " + alternateIsVisited[i] + "\nStory[" + i + "]: " + story[isVisited][i] + "\n");
-        }
-    }
+    // console.log(user.storyLocation + " - " + alternateIsVisited[user.storyLocation] + " vs " + story[isVisited][user.storyLocation]);
 }
 
-function saveIsVisited(chapter, slide)
+function saveIsVisited()//operating normally
 {
     // solution: https://stackoverflow.com/questions/1184123/is-it-possible-to-add-dynamically-named-properties-to-javascript-object
     var jsonData = {};
     var variablesSaved = 0;
     var chapter_size = story[0].length;
-    
+
     //convert the data into JSON (true -> 1)
     for(var i = 0; i < chapter_size; i++)
     {
@@ -907,13 +904,12 @@ function saveIsVisited(chapter, slide)
         {
             type: 'POST',
             async: false,
-            dataType: "json",
-            data: jsonData
+            data: jsonData,
         }).done(function (response)
         {
             console.log("Saved isVisited.");
             // console.log("Saved isVisited for " + chapter_size + " slides.");
-            console.log(response);
+            if(response != ''){console.log(response)}
         });
     
         resetOldIsVisitedValues();
@@ -1006,7 +1002,7 @@ function pullVariablesFromDB()//we load the data from the database, and put it i
     }).done(function (response)//when the request is done, we execute the following code:
     {
         //we print the response in #DB_handle:
-
+        
         $('#DB_handle').html(response);
 
         //then we save them as JS variables:
@@ -1014,68 +1010,71 @@ function pullVariablesFromDB()//we load the data from the database, and put it i
         /********************
         USERINFO table
         *********************/
-        user.username = document.getElementById("db_handle_username").innerHTML;
-        user.energy = document.getElementById("db_handle_energy").innerHTML;
-        user.money = document.getElementById("db_handle_money").innerHTML;
+        user.username =     document.getElementById("db_handle_username").innerHTML;
+        user.energy =       document.getElementById("db_handle_energy").innerHTML;
+        user.money =        document.getElementById("db_handle_money").innerHTML;
 
         /********************
         SCHOLARINFO table
         *********************/
-        user.scholarname = document.getElementById("db_handle_scholarname").value;
-        user.dateofbirth = document.getElementById("db_handle_dateofbirth").value;
-        user.gender = parseInt(document.getElementById("db_handle_gender").value);
-        user.sex = parseInt(document.getElementById("db_handle_sex").value);
-        user.department = document.getElementById("db_handle_department").value;
-        user.haircolor = parseInt(document.getElementById("db_handle_haircolor").value);
-        user.hairstyle = parseInt(document.getElementById("db_handle_hairstyle").value);
-        user.skincolor = parseInt(document.getElementById("db_handle_skincolor").value);
-        user.eyecolor = parseInt(document.getElementById("db_handle_eyecolor").value);
-        user.wigID = parseInt(document.getElementById("db_handle_wigID").value);
-        user.shirtID = parseInt(document.getElementById("db_handle_shirtID").value);
-        user.pantsID = parseInt(document.getElementById("db_handle_pantsID").value);
-        user.socksID = parseInt(document.getElementById("db_handle_socksID").value);
-        user.shoesID = parseInt(document.getElementById("db_handle_shoesID").value);
-        user.accessoryID = parseInt(document.getElementById("db_handle_accessoryID").value);
+        user.scholarname =           document.getElementById("db_handle_scholarname").value;
+        user.dateofbirth =           document.getElementById("db_handle_dateofbirth").value;
+        user.gender =       parseInt(document.getElementById("db_handle_gender").value);
+        user.sex =          parseInt(document.getElementById("db_handle_sex").value);
+        user.department =            document.getElementById("db_handle_department").value;
+        user.haircolor =    parseInt(document.getElementById("db_handle_haircolor").value);
+        user.hairstyle =    parseInt(document.getElementById("db_handle_hairstyle").value);
+        user.skincolor =    parseInt(document.getElementById("db_handle_skincolor").value);
+        user.eyecolor =     parseInt(document.getElementById("db_handle_eyecolor").value);
+        user.wigID =        parseInt(document.getElementById("db_handle_wigID").value);
+        user.shirtID =      parseInt(document.getElementById("db_handle_shirtID").value);
+        user.pantsID =      parseInt(document.getElementById("db_handle_pantsID").value);
+        user.socksID =      parseInt(document.getElementById("db_handle_socksID").value);
+        user.shoesID =      parseInt(document.getElementById("db_handle_shoesID").value);
+        user.accessoryID =  parseInt(document.getElementById("db_handle_accessoryID").value);
 
         /********************
         STORY table
         *********************/
         user.storyLocation = document.getElementById("db_handle_story_location").value;//we should use an input and .value
-        user.last_chapter_played = document.getElementById("db_handle_last_chapter_played").value;//we should use an input and .value
+        user.lastChapterPlayed = document.getElementById("db_handle_lastChapterPlayed").value;//we should use an input and .value
         user.physicalLocationInt = parseInt(document.getElementById("db_handle_physicallocationint").value);
-        // console.log("Chapter " + user.last_chapter_played + " (Inside loop)");
         
         /********************
         AFFINITY table
         *********************/
         karolina.affinity = document.getElementById("db_handle_a1").value;
-        ellie.affinity = document.getElementById("db_handle_a2").value;
-        neha.affinity = document.getElementById("db_handle_a3").value;
-        raquel.affinity = document.getElementById("db_handle_a4").value;
-        claire.affinity = document.getElementById("db_handle_a5").value;
+        ellie.affinity =    document.getElementById("db_handle_a2").value;
+        neha.affinity =     document.getElementById("db_handle_a3").value;
+        raquel.affinity =   document.getElementById("db_handle_a4").value;
+        claire.affinity =   document.getElementById("db_handle_a5").value;
         alistair.affinity = document.getElementById("db_handle_a6").value;
-        tadashi.affinity = document.getElementById("db_handle_a7").value;
-        tegan.affinity = document.getElementById("db_handle_a8").value;
-        tyler.affinity = document.getElementById("db_handle_a9").value;
-        axel.affinity = document.getElementById("db_handle_a10").value;
+        tadashi.affinity =  document.getElementById("db_handle_a7").value;
+        tegan.affinity =    document.getElementById("db_handle_a8").value;
+        tyler.affinity =    document.getElementById("db_handle_a9").value;
+        axel.affinity =     document.getElementById("db_handle_a10").value;
+
         lady_arlington.affinity = document.getElementById("db_handle_a11").value;
         coach_davis.affinity = document.getElementById("db_handle_a12").value;
         serena.affinity = document.getElementById("db_handle_a13").value;
         cecile.affinity = document.getElementById("db_handle_a14").value;
         teacher.affinity = document.getElementById("db_handle_a15").value;
 
-        // $(document).ready(function(){try{refreshInterface();}catch(e){}});
-        $(document).ready(function(){try{update_highest_affinity(); update_current_chapter();}catch(e){}});
+        // console.log("Chapter " + user.lastChapterPlayed + " (Inside loop)");
+        // console.log("username " + user.scholarname + " (Inside loop)");
         
-        console.log("Loaded Variables.")
-
         oldUser = Object.create(user);
         resetOldUserValues();//initialize oldUser
+        console.log("Loaded Variables.")
+
+        $(document).ready(function(){try{update_highest_affinity(); update_current_chapter();}catch(e){}});
     });
 }
 
 function resetOldUserValues()
 {
+    // console.log("in resetOldUserValues... [BEG] Old user = " + oldUser.lastChapterPlayed);
+
     /********************USERINFO table*********************/
     oldUser.username = user.username;
     oldUser.energy = user.energy; 
@@ -1100,7 +1099,7 @@ function resetOldUserValues()
     
     /********************STORY table*********************/
     oldUser.storyLocation = user.storyLocation
-    oldUser.last_chapter_played = user.last_chapter_played
+    oldUser.lastChapterPlayed = user.lastChapterPlayed
     oldUser.physicalLocationInt = user.physicalLocationInt
     
     /********************AFFINITY table*********************/
@@ -1137,6 +1136,8 @@ function resetOldUserValues()
     oldUser.serena = serena.affinity;
     oldUser.cecile = cecile.affinity;
     oldUser.teacher = teacher.affinity;
+
+    // console.log("in resetOldUserValues... [END] Old user = " + oldUser.lastChapterPlayed);
 }
 
 pullVariablesFromDB();
@@ -1155,10 +1156,10 @@ pullVariablesFromDB();
 // {
     // do
     // {
-        // console.log("before: " + user.last_chapter_played);
+        // console.log("before: " + user.lastChapterPlayed);
         // await buffer();
         // pullVariablesFromDB();
-        // console.log("after: " + user.last_chapter_played);// + ", xhr = " + xhr);
+        // console.log("after: " + user.lastChapterPlayed);// + ", xhr = " + xhr);
     // }while(!buffer);
 
     // xhr = "0";

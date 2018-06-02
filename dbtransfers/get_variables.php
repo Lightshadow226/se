@@ -122,7 +122,7 @@ while($rs = $statement->fetch())//"rs" = "row statements"
 
     <!-- STORY table -->
     <input id="db_handle_story_location"        value = <?php echo $story_location; ?>></input>
-    <input id="db_handle_last_chapter_played"   value = <?php echo $last_chapter; ?>></input>
+    <input id="db_handle_lastChapterPlayed"   value = <?php echo $last_chapter; ?>></input>
     <input id="db_handle_physicallocationint"   value = <?php echo $physicallocationint; ?>></input>
     
     <!-- AFFINITY table -->

@@ -32,7 +32,7 @@
 			<strong> | Money: </strong> <span id="barMoney"></span>
 			<strong> | Energy: </strong> <span id="barEnergy"></span>
 			<strong> | Replays: </strong> <span id="barReplays"></span>
-			<span style="position: absolute; right: 10px;"><a href="logout.php" style="color:white;">Logout</a> | <a href="help.php" style="color:white;">Help?</a> </span>
+			<span style="position: absolute; right: 10px;"><a href="logout.php" style="color:white;">Logout</a> | <a href="help.php" style="color:white;">Help</a> </span>
 		</div>
 
 		<div id="nav_menu_container">

@@ -10,7 +10,7 @@ All rights reserved.
 September 02, 2017
 */
 
-loadIsVisited(user.last_chapter_played);
+loadIsVisited(user.lastChapterPlayed);
 
 $(function initializeInterface()//CREATES the entire interface once the document is $(document).READY()
 {
@@ -1157,11 +1157,8 @@ function browseLink(link, element)//link is the link of the story (story[special
         //TODO: make a switch case
         if(story[isVisited][pointofinterest]) // if we visited the slide that is the "point of interest".
         {
-            console.log("you have visited " + pointofinterest);
-            console.log("therefore, you are going to " + landingpoint);
-            //alert("storylocation was " + storyLocation);
+            console.log("You have visited " + pointofinterest + " -> you are going to " + landingpoint);
             user.storyLocation = landingpoint;
-            //alert("storylocation is now " + storyLocation);
         }
         else if(pointofinterest == -1)
         {
@@ -1180,18 +1177,13 @@ function browseLink(link, element)//link is the link of the story (story[special
         var pointofinterest = story[POI][user.storyLocation];
         var landingpoint = story[LP][user.storyLocation];
 
-        console.log("Looking at slide: " + pointofinterest + " of chapter " + relevantChapter + " = " + alternateIsVisited[pointofinterest]);
-        
         loadIsVisited(relevantChapter);
-        // isVisitedChapterX
+        // console.log("Looking at slide: " + pointofinterest + " of chapter " + relevantChapter + " = " + alternateIsVisited[pointofinterest] + " (btw, current chapter = " + user.lastChapterPlayed + ")");
         
         if(alternateIsVisited[pointofinterest]) // if we visited the slide that is the "point of interest".
         {
-            console.log("you have visited " + pointofinterest);
-            console.log("therefore, you are going to " + landingpoint);
-            //alert("storylocation was " + storyLocation);
+            console.log("You have visited " + pointofinterest + " -> you are going to " + landingpoint);
             user.storyLocation = landingpoint;
-            //alert("storylocation is now " + storyLocation);
         }
         else//if not, we go to the next slide
         {
@@ -1250,11 +1242,11 @@ function endOfChapter()
     $("#replay_handler").load("partials/replay.php", function (response, status, xhr)
     {
         // console.log(response);
-        document.getElementById("current-chapter-img").src = "_new_images_folder/game/chapter_images/chapter" + user.last_chapter_played + ".jpg";
+        document.getElementById("current-chapter-img").src = "_new_images_folder/game/chapter_images/chapter" + user.lastChapterPlayed + ".jpg";
 
         var lastChapterAvailable = availableChapters - 1;
 
-        if(user.last_chapter_played == lastChapterAvailable)//if we just finished playing the latest chapter
+        if(user.lastChapterPlayed == lastChapterAvailable)//if we just finished playing the latest chapter
         {
             document.getElementById("next-chapter-button").remove();
         }
@@ -1264,7 +1256,7 @@ function endOfChapter()
     });
 
     
-    // console.log(user.last_chapter_played);
+    // console.log(user.lastChapterPlayed);
 }
 
 function restartChapter()
@@ -1286,7 +1278,7 @@ function restartChapter()
 function nextChapter()
 {
     console.log("Opening next chapter...");
-    var newChapter = parseInt(user.last_chapter_played);
+    var newChapter = parseInt(user.lastChapterPlayed);
         newChapter++;
     
     user.storyLocation = 0;//start the next chapter at slide 0

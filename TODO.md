@@ -55,7 +55,7 @@ https://24ways.org/2007/supersleight-transparent-png-in-ie6
         A) Open a chapter through game.php (see further details in *gameboot.js*)
         B) open a chapter page not normally (type chapter1.php to access it `illegally`)
             - redirect to *game.php* (write a script that reads the current chapter and compares it to the database)
-            - must be included in every chapter -> we can't use the game engine because it's going to be too late (user.last_chapter_played will already be modified)
+            - must be included in every chapter -> we can't use the game engine because it's going to be too late (user.lastChapterPlayed will already be modified)
     - optimize the game engine for efficiency (put it on paper first)
     - *variables.js* remove the variable "choice" (for the Ch.0 Form)
     - *variables.js* account for movements -> movement meter/action points -> faire un système pour tout

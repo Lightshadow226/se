@@ -62,7 +62,7 @@ function updateGameBar()
 //*****CHAPTERS*****
 function getCurrentChapter()//returns the current chapter as an object
 {
-    var index = user.last_chapter_played;//current chapter == index
+    var index = user.lastChapterPlayed;//current chapter == index
     const character_portraits_path = "images/general/chapter_images/";
 
     //declared in variables.js
@@ -499,7 +499,7 @@ function refreshProgressBar()
 
     var progressBar = document.getElementById('progress_bar');
     
-    var progress = user.storyLocation/chapterSize(user.last_chapter_played)*100;
+    var progress = user.storyLocation/chapterSize(user.lastChapterPlayed)*100;
     // console.log(progress);
 
     if(progress > 10 && progress < 100)
@@ -808,14 +808,14 @@ function wipeCurrentChapter()
     saveIsVisited();
     pushVariablesToDB();
 
-    console.log("Successfully wiped the memory for chapter " + user.last_chapter_played);
+    console.log("Successfully wiped the memory for chapter " + user.lastChapterPlayed);
 }
 
 //used to get the reference to a chapter
 //ex.: the button on the index page uses get_button_href(current chapter) to get a link to the current chapter in the button
 function get_button_href(index)
 {
-    if(index <= user.last_chapter_played)//if we create a link to a past or current chapter
+    if(index <= user.lastChapterPlayed)//if we create a link to a past or current chapter
     {
         return "chapter" + index + ".php";
     }
@@ -830,7 +830,7 @@ function verifyIllustration()
 {
     toSave = "none";
 
-    switch(user.last_chapter_played)
+    switch(user.lastChapterPlayed)
     {
         case 0://chapter 0
             // break;
@@ -864,7 +864,7 @@ function verifyAchievement()
 {
     toSave = "none";
 
-    switch(user.last_chapter_played)
+    switch(user.lastChapterPlayed)
     {
         case 0://achievement 0
             if(visiting(566, 2)) toSave = "a0";
@@ -894,7 +894,7 @@ function verifyAchievement()
 
 function visiting(slide, chapter)
 {
-    if(chapter == user.last_chapter_played)//if we're currently playing the chapter, let's verify it
+    if(chapter == user.lastChapterPlayed)//if we're currently playing the chapter, let's verify it
     {
         if(slide == user.storyLocation) return true;
     }
@@ -957,7 +957,7 @@ function getJSONPropertyValue(propertyName)
         
         //STORY table
         case x.storyLocation: return user.storyLocation;
-        case x.lastChapterPlayed: return user.last_chapter_played;
+        case x.lastChapterPlayed: return user.lastChapterPlayed;
         case x.physicalLocationInt: return user.physicalLocationInt;
 
         //AFFINITY table (Main 10)
@@ -991,7 +991,7 @@ function pushVariablesToDB()
         x.username, x.energy, x.money,
 
         //SCHOLARINFO table
-        x.department, x.scholarName, x.gender, x.sex, x.haircolor, x.hairstyle, x.skincolor, x.eyecolor, x.wigID, x.shirtID, x.pantsID, x.socksID, x.shoesID, x.accessoryID,
+        x.department, x.scholarname, x.gender, x.sex, x.haircolor, x.hairstyle, x.skincolor, x.eyecolor, x.wigID, x.shirtID, x.pantsID, x.socksID, x.shoesID, x.accessoryID,
 
         //STORY table
         x.storyLocation, x.lastChapterPlayed, x.physicalLocationInt,
@@ -1041,37 +1041,31 @@ function saveVariables()
 
     if(variablesSaved > 0)
     {
-        var variablesString = "variables";
-        if(variablesSaved == 1) variablesString = "variable";
+        var variablesString = "Variables";
+        if(variablesSaved == 1) variablesString = "Variable";
 
         // console.log("Saving " + variablesSaved + " " + variablesString + ": ");
-        console.log(jsonData);
 
         $.ajax('dbtransfers/push_variables.php',
         {
             type: 'POST',
             async: false,
-            dataType: "json",
-            data: jsonData
-            // beforeSend: showLoadingImgFunction()
-            // TODO: make a loader and show it here
-        })
+            data: jsonData,
+        }).done(function (response)
+        {
+            console.log("\nSaved " + variablesString + ":");
+            console.log(jsonData);
+            console.log("\n");
+
+            resetOldUserValues();
+        });
+
         // .fail(function (response)
         // {
         //     if (data.responseCode) console.log(data.responseCode);
 
         //     saveVariables(arguments);
         // })
-        .done(function (response)
-        {
-            // TODO: Remove loader once it is complete
-            if(response != '')
-            {
-                console.log("\'" + response + "\'");
-            }
-            
-            resetOldUserValues();
-        });
     }
 }
 
@@ -1095,7 +1089,7 @@ function hasToBeSaved(propertyName)//returns either true or false (has to be sav
             break;
 
         //SCHOLARINFO table
-        case x.scholarName:
+        case x.scholarname:
             if (user.scholarname != oldUser.scholarname) return true;
             break;
 
@@ -1161,7 +1155,7 @@ function hasToBeSaved(propertyName)//returns either true or false (has to be sav
             break;
 
         case x.lastChapterPlayed:
-            if (user.last_chapter_played != oldUser.last_chapter_played) return true;
+            if (user.lastChapterPlayed != oldUser.lastChapterPlayed) return true;
             break;
 
         case x.physicalLocationInt:
