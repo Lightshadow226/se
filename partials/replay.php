@@ -9,7 +9,7 @@
 
             <div style="flex:2;">
                 <div>
-                    <img id="current-chapter-img" class="center_div" style="width: 100%; border: 2px solid #fdeac7; border-radius: 10px; box-shadow: 0 0 10px #fdeac7;" src="images/general/chapter_images/chapter0.png">
+                    <img id="current-chapter-img"  style="width: 100%; border: 2px solid #fdeac7; border-radius: 10px; box-shadow: 0 0 10px #fdeac7;" src="images/general/chapter_images/chapter0.png">
                 </div>
             </div>
 

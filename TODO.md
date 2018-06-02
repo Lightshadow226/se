@@ -90,7 +90,11 @@ https://24ways.org/2007/supersleight-transparent-png-in-ie6
 *Unstage commit:* https://stackoverflow.com/questions/1611215/remove-a-git-commit-which-has-not-pushed
 *Git Tag:* https://git-scm.com/book/en/v2/Git-Basics-Tagging
 *Git Rename Tag:* https://stackoverflow.com/questions/1028649/how-do-you-rename-a-git-tag
+
+
 *Git Log:* git log --all --decorate --oneline --graph (https://stackoverflow.com/questions/1057564/pretty-git-branch-graphs)
+*Branches:* https://nvie.com/posts/a-successful-git-branching-model/
+
 
 `GIT original configuration:`
 Target: += *--cd-to-home*

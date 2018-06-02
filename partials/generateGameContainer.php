@@ -30,14 +30,10 @@
                 <div id = "textContainer"></div>
                 
                 <!-- Affinity Meter 1 (right, character 1) -->
-                <div id = "infinity-container-1" style="position: absolute; right: 0; top: 50%; width: 100px; transform: translateY(-50%);">
-                    <img id = "infinity-meter-1" style="width: 100%;"></img>
-                </div>
+                <img id = "infinity-meter-1" class = "infinity-meter infinity-meter-right"></img>
                 
                 <!-- Affinity Meter 2 (left, character 2) -->
-                <div id = "infinity-container-2" style="position: absolute; left: 0; top: 50%; width: 100px; transform: translateY(-50%);">
-                    <img id = "infinity-meter-2" style="width: 100%;"></img>
-                </div>
+                <img id = "infinity-meter-2" class = "infinity-meter infinity-meter-left"></img>
 
                 <!-- Choice of Friendship -->
                 <div id = "friendship_button" class="friendship_romance_buttons y-center-p">

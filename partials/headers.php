@@ -7,18 +7,17 @@
 ?>
 
 <head>
-<script src = "js/jquery_3.2.1.js"></script>
+	<script src = "js/jquery_3.2.1.js"></script>
+	<meta name="viewport" content="width=device-width">
 </head>
+
 <header>
 
 	<div id="loader-wrapper">
 		<div id="loader">
 		</div>
 		<img id="img_loader" src="logo.png"/>
-		
-		<div class="loader-section section-left"></div>
-		<div class="loader-section section-right"></div>
-	
+		<div class="loader-section"></div>
 	</div>
 
 	<i style="display: none;"><?php echo guard(); ?></i>

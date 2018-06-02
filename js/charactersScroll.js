@@ -7,7 +7,6 @@ Create the Character Scroll for the Characterpage
 var horizontal_scroll = document.getElementById("horizontal_scroll");
 
     horizontal_scroll.innerHTML = "";
-    horizontal_scroll.className = "center_div";
     
 var index = 7;
 
@@ -257,7 +256,7 @@ function refresh_container(i)
     
     var left_wing_container = document.createElement('div');
 
-        left_wing_container.classList = "center_div scroll_img_container";
+        left_wing_container.classList = "scroll_img_container";
 
     var left_wing = document.createElement('img');
 
@@ -393,7 +392,7 @@ function refresh_container(i)
         
     var right_wing_container = document.createElement('div');
 
-        right_wing_container.className = "center_div scroll_img_container";
+        right_wing_container.className = "scroll_img_container";
 
     var right_wing = document.createElement('img');
         

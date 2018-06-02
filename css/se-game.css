@@ -895,3 +895,24 @@
 {
     width: 50px;
 }
+
+
+.infinity-meter
+{
+    position: absolute;
+
+    top: 50%;
+    height: 75%;
+
+    transform: translateY(-50%);
+}
+
+.infinity-meter-right
+{
+    right: 0;
+}
+
+.infinity-meter-left
+{
+    left: 0;
+}

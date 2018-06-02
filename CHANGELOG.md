@@ -1,6 +1,13 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
 
+# Version 1.14.4 (Mobile Adaptation & Google Ads)
+## Changed
+- `.css`
+    - added some adaptation for mobile
+- `googleAds.php`   `footers.php`
+    - reverted Google Ads to lightshadowman@gmail.com
+
 # Version 1.14.3 (Minor Fixes, Google Ads)
 ## Fixed
 - `googleAds.php`: the numbers are correct now

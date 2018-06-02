@@ -37,27 +37,30 @@
 */
 
 /*styles*/
-@import url("se-buttons.css");
-@import url("se-cards.css");
-@import url("se-flex.css");
-@import url("se-footer.css");
-@import url("se-game.css");
 @import url("se-header.css");
+@import url("se-footer.css");
 @import url("se-loaders.css");
+@import url("se-cards.css");
+@import url("se-buttons.css");
+@import url("se-flex.css");
+@import url("se-game.css");
 @import url("se-popups.css");
 
 /*pages*/
+@import url("pages/se-index.css");
 @import url("pages/se-characters.css");
+@import url("pages/se-profile.css");
 @import url("pages/se-dorm.css");
 @import url("pages/se-faq.css");
 @import url("pages/se-features.css");
 @import url("pages/se-illustrations-achievements.css");
-@import url("pages/se-index.css");
-@import url("pages/se-profile.css");
 @import url("pages/se-relationships.css");
 @import url("pages/se-staff.css");
-/* @import url("pages/se-gameboot.css"); */
-/* @import url("pages/se-.css"); */
+
+@-ms-viewport
+{
+	width: device-width;
+}
 
 *
 {
@@ -70,8 +73,8 @@
 
 .googleAds
 {
+	z-index: 100;
 	position: fixed;
-	/*top: 4%;/* 2% is exactly after the purple bar*/
 	top: 50%;
 	right: 0px;
 
@@ -80,30 +83,23 @@
 
 	transform: translateY(-50%);
 	display: block;
-	width: 90px;
-	height: 728px;
-	/* width: 7%;
-	height: 94%; */
+	width: 7%;
+	height: 94%;
 	border-radius: 10px;
 }
-
-/* *:hover
-{
-	cursor: -webkit-grab;
-	background-color: blue;
-}  */
 
 /**********OBJECTS**********/
 	body
 	{
 		background-image: url("../images/se-background.jpg");
 		background-repeat: repeat;
+		width: 100%;
+		height: 100%;
 	}
 
 	img
 	{
 		user-select: none;
-		-webkit-user-select: none;
 	}
 
 	input
@@ -201,29 +197,9 @@
 
 /***************STRUCTURE***************/
 
-	.energy
-	{
-		position: fixed;
-		right: 0;
-	}
-
-
 	.main_content
 	{
 		width: 81%;
-		min-width: 1000px;
-	}
-
-	.center-screen
-	{
-		position: absolute;
-
-		top: 50%;
-		left: 50%;
-
-		transform: translate3d(-50%, -60%, 0);/*-60% because of the header that takes space*/
-
-		width: 35%;
 	}
 
 	.fullscreen
@@ -245,18 +221,6 @@
 		transform: translate3d(-50%, -50%, 0);/*-60% because of the header that takes space*/
 	}
 
-	.fullscreen-immovible/*if we want to do a popup to promote something*/
-	{
-		position: fixed;
-		left: 0px;
-		top: 50%;
-		width: 100%;
-		height: auto;
-		z-index: 10;
-
-		transform: translateY(-50%);
-	}
-
 	.add_padding
 	{
 		padding: 20px;
@@ -270,39 +234,37 @@
 		top: 50%; 
 		
 		transform: translate3d(-50%, -50%, 0);
-		}
+	}
 
 	.center/*Used for buttons*/
 	{
 		text-align: center;
 	}
 
-	.center_div/*UNUSED ? */
+	
+	.center-screen/*used for forms like login*/
 	{
-		margin: 0 auto;
+		position: absolute;
 
-		/*
-		Center Vertically
-			http://stackoverflow.com/questions/396145/how-to-vertically-center-a-div-for-all-browsers
-			https://css-tricks.com/centering-css-complete-guide/
-		*/
+		top: 50%;
+		left: 50%;
 
-		/*
-		Center Horizontally
-			WHAT THE FUCKING FUCK THERE'S A SHORTCUT TO CENTER SOMETHING WHAT THE SHIT
-			http://stackoverflow.com/questions/114543/how-to-horizontally-center-a-div-in-another-div
-		*/
+		transform: translate3d(-50%, -60%, 0);/*-60% because of the header that takes space*/
 
-		/* Firefox */
-		display:-moz-box;
-		-moz-box-pack:center;
-		-moz-box-align:center;
-
-		/* Safari and Chrome */
-		display:-webkit-box;
-		-webkit-box-pack:center;
-		-webkit-box-align:center;
+		width: 35%;
 	}
+
+	/*
+	Center Vertically
+		http://stackoverflow.com/questions/396145/how-to-vertically-center-a-div-for-all-browsers
+		https://css-tricks.com/centering-css-complete-guide/
+	*/
+
+	/*
+	Center Horizontally
+		WHAT THE FUCKING FUCK THERE'S A SHORTCUT TO CENTER SOMETHING WHAT THE SHIT
+		http://stackoverflow.com/questions/114543/how-to-horizontally-center-a-div-in-another-div
+	*/
 
 /***************SHADOW TESTS***************/
 
@@ -350,3 +312,97 @@
 	{
 		display: none;
 	}
+
+
+.login-forms
+{
+	position: absolute;
+	width: 500px;
+
+	top: 50%; 
+	left: 50%;
+	
+	transform: translate3d(-50%, 30%, 0);
+}
+
+@media only screen and (max-width: 1200px)
+{
+	.googleAds
+	{
+		position: fixed;
+		margin: 0px;
+		top: 100%;
+		right: 0%;
+
+		transform: translateY(-100%);
+		
+		width: 100%;
+		height: 7%;
+	}
+
+	.card
+	{
+		border-radius: 0px;
+	}
+	
+	.main_content
+	{
+		width: 100%;
+		min-width: 500px;
+	}
+	
+	#nav_menu_container
+	{
+		width: 100%;
+		min-width: 500px;
+	}
+	
+	footer
+	{
+		width: 100%;
+		min-width: 500px;
+	}
+
+	.desktop-flex-panel
+	{
+		flex: 0.75;
+	}
+}
+
+@media only screen and (max-width: 1000px)
+{
+	.desktop-flex-panel
+	{
+		flex: 0.5;
+	}
+}
+
+@media only screen and (max-width: 800px)
+{
+	.desktop-flex-container
+	{
+		display: block;
+	}
+
+	.desktop-flex-panel
+	{
+		flex: 0;
+		padding: 10px;
+		margin: 20px;
+	}
+
+	h4
+	{
+		font-size: 1.5em;
+	}
+
+	.line{max-height: 200px; font-size: 0.8em;}
+
+	.line-big{max-height: 200px}
+
+	.line-small{max-height: 200px}
+
+	.menu_item{margin: 0px;}
+
+	#user_info{display: none}
+}

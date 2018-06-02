@@ -500,7 +500,7 @@ var outfitsPointer =
         birthday: "",//const
         likes: "",//const
         dislikes: "",//const
-        description: "You have 0% Infinity with all your friends. <br> Well... <br>You're at zero, so I guess <em><b>you have no friends</b></em>. <br><br> In any case, come back when you make some.<br> Don't neglect your homework for it, though. <br><br> Sincerely, <br><b>Tadashi Nakano <br>Student Body President</b>",//const
+        description: "You have 0% Infinity with all your friends. <br> Well... You're at zero, so I guess <em><b>you have no friends</b></em>. <br><br> In any case, come back when you make some.<br> Don't neglect your homework for it, though. <br><br> Sincerely, <br><b>Tadashi Nakano <br>Student Body President</b>",//const
     };
 
     /* Template *

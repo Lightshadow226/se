@@ -22,34 +22,18 @@ function initialize()
     var left_wing = document.createElement('img');
         left_wing.src = "images/general/characters_page/chevrons/pink/leftchevron.png";
         left_wing.className = "chevron-img";
-        left_wing.onmouseenter = function f()
-        {
-            left_wing.src = "images/general/characters_page/chevrons/purple/leftchevron.png";
-        }
-        left_wing.onmouseleave = function f()
-        {
-            left_wing.src = "images/general/characters_page/chevrons/pink/leftchevron.png";
-        }
-        left_wing.onclick = function f()
-        {
-            randomImg();
-        }
+        
+        left_wing.onmouseenter = function f(){left_wing.src = "images/general/characters_page/chevrons/purple/leftchevron.png"}
+        left_wing.onmouseleave = function f(){left_wing.src = "images/general/characters_page/chevrons/pink/leftchevron.png"}
+        left_wing.onclick = function f(){randomImg()}
 
     var right_wing = document.createElement('img');
         right_wing.src = "images/general/characters_page/chevrons/pink/rightchevron.png";
         right_wing.className = "chevron-img";
-        right_wing.onmouseenter = function f()
-        {
-            right_wing.src = "images/general/characters_page/chevrons/purple/rightchevron.png";
-        }
-        right_wing.onmouseleave = function f()
-        {
-            right_wing.src = "images/general/characters_page/chevrons/pink/rightchevron.png";
-        }
-        right_wing.onclick = function f()
-        {
-            randomImg();
-        }
+
+        right_wing.onmouseenter = function f(){right_wing.src = "images/general/characters_page/chevrons/purple/rightchevron.png"}
+        right_wing.onmouseleave = function f(){right_wing.src = "images/general/characters_page/chevrons/pink/rightchevron.png"}
+        right_wing.onclick = function f(){randomImg()}
 
     document.getElementById('left_wing').appendChild(left_wing);
     document.getElementById('right_wing').appendChild(right_wing);
@@ -71,6 +55,7 @@ function randomImg()
 
     var img = document.createElement('img');
         img.className = "true-center";
+        img.style.height = "100%";
         img.src = 'profile/randomizer.php';
         img.style.height = "100%";//initially 346
 

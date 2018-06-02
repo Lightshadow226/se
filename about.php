@@ -27,14 +27,14 @@
             <p class="center add_padding">Sweet Elite is an online otome game following the adventures of the students of Arlington Academy. Your character, the <b>Scholar</b>, is a scholarship student and makes a series of major choices, affecting both their destiny and the destinies of those around them.</p>
             <p class="center add_padding"><b>Flirt with students, build your romance and uncover Arlington Academy's dark secrets. Create your own story!<b></p>
             <div class = "flex-container">
-                <div class = "flex-panel3">
+                <div class = "flex-panel">
                 </div>
 
-                <div class = "flex-panel3">
+                <div class = "flex-panel">
                     <img class = "img-badge" src = "images/separator.jpg"></img>
                 </div>
 
-                <div class = "flex-panel3">
+                <div class = "flex-panel">
                 </div>
 
             </div>
@@ -99,14 +99,14 @@
 
                 <?php if(!isset($_SESSION['username'])): ?><!-- logged off -->
                 <div class = "flex-container">
-                    <div class = "flex-panel3">
+                    <div class = "flex-panel">
                     </div>
 
-                    <div class = "flex-panel3">
+                    <div class = "flex-panel">
                         <img class = "img-badge" src = "images/separator.jpg"></img>
                     </div>
 
-                    <div class = "flex-panel3">
+                    <div class = "flex-panel">
                     </div>
 
                 </div>
@@ -118,14 +118,14 @@
                 <?php endif ?>
 
                 <div class = "flex-container">
-                    <div class = "flex-panel3">
+                    <div class = "flex-panel">
                     </div>
 
-                    <div class = "flex-panel3">
+                    <div class = "flex-panel">
                         <img class = "img-badge" src = "images/separator.jpg"></img>
                     </div>
 
-                    <div class = "flex-panel3">
+                    <div class = "flex-panel">
                     </div>
 
                 </div>

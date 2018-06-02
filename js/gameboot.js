@@ -78,8 +78,8 @@ function create_line(index, type)
         objectiveContainer.id = "objectiveContainer";//used to display the progress bar
         play_episode_button.id = user.lastChapterPlayed;
         line.className += " line-big";
-        char_img.style.maxHeight = "350px";
         chara_desc.innerHTML += "</br> <b>Progress: </b>";
+        char_img.className += " line-big";
         
         play_episode_button.innerHTML = "Continue Playing";
         play_episode_button.href = get_button_href(index);// play_episode_button.id);

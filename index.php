@@ -31,8 +31,8 @@
 			<div id="banner">
 				<img id="img_banner" src="images/banners/banner_logged_off.png">
 				<div id = "button_container">
-					<a href = "signup.php" id = "signup_button" class = "button">Sign Up</a>
-					<a href = "login.php" id = "login_button" class = "button">Login</a>
+					<a href="signup.php" id="signup_button" class="button">Sign Up</a>
+					<a href="login.php" id="login_button" class="button">Login</a>
 				</div>
 			</div>
 
@@ -159,12 +159,12 @@
 				
 				<div class="flex-container" style="height:411.375px; padding: 0px;"><!-- style="height=780px;" -->
 
-					<div class = "flex-panel3 flex-container">
-						<div class="flex-panel"></div>
-						<div id="left_wing" class="center_div chevron-container"></div>
-						<div id="random_character_panel" class = "flex-panel"></div>
-						<div id="right_wing" class="center_div chevron-container"></div>
-						<div class="flex-panel"></div>
+					<div class = "flex-panel flex-container">
+						<div class="desktop-flex-panel"></div>
+						<div id="left_wing" class="chevron-container" style="position: relative;"></div>
+						<div id="random_character_panel" class="flex-panel"></div>
+						<div id="right_wing" class="chevron-container" style="position: relative; width: 100px;"></div>
+						<div class="desktop-flex-panel"></div>
 					
 					</div>
 					
@@ -182,20 +182,20 @@
 					<p><b>Sign up now and get access to 3 chapters UNLIMITED to celebrate the demo's release!</b></p>
 					<br>
 
-					<div class = "flex-container">
-						<div class = "flex-panel3">
+					<div class = "desktop-flex-container">
+						<div class = "desktop-flex-panel">
 							<img class = "img-badge" src = "_new_images_folder/game/chapter_images/chapter0.jpg"></img>
 							<h5>INTRODUCTION</h5>
 							<p><b>Teaser:</b> You just arrived at Arlington Academy, but everything is so new and big! You're going to need help from a few senior students who will lay down the basics on you.</p>
 						</div>
 
-						<div class = "flex-panel3">
+						<div class = "desktop-flex-panel">
 							<img class = "img-badge" src = "_new_images_folder/game/chapter_images/chapter1.jpg"></img>
 							<h5>CHAPTER 1</h5>
 							<p><b>Teaser:</b> Classes start tomorrow, so today is the time to try to make some new friends...but why is everybody so stressed today? What could be on their minds?</p>
 						</div>
 
-						<div class = "flex-panel3">
+						<div class = "desktop-flex-panel">
 							<img class = "img-badge" src = "_new_images_folder/game/chapter_images/chapter2.jpg"></img>
 							<h5>CHAPTER 2</h5>
 							<p><b>Teaser:</b> It seems the whole school is to be revolving around a certain teenage celebrity and an exclusive homecoming party. But things aren't exactly as great as they look on the surface...</p>
@@ -221,9 +221,9 @@
 				<h4 class="center" style="margin-bottom: 10px;">Welcome Back, <?php if(isset($_SESSION['username'])) echo $_SESSION['username']; ?>!</h4> <!-- <a href="logout.php">Logout</a> </p> -->
 
 				<!--FIRST SECTION: Profile overview & Current Chapter-->
-				<div class="flex-container">
+				<div class="desktop-flex-container">
 					<!--LEFT container: PROFILE INFO-->
-					<div class="flex-panel logged-in-three-containers">
+					<div class="desktop-flex-panel logged-in-three-containers">
 						<!--Profile image-->	
 						<div id="profile-overview-top" class="flex-panel">
 							<img id="index-profile-img" style="width:100%; display: block;" src="profile/character_small_portrait.php"/>
@@ -240,7 +240,7 @@
 					</div>
 
 					<!--MIDDLE container: MOST AFFINITY-->
-					<div class="flex-panel flex-container-vertical logged-in-three-containers">
+					<div class="desktop-flex-panel flex-container-vertical logged-in-three-containers">
 						<div class="flex-panel" style="padding: 10px; border: 2px solid #f3def2; border-top-left-radius: 10px; border-top-right-radius: 10px;">
 							<!--title-->
 							<div class="flex-container">
@@ -273,7 +273,7 @@
 					</div>
 				
 					<!--RIGHT container: CURRENT CHAPTER-->
-					<div class="flex-panel flex-container-vertical logged-in-three-containers">
+					<div class="desktop-flex-panel flex-container-vertical logged-in-three-containers">
 						<div class="flex-panel" style="padding: 10px; border: 2px solid #fdeac7; border-top-left-radius: 10px; border-top-right-radius: 10px;">
 							<h4 id="currentChapter" style="margin: 10px; text-align: center; font-weight: 300; font-size: 1.5em;">Current Chapter:</h4>
 

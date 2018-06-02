@@ -20,6 +20,7 @@
 
 .line-big
 {
+	max-height: 350px;
 	margin-top: 0px;
 	margin-bottom: 20px;
 }
@@ -79,7 +80,6 @@
 
 .character_img
 {
-	/* max-height: 350px; */
 	width: auto;
 	border-top-left-radius: 10px;
 	border-bottom-left-radius: 10px;

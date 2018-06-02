@@ -108,13 +108,9 @@ function create_line(index)
     var line = document.createElement('div');
         line.className = "line line-big";
         
-    var line_left_content = document.createElement('div');
-        line_left_content.className = "line_left_content";
-
         var char_img = document.createElement('img');
             char_img.src = character_portraits_path + characters[index] + ".png";
             char_img.className = "character_img";
-            char_img.style.maxHeight = "350px";
 
     var line_middle_content = document.createElement('div');
         line_middle_content.className = "line_middle_content";
@@ -140,8 +136,7 @@ function create_line(index)
             percentage_number.className = "percentage_number";
 
     lines_container.appendChild(line);
-        line.appendChild(line_left_content);
-            line_left_content.appendChild(char_img);
+        line.appendChild(char_img);
         line.appendChild(line_middle_content);
             line_middle_content.appendChild(chara_desc);
             line_middle_content.appendChild(school_files_button);

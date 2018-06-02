@@ -83,7 +83,7 @@
 								</div>
 
 								<div style="margin-top: 10px;">
-									<img class="center_div" style="width: 100%; border-radius: 10px;" src="profile/profile_idcard.php">
+									<img  style="width: 100%; border-radius: 10px;" src="profile/profile_idcard.php">
 								</div>
 							</div>		
 						</div>
