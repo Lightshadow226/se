@@ -747,6 +747,34 @@ function showPopup(img_path)
     //https://www.w3schools.com/howto/howto_css_modal_images.asp
 }
 
+function makePopup(message)
+{
+    var parent = document.getElementById('popupHandler');
+        parent.style.display = "block";
+
+    var popupContainer = document.createElement('div');
+        popupContainer.id = "popupContainer";
+
+        var popup = document.createElement('div');
+            popup.id = "popup";
+            popup.innerHTML = message;
+
+        var okButton = document.createElement('div');
+            okButton.id = "okButton";
+            okButton.innerHTML = "OK";
+            okButton.className = "button pink_button";
+            okButton.onclick = function(){deletePopup()};
+
+    parent.appendChild(popupContainer)
+        popupContainer.appendChild(popup);
+        popupContainer.appendChild(okButton);
+}
+
+function deletePopup()
+{
+    document.getElementById('popupHandler').style.display= "none";
+}
+
 //this function should be move to chapter0.php or.js
 function toggle_pronouns(clicked, one, two)
 {
@@ -866,8 +894,7 @@ function verifyAchievement()
 
     switch(user.lastChapterPlayed)
     {
-        case 0://achievement 0
-            if(visiting(566, 2)) toSave = "a0";
+        case 0://chapter 0
         
         case 1:
             if(visiting(258, 1)) toSave = "a1";
@@ -875,9 +902,7 @@ function verifyAchievement()
         
         case 2:
             if(visiting(350, 2)) toSave = "a2";
-            break;
-
-        case 3:
+            if(visiting(566, 2)) toSave = "a0";
             if(visiting(783, 2)) toSave = "a3";
             break;
 
@@ -888,6 +913,9 @@ function verifyAchievement()
     if(toSave != "none")
     {
         console.log("New achievement: (" + toSave + ")");
+
+        makePopup("You have unlocked a new achievement! <br> <br> Go to your dorm and click on the book to check it out.");
+
         saveIllustrationAchievement(toSave, "achievements");
     };
 }
