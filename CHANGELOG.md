@@ -1,6 +1,13 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
 
+# Version 1.14.5 (Bug Fixes in Excel & Start of Dept Quiz)
+## Changed
+- `chapter2.js/xlsx`  `chapter1.xlsx`
+    - Bug fixes and grammar
+## Added
+    - deptquiz.php for implementation of department quiz
+
 # Version 1.14.4 (Mobile Adaptation & Google Ads)
 ## Changed
 - `.css`

@@ -866,8 +866,7 @@ function verifyAchievement()
 
     switch(user.lastChapterPlayed)
     {
-        case 0://achievement 0
-            if(visiting(566, 2)) toSave = "a0";
+        case 0://chapter 0
         
         case 1:
             if(visiting(258, 1)) toSave = "a1";
@@ -875,9 +874,7 @@ function verifyAchievement()
         
         case 2:
             if(visiting(350, 2)) toSave = "a2";
-            break;
-
-        case 3:
+            if(visiting(566, 2)) toSave = "a0";
             if(visiting(783, 2)) toSave = "a3";
             break;
 
