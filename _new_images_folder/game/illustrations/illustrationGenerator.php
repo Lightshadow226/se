@@ -151,7 +151,7 @@ function generateIllustration($currentChapter, $currentIllustration)
     
     try
     {
-        $db = new PDO('mysql:host=localhost; dbname=USERS', 'root', 'root');
+        $db = new PDO('mysql:host=localhost; dbname=USERS', 'S3R3NA', 'Tadashi2016');
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         //echo "Connected to the database!";
     }

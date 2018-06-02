@@ -1080,7 +1080,7 @@ function browseLink(link, element)//link is the link of the story (story[special
             // alert(choice);
             user.department = choice;
             user.storyLocation++;//we continue the story once we are done
-            saveVariables('department', 'storylocation');
+            saveVariables(x.department, x.storyLocation);
             // pushVariablesToDB();
             HideForms();
         }

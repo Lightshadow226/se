@@ -1,13 +1,14 @@
 <!-- SE Google Ads-->
-<div class="main_content">
-    <ins class="adsbygoogle card"
-        style="background-color: white;"
-        data-ad-client="ca-pub-5215030892730474"
-        data-adtest="on"
-        data-ad-slot="2669137948"
-        data-ad-format="auto">
-    </ins>
-</div>
+<ins class="adsbygoogle card googleAds"
+    style="background-color: white;"
+    data-ad-client="ca-pub-6851687790756963"
+    data-adtest="on"
+    data-ad-slot="3409632236"
+    data-ad-format="auto">
+</ins>
+
+<!-- Publisher ID: ca-pub-6851687790756963 -->
+<!-- Customer ID: 3409632236 -->
 
 <footer>
 	<p>Dulcet Games Inc. © 2016 - 2018. All rights reserved.</p><br>

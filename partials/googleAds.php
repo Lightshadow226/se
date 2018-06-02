@@ -6,7 +6,7 @@
   {
     (adsbygoogle = window.adsbygoogle || []).push(
       {
-          google_ad_client: "ca-pub-6851687790756963",
+          google_ad_client: "ca-pub-6851687790756963",//Google Ads
           enable_page_level_ads: true
       }
     );
@@ -14,11 +14,11 @@
 </script>
 
 <!-- Google Analytics Script (Global site tag (gtag.js)) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115409161-1"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-88945644-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'UA-115409161-1');
+  gtag('config', 'UA-88945644-1');//Analytics
 </script>

@@ -1,6 +1,15 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
 
+# Version 1.14.3 (Minor Fixes, Google Ads)
+## Fixed
+- `googleAds.php`: the numbers are correct now
+- `all other files`
+    - changed user from root to Serena
+    - made small fixes to chapter 2
+    - fixed the department form (was not using the right parameters)
+
+
 # Version 1.14.2 (Major Bug Fix - Saving & Loading)
 ## Fixed
 - `gameengine.js` `variables.js`

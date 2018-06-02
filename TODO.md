@@ -1,14 +1,16 @@
 ﻿# OPTIMIZATION (TODO)
 `Git on cPanel:` https://documentation.cpanel.net/display/CKB/How+to+Host+Git+Repositories+on+a+cPanel+Account
-`Git on cPanel:` https://documentation.cpanel.net/display/CKB/How+to+Host+Git+Repositories+on+a+cPanel+Account
-`Git on cPanel:` https://documentation.cpanel.net/display/CKB/How+to+Host+Git+Repositories+on+a+cPanel+Account
-`Git on cPanel:` https://documentation.cpanel.net/display/CKB/How+to+Host+Git+Repositories+on+a+cPanel+Account
-`Git on cPanel:` https://documentation.cpanel.net/display/CKB/How+to+Host+Git+Repositories+on+a+cPanel+Account
-`Git on cPanel:` https://documentation.cpanel.net/display/CKB/How+to+Host+Git+Repositories+on+a+cPanel+Account
-`Git on cPanel:` https://documentation.cpanel.net/display/CKB/How+to+Host+Git+Repositories+on+a+cPanel+Account
-`Git on cPanel:` https://documentation.cpanel.net/display/CKB/How+to+Host+Git+Repositories+on+a+cPanel+Account
-`Git on cPanel:` https://documentation.cpanel.net/display/CKB/How+to+Host+Git+Repositories+on+a+cPanel+Account
-`Git on cPanel:` https://documentation.cpanel.net/display/CKB/How+to+Host+Git+Repositories+on+a+cPanel+Account
+
+# GIT ON CPANEL
+ssh sweetelite@sweetelitegame.com
+cd public_html/beta/jkl/298462/209832/v3
+git clone https://lightshadowman@gitlab.com/lightshadowman/se.git
+git remote add origin https://lightshadowman@gitlab.com/lightshadowman/se.git
+git remote -v
+git pull origin master --tags
+
+
+
 
 https://www.google.ca/search?q=ajax+how+to+detect+slow+network&oq=ajax+how+to+detect+slow+network&aqs=chrome..69i57j69i60l4j69i59.7065j0j7&sourceid=chrome&ie=UTF-8
 
