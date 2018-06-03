@@ -150,7 +150,6 @@ function refreshTextContainer()
     {
         textContainer.style.visibility = "visible";
     }
-
 }
 
 //REFRESHES the entire interface

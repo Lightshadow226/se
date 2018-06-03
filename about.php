@@ -113,8 +113,14 @@
 
                 <h6>Need Convincing?</h6>
                 <p class="center"><b>All you need to do is try our demo!<b></p><br>
-                <p class="center"><a href = "signup.php" id = "signup_button" class = "button">Sign Up</a></p>
-                <p class="center"><a href = "login.php" id = "login_button" class = "button">Login</a></p>
+                <div style = "position: relative;">
+					<div id = "button_container_v2">
+						<div class = "flex-panel"></div>
+						<a href = "signup.php" id = "signup_button_v2" class = "signup_button_v2">Sign Up </a>
+						<a href = "login.php" id = "login_button_v2" class = "login_button_v2">Login</a>
+						<div class = "flex-panel"></div>
+					</div>
+				</div>
                 <?php endif ?>
 
                 <div class = "flex-container">

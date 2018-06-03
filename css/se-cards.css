@@ -41,6 +41,8 @@
 
 .card-header
 {
+	box-sizing: border-box;
+	width: 100%;
 	background-color:#ffe2e4;
 	text-align: center;
 	padding: 5px;

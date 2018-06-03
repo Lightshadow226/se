@@ -133,7 +133,7 @@
 					<p><i>Not Sure Which Department You Belong In? Take Our Quiz!</i></p>
 					</br>
 
-					<a href = "" class = "button pink_button">Take the Quiz</a>
+					<a href = "personalityquiz.php" class = "button pink_button">Take the Quiz</a>
 
 				</div>
 			</div>

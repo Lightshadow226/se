@@ -1357,4 +1357,4 @@ function refreshTestContainer()// affiche des données par rapport à la prev/cu
 }
 // -----END DEBUGGING TOOLS-----
 
-updateGameBar();
+try{updateGameBar()}catch(e){}

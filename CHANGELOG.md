@@ -1,6 +1,22 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
 
+# Version 1.14.13 (Personality Quiz, Signup Buttons)
+## Added
+- `personalityquiz.php`
+    - added personality quiz
+    - link can be found on the offline index.php
+    - included a few design changes
+
+## Fixed
+- `about.php`
+    - fixed the signup and login buttons
+    - they were *literally* all over the place (haha)
+-  `se-cards.css`
+    - headers now have a box-sizing
+    - + 100% width of parent
+
+
 # Version 1.14.12 (Beta Grammar/Spelling Fixes)
 ## Changed
 - `chapter0.xlsx/js`  `chapter1.xlsx/js`  `chapter2.xlsx/js`
