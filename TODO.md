@@ -4,6 +4,7 @@
 # GIT ON CPANEL
 ssh sweetelite@sweetelitegame.com
 cd public_html/beta/jkl/298462/209832/v3
+cd public_html/debug/tempFinalBeta/se
 git clone https://lightshadowman@gitlab.com/lightshadowman/se.git
 git remote add origin https://lightshadowman@gitlab.com/lightshadowman/se.git
 git remote -v

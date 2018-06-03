@@ -325,6 +325,7 @@
 		transform: translate3d(-50%, -60%, 0);
 	}
 
+/*
 @media only screen and (max-width: 1200px)
 {
 	.googleAds
@@ -378,6 +379,7 @@
 	}
 }
 
+
 @media only screen and (max-width: 800px)
 {
 	.desktop-flex-container
@@ -407,3 +409,4 @@
 
 	#user_info{display: none}
 }
+*/
