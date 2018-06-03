@@ -180,17 +180,10 @@ async function get_button_consequence(index, replayType = 1)//replayType is opti
         // a) reset progress (replay story) -> ex.: if we replay chapter 13, all subsequent chapters must be replayed (memory is wiped out as well)
         if(replayType == 1)
         {
-            // STEP 1: create a script to work with
-            var head = document.getElementsByTagName('head')[0];
+            var totalChaptersToWipe = availableChapters;
+            var chaptersWiped = index;
 
-            for(var i = index; i < availableChapters; i++)//we delete every chapter from the one we selected until the current one (wipe selected chapter and subsequent chapters)
-            {
-                //STEP 2: change the script and append it to the HTML head
-                var scriptURI = 'js/chapters/chapter' + i + '.js';
-                
-                // STEP 3: wipe the variables from the chapter
-                var scriptLoaded = loadScriptAsync(scriptURI, i);
-            }
+            loadScript(index, chaptersWiped, totalChaptersToWipe, index);
         }
         // b) achievement reset (replay for achievements)
         else if(replayType == 2)
@@ -208,7 +201,6 @@ async function get_button_consequence(index, replayType = 1)//replayType is opti
             // this should never happen
         }
 
-        window.open('chapter' + index + '.php', '_self')
     }
     // 3. if we click on a next chapter, we have to play the previous ones before
     else
@@ -224,6 +216,36 @@ async function get_button_consequence(index, replayType = 1)//replayType is opti
     //TODO: once we finish a chapter, the current chapter is the next one (if there's no next one, the current one is the last one and the progress is at 100%... FUCK, this is annoying)
 }
 
+function loadScript(i, chaptersWiped, totalChaptersToWipe, link)
+{
+    // for(var i = index; i < availableChapters; i++)//we delete every chapter from the one we selected until the current one (wipe selected chapter and subsequent chapters)
+    // {
+        //STEP 2: change the script and append it to the HTML head
+        var scriptURI = 'js/chapters/chapter' + i + '.js';
+        
+        // STEP 3: wipe the variables from the chapter
+        var scriptLoaded = loadScriptAsync(scriptURI, i);
+            scriptLoaded.then
+            (
+                function ()
+                {
+                    chaptersWiped++;
+                    console.log("Wiped Ch. " + i + " (" + chaptersWiped + "/" + totalChaptersToWipe + ")");
+
+                    if(chaptersWiped == totalChaptersToWipe)
+                    {
+                        console.log("All chapters wiped. Opening " + 'chapter' + link + '.php');
+                        window.open('chapter' + link + '.php', '_self');
+                    }
+                    else
+                    {
+                        loadScript(i + 1, chaptersWiped, totalChaptersToWipe, link);
+                    }
+                }
+            );
+    // }
+}
+
 function loadScriptAsync(uri, id)
 {
     return new Promise((resolve, reject) =>
@@ -231,7 +253,7 @@ function loadScriptAsync(uri, id)
         var script = document.createElement('script');
             script.id = "script" + id;
             script.src = uri;
-            script.async = true;
+            script.async = false;
             script.onload = () =>
             {
                 user.lastChapterPlayed = id;

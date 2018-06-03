@@ -8,11 +8,11 @@
 
 <head>
 	<script src = "js/jquery_3.2.1.js"></script>
-	<meta name="viewport" content="width=device-width"><!-- used for adapting to mobile -->
+	<!-- <meta name="viewport" content="width=device-width"> //used for adapting to mobile
 	
 	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
 	<meta http-equiv="Pragma" content="no-cache" />
-	<meta http-equiv="Expires" content="0" />
+	<meta http-equiv="Expires" content="0" /> -->
 </head>
 
 <header>
