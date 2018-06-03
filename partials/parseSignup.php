@@ -94,6 +94,14 @@ if(isset($_POST['signupBtn'],$_POST['token']))
 					$statement8->execute();
 					$statement9->execute();
 				
+					/*
+					$thisFile = getcwd();
+					$rootFolder = rtrim($thisFile, "/partials");
+					$fullUrl = $rootFolder . "activate.php";
+					*/
+
+					$fullUrl = rtrim(getcwd(), "/partials") . "activate.php";
+
 					/*THE CLASS "logo_div"  DOESN'T EXIST*/
 					
 					//Preparing the body of the email
@@ -106,20 +114,20 @@ if(isset($_POST['signupBtn'],$_POST['token']))
 							<img src="http://sweetelitegame.com/images/se-logo.png">
 						</div>
 						
-						
 						<div class="main_content">
 						
 						<h2 style="text-align:center; color:#682666;">Welcome to Arlington Academy!</h2>
 						
-						<p>Dear '.$username.',<br> 
-						
-						<br>Congratulations! On behalf of Arlington Academy, I am pleased to announce your acceptance for the class of 20XX!</p>
+						<p>Dear '.$username.',
+						<br>
+						<br>
+						Congratulations! On behalf of Arlington Academy, I am pleased to announce your acceptance for the class of 20XX!</p>
 						
 						<p>You can be proud to be joining a select group of people, ready to change the world by offering up their talents to the pursuit of excellence.</p>
 						
 						<p>What is your next step? <b>Confirm your student account by clicking on the link below:</b></p>
 						
-						<p style="text-align:center;"><a href="http://sweetelitegame.com/testfiles/octobernine/files/activate.php?id='.$encode_id.'"> Confirm your Account!</a></p>
+						<p style="text-align:center;"><a href="' . $fullUrl . '?id=' . $encode_id. '"> Confirm your Account!</a></p>
 						
 						<p>Once you have confirmed your account, you will be ready to start your adventure! I have assigned a senior student to help you on your first day at Arlington. They will teach you everything you need to know to start playing.</p>
 						
@@ -143,7 +151,6 @@ if(isset($_POST['signupBtn'],$_POST['token']))
 					$mail->addAddress($email, $username);
 					$mail->Subject = "Welcome to Sweet Elite";
 					$mail->Body = $mail_body;
-
 
 					//Error Handling for PHPMailer
 					if(!$mail->Send())

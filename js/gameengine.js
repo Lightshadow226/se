@@ -623,67 +623,68 @@ function refreshInterface()
         }
         else if(story[special_option][user.storyLocation] == -31)// -31 === Form to choose gender, skin color, hairstyle, etc.
         {
-            var form_container = document.createElement('div');
-                form_container.id = "form_container";
+            HideForms();
+            unHideForms();
+
+            var form_container = document.getElementById('formContainer');
                 form_container.className = "form_container form_container-small";
 
-            var formHeader = document.createElement('h6');
-                formHeader.innerHTML = "Name Your Character";
+                var formHeader = document.createElement('h6');
+                    formHeader.innerHTML = "Name Your Character";
 
-            var formSubHeader = document.createElement('h5');
-                formSubHeader.innerHTML = "<br>Give a name to your Character! CHOOSE WISELY, you will <em>not</em> be able to change it later.<br><br>";
+                var formSubHeader = document.createElement('h5');
+                    formSubHeader.innerHTML = "<br>Give a name to your Character! CHOOSE WISELY, you will <em>not</em> be able to change it later.<br><br>";
 
-            var nameContainer = document.createElement('div');
-                nameContainer.className = "flex-container";
+                var nameContainer = document.createElement('div');
+                    nameContainer.style.width = "100%";
+                    nameContainer.style.textAlign = "center";
 
-            var name = document.createElement('input');
-                name.id = "new_name";
-                name.className = "flex-panel2 login-signup-textfields";
-                name.type = "text";
-                name.placeholder = "Scholar Name";
-                // name.name = "new_name";// is this even necessary?
-
-                name.onkeyup = function(e)
-                {
-                    console.log("Temp Username: " + name.value);
-                };
+                    var name = document.createElement('input');
+                        name.id = "new_name";
+                        name.className = "flex-panel2 login-signup-textfields";
+                        name.style.width = "50%";
+                        name.style.textAlign = "center";
+                        name.type = "text";
+                        name.placeholder = "Scholar Name";
+                        name.onkeyup = function(e){console.log("Temp Username: \'" + this.value + "\'")};
 
             var formSubHeader2 = document.createElement('h5');
-                formSubHeader2.innerHTML = "<br>How will the other Characters refer to your scholar? <br> Pronouns can be changed later.";
+                formSubHeader2.innerHTML = "<br>How will the other Characters refer to your scholar? Pronouns can be changed later.";
             
-            var gender_container = document.createElement('div');
-                gender_container.className = "flex-panel";
+                var gender_container = document.createElement('div');
+                    gender_container.className = "flex-container";
 
-                var sheher = document.createElement('div');
-                    sheher.id = "0";
-                    sheher.className = "button pink_button";    
-                    sheher.style.margin = "10px";
-                    sheher.innerHTML = genders[0];
-                var hehim = document.createElement('div');
-                    hehim.id = "1";
-                    hehim.className = "button pink_button";
-                    hehim.style.margin = "10px";
-                    hehim.innerHTML = genders[1];
-                var theythem = document.createElement('div');
-                    theythem.id = "2";
-                    theythem.className = "button pink_button";
-                    theythem.style.margin = "10px";
-                    theythem.innerHTML = genders[2];
+                    var sheher = document.createElement('div');
+                        sheher.id = "0";
+                        sheher.className = "button pink_button";    
+                        sheher.style.margin = "10px";
+                        sheher.innerHTML = genders[0];
+                    var hehim = document.createElement('div');
+                        hehim.id = "1";
+                        hehim.className = "button pink_button";
+                        hehim.style.margin = "10px";
+                        hehim.innerHTML = genders[1];
+                    var theythem = document.createElement('div');
+                        theythem.id = "2";
+                        theythem.className = "button pink_button";
+                        theythem.style.margin = "10px";
+                        theythem.innerHTML = genders[2];
 
             hehim.onclick = function(e){choice = toggle_pronouns(this, sheher, theythem)};
             sheher.onclick = function(e){choice = toggle_pronouns(this, hehim, theythem)};
             theythem.onclick = function(e){choice = toggle_pronouns(this, hehim, sheher)};
 
-            game_frame.appendChild(form_container);
-                form_container.appendChild(formHeader);
-                form_container.appendChild(formSubHeader);
-                form_container.appendChild(nameContainer);
-                    nameContainer.appendChild(name);
-                form_container.appendChild(formSubHeader2);
-                form_container.appendChild(gender_container);
-                    gender_container.appendChild(sheher);
-                    gender_container.appendChild(hehim);
-                    gender_container.appendChild(theythem);
+            form_container.appendChild(formHeader);
+            form_container.appendChild(formSubHeader);
+            form_container.appendChild(nameContainer);
+                nameContainer.appendChild(name);
+            form_container.appendChild(formSubHeader2);
+            form_container.appendChild(gender_container);
+                gender_container.appendChild(sheher);
+                gender_container.appendChild(hehim);
+                gender_container.appendChild(theythem);
+
+            $("#new_name").focus();
         }
         else if(story[special_option][user.storyLocation] == -4)// -4 === Choice of romance or friendship
         {
@@ -1088,14 +1089,15 @@ function browseLink(link, element)//link is the link of the story (story[special
     else if(link == -31)//Acts like a submit button for the form
     {
         var value = document.getElementById('new_name').value;
+        console.log("Click! Name = \'" + value + "\'");
         
-        if(value == "")
+        if(value == "" || value == undefined || value == "undefined")
         {
-            console.log("Please choose a username!");
+            makePopup("Please choose a username!");
         }
         else if(choice == "null")
         {
-            console.log("Please choose a pronoun!");
+            makePopup("Please choose a pronoun!");
         }
         else
         {
@@ -1109,8 +1111,6 @@ function browseLink(link, element)//link is the link of the story (story[special
             user.gender = chosen_gender;
             user.scholarname = value;
             user.storyLocation++;//we continue the story once we are done
-            pushVariablesToDB();
-            HideForms();
         }
     }
     else if(link == -4)//friendship/romance buttons are enabled
@@ -1225,11 +1225,26 @@ function HideForms()
     
     for (var i = 0; i < forms.length; i++)
     {
-        forms[i].style.visibility = "hidden";
+        forms[i].style.display = "none";
+    }
+    
+    var formContainer = document.getElementById("formContainer");//in the DOM
+        formContainer.innerHTML = "";
+        formContainer.style.display= "none";
+}
+
+function unHideForms()
+{
+    var forms = document.getElementsByClassName('form_container');//created dynamically
+    
+    for (var i = 0; i < forms.length; i++)
+    {
+        forms[i].style.display = "block";
     }
 
     var formContainer = document.getElementById("formContainer");//in the DOM
         formContainer.innerHTML = "";
+        formContainer.style.display= "block";
 }
 
 function endOfChapter()

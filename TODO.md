@@ -9,6 +9,8 @@ git clone https://lightshadowman@gitlab.com/lightshadowman/se.git
 git remote add origin https://lightshadowman@gitlab.com/lightshadowman/se.git
 git remote -v
 git pull origin master --tags
+git pull origin dev --tags
+git pull origin release --tags
 
 
 
