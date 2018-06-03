@@ -121,7 +121,7 @@
 
                 <h2>How will I know when to choose a friendship or romance option?</h2>
                 <p>As you're playing, once a character gets to the point in the dialogue that requires a response from the you, these buttons will come up:</p><br>
-                <p><img src="_new_images_folder/romancefriendship"></p><br>
+                <p><img src="_new_images_folder/romancefriendship.jpg"></p><br>
                 <p>Before you continue you will have to choose the Friendship (Handshake) or Romantic (Heart). Which ever you choose will then give you three dialogue options to choose from; Positive, negative or neutral options that will effect your affinity with that character as such.</p><br>
                 
                 <h2>What happens if I have the same amount of infinity with more than one character?</h2>

@@ -18,24 +18,24 @@ function Chapter()
 {
     //story[0] === Story Text
     story[0] = [
-        "(The trip to Arlington was long, but I’m finally here!)",//0 
-        "(I’ve worked so hard to get here, but I’m ready to start fresh at this school.)",
+        "(The trip to Arlington was long, but I finally arrived!)",//0 
+        "(I'm ready to start fresh here at this school! After all, I worked so hard to get here.)",
         "(I watched the shuttle that carried me here from the airport drive away as I sat my suitcase down on the ground.)",
-        "(This is so exciting! Everybody here looks so...famous.)",
+        "(This is so exciting! Everybody here looks so... famous.)",
         "(...)",
         "(Shoot, I don’t know what to do! Where is my dorm? Where are my classes? Is there anything I should do before unpacking? I should ask someone.)",//5 
-        "(I desperately looked around to spot a friendly face, someone I could get help from, but as my eyes scanned the entrance of the school my heart started to sink.)",
-        "(No matter where I looked, nobody was smiling or laughing. The students there looked so firm and... unreachable.)",
+        "(I desperately looked around to spot a friendly face, someone I could get help from, but as my eyes scanned the entrance of the school my heart began to sink.)",
+        "(No matter where I looked, nobody was smiling or laughing. The students here looked so serious and... unreachable.)",
         "(There was an emptiness in my stomach as I remembered my friends and family back home.)",
-        "(I miss them. There’s something about this place that makes me feel like I don’t belong.)",
-        "*Sigh*",//10 
+        "(I miss them. There's just something about this place that makes me feel so out-of-place.)",
+        "<em>Sigh</em>",//10 
         "(I can’t go back now. I’ve worked too hard for this. Arlington Academy only accepts 10 scholarship students per year and I’m not going to waste this opportunity. Dad would be so disappointed...)",
         "(I firmly grasped the handle of my suitcase.)",
-        "(I needed to find someone.)",
+        "(I need to find someone.)",
         "(I jumped out of surprise.)",
         "W-Whoa! Hello!",//15 
         "(Next)",
-        "Hi " + CharaX_username + " ! (Finally, a smiling face!)",
+        "Hi, " + CharaX_username + "! (Finally, a smiling face!)",
         "(Ugh, I hate paperwork. But at least now I’m not completely lost.)",
         "(I followed Serena inside the school.)",
         "(She handed me several papers, all filled with questions I had to answer.)",//20 
@@ -121,9 +121,9 @@ function Chapter()
         "(Lady Arlington was probably in her forties, considering her position in the school, but she looked much younger.)",//100 
         "(She had an aura of power and mystery… I felt intimidated and amazed at the same time. " + CharaX_username + " handed her the paperwork I filled out.)",
         "(Lady Arlington turned to look at us.)",
-        "(Hey eyes met mine and...)",
+        "(Her eyes met mine and...)",
         "(She dropped my paperwork on the ground.)",
-        "(The principal looked at me as if she saw a ghost. It felt very awkward and I didn’t know where to look.)",//105 
+        "(The principal looked at me as if she had just seen a ghost. The longer she stared at me, the more anxious I felt. It got to the point that I didn't know where to look)",//105 
         "W-Wait! (But " + CharaX_username + " just left the hallway, leaving me alone with the principal.)",
         "(Her look lingered for a couple of seconds. I could feel myself beginning to sweat a little as her eyes pierced my soul.)",
         "(END OF CHAPTER 0)",
@@ -148,22 +148,22 @@ function Chapter()
         "null",//15 
         "Hehe, sorry. I didn’t mean to startle you. You must be our new scholarship student.",
         "My name is " + CharaX_username + " and I was assigned by the principal to help you with all the formalities here at Arlington.",
-        "It’s nice to meet you! Now, follow me please. Before I show you where your dorm and classrooms are, you have some paperwork to fill.",
+        "It’s nice to meet you! Now, follow me please. Before I show you where your dorm and classrooms are, you have some paperwork to fill out.",
         "null",
         "null",//20 
-        "It’s important for the school’s administration to know as much about you as possible so that Arlington can give you the education you need to tackle the world when you graduate.",
-        "I am sure you are aware, since you did apply and got accepted to the Academy, but for the sake of getting things ready for you, I’m going to explain how the departments work around here.",
-        "Arlington Academy has 7 departments in total in total: Business and Commerce, Pure and Applied Sciences, Medical Sciences, Fine Arts, Performing Arts, Fashion, and Athletics.",
-        "Each department houses students with specific skills and personality traits, and it’s up to you to choose which one suits you best based on your talents and on who you are!",
+        "It’s important for the school’s administration to know as much about you as possible. That way, Arlington can give you the education you need to tackle the world when you graduate.",
+        "Since you applied and got accepted to the academy in the first place, I’m sure you’re aware of this, but I'm going to explain how the departments work around here for the sake of getting you prepared.",
+        "Arlington Academy has 7 departments in total: Business, Commerce and Politics, Pure and Applied Sciences, Health Sciences and Biology, Fine Arts, Performing Arts, Fashion, and Athletics.",
+        "Each department houses students with specific skills and personality traits, and it’s up to you to choose which one suits you best based on who you are and your talents!",
         "First off, there is the <b>Department of Business, Commerce and Politics</b>, for all of the future entrepreneurs, CEOs, and politicians. If you love to lead and dream of changing the world, then this department is for you!",//25 
         "Next, there is the <b>Department of Pure and Applied Sciences</b>, for all of the future engineers and inventors of this world. If technology is your passion and you’re curious, logical and open-minded, then sign up for this department.",
-        "Then, there is the <b>Department of Health Sciences</b>, for all of the future doctors and medical researchers of the nation. If you are caring, hardworking, and always willing to help, then this department is for you!",
-        "Next is the <b>Department of Athletics</b>, for students with extraordinary skills in sports and other physical disciplines. If you are disciplined, headstrong, and love to compete, this department is for you!",
+        "Then, there is the <b>Department of Health Sciences and Biology</b>, for all of the future doctors and medical researchers of the nation. If you are caring, hardworking, and always willing to help, then this department is for you!",
+        "Next is the <b>Department of Athletics</b>, for students with extraordinary skills in sports and other physical disciplines. If you are hardworking, headstrong, and love to compete, this department is for you!",
         "Next up is the <b>Department of Fine Arts</b>, for students with exceptional skills in the visual arts. If you want the opportunity to explore your creativity in painting, drawing and even more, sign up for this department!",
         "Next is the <b>Department of Performing Arts</b>, for students who love to be part of a show! If you’re outgoing, bold and love to perform in front of an audience, then this department is for you!",//30 
-        "And lastly, there is the <b>Department of Fashion</b>, for students who love to design, model and keep aware of the trends. If you are sharp, ambitious and stylish, this department is for you!",
+        "And lastly, there is the <b>Department of Fashion</b>, for students who love to design, model and keep up with the trends. If you are sharp, ambitious and stylish, this department is for you!",
         "The Academy already has your choice registered in our computers, but I’d like you to sign and fill in this form to confirm your choice once and for all.",
-        "Choose wisely! You won’t be able to change it afterwards",
+        "Choose wisely! You won’t be able to change it afterwards.",
         "Do you want me to repeat, or are you ready to choose?",
         "Alright, here's the form.",//35 
         "null",
@@ -172,11 +172,11 @@ function Chapter()
         "Excellent!",
         "Thank you! Now let me show you where your dorm is.",//40 
         "This is where you’re going to be staying until the end of high school!",
-        "You can access this place anytime you’re visiting Arlington Academy. Click on “My Dorm” on the pink navigation bar that’s on top of my head.",
+        "You can access this place anytime you’re visiting Arlington Academy. Click “My Dorm” on the pink navigation bar above my head.",
         "By clicking on the wardrobe, you can change your appearance and your outfit!",
-        "Clicking on your bag will bring you out to the city! Of course, the city is still unavailable for now. But once the full version of the game releases, you’ll gain access to shops and mini-games!",
+        "Clicking on your bag will bring you out to the city! Of course, the city is still unavailable for now. But once the full version of the game is released, you’ll gain access to shops and mini-games!",
         "Click on the laptop on your desk and you’ll be transported right here, in the game!",//45 
-        "Finally, you can click on the book on your desk to have access to all of the illustrations you’ve collected throughout your time at Arlington! You can also see how many achievements of the game you’ve unlocked. Not many people manage to completely finish the game…maybe you’ll be one of them!",
+        "Finally, you can click on the book on your desk to have access to all of the illustrations you’ve collected throughout your time at Arlington! You can also see how many achievements you’ve unlocked. Not many people manage to completely finish the game…maybe you’ll be one of them!",
         "The last thing I’m going to need you to do is to fill out this medical form. This is an important part of your file.",
         "null",
         "null",//49 Choose your name Form
@@ -192,14 +192,14 @@ function Chapter()
         "The more days you log into the game, the more energy points you will be able to get! Of course, for the sake of this demo, you will have infinite energy. Consider this a small welcome gift from the Academy.",
         "You can check how much energy you currently have on the purple bar at the top of this page. After a certain point in your adventures at Arlington, you will begin to use up your energy. At that point, when the full version of the game is released, I promise I’ll be back to explain how you get can more energy!",//60 
         "You’ll need your energy to fulfill your destiny here at Arlington Academy. You will also meet a lot of characters that will be with you until the very end.",
-        "Some people will be relatively easy to get along with, others… not so much.",
+        "Some people will be relatively easy to get along with, and others… not so much.",
         "All the characters you’re going to meet will have an “infinity meter”. You will have several dialogue choices. You’re going to have to choose whether you want your choices to build on your friendship with them, or your romance.",
         "Friendship dialogue options will be indicated with a handshake button while romance dialogue options will be indicated with a heart button!",
         "Furthermore, if you choose to just stay friends with a character and only pick friendship dialogue options, your infinity meter will only go up to 50%, not one percent more.",//65 
         "Only romance dialogue options will make your infinity meter with a character reach its max.",
         "Once you choose, you’ll have to make yet another choice of dialogues that will either raise, drop, or leave your infinity meter as it is.",
         "Choose wisely! If your infinity meter is too low, you will not get the date you want with your favorite character at the end of each chapter.",
-        "Haha! You’ll find that the students at Arlington Academy aren’t as simple to figure out.",
+        "Haha! You’ll find that the students at Arlington Academy aren’t so simple to figure out.",
         "Go ahead and give it a try. I know some of my friends are in Classroom 1. Why don't you pay them a visit? Oh and also… Don’t mind the gas mask, it's for aesthetic purposes.",//70 
         "null",
         "null",
@@ -228,7 +228,7 @@ function Chapter()
         "It looks like I underestimated you. That interaction was pretty smooth.",//95 
         "Haha! Well it seems like you’re ready to start your adventure here at Arlington.",
         "I’ll take you to the principal, Lady Arlington. She insists on welcoming all new students at the beginning of each year.",
-        "HA! She’s nice alright… until you start breaking any rules.",
+        "HA! She’s nice alright… Until you start breaking any rules.",
         "null",
         "null",//100 
         "null",
@@ -1774,7 +1774,7 @@ function Chapter()
         "null",//73 Objective Complete: Go Talk to the Person inside Classroom 1
         "null",
         "null",//75 
-        "Thank you! I’m so excited to start",
+        "Thank you! I’m so excited to start.",
         "null",
         "null",
         "null",
@@ -2368,7 +2368,6 @@ function Chapter()
         -1,
         -1,
         ];
-
 }
 
 Chapter();//the simple act of appending the .js file will load the chapter into memory

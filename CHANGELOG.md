@@ -1,6 +1,12 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
 
+# Version 1.14.12 (Beta Grammar/Spelling Fixes)
+## Changed
+- `chapter0.xlsx/js`  `chapter1.xlsx/js`  `chapter2.xlsx/js`
+    - Litterally just grammar/spelling/writing fixes.
+
+
 # Version 1.14.11 (placed scripts in footer)
 ## Changed
 - `footers.php`

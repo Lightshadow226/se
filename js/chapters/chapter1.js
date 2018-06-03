@@ -25,7 +25,7 @@ function Chapter()
         "(Next)",
         "(She picked up the files that she had dropped to the floor and walked off in the other direction.)",//5 
         "Okay… that was odd.",
-        "Nevermind that, " + user.username +"! You’re here, you’ve made it. Just focus on getting these bags to your dorm.",
+        "Nevermind that, " + user.scholarname +"! You’re here, you’ve made it. Just focus on getting these bags to your dorm.",
         "(My dorm… It still feels weird to say that… like this is all just a dream. Like I’m going to wake up any second now in my bed, still at home and waiting to see if I’d gotten accepted into the most prestigious school in the United States.)",
         "null",
         "null",//10 
@@ -536,7 +536,7 @@ function Chapter()
         "null",
         "That sort of thing happens a lot to the both of us. No biggie! Means we get to hang out a little more with you!",
         "null",
-        "Look at that! I thought I’d have to ask " + user.gender + " myself.",
+        "Look at that! I thought I’d have to ask " + user.scholarname + " myself.",
         "null",//230 
         "null",//231 Tegan & Tyler's dorm
         "null",//232 TODO: popup
