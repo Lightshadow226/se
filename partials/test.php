@@ -27,4 +27,8 @@ echo "6. " . $fullUrl = "www.sweetelitegame.com/debug/tempFinalBeta/se";
 echo "<br>";
 echo "<br>";
 
+echo "7. " . "www.sweetelitegame.com" . $_SERVER['REQUEST_URI'];
+echo "<br>";
+echo "<br>";
+
 ?>
