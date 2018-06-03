@@ -74,7 +74,7 @@ for($i = 1; $i < sizeof($sources); $i++)
 	
 	if($i == 5)//if we're doing the shirt, we resize it to fit the "mediumsprite"
 	{
-		$multiplier = 1.1;
+		$multiplier = 1.08;
 		$newWidth = $width * $multiplier;
 		$newHeight = $height * $multiplier;
 		
@@ -83,8 +83,8 @@ for($i = 1; $i < sizeof($sources); $i++)
 
 		if($sex == 0)
 		{
-			$translateX = -85;
-			$translateY = -18;
+			$translateX = -79;
+			$translateY = -17;
 		}
 		else
 		{

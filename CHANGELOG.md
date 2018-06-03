@@ -1,6 +1,14 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
 
+# Version 1.14.7 (Images for dollmaker)
+## Added
+- `_new_images_folder`
+    - added missing images for the dollmaker
+## Fixed
+- `character_small_portrait.php`
+    -small translation fix
+
 # Version 1.14.6 (Bug fixes)
 ## Added
 - `chapter0.php` `chapter1.php` `chapter2.php`
