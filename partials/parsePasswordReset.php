@@ -103,7 +103,7 @@ else if(isset($_POST['passwordRecoveryBtn']))//Password Recovery
 				$user_id = $rs['id'];
 				$encode_id = base64_encode("encodeuserid{$user_id}");
 				
-				$fullUrl = "www.sweetelitegame.com" . $_SERVER['REQUEST_URI'];
+				$fullUrl = "sweetelitegame.com" . $_SERVER['REQUEST_URI'];
 
 				// HTML code for the email to be sent to the new student
 				$mail_body = '<html>
