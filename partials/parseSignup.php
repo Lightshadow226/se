@@ -94,7 +94,8 @@ if(isset($_POST['signupBtn'],$_POST['token']))
 					$statement8->execute();
 					$statement9->execute();
 				
-					$fullUrl = "sweetelitegame.com" . $_SERVER['REQUEST_URI'];
+					$path_parts = pathinfo(__FILE__);
+					$fullUrl = "sweetelitegame.com" . rtrim($_SERVER['REQUEST_URI'], $path_parts['basename']) . "activate.php";
 
 					/*THE CLASS "logo_div"  DOESN'T EXIST*/
 					
