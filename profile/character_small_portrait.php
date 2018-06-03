@@ -74,23 +74,28 @@ for($i = 1; $i < sizeof($sources); $i++)
 	
 	if($i == 5)//if we're doing the shirt, we resize it to fit the "mediumsprite"
 	{
-		$multiplier = 1.08;
-		$newWidth = $width * $multiplier;
-		$newHeight = $height * $multiplier;
+		$multiplier = 1;
 		
 		$translateX = 0;
 		$translateY = 0;
 
 		if($sex == 0)
 		{
+			$multiplier = 1.08;
+
 			$translateX = -79;
 			$translateY = -17;
 		}
 		else
 		{
+			$multiplier = 1.1;
+			
 			$translateX = -120;
 			$translateY = 0;
 		}
+
+		$newWidth = $width * $multiplier;
+		$newHeight = $height * $multiplier;
 
 		//create a new image of the desired size
 		$newImage = imagecreatetruecolor($newWidth, $newHeight);

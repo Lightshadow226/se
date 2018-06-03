@@ -1,6 +1,16 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
 
+# Version 1.14.14 (Email & Male Scholar fixes)
+## Fixed
+- `parseSignup.php`     `parsePasswordReset.php`
+    - fixed the activate.php url
+- `character_small_portrait.php`
+    - fixed the male image
+    - we modified the female but forgot to calibrate the male
+- `contact.php`: fixed the design
+
+
 # Version 1.14.13 (Personality Quiz, Signup Buttons)
 ## Added
 - `personalityquiz.php`
