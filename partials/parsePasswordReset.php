@@ -103,7 +103,7 @@ else if(isset($_POST['passwordRecoveryBtn']))//Password Recovery
 				$user_id = $rs['id'];
 				$encode_id = base64_encode("encodeuserid{$user_id}");
 				
-				/*THE CLASS "logo_div"  DOESN'T EXIST*/
+				$fullUrl = rtrim(getcwd(), "/partials") . "/forgot_password.php";
 
 				// HTML code for the email to be sent to the new student
 				$mail_body = '<html>
@@ -123,7 +123,7 @@ else if(isset($_POST['passwordRecoveryBtn']))//Password Recovery
 				
 				<p>To reset your password, please click on the link below:</p>
 				
-				<p style="text-align:center;"><a href="http://sweetelitegame.com/testfiles/profiletest/forgot_password.php?id='.$encode_id.'">Reset Password</a></p>
+				<p style="text-align:center;"><a href="' . $fullUrl . '?id=' . $encode_id . '">Reset Password</a></p>
 				
 				<p>Contact us if you are still having problems.</p>
 				

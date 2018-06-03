@@ -100,7 +100,7 @@ if(isset($_POST['signupBtn'],$_POST['token']))
 					$fullUrl = $rootFolder . "activate.php";
 					*/
 
-					$fullUrl = rtrim(getcwd(), "/partials") . "activate.php";
+					$fullUrl = rtrim(getcwd(), "/partials") . "/activate.php";
 
 					/*THE CLASS "logo_div"  DOESN'T EXIST*/
 					
