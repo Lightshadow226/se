@@ -104,14 +104,14 @@ else if(isset($_POST['passwordRecoveryBtn']))//Password Recovery
 				$encode_id = base64_encode("encodeuserid{$user_id}");
 				
 				$path_parts = pathinfo(__FILE__);
-				$fullUrl = "https://www.sweetelitegame.com" . rtrim($_SERVER['REQUEST_URI'], $path_parts['basename']) . "forgot_password.php";
+				$fullUrl = "http://www.sweetelitegame.com" . rtrim($_SERVER['REQUEST_URI'], $path_parts['basename']) . "forgot_password.php";
 
 				// HTML code for the email to be sent to the new student
 				$mail_body = '<html>
 				<body>
 				
 				<div style="text-align:center; background-color:#ff4956;" class="logo_div">
-					<img src="https://sweetelitegame.com/images/se-logo.png">
+					<img src="http://sweetelitegame.com/images/se-logo.png">
 				</div>
 											
 				

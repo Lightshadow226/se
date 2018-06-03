@@ -95,7 +95,7 @@ if(isset($_POST['signupBtn'],$_POST['token']))
 					$statement9->execute();
 				
 					$path_parts = pathinfo(__FILE__);
-					$fullUrl = "https://www.sweetelitegame.com" . rtrim($_SERVER['REQUEST_URI'], $path_parts['basename']) . "activate.php";
+					$fullUrl = "http://www.sweetelitegame.com" . rtrim($_SERVER['REQUEST_URI'], $path_parts['basename']) . "activate.php";
 
 					/*THE CLASS "logo_div"  DOESN'T EXIST*/
 					
@@ -106,7 +106,7 @@ if(isset($_POST['signupBtn'],$_POST['token']))
 						<body>
 						
 						<div style="text-align:center; background-color:#ff4956;" class="logo_div">
-							<img src="https://sweetelitegame.com/images/se-logo.png">
+							<img src="https//sweetelitegame.com/images/se-logo.png">
 						</div>
 						
 						<div class="main_content">
