@@ -45,6 +45,12 @@ echo "<br>";
 echo "<br>";
 
 $path_parts = pathinfo(__FILE__);
-echo "Final: " . "sweetelitegame.com" . rtrim($_SERVER['REQUEST_URI'], $path_parts['basename']) . "activate.php";
+echo "Final: " . "https://www.sweetelitegame.com" . rtrim($_SERVER['REQUEST_URI'], $path_parts['basename']) . "activate.php";
 echo "<br>";
+
+/*
+http://php.net/manual/en/language.constants.predefined.php
+http://php.net/manual/en/function.pathinfo.php
+*/
+
 ?>
