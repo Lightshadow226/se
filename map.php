@@ -96,6 +96,7 @@
                 <p style="visibility: hidden;">i</p>
 		    </div>
             
+			<div id = "DB_handle"></div>
 
 		<?php else: ?>
             <P>Sorry! Only registered members can access this page. <a href="login.php">Click here</a> to log into your account. Not yet a member? <a href="signup.php">Signup</a>!</p>
@@ -107,8 +108,6 @@
 
 </body>
 
-<script src = "js/variables.js"></script><!--needed for the logged in functionality of "current chapter"-->
-<script src = "js/library.js"></script>
 
 </html>
 

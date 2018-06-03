@@ -1,6 +1,13 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
 
+# Version 1.14.11 (placed scripts in footer)
+## Changed
+- `footers.php`
+    - variables.js and library.js are now appended in the footer of all pages
+    - appending variables.js will automatically load variables from the Database
+    - appending library.js will automatically update the purple game bar
+
 # Version 1.14.10 (Minor design changes)
 ## Fixed
 - `logged off forms`

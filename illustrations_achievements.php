@@ -86,8 +86,6 @@
 
 </body>
 
-<script src = "js/variables.js"></script>
-<script src = "js/library.js"></script>
 <script src = "js/illustrations_achievements.js"></script>
 
 </html>

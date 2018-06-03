@@ -44,8 +44,6 @@
 
 </body>
 	
-<script src = "js/variables.js"></script><!--this is to get all the variables that are needed from the database--><!--Eventually, this will become a PHP file, as we need to extract many values from the database-->
-<script src = "js/library.js"></script><!--this is to get all the functions that are needed-->
 <script src = "js/dorm.js"></script>
 
 </html>

@@ -404,8 +404,6 @@
 </body>
 
 <script src = "js/charactersMeet.js"></script>
-<script src = "js/variables.js"></script><!--needed for the logged in functionality of "current chapter"-->
-<script src = "js/library.js"></script>
 <script src = "js/index.js"></script><!--needed for the logged in functionality of "current chapter"-->
 <script>
 	//logged out

@@ -53,9 +53,6 @@
 
 </body>
 
-	<script src = "js/variables.js"></script><!--this is to get all the variables that are needed from the database--><!--Eventually, this will become a PHP file, as we need to extract many values from the database-->
-	<script src = "js/library.js"></script><!--this is to get all the functions that are needed-->
-	
 	<script src = "js/chapters/chapter0.js"></script><!--there is going to be one .js file for every chapter, so we load it in the memory here-->
 	<script src = "js/gameengine.js"></script><!--the game engine needs to be last, as it will interact with all the variables from the .js files above-->
 

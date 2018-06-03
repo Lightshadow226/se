@@ -51,8 +51,6 @@
 
 </body>
 
-<script src = "js/variables.js"></script>
-<script src = "js/library.js"></script>
 <script src = "js/relationships.js"></script>
 
 </html>

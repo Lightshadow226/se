@@ -85,10 +85,6 @@
 </header>
 
 <!-- TODO: remove included files from most pages and add them here instead for them to always be loaded (variables.js, library.js) -->
-<!--
-<script src = "js/variables.js"></script>
-<script src = "js/library.js"></script>
--->
 
 <!-- TODO: Put those scripts in a new JS file (headers.js)-->
 <script>

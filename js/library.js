@@ -1356,3 +1356,5 @@ function refreshTestContainer()// affiche des données par rapport à la prev/cu
     container2.innerHTML = text;*/
 }
 // -----END DEBUGGING TOOLS-----
+
+updateGameBar();
