@@ -1,10 +1,19 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
 
+# Version 1.14.10 (Minor design changes)
+## Fixed
+- `logged off forms`
+    - minor changes
+    - now the forms are properly centered
+    - "Sorry! Only registered members are allowed to see this page."
+
+
 # Version 1.14.9 (Email URL, Ch. 0 form)
 ## Fixed
 - `parseSignup.php`: changed the activate.php url once and for all
 - `gameengine.js`: fixed the chapter 0 "Name your scholar" form once and for all
+
 
 # Version 1.14.8 (Affinity Reversion)
 ## Fixed

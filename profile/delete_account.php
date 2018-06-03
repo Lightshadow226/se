@@ -126,42 +126,37 @@ else if(isset($_POST['deleteBtn']))
 </head>
 
 <body>
-
-	<header id="header">
-
-    </header>
-
-	<?php include_once '../partials/headers.php' ?>
-	<?php include_once '../resources/utilities.php' ?>
-
 	<div class = "main_content">
-        <div class="card-nomargin add_padding">
-            <h1>Delete Your Account</h1>
-
             <?php if(isset($result)) echo $result; ?>
             <?php if(!empty($form_errors)) echo show_errors($form_errors); ?>
 
-
 			<?php if(!isset($_SESSION['username'])):?>
-				<p>Sorry! Only registered members are allowed to see this page. <a href="login.php">Log in</a> or <a href="signup.php">Sign up</a> to view your profile!</p>
+				<div class="login-forms">
+					<a href="index.php"><img id="../logo" class="" src="../images/general/se-logo.png"></a>
+					<div class="card-nomargin add_padding">
+						<p>Sorry! Only registered members are allowed to see this page. <br><a href="login.php">Log in</a> or <a href="signup.php">Sign up</a> to play.</br></p>
+					</div>
+				</div>
 			<?php else: ?>
-
-		            <form method="post" action="" class="center">
-				        Enter your Password:
-				        <p><input type="password" name="current_password" value=""></p>
-       
-		               	 	<input type="hidden" name="hidden_id" value="<?php if(isset($id)) echo $id; ?>">
-		                	<p><input type="submit" name="deleteBtn" value="DELETE ACCOUNT"></p>
+				<?php include_once '../resources/session.php';
+					  include_once '../resources/database.php';
+					  include_once '../resources/utilities.php' ?>
+				
+				<div class="login-forms card-nomargin add_padding">
+					<h1>Delete Your Account</h1>
+					<form method="post" action="" class="center">
+						Enter your Password:
+						<input type="password" name="current_password" value="">
+						<br>
+						<br>
+	
+						<input type="hidden" name="hidden_id" value="<?php if(isset($id)) echo $id; ?>">
+						<p><input type="submit" class="button pink_button" name="deleteBtn" value="DELETE ACCOUNT"></p>
 		
-		  	   </form>
-		  	   
+					</form>
+				</div>
 			<?php endif ?>
-
-        </div>
 	</div>
-
-	<?php include_once '../partials/footers.php' ?>
-
 </body>
 
 </html>

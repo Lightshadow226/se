@@ -26,15 +26,13 @@
 	<div id="popupHandler"></div>
 	
 	<?php if(!isset($_SESSION['username'])):?>
-	<body class = "center-screen">
-		<a href="index.php"><img id="logo" class="" src="images/general/se-logo.png"></a>
-		<div class = "">
-			<div class="card-nomargin add_padding" style="position: relative;">
+		<div class="login-forms">
+			<a href="index.php"><img id="logo" class="" src="images/general/se-logo.png"></a>
+			<div class="card-nomargin add_padding">
 				<h1>Game</h1>
 				<p>Sorry! Only registered members are allowed to see this page. <br><a href="login.php">Log in</a> or <a href="signup.php">Sign up</a> to play.</br></p>
 			</div>
 		</div>
-	</body>
 	<?php else: ?>
 
 		<?php include_once 'partials/headers.php' ?>

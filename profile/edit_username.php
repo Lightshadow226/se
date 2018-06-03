@@ -116,9 +116,12 @@ elseif(isset($_POST['updateUsernameBtn']))
 			<?php if(!empty($form_errors)) echo show_errors($form_errors); ?>
 
 			<?php if(!isset($_SESSION['username'])):?>
-			
-				<p>Sorry! Only registered members are allowed to see this page. <a href="login.php">Log in</a> or <a href="signup.php">Sign up</a> to view your profile!</p>
-			
+				<div class="login-forms">
+					<a href="index.php"><img id="../logo" class="" src="../images/general/se-logo.png"></a>
+					<div class="card-nomargin add_padding">
+						<p>Sorry! Only registered members are allowed to see this page. <br><a href="login.php">Log in</a> or <a href="signup.php">Sign up</a> to play.</br></p>
+					</div>
+				</div>
 			<?php else: ?>
 
 
