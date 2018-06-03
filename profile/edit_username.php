@@ -103,7 +103,8 @@ elseif(isset($_POST['updateUsernameBtn']))
 
 </head>
 
-<body class="center-screen">
+<body>
+<div class = "login-forms">
 
 	<a href="../index.php"><img id="logo" class="" src="../images/general/se-logo.png"></a>
 
@@ -147,6 +148,7 @@ elseif(isset($_POST['updateUsernameBtn']))
 
 			<?php endif ?>
         </div>
+	</div>
 	</div>
 </body>
 

@@ -20,8 +20,8 @@ include_once 'partials/parseSignup.php';
 
 </head>
 
-<body class = "center-screen">
-
+<body>
+<div class = "login-forms">
 	<?php /*include_once 'partials/headers.php'*/?>
 
 	<a href="index.php"><img id="logo" class="" src="images/general/se-logo.png"></a>
@@ -82,6 +82,7 @@ include_once 'partials/parseSignup.php';
 
         </div>
 	</div>
+</div>
 
 <?php /*include_once 'partials/footers.php'*/?>
 

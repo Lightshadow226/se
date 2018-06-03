@@ -1262,25 +1262,26 @@ function hasToBeSaved(propertyName)//returns either true or false (has to be sav
 // -----START DEBUGGING TOOLS-----
 function refreshTestContainer()// affiche des données par rapport à la prev/current/next slide
 {
-    var daInput = document.getElementById('daInput');
-    var slideCounter = document.getElementById('slideCounter');
+    // var daInput = document.getElementById('daInput');
     
-    daInput.onkeypress = function(e)
-    {
-        if(e.keyCode == 13)//when we press "enter"
-        {
-            if(daInput.value) {user.storyLocation = daInput.value}
-            daInput.value = "";
-            saveIsVisited();
-            pushVariablesToDB();
-            HideForms();
-            refreshInterface();
-        }
-    };
+    // daInput.onkeypress = function(e)
+    // {
+    //     if(e.keyCode == 13)//when we press "enter"
+    //     {
+    //         if(daInput.value) {user.storyLocation = daInput.value}
+    //         daInput.value = "";
+    //         saveIsVisited();
+    //         pushVariablesToDB();
+    //         HideForms();
+    //         refreshInterface();
+    //     }
+    // };
 
-    $('#daInput').focus();
-    daInput.placeholder = user.storyLocation;
-    slideCounter.innerHTML = user.storyLocation;
+    // $('#daInput').focus();
+    // daInput.placeholder = user.storyLocation;
+    
+    var slideCounter = document.getElementById('slideCounter');
+        slideCounter.innerHTML = user.storyLocation;
 
     var text = "";
     

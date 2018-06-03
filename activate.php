@@ -21,7 +21,8 @@ include_once 'partials/parseSignup.php';
 
 </head>
 
-<body class= "center-screen">
+<body>
+	<div class = "login-forms">
 		<a href="index.php"><img id="logo" class="" src="images/general/se-logo.png"></a>
 		<div class = "">
 			<div class="card-nomargin add_padding">
@@ -30,6 +31,7 @@ include_once 'partials/parseSignup.php';
 				<br><p style="text-align:center;"><a href="index.php">Back</a> </p> </br>
         	</div>
 		</div>
+	</div>
 
 </body>
 
