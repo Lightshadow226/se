@@ -747,6 +747,55 @@ function showPopup(img_path)
     //https://www.w3schools.com/howto/howto_css_modal_images.asp
 }
 
+function popup(message, type)
+{
+    var parent = document.getElementById('popupHandler');
+        parent.innerHTML = "";
+        parent.style.display = "block";
+
+    var popupContainer = document.createElement('div');
+        popupContainer.id = "popupContainer";
+
+        var popup = document.createElement('div');
+            popup.id = "popup";
+            popup.innerHTML = message;
+
+    if(type == "yes/no")
+    {
+        var yesButton = document.createElement('div');
+            yesButton.innerHTML = "Yes";
+            yesButton.className = "button pink_button popupButton";
+            yesButton.onclick = function(){deletePopup()};
+
+        var noButton = document.createElement('div');
+            noButton.innerHTML = "No";
+            noButton.className = "button pink_button popupButton";
+            noButton.onclick = function(){deletePopup()};
+    
+        parent.appendChild(popupContainer)
+            popupContainer.appendChild(popup);
+            popupContainer.appendChild(yesButton);
+            popupContainer.appendChild(noButton);
+
+        return [yesButton, noButton];
+        
+    }
+    else if(type == "ok")
+    {
+        var okButton = document.createElement('div');
+            okButton.id = "okButton";
+            okButton.innerHTML = "Ok";
+            okButton.className = "button pink_button";
+            okButton.onclick = function(){deletePopup()};
+
+        parent.appendChild(popupContainer)
+            popupContainer.appendChild(popup);
+            popupContainer.appendChild(okButton);
+
+        return [okButton];
+    }
+}
+
 function makePopup(message)
 {
     var parent = document.getElementById('popupHandler');

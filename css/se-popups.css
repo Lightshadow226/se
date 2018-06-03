@@ -131,6 +131,15 @@
 {
 	margin-top: 20px;
 	z-index: 1000;
+
+}
+
+.popupButton
+{
+	margin-top: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+	z-index: 1000;
 }
 
 #popupHandler

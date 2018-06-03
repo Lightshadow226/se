@@ -5,23 +5,12 @@
 ?>
 
 <html>
-<head>
 
-	<meta charset="UTF-8">
-	<meta name="description" content="Sweet Elite is a dating sims inspired by the popular Japanese Otome.Flirt with students and uncover Arlington Academy's dark secrets.Choose your own story!">
-	
-	<title>Sweet Elite: Flirt and Uncover the Secrets of Arlington Academy!</title>
-
-	<link href="css/se-stylesheet.css" rel="stylesheet" type="text/css">
-	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-	<link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet" type='text/css'>
-
-	<link rel="icon" type="image/ico" href="images/favicon.png"/>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-</head>
+<?php include_once 'partials/head.php' ?>
 
 <body>
+
+	<div id="popupHandler"></div>
 
 	<?php if(!isset($_SESSION['username'])):?>
 		<div class="login-forms">
@@ -97,7 +86,7 @@
 
 								<div style="padding: 10px;">
 									<div class="center">
-										<div class="button pink_button"><a style="color:white;" href="">Reset Progress</a></div>
+										<div id="reset-progess" class="button pink_button"><a style="color:white;">Reset Progress</a></div>
 									</div>
 								</div>
 							</div>		
@@ -114,5 +103,28 @@
     <?php include_once 'partials/footers.php' ?>
 
 </body>
+
+<script>
+
+	document.getElementById('reset-progess').onclick = function()
+	{
+		var resetProgress = popup("RESET PROGRESS?", "yes/no");
+
+		//override the onclick of the buttons
+		resetProgress[0].onclick = function ()
+		{
+			deletePopup();
+			console.log("Yes");
+		}
+
+		//override the onclick of the buttons
+		resetProgress[1].onclick = function ()
+		{
+			deletePopup();
+			console.log("No");
+		}
+	}
+
+</script>
 
 </html>
