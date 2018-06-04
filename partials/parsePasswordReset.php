@@ -4,6 +4,39 @@ include_once 'resources/database.php';
 include_once 'resources/utilities.php';
 include_once 'resources/send-email.php';
 
+/*
+$path_parts = pathinfo(__FILE__);
+
+echo "Directory: " . $path_parts['dirname'], "\n";
+echo "<br>";
+echo "Basename: " . $path_parts['basename'], "\n";
+echo "<br>";
+echo "Extension: " . $path_parts['extension'], "\n";
+echo "<br>";
+echo "Filename: " . $path_parts['filename'], "\n"; // since PHP 5.2.0
+echo "<br>";
+echo "<br>";
+
+$path_parts = pathinfo(__FILE__);
+echo "SERVER: " . $_SERVER['REQUEST_URI'];
+echo "<br>";
+echo "<br>";
+echo "PATHS_PARTS (BASENAME): " . $path_parts['basename'];
+echo "<br>";
+echo "<br>";
+echo "r_trim: " . rtrim($_SERVER['REQUEST_URI'], $path_parts['basename']);
+echo "<br>";
+echo "<br>";
+echo "Final: " . "https://www.sweetelitegame.com" . rtrim($_SERVER['REQUEST_URI'], $path_parts['basename']) . "forgot.php";
+echo "<br>";
+echo "<br>";
+
+
+$path_parts = pathinfo(__FILE__);
+$fullUrl = "http://www.sweetelitegame.com" . rtrim($_SERVER['REQUEST_URI'], $path_parts['basename']) . "forgot.php";
+echo $fullUrl;
+*/
+
 if(isset($_POST['passwordResetBtn']))//Password Reset
 {
     $form_errors = array();
@@ -104,7 +137,7 @@ else if(isset($_POST['passwordRecoveryBtn']))//Password Recovery
 				$encode_id = base64_encode("encodeuserid{$user_id}");
 				
 				$path_parts = pathinfo(__FILE__);
-				$fullUrl = "http://www.sweetelitegame.com" . rtrim($_SERVER['REQUEST_URI'], $path_parts['basename']) . "forgot_password.php";
+				$fullUrl = "http://www.sweetelitegame.com" . rtrim($_SERVER['REQUEST_URI'], $path_parts['basename']) . "forgot.php";
 
 				// HTML code for the email to be sent to the new student
 				$mail_body = '<html>
