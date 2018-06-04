@@ -41,12 +41,11 @@
 
 .line_middle_content
 {
-	flex: auto;
+	height: inherit;
 	position: relative; /*Nécessaire pour que le bouton soit bien placé*/
 	flex: 100;
 	padding: 20px;
-	height: inherit;
-	/* max-height: 350px; */
+	max-height: 350px;
 }
 
 .line_right_content
@@ -80,6 +79,7 @@
 
 .character_img
 {
+	height: 100%;
 	width: auto;
 	border-top-left-radius: 10px;
 	border-bottom-left-radius: 10px;

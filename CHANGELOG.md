@@ -6,6 +6,30 @@
 - `chapter0.xlsx/js`  `chapter1.xlsx/js`  `chapter2.xlsx/js` `variables.js`  `help.php`
     - Spelling and Grammar fixes
 
+    
+# Version 1.14.17 (Minor Mobile Adaptation)
+## Changed
+- `.css`
+    - a few design changes
+
+
+# Version 1.14.16 (Reset Progress Button)
+## Added
+- `library.js`
+    - added the most beautiful recursive asynchronous function
+    - coded the reset all progress button in profile.php
+    - added a popup function
+
+
+# Version 1.14.15 (Added head.php, Updated Google Ads)
+## Added
+- `head.php`: added the file and replaced all <head> tags
+
+## Changed
+- `footers.php`
+    - changed the google ads
+
+
 # Version 1.14.14 (Email & Male Scholar fixes)
 ## Fixed
 - `parseSignup.php`     `parsePasswordReset.php`

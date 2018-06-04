@@ -10,7 +10,7 @@ $status = "Error Sending SQL";
 
 $table = $_POST['type'];//either 'achievements' or 'illustrations'
 $column = $_POST['column'];
-$columnValue = 1;
+$columnValue = $_POST['value'];//either 0 or 1
 
 try
 {
