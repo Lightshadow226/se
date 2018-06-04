@@ -15,7 +15,7 @@ if(isset($_GET['id']))
 
 <!DOCTYPE html>
 <html>
-<?php include_once 'partials/head.php' ?>password_forgot_password
+<?php include_once 'partials/head.php' ?>
 
 <body>
 	<div class = "login-forms">
