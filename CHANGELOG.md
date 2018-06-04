@@ -1,6 +1,15 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
 
+# Version 1.15.0 (Forms Hotfix)
+## Fixed
+- `gameengine.js`   `se-game.css`
+    - formContainer vs form_container
+    - properly hide and unhide all forms before every form display
+
+- `footers.php`: centered google ads
+
+
 # Version 1.14.18 (Spelling/Grammar Fixes by the Betas)
 ## Modified
 - `chapter0.xlsx/js`  `chapter1.xlsx/js`  `chapter2.xlsx/js` `variables.js`  `help.php`

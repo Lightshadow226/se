@@ -537,6 +537,9 @@ function refreshInterface()
         }
         else if(story[special_option][user.storyLocation] == -3)// -3 === Form to choose the department
         {
+            HideForms();
+            unHideForms();
+            
             var form_names = [  "Department of Business, Commerce, and Politics",
                                 "Department of Perfoming Arts",
                                 "Department of Pure and Applied Sciences",
@@ -545,9 +548,8 @@ function refreshInterface()
                                 "Department of Fine Arts",
                                 "Department of Fashion"];
 
-            var form_container = document.createElement('div');
-                form_container.id = "form_container";
-                form_container.className = "form_container";
+            var formContainer = document.getElementById('formContainer');
+                formContainer.className = "formContainer";
 
             var formHeader = document.createElement('h6');
                 formHeader.innerHTML = "Choose your Department";
@@ -555,9 +557,8 @@ function refreshInterface()
             var formSubHeader = document.createElement('h5');
                 formSubHeader.innerHTML = "Choose wisely, you will <em>not</em> be able to change your department later!";
 
-            game_frame.appendChild(form_container);
-                form_container.appendChild(formHeader);
-                form_container.appendChild(formSubHeader);
+            formContainer.appendChild(formHeader);
+            formContainer.appendChild(formSubHeader);
 
             var selected = new Array(7);//array qui va déterminer si la ligne est sélectionnée ou non
 
@@ -617,7 +618,7 @@ function refreshInterface()
 
             for (var index = 0; index < 7; index++)
             {
-                createFormLine(index, form_container);
+                createFormLine(index, formContainer);
             }
         }
         else if(story[special_option][user.storyLocation] == -31)// -31 === Form to choose gender, skin color, hairstyle, etc.
@@ -625,8 +626,8 @@ function refreshInterface()
             HideForms();
             unHideForms();
 
-            var form_container = document.getElementById('formContainer');
-                form_container.className = "form_container form_container-small";
+            var formContainer = document.getElementById('formContainer');
+                formContainer.className = "formContainer formContainer-small";
 
                 var formHeader = document.createElement('h6');
                     formHeader.innerHTML = "Name Your Character";
@@ -673,12 +674,12 @@ function refreshInterface()
             sheher.onclick = function(e){choice = toggle_pronouns(this, hehim, theythem)};
             theythem.onclick = function(e){choice = toggle_pronouns(this, hehim, sheher)};
 
-            form_container.appendChild(formHeader);
-            form_container.appendChild(formSubHeader);
-            form_container.appendChild(nameContainer);
+            formContainer.appendChild(formHeader);
+            formContainer.appendChild(formSubHeader);
+            formContainer.appendChild(nameContainer);
                 nameContainer.appendChild(name);
-            form_container.appendChild(formSubHeader2);
-            form_container.appendChild(gender_container);
+            formContainer.appendChild(formSubHeader2);
+            formContainer.appendChild(gender_container);
                 gender_container.appendChild(sheher);
                 gender_container.appendChild(hehim);
                 gender_container.appendChild(theythem);
@@ -832,6 +833,9 @@ function refreshInterface()
         }
         else if(story[special_option][user.storyLocation] == -14)// -14 === Put on your uniform form
         {
+            HideForms();
+            unHideForms();
+
             var sexFolder = ["female", "male"];
             var outfitsToDisplay = 0;
             
@@ -878,6 +882,9 @@ function refreshInterface()
         }
         else if(story[special_option][user.storyLocation] == -15)// -15 === Popups ("Congratulations")
         {
+            HideForms();
+            unHideForms();
+
             var popup = document.createElement('div');
                 popup.className = "popup";
                 popup.innerHTML = story[choiceA_text][user.storyLocation];
@@ -1220,13 +1227,14 @@ function browseLink(link, element)//link is the link of the story (story[special
 
 function HideForms()
 {
-    var forms = document.getElementsByClassName('form_container');//created dynamically
+    var forms = document.getElementsByClassName('formContainer');//created dynamically
     
     for (var i = 0; i < forms.length; i++)
     {
         forms[i].style.display = "none";
+        forms.innerHTML = "";
     }
-    
+
     var formContainer = document.getElementById("formContainer");//in the DOM
         formContainer.innerHTML = "";
         formContainer.style.display= "none";
@@ -1234,16 +1242,19 @@ function HideForms()
 
 function unHideForms()
 {
-    var forms = document.getElementsByClassName('form_container');//created dynamically
+    var forms = document.getElementsByClassName('formContainer');//created dynamically
     
     for (var i = 0; i < forms.length; i++)
     {
         forms[i].style.display = "block";
+        forms.innerHTML = "";
     }
 
     var formContainer = document.getElementById("formContainer");//in the DOM
         formContainer.innerHTML = "";
         formContainer.style.display= "block";
+
+    console.log("All forms are empty!");
 }
 
 function endOfChapter()

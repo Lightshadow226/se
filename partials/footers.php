@@ -29,7 +29,7 @@
 <!-- Publisher ID: ca-pub-5215030892730474 -->
 <!-- Customer ID: 4063247438 -->
 <ins class="adsbygoogle"
-    style="display:block"
+    style="display:block; text-align: center;"
     data-ad-client="ca-pub-5215030892730474"
     data-ad-slot="2669137948"
     data-ad-format="auto"></ins>

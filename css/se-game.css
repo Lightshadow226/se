@@ -332,7 +332,7 @@
 
 /*CHAPTER 0 - CHOOSE YOUR DEPARMENT FORM*/
 
-    .form_container
+    .formContainer
     {
         position: absolute;
         display: flex;
@@ -353,7 +353,7 @@
         z-index: 100;
     }
 
-    .form_container-small
+    .formContainer-small
     {
         position: absolute;
         display: flex;
