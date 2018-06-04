@@ -24,8 +24,8 @@ function Chapter()
         "(I can’t believe it! Yesterday had been so busy that I had completely forgotten to check where my classes are!)",
         "(I groaned and slapped my forehead. Then, I took out my phone and checked my schedule.)",
         "Well, now I know the room number, but how in the world am I going to know where that room is? This school is huge! ",//5 
-        "*Sigh*",
-        "(I guess I might as well find someone to help me… That is, if there’s anybody who isn't a;ready in class right now.)",
+        "<em>Sigh</em>",
+        "(I guess I might as well find someone to help me… That is, if there’s anybody who isn't already in class right now.)",
         "Err… (My stomach started rumbling really loudly.)",//8 POPUP
         "I’m already late, might as well get breakfast and avoid starvation.",
         "null",//10 
@@ -71,7 +71,7 @@ function Chapter()
         "(She went through the attendance list before her finger stopped at one name.)",//50 
         "(Murmurs and whispers travelled around the room at the mention of my scholarship. I felt my cheeks burn.)",
         "(The whispers died.)",
-        "(I could barely talk with all those eyes on me and, in my nervousness, my voice came out weakly)",
+        "(I could barely talk with all those eyes on me and, in my nervousness, my voice came out weakly.)",
         "I-I couldn’t find this classroom…",
         "(I heard a couple of giggles. The teacher gave me a stern, but understanding look.)",//55 
         "(I let out a little sigh.)",
@@ -106,14 +106,14 @@ function Chapter()
         "(It suddenly felt like the class’ temperature dropped several degrees.)",//85 
         "(Tadashi narrowed his eyes at them.)",
         "(Next)",
-        "(I had never seen Karolina blush before… She looks pretty embarrassed.)",
+        "(I had never seen Karolina blush before… She looked pretty embarrassed.)",
         "(She firmly clutched her makeup case, looking a little weak, and avoided his gaze. Why did Tadashi’s words hit her like that?)",
         "(Next)",//90 
         "(Tadashi groaned.)",
         "(My mind darted back to earlier, to the boy I met in the cafeteria.)",
         "Wait, does he have dark hair with blonde tips, brown eyes, and piercings?",
         "(I stared at Raquel, perplexed.)",
-        "You mean… He’s actually famous?!",//95 
+        "You mean… he’s actually famous?!",//95 
         "(They all looked at me funny.)",//96 Special Background Class 1
         "(Next)",
         "(Next)",
@@ -140,7 +140,7 @@ function Chapter()
         "(Next)",
         "(Next)",//120 
         "(Next)",
-        "Um, hey Tegan!",
+        "Um, hey, Tegan!",
         "(Tegan gave me a small smile.)",
         "(Next)",
         "I’m new here! My name is " + user.scholarname + ".",//125 
@@ -276,8 +276,8 @@ function Chapter()
         "He was in the cafeteria this morning. ",//255 
         "(Tadashi took a step back, the anger in his eyes slowly fading away to make place for satisfaction.)",
         "(He left quickly, walking straight towards the cafeteria.)",
-        "(Great thinking " + user.scholarname + ", you try to make friends, but you only end up making the number one ranked kid of the Academy mad at you.)",
-        "*Sigh*",
+        "(Great thinking, " + user.scholarname + ", you try to make friends, but you only end up making the number one ranked kid of the Academy mad at you.)",
+        "<em>Sigh</em>",
         "(I should try talking to someone else.) ",//260 
         "null",
         "(I entered the cafeteria, which was already full of people.)",
@@ -349,7 +349,7 @@ function Chapter()
         "(When I entered the dorms, I heard a few sobs coming from the bathrooms.)",
         "(Curious, I walked over to the door.)",
         "(That’s when I heard a familiar voice...)",//330 
-        "(Were those… Tears in her eyes?)",
+        "(Were those… tears in her eyes?)",
         "(She looked very distressed, and it was making me a little concerned. Karolina didn’t seem like the type of person that could be easily shaken.)",
         "(I decided to make my presence known.)",
         "Hey, Karolina? Are you okay?",
@@ -376,11 +376,11 @@ function Chapter()
         "(I was getting more and more upset.)",//355 
         "(Karolina cleared her throat and took her makeup bag with her.)",
         "(She left the bathroom without saying anything else.)",
-        "Ugh! (I felt so enraged… And hurt.)",
+        "Ugh! (I felt so enraged… and hurt.)",
         "(I can’t believe how quickly her opinion about me changed… Just yesterday, she was being civil and now, I’m not good enough to even <em>speak</em> to her?!)",
         "(How many students were like Karolina? How many of them would treat me this way because of my scholarship?)",//360 
         "(Would I even be able to make some friends at Arlington? Especially considering I have someone like Karolina as my dorm neighbor...)",
-        "*Sigh*",
+        "<em>Sigh</em>",
         "null",
         "(I made my way to the second hallway, where I spotted Neha sitting on one of the couches.)",
         "(She was scribbling what looked like clothes in a sketchbook.)",//365 
@@ -389,7 +389,7 @@ function Chapter()
         "(...)",
         "(I can’t let Karolina intimidate me like this. If Neha and I get along, there’s nothing she can do about it.)",
         "Hey. Neha!",//370 
-        "(She jumped slightly out of surprise, she must have been very focused on her designs.)",
+        "(She jumped slightly out of surprise. She must have been very focused on her designs.)",
         "Oh, okay. (She was much more aloof now compared to yesterday.)",
         "(Was it because she heard about my scholarship?)",
         "…",
@@ -414,7 +414,7 @@ function Chapter()
         "(Next)",
         "(It’s pretty sad to be this closed off to people. Is Karolina this hard to befriend? Should I even bother?)",
         "Yeah… After seeing her so distressed I tried to ask her if she was alright, but…",//395 
-        "*Sigh*",
+        "<em>Sigh</em>",
         "She told me to stay away from you and Tadashi. She told me you guys didn’t need a 'useless scholarship student' as a friend.",
         "(Next)",
         "(Next)",
@@ -499,7 +499,7 @@ function Chapter()
         "null",
         "(After searching all over the school, I ended up meeting pretty much everyone except Axel.)",
         "(I sighed, dejected. I would’ve really wanted to talk to him more. It was really cool of him to show me to my class this morning.)",//480 
-        "(The bell was about to ring, I began to gather my things from my locker and was about to head my classroom when...)",
+        "(The bell was about to ring. I began to gather my things from my locker and was about to head my classroom when...)",
         "(I swiftly turned around to see Tadashi grabbing Axel by the sleeve.)",
         "(Tadashi did not look very happy.)",
         "(Next)",
@@ -524,7 +524,7 @@ function Chapter()
         "(Axel and Tadashi’s yells became more and more infuriated and teachers were starting to spot the crowd.)",
         "(Somebody had to do something before they got in trouble.)",
         "(From across the crowd, Karolina seemed to sense my intention and gave me a warning look.)",//505 
-        "(I’m going to deal with her later, for now...)",
+        "(I’m going to deal with her later. For now...)",
         "null",
         "(I pushed my way into the center where Tadashi and Axel stood.)",
         "It sucks to be followed around by all those cameras, but Tadashi’s right. ",
@@ -552,7 +552,7 @@ function Chapter()
         "(Tadashi gave me a grateful smile. It felt nice to know that I had a friend here, especially after all I went through today.)",
         " (I glanced at Karolina. She was still there despite the crowd beginning to disperse.)",
         "(She didn’t look too pleased with my actions.)",
-        "(But after a few moment, she gave me a scoff and left for her class.)",
+        "(But after a few moments, she gave me a scoff and left for her class.)",
         "(I pushed my way into the center where Tadashi and Axel stood.)",//535 
         "Tadashi, he’s got a lot to deal with already with his career. He didn’t ask for the paparazzi.",
         "Can’t the school do anything to help him? He’s here to learn, not to take unwanted photoshoots. ",
@@ -600,12 +600,12 @@ function Chapter()
         "(Next)",
         "(Next)",//580 
         "(Next)",
-        "(Tadashi was about to lose his temper again, I stepped in before the fight could escalate even more.)",
+        "(Tadashi was about to lose his temper again. I stepped in before the fight could escalate even more.)",
         "Come on, Tadashi, teachers are coming this way. ",
         "(Next)",
         "(Next)",//585 
         "(Next)",
-        "(Axel snuckout of the crowd so stealthily that I lost sight of him in a matter of seconds.)",
+        "(Axel snuck out of the crowd so stealthily that I lost sight of him in a matter of seconds.)",
         "(As the crowd scattered, I spotted Alistair and Raquel.)",
         "(They smiled at me and nodded approvingly.)",
         " (Karolina, however, seemed to be trying to kill me with her glare.)",//590 
@@ -618,7 +618,7 @@ function Chapter()
         "(I’ve been at Arlington for less than two days and I already feel like I need a vacation.)",
         "(Dad warned me about this school, he told me that students here are not like back home. He heard stories.)",
         "(I thought he was exaggerating, and of course, I know that not everyone here is like that, but… can I really be one of them?)",
-        "*Sigh*",//600 
+        "<em>Sigh</em>",//600 
         "(I can’t give up now. Sure, there are some people that are going to judge me like Karolina did, but maybe I can be friends with those who don’t? Like Raquel and Alistair?)",
         "(I should at least try to get to know some people better.)",
         "(I got invited to Raquel’s party, that’s already a good start!)",
@@ -635,7 +635,7 @@ function Chapter()
         "(Once in my dorm, I let myself crash on my bed.)",
         "(Raquel told me the party starts when Arlington’s cocktail starts, so I still have a couple more hours.)",//615 
         "(The music’s probably going to be loud, so I’ll know when to leave.)",
-        "*Sigh*",
+        "<em>Sigh</em>",
         "(I looked around my dorm and groaned. Everything was so messy due to me rushing out this morning.)",
         "(But somehow, I couldn’t bring myself to clean up. I was anxious and exhausted, and the combination of both felt very weird.)",
         "(...)",//620 
@@ -812,14 +812,14 @@ function Chapter()
         "(Karolina’s cup fell out of her hand and the water spilled everywhere.)",
         "(People started gasping around us.)",
         "(I tried hard not to panic and followed my first rational instinct. I went close to Karolina’s face and checked if she was breathing.)",
-        "*Sigh*",
+        "<em>Sigh</em>",
         "It looks like she only passed out. ",//795 
         "(Next)",
         "(Next)",
         "(Next)",
         "(People around us started looking at Karolina funny, thinking she passed out due to alcohol.)",//799 POPUP
         "(But she only had water in her cup. Neha and I saw her.)",//800 
-        "(What was going on? Why did she faint?!)",
+        "(What is going on? Why did she faint?!)",
         "… Yeah, let’s get her to her dorm. People are going to stare.",
         "(We made sure Karolina’s body was secure in our arms. Thankfully, her dorm was right next to Raquel’s.)",
         "(Neha and I carefully placed Karolina on her bed.)",//804 Different Dorm…
@@ -831,7 +831,7 @@ function Chapter()
         "(I was about to call an ambulance when Karolina groaned and slowly opened her eyes.)",//810 
         "(Neha jumped out of her chair.)",
         "(Next)",
-        "(She stopped when she spotted me, her face losing all emotions from her face in a split second.)",
+        "(She stopped when she spotted me, her face losing all emotions in the split of a second.)",
         "(Next)",
         "(Next)",//815 
         "(Next)",
@@ -890,7 +890,7 @@ function Chapter()
         "null",
         "Come on, follow me!",
         "null",
-        "Alright new kid, let’s get you to class before you blow up.",//35 
+        "Alright, new kid, let’s get you to class before you blow up.",//35 
         "null",//36 Objective Complete: Get some breakfast at the Cafeteria! 
         "null",
         "null",
@@ -953,7 +953,7 @@ function Chapter()
         "null",//95 
         "null",//96 Special Background Class 1
         "null",
-        "He’s very popular- I’m surprised you haven’t heard of him. He’s all over social media. He even does the bit where he strips and throws his shirt into the audience.",
+        "He’s very popular. I’m surprised you haven’t heard of him. He’s all over social media. He even does the bit where he strips and throws his shirt into the audience.",
         "null",
         "null",//100 
         "He may be famous, but he needs to get his high school diploma. Unfortunately for us, that means dealing with the crazy fangirls in the hallway and constantly trying to hunt him down in this goddamn school.",
@@ -1074,7 +1074,7 @@ function Chapter()
         "The younger ones always go nuts for this school. They want to meet everyone, haha!",
         "Just a heads up, they will ask you thousands of questions about you and your life and won’t let you go until you answer them all. ",
         "Hopefully! Or else you won’t stand a chance.",
-        "*Sigh*",
+        "<em>Sigh</em>",
         "Of course! Especially when you’re the oldest one. ",//220 
         "But I wouldn’t change it for the world.",
         "It was really hard leaving them. I call them every night but it just isn’t the same. ",
@@ -1083,12 +1083,12 @@ function Chapter()
         "Yeah!",//225 
         "Seeing you earlier in class reminded me of how I felt when I first came here. The people here are nothing like back home. ",
         "But you’ll get the hang of it. I already had Tadashi when I came here, but it’s not as hard as you think to make friends.",
-        "I know it’s hard to believe but… Some of the people here have been through a lot. ",
+        "I know it’s hard to believe, but… Some of the people here have been through a lot. ",
         "They might seem closed off to you at first, but, despite their social background, they really aren’t as intimidating as you think. ",
         "Anyway, I’ve got to finish my reps. See you around school!",//230 
         "null",
         "null",
-        "Hey " + user.scholarname + ", I meant to ask you: Have you seen Axel anywhere? I really need to talk to that jerk or the school’s staff will be chasing us both down. ",
+        "Hey, " + user.scholarname + ", I meant to ask you: Have you seen Axel anywhere? I really need to talk to that jerk or the school’s staff will be chasing us both down. ",
         "null",
         "Seriously? I’m surprised he hasn’t snapped at you.",//235 
         "How did you tame the dragon?",
@@ -1104,7 +1104,7 @@ function Chapter()
         "Yeah, that’s why I’ve really got to find him before they demolish our gate. ",
         "Thanks for the intel, I owe you one. ",
         "null",
-        "Look " + user.scholarname + ", I can spot a liar from miles away. ",
+        "Look, " + user.scholarname + ", I can spot a liar from miles away. ",
         "I don’t think you understand the situation he’s in… and even more importantly, the situation <em>I’m</em> in. ",//250 
         "Axel has been breaking too many rules, and he’s attracting too much outside attention. Paparazzi is everywhere. The only thing keeping them from entering school grounds are the guards near the gate. ",
         "The school doesn’t like that and they’re putting all the pressure on me to find Axel and make him deal with his paparazzi. It’s absolute <em>hell</em> for me and, as you can probably tell, I have better, more interesting things to do. ",
@@ -1206,7 +1206,7 @@ function Chapter()
         "null",
         "null",
         "Ha! You’ve got quite an attitude yourself. If you weren’t you, I’d probably admire that.",//350 
-        "Want my advice though? Tone it down when you’re speaking to someone clearly better than you.",
+        "Want my advice, though? Tone it down when you’re speaking to someone clearly better than you.",
         "null",
         "null",
         "I don’t need someone as useless as you to worry about me.",
@@ -1275,14 +1275,14 @@ function Chapter()
         "null",
         "null",
         "No… I don’t care. Karolina might not like it, but I think we get along decently.",
-        "But she means a lot to me, and when I’m hanging out with her, I’d rather you not being there. I hate seeing her upset, especially with whatever is bothering her right now…",//420 
+        "But she means a lot to me, and when I’m hanging out with her, I’d rather you not be there. I hate seeing her upset, especially with whatever is bothering her right now…",//420 
         "It’s nothing personal.",
         "null",
         "Maybe. I mean, I’ve only known you for a day and a half. But if you’re willing to help me find out what’s upsetting Karolina, then I’m definitely going to consider.",
         "Be subtle about it, though.",
         "I have to go. I’m supposed to be launching my new collection in two weeks and I’m already filled with pre-orders.",//425 
         "<em>Clothes?</em> They are more than just <em>clothes</em>. ",
-        "And yes, they usually sell out pretty quickly so place an order as soon as you can if you’re interested. Please contact me via any of my social media accounts. I do <em>not</em> negotiate prices and I do not customize my pieces. No returns or refunds accepted, only exchanges. Thank you for your interest.",
+        "And yes, they usually sell out pretty quickly, so place an order as soon as you can if you’re interested. Please contact me via any of my social media accounts. I do <em>not</em> negotiate prices and I do not customize my pieces. No returns or refunds accepted, only exchanges. Thank you for your interest.",
         "null",
         "null",
         "null",//430 
@@ -1291,7 +1291,7 @@ function Chapter()
         "null",
         "It’s just a weekly robotics club meeting. We’re almost done, so you can use the classroom soon.",
         "Okay!",//435 
-        "So remember guys, the competition is in two months, and Arlington has not lost in five years. ",
+        "So, remember guys, the competition is in two months, and Arlington has not lost in five years. ",
         "Let’s give it our best shot! First designs are due next week and we start building in two. ",
         "Alright, see you guys on Friday!",
         "First meeting of the year? Check!",
@@ -1558,7 +1558,7 @@ function Chapter()
         "null",//700 
         "Well, you made the situation much easier for me to handle. ",
         "Tadashi would’ve been on my ass forever if you hadn’t come!",
-        "Ha! You seemed like you were about burst! You know, people usually tend to avoid going to class. I don’t know why you seemed so eager to get there.",
+        "Ha! You seemed like you were about to burst! You know, people usually tend to avoid going to class. I don’t know why you seemed so eager to get there.",
         "null",
         "So I can expect you to skip after the first day of class?",//705 
         "I get it. Don’t be like me. Trust me, having Tadashi chase you for hours just because you skipped a class isn’t worth it. ",
@@ -2599,13 +2599,13 @@ function Chapter()
         "null",
         "Dude, you sleep until 2 P.M. during weekends.",
         "null",
-        "Try waking up at 5 A.M on every school day because of Athletics Department's mandatory morning training, Tadashi. You learn to cherish sleep like it’s gold. Right, Alistair?",//70 
+        "Try waking up at 5 A.M on every school day because of the Athletics Department's mandatory morning training, Tadashi. You learn to cherish sleep like it’s gold. Right, Alistair?",//70 
         "null",
         "Ms. Pereira-Camargo and Mr. Drew, do you have anything you’d like to say to the rest of the class? ",
         "null",
         "Well, I’d sure hope so, judging by your lack of motivation and poor performance in my class last year. I expect some improvement. ",
         "null",//75 
-        "One more word and it’s detention for you, Ms. Pereira Camargo. ",
+        "One more word and it’s detention for you, Ms. Pereira-Camargo. ",
         "null",
         "null",
         "Oh, look at that, the great Karolina Nováková decided to grace us with her words.",
@@ -2647,7 +2647,7 @@ function Chapter()
         "null",//115 
         "null",
         "null",
-        "I wasn’t even back at Arlington, haha! Just came back this morning. I had, that <em>thing</em>, remember?",
+        "I wasn’t even back at Arlington, haha! Just came back this morning. I had that <em>thing</em>, remember?",
         "null",
         "Goddammit, is it Axel again?",//120 
         "null",
@@ -3026,7 +3026,7 @@ function Chapter()
         "I’m going to have to deny your request. ",
         "null",//495 
         "I don’t care what you or this school wants. My whole freaking life is about dealing with shit the media throws on me. ",
-        "I’m not going to listen to some stuck up guy who think he’s important just because he won some oh-so-prestigious student council presidency.",
+        "I’m not going to listen to some stuck-up guy who thinks he’s important just because he won some oh-so-prestigious student council presidency.",
         "I’ve literally slept four hours in the last three days because, unlike you, I’m making some real money thanks to my <em>real</em> fans.",
         "So <em>I</em> have a favour to ask you: LEAVE ME ALONE!",
         "null",//500 
@@ -3043,7 +3043,7 @@ function Chapter()
         "null",
         "null",
         "null",
-        "Watch out, newbie. Next thing you know Tadashi’s going to make you his minion.",
+        "Watch out, newbie. Next thing you know, Tadashi’s going to make you his minion.",
         "null",//515 
         "null",
         "null",
@@ -11217,7 +11217,7 @@ function Chapter()
         "null",//315 
         "null",
         "null",
-        "Well, I was wondering why you were so interested in the school’s medical herbs?",
+        "Well, I was wondering why you were so interested in the school’s medical herbs.",
         "null",
         "null",//320 
         "null",
@@ -11406,7 +11406,7 @@ function Chapter()
         "null",
         "null",//505 
         "null",
-        "(I’m going to help Tadashi)",
+        "(I’m going to help Tadashi.)",
         "null",
         "null",
         "null",//510 
@@ -11926,7 +11926,7 @@ function Chapter()
         "null",
         "null",
         "null",
-        "Oh cool! What’s your sport?",//190 
+        "Oh, cool! What’s your sport?",//190 
         "null",
         "null",
         "null",
@@ -11969,7 +11969,7 @@ function Chapter()
         "null",//230 
         "null",
         "null",
-        "(Lie to him)",
+        "(Lie to him.)",
         "null",
         "null",//235 
         "null",

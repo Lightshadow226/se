@@ -1,6 +1,11 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
 
+# Version 1.14.18 (Spelling/Grammar Fixes by the Betas)
+## Modified
+- `chapter0.xlsx/js`  `chapter1.xlsx/js`  `chapter2.xlsx/js` `variables.js`  `help.php`
+    - Spelling and Grammar fixes
+
 # Version 1.14.14 (Email & Male Scholar fixes)
 ## Fixed
 - `parseSignup.php`     `parsePasswordReset.php`

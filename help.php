@@ -92,7 +92,7 @@
                 <p>Once we release the full version of the game, we will also explain the different ways you'll be able to get energy and money. Thank you for your patience!<p></br>
 
                 <h2>What are replays and how do they work?</h2>
-                <p>Replays give you the ability to re-start your story from a certain chapter and make different choices. For example, if you want to replay Chapter 1, your data about Chapter 0 will be saved, but it will be as if you had never played Chapters 1 and 2. The inifnity points you have accumulated will be reverted. You will, however, keep your unlocked illustrations and achievements!</p><br>
+                <p>Replays give you the ability to re-start your story from a certain chapter and make different choices. For example, if you want to replay Chapter 1, your data about Chapter 0 will be saved, but it will be as if you had never played Chapters 1 and 2. The infnity points you have accumulated will be reverted. You will, however, keep your unlocked illustrations and achievements!</p><br>
             </div>
 
             <div id="cat4" class="tabcontent">
@@ -100,14 +100,14 @@
                 <p>The Infinity Meter is Sweet Elite’s version of the Otome “love meter” that shows your relationship with a certain character. The higher the percentage, the more the character likes you! Unlike other meters though, the Infinity Meter is designed to showcase both your friendships and romances with each character!</p><br>
 
                 <h2>Why is it called the Infinity Meter?</h2>
-                <p>Because, why not?</p><br>
+                <p>Why not?</p><br>
 
                 <h2>How does the Infinity Meter work?</h2>
                 <p>The Infinity Meter allows your Scholar to choose whether they’ll stay friends with a character, or move into the romance route.</p><br>
                 <p>You can have two stages in your relationship with a character, and thus, in your Infinity Meter:</p>
                 <ul><b>0 to 51 Points:</b> Friendship Stage. Both romance and friendship options raise your meter until 51.</ul>
                 <ul><b>52 to 100 Points:</b> Romance stage. You can only get to that stage if you chose the romance option at 51 affinity. If you keep choosing friendship options, your meter will not go up!</ul>
-                <br><p>If you want a more in-depth explanation, <a href="http://sweetelite-staff.tumblr.com/post/146021399493/sweet-elites-infinity-meter#notes">Click here!</a></p><br>
+                <br><p>If you want a more in-depth explanation, <a href="http://sweetelite-staff.tumblr.com/post/146021399493/sweet-elites-infinity-meter#notes">click here!</a></p><br>
                 
                 <h2>Can I raise my romance and/or Infinity points with more than one character?</h2>
                 <p>Of course you can! But at some point, you will need to choose who your ultimate crush is :)</p><br>
@@ -117,12 +117,12 @@
                 <p>Do not ask any of the staff members for the answers! We won't tell you. Play with friends instead :)<p><br>
 
                 <h2>What are the romance and friendship options?</h2>
-                <p>The Infinity Meter allows your Scholar to choose whether they’ll stay friends with a character, or move into the romance route. Depending on if you choose romance or friendship, the dialogs will change and the story will adapt to that choice!</p><br>
+                <p>The Infinity Meter allows your Scholar to choose whether they’ll stay friends with a character, or move into the romance route. Depending on whether you choose romance or friendship, the dialogs will change and the story will adapt to that choice!</p><br>
 
                 <h2>How will I know when to choose a friendship or romance option?</h2>
                 <p>As you're playing, once a character gets to the point in the dialogue that requires a response from the you, these buttons will come up:</p><br>
                 <p><img src="_new_images_folder/romancefriendship.jpg"></p><br>
-                <p>Before you continue you will have to choose the Friendship (Handshake) or Romantic (Heart). Which ever you choose will then give you three dialogue options to choose from; Positive, negative or neutral options that will effect your affinity with that character as such.</p><br>
+                <p>Before you continue, you will have to choose the Friendship (Handshake) or Romantic (Heart). Whichever you choose will then give you three dialogue options to choose from; Positive, negative or neutral options that will affect your affinity with that character as such.</p><br>
                 
                 <h2>What happens if I have the same amount of infinity with more than one character?</h2>
                 <p>When that happens, we will randomize between them to give you your Highest Infinity character.</p><br>
@@ -134,7 +134,7 @@
                 <p>Illustrations can differ greatly. They can be your Scholar hanging out with friends, or a full on date with your crush! You'll just have to wait and see. Every chapter will have at least one illustration available to unlock.</p><br>
 
                 <h2>How do I get illustrations?</h2>
-                <p>As you're playing the game, you will need to make the right combinations of choices to get the illustrations. This could be only one dialog choice, or a set of them. Once you unlock an illustration, it is unlocked for life! You can replay chapters in order to collect all illustrations.</p><br>
+                <p>As you're playing the game, you will need to make the right combination of choices to get the illustrations. This could be only one dialog choice, or a set of them. Once you unlock an illustration, it is unlocked for life! You can replay chapters in order to collect all illustrations.</p><br>
 
                 <h2>Can I change my Scholar’s appearance in the illustrations?</h2>
                 <p>You can do that by going to "My Dorm", clicking on the wardrobe and making your changes. All of your unlocked illustrations will be changed to reflect your new appearance!</p><br>
@@ -218,7 +218,7 @@
                 <h2>You copied Mystic Messenger’s 707. </h2>
                 <p>Listen, we get it. They look similar. But no, we did not copy 707. Read about it <a href="http://sweetelite-staff.tumblr.com/post/170126706338/not-to-be-rude-but-you-literally-ripped-off-707#notes">here.</a></p><br>
 
-                <h2>Can I make a Sweet Elite fan blog? Fan art? Fan fiction?Can I post my walkthroughs and guides of the episodes?</h2>
+                <h2>Can I make a Sweet Elite fan blog? Fan art? Fan fiction? Can I post my walkthroughs and guides of the episodes?</h2>
                 <p>Yes, yes, yes and yes! Of course you can do these things! :)</p><br>
 
                 <h2>Who is the Staff’s favorite character?</h2>

@@ -95,11 +95,11 @@ function Chapter()
         "(Next)",
         "null",//75 
         "null",
-        "O-kay! (Shoot, they looked a little mad.)",
+        "O-Okay! (Shoot, they looked a little mad.)",
         "See you later! (I think that went okay.)",
         "Later! (That went pretty well!)",
         "null",//80 
-        "O-kay! (Shoot, they looked a little mad.)",
+        "O-Okay! (Shoot, they looked a little mad.)",
         "See you later! (I think that went okay.)",
         "Later! (That went pretty well!)",
         "null",
@@ -123,7 +123,7 @@ function Chapter()
         "(Lady Arlington turned to look at us.)",
         "(Her eyes met mine and...)",
         "(She dropped my paperwork on the ground.)",
-        "(The principal looked at me as if she had just seen a ghost. The longer she stared at me, the more anxious I felt. It got to the point that I didn't know where to look)",//105 
+        "(The principal looked at me as if she had just seen a ghost. The longer she stared at me, the more anxious I felt. It got to the point that I didn't know where to look.)",//105 
         "W-Wait! (But " + CharaX_username + " just left the hallway, leaving me alone with the principal.)",
         "(Her look lingered for a couple of seconds. I could feel myself beginning to sweat a little as her eyes pierced my soul.)",
         "(END OF CHAPTER 0)",
@@ -176,7 +176,7 @@ function Chapter()
         "By clicking on the wardrobe, you can change your appearance and your outfit!",
         "Clicking on your bag will bring you out to the city! Of course, the city is still unavailable for now. But once the full version of the game is released, you’ll gain access to shops and mini-games!",
         "Click on the laptop on your desk and you’ll be transported right here, in the game!",//45 
-        "Finally, you can click on the book on your desk to have access to all of the illustrations you’ve collected throughout your time at Arlington! You can also see how many achievements you’ve unlocked. Not many people manage to completely finish the game…maybe you’ll be one of them!",
+        "Finally, you can click on the book on your desk to have access to all of the illustrations you’ve collected throughout your time at Arlington! You can also see how many achievements you’ve unlocked. Not many people manage to completely finish the game… Maybe you’ll be one of them!",
         "The last thing I’m going to need you to do is to fill out this medical form. This is an important part of your file.",
         "null",
         "null",//49 Choose your name Form
@@ -228,11 +228,11 @@ function Chapter()
         "It looks like I underestimated you. That interaction was pretty smooth.",//95 
         "Haha! Well it seems like you’re ready to start your adventure here at Arlington.",
         "I’ll take you to the principal, Lady Arlington. She insists on welcoming all new students at the beginning of each year.",
-        "HA! She’s nice alright… Until you start breaking any rules.",
+        "HA! She’s nice alright… until you start breaking any rules.",
         "null",
         "null",//100 
         "null",
-        "Here’s one of the new scholarship students Ms. Arlington!",
+        "Here’s one of the new scholarship students, Ms. Arlington!",
         "null",
         "null",
         "null",//105 
@@ -1545,7 +1545,7 @@ function Chapter()
         "Can you repeat that please?",
         "null",
         "null",//70 
-        "Go Talk to the Person inside Classroom 1",
+        "Go talk to the person inside Classroom 1!",
         "null",
         "null",//73 Objective Complete: Go Talk to the Person inside Classroom 1
         "null",
@@ -1774,7 +1774,7 @@ function Chapter()
         "null",//73 Objective Complete: Go Talk to the Person inside Classroom 1
         "null",
         "null",//75 
-        "Thank you! I’m so excited to start.",
+        "Thank you! I’m so excited to start!",
         "null",
         "null",
         "null",
