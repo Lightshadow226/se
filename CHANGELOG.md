@@ -2,7 +2,14 @@
 `Two tabs should work`
 
 # Version 1.15.1 (Forgot Password Hotfix)
+
+# Version 1.15.0 (Forms Hotfix)
 ## Fixed
+- `gameengine.js`   `se-game.css`
+    - formContainer vs form_container
+    - properly hide and unhide all forms before every form display
+
+- `footers.php`: centered google ads
 
 
 # Version 1.14.18 (Spelling/Grammar Fixes by the Betas)
