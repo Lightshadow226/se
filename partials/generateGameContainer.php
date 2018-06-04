@@ -67,7 +67,7 @@
     <!-- Objectives, Progress & Characters Container -->
     <div id="opcContainer">
 
-        <div id="slideCounter" style="position: absolute; right: 10px; top: 10px; -webkit-user-select: none;"></div>
+        <!-- <div id="slideCounter" style="position: absolute; right: 10px; top: 10px; -webkit-user-select: none;"></div> -->
 
         <span class="flex-container">
             <span class="flex-panel">

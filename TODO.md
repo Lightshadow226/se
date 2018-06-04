@@ -1,23 +1,4 @@
-﻿# OPTIMIZATION (TODO)
-`Git on cPanel:` https://documentation.cpanel.net/display/CKB/How+to+Host+Git+Repositories+on+a+cPanel+Account
-
-# GIT ON CPANEL
-ssh sweetelite@sweetelitegame.com
-git clone https://lightshadowman@gitlab.com/lightshadowman/se.git
-
-
-ssh sweetelite@sweetelitegame.com
-cd public_html/debug/tempFinalBeta/se
-git remote add origin https://lightshadowman@gitlab.com/lightshadowman/se.git
-git remote -v
-
-
-ssh sweetelite@sweetelitegame.com
-cd public_html/debug/tempFinalBeta/se
-git pull origin dev --tags
-git pull origin release --tags
-
-
+﻿
 https://www.google.ca/search?q=ajax+how+to+detect+slow+network&oq=ajax+how+to+detect+slow+network&aqs=chrome..69i57j69i60l4j69i59.7065j0j7&sourceid=chrome&ie=UTF-8
 
 # TODO NEXT

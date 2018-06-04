@@ -19,3 +19,19 @@ Git Commands:
     `git tag v1.1.1`
 4. push all commits to gitlab on the branch "master" (you don't have to push for every commit; you can push after a few commits; however, you have to commit your changes often)
     `git push gitlab master --tags`
+
+# GIT ON CPANEL
+ssh sweetelite@sweetelitegame.com
+git clone https://lightshadowman@gitlab.com/lightshadowman/se.git
+
+
+ssh sweetelite@sweetelitegame.com
+cd public_html/debug/tempFinalBeta/se
+git remote add origin https://lightshadowman@gitlab.com/lightshadowman/se.git
+git remote -v
+
+
+ssh sweetelite@sweetelitegame.com
+cd public_html/debug/tempFinalBeta/se
+git pull origin dev --tags
+git pull origin release --tags

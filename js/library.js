@@ -1521,8 +1521,8 @@ function refreshTestContainer()// affiche des données par rapport à la prev/cu
     // $('#daInput').focus();
     // daInput.placeholder = user.storyLocation;
     
-    var slideCounter = document.getElementById('slideCounter');
-        slideCounter.innerHTML = user.storyLocation;
+    // var slideCounter = document.getElementById('slideCounter');
+    //     slideCounter.innerHTML = user.storyLocation;
 
     var text = "";
     
