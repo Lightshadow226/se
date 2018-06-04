@@ -10,6 +10,10 @@ ssh sweetelite@sweetelitegame.com
 cd public_html/debug/tempFinalBeta/se
 git remote add origin https://lightshadowman@gitlab.com/lightshadowman/se.git
 git remote -v
+
+
+ssh sweetelite@sweetelitegame.com
+cd public_html/debug/tempFinalBeta/se
 git pull origin dev --tags
 git pull origin release --tags
 

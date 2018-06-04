@@ -539,7 +539,7 @@ function refreshInterface()
         {
             HideForms();
             unHideForms();
-            
+
             var form_names = [  "Department of Business, Commerce, and Politics",
                                 "Department of Perfoming Arts",
                                 "Department of Pure and Applied Sciences",
@@ -550,6 +550,7 @@ function refreshInterface()
 
             var formContainer = document.getElementById('formContainer');
                 formContainer.className = "formContainer";
+                formContainer.style.display = "flex";
 
             var formHeader = document.createElement('h6');
                 formHeader.innerHTML = "Choose your Department";
