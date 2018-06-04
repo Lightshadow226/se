@@ -115,6 +115,7 @@
 		{
 			deletePopup();
 			console.log("Yes");
+			resetAllProgress();
 		}
 
 		//override the onclick of the buttons

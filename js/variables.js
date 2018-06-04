@@ -731,18 +731,18 @@ var user =
     scholarname: 'None',
     dateofbirth : "XX-XX-XXXX",
     gender: 0,//0: she, 1: he, 2: they
-    sex: 'scholar_sex',//0: female, 1: male
-    department: 'scholar_department',
-    haircolor: 'scholar_haircolor',
-    hairstyle: 'scholar_hairstyle',
-    skincolor: 'scholar_skincolor',
-    eyecolor: 'scholar_eyecolor',
-    wigID: 'wig_id',
-    shirtID: 'shirt_id',
-    pantsID: 'pants_id',
-    socksID: 'socks_id',
-    shoesID: 'shoes_id',
-    accessoryID: 'accessory_id',
+    sex: 0,//0: female, 1: male
+    department: 0,
+    haircolor: 0,
+    hairstyle: 0,
+    skincolor: 0,
+    eyecolor: 0,
+    wigID: 0,
+    shirtID: 0,
+    pantsID: 0,
+    socksID: 0,
+    shoesID: 0,
+    accessoryID: 0,
     
     //STORY table
     storyLocation: 0,

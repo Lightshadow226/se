@@ -727,6 +727,8 @@ $(document).keyup(function(e)//when we press a key
     }
 });
 
+/*****POPUPS *****/
+
 function clearPopup()
 {
     var popup_container = document.getElementById("popup-container");
@@ -760,6 +762,9 @@ function popup(message, type)
             popup.id = "popup";
             popup.innerHTML = message;
 
+    parent.appendChild(popupContainer)
+        popupContainer.appendChild(popup);
+            
     if(type == "yes/no")
     {
         var yesButton = document.createElement('div');
@@ -772,10 +777,8 @@ function popup(message, type)
             noButton.className = "button pink_button popupButton";
             noButton.onclick = function(){deletePopup()};
     
-        parent.appendChild(popupContainer)
-            popupContainer.appendChild(popup);
-            popupContainer.appendChild(yesButton);
-            popupContainer.appendChild(noButton);
+        popupContainer.appendChild(yesButton);
+        popupContainer.appendChild(noButton);
 
         return [yesButton, noButton];
         
@@ -788,9 +791,7 @@ function popup(message, type)
             okButton.className = "button pink_button";
             okButton.onclick = function(){deletePopup()};
 
-        parent.appendChild(popupContainer)
-            popupContainer.appendChild(popup);
-            popupContainer.appendChild(okButton);
+        popupContainer.appendChild(okButton);
 
         return [okButton];
     }
@@ -824,7 +825,7 @@ function deletePopup()
     document.getElementById('popupHandler').style.display= "none";
 }
 
-//this function should be move to chapter0.php or.js
+//this function should be moved to chapter0.php or.js
 function toggle_pronouns(clicked, one, two)
 {
     clicked.classList.toggle("pronoun-button-selected");
@@ -840,6 +841,197 @@ function toggle_pronouns(clicked, one, two)
     {
         return "null";
     }
+}
+/***** WIPING CHAPTERS AND USER DATA *****/
+
+function wipeChapter(i, chaptersWiped, totalChaptersToWipe, link)
+{
+    return new Promise((resolve, reject) =>
+    {
+        console.log("***** Promise loop: Chapter " + i + " start *****");
+        //change the script and append it to the HTML head
+        var scriptURI = 'js/chapters/chapter' + i + '.js';
+        
+        //wipe the variables from the chapter
+        var scriptLoaded = loadScriptAsync(scriptURI, i);
+            scriptLoaded.then//only execute this when the script is loaded
+            (
+                function ()
+                {
+                    chaptersWiped++;
+                    console.log("Wiped Ch. " + i + " (" + chaptersWiped + "/" + totalChaptersToWipe + ")");
+
+                    if(chaptersWiped == totalChaptersToWipe)
+                    {
+                        if(link != "none")
+                        {
+                            console.log("All chapters wiped. Opening " + link);
+                            window.open(link, '_self');
+                        }
+                        
+                        console.log("*****Promise loop: Chapter " + i + " done *****");
+
+                        return resolve();
+                        console.log('THIS CODE SHOULD NOT BE RUNNING');
+                    }
+                    else
+                    {
+                        wipeChapter(i + 1, chaptersWiped, totalChaptersToWipe, link).then
+                        (
+                            function()
+                            {
+                                console.log("*****Promise loop: Chapter " + i + " done *****");
+
+                                return resolve();
+                            }
+                        );
+                    }
+                }
+            );
+    });
+}
+
+function loadScriptAsync(uri, id)
+{
+    return new Promise((resolve, reject) =>
+    {
+        var script = document.createElement('script');
+            script.id = "script" + id;
+            script.src = uri;
+            script.async = false;
+            script.onload = () =>
+            {
+                user.lastChapterPlayed = id;
+                console.log("\n\nSTARTING WIPING OF CH. " + id + " (" + user.lastChapterPlayed + ")\n\n");
+                wipeCurrentChapter();
+                destroyScriptAsync(id)
+                resolve();
+            };
+    
+        var head = document.getElementsByTagName('head')[0];
+            head.appendChild(script);
+    });
+}
+
+function destroyScriptAsync(id)
+{
+    return new Promise((resolve, reject) =>
+    {
+        var script = document.getElementById("script" + id);
+            script.onremove = () =>
+            {
+                console.log("Destroyed Ch. " + id + "/" + availableChapters);
+                resolve();
+            };
+    });
+}
+
+function resetAllProgress()
+{
+    console.log("*****RESETTING ALL USER PROGRESS!*****\n\n");
+    
+    console.log("RESETTING All Chapters\n\n");
+    // STEP 1: WIPE ALL CHAPTERS
+    var startingChapter = 0;
+    var chaptersWiped = startingChapter;
+    var totalChaptersToWipe = availableChapters;
+    
+    console.log("STEP 1");
+    wipeChapter(startingChapter, chaptersWiped, totalChaptersToWipe, "none").then
+    (
+        function ()
+        {
+            console.log("STEP 2");
+            
+            console.log("Done RESETTING All Chapters\n\n");
+            //STEP 2: WIPE ALL USER DATA
+            console.log("RESETTING all user data\n\n");
+            
+            //SCHOLARINFO table
+            user.scholarname = 'None';
+            user.dateofbirth = "XX-XX-XXXX";
+            user.gender = 0;//0= she; 1= he; 2= they
+            user.sex = 0;//0= female; 1= male
+            user.department = 0;
+            user.haircolor = 0;
+            user.hairstyle = 0;
+            user.skincolor = 0;
+            user.eyecolor = 0;
+            user.wigID = 0;
+            user.shirtID = 0;
+            user.pantsID = 1;
+            user.socksID = 0;
+            user.shoesID = 0;
+            user.accessoryID = 0;
+            
+            //STORY table
+            user.storyLocation = 0;
+            user.lastChapterPlayed = 0;
+            user.physicalLocationInt = backgrounds_path + locations.blackScreen;
+            
+            //AFFINITY table (Main 10)
+            user.karolina = 0;
+            user.ellie = 0;
+            user.neha = 0;
+            user.raquel = 0;
+            user.claire = 0;
+            user.alistair = 0;
+            user.tadashi = 0;
+            user.tegan = 0;
+            user.tyler = 0;
+            user.axel = 0;
+            
+            //AFFINITY table (Other)
+            user.ladyArlington = 0;
+            user.coach_davis = 0;
+            user.serena = 0;
+            user.cecile = 0;
+            user.teacherChapter2 = 0;
+            
+            pushVariablesToDB();
+            
+            console.log("Done RESETTING all user data\n\n");
+            //STEP 3: WIPE ALL ILLUSTRATIONS
+            console.log("RESETTING Illustrations\n\n");
+            
+            var allIllustrations =
+            [
+                0,//chapter 0
+                4,
+                2,
+            ]
+        
+            var toSave = "none";
+        
+            for(var i = 0; i < allIllustrations.length; i++)
+            {
+                for(var j = 1; j <= allIllustrations[i]; j++)
+                {
+                    toSave = "c" + i + "i" + j;
+                    saveIllustrationAchievement(toSave, "illustrations", 0);//we save 0
+                }
+            }
+            
+            console.log("Done RESETTING Illustrations\n\n");
+            //STEP 4: WIPE ALL ACHIEVEMENTS
+            console.log("RESETTING Achievements\n\n");
+            
+            var allAchievements = 4;
+        
+            var toSave = "none";
+        
+            for(var i = 0; i < allAchievements; i++)
+            {
+                toSave = "a" + i;
+                saveIllustrationAchievement(toSave, "achievements", 0);//we save 0
+            }
+        
+            console.log("Done RESETTING Achievements\n\n");
+            console.log("*****DONE RESETTING ALL USER PROGRESS*****\n\n");
+        }
+    );
+
+    console.log("STEP 3");
 }
 
 function wipeCurrentChapter()
@@ -929,7 +1121,7 @@ function verifyIllustration()
     if(toSave != "none")
     {
         console.log("New illustrationL: (" + toSave + ")");
-        saveIllustrationAchievement(toSave, "illustrations");
+        saveIllustrationAchievement(toSave, "illustrations", 1);
     };
 }
 
@@ -961,7 +1153,7 @@ function verifyAchievement()
 
         makePopup("You have unlocked a new achievement! <br> <br> Go to your dorm and click on the book to check it out.");
 
-        saveIllustrationAchievement(toSave, "achievements");
+        saveIllustrationAchievement(toSave, "achievements", 1);
     };
 }
 
@@ -973,14 +1165,15 @@ function visiting(slide, chapter)
     }
 }
 
-function saveIllustrationAchievement(code, type)
+function saveIllustrationAchievement(code, type, value)
 {
     var jsonData = {};
         jsonData['type'] = type;
         jsonData['column'] = code;
+        jsonData['value'] = value;
 
     // console.log("Saving I&A\n");
-    // console.log(jsonData);
+    console.log(jsonData);
 
     $.ajax('dbtransfers/saveachievements.php',
     {
@@ -1126,9 +1319,8 @@ function saveVariables()
             data: jsonData,
         }).done(function (response)
         {
-            console.log("\nSaved " + variablesString + ":");
+            console.log("Saved " + variablesString + ":");
             console.log(jsonData);
-            console.log("\n");
 
             resetOldUserValues();
         });

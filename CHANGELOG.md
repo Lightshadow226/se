@@ -1,6 +1,14 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
 
+# Version 1.14.16 (Reset Progress Button)
+## Added
+- `library.js`
+    - added the most beautiful recursive asynchronous function
+    - coded the reset all progress button in profile.php
+    - added a popup function
+
+
 # Version 1.14.15 (Added head.php, Updated Google Ads)
 ## Added
 - `head.php`: added the file and replaced all <head> tags
@@ -8,7 +16,7 @@
 ## Changed
 - `footers.php`
     - changed the google ads
-    
+
 
 # Version 1.14.14 (Email & Male Scholar fixes)
 ## Fixed

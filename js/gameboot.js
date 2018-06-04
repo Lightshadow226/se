@@ -183,7 +183,7 @@ async function get_button_consequence(index, replayType = 1)//replayType is opti
             var totalChaptersToWipe = availableChapters;
             var chaptersWiped = index;
 
-            loadScript(index, chaptersWiped, totalChaptersToWipe, index);
+            wipeChapter(index, chaptersWiped, totalChaptersToWipe, 'chapter' + index + '.php');
         }
         // b) achievement reset (replay for achievements)
         else if(replayType == 2)
@@ -214,69 +214,4 @@ async function get_button_consequence(index, replayType = 1)//replayType is opti
 
     //TODO: il va avoir un bug, mais il va falloir détecter quand un chapitre est terminé, A.K.A. quand le isVisited pour la dernière slide d'un chapitre = true en mode story
     //TODO: once we finish a chapter, the current chapter is the next one (if there's no next one, the current one is the last one and the progress is at 100%... FUCK, this is annoying)
-}
-
-function loadScript(i, chaptersWiped, totalChaptersToWipe, link)
-{
-    // for(var i = index; i < availableChapters; i++)//we delete every chapter from the one we selected until the current one (wipe selected chapter and subsequent chapters)
-    // {
-        //STEP 2: change the script and append it to the HTML head
-        var scriptURI = 'js/chapters/chapter' + i + '.js';
-        
-        // STEP 3: wipe the variables from the chapter
-        var scriptLoaded = loadScriptAsync(scriptURI, i);
-            scriptLoaded.then
-            (
-                function ()
-                {
-                    chaptersWiped++;
-                    console.log("Wiped Ch. " + i + " (" + chaptersWiped + "/" + totalChaptersToWipe + ")");
-
-                    if(chaptersWiped == totalChaptersToWipe)
-                    {
-                        console.log("All chapters wiped. Opening " + 'chapter' + link + '.php');
-                        window.open('chapter' + link + '.php', '_self');
-                    }
-                    else
-                    {
-                        loadScript(i + 1, chaptersWiped, totalChaptersToWipe, link);
-                    }
-                }
-            );
-    // }
-}
-
-function loadScriptAsync(uri, id)
-{
-    return new Promise((resolve, reject) =>
-    {
-        var script = document.createElement('script');
-            script.id = "script" + id;
-            script.src = uri;
-            script.async = false;
-            script.onload = () =>
-            {
-                user.lastChapterPlayed = id;
-                console.log("\n\nSTARTING WIPING OF CH. " + id + " (" + user.lastChapterPlayed + ")\n\n");
-                wipeCurrentChapter();
-                destroyScriptAsync(id)
-                resolve();
-            };
-    
-        var head = document.getElementsByTagName('head')[0];
-            head.appendChild(script);
-    });
-}
-
-function destroyScriptAsync(id)
-{
-    return new Promise((resolve, reject) =>
-    {
-        var script = document.getElementById("script" + id);
-            script.onremove = () =>
-            {
-                console.log("Destroyed Ch. " + id + "/" + availableChapters);
-                resolve();
-            };
-    });
 }
