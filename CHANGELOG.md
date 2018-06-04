@@ -1,6 +1,12 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
 
+# Version 1.14.17 (Minor Mobile Adaptation)
+## Changed
+- `.css`
+    - a few design changes
+
+
 # Version 1.14.16 (Reset Progress Button)
 ## Added
 - `library.js`

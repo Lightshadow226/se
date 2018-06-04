@@ -199,6 +199,7 @@
 	.main_content
 	{
 		width: 81%;
+		min-width: 1080px;
 	}
 
 	.fullscreen

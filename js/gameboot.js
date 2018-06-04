@@ -79,7 +79,6 @@ function create_line(index, type)
         play_episode_button.id = user.lastChapterPlayed;
         line.className += " line-big";
         chara_desc.innerHTML += "</br> <b>Progress: </b>";
-        char_img.className += " line-big";
         
         play_episode_button.innerHTML = "Continue Playing";
         play_episode_button.href = get_button_href(index);// play_episode_button.id);
@@ -93,7 +92,6 @@ function create_line(index, type)
     {
         line.className += " line-small";
         line_left_content.className += " line-small";
-        char_img.className += " line-small";
         
         if(current_chapter == index)
         {
