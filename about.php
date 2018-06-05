@@ -1,21 +1,7 @@
 <!DOCTYPE html>
 <html>
-<head>
-
-	<meta charset="UTF-8">
-	<meta name="description" content="Sweet Elite is a dating sims inspired by the popular Japanese Otome.Flirt with students and uncover Arlington Academy's dark secrets.Choose your own story!">
-	
-	<title>Sweet Elite: Flirt and Uncover the Secrets of Arlington Academy!</title>
-
-	<link href="css/se-stylesheet.css" rel="stylesheet" type="text/css">
-	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-	<link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet" type='text/css'>
-
-
-	<link rel="icon" type="image/ico" href="images/favicon.png"/>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-</head>
+    
+<?php include_once 'partials/head.php' ?>
 
 <body>
 
@@ -27,14 +13,14 @@
             <p class="center add_padding">Sweet Elite is an online otome game following the adventures of the students of Arlington Academy. Your character, the <b>Scholar</b>, is a scholarship student and makes a series of major choices, affecting both their destiny and the destinies of those around them.</p>
             <p class="center add_padding"><b>Flirt with students, build your romance and uncover Arlington Academy's dark secrets. Create your own story!<b></p>
             <div class = "flex-container">
-                <div class = "flex-panel3">
+                <div class = "flex-panel">
                 </div>
 
-                <div class = "flex-panel3">
+                <div class = "flex-panel">
                     <img class = "img-badge" src = "images/separator.jpg"></img>
                 </div>
 
-                <div class = "flex-panel3">
+                <div class = "flex-panel">
                 </div>
 
             </div>
@@ -99,33 +85,39 @@
 
                 <?php if(!isset($_SESSION['username'])): ?><!-- logged off -->
                 <div class = "flex-container">
-                    <div class = "flex-panel3">
+                    <div class = "flex-panel">
                     </div>
 
-                    <div class = "flex-panel3">
+                    <div class = "flex-panel">
                         <img class = "img-badge" src = "images/separator.jpg"></img>
                     </div>
 
-                    <div class = "flex-panel3">
+                    <div class = "flex-panel">
                     </div>
 
                 </div>
 
                 <h6>Need Convincing?</h6>
                 <p class="center"><b>All you need to do is try our demo!<b></p><br>
-                <p class="center"><a href = "signup.php" id = "signup_button" class = "button">Sign Up</a></p>
-                <p class="center"><a href = "login.php" id = "login_button" class = "button">Login</a></p>
+                <div style = "position: relative;">
+					<div id = "button_container_v2">
+						<div class = "flex-panel"></div>
+						<a href = "signup.php" id = "signup_button_v2" class = "signup_button_v2">Sign Up </a>
+						<a href = "login.php" id = "login_button_v2" class = "login_button_v2">Login</a>
+						<div class = "flex-panel"></div>
+					</div>
+				</div>
                 <?php endif ?>
 
                 <div class = "flex-container">
-                    <div class = "flex-panel3">
+                    <div class = "flex-panel">
                     </div>
 
-                    <div class = "flex-panel3">
+                    <div class = "flex-panel">
                         <img class = "img-badge" src = "images/separator.jpg"></img>
                     </div>
 
-                    <div class = "flex-panel3">
+                    <div class = "flex-panel">
                     </div>
 
                 </div>

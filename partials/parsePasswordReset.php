@@ -4,6 +4,39 @@ include_once 'resources/database.php';
 include_once 'resources/utilities.php';
 include_once 'resources/send-email.php';
 
+/*
+$path_parts = pathinfo(__FILE__);
+
+echo "Directory: " . $path_parts['dirname'], "\n";
+echo "<br>";
+echo "Basename: " . $path_parts['basename'], "\n";
+echo "<br>";
+echo "Extension: " . $path_parts['extension'], "\n";
+echo "<br>";
+echo "Filename: " . $path_parts['filename'], "\n"; // since PHP 5.2.0
+echo "<br>";
+echo "<br>";
+
+$path_parts = pathinfo(__FILE__);
+echo "SERVER: " . $_SERVER['REQUEST_URI'];
+echo "<br>";
+echo "<br>";
+echo "PATHS_PARTS (BASENAME): " . $path_parts['basename'];
+echo "<br>";
+echo "<br>";
+echo "r_trim: " . rtrim($_SERVER['REQUEST_URI'], $path_parts['basename']);
+echo "<br>";
+echo "<br>";
+echo "Final: " . "https://www.sweetelitegame.com" . rtrim($_SERVER['REQUEST_URI'], $path_parts['basename']) . "forgot.php";
+echo "<br>";
+echo "<br>";
+
+
+$path_parts = pathinfo(__FILE__);
+$fullUrl = "http://www.sweetelitegame.com" . rtrim($_SERVER['REQUEST_URI'], $path_parts['basename']) . "forgot.php";
+echo $fullUrl;
+*/
+
 if(isset($_POST['passwordResetBtn']))//Password Reset
 {
     $form_errors = array();
@@ -103,7 +136,8 @@ else if(isset($_POST['passwordRecoveryBtn']))//Password Recovery
 				$user_id = $rs['id'];
 				$encode_id = base64_encode("encodeuserid{$user_id}");
 				
-				/*THE CLASS "logo_div"  DOESN'T EXIST*/
+				$path_parts = pathinfo(__FILE__);
+				$fullUrl = "http://www.sweetelitegame.com" . rtrim($_SERVER['REQUEST_URI'], $path_parts['basename']) . "forgot.php";
 
 				// HTML code for the email to be sent to the new student
 				$mail_body = '<html>
@@ -123,7 +157,7 @@ else if(isset($_POST['passwordRecoveryBtn']))//Password Recovery
 				
 				<p>To reset your password, please click on the link below:</p>
 				
-				<p style="text-align:center;"><a href="http://sweetelitegame.com/testfiles/profiletest/forgot_password.php?id='.$encode_id.'">Reset Password</a></p>
+				<p style="text-align:center;"><a href="' . $fullUrl . '?id=' . $encode_id . '">Reset Password</a></p>
 				
 				<p>Contact us if you are still having problems.</p>
 				

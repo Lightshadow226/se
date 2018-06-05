@@ -33,15 +33,21 @@ $statement->execute(array(':id' => $id));
 
 while($rs = $statement->fetch())//"rs" = "row statements"
 {
-    $department = $rs['scholar_department'];
     $scholarname = $rs['scholar_name'];
-    $sex = $rs['scholar_sex'];
+    $scholardob = $rs['scholar_dob'];
     $gender = $rs['scholar_gender'];
+    $sex = $rs['scholar_sex'];
+    $department = $rs['scholar_department'];
     $haircolor = $rs['scholar_haircolor'];
     $hairstyle = $rs['scholar_hairstyle'];
     $skincolor = $rs['scholar_skincolor'];
     $eyecolor = $rs['scholar_eyecolor'];
-    $wigID = $rs['scholar_wig_id'];
+    $wigID = $rs['wig_id'];
+    $shirtID = $rs['shirt_id'];
+    $pantsID = $rs['pants_id'];
+    $socksID = $rs['socks_id'];
+    $shoesID = $rs['shoes_id'];
+    $accessoryID = $rs['accessory_id'];
 }
 
 //*********************************************
@@ -85,46 +91,6 @@ while($rs = $statement->fetch())//"rs" = "row statements"
     $a14 = $rs['cecile'];
     $a15 = $rs['teacherchapter2'];
 }
-
-/*TEST with JSON_encode
-    <!-- USERINFO table -->
-    echo json_encode($username);
-    echo json_encode($energy);
-    echo json_encode($money);
-    echo json_encode($nbreplays);
-
-    <!-- SCHOLARINFO table -->
-    echo json_encode($department);
-    echo json_encode($sex);
-    echo json_encode($gender);
-    echo json_encode($haircolor);
-    echo json_encode($hairstyle);
-    echo json_encode($skincolor);
-    echo json_encode($eyecolor);
-    echo json_encode($wigID);
-
-    <!-- STORY table -->
-    echo json_encode($story_location);
-    echo json_encode($last_chapter);
-    echo json_encode($physicallocationint);
-    
-    <!-- AFFINITY table -->
-    echo json_encode($a1);
-    echo json_encode($a2);
-    echo json_encode($a3);
-    echo json_encode($a4);
-    echo json_encode($a5);
-    echo json_encode($a6);
-    echo json_encode($a7);
-    echo json_encode($a8);
-    echo json_encode($a9);
-    echo json_encode($a10);
-    echo json_encode($a11);
-    echo json_encode($a12);
-    echo json_encode($a13);
-    echo json_encode($a14);
-    echo json_encode($a15);
-*/
 ?>
 
 <!-- NOW WE NEED TO OUTPUT ALL OF THIS TO HTML TO PASS IT TO THE JS CODE -->
@@ -139,18 +105,24 @@ while($rs = $statement->fetch())//"rs" = "row statements"
 
     <!-- SCHOLARINFO table -->
     <input id="db_handle_scholarname" value = <?php echo $scholarname; ?>></input>
-    <input id="db_handle_department"  value = <?php echo $department; ?>></input>
-    <input id="db_handle_sex"         value = <?php echo $sex; ?>></input>
+    <input id="db_handle_dateofbirth" value = <?php echo $scholardob; ?>></input>
     <input id="db_handle_gender"      value = <?php echo $gender; ?>></input>
+    <input id="db_handle_sex"         value = <?php echo $sex; ?>></input>
+    <input id="db_handle_department"  value = <?php echo $department; ?>></input>
     <input id="db_handle_haircolor"   value = <?php echo $haircolor; ?>></input>
     <input id="db_handle_hairstyle"   value = <?php echo $hairstyle; ?>></input>
     <input id="db_handle_skincolor"   value = <?php echo $skincolor; ?>></input>
     <input id="db_handle_eyecolor"    value = <?php echo $eyecolor; ?>></input>
     <input id="db_handle_wigID"       value = <?php echo $wigID; ?>></input>
+    <input id="db_handle_shirtID"       value = <?php echo $shirtID; ?>></input>
+    <input id="db_handle_pantsID"       value = <?php echo $pantsID; ?>></input>
+    <input id="db_handle_socksID"       value = <?php echo $socksID; ?>></input>
+    <input id="db_handle_shoesID"       value = <?php echo $shoesID; ?>></input>
+    <input id="db_handle_accessoryID"       value = <?php echo $accessoryID; ?>></input>
 
     <!-- STORY table -->
     <input id="db_handle_story_location"        value = <?php echo $story_location; ?>></input>
-    <input id="db_handle_last_chapter_played"   value = <?php echo $last_chapter; ?>></input>
+    <input id="db_handle_lastChapterPlayed"   value = <?php echo $last_chapter; ?>></input>
     <input id="db_handle_physicallocationint"   value = <?php echo $physicallocationint; ?>></input>
     
     <!-- AFFINITY table -->

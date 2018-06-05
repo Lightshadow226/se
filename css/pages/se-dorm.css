@@ -35,7 +35,7 @@
 
 #overlay_form/*the form that will pop up to customize the character*/
 {
-	background-color: #eeeeee;/*abcdef is a cool color*/
+	background-color: white;/*abcdef is a cool color*/
 	padding: 10px;
 	
 	position: absolute;
@@ -165,7 +165,7 @@
 	/* border: 2px solid #ff4956; */
 	vertical-align: middle;
 	width: 100%;
-	border-radius: 50%;
+	border-radius: 10px;
 
 	user-select: none;
 	-webkit-user-select: none;
@@ -178,10 +178,27 @@
 	box-shadow: 0 0 10px 0px #682666;
 }
 
+.category-selected
+{
+	/* box-sizing: border-box; */
+	border: 2px solid #682666;
+	border-radius: 50%;
+	/* box-shadow: 0 0 10px 0px #c0000e; */
+}
+
+.choices-selected
+{
+	box-sizing: border-box;
+	border: 2px solid #682666;
+	border-radius: 10px;
+	/* box-shadow: 0 0 10px 0px #c0000e; */
+}
+
+
 .choices-button-container
 {
 	margin: 10px;
-	padding: 10px;
+	padding: 5px;
 	/* border: 2px solid #ff4956; */
 }
 

@@ -105,53 +105,49 @@ elseif(isset($_POST['updateEmailBtn']))
 
 </head>
 
-<body class="center-screen">
+<body>
+<div class = "login-forms">
 
-	<a href="../index.php"><img id="logo" class="" src="../images/general/se-logo.png"></a>
-	
-	<div class = "">
+	<?php if(isset($result)) echo $result; ?>
+	<?php if(!empty($form_errors)) echo show_errors($form_errors); ?>
 
+	<?php if(!isset($_SESSION['username'])):?>
+		<div class="login-forms">
+			<a href="index.php"><img id="../logo" class="" src="../images/general/se-logo.png"></a>
+			<div class="card-nomargin add_padding">
+				<p>Sorry! Only registered members are allowed to see this page. <br><a href="login.php">Log in</a> or <a href="signup.php">Sign up</a> to play.</br></p>
+			</div>
+		</div>
+	<?php else: ?>
 		<div class="card-nomargin add_padding">
 			<h1>Edit your Email</h1>
+
+			<form method="post" action="" class="center">
 			
-			<?php if(isset($result)) echo $result; ?>
-			<?php if(!empty($form_errors)) echo show_errors($form_errors); ?>
+				<p>Enter your new email here.</p>
+				
+				</br>
 
-			<?php if(!isset($_SESSION['username'])):?>
-				
-				<p>Sorry! Only registered members are allowed to see this page. <a href="login.php">Log in</a> or <a href="signup.php">Sign up</a> to view your profile!</p>
-
-			<?php else: ?>
-				
-				<form method="post" action="" class="center">
-				
-					<p>Enter your new email here.</p>
+				<div class = "flex-container">
+					<div class = "flex-panel"></div>
+					<p class = "flex-panel login-signup-labels">Email:</p>
+					<input id="edit-email" class = "flex-panel2 login-signup-textfields" type="text" placeholder = "Email" name="email" value=""></input>
 					
-					</br>
+					<input type="hidden" value="<?php echo _token(); ?>" name="token">
+					<input type="hidden" name="hidden_id" value="<?php if(isset($id)) echo $id; ?>">
 
-					<div class = "flex-container">
-						<div class = "flex-panel"></div>
-						<p class = "flex-panel login-signup-labels">Email:</p>
-						<input id="edit-email" class = "flex-panel2 login-signup-textfields" type="text" placeholder = "Email" name="email" value=""></input>
-						
-						<input type="hidden" value="<?php echo _token(); ?>" name="token">
-						<input type="hidden" name="hidden_id" value="<?php if(isset($id)) echo $id; ?>">
-
-						<div class = "flex-panel"></div>
-					</div>	
-					
-					</br>
-
-					<input class="button pink-button-subtle" type="submit" name="updateEmailBtn" value="UPDATE"></input>
+					<div class = "flex-panel"></div>
+				</div>	
 				
-				</form>
+				</br>
 
-				<br><p style="text-align:center;"><a href="../profile.php">Back</a> </p>
+				<input class="button pink-button-subtle" type="submit" name="updateEmailBtn" value="UPDATE"></input>
+			
+			</form>
 
-			<?php endif ?>
-        </div>
-	</div>
-
+			<br><p style="text-align:center;"><a href="../profile.php">Back</a> </p>
+		</div>
+	<?php endif ?>
 </body>
 
 <script src = "../js/jquery_3.2.1.js"></script>

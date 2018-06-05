@@ -30,14 +30,10 @@
                 <div id = "textContainer"></div>
                 
                 <!-- Affinity Meter 1 (right, character 1) -->
-                <div id = "infinity-container-1" style="position: absolute; right: 0; top: 50%; width: 100px; transform: translateY(-50%);">
-                    <img id = "infinity-meter-1" style="width: 100%;"></img>
-                </div>
+                <img id = "infinity-meter-1" class = "infinity-meter infinity-meter-right"></img>
                 
                 <!-- Affinity Meter 2 (left, character 2) -->
-                <div id = "infinity-container-2" style="position: absolute; left: 0; top: 50%; width: 100px; transform: translateY(-50%);">
-                    <img id = "infinity-meter-2" style="width: 100%;"></img>
-                </div>
+                <img id = "infinity-meter-2" class = "infinity-meter infinity-meter-left"></img>
 
                 <!-- Choice of Friendship -->
                 <div id = "friendship_button" class="friendship_romance_buttons y-center-p">
@@ -71,7 +67,7 @@
     <!-- Objectives, Progress & Characters Container -->
     <div id="opcContainer">
 
-        <div id="slideCounter" style="position: absolute; right: 10px; top: 10px; -webkit-user-select: none;"></div>
+        <!-- <div id="slideCounter" style="position: absolute; right: 10px; top: 10px; -webkit-user-select: none;"></div> -->
 
         <span class="flex-container">
             <span class="flex-panel">
@@ -99,9 +95,11 @@
 
     <!-- Test Container -->
     <div id = "testContainer">
+        <!--
         <div id = "testContainer1">
             <input id = "daInput" type="text" name="testInput"></input>
         </div>
         <div id = "testContainer2"></div>
+        -->
     </div>
 </html>

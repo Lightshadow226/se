@@ -13,7 +13,7 @@ $tables = array
     'userinfo',
     'scholarinfo',
     'story',
-    'affinity'
+    'affinity',
 );
 
 //List of all the variables to be updated, grouped in tables
@@ -31,9 +31,21 @@ $variables = array
     //SCHOLARINFO table
     array
     (
-        'scholar_department',
         'scholar_name',
+        'scholar_dob',
         'scholar_gender',
+        'scholar_sex',
+        'scholar_department',
+        'scholar_haircolor',
+        'scholar_hairstyle',
+        'scholar_skincolor',
+        'scholar_eyecolor',
+        'wig_id',
+        'shirt_id',
+        'pants_id',
+        'socks_id',
+        'shoes_id',
+        'accessory_id',
     ),
 
     //STORY table

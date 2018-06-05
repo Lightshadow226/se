@@ -74,6 +74,23 @@ var locations =
 
 var genders = ["She/Her", "He/Him", "They/Them"];
 
+var outfitsPointer =
+[
+    //outfit 0 = uniform
+    [
+        0,//shirt
+        0,//pants
+        0,//shoes
+    ],
+
+    //outfit 1 = chapter 2 outfit
+    [
+        1,//shirt
+        2,//pants
+        1,//shoes
+    ]
+]
+
 //on va devoir écrire un code pour GET ces variables de la base de données. ces variables vont être propres à chaque utilisateur.
 
 //Info on Characters
@@ -176,14 +193,14 @@ var genders = ["She/Her", "He/Him", "They/Them"];
         "Helping people, reading scientific papers and pretty notebooks",
         "Mechanics, talking to people and dyeing her hair",
         "Shopping, clothes, modelling and getting what she wants",
-        "Colourful fabrics, innovative designs, The colour gold",
-        "Soccer, winning and fast Food",
+        "Colorful fabrics, innovative designs, the color gold",
+        "Soccer, winning and fast food",
         "Leading people, finance and relaxing",
-        "Video games, computers and taking Naps",
+        "Video games, computers and taking naps",
         "Drawing, being the center of attention, going to the crafts store",
-        "Video game development, Writing, Interacting with her fans",
+        "Video game development, writing, interacting with her fans",
         "Pretty art, funny memes",
-        "Students who follow rules, Classical Music, Money"
+        "Students who follow rules, classical Music, money"
     ];
 
     var dislikes = 
@@ -200,22 +217,22 @@ var genders = ["She/Her", "He/Him", "They/Them"];
         "Structure, school, close-mindedness",
         "When fans do not read the FAQ before contacting her",
         "When you pick the wrong dialog choice",
-        "Having her authority challenged, Tardiness"
+        "Having her authority challenged, tardiness"
     ];
 
     var fulldescription = 
     [
-        "The most promising athlete of the school, he’s on a scholarship just like your Scholar! Alistair specializes in martial arts in general, but his favorite sport is boxing, in which he dreams of making a career out of it and competing in the Olympic Games one day. Unlike most of his classmates, Alistair comes from a middle-class family that struggles with money, and he’s determined to change that. Despite the difference in social classes, he and Tadashi have been best friends for a long time.",
-        "The rock star of the Academy. Literally. Axel is an internationally known teenage superstar and is usually seen touring for his new album. Cocky, sarcastic, and oh-so-charming, Axel only comes to Arlington because the law requires him to get his high school diploma and he makes sure everybody is aware of his nonchalance…But this musician constantly covers up who he is. In fact, is Axel even his real name?",
-        "Claire is an aspiring neurosurgeon that volunteers part-time at the local hospital. Deeply caring and protective of the people she loves, she’s the student everybody loves and respects, despite her spending most of her time studying and doing medical research alone. Claire will do anything to make her classmates happy, and she’ll do so with a smile. After all, the last thing she wants it to lose yet another person she cares about.",
-        "Inventor, mechanic and engineer to be, Ellie, nicknamed as “Tinker” by students is the famous president of Arlington’s robotics club! Despite being in a male-dominated field, Ellie is not afraid to shine. She loves maining new people and has a cute, cheerful exterior that charms her potential clients. But as time passes, Ellie realizes that there are several obstacles that might put not only her career at risk…but her identity as well.",
-        "Considered by many to be the prettiest girl in school, Karolina specializes in modelling. She’s gorgeous and fully aware of her charm. In fact, she makes sure that everybody knows that she’s the hottest, coolest, most amazing girl in this whole establishment, okay?! She is ruthless and will do anything to get what she wants. However, despite her overachieving ways and her promising future, Karolina finds herself struggling with her image…so much that it loadVariabless affecting her mental state and health. Her best friend and “second in command” is Neha.",
-        "An aspiring fashion designer, Neha loves making her own clothes and other’s clothes. She spends countless hours designing seasonal collections and actually sells them to the students of Arlington (at a very high price!) Her success in the school is huge and she’s almost always sold out…but she’s using that success to hide her secret…a secret she believes will destroy her. She uses Karolina as her main model and is Axel’s official stylist for his concerts and photoshoots. Rather reserved and cold, Neha can, however, be surprisingly nice…whenever Karolina isn’t around.",
-        "Raquel is passionate, borderline obsessed about soccer! A promising athlete in the Athletics department, she’s energetic, ambitious and has no time for any crap. Despite being the most direct and honest student in Arlington, she can’t help but have a secret too…a secret she tries really hard to hide from her family. Raquel is always in it for the win, and that’s because she simply cannot afford to lose.",
-        "Tadashi is the current Student Body President of Arlington Academy. Having the highest GPA of the school, an estimated IQ of 160, being a star student and a jack of all trades, Tadashi doesn’t have time for any crap…and that means it will be very hard for your Scholar to get to know him. You’ll have to be sharp, organized and future-oriented…because the future is exactly what troubles this guy.",
-        "A European foreign student, Tegan specializes in Computer Science. He loves to program and spends the majority of his time in front of the computer. He also loves robotics and any kind of engineering. He has the second highest GPA of the school, beaten only by Tadashi. But despite his adorkableness and his intelligence, Tegan faces a lot of pressure from people…people who won’t believe in him and his dreams. His roommate and best friend is Tyler and he has a twin sister: Karolina.",
-        "A graphic designer in the Fine Arts department and highly skilled in anything involving visuals, thanks to his photographic memory, Tyler loves to be the center of attention! He is an artist from head to toe: charming, sensitive, creative…and highly critical of himself. It’s hard to constantly feel like your work isn’t good enough, especially when rejection is everywhere you look. Despite being very different, Tyler and Tegan make an incredible team, and being their friend comes with a lot of advantages!",
-        "Serena is the senior student that helped you understand how things work at Arlington Academy on your first day of school. She is weirdly knowledgeable in many things regarding the school’s rules, to the point where you wonder if she is really a student...Serena and her friends are always there to assist you if you need any help!",
+        "The most promising athlete of the school, he’s on a scholarship just like your Scholar! Alistair specializes in martial arts in general, but his favorite sport is boxing, in which he dreams of making a career out of it and competing in the Olympic Games one day. Unlike most of his classmates, Alistair comes from a middle-class family. Despite the difference in social classes, he and Tadashi have been best friends for a long time.",
+        "The rock star of the Academy. Literally. Axel is an internationally known teenage superstar and is usually seen touring for his new album. Cocky, sarcastic, and oh-so-charming, Axel only comes to Arlington because the law requires him to get his high school diploma. But this musician constantly covers up who he is. In fact, is Axel even his real name?",
+        "Claire is an aspiring neurosurgeon that volunteers part-time at the local hospital. Deeply caring and protective of the people she loves, she’s the student everybody loves and respects, despite her spending most of her time studying and doing medical research alone. Claire will do anything to make her classmates happy, and she’ll do so with a smile.",
+        "Inventor, mechanic and engineer to be, Ellie, nicknamed as “Tinker” by students is the famous president of Arlington’s robotics club! Ellie is not afraid to shine. She loves maining new people and has a cute, cheerful exterior that charms her potential clients.",
+        "Considered by many to be the prettiest girl in school, Karolina specializes in modelling. She’s gorgeous and fully aware of her charm. In fact, she makes sure that everybody knows that she’s the hottest, coolest, most amazing girl in this whole establishment. She is ruthless and will do anything to get what she wants. However, despite her overachieving ways and her promising future, Karolina finds herself struggling… so much that it is affecting her mental state and health. Her best friend and “second in command” is Neha.",
+        "An aspiring fashion designer, Neha loves making her own clothes and other’s clothes. She spends countless hours designing seasonal collections and actually sells them to the students of Arlington (at a very high price!) Her success in the school is huge and she’s almost always sold out… but she’s using that success to hide her secret… a secret she believes will destroy her. She uses Karolina as her main model and is Axel’s official stylist for his concerts and photoshoots. Rather reserved and cold, Neha can, however, be surprisingly nice.",
+        "Raquel is passionate, borderline obsessed about soccer! A promising athlete in the Athletics department, she’s energetic, ambitious and has no time for any crap. Despite being the most direct and honest student in Arlington, she can’t help but have a secret too. Raquel is always in it for the win, and that’s because she simply cannot afford to lose.",
+        "Tadashi is the current Student Body President of Arlington Academy. Having the highest GPA of the school, being a star student and a jack of all trades, Tadashi doesn’t have time for any crap… and that means it will be very hard for you to get to know him. You’ll have to be sharp, organized and future-oriented… because the future is exactly what troubles this guy.",
+        "A European foreign student, Tegan specializes in Computer Science. He loves to program and spends the majority of his time in front of the computer. He also loves robotics and any kind of engineering. He has the second highest GPA of the school, beaten only by Tadashi. But despite his adorkableness and his intelligence, Tegan faces a lot of pressure from people. His roommate and best friend is Tyler and he has a twin sister: Karolina.",
+        "A graphic designer in the Fine Arts department and highly skilled in anything involving visuals, thanks to his photographic memory, Tyler loves to be the center of attention! He is an artist from head to toe: charming, sensitive, creative… and highly critical of himself. It’s hard to constantly feel like your work isn’t good enough, especially when rejection is everywhere you look. Despite being very different, Tyler and Tegan make an incredible team, and being their friend comes with a lot of advantages!",
+        "Serena is the senior student that helped you understand how things work at Arlington Academy on your first day of school. She is weirdly knowledgeable in many things regarding the school’s rules, to the point where you wonder if she is really a student... Serena and her friends are always there to assist you if you need any help!",
         "Friends of Serena and senior students you have met on your first day at Arlington. Proven by the fact that they, like most seniors, hardly abide by the school rules, C & A are somewhat bizarre in their own ways. Don't worry, though, they're actually quite friendly! Nobody knows why A wears a radioactive suit and it is best to not ask any questions.",
         "Lady Arlington is the President and Dean of Arlington Academy. She is very strict, powerful and rich. If you are a good student, you have nothing to fear."
     ];
@@ -483,7 +500,7 @@ var genders = ["She/Her", "He/Him", "They/Them"];
         birthday: "",//const
         likes: "",//const
         dislikes: "",//const
-        description: "You have 0% Infinity with all your friends. <br> Well... <br>You're at zero, so I guess <em><b>you have no friends</b></em>. <br><br> In any case, come back when you make some.<br> Don't neglect your homework for it, though. <br><br> Sincerely, <br><b>Tadashi Nakano <br>Student Body President</b>",//const
+        description: "You have 0% Infinity with all your friends. <br> Well... You're at zero, so I guess <em><b>you have no friends</b></em>. <br><br> In any case, come back when you make some.<br> Don't neglect your homework for it, though. <br><br> Sincerely, <br><b>Tadashi Nakano <br>Student Body President</b>",//const
     };
 
     /* Template *
@@ -661,20 +678,21 @@ var x =
     nbreplays: 'nbreplays',
 
     //SCHOLARINFO table
-    scholarName: 'scholar_name',
-    gender: 'scholar_gender',
-    // sex: 'scholar_sex',
+    scholarname: 'scholar_name',
+    dateofbirth : "XX-XX-XXXX",
+    gender: 'scholar_gender',//0: she, 1: he, 2: they
+    sex: 'scholar_sex',//0: female, 1: male
     department: 'scholar_department',
-    // haircolor: 'scholar_haircolor',
-    // hairstyle: 'scholar_hairstyle',
-    // skincolor: 'scholar_skincolor',
-    // eyecolor: 'scholar_eyecolor',
-    // wigID: 'wig_id',
-    // shirtId: 'shirt_id',
-    // pantsID: 'pants_id',
-    // socksID: 'socks_id',
-    // shoesID: 'shoes_id',
-    // accessoryID: 'accessory_id',
+    haircolor: 'scholar_haircolor',
+    hairstyle: 'scholar_hairstyle',
+    skincolor: 'scholar_skincolor',
+    eyecolor: 'scholar_eyecolor',
+    wigID: 'wig_id',
+    shirtID: 'shirt_id',
+    pantsID: 'pants_id',
+    socksID: 'socks_id',
+    shoesID: 'shoes_id',
+    accessoryID: 'accessory_id',
     
     //STORY table
     storyLocation: 'storylocation',
@@ -703,24 +721,35 @@ var x =
 
 var user = 
 {
-    username: "None",
-    scholarname: "None",
+    //USERINFO table
+    username: 'None',
     energy: 0,
     money: 0,
-    storyLocation: 0,//VARIABLE COMMUNE À TOUS LES CHAPITRES, LA SEULE CHOSE QUI PEU BLOQUER serait de mettre un IF(last_chapter_played == this)
-    last_chapter_played: 0,
-    physicalLocation: backgrounds_path + locations.blackScreen,
-    physicalLocationInt: 0,
-    department: 0,
-    sex: 0, //0: female, 1: male
-    gender: 0,//0: she, 1: he, 2: they
-    haircolor: 0,//
-    hairstyle: 0,//
-    skincolor: 0,//
-    eyecolor: 0,//
-    wigID: 0,
-    pronoun: 0,//0: she, 1: he, 3: they
+    nbreplays: 0,
 
+    //SCHOLARINFO table
+    scholarname: 'None',
+    dateofbirth : "XX-XX-XXXX",
+    gender: 0,//0: she, 1: he, 2: they
+    sex: 0,//0: female, 1: male
+    department: 0,
+    haircolor: 0,
+    hairstyle: 0,
+    skincolor: 0,
+    eyecolor: 0,
+    wigID: 0,
+    shirtID: 0,
+    pantsID: 0,
+    socksID: 0,
+    shoesID: 0,
+    accessoryID: 0,
+    
+    //STORY table
+    storyLocation: 0,
+    lastChapterPlayed: 0,
+    physicalLocationInt: backgrounds_path + locations.blackScreen,
+
+    //AFFINITY table (Main 10)
     karolina: 0,
     ellie: 0,
     neha: 0,
@@ -731,12 +760,13 @@ var user =
     tegan: 0,
     tyler: 0,
     axel: 0,
-  
-    lady_arlington: 0,
+
+    //AFFINITY table (Other)
+    ladyArlington: 0,
     coach_davis: 0,
     serena: 0,
     cecile: 0,
-    teacher: 0,
+    teacherChapter2: 0,
 };
 
 var oldUser = user;
@@ -770,22 +800,18 @@ var oldUser = user;
 var playingTheGame = true;
 var alternateIsVisited = new Array();
 
-function loadIsVisited(chapter)
+function loadIsVisited(chapter)//operating normally
 {
-    //we store the actual chapter
-    alternateIsVisited = null;
-    alternateIsVisited = new Array();
+    // console.log("\n\nLoading is visited for chapter " + chapter + " (Current chapter is " + user.lastChapterPlayed + ")");
 
-    // console.log("loading is visited for chapter " + chapter + " (Current chapter is " + user.last_chapter_played + ")");
-
-    var actualChapter = user.last_chapter_played;
+    const actualChapter = user.lastChapterPlayed;
 
     //if we're not loading the current chapter [SWAP]
     if(chapter != actualChapter)
     {
         //we save the desired chapter in the database
         console.log("Swaping chapter " + actualChapter + " for chapter " + chapter);
-        user.last_chapter_played = chapter;
+        user.lastChapterPlayed = chapter;
         saveVariables(x.lastChapterPlayed);
     }
 
@@ -803,6 +829,9 @@ function loadIsVisited(chapter)
         var chapter_size = parseInt(document.getElementById("chapter_size").value);
         //chapter_size is actually one more (+1)
 
+        alternateIsVisited = null;
+        alternateIsVisited = new Array();
+
         //then we save them as JS variables:
         for(var i = 0; i < chapter_size; i++)
         {
@@ -815,38 +844,36 @@ function loadIsVisited(chapter)
 
             // console.log("slide " + new_variable + ": " + actualValue);
             alternateIsVisited.push(actualValue);
+
+            if(playingTheGame)
+            {
+                story[isVisited][i] = actualValue;
+            }
         }
 
-        console.log("Loaded isVisited.");
-        // console.log("Loaded isVisited for " + chapter_size + " slides.");
+        console.log("Loaded isVisited for Ch. " + user.lastChapterPlayed);
+
+        resetOldIsVisitedValues();
     });
 
     //if we're not loading the current chapter [SWAP BACK]
-    if(chapter != actualChapter)
+    if(user.lastChapterPlayed != actualChapter)
     {
-        //we save the actual chapter back in the database
         console.log("Swaping back chapter " + chapter + " for chapter " + actualChapter);
-        user.last_chapter_played = actualChapter;
+        user.lastChapterPlayed = actualChapter;//we save the actual chapter back in the database
         saveVariables(x.lastChapterPlayed);
     }
 
-    if(playingTheGame)
-    {
-        for(var i = 0; i < alternateIsVisited.length; i++)
-        {
-            story[isVisited][i] = alternateIsVisited[i];
-            // console.log("Loading - Alternate[" + i + "]: " + alternateIsVisited[i] + "\nStory[" + i + "]: " + story[isVisited][i] + "\n");
-        }
-    }
+    // console.log(user.storyLocation + " - " + alternateIsVisited[user.storyLocation] + " vs " + story[isVisited][user.storyLocation]);
 }
 
-function saveIsVisited(chapter, slide)
+function saveIsVisited()//operating normally
 {
     // solution: https://stackoverflow.com/questions/1184123/is-it-possible-to-add-dynamically-named-properties-to-javascript-object
     var jsonData = {};
     var variablesSaved = 0;
     var chapter_size = story[0].length;
-    
+
     //convert the data into JSON (true -> 1)
     for(var i = 0; i < chapter_size; i++)
     {
@@ -877,13 +904,12 @@ function saveIsVisited(chapter, slide)
         {
             type: 'POST',
             async: false,
-            dataType: "json",
-            data: jsonData
+            data: jsonData,
         }).done(function (response)
         {
             console.log("Saved isVisited.");
             // console.log("Saved isVisited for " + chapter_size + " slides.");
-            console.log(response);
+            if(response != ''){console.log(response)}
         });
     
         resetOldIsVisitedValues();
@@ -976,7 +1002,7 @@ function pullVariablesFromDB()//we load the data from the database, and put it i
     }).done(function (response)//when the request is done, we execute the following code:
     {
         //we print the response in #DB_handle:
-
+        
         $('#DB_handle').html(response);
 
         //then we save them as JS variables:
@@ -984,92 +1010,99 @@ function pullVariablesFromDB()//we load the data from the database, and put it i
         /********************
         USERINFO table
         *********************/
-        user.username = document.getElementById("db_handle_username").innerHTML;
-        user.energy = document.getElementById("db_handle_energy").innerHTML;
-        user.money = document.getElementById("db_handle_money").innerHTML;
+        user.username =     document.getElementById("db_handle_username").innerHTML;
+        user.energy =       document.getElementById("db_handle_energy").innerHTML;
+        user.money =        document.getElementById("db_handle_money").innerHTML;
 
         /********************
         SCHOLARINFO table
         *********************/
-        user.scholarname = document.getElementById("db_handle_scholarname").value;
-        user.department = document.getElementById("db_handle_department").value;
-        user.sex = parseInt(document.getElementById("db_handle_sex").value);
-        user.gender = parseInt(document.getElementById("db_handle_gender").value);
-        user.haircolor = parseInt(document.getElementById("db_handle_haircolor").value);
-        user.hairstyle = parseInt(document.getElementById("db_handle_hairstyle").value);
-        user.skincolor = parseInt(document.getElementById("db_handle_skincolor").value);
-        user.eyecolor = parseInt(document.getElementById("db_handle_eyecolor").value);
-        user.wigID = parseInt(document.getElementById("db_handle_wigID").value);
-        
+        user.scholarname =           document.getElementById("db_handle_scholarname").value;
+        user.dateofbirth =           document.getElementById("db_handle_dateofbirth").value;
+        user.gender =       parseInt(document.getElementById("db_handle_gender").value);
+        user.sex =          parseInt(document.getElementById("db_handle_sex").value);
+        user.department =            document.getElementById("db_handle_department").value;
+        user.haircolor =    parseInt(document.getElementById("db_handle_haircolor").value);
+        user.hairstyle =    parseInt(document.getElementById("db_handle_hairstyle").value);
+        user.skincolor =    parseInt(document.getElementById("db_handle_skincolor").value);
+        user.eyecolor =     parseInt(document.getElementById("db_handle_eyecolor").value);
+        user.wigID =        parseInt(document.getElementById("db_handle_wigID").value);
+        user.shirtID =      parseInt(document.getElementById("db_handle_shirtID").value);
+        user.pantsID =      parseInt(document.getElementById("db_handle_pantsID").value);
+        user.socksID =      parseInt(document.getElementById("db_handle_socksID").value);
+        user.shoesID =      parseInt(document.getElementById("db_handle_shoesID").value);
+        user.accessoryID =  parseInt(document.getElementById("db_handle_accessoryID").value);
+
         /********************
         STORY table
         *********************/
         user.storyLocation = document.getElementById("db_handle_story_location").value;//we should use an input and .value
-        user.last_chapter_played = document.getElementById("db_handle_last_chapter_played").value;//we should use an input and .value
+        user.lastChapterPlayed = document.getElementById("db_handle_lastChapterPlayed").value;//we should use an input and .value
         user.physicalLocationInt = parseInt(document.getElementById("db_handle_physicallocationint").value);
-        // console.log("Chapter " + user.last_chapter_played + " (Inside loop)");
         
         /********************
         AFFINITY table
         *********************/
         karolina.affinity = document.getElementById("db_handle_a1").value;
-        ellie.affinity = document.getElementById("db_handle_a2").value;
-        neha.affinity = document.getElementById("db_handle_a3").value;
-        raquel.affinity = document.getElementById("db_handle_a4").value;
-        claire.affinity = document.getElementById("db_handle_a5").value;
+        ellie.affinity =    document.getElementById("db_handle_a2").value;
+        neha.affinity =     document.getElementById("db_handle_a3").value;
+        raquel.affinity =   document.getElementById("db_handle_a4").value;
+        claire.affinity =   document.getElementById("db_handle_a5").value;
         alistair.affinity = document.getElementById("db_handle_a6").value;
-        tadashi.affinity = document.getElementById("db_handle_a7").value;
-        tegan.affinity = document.getElementById("db_handle_a8").value;
-        tyler.affinity = document.getElementById("db_handle_a9").value;
-        axel.affinity = document.getElementById("db_handle_a10").value;
+        tadashi.affinity =  document.getElementById("db_handle_a7").value;
+        tegan.affinity =    document.getElementById("db_handle_a8").value;
+        tyler.affinity =    document.getElementById("db_handle_a9").value;
+        axel.affinity =     document.getElementById("db_handle_a10").value;
+
         lady_arlington.affinity = document.getElementById("db_handle_a11").value;
         coach_davis.affinity = document.getElementById("db_handle_a12").value;
         serena.affinity = document.getElementById("db_handle_a13").value;
         cecile.affinity = document.getElementById("db_handle_a14").value;
         teacher.affinity = document.getElementById("db_handle_a15").value;
 
-        // $(document).ready(function(){try{refreshInterface();}catch(e){}});
-        $(document).ready(function(){try{update_highest_affinity(); update_current_chapter();}catch(e){}});
+        // console.log("Chapter " + user.lastChapterPlayed + " (Inside loop)");
+        // console.log("username " + user.scholarname + " (Inside loop)");
         
-        console.log("Loaded Variables.")
-
         oldUser = Object.create(user);
         resetOldUserValues();//initialize oldUser
+        console.log("Loaded Variables.")
+
+        $(document).ready(function(){try{update_highest_affinity(); update_current_chapter();}catch(e){}});
     });
 }
 
 function resetOldUserValues()
 {
-     /********************
-    USERINFO table
-    *********************/
+    // console.log("in resetOldUserValues... [BEG] Old user = " + oldUser.lastChapterPlayed);
+
+    /********************USERINFO table*********************/
     oldUser.username = user.username;
     oldUser.energy = user.energy; 
     oldUser.money = user.money;
 
-    /********************
-     SCHOLARINFO table
-    *********************/
+    /********************SCHOLARINFO table*********************/
     oldUser.scholarname = user.scholarname;
-    oldUser.department = user.department
-    oldUser.sex = user.sex
+    oldUser.dateofbirth = user.dateofbirth;
     oldUser.gender = user.gender
+    oldUser.sex = user.sex
+    oldUser.department = user.department
     oldUser.haircolor = user.haircolor
     oldUser.hairstyle = user.hairstyle
     oldUser.skincolor = user.skincolor
     oldUser.eyecolor = user.eyecolor
     oldUser.wigID = user.wigID
+    oldUser.shirtID = user.shirtID
+    oldUser.pantsID = user.pantsID
+    oldUser.socksID = user.socksID
+    oldUser.shoesID = user.shoesID
+    oldUser.accessoryID = user.accessoryID
     
-    /********************
-     STORY table
-    *********************/
+    /********************STORY table*********************/
     oldUser.storyLocation = user.storyLocation
-    oldUser.last_chapter_played = user.last_chapter_played
+    oldUser.lastChapterPlayed = user.lastChapterPlayed
     oldUser.physicalLocationInt = user.physicalLocationInt
     
-    /********************
-     AFFINITY table
-    *********************/
+    /********************AFFINITY table*********************/
     oldUser.karolina = user.karolina
     oldUser.ellie = user.ellie
     oldUser.neha = user.neha
@@ -1103,6 +1136,8 @@ function resetOldUserValues()
     oldUser.serena = serena.affinity;
     oldUser.cecile = cecile.affinity;
     oldUser.teacher = teacher.affinity;
+
+    // console.log("in resetOldUserValues... [END] Old user = " + oldUser.lastChapterPlayed);
 }
 
 pullVariablesFromDB();
@@ -1121,10 +1156,10 @@ pullVariablesFromDB();
 // {
     // do
     // {
-        // console.log("before: " + user.last_chapter_played);
+        // console.log("before: " + user.lastChapterPlayed);
         // await buffer();
         // pullVariablesFromDB();
-        // console.log("after: " + user.last_chapter_played);// + ", xhr = " + xhr);
+        // console.log("after: " + user.lastChapterPlayed);// + ", xhr = " + xhr);
     // }while(!buffer);
 
     // xhr = "0";

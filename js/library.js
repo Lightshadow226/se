@@ -34,6 +34,14 @@ NodeList.prototype.remove = HTMLCollection.prototype.remove = function()//get el
     }
 }
 
+//"prefix" is the the prefix of the id: say "category3", the prefix would be "category" and the function would return 3
+function getNumber(element, prefix)
+{
+    var id = element.id;
+
+    return(id.substr(id.length - (id.length - (prefix).length)));
+}
+
 //*****PURPLE GAME BAR*****
 function updateGameBar()
 {
@@ -54,7 +62,7 @@ function updateGameBar()
 //*****CHAPTERS*****
 function getCurrentChapter()//returns the current chapter as an object
 {
-    var index = user.last_chapter_played;//current chapter == index
+    var index = user.lastChapterPlayed;//current chapter == index
     const character_portraits_path = "images/general/chapter_images/";
 
     //declared in variables.js
@@ -83,15 +91,15 @@ function chapterSize(chapter)//returns the size of a chapter (HAS TO BE MANUALLY
     {
         if(chapter == 0)
         {
-            return 103;
+            return 109;
         }
         else if (chapter == 1)
         {
-            return 273;
+            return 285;
         }
         else if (chapter == 2)
         {
-            return 817;
+            return 837;
         }
     }
 }
@@ -491,7 +499,7 @@ function refreshProgressBar()
 
     var progressBar = document.getElementById('progress_bar');
     
-    var progress = user.storyLocation/chapterSize(user.last_chapter_played)*100;
+    var progress = user.storyLocation/chapterSize(user.lastChapterPlayed)*100;
     // console.log(progress);
 
     if(progress > 10 && progress < 100)
@@ -719,6 +727,8 @@ $(document).keyup(function(e)//when we press a key
     }
 });
 
+/*****POPUPS *****/
+
 function clearPopup()
 {
     var popup_container = document.getElementById("popup-container");
@@ -739,7 +749,83 @@ function showPopup(img_path)
     //https://www.w3schools.com/howto/howto_css_modal_images.asp
 }
 
-//this function should be move to chapter0.php or.js
+function popup(message, type)
+{
+    var parent = document.getElementById('popupHandler');
+        parent.innerHTML = "";
+        parent.style.display = "block";
+
+    var popupContainer = document.createElement('div');
+        popupContainer.id = "popupContainer";
+
+        var popup = document.createElement('div');
+            popup.id = "popup";
+            popup.innerHTML = message;
+
+    parent.appendChild(popupContainer)
+        popupContainer.appendChild(popup);
+            
+    if(type == "yes/no")
+    {
+        var yesButton = document.createElement('div');
+            yesButton.innerHTML = "Yes";
+            yesButton.className = "button pink_button popupButton";
+            yesButton.onclick = function(){deletePopup()};
+
+        var noButton = document.createElement('div');
+            noButton.innerHTML = "No";
+            noButton.className = "button pink_button popupButton";
+            noButton.onclick = function(){deletePopup()};
+    
+        popupContainer.appendChild(yesButton);
+        popupContainer.appendChild(noButton);
+
+        return [yesButton, noButton];
+        
+    }
+    else if(type == "ok")
+    {
+        var okButton = document.createElement('div');
+            okButton.id = "okButton";
+            okButton.innerHTML = "Ok";
+            okButton.className = "button pink_button";
+            okButton.onclick = function(){deletePopup()};
+
+        popupContainer.appendChild(okButton);
+
+        return [okButton];
+    }
+}
+
+function makePopup(message)
+{
+    var parent = document.getElementById('popupHandler');
+        parent.style.display = "block";
+
+    var popupContainer = document.createElement('div');
+        popupContainer.id = "popupContainer";
+
+        var popup = document.createElement('div');
+            popup.id = "popup";
+            popup.innerHTML = message;
+
+        var okButton = document.createElement('div');
+            okButton.id = "okButton";
+            okButton.innerHTML = "OK";
+            okButton.className = "button pink_button";
+            okButton.onclick = function(){deletePopup()};
+
+    parent.appendChild(popupContainer)
+        popupContainer.appendChild(popup);
+        popupContainer.appendChild(okButton);
+}
+
+function deletePopup()
+{
+    document.getElementById('popupHandler').style.display= "none";
+}
+
+//this function should be moved to chapter0.php or.js
 function toggle_pronouns(clicked, one, two)
 {
     clicked.classList.toggle("pronoun-button-selected");
@@ -756,39 +842,216 @@ function toggle_pronouns(clicked, one, two)
         return "null";
     }
 }
+/***** WIPING CHAPTERS AND USER DATA *****/
+
+function wipeChapter(i, chaptersWiped, totalChaptersToWipe, link)
+{
+    return new Promise((resolve, reject) =>
+    {
+        console.log("***** Promise loop: Chapter " + i + " start *****");
+        //change the script and append it to the HTML head
+        var scriptURI = 'js/chapters/chapter' + i + '.js';
+        
+        //wipe the variables from the chapter
+        var scriptLoaded = loadScriptAsync(scriptURI, i);
+            scriptLoaded.then//only execute this when the script is loaded
+            (
+                function ()
+                {
+                    chaptersWiped++;
+                    console.log("Wiped Ch. " + i + " (" + chaptersWiped + "/" + totalChaptersToWipe + ")");
+
+                    if(chaptersWiped == totalChaptersToWipe)
+                    {
+                        if(link != "none")
+                        {
+                            console.log("All chapters wiped. Opening " + link);
+                            window.open(link, '_self');
+                        }
+                        
+                        console.log("*****Promise loop: Chapter " + i + " done *****");
+
+                        return resolve();
+                        console.log('THIS CODE SHOULD NOT BE RUNNING');
+                    }
+                    else
+                    {
+                        wipeChapter(i + 1, chaptersWiped, totalChaptersToWipe, link).then
+                        (
+                            function()
+                            {
+                                console.log("*****Promise loop: Chapter " + i + " done *****");
+
+                                return resolve();
+                            }
+                        );
+                    }
+                }
+            );
+    });
+}
+
+function loadScriptAsync(uri, id)
+{
+    return new Promise((resolve, reject) =>
+    {
+        var script = document.createElement('script');
+            script.id = "script" + id;
+            script.src = uri;
+            script.async = false;
+            script.onload = () =>
+            {
+                user.lastChapterPlayed = id;
+                console.log("\n\nSTARTING WIPING OF CH. " + id + " (" + user.lastChapterPlayed + ")\n\n");
+                wipeCurrentChapter();
+                destroyScriptAsync(id)
+                resolve();
+            };
+    
+        var head = document.getElementsByTagName('head')[0];
+            head.appendChild(script);
+    });
+}
+
+function destroyScriptAsync(id)
+{
+    return new Promise((resolve, reject) =>
+    {
+        var script = document.getElementById("script" + id);
+            script.onremove = () =>
+            {
+                console.log("Destroyed Ch. " + id + "/" + availableChapters);
+                resolve();
+            };
+    });
+}
+
+function resetAllProgress()
+{
+    console.log("*****RESETTING ALL USER PROGRESS!*****\n\n");
+    
+    console.log("RESETTING All Chapters\n\n");
+    // STEP 1: WIPE ALL CHAPTERS
+    var startingChapter = 0;
+    var chaptersWiped = startingChapter;
+    var totalChaptersToWipe = availableChapters;
+    
+    console.log("STEP 1");
+    wipeChapter(startingChapter, chaptersWiped, totalChaptersToWipe, "none").then
+    (
+        function ()
+        {
+            console.log("STEP 2");
+            
+            console.log("Done RESETTING All Chapters\n\n");
+            //STEP 2: WIPE ALL USER DATA
+            console.log("RESETTING all user data\n\n");
+            
+            //SCHOLARINFO table
+            user.scholarname = 'None';
+            user.dateofbirth = "XX-XX-XXXX";
+            user.gender = 0;//0= she; 1= he; 2= they
+            user.sex = 0;//0= female; 1= male
+            user.department = 0;
+            user.haircolor = 0;
+            user.hairstyle = 0;
+            user.skincolor = 0;
+            user.eyecolor = 0;
+            user.wigID = 0;
+            user.shirtID = 0;
+            user.pantsID = 1;
+            user.socksID = 0;
+            user.shoesID = 0;
+            user.accessoryID = 0;
+            
+            //STORY table
+            user.storyLocation = 0;
+            user.lastChapterPlayed = 0;
+            user.physicalLocationInt = backgrounds_path + locations.blackScreen;
+            
+            //AFFINITY table (Main 10)
+            user.karolina = 0;
+            user.ellie = 0;
+            user.neha = 0;
+            user.raquel = 0;
+            user.claire = 0;
+            user.alistair = 0;
+            user.tadashi = 0;
+            user.tegan = 0;
+            user.tyler = 0;
+            user.axel = 0;
+            
+            //AFFINITY table (Other)
+            user.ladyArlington = 0;
+            user.coach_davis = 0;
+            user.serena = 0;
+            user.cecile = 0;
+            user.teacherChapter2 = 0;
+            
+            pushVariablesToDB();
+            
+            console.log("Done RESETTING all user data\n\n");
+            //STEP 3: WIPE ALL ILLUSTRATIONS
+            console.log("RESETTING Illustrations\n\n");
+            
+            var allIllustrations =
+            [
+                0,//chapter 0
+                4,
+                2,
+            ]
+        
+            var toSave = "none";
+        
+            for(var i = 0; i < allIllustrations.length; i++)
+            {
+                for(var j = 1; j <= allIllustrations[i]; j++)
+                {
+                    toSave = "c" + i + "i" + j;
+                    saveIllustrationAchievement(toSave, "illustrations", 0);//we save 0
+                }
+            }
+            
+            console.log("Done RESETTING Illustrations\n\n");
+            //STEP 4: WIPE ALL ACHIEVEMENTS
+            console.log("RESETTING Achievements\n\n");
+            
+            var allAchievements = 4;
+        
+            var toSave = "none";
+        
+            for(var i = 0; i < allAchievements; i++)
+            {
+                toSave = "a" + i;
+                saveIllustrationAchievement(toSave, "achievements", 0);//we save 0
+            }
+        
+            console.log("Done RESETTING Achievements\n\n");
+            console.log("*****DONE RESETTING ALL USER PROGRESS*****\n\n");
+        }
+    );
+
+    console.log("STEP 3");
+}
 
 function wipeCurrentChapter()
 {
+    loadIsVisited(user.lastChapterPlayed);
+
     var chapterSize = story[0].length;
 
-    console.log("chapter size: " + chapterSize);
-                    
     for(var j = 0; j < chapterSize; j++)//for every slide
     {
-        // STEP 4: wipe the infinity consequences
-        // TODO: for every slide, we have to undo the infinity consequence IF IT WAS VISITED
-        
-        if(story[isVisited][j])
+        if(story[isVisited][j])//if the slide was visited
         {
             //Right infinity meter
-            if(story[CHARACTER1][j] != "null" && story[infinityConsequence1][j] != 0)//if there is a character 1 in this slide
+            if(story[CHARACTER1][j] != "null" && story[infinityConsequence1][j] != 0)//if there is a character 1 in this slide and there is an infinity consequence
             {
-                // console.log("Reverted: " + j + " story[2][j]: " + story[2][j]);
                 var relevant_char = getPersonnage(story[CHARACTER1][j]);
                     relevant_char.affinity = Number(relevant_char.affinity);
-                
-                var oldAffinity = relevant_char.affinity;
-                
                     relevant_char.affinity -= Number(story[infinityConsequence1][j]);
-
-                var newAffinity = relevant_char.affinity;
                 
-                // if(Number(relevant_char.affinity) < 0)
-                // {
-                //     relevant_char.affinity = 0;
-                // }
-
-                console.log("Reverteds slide " + j + "\n" + relevant_char.name + " was " + oldAffinity + " is now " + newAffinity + "\n");
+                console.log("Chapter " + user.lastChapterPlayed + ", Slide " + j + ": " + relevant_char.name + " was reverted to " + relevant_char.affinity + "\n");
             }
 
             //Left infinity meter
@@ -797,19 +1060,9 @@ function wipeCurrentChapter()
                 
                 var relevant_char = getPersonnage(story[CHARACTER2][j]);
                     relevant_char.affinity = Number(relevant_char.affinity);
-                
-                var oldAffinity = relevant_char.affinity;
-                
                     relevant_char.affinity -= Number(story[infinityConsequence2][j]);//on doit s'assurer que la valeur est un nombre, parce que sinon, parfois, ça fait juste carrément rajouter un zéro
                 
-                var newAffinity = relevant_char.affinity;
-
-                // if(Number(relevant_char.affinity) < 0)
-                // {
-                //     relevant_char.affinity = 0;
-                // }
-
-                console.log("Reverteds slide " + j + "\n" + relevant_char.name + " was " + oldAffinity + " is now " + newAffinity + "\n");
+                console.log("Chapter " + user.lastChapterPlayed + ", Slide " + j + ": " + relevant_char.name + " was reverted to " + relevant_char.affinity + "\n");
             }
         }
 
@@ -824,14 +1077,14 @@ function wipeCurrentChapter()
     saveIsVisited();
     pushVariablesToDB();
 
-    console.log("Successfully wiped the memory for chapter " + user.last_chapter_played);
+    console.log("Successfully wiped the memory for chapter " + user.lastChapterPlayed);
 }
 
 //used to get the reference to a chapter
 //ex.: the button on the index page uses get_button_href(current chapter) to get a link to the current chapter in the button
 function get_button_href(index)
 {
-    if(index <= user.last_chapter_played)//if we create a link to a past or current chapter
+    if(index <= user.lastChapterPlayed)//if we create a link to a past or current chapter
     {
         return "chapter" + index + ".php";
     }
@@ -846,23 +1099,19 @@ function verifyIllustration()
 {
     toSave = "none";
 
-    switch(user.last_chapter_played)
+    switch(user.lastChapterPlayed)
     {
         case 0://chapter 0
             // break;
 
         case 1://chapter 1
             if(visiting(222, 1)) toSave = "c1i1";
-        
             if(visiting(232, 1)) toSave = "c1i2";
-        
             if(visiting(243, 1)) toSave = "c1i3";
-
             if(visiting(259, 1)) toSave = "c1i4";
 
         case 2://chapter 2
             if(visiting(772, 2)) toSave = "c2i1";
-            
             if(visiting(785, 2)) toSave = "c2i2";
 
         default:
@@ -872,7 +1121,7 @@ function verifyIllustration()
     if(toSave != "none")
     {
         console.log("New illustrationL: (" + toSave + ")");
-        saveIllustrationAchievement(toSave, "illustrations");
+        saveIllustrationAchievement(toSave, "illustrations", 1);
     };
 }
 
@@ -880,10 +1129,9 @@ function verifyAchievement()
 {
     toSave = "none";
 
-    switch(user.last_chapter_played)
+    switch(user.lastChapterPlayed)
     {
-        case 0://achievement 0
-            if(visiting(566, 2)) toSave = "a0";
+        case 0://chapter 0
         
         case 1:
             if(visiting(258, 1)) toSave = "a1";
@@ -891,9 +1139,7 @@ function verifyAchievement()
         
         case 2:
             if(visiting(350, 2)) toSave = "a2";
-            break;
-
-        case 3:
+            if(visiting(566, 2)) toSave = "a0";
             if(visiting(783, 2)) toSave = "a3";
             break;
 
@@ -904,26 +1150,30 @@ function verifyAchievement()
     if(toSave != "none")
     {
         console.log("New achievement: (" + toSave + ")");
-        saveIllustrationAchievement(toSave, "achievements");
+
+        makePopup("You have unlocked a new achievement! <br> <br> Go to your dorm and click on the book to check it out.");
+
+        saveIllustrationAchievement(toSave, "achievements", 1);
     };
 }
 
 function visiting(slide, chapter)
 {
-    if(chapter == user.last_chapter_played)//if we're currently playing the chapter, let's verify it
+    if(chapter == user.lastChapterPlayed)//if we're currently playing the chapter, let's verify it
     {
         if(slide == user.storyLocation) return true;
     }
 }
 
-function saveIllustrationAchievement(code, type)
+function saveIllustrationAchievement(code, type, value)
 {
     var jsonData = {};
         jsonData['type'] = type;
         jsonData['column'] = code;
+        jsonData['value'] = value;
 
     // console.log("Saving I&A\n");
-    // console.log(jsonData);
+    console.log(jsonData);
 
     $.ajax('dbtransfers/saveachievements.php',
     {
@@ -950,84 +1200,52 @@ function getJSONPropertyValue(propertyName)
     switch(propertyName)
     {
         //USERINFO table
-        case x.username:
-            return user.username;
-
-        case x.energy:
-            return user.energy;
-
-        case x.money:
-            return user.money;
+        case x.username:    return user.username;
+        case x.energy:      return user.energy;
+        case x.money:       return user.money;
 
         //SCHOLARINFO table
-        case x.department:
-            return user.department;
-
-        case x.scholarName:
-            return user.scholarname;
-
-        case x.gender:
-            return user.gender;
+        case x.scholarname: return user.scholarname;
+        case x.dateofbirth: return user.dateofbirth;
+        case x.gender:      return user.gender;
+        case x.sex:         return user.sex;
+        case x.department:  return user.department;
+        case x.haircolor:   return user.haircolor;
+        case x.hairstyle:   return user.hairstyle;
+        case x.skincolor:   return user.skincolor;
+        case x.eyecolor:    return user.eyecolor;
+        case x.wigID:       return user.wigID;
+        case x.shirtID:     return user.shirtID;
+        case x.pantsID:     return user.pantsID;
+        case x.socksID:     return user.socksID;
+        case x.shoesID:     return user.shoesID;
+        case x.accessoryID: return user.accessoryID;
         
         //STORY table
-        case x.storyLocation:
-            return user.storyLocation;
-
-        case x.lastChapterPlayed:
-            return user.last_chapter_played;
-
-        case x.physicalLocationInt:
-            return user.physicalLocationInt;
+        case x.storyLocation: return user.storyLocation;
+        case x.lastChapterPlayed: return user.lastChapterPlayed;
+        case x.physicalLocationInt: return user.physicalLocationInt;
 
         //AFFINITY table (Main 10)
-        case x.karolina:
-            return karolina.affinity;
-
-        case x.ellie:
-            return ellie.affinity;
-
-        case x.neha:
-            return neha.affinity;
-
-        case x.raquel:
-            return raquel.affinity;
-
-        case x.claire:
-            return claire.affinity;
-
-        case x.alistair:
-            return alistair.affinity;
-
-        case x.tadashi:
-            return tadashi.affinity;
-
-        case x.tegan:
-            return tegan.affinity;
-
-        case x.tyler:
-            return tyler.affinity;
-
-        case x.axel:
-            return axel.affinity;
+        case x.karolina:    return karolina.affinity;
+        case x.ellie:       return ellie.affinity;
+        case x.neha:        return neha.affinity;
+        case x.raquel:      return raquel.affinity;
+        case x.claire:      return claire.affinity;
+        case x.alistair:    return alistair.affinity;
+        case x.tadashi:     return tadashi.affinity;
+        case x.tegan:       return tegan.affinity;
+        case x.tyler:       return tyler.affinity;
+        case x.axel:        return axel.affinity;
 
         //AFFINITY table (Other)
-        case x.ladyArlington:
-            return lady_arlington.affinity;
+        case x.ladyArlington: return lady_arlington.affinity;
+        case x.coachDavis:  return coach_davis.affinity;
+        case x.serena:      return serena.affinity;
+        case x.cecile:      return cecile.affinity;
+        case x.teacher:     return teacher.affinity;
 
-        case x.coachDavis:
-            return coach_davis.affinity;
-
-        case x.serena:
-            return serena.affinity;
-
-        case x.cecile:
-            return cecile.affinity;
-        
-        case x.teacher:
-            return teacher.affinity;
-
-        default:
-            return '2y10UZMJfJuMm4C5In91XP7uadWRn0ZP9so5oONeRoyVtIze1Psy';
+        default: return '2y10UZMJfJuMm4C5In91XP7uadWRn0ZP9so5oONeRoyVtIze1Psy';
     }
 }
 
@@ -1039,7 +1257,7 @@ function pushVariablesToDB()
         x.username, x.energy, x.money,
 
         //SCHOLARINFO table
-        x.department, x.scholarName, x.gender,
+        x.department, x.scholarname, x.gender, x.sex, x.haircolor, x.hairstyle, x.skincolor, x.eyecolor, x.wigID, x.shirtID, x.pantsID, x.socksID, x.shoesID, x.accessoryID,
 
         //STORY table
         x.storyLocation, x.lastChapterPlayed, x.physicalLocationInt,
@@ -1089,37 +1307,30 @@ function saveVariables()
 
     if(variablesSaved > 0)
     {
-        var variablesString = "variables";
-        if(variablesSaved == 1) variablesString = "variable";
+        var variablesString = "Variables";
+        if(variablesSaved == 1) variablesString = "Variable";
 
         // console.log("Saving " + variablesSaved + " " + variablesString + ": ");
-        console.log(jsonData);
 
         $.ajax('dbtransfers/push_variables.php',
         {
             type: 'POST',
             async: false,
-            dataType: "json",
-            data: jsonData
-            // beforeSend: showLoadingImgFunction()
-            // TODO: make a loader and show it here
-        })
+            data: jsonData,
+        }).done(function (response)
+        {
+            console.log("Saved " + variablesString + ":");
+            console.log(jsonData);
+
+            resetOldUserValues();
+        });
+
         // .fail(function (response)
         // {
         //     if (data.responseCode) console.log(data.responseCode);
 
         //     saveVariables(arguments);
         // })
-        .done(function (response)
-        {
-            // TODO: Remove loader once it is complete
-            if(response != '')
-            {
-                console.log("\'" + response + "\'");
-            }
-            
-            resetOldUserValues();
-        });
     }
 }
 
@@ -1143,25 +1354,73 @@ function hasToBeSaved(propertyName)//returns either true or false (has to be sav
             break;
 
         //SCHOLARINFO table
+        case x.scholarname:
+            if (user.scholarname != oldUser.scholarname) return true;
+            break;
+
+        case x.dateofbirth:
+            if (user.dateofbirth != oldUser.dateofbirth) return true;
+            break;
+        
+        case x.gender:
+            if (user.gender != oldUser.gender) return true;
+            break;
+
+        case x.sex:
+            if (user.sex != oldUser.sex) return true;
+            break;
+
         case x.department:
             if (user.department != oldUser.department) return true;
             break;
 
-        case x.scholarName:
-            if (user.scholarname != oldUser.scholarname) return true;
+        case x.haircolor:
+            if (user.haircolor != oldUser.haircolor) return true;
             break;
 
-        case x.gender:
-            if (user.gender != oldUser.gender) return true;
+        case x.hairstyle:
+            if (user.hairstyle != oldUser.hairstyle) return true;
             break;
-        
+
+        case x.skincolor:
+            if (user.skincolor != oldUser.skincolor) return true;
+            break;
+
+        case x.eyecolor:
+            if (user.eyecolor != oldUser.eyecolor) return true;
+            break;
+
+        case x.wigID:
+            if (user.wigID != oldUser.wigID) return true;
+            break;
+            
+        case x.shirtID:
+            if (user.shirtID != oldUser.shirtID) return true;
+            break;
+
+        case x.pantsID:
+            if (user.pantsID != oldUser.pantsID) return true;
+            break;
+
+        case x.socksID:
+            if (user.socksID != oldUser.socksID) return true;
+            break;
+
+        case x.shoesID:
+            if (user.shoesID != oldUser.shoesID) return true;
+            break;
+
+        case x.accessoryID:
+            if (user.accessoryID != oldUser.accessoryID) return true;
+            break;
+
         //STORY table
         case x.storyLocation:
             if (user.storyLocation != oldUser.storyLocation) return true;
             break;
 
         case x.lastChapterPlayed:
-            if (user.last_chapter_played != oldUser.last_chapter_played) return true;
+            if (user.lastChapterPlayed != oldUser.lastChapterPlayed) return true;
             break;
 
         case x.physicalLocationInt:
@@ -1244,25 +1503,26 @@ function hasToBeSaved(propertyName)//returns either true or false (has to be sav
 // -----START DEBUGGING TOOLS-----
 function refreshTestContainer()// affiche des données par rapport à la prev/current/next slide
 {
-    var daInput = document.getElementById('daInput');
-    var slideCounter = document.getElementById('slideCounter');
+    // var daInput = document.getElementById('daInput');
     
-    daInput.onkeypress = function(e)
-    {
-        if(e.keyCode == 13)//when we press "enter"
-        {
-            if(daInput.value) {user.storyLocation = daInput.value}
-            daInput.value = "";
-            saveIsVisited();
-            pushVariablesToDB();
-            HideForms();
-            refreshInterface();
-        }
-    };
+    // daInput.onkeypress = function(e)
+    // {
+    //     if(e.keyCode == 13)//when we press "enter"
+    //     {
+    //         if(daInput.value) {user.storyLocation = daInput.value}
+    //         daInput.value = "";
+    //         saveIsVisited();
+    //         pushVariablesToDB();
+    //         HideForms();
+    //         refreshInterface();
+    //     }
+    // };
 
-    $('#daInput').focus();
-    daInput.placeholder = user.storyLocation;
-    slideCounter.innerHTML = user.storyLocation;
+    // $('#daInput').focus();
+    // daInput.placeholder = user.storyLocation;
+    
+    // var slideCounter = document.getElementById('slideCounter');
+    //     slideCounter.innerHTML = user.storyLocation;
 
     var text = "";
     
@@ -1337,3 +1597,5 @@ function refreshTestContainer()// affiche des données par rapport à la prev/cu
     container2.innerHTML = text;*/
 }
 // -----END DEBUGGING TOOLS-----
+
+try{updateGameBar()}catch(e){}

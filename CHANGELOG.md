@@ -1,6 +1,250 @@
 `Important: put more than 2 spaces at the end of a line if you want a line break`       
 `Two tabs should work`
 
+# Version 2.0.0 (Google Fonts Download)
+## Added
+- `greatvibes.css`  `roboto.css`: downloaded all fonts
+
+
+# Version 1.15.1 (Forgot Password Hotfix)
+
+
+# Version 1.15.0 (Forms Hotfix)
+## Fixed
+- `gameengine.js`   `se-game.css`
+    - formContainer vs form_container
+    - properly hide and unhide all forms before every form display
+
+- `footers.php`: centered google ads
+
+
+# Version 1.14.18 (Spelling/Grammar Fixes by the Betas)
+## Modified
+- `chapter0.xlsx/js`  `chapter1.xlsx/js`  `chapter2.xlsx/js` `variables.js`  `help.php`
+    - Spelling and Grammar fixes
+
+    
+# Version 1.14.17 (Minor Mobile Adaptation)
+## Changed
+- `.css`
+    - a few design changes
+
+
+# Version 1.14.16 (Reset Progress Button)
+## Added
+- `library.js`
+    - added the most beautiful recursive asynchronous function
+    - coded the reset all progress button in profile.php
+    - added a popup function
+
+
+# Version 1.14.15 (Added head.php, Updated Google Ads)
+## Added
+- `head.php`: added the file and replaced all <head> tags
+
+## Changed
+- `footers.php`
+    - changed the google ads
+
+
+# Version 1.14.14 (Email & Male Scholar fixes)
+## Fixed
+- `parseSignup.php`     `parsePasswordReset.php`
+    - fixed the activate.php url
+- `character_small_portrait.php`
+    - fixed the male image
+    - we modified the female but forgot to calibrate the male
+- `contact.php`: fixed the design
+
+
+# Version 1.14.13 (Personality Quiz, Signup Buttons)
+## Added
+- `personalityquiz.php`
+    - added personality quiz
+    - link can be found on the offline index.php
+    - included a few design changes
+
+## Fixed
+- `about.php`
+    - fixed the signup and login buttons
+    - they were *literally* all over the place (haha)
+-  `se-cards.css`
+    - headers now have a box-sizing
+    - + 100% width of parent
+
+
+# Version 1.14.12 (Beta Grammar/Spelling Fixes)
+## Changed
+- `chapter0.xlsx/js`  `chapter1.xlsx/js`  `chapter2.xlsx/js`
+    - Litterally just grammar/spelling/writing fixes.
+
+
+# Version 1.14.11 (placed scripts in footer)
+## Changed
+- `footers.php`
+    - variables.js and library.js are now appended in the footer of all pages
+    - appending variables.js will automatically load variables from the Database
+    - appending library.js will automatically update the purple game bar
+
+# Version 1.14.10 (Minor design changes)
+## Fixed
+- `logged off forms`
+    - minor changes
+    - now the forms are properly centered
+    - "Sorry! Only registered members are allowed to see this page."
+
+
+# Version 1.14.9 (Email URL, Ch. 0 form)
+## Fixed
+- `parseSignup.php`: changed the activate.php url once and for all
+- `gameengine.js`: fixed the chapter 0 "Name your scholar" form once and for all
+
+
+# Version 1.14.8 (Affinity Reversion)
+## Fixed
+- `gameboot.js`: fixed the affinity reversion
+- `se-popups.css`: made the popup position fixed
+- `headers.php`: removed the code that was blocking cache
+
+
+# Version 1.14.7 (Images for dollmaker)
+## Added
+- `_new_images_folder`
+    - added missing images for the dollmaker
+## Fixed
+- `character_small_portrait.php`
+    -small translation fix
+
+
+# Version 1.14.6 (Bug fixes)
+## Added
+- `chapter0.php` `chapter1.php` `chapter2.php`
+    - added the popupHandler in the DOM
+- `se-game.css` `se-popups.css` `library.js`
+    - added the popups
+- `headers.php`
+    - the page automatically refreshes the cache
+
+## Fixed
+- `index.js`
+    - put the random character on top of the arrows (for mobile)
+- `library.js`
+    - fixed the achivement lookup
+- `chapter2.js/xlsx`: Bug fixes
+
+
+# Version 1.14.5 (Bug Fixes in Excel & Start of Dept Quiz)
+## Changed
+- `chapter2.js/xlsx`  `chapter1.xlsx`
+    - Bug fixes and grammar
+## Added
+- `deptquiz.php`
+    - added the file for implementation of department quiz
+
+# Version 1.14.4 (Mobile Adaptation & Google Ads)
+## Changed
+- `.css`
+    - added some adaptation for mobile
+- `googleAds.php`   `footers.php`
+    - reverted Google Ads to lightshadowman@gmail.com
+
+# Version 1.14.3 (Minor Fixes, Google Ads)
+## Fixed
+- `googleAds.php`: the numbers are correct now
+- `all other files`
+    - changed user from root to Serena
+    - made small fixes to chapter 2
+    - fixed the department form (was not using the right parameters)
+
+
+# Version 1.14.2 (Major Bug Fix - Saving & Loading)
+## Fixed
+- `gameengine.js` `variables.js`
+    - fixed the -11 option (look at past chapters)
+    - it was saving the wrong chapter
+    - it weas never swapping back
+- `variables.js`    `library.js`    `chapter0.js`   `chapter1.js`   `chapter2.js`
+    - Minor changes (renamed to user.lastChapterPlayed)
+- `chapter2.js/xlsx`: minor changes
+
+
+# Version 1.14.1 (Shop and Help/Faq Pages)
+## Added (Affinity Wiping)
+- `help.php` `shop.php` `headers.php` `footers.php` `se-faq.css`
+    - added help.php and shop.php
+    - updated footer and header to reflect those pages
+
+
+# Version 1.14.0 (Affinity Wiping & In-game outfits)
+## Added (Affinity Wiping)
+- `gameboot.js`
+    - added saving of affinity one the game.php page
+    - when we restart a chapter, it wipes all subsequent chapters
+
+## Added (Outfits)
+- `gameengine.js` `chapter1.js/xlsx` `chapter2.js/xlsx`
+    - added option -14: in-game outfits
+    - it works in sync with the database
+    - TODO: make the underwear *pants0.png*
+- `variables.js`
+    - added the outfit constants
+- `dorm.js`
+    - added proper highlighting
+
+## Changed
+- `chapter0.js` `chapter1.js` `chapter2.js`
+    - removed useless code
+- `library.js`
+    - modified wipeCurrentChapter to display more in the console.log
+    - removed useless code
+    - moved the function getNumber() from *dorm.js* to *library.js*, because it is now used in *gameengine.js*
+
+# Version 1.13.0 (Completed Dorm)
+## Changed
+- `profile.php`
+    - put back updateGameBar()
+- `headers.php`
+    - highlighted "My Dorm" when we are on the illustration/achievements page
+- `dorm.js` `se-dorm.css`
+    - selecting an outfit now unequips pants
+    - we cannot equip pants when an outfit is equipped
+    - now the category is highlighted when we click on it
+    - the sprite has a minimum width so that the transition is more smooth
+- `character_small_portrait.php`
+    - the image now takes the same pictures as the normal sprite
+    - it resizes the clothes to fit the image
+    - **TODO: HOLY SHIT we can actually specify a width and height and use EXACTLY the same images!!!**
+- `scholar_sprite.php`
+    - added shirt, pants and shoes
+    - optimized the file
+- `imageGenerator.php`
+    - optimized THE SHIT out of the page
+
+
+# Version 1.12.2 (Aesthetic Fixes for Images for Illustration Generator)
+## Changed
+- `new_images_folder`
+    - Adjusted issues that the artists made when drawing the art (aka "Michael Jackson")
+    - Illustrations are now much more pleasing to the eye and have less artistic mistakes
+
+# Version 1.12.1 (Images for Illustration Generator)
+## Changed
+- `new_images_folder` `imageGenerator.php`
+    -Added all modifications for images for the illustrations
+    -Tweaked colors in imageGenerator.php so that it looks pretty no matter which combination the player chooses
+
+
+# Version 1.12.0 (Dorm Customize your appearance)
+## Changed
+- `dorm.js` `se-dorm.css`
+    - optimized the dorm engine
+    - added shirts and pants
+    - improved design
+- `library.js`  `variales.js`   `push_variables.js`   `get_variables.js`
+    - changed the saving and loading of db variables
+    - now it saves and loads all the variables from the scholarinfo table
+
+
 # Version 1.11.1 (Greyscale images + Chapters 1 and 2 Bug Fixes)
 ## Modified
 - `chapter2.xlsx` `chapter1.xlsx`
@@ -457,7 +701,7 @@
     - all numbers were removed because they are all independently isolated in their own try/catch loops
 
 - `chapter0.js`         `chapter1.js`
-    - changed pushVariablesToDB() for saveVariables(user.last_chapter_played);
+    - changed pushVariablesToDB() for saveVariables(user.lastChapterPlayed);
     - much more efficient
     - it saves one variable instead of all of them
 

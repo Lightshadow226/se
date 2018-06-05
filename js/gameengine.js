@@ -10,7 +10,7 @@ All rights reserved.
 September 02, 2017
 */
 
-loadIsVisited(user.last_chapter_played);
+loadIsVisited(user.lastChapterPlayed);
 
 $(function initializeInterface()//CREATES the entire interface once the document is $(document).READY()
 {
@@ -150,7 +150,6 @@ function refreshTextContainer()
     {
         textContainer.style.visibility = "visible";
     }
-
 }
 
 //REFRESHES the entire interface
@@ -538,6 +537,9 @@ function refreshInterface()
         }
         else if(story[special_option][user.storyLocation] == -3)// -3 === Form to choose the department
         {
+            HideForms();
+            unHideForms();
+
             var form_names = [  "Department of Business, Commerce, and Politics",
                                 "Department of Perfoming Arts",
                                 "Department of Pure and Applied Sciences",
@@ -546,9 +548,9 @@ function refreshInterface()
                                 "Department of Fine Arts",
                                 "Department of Fashion"];
 
-            var form_container = document.createElement('div');
-                form_container.id = "form_container";
-                form_container.className = "form_container";
+            var formContainer = document.getElementById('formContainer');
+                formContainer.className = "formContainer";
+                formContainer.style.display = "flex";
 
             var formHeader = document.createElement('h6');
                 formHeader.innerHTML = "Choose your Department";
@@ -556,9 +558,8 @@ function refreshInterface()
             var formSubHeader = document.createElement('h5');
                 formSubHeader.innerHTML = "Choose wisely, you will <em>not</em> be able to change your department later!";
 
-            game_frame.appendChild(form_container);
-                form_container.appendChild(formHeader);
-                form_container.appendChild(formSubHeader);
+            formContainer.appendChild(formHeader);
+            formContainer.appendChild(formSubHeader);
 
             var selected = new Array(7);//array qui va déterminer si la ligne est sélectionnée ou non
 
@@ -618,72 +619,73 @@ function refreshInterface()
 
             for (var index = 0; index < 7; index++)
             {
-                createFormLine(index, form_container);
+                createFormLine(index, formContainer);
             }
         }
         else if(story[special_option][user.storyLocation] == -31)// -31 === Form to choose gender, skin color, hairstyle, etc.
         {
-            var form_container = document.createElement('div');
-                form_container.id = "form_container";
-                form_container.className = "form_container form_container-small";
+            HideForms();
+            unHideForms();
 
-            var formHeader = document.createElement('h6');
-                formHeader.innerHTML = "Name Your Character";
+            var formContainer = document.getElementById('formContainer');
+                formContainer.className = "formContainer formContainer-small";
 
-            var formSubHeader = document.createElement('h5');
-                formSubHeader.innerHTML = "<br>Give a name to your Character! CHOOSE WISELY, you will <em>not</em> be able to change it later.<br><br>";
+                var formHeader = document.createElement('h6');
+                    formHeader.innerHTML = "Name Your Character";
 
-            var nameContainer = document.createElement('div');
-                nameContainer.className = "flex-container";
+                var formSubHeader = document.createElement('h5');
+                    formSubHeader.innerHTML = "<br>Give a name to your Character! CHOOSE WISELY, you will <em>not</em> be able to change it later.<br><br>";
 
-            var name = document.createElement('input');
-                name.id = "new_name";
-                name.className = "flex-panel2 login-signup-textfields";
-                name.type = "text";
-                name.placeholder = "Scholar Name";
-                // name.name = "new_name";// is this even necessary?
+                var nameContainer = document.createElement('div');
+                    nameContainer.style.width = "100%";
+                    nameContainer.style.textAlign = "center";
 
-                name.onkeyup = function(e)
-                {
-                    console.log("Temp Username: " + name.value);
-                };
+                    var name = document.createElement('input');
+                        name.id = "new_name";
+                        name.className = "flex-panel2 login-signup-textfields";
+                        name.style.width = "50%";
+                        name.style.textAlign = "center";
+                        name.type = "text";
+                        name.placeholder = "Scholar Name";
+                        name.onkeyup = function(e){console.log("Temp Username: \'" + this.value + "\'")};
 
             var formSubHeader2 = document.createElement('h5');
-                formSubHeader2.innerHTML = "<br>How will the other Characters refer to your scholar? <br> Pronouns can be changed later.";
+                formSubHeader2.innerHTML = "<br>How will the other Characters refer to your scholar? Pronouns can be changed later.";
             
-            var gender_container = document.createElement('div');
-                gender_container.className = "flex-panel";
+                var gender_container = document.createElement('div');
+                    gender_container.className = "flex-container";
 
-                var sheher = document.createElement('div');
-                    sheher.id = "0";
-                    sheher.className = "button pink_button";    
-                    sheher.style.margin = "10px";
-                    sheher.innerHTML = genders[0];
-                var hehim = document.createElement('div');
-                    hehim.id = "1";
-                    hehim.className = "button pink_button";
-                    hehim.style.margin = "10px";
-                    hehim.innerHTML = genders[1];
-                var theythem = document.createElement('div');
-                    theythem.id = "2";
-                    theythem.className = "button pink_button";
-                    theythem.style.margin = "10px";
-                    theythem.innerHTML = genders[2];
+                    var sheher = document.createElement('div');
+                        sheher.id = "0";
+                        sheher.className = "button pink_button";    
+                        sheher.style.margin = "10px";
+                        sheher.innerHTML = genders[0];
+                    var hehim = document.createElement('div');
+                        hehim.id = "1";
+                        hehim.className = "button pink_button";
+                        hehim.style.margin = "10px";
+                        hehim.innerHTML = genders[1];
+                    var theythem = document.createElement('div');
+                        theythem.id = "2";
+                        theythem.className = "button pink_button";
+                        theythem.style.margin = "10px";
+                        theythem.innerHTML = genders[2];
 
             hehim.onclick = function(e){choice = toggle_pronouns(this, sheher, theythem)};
             sheher.onclick = function(e){choice = toggle_pronouns(this, hehim, theythem)};
             theythem.onclick = function(e){choice = toggle_pronouns(this, hehim, sheher)};
 
-            game_frame.appendChild(form_container);
-                form_container.appendChild(formHeader);
-                form_container.appendChild(formSubHeader);
-                form_container.appendChild(nameContainer);
-                    nameContainer.appendChild(name);
-                form_container.appendChild(formSubHeader2);
-                form_container.appendChild(gender_container);
-                    gender_container.appendChild(sheher);
-                    gender_container.appendChild(hehim);
-                    gender_container.appendChild(theythem);
+            formContainer.appendChild(formHeader);
+            formContainer.appendChild(formSubHeader);
+            formContainer.appendChild(nameContainer);
+                nameContainer.appendChild(name);
+            formContainer.appendChild(formSubHeader2);
+            formContainer.appendChild(gender_container);
+                gender_container.appendChild(sheher);
+                gender_container.appendChild(hehim);
+                gender_container.appendChild(theythem);
+
+            $("#new_name").focus();
         }
         else if(story[special_option][user.storyLocation] == -4)// -4 === Choice of romance or friendship
         {
@@ -832,40 +834,58 @@ function refreshInterface()
         }
         else if(story[special_option][user.storyLocation] == -14)// -14 === Put on your uniform form
         {
-            //Uniform button
-            var uniformButton = document.createElement('div');
-                uniformButton.id = "uniformButton";
-                uniformButton.className = "friendship_romance_buttons x-center-y-center";
+            HideForms();
+            unHideForms();
 
-            var uniformButtonImg = document.createElement('img');
-                uniformButtonImg.className = "friendship_romance_buttons_img";
-                
-                //female
-                uniformButtonImg.src = "_new_images_folder/game/dorm/dollmaker/sex/female.png";
-
-                switch(user.gender)
-                {
-                    //male
-                    case 1:
-                        uniformButtonImg.src = "_new_images_folder/game/dorm/dollmaker/sex/male.png";
-                        break;
-                }
+            var sexFolder = ["female", "male"];
+            var outfitsToDisplay = 0;
             
-            var uniformButtonOverlay = document.createElement('div');
-                uniformButtonOverlay.className = "friendship_romance_buttons_overlay";
-                uniformButtonOverlay.onclick = function()
-                {
-                    browseLink(story[special_option][user.storyLocation], uniformButton);
-                };
+            if(story[choiceA_link][user.storyLocation] != -1) outfitsToDisplay++;
+            if(story[choiceB_link][user.storyLocation] != -1) outfitsToDisplay++;
+            if(story[choiceC_link][user.storyLocation] != -1) outfitsToDisplay++;
+            
+            var positionClasses;
+
+            switch(outfitsToDisplay)
+            {
+                case 1:
+                    positionClasses = ["game-outfits-middle"];
+                    break;
+                case 2:
+                    positionClasses = ["game-outfits-left", "game-outfits-right"];
+                    break;
+                case 3:
+                    positionClasses = ["game-outfits-left", "game-outfits-middle", "game-outfits-right"];
+                    break;
+            }
 
             var formContainer = document.getElementById("formContainer");
                 formContainer.innerHTML = "";
-                formContainer.appendChild(uniformButton);
-                    uniformButton.appendChild(uniformButtonImg);
-                    uniformButton.appendChild(uniformButtonOverlay);
+
+            for(var i = 0; i < outfitsToDisplay; i++)
+            {
+                //Uniform button
+                var outfitButton = document.createElement('div');
+                    outfitButton.id = "outfitButton" + i;
+                    outfitButton.className = "game-outfits " + positionClasses[i] + " game-outfits-" + sexFolder[user.sex];
+                    outfitButton.onclick = function (e)
+                    {
+                        browseLink(story[special_option][user.storyLocation], this);
+                    }
+    
+                var outfitButtonImg = document.createElement('img');
+                    outfitButtonImg.className = "friendship_romance_buttons_img";
+                    outfitButtonImg.src = "_new_images_folder/outfits/" + story[choiceA_link + i][user.storyLocation] + "/" + sexFolder[user.sex] + ".png";
+                    
+                formContainer.appendChild(outfitButton);
+                    outfitButton.appendChild(outfitButtonImg);
+            }
         }
         else if(story[special_option][user.storyLocation] == -15)// -15 === Popups ("Congratulations")
         {
+            HideForms();
+            unHideForms();
+
             var popup = document.createElement('div');
                 popup.className = "popup";
                 popup.innerHTML = story[choiceA_text][user.storyLocation];
@@ -1068,7 +1088,7 @@ function browseLink(link, element)//link is the link of the story (story[special
             // alert(choice);
             user.department = choice;
             user.storyLocation++;//we continue the story once we are done
-            saveVariables('department', 'storylocation');
+            saveVariables(x.department, x.storyLocation);
             // pushVariablesToDB();
             HideForms();
         }
@@ -1076,14 +1096,15 @@ function browseLink(link, element)//link is the link of the story (story[special
     else if(link == -31)//Acts like a submit button for the form
     {
         var value = document.getElementById('new_name').value;
+        console.log("Click! Name = \'" + value + "\'");
         
-        if(value == "")
+        if(value == "" || value == undefined || value == "undefined")
         {
-            console.log("Please choose a username!");
+            makePopup("Please choose a username!");
         }
         else if(choice == "null")
         {
-            console.log("Please choose a pronoun!");
+            makePopup("Please choose a pronoun!");
         }
         else
         {
@@ -1097,8 +1118,6 @@ function browseLink(link, element)//link is the link of the story (story[special
             user.gender = chosen_gender;
             user.scholarname = value;
             user.storyLocation++;//we continue the story once we are done
-            pushVariablesToDB();
-            HideForms();
         }
     }
     else if(link == -4)//friendship/romance buttons are enabled
@@ -1145,11 +1164,8 @@ function browseLink(link, element)//link is the link of the story (story[special
         //TODO: make a switch case
         if(story[isVisited][pointofinterest]) // if we visited the slide that is the "point of interest".
         {
-            console.log("you have visited " + pointofinterest);
-            console.log("therefore, you are going to " + landingpoint);
-            //alert("storylocation was " + storyLocation);
+            console.log("You have visited " + pointofinterest + " -> you are going to " + landingpoint);
             user.storyLocation = landingpoint;
-            //alert("storylocation is now " + storyLocation);
         }
         else if(pointofinterest == -1)
         {
@@ -1168,18 +1184,13 @@ function browseLink(link, element)//link is the link of the story (story[special
         var pointofinterest = story[POI][user.storyLocation];
         var landingpoint = story[LP][user.storyLocation];
 
-        console.log("Looking at slide: " + pointofinterest + " of chapter " + relevantChapter + " = " + alternateIsVisited[pointofinterest]);
-        
         loadIsVisited(relevantChapter);
-        // isVisitedChapterX
+        // console.log("Looking at slide: " + pointofinterest + " of chapter " + relevantChapter + " = " + alternateIsVisited[pointofinterest] + " (btw, current chapter = " + user.lastChapterPlayed + ")");
         
         if(alternateIsVisited[pointofinterest]) // if we visited the slide that is the "point of interest".
         {
-            console.log("you have visited " + pointofinterest);
-            console.log("therefore, you are going to " + landingpoint);
-            //alert("storylocation was " + storyLocation);
+            console.log("You have visited " + pointofinterest + " -> you are going to " + landingpoint);
             user.storyLocation = landingpoint;
-            //alert("storylocation is now " + storyLocation);
         }
         else//if not, we go to the next slide
         {
@@ -1188,6 +1199,17 @@ function browseLink(link, element)//link is the link of the story (story[special
     }
     else if(link == -14)//Put on your uniform form
     {
+        var index = getNumber(element, "outfitButton");
+        var outfitNumber = story[parseInt(choiceA_link) + parseInt(index)][user.storyLocation];
+
+        outfitToEquip = outfitsPointer[outfitNumber];
+
+        user.shirtID = outfitToEquip[0];
+        user.pantsID = outfitToEquip[1];
+        user.shoesID = outfitToEquip[2];
+
+        pushVariablesToDB();
+
         user.storyLocation++;
         HideForms();
     }
@@ -1206,15 +1228,34 @@ function browseLink(link, element)//link is the link of the story (story[special
 
 function HideForms()
 {
-    var forms = document.getElementsByClassName('form_container');//created dynamically
+    var forms = document.getElementsByClassName('formContainer');//created dynamically
     
     for (var i = 0; i < forms.length; i++)
     {
-        forms[i].style.visibility = "hidden";
+        forms[i].style.display = "none";
+        forms.innerHTML = "";
     }
 
     var formContainer = document.getElementById("formContainer");//in the DOM
         formContainer.innerHTML = "";
+        formContainer.style.display= "none";
+}
+
+function unHideForms()
+{
+    var forms = document.getElementsByClassName('formContainer');//created dynamically
+    
+    for (var i = 0; i < forms.length; i++)
+    {
+        forms[i].style.display = "block";
+        forms.innerHTML = "";
+    }
+
+    var formContainer = document.getElementById("formContainer");//in the DOM
+        formContainer.innerHTML = "";
+        formContainer.style.display= "block";
+
+    console.log("All forms are empty!");
 }
 
 function endOfChapter()
@@ -1227,11 +1268,11 @@ function endOfChapter()
     $("#replay_handler").load("partials/replay.php", function (response, status, xhr)
     {
         // console.log(response);
-        document.getElementById("current-chapter-img").src = "_new_images_folder/game/chapter_images/chapter" + user.last_chapter_played + ".jpg";
+        document.getElementById("current-chapter-img").src = "_new_images_folder/game/chapter_images/chapter" + user.lastChapterPlayed + ".jpg";
 
         var lastChapterAvailable = availableChapters - 1;
 
-        if(user.last_chapter_played == lastChapterAvailable)//if we just finished playing the latest chapter
+        if(user.lastChapterPlayed == lastChapterAvailable)//if we just finished playing the latest chapter
         {
             document.getElementById("next-chapter-button").remove();
         }
@@ -1241,7 +1282,7 @@ function endOfChapter()
     });
 
     
-    // console.log(user.last_chapter_played);
+    // console.log(user.lastChapterPlayed);
 }
 
 function restartChapter()
@@ -1263,7 +1304,7 @@ function restartChapter()
 function nextChapter()
 {
     console.log("Opening next chapter...");
-    var newChapter = parseInt(user.last_chapter_played);
+    var newChapter = parseInt(user.lastChapterPlayed);
         newChapter++;
     
     user.storyLocation = 0;//start the next chapter at slide 0

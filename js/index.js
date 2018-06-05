@@ -13,7 +13,7 @@ $(function create_interface()
 {
     //logged in
     update_highest_affinity();
-    update_current_chapter(user.last_chapter_played, "currentIndex");
+    update_current_chapter(user.lastChapterPlayed, "currentIndex");
 });
 
 //LOGGED OUT
@@ -22,34 +22,18 @@ function initialize()
     var left_wing = document.createElement('img');
         left_wing.src = "images/general/characters_page/chevrons/pink/leftchevron.png";
         left_wing.className = "chevron-img";
-        left_wing.onmouseenter = function f()
-        {
-            left_wing.src = "images/general/characters_page/chevrons/purple/leftchevron.png";
-        }
-        left_wing.onmouseleave = function f()
-        {
-            left_wing.src = "images/general/characters_page/chevrons/pink/leftchevron.png";
-        }
-        left_wing.onclick = function f()
-        {
-            randomImg();
-        }
+        
+        left_wing.onmouseenter = function f(){left_wing.src = "images/general/characters_page/chevrons/purple/leftchevron.png"}
+        left_wing.onmouseleave = function f(){left_wing.src = "images/general/characters_page/chevrons/pink/leftchevron.png"}
+        left_wing.onclick = function f(){randomImg()}
 
     var right_wing = document.createElement('img');
         right_wing.src = "images/general/characters_page/chevrons/pink/rightchevron.png";
         right_wing.className = "chevron-img";
-        right_wing.onmouseenter = function f()
-        {
-            right_wing.src = "images/general/characters_page/chevrons/purple/rightchevron.png";
-        }
-        right_wing.onmouseleave = function f()
-        {
-            right_wing.src = "images/general/characters_page/chevrons/pink/rightchevron.png";
-        }
-        right_wing.onclick = function f()
-        {
-            randomImg();
-        }
+
+        right_wing.onmouseenter = function f(){right_wing.src = "images/general/characters_page/chevrons/purple/rightchevron.png"}
+        right_wing.onmouseleave = function f(){right_wing.src = "images/general/characters_page/chevrons/pink/rightchevron.png"}
+        right_wing.onclick = function f(){randomImg()}
 
     document.getElementById('left_wing').appendChild(left_wing);
     document.getElementById('right_wing').appendChild(right_wing);
@@ -71,6 +55,7 @@ function randomImg()
 
     var img = document.createElement('img');
         img.className = "true-center";
+        img.style.height = "100%";
         img.src = 'profile/randomizer.php';
         img.style.height = "100%";//initially 346
 
@@ -132,7 +117,7 @@ function update_current_chapter(index, type)
                 left_wing.className = "flex-panel";
 
             var play_episode_button = document.createElement('a');
-                play_episode_button.id = currentChapter.number;//user.last_chapter_played;
+                play_episode_button.id = currentChapter.number;//user.lastChapterPlayed;
                 play_episode_button.className = "button yellow_button";
                 play_episode_button.innerHTML = "Continue Playing";
                 play_episode_button.href = get_button_href(currentChapter.number);
@@ -150,7 +135,7 @@ function get_button_ID(index)
 {
     if(index == -1)
     {
-        get_button_ID(user.last_chapter_played);
+        get_button_ID(user.lastChapterPlayed);
     }
     else if(index == 0)
     {

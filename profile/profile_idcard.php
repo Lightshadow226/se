@@ -11,8 +11,8 @@ if(isset($_SESSION['id']))
 
 try
 {
-	$db = new PDO('mysql:host=localhost; dbname=USERS', 'root', 'root');
-	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		$db = new PDO('mysql:host=localhost; dbname=USERS', 'S3R3NA', 'Tadashi2016');
+        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	//echo "Connected to the database!";
 }
 catch(PDOException $ex)

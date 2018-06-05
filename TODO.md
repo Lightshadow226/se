@@ -1,21 +1,20 @@
-﻿# OPTIMIZATION (TODO)
-`Git on cPanel:` https://documentation.cpanel.net/display/CKB/How+to+Host+Git+Repositories+on+a+cPanel+Account
-`Git on cPanel:` https://documentation.cpanel.net/display/CKB/How+to+Host+Git+Repositories+on+a+cPanel+Account
-`Git on cPanel:` https://documentation.cpanel.net/display/CKB/How+to+Host+Git+Repositories+on+a+cPanel+Account
-`Git on cPanel:` https://documentation.cpanel.net/display/CKB/How+to+Host+Git+Repositories+on+a+cPanel+Account
-`Git on cPanel:` https://documentation.cpanel.net/display/CKB/How+to+Host+Git+Repositories+on+a+cPanel+Account
-`Git on cPanel:` https://documentation.cpanel.net/display/CKB/How+to+Host+Git+Repositories+on+a+cPanel+Account
-`Git on cPanel:` https://documentation.cpanel.net/display/CKB/How+to+Host+Git+Repositories+on+a+cPanel+Account
-`Git on cPanel:` https://documentation.cpanel.net/display/CKB/How+to+Host+Git+Repositories+on+a+cPanel+Account
-`Git on cPanel:` https://documentation.cpanel.net/display/CKB/How+to+Host+Git+Repositories+on+a+cPanel+Account
-`Git on cPanel:` https://documentation.cpanel.net/display/CKB/How+to+Host+Git+Repositories+on+a+cPanel+Account
-
+﻿
 https://www.google.ca/search?q=ajax+how+to+detect+slow+network&oq=ajax+how+to+detect+slow+network&aqs=chrome..69i57j69i60l4j69i59.7065j0j7&sourceid=chrome&ie=UTF-8
 
 # TODO NEXT
 - `dorm.js`: outfits
 - `variables.js`: user.GENDER
 - fix the goddamn memory problem...
+- `character_small_portrait.php`: **HOLY SHIT we can actually specify a width and height and use EXACTLY the same images**
+
+`Canva vs php imagepng`
+https://gamedev.stackexchange.com/questions/32221/huge-performance-difference-when-using-drawimage-with-img-vs-canvas
+https://jsperf.com/canvas-rendering/2
+https://stackoverflow.com/questions/22771097/html-5-use-img-element-vs-canvas-drawimage
+https://www.google.ca/search?q=superpose+png+javascript&oq=superpose+png+javascript&aqs=chrome..69i57.4784j0j7&sourceid=chrome&ie=UTF-8
+https://stackoverflow.com/questions/3110833/how-to-overlay-images-in-javascript
+https://24ways.org/2007/supersleight-transparent-png-in-ie6
+
 
 #TODO NOTES
 
@@ -45,7 +44,7 @@ https://www.google.ca/search?q=ajax+how+to+detect+slow+network&oq=ajax+how+to+de
         A) Open a chapter through game.php (see further details in *gameboot.js*)
         B) open a chapter page not normally (type chapter1.php to access it `illegally`)
             - redirect to *game.php* (write a script that reads the current chapter and compares it to the database)
-            - must be included in every chapter -> we can't use the game engine because it's going to be too late (user.last_chapter_played will already be modified)
+            - must be included in every chapter -> we can't use the game engine because it's going to be too late (user.lastChapterPlayed will already be modified)
     - optimize the game engine for efficiency (put it on paper first)
     - *variables.js* remove the variable "choice" (for the Ch.0 Form)
     - *variables.js* account for movements -> movement meter/action points -> faire un système pour tout
@@ -78,7 +77,11 @@ https://www.google.ca/search?q=ajax+how+to+detect+slow+network&oq=ajax+how+to+de
 *Unstage commit:* https://stackoverflow.com/questions/1611215/remove-a-git-commit-which-has-not-pushed
 *Git Tag:* https://git-scm.com/book/en/v2/Git-Basics-Tagging
 *Git Rename Tag:* https://stackoverflow.com/questions/1028649/how-do-you-rename-a-git-tag
+
+
 *Git Log:* git log --all --decorate --oneline --graph (https://stackoverflow.com/questions/1057564/pretty-git-branch-graphs)
+*Branches:* https://nvie.com/posts/a-successful-git-branching-model/
+
 
 `GIT original configuration:`
 Target: += *--cd-to-home*

@@ -2,21 +2,7 @@
 
 <!DOCTYPE html>
 <html>
-<head>
-
-	<meta charset="UTF-8">
-	<meta name="description" content="Sweet Elite is a dating sims inspired by the popular Japanese Otome.Flirt with students and uncover Arlington Academy's dark secrets.Choose your own story!">
-	
-	<title>Sweet Elite: Flirt and Uncover the Secrets of Arlington Academy!</title>
-
-	<link href="css/se-stylesheet.css" rel="stylesheet" type="text/css">
-	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-	<link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet" type='text/css'>
-
-	<link rel="icon" type="image/ico" href="images/favicon.png"/>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-</head>
+<?php include_once 'partials/head.php' ?>
 
 <body>
 
@@ -31,8 +17,8 @@
 			<div id="banner">
 				<img id="img_banner" src="images/banners/banner_logged_off.png">
 				<div id = "button_container">
-					<a href = "signup.php" id = "signup_button" class = "button">Sign Up</a>
-					<a href = "login.php" id = "login_button" class = "button">Login</a>
+					<a href="signup.php" id="signup_button" class="button">Sign Up</a>
+					<a href="login.php" id="login_button" class="button">Login</a>
 				</div>
 			</div>
 
@@ -133,7 +119,7 @@
 					<p><i>Not Sure Which Department You Belong In? Take Our Quiz!</i></p>
 					</br>
 
-					<a href = "" class = "button pink_button">Take the Quiz</a>
+					<a href = "personalityquiz.php" class = "button pink_button">Take the Quiz</a>
 
 				</div>
 			</div>
@@ -159,12 +145,12 @@
 				
 				<div class="flex-container" style="height:411.375px; padding: 0px;"><!-- style="height=780px;" -->
 
-					<div class = "flex-panel3 flex-container">
-						<div class="flex-panel"></div>
-						<div id="left_wing" class="center_div chevron-container"></div>
-						<div id="random_character_panel" class = "flex-panel"></div>
-						<div id="right_wing" class="center_div chevron-container"></div>
-						<div class="flex-panel"></div>
+					<div class = "flex-panel flex-container">
+						<div class="desktop-flex-panel"></div>
+						<div id="left_wing" class="chevron-container" style="position: relative;"></div>
+						<div id="random_character_panel" class="flex-panel" style="z-index: 10;"></div>
+						<div id="right_wing" class="chevron-container" style="position: relative; width: 100px;"></div>
+						<div class="desktop-flex-panel"></div>
 					
 					</div>
 					
@@ -182,20 +168,20 @@
 					<p><b>Sign up now and get access to 3 chapters UNLIMITED to celebrate the demo's release!</b></p>
 					<br>
 
-					<div class = "flex-container">
-						<div class = "flex-panel3">
+					<div class = "desktop-flex-container">
+						<div class = "desktop-flex-panel">
 							<img class = "img-badge" src = "_new_images_folder/game/chapter_images/chapter0.jpg"></img>
 							<h5>INTRODUCTION</h5>
 							<p><b>Teaser:</b> You just arrived at Arlington Academy, but everything is so new and big! You're going to need help from a few senior students who will lay down the basics on you.</p>
 						</div>
 
-						<div class = "flex-panel3">
+						<div class = "desktop-flex-panel">
 							<img class = "img-badge" src = "_new_images_folder/game/chapter_images/chapter1.jpg"></img>
 							<h5>CHAPTER 1</h5>
 							<p><b>Teaser:</b> Classes start tomorrow, so today is the time to try to make some new friends...but why is everybody so stressed today? What could be on their minds?</p>
 						</div>
 
-						<div class = "flex-panel3">
+						<div class = "desktop-flex-panel">
 							<img class = "img-badge" src = "_new_images_folder/game/chapter_images/chapter2.jpg"></img>
 							<h5>CHAPTER 2</h5>
 							<p><b>Teaser:</b> It seems the whole school is to be revolving around a certain teenage celebrity and an exclusive homecoming party. But things aren't exactly as great as they look on the surface...</p>
@@ -231,11 +217,9 @@
 						</div>
 
 						<!--Buttons container-->	
-						<div id="profile-overview-bottom" class="center"><!--border: 2px dotted #f3def2; border-top: none;">-->
+						<div id="profile-overview-bottom" class="flex-container"><!--border: 2px dotted #f3def2; border-top: none;">-->
 							<a class="button pink_button" style="margin: 10px;" href="dorm.php">Dorm</a>
 							<a class="button pink_button" style="margin: 10px;" href="profile.php">Profile</a>
-							<div class="flex-panel"></div>
-							<div class="flex-panel"></div>
 						</div>
 					</div>
 
@@ -404,8 +388,6 @@
 </body>
 
 <script src = "js/charactersMeet.js"></script>
-<script src = "js/variables.js"></script><!--needed for the logged in functionality of "current chapter"-->
-<script src = "js/library.js"></script>
 <script src = "js/index.js"></script><!--needed for the logged in functionality of "current chapter"-->
 <script>
 	//logged out
